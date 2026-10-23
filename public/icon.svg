@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22345e"/>
+      <stop offset="1" stop-color="#0b1426"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <!-- 炎のカード（奥） -->
+  <g transform="rotate(-14 24 34)">
+    <rect x="11" y="14" width="26" height="36" rx="3.5" fill="#e4572e" stroke="#f4f0e6" stroke-width="2.2"/>
+    <path d="M24 21c.9 4 6 6.2 6 12a6 6 0 0 1-12 0c0-3.2 1.7-5 2.5-7.6 1.4 1.1 2.2 2.6 2.2 4.3 1.3-2.5 1.7-5.4 1.3-8.7z" fill="#fff" fill-opacity="0.92" transform="translate(-5.5 1)"/>
+  </g>
+  <!-- 雷のカード（手前） -->
+  <g transform="rotate(12 40 34)">
+    <rect x="27" y="14" width="26" height="36" rx="3.5" fill="#f2c12e" stroke="#f4f0e6" stroke-width="2.2"/>
+    <path d="M41.5 20.5 33 32h6l-1.2 9.5L46.5 30h-6z" fill="#fff" fill-opacity="0.95"/>
+  </g>
+</svg>

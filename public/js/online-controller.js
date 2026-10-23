@@ -9,7 +9,7 @@ import NetplayClient from './netplay/netplay-client.mjs';
 
 const STORAGE_KEY = 'pokemon-card-game.online'; // 再接続に使う部屋番号とトークン
 const CPU_STEP_DELAY_MS = 650;                   // CPU の手は CPU 対戦と同じ間隔で順に見せる
-const DEPLOYED_SERVER_URL = 'wss://example.invalid/prod'; // デプロイしたら、出力された WebSocketUrl を書く
+const DEPLOYED_SERVER_URL = 'wss://9flzja5gdi.execute-api.ap-northeast-1.amazonaws.com/prod'; // スタック pokemon-card-game-online の WebSocketUrl
 
 export function loadOnlineSession() {
     try {

@@ -41,9 +41,15 @@ export default class OnlineGameController {
             this.matchId = lobby.matchId;
             listeners.onLobby?.(lobby);
         });
-        this.net.on('state', ({ view }) => {
+        this.net.on('state', ({ view, matchId }) => {
             // 後から届いた古いビューは、NetplayClient（部屋の版を見る）が捨てている
             this.clearAwaiting();
+            // 新しい対戦のビューなのに、その開始の lobby を受け取っていない（届き損ね）なら、入り直して部屋の状態から受け取り直す
+            const lobbyMatchId = this.net.lobby?.matchId;
+            if (matchId !== undefined && lobbyMatchId !== undefined && matchId > lobbyMatchId) {
+                this.net.resume().catch(() => {});
+                return;
+            }
             this.view = view;
             this.sendDeckIfNeeded();
             listeners.onUpdate?.();

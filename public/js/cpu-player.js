@@ -3,7 +3,7 @@
  * 人間と同じ操作（command）を返すだけ。乱数は使わない（使うと記録から再現できなくなる）
  */
 
-import { isBasicEnergy } from './card-data.js';
+import { isBasicEnergy, hasRule, isPokemonEx } from './card-data.js';
 import { DECKS, expandDeck } from './decks.js';
 
 // 今、操作すべきプレイヤー（選択待ちならその人、なければ手番の人）
@@ -45,13 +45,15 @@ export function chooseCpuCommand(game, playerId) {
 
 function chooseMainAction(game, player) {
     const legal = game.getLegalActions(player.id);
-    const handCards = uid => game.cardOf(player.hand.find(inst => inst.uid === uid));
-    const playable = filter => Object.keys(legal.hand).filter(uid => filter(handCards(uid), legal.hand[uid]));
+    const instOf = uid => player.hand.find(inst => inst.uid === uid);
+    const cardOf = uid => game.cardOf(instOf(uid));
+    const playable = filter => Object.keys(legal.hand).filter(uid => filter(cardOf(uid), legal.hand[uid]));
+    const pick = id => playable(card => card.id === id)[0];
     const opponent = game.opponentOf(player);
+    const active = player.active;
 
-    // 特性とスタジアム
+    // 特性
     if (legal.abilities.length) return { type: 'useAbility', target: legal.abilities[0] };
-    if (legal.stadium) return { type: 'useStadium' };
 
     // サポート
     const supporter = chooseSupporter(game, player, playable(card => card.trainerType === 'supporter'));
@@ -64,24 +66,26 @@ function chooseMainAction(game, player) {
     // 進化（バトルポケモンを先に）
     for (const uid of playable(card => card.kind === 'pokemon' && card.stage > 0)) {
         const targets = legal.hand[uid];
-        const target = targets.includes(player.active?.id) ? player.active.id : targets[0];
-        return { type: 'evolve', uid, target };
+        return { type: 'evolve', uid, target: targets.includes(active?.id) ? active.id : targets[0] };
     }
 
-    // グッズ
-    const items = playable(card => card.trainerType === 'item');
-    const pick = id => items.find(uid => handCards(uid).id === id);
+    // ポケモンを出す・探す
     const candy = pick('rare-candy');
     if (candy) return { type: 'playTrainer', uid: candy };
-    const nest = pick('nest-ball');
-    if (nest && player.deck.some(inst => game.cardOf(inst).kind === 'pokemon' && game.cardOf(inst).stage === 0)) return { type: 'playTrainer', uid: nest };
+    const poffin = pick('buddy-buddy-poffin');
+    if (poffin && player.deck.some(inst => { const card = game.cardOf(inst); return card.kind === 'pokemon' && card.stage === 0 && card.hp <= 70; })) {
+        return { type: 'playTrainer', uid: poffin };
+    }
     const ultra = pick('ultra-ball');
-    if (ultra && wantsEvolution(game, player)) return { type: 'playTrainer', uid: ultra };
-    const generator = pick('electric-generator');
-    if (generator) return { type: 'playTrainer', uid: generator };
-    const retrieval = pick('energy-retrieval');
-    if (retrieval && !game.turnState.energyAttached && !player.hand.some(inst => game.cardOf(inst).kind === 'energy')) {
-        return { type: 'playTrainer', uid: retrieval };
+    if (ultra && (wantsEvolution(game, player) || needsBench(game, player))) return { type: 'playTrainer', uid: ultra };
+    const pokeBall = pick('poke-ball');
+    if (pokeBall && player.deck.some(inst => game.cardOf(inst).kind === 'pokemon')) return { type: 'playTrainer', uid: pokeBall };
+
+    // エネルギーを手札に用意する
+    const hasEnergyInHand = player.hand.some(inst => game.cardOf(inst).kind === 'energy');
+    if (!game.turnState.energyAttached && !hasEnergyInHand) {
+        const search = pick('energy-search') ?? pick('energy-retrieval');
+        if (search) return { type: 'playTrainer', uid: search };
     }
 
     // エネルギーをつける
@@ -91,14 +95,21 @@ function chooseMainAction(game, player) {
         if (target) return { type: 'attachEnergy', uid: energy, target: target.id };
     }
 
-    // どうぐ（バトルポケモンを先に）
-    for (const uid of playable(card => card.trainerType === 'tool')) {
-        const targets = legal.hand[uid];
-        return { type: 'playTrainer', uid, target: targets.includes(player.active?.id) ? player.active.id : targets[0] };
+    // ベンチのエネルギーを、ワザが使えないバトルポケモンへ寄せる
+    const energySwitch = pick('energy-switch');
+    if (energySwitch && active && bestAttack(game, player, active, opponent) === null
+        && player.bench.some(pokemon => pokemon.energies.length > 0)) {
+        return { type: 'playTrainer', uid: energySwitch };
     }
 
-    // スタジアム
-    const stadium = playable(card => card.trainerType === 'stadium')[0];
+    // どうぐ
+    for (const uid of playable(card => card.trainerType === 'tool')) {
+        const target = chooseToolTarget(game, player, cardOf(uid), legal.hand[uid]);
+        if (target) return { type: 'playTrainer', uid, target };
+    }
+
+    // スタジアム（自分に損なものは出さない）
+    const stadium = playable(card => card.trainerType === 'stadium').find(uid => stadiumIsGood(game, player, cardOf(uid)));
     if (stadium) return { type: 'playTrainer', uid: stadium };
 
     // 回復
@@ -106,7 +117,6 @@ function chooseMainAction(game, player) {
     if (potion && game.inPlay(player).some(pokemon => pokemon.damage >= 30)) return { type: 'playTrainer', uid: potion };
 
     // バトルポケモンがワザを使えず、ベンチに使えるポケモンがいれば入れ替える
-    const active = player.active;
     if (active && bestAttack(game, player, active, opponent) === null) {
         const benchAttacker = player.bench.find(pokemon => bestAttack(game, player, pokemon, opponent) !== null);
         if (benchAttacker) {
@@ -119,6 +129,8 @@ function chooseMainAction(game, player) {
     // ワザ
     const attack = bestAttack(game, player, active, opponent, legal);
     if (attack !== null) return { type: 'attack', index: attack };
+    // ワザを使えないなら、番が終わるスタジアムの効果（ミアレシティ）もここで使う
+    if (legal.stadium && player.bench.length < 4) return { type: 'useStadium' };
     return { type: 'endTurn' };
 }
 
@@ -132,22 +144,33 @@ function chooseSupporter(game, player, uids) {
         if (!activeKo && opponent.bench.some(pokemon => damage >= remainingHp(game, pokemon))) return boss;
     }
     const handSize = player.hand.length - 1;
-    const research = byId('professors-research');
-    if (research && handSize <= 4) return research;
-    const iono = byId('iono');
-    if (iono && (handSize <= 2 || (opponent.prizes.length <= 2 && handSize < player.prizes.length))) return iono;
-    const judge = byId('judge');
-    if (judge && handSize <= 2) return judge;
+    if (handSize <= 3 && byId('zeiyu')) return byId('zeiyu');
+    if (handSize <= 3 && byId('lillies-determination')) return byId('lillies-determination');
+    if (handSize <= 5 && byId('guy')) return byId('guy');
+    if (handSize <= 5 && byId('mc-hype')) return byId('mc-hype');
+    if (handSize <= 2 && byId('judge')) return byId('judge');
     return null;
 }
 
-// 進化先が山札にあり、場に進化元がいれば、ハイパーボールで探す価値がある
-function wantsEvolution(game, player) {
-    const inPlayIds = new Set(game.inPlay(player).map(pokemon => game.topCard(pokemon).id));
-    return player.deck.some(inst => {
+// ベンチが少なく、山札にたねポケモンがあれば、たねポケモンを探す（場からいなくなると負けるため）
+function needsBench(game, player) {
+    return player.bench.length < 2 && player.deck.some(inst => {
         const card = game.cardOf(inst);
-        return card.kind === 'pokemon' && card.stage > 0 && inPlayIds.has(card.evolvesFrom);
+        return card.kind === 'pokemon' && card.stage === 0;
     });
+}
+
+// 進化先が山札にあり、場に進化元がいれば、探す価値がある（ふしぎなアメを持っていれば、2つ上の進化も）
+function wantsEvolution(game, player) {
+    return player.deck.some(inst => canEvolveSoon(game, player, game.cardOf(inst)));
+}
+
+function canEvolveSoon(game, player, card) {
+    if (card.kind !== 'pokemon' || card.stage === 0) return false;
+    const inPlayIds = new Set(game.inPlay(player).map(pokemon => game.topCard(pokemon).id));
+    if (inPlayIds.has(card.evolvesFrom)) return true;
+    const hasCandy = player.hand.some(inst => inst.id === 'rare-candy');
+    return card.stage === 2 && hasCandy && inPlayIds.has(game.cardOf({ id: card.evolvesFrom }).evolvesFrom);
 }
 
 // エネルギーのつけ先：バトルポケモンがまだワザを使えなければバトル場、それ以外はワザの強いポケモン
@@ -156,6 +179,21 @@ function chooseEnergyTarget(game, player) {
     if (player.active && needs(player.active)) return player.active;
     const candidates = player.bench.filter(needs).sort((a, b) => potential(game, b) - potential(game, a));
     return candidates[0] ?? null;
+}
+
+function chooseToolTarget(game, player, card, targets) {
+    const pokemonOf = id => game.inPlay(player).find(pokemon => pokemon.id === id);
+    const ordered = [...targets].sort((a, b) => (b === player.active?.id) - (a === player.active?.id));
+    if (card.retreatReduction) return ordered.find(id => game.topCard(pokemonOf(id)).retreat >= 2) ?? null;
+    if (card.damageBonus) return ordered.find(id => !hasRule(game.topCard(pokemonOf(id)))) ?? null;
+    return ordered[0] ?? null;
+}
+
+// 2進化の HP が減るスタジアムは、相手の2進化のほうが多いときだけ出す
+function stadiumIsGood(game, player, card) {
+    if (!card.hpModifier) return true;
+    const count = p => game.inPlay(p).filter(pokemon => card.hpModifier(game.topCard(pokemon)) < 0).length;
+    return count(game.opponentOf(player)) > count(player);
 }
 
 function topAttacks(game, pokemon) {
@@ -172,8 +210,8 @@ function remainingHp(game, pokemon) {
 }
 
 function estimateDamage(game, player, attacker, attack, defender) {
-    let damage = attack.damage;
-    if (game.topCard(attacker).id === 'charizard-ex') damage += 30 * game.prizesTaken(game.opponentOf(player));
+    const ctx = { game, player, opponent: game.opponentOf(player), attacker, defender, attack, damage: attack.damage };
+    let damage = attack.expected ? attack.expected(ctx) : attack.damage;
     if (defender && game.topCard(defender).weakness === game.topCard(attacker).type) damage *= 2;
     return damage;
 }
@@ -214,44 +252,48 @@ function answerPrompt(game, prompt) {
         const card = game.cardOf(inst);
         return card.kind === 'pokemon' ? card.hp : 0;
     };
+    const inPlayIds = new Set(game.inPlay(player).map(pokemon => game.topCard(pokemon).id));
 
     switch (prompt.purpose) {
         case 'first-player':
             return [1]; // 後攻は最初の番からワザを使える
         case 'setup-active':
-            return indices(prompt.cards, cardScore, 1);
+            // ルールを持たない、HP の高いポケモンを前に出す
+            return indices(prompt.cards, inst => cardScore(inst) - (hasRule(game.cardOf(inst)) ? 1000 : 0), 1);
         case 'setup-bench':
-        case 'infernal-reign':
+        case 'bench-basic':
         case 'energy-retrieval':
-        case 'electric-generator':
-        case 'tandem-unit':
-        case 'nest-ball':
-        case 'artazon':
             return indices(prompt.cards, cardScore, prompt.max);
+        case 'search-energy':
+            return [0];
         case 'mulligan-draw':
             return [prompt.options.length - 1];
-        case 'ultra-ball-search': {
-            const inPlayIds = new Set(game.inPlay(player).map(pokemon => game.topCard(pokemon).id));
+        case 'search-pokemon': {
+            const benchFirst = player.bench.length < 2;
             return indices(prompt.cards, inst => {
                 const card = game.cardOf(inst);
-                return (inPlayIds.has(card.evolvesFrom) ? 1000 : 0) + card.stage * 100 + card.hp / 10;
+                if (benchFirst) return (card.stage === 0 ? 1000 : 0) + card.hp / 10;
+                return (canEvolveSoon(game, player, card) ? 1000 : 0) + card.stage * 100 + card.hp / 10;
             }, 1);
         }
         case 'ultra-ball-discard':
             return indices(prompt.cards, inst => -discardValue(game, player, inst), 2);
         case 'promote':
         case 'switch':
-        case 'gyro-ball-switch':
+        case 'forced-switch':
             return indices(prompt.pokemon, pokemon => (bestAttack(game, player, pokemon, opponent) !== null ? 1000 : 0) + remainingHp(game, pokemon), 1);
         case 'boss-target':
             return indices(prompt.pokemon, pokemon => -remainingHp(game, pokemon), 1);
+        case 'snipe-target':
+            // 倒せるポケモンのうち、取れるサイドが一番多いもの。倒せなければバトルポケモン
+            return indices(prompt.pokemon, pokemon => (remainingHp(game, pokemon) <= 280 ? 1000 + game.prizeValue(game.topCard(pokemon)) * 100 : 0)
+                + (pokemon === opponent.active ? 10 : 0), 1);
         case 'potion':
             return indices(prompt.pokemon, pokemon => pokemon.damage, 1);
-        case 'infernal-reign-target':
-        case 'electric-generator-target':
-            return indices(prompt.pokemon, pokemon => (pokemon === player.active ? 50 : 0) + potential(game, pokemon) - pokemon.energies.length * 30, 1);
-        case 'gyro-ball-confirm':
-            return false;
+        case 'energy-switch-source':
+            return indices(prompt.pokemon, pokemon => (pokemon === player.active ? -100 : 0) + pokemon.energies.length, 1);
+        case 'energy-switch-target':
+            return indices(prompt.pokemon, pokemon => (pokemon === player.active ? 100 : 0) + potential(game, pokemon), 1);
     }
     if (prompt.type === 'confirm') return prompt.purpose.startsWith('ability-');
     if (prompt.type === 'cards' && prompt.purpose === 'rare-candy-card') return [0];
@@ -263,7 +305,7 @@ function discardValue(game, player, inst) {
     const card = game.cardOf(inst);
     const sameCount = player.hand.filter(other => other.id === inst.id).length;
     if (isBasicEnergy(card)) return 30 - sameCount * 5;
-    if (card.kind === 'pokemon') return 60 + card.stage * 10;
+    if (card.kind === 'pokemon') return 60 + card.stage * 10 + (isPokemonEx(card) ? 20 : 0);
     if (card.trainerType === 'stadium') return 10;
     if (card.id === 'potion') return 15;
     return 40 - sameCount * 5;

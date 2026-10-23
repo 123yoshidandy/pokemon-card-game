@@ -860,7 +860,19 @@ dialog button:focus { outline: none; }
 }
 .detail-head .emblem { width: 34px; height: 34px; flex: none; }
 .detail-head > div:nth-child(2) { flex: 1; }
-.detail-name { font-size: 18px; font-weight: 800; }
+.detail-name { font-size: 18px; font-weight: 800; display: flex; align-items: center; gap: 8px; }
+.reg-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    background: #f4f0e6;
+    color: #1d1d1d;
+    font-size: 12px;
+    font-weight: 800;
+}
 .detail-sub { font-size: 12px; color: rgba(255, 255, 255, 0.8); }
 .detail-hp { font-size: 12px; text-align: right; }
 .detail-hp b { font-size: 22px; margin-left: 4px; }

@@ -283,7 +283,7 @@ export default class Game {
             this.log(`${player.name}の${card.name}はきぜつした`);
             this.removeFromPlay(player, pokemon);
             const taker = this.opponentOf(player);
-            const count = Math.min(card.rule === 'ex' ? 2 : 1, taker.prizes.length);
+            const count = Math.min(this.prizeValue(card), taker.prizes.length);
             const taken = taker.prizes.splice(0, count);
             taker.hand.push(...taken);
             this.log(`${taker.name}はサイドを${count}枚取った（残り${taker.prizes.length}枚）`);
@@ -470,7 +470,7 @@ export default class Game {
         if (!card || card.kind !== 'trainer') return 'トレーナーズを選んでください';
         if (card.trainerType === 'supporter') {
             if (this.turnState.supporterPlayed) return 'サポートはこの番にもう使いました';
-            if (this.turn === 1) return '先攻の最初の番はサポートを使えません';
+            if (this.turn === 1 && !card.firstTurnOk) return '先攻の最初の番はサポートを使えません';
         }
         if (card.trainerType === 'stadium') {
             if (this.turnState.stadiumPlayed) return 'スタジアムはこの番にもう出しました';
@@ -519,6 +519,7 @@ export default class Game {
         if (!attack) return 'ワザを選んでください';
         if (active.rotation === 'asleep' || active.rotation === 'paralyzed') return `${CONDITION_NAMES[active.rotation]}のポケモンはワザを使えません`;
         if (active.effects.some(effect => effect.kind === 'cannotAttack' && effect.untilTurn >= this.turn)) return 'このポケモンはこの番ワザを使えません';
+        if (active.effects.some(effect => effect.kind === 'cannotUseAttack' && effect.attack === attack.name && effect.untilTurn >= this.turn)) return `この番は「${attack.name}」を使えません`;
         if (!this.canPayCost(active, attack.cost)) return 'エネルギーが足りません';
         return null;
     }
@@ -554,10 +555,12 @@ export default class Game {
 
     // 手札のカードをのせて進化させる（ふしぎなアメからも使う）。特殊状態とワザの効果は消える
     evolveInto(player, pokemon, inst) {
-        const before = this.topCard(pokemon).name;
+        const beforeCard = this.topCard(pokemon);
+        const before = beforeCard.name;
         this.removeCard(player.hand, inst);
         pokemon.cards.push(inst);
         pokemon.enteredTurn = this.turn;
+        pokemon.evolvedFrom = { id: beforeCard.id, turn: this.turn };
         this.clearConditions(pokemon);
         const card = this.cardOf(inst);
         this.log(`${player.name}は${before}を${card.name}に進化させた`);
@@ -602,6 +605,8 @@ export default class Game {
                 if (this.stadium) this.players[this.stadium.owner].discard.push(this.stadium.inst);
                 this.stadium = { inst, owner: player.id };
                 this.turnState.stadiumPlayed = true;
+                // 最大HPが変わるスタジアムで、HPがなくなるポケモンが出ることがある
+                this.runNext(() => this.checkKnockouts());
                 return;
             case 'supporter':
                 this.turnState.supporterPlayed = true;
@@ -691,7 +696,8 @@ export default class Game {
             this.log(`${card.name}はテラスタルのため、ダメージを受けない`);
             return;
         }
-        let damage = amount;
+        // ワザを使うポケモンのどうぐ（ブレイブバングルなど）は、弱点・抵抗力より先に足す
+        let damage = amount + (ctx.attacker?.tool ? (this.cardOf(ctx.attacker.tool).damageBonus?.({ game: this, attacker: ctx.attacker, target }) ?? 0) : 0);
         if (isActive) {
             const attackerType = this.topCard(ctx.attacker).type;
             if (card.weakness === attackerType) damage *= WEAKNESS_MULTIPLIER;
@@ -729,9 +735,35 @@ export default class Game {
         pokemon.effects = [];
     }
 
-    // ワザの効果を残す（untilTurn のターンの終わりまで）
-    addEffect(pokemon, kind, untilTurn) {
-        pokemon.effects.push({ kind, untilTurn });
+    // ワザの効果を残す（untilTurn のターンの終わりまで）。extra には、どのワザかなどを入れる
+    addEffect(pokemon, kind, untilTurn, extra = {}) {
+        pokemon.effects.push({ kind, untilTurn, ...extra });
+    }
+
+    // この番に、指定したカードから進化したか
+    evolvedThisTurnFrom(pokemon, cardId) {
+        return pokemon.evolvedFrom?.turn === this.turn && pokemon.evolvedFrom.id === cardId;
+    }
+
+    // 基本エネルギーを1個つけ替える（タイプが混ざっていても、最初の1個）
+    moveBasicEnergy(source, target) {
+        const inst = source.energies.find(energy => isBasicEnergy(this.cardOf(energy)));
+        if (!inst) return;
+        this.moveCard(source.energies, target.energies, inst);
+        this.log(`${this.cardName(inst)}を${this.topCard(source).name}から${this.topCard(target).name}につけ替えた`);
+    }
+
+    // カードの効果で自分の番を終える（ミアレシティ）。効果の手順が終わってから、番の終わりの処理に進む
+    endTurnByEffect(player) {
+        this.log(`${player.name}の番は終わった`);
+        this.queueEndOfTurn();
+    }
+
+    // きぜつしたときに相手が取るサイドの枚数
+    prizeValue(card) {
+        if (card.rule === 'mega') return 3;
+        if (card.rule === 'ex') return 2;
+        return 1;
     }
 
     // ポケモンについているエネルギーをトラッシュする（type を指定すればそのタイプだけ）
@@ -915,6 +947,7 @@ export default class Game {
             burned: false,
             effects: [],
             enteredTurn: this.turn,
+            evolvedFrom: null, // { id, turn }：最後に進化したときの進化元と、その番
             faceDown
         };
     }
@@ -940,11 +973,13 @@ export default class Game {
     maxHp(pokemon) {
         const card = this.topCard(pokemon);
         const bonus = pokemon.tool ? (this.cardOf(pokemon.tool).hpBonus?.(card) ?? 0) : 0;
-        return card.hp + bonus;
+        const stadium = this.stadium ? (this.cardOf(this.stadium.inst).hpModifier?.(card) ?? 0) : 0;
+        return Math.max(0, card.hp + bonus + stadium);
     }
 
     retreatCost(pokemon) {
-        return this.topCard(pokemon).retreat;
+        const reduction = pokemon.tool ? (this.cardOf(pokemon.tool).retreatReduction ?? 0) : 0;
+        return Math.max(0, this.topCard(pokemon).retreat - reduction);
     }
 
     // エネルギーが足りるか。タイプの指定から先に割り当て、残りで無色をまかなう

@@ -56,7 +56,7 @@ describe('オンライン対戦', () => {
         const { a } = await startRoom();
         await command(a, { type: 'deck', cards: DECK_A.slice(1) });
         expect(a.last('error').message).toContain('60枚');
-        const tooMany = [...DECK_A.slice(0, 55), ...Array(5).fill('nest-ball')];
+        const tooMany = [...DECK_A.slice(0, 55), ...Array(5).fill('potion')];
         await command(a, { type: 'deck', cards: tooMany });
         expect(a.last('error').message).toContain('4枚まで');
         expect(viewOf(a).decksSubmitted).toEqual([false, false]);

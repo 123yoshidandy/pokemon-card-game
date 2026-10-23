@@ -6,10 +6,12 @@
 import { CARDS, isBasicEnergy } from './card-data.js';
 import { DECK_SIZE, MAX_COPIES, validateDeck } from './deck-rules.js';
 import { expandDeck } from './decks.js';
+import { isStandardLegal } from './regulation.js';
 
-// デッキ構築で使えるカード（定義の順。ポケモン → トレーナーズ → エネルギー）
+// デッキ構築で使えるカード（スタンダードで使えるものだけ。定義の順に、ポケモン → トレーナーズ → エネルギー）
 const KIND_ORDER = { pokemon: 0, trainer: 1, energy: 2 };
 export const CARD_POOL = Object.values(CARDS)
+    .filter(isStandardLegal)
     .map((card, index) => ({ card, index }))
     .sort((a, b) => KIND_ORDER[a.card.kind] - KIND_ORDER[b.card.kind] || a.index - b.index)
     .map(({ card }) => card.id);

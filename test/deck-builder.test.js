@@ -66,7 +66,7 @@ describe('デッキの保存', () => {
     it('構築済みデッキをコピーできる。コピーを変えても元は変わらない', () => {
         const store = createDeckStore(memoryStorage());
         const copy = store.create(DECKS[0]);
-        expect(copy.name).toBe('リザードンexのコピー');
+        expect(copy.name).toBe(`${DECKS[0].name}のコピー`);
         store.save(removeCard(copy, 'charmander'));
         expect(DECKS[0].cards.charmander).toBe(4);
         expect(store.find(copy.id).cards.charmander).toBe(3);

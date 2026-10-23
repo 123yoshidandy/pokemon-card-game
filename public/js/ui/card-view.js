@@ -3,7 +3,7 @@
  * 絵は仮のもの：タイプの色とタイプの記号だけで描く
  */
 
-import { getCard, TYPE_NAMES, TRAINER_TYPE_NAMES } from '../card-data.js';
+import { getCard, TYPE_NAMES, TRAINER_TYPE_NAMES, RULE_TEXTS } from '../card-data.js';
 import { CONDITION_NAMES } from '../game.js';
 
 // タイプの記号（24×24）
@@ -91,13 +91,19 @@ export function pokemonTile(pokemon, { active = false } = {}) {
     </div>`;
 }
 
+// レギュレーションマーク（基本エネルギーにはない）
+function regulationMark(card) {
+    return card.regulation ? `<span class="reg-mark" title="レギュレーション ${card.regulation}">${card.regulation}</span>` : '';
+}
+
 // 説明のシートの中身
 export function cardDetail(id, pokemon = null) {
     const card = getCard(id);
     if (card.kind === 'pokemon') {
         const parts = [];
-        const sub = [STAGE_NAMES[card.stage], card.evolvesFrom ? `${getCard(card.evolvesFrom).name}から進化` : null, card.rule === 'ex' ? 'ex（きぜつするとサイド2枚）' : null].filter(Boolean).join(' ・ ');
-        parts.push(`<div class="detail-head type-${card.type}">${emblemSvg(card.type)}<div><div class="detail-name">${escape(card.name)}</div><div class="detail-sub">${sub}</div></div><div class="detail-hp">HP<b>${pokemon ? `${Math.max(0, pokemon.hp - pokemon.damage)}/${pokemon.hp}` : card.hp}</b></div></div>`);
+        const sub = [STAGE_NAMES[card.stage], card.evolvesFrom ? `${getCard(card.evolvesFrom).name}から進化` : null].filter(Boolean).join(' ・ ');
+        parts.push(`<div class="detail-head type-${card.type}">${emblemSvg(card.type)}<div><div class="detail-name">${escape(card.name)}${regulationMark(card)}</div><div class="detail-sub">${sub}</div></div><div class="detail-hp">HP<b>${pokemon ? `${Math.max(0, pokemon.hp - pokemon.damage)}/${pokemon.hp}` : card.hp}</b></div></div>`);
+        if (card.rule) parts.push(`<div class="detail-rule">${RULE_TEXTS[card.rule]}</div>`);
         if (card.tera) parts.push('<div class="detail-rule">テラスタル：このポケモンがベンチにいるかぎり、ワザのダメージを受けない。</div>');
         if (card.ability) {
             parts.push(`<div class="detail-block" data-ability><div class="detail-title"><span class="tag tag-ability">特性</span>${escape(card.ability.name)}</div><p>${escape(card.ability.text)}</p></div>`);
@@ -119,7 +125,7 @@ export function cardDetail(id, pokemon = null) {
         return parts.join('');
     }
     if (card.kind === 'trainer') {
-        return `<div class="detail-head trainer-${card.trainerType}"><svg class="emblem" viewBox="0 0 24 24" fill="currentColor">${TRAINER_ICONS[card.trainerType]}</svg><div><div class="detail-name">${escape(card.name)}</div><div class="detail-sub">${TRAINER_TYPE_NAMES[card.trainerType]}</div></div></div>
+        return `<div class="detail-head trainer-${card.trainerType}"><svg class="emblem" viewBox="0 0 24 24" fill="currentColor">${TRAINER_ICONS[card.trainerType]}</svg><div><div class="detail-name">${escape(card.name)}${regulationMark(card)}</div><div class="detail-sub">${TRAINER_TYPE_NAMES[card.trainerType]}</div></div></div>
             <div class="detail-block"><p>${escape(card.text)}</p></div>
             ${card.trainerType === 'supporter' ? '<div class="detail-rule">サポートは、自分の番に1枚しか使えない。</div>' : ''}
             ${card.trainerType === 'stadium' ? '<div class="detail-rule">スタジアムは、自分の番に1枚しか出せない。</div>' : ''}`;

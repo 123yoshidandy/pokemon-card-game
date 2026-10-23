@@ -126,7 +126,7 @@ function renderDeckSelect() {
 function showTitle() {
     screen.stop();
     renderDeckSelect();
-    $('title-art').innerHTML = ['charizard-ex', 'professors-research', 'miraidon-ex']
+    $('title-art').innerHTML = ['mega-charizard-y-ex', 'guy', 'miraidon-ex']
         .map((id, index) => `<div class="fan fan-${index}">${cardFace(id)}</div>`).join('');
     setScene('title');
 }

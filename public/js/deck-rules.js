@@ -1,8 +1,9 @@
 /**
- * デッキの決まり：60枚・同じ名前のカードは4枚まで（基本エネルギーは何枚でも）・たねポケモンが1枚以上
+ * デッキの決まり：60枚・スタンダードで使えるカードだけ・同じ名前のカードは4枚まで（基本エネルギーは何枚でも）・たねポケモンが1枚以上
  */
 
 import { CARDS, isBasicEnergy, isBasicPokemon } from './card-data.js';
+import { isStandardLegal } from './regulation.js';
 
 export const DECK_SIZE = 60;
 export const MAX_COPIES = 4;
@@ -11,6 +12,8 @@ export const MAX_COPIES = 4;
 export function validateDeck(cards) {
     if (!Array.isArray(cards) || cards.length !== DECK_SIZE) return `デッキは${DECK_SIZE}枚です`;
     if (cards.some(id => typeof id !== 'string' || !Object.hasOwn(CARDS, id))) return 'デッキに不明なカードがあります';
+    const illegal = cards.find(id => !isStandardLegal(CARDS[id]));
+    if (illegal) return `スタンダードで使えないカードがあります（${CARDS[illegal].name}）`;
     const counts = new Map();
     for (const id of cards) {
         const card = CARDS[id];

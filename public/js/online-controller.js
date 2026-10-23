@@ -42,6 +42,9 @@ export default class OnlineGameController {
         });
         this.net.on('state', ({ view }) => {
             this.awaitingResponse = false;
+            // AWS では、操作ごとに別の Lambda が送るので、古いビューが新しいビューより後に届くことがある。古いものは捨てる
+            // （前の対戦のビューは、新しい対戦の lobby を受けたときに消してある）
+            if (this.view && view.version < this.view.version) return;
             this.view = view;
             this.sendDeckIfNeeded();
             listeners.onUpdate?.();

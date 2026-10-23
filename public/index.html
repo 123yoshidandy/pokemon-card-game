@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#14213d">
+    <title>ポケモンカードゲーム</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="icon-home" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7M6 9.5V20h12V9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="icon-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17.2" r="1.2" fill="currentColor"/></symbol>
+    </svg>
+
+    <!-- 開始画面 -->
+    <main id="title-screen" class="screen">
+        <div class="title-wrap">
+            <h1 class="title-logo">Pokémon Card Game</h1>
+            <div id="title-art" class="title-art" aria-hidden="true"></div>
+            <div class="setting">
+                <span class="setting-label">デッキ</span>
+                <div id="deck-select" class="segment"></div>
+            </div>
+            <div class="title-buttons">
+                <button id="start-cpu" class="btn btn-primary">CPU と対戦</button>
+                <button id="open-rules" class="btn btn-secondary">遊び方</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- 対戦画面 -->
+    <main id="game-screen" class="screen" hidden>
+        <header class="topbar">
+            <button id="go-home" class="icon-btn" aria-label="ホーム"><svg><use href="#icon-home"/></svg></button>
+            <div id="turn-info" class="turn-info"></div>
+            <button id="open-rules-game" class="icon-btn" aria-label="遊び方"><svg><use href="#icon-help"/></svg></button>
+        </header>
+        <div class="table">
+            <section class="field">
+                <div id="opp-side" class="side side-opp"></div>
+                <div class="midline">
+                    <div id="stadium" class="stadium"></div>
+                    <div id="status" class="status"></div>
+                    <div class="midline-actions"><button id="prompt-done" class="btn btn-small" hidden>決定</button></div>
+                </div>
+                <div id="my-side" class="side side-me"></div>
+            </section>
+            <aside class="panel">
+                <div id="opp-info" class="info"></div>
+                <ol id="log" class="log"></ol>
+                <div id="my-info" class="info"></div>
+            </aside>
+        </div>
+        <footer class="dock">
+            <div id="hand" class="hand"></div>
+            <div class="dock-actions">
+                <button id="end-turn" class="btn btn-primary">番を終える</button>
+            </div>
+        </footer>
+    </main>
+
+    <!-- カードの説明（ワザ・特性・にげるもここから使う） -->
+    <dialog id="detail" class="sheet"></dialog>
+
+    <!-- 選択（カード・選択肢・はい／いいえ） -->
+    <dialog id="prompt" class="sheet prompt"></dialog>
+
+    <!-- トラッシュなどのカードの一覧 -->
+    <dialog id="pile" class="sheet"></dialog>
+
+    <!-- 決着 -->
+    <dialog id="result" class="sheet result"></dialog>
+
+    <!-- 遊び方 -->
+    <dialog id="rules" class="sheet rules">
+        <div class="sheet-body">
+            <h2>遊び方</h2>
+            <h3>目的</h3>
+            <p>相手のポケモンをきぜつさせてサイドを6枚取るか、相手の場のポケモンをいなくするか、相手が番の始めに山札を引けなくなれば勝ち。ex がきぜつしたときは、サイドを2枚取る。</p>
+            <h3>準備</h3>
+            <p>手札は7枚。たねポケモンがなければ引き直し、相手はその回数まで追加で引ける。たねポケモンをバトル場に1匹、ベンチに5匹まで出し、山札の上からサイドを6枚置く。</p>
+            <h3>自分の番</h3>
+            <p>山札を1枚引いてから、好きな順に行う。</p>
+            <ul>
+                <li>たねポケモンをベンチに出す・進化させる（最初の番と、出したばかりのポケモンは進化できない）</li>
+                <li>エネルギーを1回つける</li>
+                <li>グッズ・どうぐは何枚でも、サポートとスタジアムは1回</li>
+                <li>特性を使う・にげる（1回。エネルギーをトラッシュする）</li>
+                <li>ワザを使うと番が終わる。先攻の最初の番は、ワザもサポートも使えない</li>
+            </ul>
+            <h3>特殊状態</h3>
+            <p>どく（10）・やけど（20、コインでオモテなら治る）は番の終わりにダメージ。ねむりはコインでオモテなら起きる。マヒは持ち主の次の番の終わりに治る。こんらんはワザの前にコインを投げ、ウラなら失敗して自分に30。ベンチに下がるか進化すると治る。</p>
+            <h3>操作</h3>
+            <ul>
+                <li>手札をタップして使う。エネルギー・進化・どうぐは、光ったポケモンをタップする</li>
+                <li>バトルポケモンをタップすると、ワザ・にげるを選べる</li>
+                <li>カードを長押しすると説明が出る</li>
+            </ul>
+        </div>
+        <form method="dialog" class="sheet-actions"><button class="btn btn-secondary">閉じる</button></form>
+    </dialog>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

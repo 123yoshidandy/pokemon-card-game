@@ -1,22 +1,27 @@
 /**
- * 起動と画面の切り替え（scene：title / online / lobby / game）
+ * 起動と画面の切り替え（scene：title / online / lobby / game / decks / editor）
  */
 
 import { DECKS, expandDeck } from './decks.js';
+import { createDeckStore } from './deck-store.js';
+import { deckProblem, mainEnergyType } from './deck-builder.js';
 import LocalGameController from './game-controller.js';
 import OnlineGameController, { loadOnlineSession } from './online-controller.js';
 import NetplayClient from './netplay/netplay-client.mjs';
 import GameScreen from './ui/game-screen.js';
+import DeckScreens from './ui/deck-screen.js';
 import { cardFace } from './ui/card-view.js';
-import { closeOnBackdrop } from './ui/sheets.js';
+import { closeOnBackdrop, showDeckPicker } from './ui/sheets.js';
 
 const $ = id => document.getElementById(id);
 const STORAGE_KEY = 'pokemon-card-game:settings';
-const SCENES = ['title', 'online', 'lobby', 'game'];
+const SCENES = ['title', 'online', 'lobby', 'game', 'decks', 'editor'];
 const MAX_PLAYERS = 2;
 
 const settings = loadSettings();
+const deckStore = createDeckStore();
 let scene = 'title';
+let deckReturnScene = 'title'; // デッキ構築から戻る先（開始画面かロビー）
 let online = null;      // オンライン対戦のコントローラー（部屋に入っている間）
 let matchId = null;     // 表示している対戦
 let toastTimer = null;
@@ -41,7 +46,7 @@ function loadSettings() {
     try {
         const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? '{}');
         return {
-            deckId: DECKS.some(deck => deck.id === saved.deckId) ? saved.deckId : fallback.deckId,
+            deckId: typeof saved.deckId === 'string' ? saved.deckId : fallback.deckId,
             name: typeof saved.name === 'string' ? saved.name : ''
         };
     } catch {
@@ -57,7 +62,46 @@ function saveSettings() {
     }
 }
 
-const selectedDeck = () => DECKS.find(deck => deck.id === settings.deckId);
+// 選んだデッキ（消した・まだ60枚にならないデッキなら、構築済みの最初のデッキ）
+function selectedDeck() {
+    const deck = deckStore.find(settings.deckId);
+    return deck && !deckProblem(deck) ? deck : DECKS[0];
+}
+
+const deckScreens = new DeckScreens(deckStore, {
+    show: next => setScene(next),
+    onDeleted: deckId => {
+        if (settings.deckId !== deckId) return;
+        settings.deckId = DECKS[0].id;
+        saveSettings();
+    },
+    onBack: () => {
+        if (deckReturnScene === 'lobby' && online?.lobby?.status === 'lobby') {
+            renderLobby(online.lobby);
+            setScene('lobby');
+        } else {
+            showTitle();
+        }
+    }
+});
+
+function openDecks() {
+    deckReturnScene = scene === 'lobby' ? 'lobby' : 'title';
+    deckScreens.showList();
+}
+
+function openDeckPicker() {
+    showDeckPicker($('deck-picker'), {
+        decks: deckStore.all().map(deck => ({ id: deck.id, name: deck.name, problem: deckProblem(deck) })),
+        currentId: selectedDeck().id,
+        onPick: deckId => {
+            settings.deckId = deckId;
+            saveSettings();
+            renderDeckSelect();
+        },
+        onBuild: openDecks
+    });
+}
 
 // ===== 画面の切り替え =====
 
@@ -75,10 +119,8 @@ function toast(message) {
 }
 
 function renderDeckSelect() {
-    document.querySelectorAll('.deck-select').forEach(container => {
-        container.innerHTML = DECKS.map(deck =>
-            `<button type="button" class="segment-item ${deck.id === settings.deckId ? 'active' : ''}" data-deck="${deck.id}">${deck.name}</button>`).join('');
-    });
+    const name = selectedDeck().name;
+    document.querySelectorAll('[data-open-deck-picker]').forEach(button => { button.textContent = name; });
 }
 
 function showTitle() {
@@ -92,8 +134,9 @@ function showTitle() {
 // ===== CPU 対戦 =====
 
 function startCpuGame() {
+    // CPU は、自分のデッキとタイプの違う構築済みデッキを使う
     const mine = selectedDeck();
-    const cpu = DECKS.find(deck => deck.id !== mine.id) ?? mine;
+    const cpu = DECKS.find(deck => deck.type !== mainEnergyType(mine)) ?? DECKS[0];
     screen.stop();
     const controller = new LocalGameController(
         { name: 'あなた', decks: [expandDeck(mine), expandDeck(cpu)] },
@@ -258,17 +301,14 @@ function clearInviteUrl() {
 // ===== 入力 =====
 
 document.addEventListener('click', event => {
-    const deckButton = event.target.closest('[data-deck]');
-    if (deckButton) {
-        settings.deckId = deckButton.dataset.deck;
-        saveSettings();
-        renderDeckSelect();
-    }
+    if (event.target.closest('[data-open-deck-picker]')) openDeckPicker();
     const removeCpu = event.target.closest('[data-remove-cpu]');
     if (removeCpu) online?.removeCpu(Number(removeCpu.dataset.removeCpu));
 });
 $('start-cpu').addEventListener('click', startCpuGame);
 $('open-online').addEventListener('click', () => showOnlineMenu());
+$('open-decks').addEventListener('click', openDecks);
+['deck-picker', 'confirm'].forEach(id => closeOnBackdrop($(id)));
 $('create-room').addEventListener('click', createRoom);
 $('join-room').addEventListener('click', joinRoom);
 $('online-name').addEventListener('keydown', event => { if (event.key === 'Enter' && isInviteShown()) joinRoom(); });

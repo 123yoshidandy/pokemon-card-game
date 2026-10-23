@@ -18,19 +18,55 @@
 
     <!-- 開始画面 -->
     <main id="title-screen" class="screen">
+        <button id="open-rules" class="icon-btn corner-btn" aria-label="遊び方"><svg><use href="#icon-help"/></svg></button>
         <div class="title-wrap">
             <h1 class="title-logo">Pokémon Card Game</h1>
             <div id="title-art" class="title-art" aria-hidden="true"></div>
             <div class="setting">
                 <span class="setting-label">デッキ</span>
-                <div id="deck-select" class="segment"></div>
+                <div class="segment deck-select"></div>
             </div>
             <div class="title-buttons">
                 <button id="start-cpu" class="btn btn-primary">CPU と対戦</button>
-                <button id="open-rules" class="btn btn-secondary">遊び方</button>
+                <button id="open-online" class="btn btn-secondary">オンライン対戦</button>
             </div>
         </div>
     </main>
+
+    <!-- オンライン対戦の入口 -->
+    <main id="online-screen" class="screen" hidden>
+        <div class="panel-wrap">
+            <h2 id="online-title" class="panel-title">オンライン対戦</h2>
+            <input id="online-name" class="text-input" maxlength="12" placeholder="名前" autocomplete="nickname">
+            <div class="online-create"><button id="create-room" class="btn btn-primary">部屋を作る</button></div>
+            <div class="online-join">
+                <input id="room-code" class="text-input code-input" inputmode="numeric" maxlength="4" placeholder="部屋番号" autocomplete="off">
+                <button id="join-room" class="btn btn-secondary">参加する</button>
+            </div>
+            <button id="online-back" class="btn btn-secondary btn-small">戻る</button>
+        </div>
+    </main>
+
+    <!-- ロビー -->
+    <main id="lobby-screen" class="screen" hidden>
+        <div class="panel-wrap lobby">
+            <h2 class="panel-title">部屋 <span id="lobby-code" class="lobby-code"></span></h2>
+            <ul id="lobby-players" class="lobby-players"></ul>
+            <div class="setting">
+                <span class="setting-label">デッキ</span>
+                <div class="segment deck-select"></div>
+            </div>
+            <div class="lobby-buttons">
+                <button id="share-invite" class="btn btn-secondary">招待</button>
+                <button id="add-cpu" class="btn btn-secondary host-only">CPU を追加</button>
+                <button id="start-online" class="btn btn-primary host-only">開始</button>
+                <button id="leave-room" class="btn btn-secondary">部屋を出る</button>
+            </div>
+            <p id="guest-note" class="note">ホストが開始すると始まります</p>
+        </div>
+    </main>
+
+    <div id="toast" class="toast" hidden></div>
 
     <!-- 対戦画面 -->
     <main id="game-screen" class="screen" hidden>
@@ -100,6 +136,8 @@
                 <li>バトルポケモンをタップすると、ワザ・にげるを選べる</li>
                 <li>カードを長押しすると説明が出る</li>
             </ul>
+            <h3>オンライン対戦</h3>
+            <p>部屋を作って招待を送るか、部屋番号で参加する。デッキはロビーで選ぶ。対戦中に部屋を出ると、その人の番は CPU が代わりに打つ。</p>
         </div>
         <form method="dialog" class="sheet-actions"><button class="btn btn-secondary">閉じる</button></form>
     </dialog>

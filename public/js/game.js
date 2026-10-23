@@ -10,6 +10,7 @@
 
 import { createRandom, shuffle } from './random.js';
 import { getCard, isBasicEnergy, isBasicPokemon, TYPE_NAMES } from './card-data.js';
+import { validateDeck } from './deck-rules.js';
 
 export const PRIZE_COUNT = 6;
 export const BENCH_SIZE = 5;
@@ -40,15 +41,18 @@ const newTurnState = () => ({
 
 export default class Game {
     // players: [{ name, isCPU }] / options: { seed, decks: [[カードID...], [カードID...]] }
-    constructor(players, { seed = 0, decks } = {}) {
+    // decks を渡さなければ、各プレイヤーが { type: 'deck' } でデッキを決めてから始める（オンライン対戦）
+    constructor(players, { seed = 0, decks = null } = {}) {
         if (players.length !== 2) throw new Error('プレイヤーは2人です');
-        if (!decks || decks.length !== 2) throw new Error('デッキが2つ必要です');
-        decks.forEach(deck => {
-            if (!deck.some(id => isBasicPokemon(getCard(id)))) throw new Error('デッキにたねポケモンがありません');
-        });
+        if (decks) {
+            if (decks.length !== 2) throw new Error('デッキが2つ必要です');
+            decks.forEach(deck => {
+                if (!deck.some(id => isBasicPokemon(getCard(id)))) throw new Error('デッキにたねポケモンがありません');
+            });
+        }
         this.seed = seed >>> 0;
         this.random = createRandom(this.seed);
-        this.decks = decks;
+        this.decks = decks ? [...decks] : [null, null];
         this.benchSize = BENCH_SIZE;
         this.players = players.map((player, id) => ({
             id,
@@ -63,7 +67,7 @@ export default class Game {
             turnsTaken: 0,
             mulligans: 0
         }));
-        this.phase = 'setup'; // setup → main → end
+        this.phase = 'setup'; // deck（デッキを決める）→ setup → main → end
         this.turn = 0;
         this.current = 0;
         this.firstPlayer = null;
@@ -83,6 +87,24 @@ export default class Game {
     // ===== 準備 =====
 
     setup() {
+        if (this.decks.some(deck => !deck)) {
+            this.phase = 'deck';
+            return;
+        }
+        this.beginSetup();
+    }
+
+    // デッキを決める（両者がそろったら準備を始める）
+    submitDeck(player, cards) {
+        this.decks[player.id] = [...cards];
+        this.log(`${player.name}はデッキを決めた`);
+        if (this.decks.every(Boolean)) {
+            this.phase = 'setup';
+            this.beginSetup();
+        }
+    }
+
+    beginSetup() {
         this.players.forEach((player, index) => {
             player.deck = this.decks[index].map(id => ({ uid: `c${this.nextUid++}`, id }));
             shuffle(player.deck, this.random);
@@ -324,6 +346,7 @@ export default class Game {
     }
 
     // ===== 操作 =====
+    //   { type: 'deck', cards }               デッキを決める（カードIDの配列。オンライン対戦の最初だけ）
     //   { type: 'playBasic', uid }            たねポケモンをベンチに出す
     //   { type: 'evolve', uid, target }       手札のポケモンで進化させる（target は場のポケモンのID）
     //   { type: 'attachEnergy', uid, target } エネルギーをつける（1ターンに1回）
@@ -343,6 +366,7 @@ export default class Game {
         let accepted = false;
         const main = () => this.checkMain(player);
         switch (command.type) {
+            case 'deck': accepted = this.run(this.checkDeck(player, command.cards), () => this.submitDeck(player, command.cards)); break;
             case 'playBasic': accepted = this.run(main() ?? this.checkPlayBasic(player, command.uid), () => this.playBasic(player, command.uid)); break;
             case 'evolve': accepted = this.run(main() ?? this.checkEvolve(player, command.uid, command.target), () => this.evolve(player, command.uid, command.target)); break;
             case 'attachEnergy': accepted = this.run(main() ?? this.checkAttachEnergy(player, command.uid, command.target), () => this.attachEnergy(player, command.uid, command.target)); break;
@@ -390,6 +414,12 @@ export default class Game {
     }
 
     // ===== 操作の判定（状態を変えない。だめなら理由の文字列を返す） =====
+
+    checkDeck(player, cards) {
+        if (this.phase !== 'deck') return '今はデッキを決められません';
+        if (this.decks[player.id]) return 'デッキはもう決めました';
+        return validateDeck(cards);
+    }
 
     checkMain(player) {
         if (this.phase !== 'main') return '今はその操作はできません';

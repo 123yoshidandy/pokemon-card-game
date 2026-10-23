@@ -123,16 +123,16 @@ export function showPile(dialog, title, cards, onDetail) {
 }
 
 // ===== 決着 =====
-export function showResult(dialog, { title, message, onRematch, onHome }) {
+// buttons：[{ label, primary, onClick }]
+export function showResult(dialog, { title, message, note = '', buttons }) {
     dialog.dataset.closable = 'false';
-    dialog.innerHTML = `<div class="sheet-body result-body"><h2 class="result-title">${title}</h2><p>${message}</p></div>
-        <div class="sheet-actions"><button type="button" class="btn btn-secondary" data-home>ホーム</button><button type="button" class="btn btn-primary" data-rematch>再戦</button></div>`;
+    dialog.innerHTML = `<div class="sheet-body result-body"><h2 class="result-title">${title}</h2><p>${message}</p>${note ? `<p class="note">${note}</p>` : ''}</div>
+        <div class="sheet-actions">${buttons.map((button, index) => `<button type="button" class="btn ${button.primary ? 'btn-primary' : 'btn-secondary'}" data-index="${index}">${button.label}</button>`).join('')}</div>`;
     dialog.onclick = event => {
-        const target = event.target.closest('button');
+        const target = event.target.closest('[data-index]');
         if (!target) return;
         dialog.close();
-        if (target.dataset.home !== undefined) onHome();
-        else onRematch();
+        buttons[Number(target.dataset.index)].onClick();
     };
     open(dialog);
 }

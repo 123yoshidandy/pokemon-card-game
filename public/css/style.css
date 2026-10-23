@@ -157,6 +157,91 @@ button { font: inherit; color: inherit; }
 .segment-item.active { background: var(--ink); color: var(--bg-1); }
 .title-buttons { display: flex; gap: 14px; }
 
+.corner-btn {
+    position: fixed;
+    top: 8px;
+    right: calc(8px + var(--safe-r));
+}
+
+/* ===== オンラインの入口・ロビー ===== */
+
+#online-screen, #lobby-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.panel-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(8px, 2.5dvh, 14px);
+    width: min(440px, 100%);
+}
+.panel-title { margin: 0; font-size: 20px; font-weight: 800; }
+.text-input {
+    width: 100%;
+    max-width: 280px;
+    font: inherit;
+    font-size: 16px;
+    padding: 9px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: rgba(0, 0, 0, 0.25);
+    color: var(--ink);
+    user-select: text;
+    -webkit-user-select: text;
+}
+.online-join { display: flex; gap: 10px; align-items: center; }
+.code-input { width: 130px; letter-spacing: 0.15em; text-align: center; }
+#online-screen.invited .online-create,
+#online-screen.invited .code-input { display: none; }
+.lobby-code { color: var(--gold); letter-spacing: 0.12em; }
+.lobby-players {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 320px;
+    display: grid;
+    gap: 6px;
+}
+.lobby-players li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    background: var(--panel);
+    min-height: 38px;
+}
+.lobby-name { flex: 1; font-weight: 700; }
+.lobby-name.offline { color: var(--ink-dim); }
+.badge {
+    font-size: 11px;
+    padding: 1px 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+}
+.badge-muted { color: var(--ink-dim); }
+.lobby-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.note { margin: 0; font-size: 13px; color: var(--ink-dim); }
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: calc(16px + var(--safe-b));
+    transform: translateX(-50%);
+    z-index: 10;
+    max-width: calc(100vw - 32px);
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: rgba(10, 16, 30, 0.92);
+    border: 1px solid var(--line);
+    font-size: 14px;
+    font-weight: 700;
+}
+
 /* ===== 対戦画面 ===== */
 
 #game-screen {

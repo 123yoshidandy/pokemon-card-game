@@ -15,6 +15,7 @@ export function createGameView(game, viewerId) {
         current: game.current,
         firstPlayer: game.firstPlayer,
         winner: game.winner,
+        decksSubmitted: game.decks.map(Boolean), // デッキの中身は見せず、決めたかどうかだけ
         endReason: game.endReason,
         stadium: game.stadium ? { id: game.stadium.inst.id, owner: game.stadium.owner } : null,
         turnState: { ...game.turnState, abilitiesUsed: [...game.turnState.abilitiesUsed] },

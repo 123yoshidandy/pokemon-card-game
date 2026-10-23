@@ -4,10 +4,16 @@
  */
 
 import { isBasicEnergy } from './card-data.js';
+import { DECKS, expandDeck } from './decks.js';
 
 // 今、操作すべきプレイヤー（選択待ちならその人、なければ手番の人）
+// デッキを決める段階では、まだ決めていない人（CPU を先に）
 export function actingPlayerId(game) {
     if (game.phase === 'end') return null;
+    if (game.phase === 'deck') {
+        const waiting = game.players.filter(player => !game.decks[player.id]);
+        return (waiting.find(player => player.isCPU) ?? waiting[0])?.id ?? null;
+    }
     if (game.pendingPrompt) return game.pendingPrompt.player.id;
     if (game.phase === 'main') return game.current;
     return null;
@@ -26,6 +32,9 @@ export function runCpuStep(game) {
 }
 
 export function chooseCpuCommand(game, playerId) {
+    if (game.phase === 'deck') {
+        return game.decks[playerId] ? null : { type: 'deck', cards: expandDeck(DECKS[playerId % DECKS.length]) };
+    }
     const prompt = game.pendingPrompt;
     if (prompt) return prompt.player.id === playerId ? { type: 'answer', answer: answerPrompt(game, prompt) } : null;
     if (game.phase !== 'main' || game.current !== playerId) return null;

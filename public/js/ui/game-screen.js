@@ -13,7 +13,7 @@ const $ = id => document.getElementById(id);
 
 
 export default class GameScreen {
-    // handlers：onHome() / onRematch()
+    // handlers：resultButtons(view) → [{ label, primary, onClick }]（決着のダイアログのボタン）、resultNote(view)
     constructor(handlers) {
         this.handlers = handlers;
         this.controller = null;
@@ -32,13 +32,18 @@ export default class GameScreen {
         this.promptPeeking = false;
         this.shownPromptId = null;
         this.resultShown = false;
-        ['prompt', 'detail', 'pile', 'result'].forEach(id => $(id).open && $(id).close());
+        this.closeDialogs();
         this.render();
     }
 
     stop() {
         this.controller?.stop();
         this.controller = null;
+        this.closeDialogs();
+    }
+
+    closeDialogs() {
+        ['prompt', 'detail', 'pile', 'result'].forEach(id => $(id).open && $(id).close());
     }
 
     send(command) {
@@ -183,13 +188,14 @@ export default class GameScreen {
     render() {
         if (!this.controller) return;
         const view = this.controller.getView();
+        if (!view) return;
         this.view = view;
         const me = view.players[view.viewerId];
         const opp = view.players[1 - view.viewerId];
         const prompt = this.myPrompt();
         const highlight = new Set(prompt?.type === 'pokemon' ? prompt.pokemon : this.mode?.targets ?? []);
 
-        $('turn-info').textContent = view.phase === 'setup' ? '準備' : `${view.turn}ターン目 ・ ${view.current === view.viewerId ? 'あなたの番' : `${opp.name}の番`}`;
+        $('turn-info').textContent = view.phase === 'setup' || view.phase === 'deck' ? '準備' : `${view.turn}ターン目 ・ ${view.current === view.viewerId ? 'あなたの番' : `${opp.name}の番`}`;
         $('opp-side').innerHTML = this.sideHtml(opp, highlight);
         $('my-side').innerHTML = this.sideHtml(me, highlight, view.current === view.viewerId && !prompt ? view.legal : null);
         $('opp-info').innerHTML = this.infoHtml(opp);
@@ -235,14 +241,18 @@ export default class GameScreen {
             this.shownPromptId = null;
         }
 
+        if (view.phase !== 'end' && this.resultShown) {
+            this.resultShown = false;
+            if ($('result').open) $('result').close();
+        }
         if (view.phase === 'end' && !this.resultShown) {
             this.resultShown = true;
             const won = view.winner === view.viewerId;
             showResult($('result'), {
                 title: view.winner === 'draw' ? '引き分け' : won ? '勝ち' : '負け',
                 message: this.endMessage(view, won),
-                onRematch: () => this.handlers.onRematch(),
-                onHome: () => this.handlers.onHome()
+                note: this.handlers.resultNote?.(view) ?? '',
+                buttons: this.handlers.resultButtons(view)
             });
         }
     }
@@ -259,6 +269,7 @@ export default class GameScreen {
 
     statusText(view, prompt) {
         if (view.phase === 'end') return '';
+        if (view.phase === 'deck') return view.decksSubmitted[view.viewerId] ? `${view.players[1 - view.viewerId].name}がデッキを選んでいます` : '';
         if (prompt?.type === 'pokemon') return prompt.title;
         if (this.mode?.kind === 'retreat') return 'にげる先のポケモンを選ぶ';
         if (this.mode) return 'つけるポケモンを選ぶ';

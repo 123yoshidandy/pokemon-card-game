@@ -10,8 +10,6 @@ export function createGameView(game, viewerId) {
     const prompt = game.pendingPrompt;
     return {
         viewerId,
-        // 版（受け付けた操作の数）。オンラインではビューの届く順が入れ替わることがあるので、古いビューを捨てるのに使う
-        version: game.commands.length,
         phase: game.phase,
         turn: game.turn,
         current: game.current,

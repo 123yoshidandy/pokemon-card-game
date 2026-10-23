@@ -1,4 +1,4 @@
-// netplay-kit 1.4.0（1352a1a）からコピーしたファイル。ここでは直さず、netplay-kit で直してから同期する
+// netplay-kit 1.5.0（8190274）からコピーしたファイル。ここでは直さず、netplay-kit で直してから同期する
 /**
  * オンライン対戦の部屋の処理（ゲームに共通の部分）
  * 保存先（store）と送信（send）は外から渡すので、AWS でも手元のテスト用サーバーでも同じ処理を使える
@@ -152,7 +152,7 @@ export class RoomService {
             }
             try {
                 await this.saveRoom(room);
-                await this.flush(this.withLobby(room, lobbyBefore, outbox));
+                await this.flush(this.withVersion(room, this.withLobby(room, lobbyBefore, outbox)));
                 return;
             } catch (error) {
                 if (!(error instanceof ConflictError)) throw error;
@@ -179,7 +179,7 @@ export class RoomService {
         let outbox;
         switch (message.action) {
             case 'ping': outbox = [this.pong(connectionId, message)]; break;
-            case 'leave': return [...deadline.outbox, ...await this.leaveRoom(room, seat, connectionId, lobbyBefore)];
+            case 'leave': return this.withVersion(room, [...deadline.outbox, ...await this.leaveRoom(room, seat, connectionId, lobbyBefore)]);
             case 'start': outbox = this.startMatch(room, seat); break;
             case 'ready': outbox = this.setReady(room, seat, message.ready !== false); break;
             case 'backToLobby': outbox = this.backToLobby(room, seat); break;
@@ -192,7 +192,7 @@ export class RoomService {
 
         // 保存するのは、部屋が変わったときだけ（期限切れの処理を含む）
         if (outbox.save || deadline.save) await this.saveRoom(room);
-        return this.withLobby(room, lobbyBefore, [...deadline.outbox, ...outbox]);
+        return this.withVersion(room, this.withLobby(room, lobbyBefore, [...deadline.outbox, ...outbox]));
     }
 
     // ===== 部屋に入る =====
@@ -220,7 +220,7 @@ export class RoomService {
             }
         }
         await this.putConnection(connectionId, room.code);
-        return [this.joinedMessage(room, 0), ...this.lobbyMessages(room)];
+        return this.withVersion(room, [this.joinedMessage(room, 0), ...this.lobbyMessages(room)]);
     }
 
     // 部屋に参加する。token が参加者のものなら、その席に再接続する（対戦中でも戻れる。退出した人は戻れない）
@@ -256,7 +256,7 @@ export class RoomService {
         }
         const others = this.withLobby(room, lobbyBefore, outbox)
             .filter(entry => entry.connectionId !== connectionId);
-        return [...messages, ...others];
+        return this.withVersion(room, [...messages, ...others]);
     }
 
     // 部屋を出る。ロビーでは席から外し（後ろの人の席が詰まる）、対戦中・対戦後は「退出」として席を残す
@@ -477,6 +477,14 @@ export class RoomService {
             room.version = previousVersion;
             throw error;
         }
+    }
+
+    // 部屋の状態（lobby）とビュー（state）に、部屋の版を付ける（保存したなら保存したあとの版）
+    // 操作ごとに別の Lambda が送るので、届く順は入れ替わりうる。端末は、前に受け取ったものより古い版を捨てる
+    withVersion(room, outbox) {
+        return outbox.map(entry => ['lobby', 'state'].includes(entry.message?.type)
+            ? { ...entry, message: { ...entry.message, version: room.version } }
+            : entry);
     }
 
     async flush(outbox) {

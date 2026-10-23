@@ -9,6 +9,7 @@ import NetplayClient from './netplay/netplay-client.mjs';
 
 const STORAGE_KEY = 'pokemon-card-game.online'; // 再接続に使う部屋番号とトークン
 const CPU_STEP_DELAY_MS = 650;                   // CPU の手は CPU 対戦と同じ間隔で順に見せる
+const RESPONSE_TIMEOUT_MS = 5000;                // 操作の返事がこれだけ来なければ、入り直して今の状態を受け取り直す
 const DEPLOYED_SERVER_URL = 'wss://9flzja5gdi.execute-api.ap-northeast-1.amazonaws.com/prod'; // スタック pokemon-card-game-online の WebSocketUrl
 
 export function loadOnlineSession() {
@@ -42,13 +43,13 @@ export default class OnlineGameController {
         });
         this.net.on('state', ({ view }) => {
             // 後から届いた古いビューは、NetplayClient（部屋の版を見る）が捨てている
-            this.awaitingResponse = false;
+            this.clearAwaiting();
             this.view = view;
             this.sendDeckIfNeeded();
             listeners.onUpdate?.();
         });
         this.net.on('error', ({ message }) => {
-            this.awaitingResponse = false;
+            this.clearAwaiting();
             listeners.onError?.(message);
             listeners.onUpdate?.();
         });
@@ -73,6 +74,7 @@ export default class OnlineGameController {
 
     // 部屋を出る（対戦中なら、以後は CPU が代わりに打つ。保存した参加情報も消す）
     leave() {
+        this.clearAwaiting();
         this.net.leave();
         this.view = null;
     }
@@ -91,8 +93,18 @@ export default class OnlineGameController {
             return false;
         }
         this.awaitingResponse = true;
+        // 返事が届き損ねたときの保険：入り直すと joined → lobby → state で今の状態が届く（古い版は捨てられるので、重なっても害はない）
+        clearTimeout(this.responseTimer);
+        this.responseTimer = setTimeout(() => {
+            if (this.awaitingResponse) this.net.resume().catch(() => {});
+        }, RESPONSE_TIMEOUT_MS);
         this.listeners.onUpdate?.();
         return true;
+    }
+
+    clearAwaiting() {
+        this.awaitingResponse = false;
+        clearTimeout(this.responseTimer);
     }
 
     // 画面を閉じるときに呼ばれる（部屋は出ない。出るのは leave）

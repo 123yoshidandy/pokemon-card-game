@@ -220,5 +220,13 @@ export const TRAINER_EFFECTS = {
             conditionImmune: (game, source, pokemon) => pokemon.energies.length > 0
         },
         cpuWants: () => true
+    },
+    '活力の森': {
+        // おたがいの [G] ポケモン全員は、出したばかりの番（最初の自分の番をのぞく）でも [G] ポケモンに進化できる
+        hooks: {
+            allowEarlyEvolve: (game, source, player, target, card) => player.turnsTaken > 1
+                && card.type === 'grass' && game.typesOf(target).includes('grass')
+        },
+        cpuWants: (game, player) => game.inPlay(player).some(pokemon => game.typesOf(pokemon).includes('grass'))
     }
 };

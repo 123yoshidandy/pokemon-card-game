@@ -261,8 +261,9 @@ export default class Game {
                 this.log(`${name}はどくで${poison}ダメージ`);
             }
             if (pokemon.burned) {
-                pokemon.damage += BURN_DAMAGE;
-                this.log(`${name}はやけどで${BURN_DAMAGE}ダメージ`);
+                const burn = BURN_DAMAGE + this.hookSum('burnDamage', pokemon);
+                pokemon.damage += burn;
+                this.log(`${name}はやけどで${burn}ダメージ`);
                 if (this.flipCoin()) {
                     pokemon.burned = false;
                     this.log(`${name}のやけどが治った`);
@@ -363,6 +364,7 @@ export default class Game {
                 pokemon.movedToActiveTurn = this.turn;
                 this.log(`${player.name}は${this.topCard(pokemon).name}をバトル場に出した`);
                 if (this.phase === 'main' && player.id === this.current) this.triggerAbility(player, pokemon, 'onActive');
+                this.hookAll('onPokemonToActive', player, pokemon);
             }
         });
     }
@@ -468,6 +470,8 @@ export default class Game {
         const inst = this.findInHand(player, uid);
         if (!inst || !isBasicPokemon(this.cardOf(inst))) return 'たねポケモンを選んでください';
         if (player.bench.length >= BENCH_SIZE) return 'ベンチがいっぱいです';
+        const blocked = this.hookAny('blockPlayPokemon', player, this.cardOf(inst));
+        if (blocked) return typeof blocked === 'string' ? blocked : '今はポケモンを出せません';
         return null;
     }
 
@@ -478,6 +482,8 @@ export default class Game {
         const target = this.ownPokemon(player, targetId);
         if (!target) return '進化させるポケモンを選んでください';
         if (this.topCard(target).name !== card.evolvesFrom) return `${card.name}は${this.topCard(target).name}から進化しません`;
+        const blocked = this.hookAny('blockPlayPokemon', player, card) || this.hookAny('blockEvolve', player, target, card);
+        if (blocked) return typeof blocked === 'string' ? blocked : '今は進化できません';
         return this.checkCanEvolveNow(player, target, card);
     }
 
@@ -565,7 +571,7 @@ export default class Game {
         const active = player.active;
         const attack = active && this.topCard(active).attacks[index];
         if (!attack) return 'ワザを選んでください';
-        if (this.turn === 1 && !attack.firstTurnOk) return '先攻の最初の番はワザを使えません';
+        if (this.turn === 1 && !attack.firstTurnOk && !this.hookAny('allowFirstTurnAttack', player, active, attack)) return '先攻の最初の番はワザを使えません';
         const stopped = ['asleep', 'paralyzed'].find(condition => this.hasCondition(active, condition));
         if (stopped) return `${CONDITION_NAMES[stopped]}のポケモンはワザを使えません`;
         if (active.effects.some(effect => effect.kind === 'cannotAttack' && effect.untilTurn >= this.turn)) return 'このポケモンはこの番ワザを使えません';
@@ -621,6 +627,7 @@ export default class Game {
         this.log(`${player.name}は${before}を${card.name}に進化させた`);
         // 特性の「手札から出して進化させたとき」（山札などから進化させたときは使えない）
         if (fromHand) this.triggerAbility(player, pokemon, 'onEvolve');
+        this.hookAll('onEvolved', player, pokemon, { fromHand });
     }
 
     attachEnergy(player, uid, targetId) {
@@ -740,6 +747,8 @@ export default class Game {
                     this.log('ワザは失敗した');
                 }
             },
+            // ワザの前に、特性などが ctx を変える（ctx.ignoreEffects を立てる、など）
+            () => { if (!ctx.failed) this.hookAll('beforeAttack', ctx); },
             () => { if (!ctx.failed) attack.before?.(ctx); },
             () => { if (!ctx.failed && ctx.damage > 0 && ctx.defender) this.dealAttackDamage(ctx, ctx.defender, ctx.damage); },
             () => { if (!ctx.failed) attack.after?.(ctx); },
@@ -790,8 +799,10 @@ export default class Game {
                 .reduce((sum, effect) => sum + effect.amount, 0);
         }
         if (isActive) {
-            if (card.weakness === attackerCard.type && !ctx.ignoreWeakness && !this.hasEffect(target, 'noWeakness')) damage *= WEAKNESS_MULTIPLIER;
-            if (card.resistance === attackerCard.type && !ctx.ignoreResistance) damage -= RESISTANCE_REDUCTION;
+            const attackerTypes = this.typesOf(ctx.attacker);
+            const weakness = this.weaknessOf(target);
+            if (weakness && attackerTypes.includes(weakness) && !ctx.ignoreWeakness && !this.hasEffect(target, 'noWeakness')) damage *= WEAKNESS_MULTIPLIER;
+            if (card.resistance && attackerTypes.includes(card.resistance) && !ctx.ignoreResistance) damage -= RESISTANCE_REDUCTION;
         }
         if (isActive && opposing && !ctx.ignoreEffects) {
             damage -= this.effectsOf(target, 'damageReduction').reduce((sum, effect) => sum + effect.amount, 0);
@@ -802,6 +813,11 @@ export default class Game {
         damage = Math.max(0, damage);
         // 「N」以下のワザのダメージを受けない
         if (opposing && !ctx.ignoreEffects && this.effectsOf(target, 'preventDamageUpTo').some(effect => damage <= effect.amount)) {
+            this.log(`${card.name}は${damage}ダメージを受けない`);
+            return 0;
+        }
+        // 計算し終えたダメージを見て、受けないと決める（「200以上のダメージを受けない」など）
+        if (opposing && damage > 0 && this.hookAny('preventFinalDamage', ctx, target, damage)) {
             this.log(`${card.name}は${damage}ダメージを受けない`);
             return 0;
         }
@@ -946,7 +962,13 @@ export default class Game {
         player.active = benchPokemon;
         benchPokemon.movedToActiveTurn = this.turn;
         this.log(`${player.name}のバトル場に${this.topCard(benchPokemon).name}が出た`);
-        if (this.phase === 'main' && player.id === this.current) this.triggerAbility(player, benchPokemon, 'onActive');
+        if (this.phase === 'main' && player.id === this.current) {
+            this.triggerAbility(player, benchPokemon, 'onActive');
+            if (old) this.triggerAbility(player, old, 'onToBench');
+        }
+        // 入れ替えを知らせる（バトル場からベンチにもどったポケモンと、バトル場に出たポケモン）
+        if (old) this.hookAll('onSwitchOut', player, old);
+        this.hookAll('onPokemonToActive', player, benchPokemon);
     }
 
     // optional なら、入れ替えなくてもよい（何も選ばなければ入れ替えない）
@@ -985,6 +1007,10 @@ export default class Game {
     // ポケモンと、ついているすべてのカードを手札にもどす（バトル場が空いたら、きぜつの確認でベンチから出す）
     returnToHand(player, pokemon) {
         if (!this.inPlay(player).includes(pokemon)) return;
+        if (this.hookAny('blockReturnToHand', pokemon)) {
+            this.log(`${this.topCard(pokemon).name}は手札にもどらない`);
+            return;
+        }
         if (player.active === pokemon) player.active = null;
         else this.removeCard(player.bench, pokemon);
         player.hand.push(...pokemon.cards, ...pokemon.energies, ...(pokemon.tool ? [pokemon.tool] : []));
@@ -1115,10 +1141,11 @@ export default class Game {
             const card = this.cardOf(inst);
             if (card.kind !== 'pokemon' || card.stage !== 2) return;
             const base = baseOfStage1(card.evolvesFrom);
-            if (!base) return;
+            if (!base || this.hookAny('blockPlayPokemon', player, card)) return;
             this.inPlay(player).forEach(pokemon => {
                 const top = this.topCard(pokemon);
                 if (top.stage !== 0 || top.name !== base) return;
+                if (this.hookAny('blockEvolve', player, pokemon, card)) return;
                 if (this.checkCanEvolveNow(player, pokemon)) return;
                 pairs.push({ inst, pokemon });
             });
@@ -1219,8 +1246,44 @@ export default class Game {
         this.passiveSources().forEach(source => source.hooks[name]?.(this, source, ...args));
     }
 
-    // 特性がなくなっているか（ポケモンについている効果か、特性以外のカードの効果で）
+    // 配列を集めるフック（ポケモンのタイプを増やす、など）
+    hookCollect(name, ...args) {
+        return this.passiveSources().flatMap(source => source.hooks[name]?.(this, source, ...args) ?? []);
+    }
+
+    // ポケモンのタイプ（フック extraTypes で増えることがある）
+    typesOf(pokemon) {
+        const type = this.topCard(pokemon).type;
+        return [...new Set([type, ...this.hookCollect('extraTypes', pokemon)])];
+    }
+
+    // 弱点のタイプ（フック weaknessOverride で変わることがある。'none' ならなし）
+    weaknessOf(pokemon) {
+        const override = this.hookAny('weaknessOverride', pokemon);
+        if (override === 'none') return null;
+        return override ?? this.topCard(pokemon).weakness;
+    }
+
+    // 特性がなくなっているか（ポケモンについている効果か、ほかのカードの効果で）
+    // 特性がほかのポケモンの特性をなくすとき、その特性自身が、特性以外の効果でなくなっていれば働かない（なくし合いでループしないように）
     abilitySuppressed(pokemon) {
+        if (this.baseAbilitySuppressed(pokemon)) return true;
+        if (this.checkingAbilitySuppression) return false;
+        this.checkingAbilitySuppression = true;
+        try {
+            return this.players.some(player => this.inPlay(player).some(holder => {
+                if (holder === pokemon) return false;
+                const ability = this.topCard(holder).ability;
+                if (!ability?.hooks?.suppressAbility || this.baseAbilitySuppressed(holder)) return false;
+                const source = { kind: 'ability', hooks: ability.hooks, player, pokemon: holder, card: this.topCard(holder), inst: holder.cards[holder.cards.length - 1] };
+                return Boolean(ability.hooks.suppressAbility(this, source, pokemon));
+            }));
+        } finally {
+            this.checkingAbilitySuppression = false;
+        }
+    }
+
+    baseAbilitySuppressed(pokemon) {
         if (this.hasEffect(pokemon, 'abilityLock')) return true;
         return this.passiveSources({ abilities: false }).some(source => source.hooks.suppressAbility?.(this, source, pokemon));
     }
@@ -1261,6 +1324,8 @@ export default class Game {
             title: `特性「${ability.name}」を使いますか？`,
             card: pokemon.cards[pokemon.cards.length - 1].id,
             purpose: `ability-${card.id}`,
+            // CPU は、特性の cpuWants が「使いたい」と言うときだけ使う（書かれていなければ使う）
+            cpuAnswer: game => (ability.cpuWants ? Boolean(ability.cpuWants(game, player, pokemon)) : true),
             callback: yes => {
                 if (!yes) return;
                 this.log(`${card.name}の特性「${ability.name}」`);

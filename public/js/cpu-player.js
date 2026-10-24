@@ -234,7 +234,8 @@ function remainingHp(game, pokemon) {
 function estimateDamage(game, player, attacker, attack, defender) {
     const ctx = { game, player, opponent: game.opponentOf(player), attacker, defender, attack, damage: attack.damage };
     let damage = attack.expected ? attack.expected(ctx) : attack.damage;
-    if (defender && game.topCard(defender).weakness === game.topCard(attacker).type) damage *= 2;
+    const weakness = defender ? game.weaknessOf(defender) : null;
+    if (weakness && game.typesOf(attacker).includes(weakness)) damage *= 2;
     return damage;
 }
 

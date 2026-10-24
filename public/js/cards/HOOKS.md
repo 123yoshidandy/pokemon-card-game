@@ -84,10 +84,27 @@ CPU がつけ先を選ぶときの目安は `cpuTarget: (game, player, pokemon) 
 | blockAttack | player, pokemon, attack | 理由の文字列 | ワザを使えない |
 | blockRetreat | player, pokemon | true | にげられない |
 | allowEarlyEvolve | player, target, card | true | 最初の番や、出したばかりの番でも進化できる |
-| suppressAbility | pokemon | true | そのポケモンの特性がなくなる（特性以外のカードだけが書ける） |
+| suppressAbility | pokemon | true | そのポケモンの特性がなくなる（下の注意を参照） |
 | suppressTool | pokemon | true | そのポケモンのどうぐの効果がなくなる（スタジアムだけが書ける） |
 | onAttachEnergy | player, pokemon, inst | なし | 手札からエネルギーをつけた後 |
 | onTurnEnd | player（番を終える人） | なし | 番の終わり（ポケモンチェックの前） |
+| poisonDamage / burnDamage | pokemon | 足す数 | ポケモンチェックの、どく・やけどのダメージ |
+| doubleHeal | pokemon | true | 回復するHPが2倍になる |
+| blockAttachEnergy | player, pokemon, card | 理由の文字列 | 手札からそのエネルギーをつけられない（カード自身の制限は特殊エネルギーの canAttachTo(game, pokemon)） |
+| blockPlayPokemon | player, card | 理由の文字列 | 手札からポケモンを出せない（たねポケモンをベンチに出す・進化させる・ふしぎなアメ） |
+| blockEvolve | player, target, card | 理由の文字列 | そのポケモンを進化させられない |
+| blockReturnToHand | pokemon | true | 効果で手札にもどらない（game.returnToHand が見る） |
+| allowFirstTurnAttack | player, pokemon, attack | true | 先攻の最初の番でもワザを使える |
+| preventFinalDamage | ctx, target, damage | true | 計算し終えたダメージを見て、受けないと決める |
+| beforeAttack | ctx | なし | ワザの効果の前。ctx を変えてよい（ctx.ignoreEffects を立てる、など） |
+| onEvolved | player, pokemon, { fromHand } | なし | 進化した後 |
+| onSwitchOut | player, pokemon | なし | バトル場からベンチにもどった後 |
+| onPokemonToActive | player, pokemon | なし | ベンチからバトル場に出た後（入れ替え・きぜつの後に出す、のどちらも） |
+| extraTypes | pokemon | タイプの配列 | ポケモンのタイプを増やす（弱点・抵抗力の計算に使う。game.typesOf） |
+| weaknessOverride | pokemon | タイプか 'none' | 弱点のタイプを変える・なくす（game.weaknessOf） |
+
+特性の type には 'onToBench'（自分の番に、バトル場からベンチにもどったとき）もある。
+suppressAbility は特性にも書ける（ほかのポケモンの特性をなくす）。ただし、その特性自身が特性以外の効果でなくなっていれば働かない。
 
 **プレイヤーにかかる効果にもフックを持たせられる**（サポートの「この番、自分のポケモンが使うワザのダメージは+30」「次の相手の番、自分のポケモン全員が受けるダメージは-30」など）：
 `game.addPlayerEffect(player, 'kind', untilTurn, { hooks: { damageDealt: ... } })`。効果の間（untilTurn の番の終わりまで）、source.kind が 'effect'・source.player がその人として呼ばれる。

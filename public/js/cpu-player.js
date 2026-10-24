@@ -140,7 +140,11 @@ function chooseMainAction(game, player) {
     const attack = bestAttack(game, player, active, opponent, legal);
     if (attack !== null) return { type: 'attack', index: attack };
     // ワザを使えないなら、番が終わるスタジアムの効果（ミアレシティ）もここで使う
-    if (legal.stadium && player.bench.length < 4) return { type: 'useStadium' };
+    // ほかのスタジアムの効果は、カードの cpuWantsUse が「使いたい」と言うときだけ使う（使い続けて対戦が終わらなくなることがある）
+    if (legal.stadium) {
+        const stadiumCard = game.cardOf(game.stadium.inst);
+        if (stadiumCard.name === 'ミアレシティ' ? player.bench.length < 4 : stadiumCard.cpuWantsUse?.(game, player)) return { type: 'useStadium' };
+    }
     return { type: 'endTurn' };
 }
 
@@ -197,7 +201,10 @@ function chooseEnergyTarget(game, player) {
 
 function chooseToolTarget(game, player, card, targets) {
     const pokemonOf = id => game.inPlay(player).find(pokemon => pokemon.id === id);
-    const ordered = [...targets].sort((a, b) => (b === player.active?.id) - (a === player.active?.id));
+    let ordered = [...targets].sort((a, b) => (b === player.active?.id) - (a === player.active?.id));
+    if (card.cpuWants && !card.cpuWants(game, player)) return null;
+    // つけ先の目安（どうぐの cpuTarget）があれば、それに合うポケモンだけにつける
+    if (card.cpuTarget) ordered = ordered.filter(id => card.cpuTarget(game, player, pokemonOf(id)));
     if (card.retreatReduction) return ordered.find(id => game.topCard(pokemonOf(id)).retreat >= 2) ?? null;
     if (card.damageBonus) return ordered.find(id => !hasRule(game.topCard(pokemonOf(id)))) ?? null;
     return ordered[0] ?? null;
@@ -205,6 +212,7 @@ function chooseToolTarget(game, player, card, targets) {
 
 // 2進化の HP が減るスタジアムは、相手の2進化のほうが多いときだけ出す
 function stadiumIsGood(game, player, card) {
+    if (card.cpuWants) return card.cpuWants(game, player);
     if (!card.hpModifier) return true;
     const count = p => game.inPlay(p).filter(pokemon => card.hpModifier(game.topCard(pokemon)) < 0).length;
     return count(game.opponentOf(player)) > count(player);

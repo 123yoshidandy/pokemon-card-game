@@ -21,11 +21,13 @@
     hooks: { ... },                         // どうぐ・スタジアムのいるだけで働く効果（下の「フック」）
     canUse: (game, player) => true,         // スタジアムの「自分の番に1回使える」効果
     use: (game, player) => { ... },
-    cpuWants: (game, player) => true        // CPU が今使いたいか。書かなければ CPU は使わない
+    cpuWants: (game, player) => true,       // CPU が今使いたいか。書かなければ CPU は使わない
+    cpuWantsUse: (game, player) => true     // スタジアムの canUse / use を、CPU が今使いたいか。書かなければ CPU は使わない
 }
 ```
 
 どうぐは `playTrainer` の target のポケモンにつく（つけた後の効果は hooks に書く）。どうぐの hooks の `source.pokemon` が、つけているポケモン。
+CPU がつけ先を選ぶときの目安は `cpuTarget: (game, player, pokemon) => true` に書く（合うポケモンにだけつける）。
 
 ## 特性
 

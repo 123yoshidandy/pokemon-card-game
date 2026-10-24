@@ -32,6 +32,7 @@ export const CONDITION_NAMES = {
 const newTurnState = () => ({
     energyAttached: false,
     supporterPlayed: false,
+    supporterNames: [], // この番に使ったサポートの名前
     stadiumPlayed: false,
     stadiumUsed: false,
     retreated: false,
@@ -641,6 +642,7 @@ export default class Game {
                 return;
             case 'supporter':
                 this.turnState.supporterPlayed = true;
+                this.turnState.supporterNames.push(card.name);
                 break;
         }
         // グッズとサポートは、効果を終えてからトラッシュする

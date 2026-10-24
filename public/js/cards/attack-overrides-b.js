@@ -30,7 +30,8 @@ const FOREVER = 1e9;
 const isEx = card => card.rule === 'ex' || card.rule === 'mega';
 const counters = pokemon => Math.floor(pokemon.damage / 10);
 const remainingHp = (game, pokemon) => game.maxHp(pokemon) - pokemon.damage;
-const canAffect = (ctx, pokemon) => Boolean(pokemon) && ctx.game.canAffectByAttack(ctx, pokemon);
+// ワザの効果を与えられるか（kind を渡すと、その種類の効果だけを止めるもの（バトルコロシアムのダメカンなど）も見る。kind は game.canAffect と同じ）
+const canAffect = (ctx, pokemon, kind = null) => Boolean(pokemon) && ctx.game.canAffectByAttack(ctx, pokemon) && (!kind || ctx.game.canAffect(pokemon, kind));
 const isBasicEnergy = (card, type = null) => card.kind === 'energy' && card.basic && (!type || card.energyType === type);
 const isSpecialEnergy = card => card.kind === 'energy' && !card.basic;
 const hasType = (game, pokemon, type) => game.typesOf(pokemon).includes(type);
@@ -68,22 +69,20 @@ function knockOut(game, pokemon) {
     if (rest > 0) game.putDamage(pokemon, rest);
 }
 
-// ダメカンをのせ替える
+// ダメカンをのせ替える（本体の game.moveCounters が、のせ替えを止める効果と、効果を受けないポケモンを見る）
 function moveCounters(game, from, to, count) {
     if (count <= 0) return;
-    from.damage -= count * 10;
-    to.damage += count * 10;
-    game.log(`${game.topCard(from).name}のダメカンを${count}個、${game.topCard(to).name}にのせ替えた`);
+    game.moveCounters(from, to, count * 10);
 }
 
 // ポケモンについているエネルギーを、持ち主の手札・山札・トラッシュに動かす
+//   （本体の game.removeEnergy が、効果を受けないポケモンと、手札にもどせないポケモンを見る）
 function moveEnergiesOff(game, pokemon, insts, to = 'discard') {
-    const owner = game.ownerOf(pokemon);
-    if (!owner || insts.length === 0) return;
-    const dest = { hand: owner.hand, deck: owner.deck, discard: owner.discard }[to];
-    insts.forEach(inst => game.moveCard(pokemon.energies, dest, inst));
+    if (!game.ownerOf(pokemon) || insts.length === 0) return;
+    const moved = insts.filter(inst => game.removeEnergy(pokemon, inst, to));
+    if (moved.length === 0) return;
     const words = { hand: '手札にもどした', deck: '山札にもどした', discard: 'トラッシュした' };
-    game.log(`${game.topCard(pokemon).name}のエネルギーを${insts.length}個${words[to]}`);
+    game.log(`${game.topCard(pokemon).name}のエネルギーを${moved.length}個${words[to]}`);
 }
 
 // ポケモンについているエネルギーを count 個選ぶ（候補がちょうどか、同じカードだけなら選ばせない）
@@ -110,26 +109,25 @@ function pickEnergies(ctx, pokemon, count, done, { filter = () => true, chooser 
     });
 }
 
-// ポケモンと、ついているすべてのカードを、持ち主の山札にもどす（shuffle なら切る）
+// ポケモンと、ついているすべてのカードを、持ち主の山札にもどす（shuffle なら切る。相手の効果を受けないポケモンは、もどさない）
 function returnToDeck(game, pokemon, { shuffle = true } = {}) {
     const owner = game.ownerOf(pokemon);
     if (!owner) return;
+    if (!game.canAffect(pokemon, 'return')) {
+        game.log(`${game.topCard(pokemon).name}は山札にもどらない`);
+        return;
+    }
     if (owner.active === pokemon) owner.active = null;
     else game.removeCard(owner.bench, pokemon);
-    owner.deck.push(...pokemon.cards, ...pokemon.energies, ...(pokemon.tool ? [pokemon.tool] : []));
+    owner.deck.push(...pokemon.cards, ...pokemon.energies, ...[pokemon.tool, pokemon.tool2].filter(Boolean));
     if (shuffle) game.shuffleDeck(owner);
     game.log(`${owner.name}の${game.topCard(pokemon).name}と、ついているカードを山札にもどした`);
 }
 
-// 「進化カード」を1枚はがして退化させる（はがしたカードは持ち主の手札か山札へ）
+// 「進化カード」を1枚はがして退化させる（はがしたカードは持ち主の手札か山札へ。本体の game.devolve が、効果を受けないポケモンを見る）
 function devolve(game, pokemon, to) {
-    const owner = game.ownerOf(pokemon);
-    if (!owner || pokemon.cards.length < 2) return;
-    const inst = pokemon.cards.pop();
-    game.clearConditionsOnStageChange(pokemon);
-    pokemon.evolvedFrom = null;
-    (to === 'hand' ? owner.hand : owner.deck).push(inst);
-    game.log(`${game.cardName(inst)}をはがして、${game.topCard(pokemon).name}に退化させた`);
+    if (!game.ownerOf(pokemon) || pokemon.cards.length < 2) return;
+    if (game.devolve(pokemon, 1, to).length > 0) pokemon.evolvedFrom = null;
 }
 
 // 選んだポケモン（count 匹まで）にワザのダメージ
@@ -412,7 +410,7 @@ const copyDefender = {
 // 相手のベンチポケモンを1匹選び、山札にもどして切る
 function shuffleOpponentBench(ctx, count = 1) {
     const { game, player, opponent } = ctx;
-    const targets = opponent.bench.filter(pokemon => canAffect(ctx, pokemon));
+    const targets = opponent.bench.filter(pokemon => canAffect(ctx, pokemon, 'return'));
     const n = Math.min(count, targets.length);
     if (n === 0) return;
     game.promptPokemon({
@@ -517,7 +515,7 @@ export const ATTACK_OVERRIDES = {
                 purpose: 'counter-source',
                 cpuAnswer: (g, prompt) => [bestIndex(prompt.pokemon, pokemon => pokemon.damage)],
                 callback: ([source]) => {
-                    const targets = game.inPlay(opponent).filter(pokemon => canAffect(ctx, pokemon));
+                    const targets = game.inPlay(opponent).filter(pokemon => canAffect(ctx, pokemon, 'moveCounters'));
                     if (targets.length === 0) return;
                     game.promptPokemon({
                         player,
@@ -559,11 +557,13 @@ export const ATTACK_OVERRIDES = {
         after: ctx => {
             const { game, player } = ctx;
             const heads = flipCoins(game, 3);
-            const n = Math.min(heads, player.discard.length);
+            // トラッシュから動かせないカードは選べない
+            const cards = player.discard.filter(inst => !game.isDiscardLocked(inst));
+            const n = Math.min(heads, cards.length);
             if (n === 0) return;
             game.promptCards({
                 player,
-                cards: player.discard,
+                cards,
                 min: 0,
                 max: n,
                 title: `トラッシュから手札に加えるカードを${n}枚まで選ぶ`,
@@ -629,7 +629,7 @@ export const ATTACK_OVERRIDES = {
                 game.shuffleDeck(player);
                 game.log(`${player.name}は見せたエネルギーを山札にもどして切った`);
             };
-            const targets = game.inPlay(opponent).filter(pokemon => canAffect(ctx, pokemon));
+            const targets = game.inPlay(opponent).filter(pokemon => canAffect(ctx, pokemon, 'counters'));
             if (targets.length === 0) {
                 finish();
                 return;
@@ -725,8 +725,8 @@ export const ATTACK_OVERRIDES = {
     'ヤミラミ/ダメージコレクト': {
         after: ctx => {
             const { game, player, opponent, defender } = ctx;
-            if (!canAffect(ctx, defender)) return;
-            const steps = opponent.bench.filter(pokemon => pokemon.damage > 0 && canAffect(ctx, pokemon)).map(pokemon => () => {
+            if (!canAffect(ctx, defender, 'moveCounters')) return;
+            const steps = opponent.bench.filter(pokemon => pokemon.damage > 0 && canAffect(ctx, pokemon, 'moveCounters')).map(pokemon => () => {
                 if (!game.inPlay(opponent).includes(pokemon) || opponent.active !== defender) return;
                 game.promptChoose({
                     player,
@@ -757,7 +757,7 @@ export const ATTACK_OVERRIDES = {
     'チラーミィ/おそうじ': {
         after: ctx => {
             const { game, player, opponent } = ctx;
-            const targets = game.inPlay(opponent).filter(pokemon => pokemon.tool && canAffect(ctx, pokemon));
+            const targets = game.inPlay(opponent).filter(pokemon => pokemon.tool && canAffect(ctx, pokemon, 'tool'));
             const n = Math.min(2, targets.length);
             if (n === 0) return;
             game.promptPokemon({
@@ -800,7 +800,7 @@ export const ATTACK_OVERRIDES = {
     'ゲンガーex/トリックステップ': {
         after: ctx => {
             const { game, player, opponent, defender } = ctx;
-            if (!canAffect(ctx, defender) || defender.energies.length === 0 || opponent.bench.length === 0) return;
+            if (!canAffect(ctx, defender, 'energy') || defender.energies.length === 0 || !opponent.bench.some(pokemon => canAffect(ctx, pokemon))) return;
             game.promptConfirm({
                 player,
                 title: '相手のバトルポケモンのエネルギーを1個、相手のベンチポケモンにつけ替えますか？',
@@ -809,9 +809,12 @@ export const ATTACK_OVERRIDES = {
                 callback: yes => {
                     if (!yes) return;
                     pickEnergies(ctx, defender, 1, ([inst]) => {
+                        // つけ替える先も、効果を受けないポケモンは選べない
+                        const targets = opponent.bench.filter(pokemon => canAffect(ctx, pokemon));
+                        if (!inst || targets.length === 0) return;
                         game.promptPokemon({
                             player,
-                            pokemon: opponent.bench,
+                            pokemon: targets,
                             min: 1,
                             max: 1,
                             title: 'エネルギーをつけ替える相手のベンチポケモンを選ぶ',
@@ -1042,10 +1045,11 @@ export const ATTACK_OVERRIDES = {
             game.runNext(
                 () => game.promptSwitchOwnActive(player, 'switch'),
                 () => {
-                    if (opponent.bench.length === 0 || !canAffect(ctx, opponent.active)) return;
+                    const bench = opponent.bench.filter(pokemon => canAffect(ctx, pokemon, 'switch'));
+                    if (bench.length === 0 || !canAffect(ctx, opponent.active, 'switch')) return;
                     game.promptPokemon({
                         player: opponent,
-                        pokemon: opponent.bench,
+                        pokemon: bench,
                         min: 1,
                         max: 1,
                         title: 'バトル場に出すポケモンを選ぶ',
@@ -1062,7 +1066,7 @@ export const ATTACK_OVERRIDES = {
             const { game, player, opponent, defender } = ctx;
             if (canAffect(ctx, defender)) game.addCondition(defender, 'confused');
             const move = () => {
-                const affected = game.inPlay(opponent).filter(pokemon => canAffect(ctx, pokemon));
+                const affected = game.inPlay(opponent).filter(pokemon => canAffect(ctx, pokemon, 'moveCounters'));
                 const sources = affected.filter(pokemon => pokemon.damage > 0);
                 if (sources.length === 0 || affected.length < 2) return;
                 game.promptPokemon({
@@ -1219,10 +1223,12 @@ export const ATTACK_OVERRIDES = {
         before: ctx => { if (!ctx.game.turnState.supporterNames.includes('クセロシキのたくらみ')) fail(ctx); },
         after: ctx => {
             const { game, player, opponent } = ctx;
-            if (opponent.bench.length === 0) return;
+            // 入れ替えの効果を受けないポケモンは選べない（バトルポケモンが受けないなら、入れ替えられない）
+            const bench = opponent.bench.filter(pokemon => canAffect(ctx, pokemon, 'switch'));
+            if (bench.length === 0 || !canAffect(ctx, opponent.active, 'switch')) return;
             game.promptPokemon({
                 player,
-                pokemon: opponent.bench,
+                pokemon: bench,
                 min: 1,
                 max: 1,
                 title: 'バトル場に呼び出す相手のポケモンを選ぶ（120ダメージ）',
@@ -1230,7 +1236,8 @@ export const ATTACK_OVERRIDES = {
                 amount: 120,
                 callback: ([target]) => {
                     game.switchActive(opponent, target);
-                    game.dealAttackDamage(ctx, target, 120);
+                    // 「新しく出てきたポケモン」にだけダメージを与える
+                    if (opponent.active === target) game.dealAttackDamage(ctx, target, 120);
                 }
             });
         },
@@ -1417,17 +1424,20 @@ export const ATTACK_OVERRIDES = {
     'オーロンゲ/ちょうはつクラッチ': {
         after: ctx => {
             const { game, opponent } = ctx;
-            if (opponent.bench.length === 0 || !canAffect(ctx, opponent.active)) return;
+            // 入れ替えの効果を受けないポケモンは、バトル場に出す候補にしない
+            const bench = opponent.bench.filter(pokemon => canAffect(ctx, pokemon, 'switch'));
+            if (bench.length === 0 || !canAffect(ctx, opponent.active, 'switch')) return;
             game.promptPokemon({
                 player: opponent,
-                pokemon: opponent.bench,
+                pokemon: bench,
                 min: 1,
                 max: 1,
                 title: 'バトル場に出すポケモンを選ぶ',
                 purpose: 'forced-switch',
                 callback: ([target]) => {
                     game.switchActive(opponent, target);
-                    game.dealAttackDamage(ctx, target, 160);
+                    // 「新しく出てきたポケモン」にだけダメージを与える
+                    if (opponent.active === target) game.dealAttackDamage(ctx, target, 160);
                 }
             });
         },
@@ -1556,7 +1566,9 @@ export const ATTACK_OVERRIDES = {
     'クエスパトラ/ミスティックアイ': {
         after: ctx => {
             const { game, player, opponent } = ctx;
-            const targets = game.inPlay(opponent).filter(pokemon => pokemon.cards.length > 1 && canAffect(ctx, pokemon));
+            // 退化の効果を受けないポケモンと、手札にもどせないポケモン（なぎのきょうち）は選べない
+            const targets = game.inPlay(opponent).filter(pokemon => pokemon.cards.length > 1 && canAffect(ctx, pokemon, 'devolve')
+                && !game.hookAny('blockReturnToHand', pokemon));
             if (targets.length === 0) return;
             game.promptPokemon({
                 player,
@@ -1869,7 +1881,7 @@ export const ATTACK_OVERRIDES = {
     'グレイシアex/ユークレース': {
         after: ctx => {
             const { game, player, opponent } = ctx;
-            const targets = game.inPlay(opponent).filter(pokemon => counters(pokemon) === 6 && canAffect(ctx, pokemon));
+            const targets = game.inPlay(opponent).filter(pokemon => counters(pokemon) === 6 && canAffect(ctx, pokemon, 'counters'));
             if (targets.length === 0) return;
             game.promptPokemon({
                 player,

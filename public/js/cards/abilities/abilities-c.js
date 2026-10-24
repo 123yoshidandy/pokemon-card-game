@@ -33,6 +33,18 @@ const hasIn = (game, list, filter) => list.some(inst => filter(game.cardOf(inst)
 const names = (game, insts) => insts.map(inst => game.cardName(inst)).join('と');
 const allIndices = count => Array.from({ length: count }, (_, index) => index);
 
+// player の特性の効果を、そのポケモンに与えられるか（kind は game.canAffect と同じ）
+//   canUse は効果の出どころなしで呼ばれるので、出どころを入れて確かめる
+const canAffectFrom = (game, player, pokemon, kind) => Boolean(pokemon)
+    && game.withSource({ player, kind: 'ability' }, () => game.canAffect(pokemon, kind));
+
+// 相手のベンチポケモンを、バトルポケモンと入れ替えられるか（入れ替えの効果を受けないものは選べない）
+const gustTargets = (game, player) => {
+    const opponent = game.opponentOf(player);
+    if (!canAffectFrom(game, player, opponent.active, 'switch')) return [];
+    return opponent.bench.filter(pokemon => canAffectFrom(game, player, pokemon, 'switch'));
+};
+
 // 点数の高い順に count 個のインデックス（答えは小さい順）
 function bestIndices(items, score, count) {
     return items
@@ -219,9 +231,9 @@ function lookTop(game, player, { count, filter, min, max, title, purpose, onSele
 function lureOpponent(game, player, then = () => {}) {
     if (!game.flipCoin()) return;
     const opponent = game.opponentOf(player);
-    choosePokemon(game, player, opponent.bench, 'バトル場に出す相手のベンチポケモンを選ぶ', 'boss-target', target => {
+    choosePokemon(game, player, gustTargets(game, player), 'バトル場に出す相手のベンチポケモンを選ぶ', 'boss-target', target => {
         game.switchActive(opponent, target);
-        then(target);
+        if (opponent.active === target) then(target);
     });
 }
 
@@ -275,12 +287,12 @@ export const ABILITY_EFFECTS = {
     },
     'はかいのずつき': {
         type: 'activated',
-        canUse: (game, player, pokemon) => player.active === pokemon && Boolean(game.opponentOf(player).active),
+        canUse: (game, player, pokemon) => player.active === pokemon && canAffectFrom(game, player, game.opponentOf(player).active, 'energy'),
         use: (game, player) => {
             if (!game.flipCoin()) return;
             const target = game.opponentOf(player).active;
-            if (!target || target.energies.length === 0) return;
-            const opponent = game.opponentOf(player);
+            // エネルギーの効果を受けないポケモンなら、選ばせない
+            if (!target || target.energies.length === 0 || !game.canAffect(target, 'energy')) return;
             game.promptCards({
                 player,
                 cards: target.energies,
@@ -289,8 +301,7 @@ export const ABILITY_EFFECTS = {
                 title: 'トラッシュする相手のエネルギーを選ぶ',
                 purpose: 'discard-opponent-energy',
                 callback: ([inst]) => {
-                    game.moveCard(target.energies, opponent.discard, inst);
-                    game.log(`${game.topCard(target).name}の${game.cardName(inst)}をトラッシュした`);
+                    if (game.removeEnergy(target, inst, 'discard')) game.log(`${game.topCard(target).name}の${game.cardName(inst)}をトラッシュした`);
                 }
             });
         },
@@ -419,12 +430,12 @@ export const ABILITY_EFFECTS = {
     },
     'パニックプリズン': {
         type: 'onEvolve',
-        canUse: (game, player) => Boolean(game.opponentOf(player).active),
+        canUse: (game, player) => canAffectFrom(game, player, game.opponentOf(player).active, 'condition'),
         use: (game, player) => game.addCondition(game.opponentOf(player).active, 'confused')
     },
     'ははのいざない': {
         type: 'activated',
-        canUse: (game, player) => game.opponentOf(player).bench.length > 0,
+        canUse: (game, player) => gustTargets(game, player).length > 0,
         use: (game, player) => lureOpponent(game, player),
         cpuWants: (game, player) => hasWeakerBench(game, player)
     },
@@ -466,12 +477,15 @@ export const ABILITY_EFFECTS = {
     },
     'ひっさつしゅりけん': {
         type: 'activated',
-        canUse: (game, player, pokemon) => player.active === pokemon && hasIn(game, player.hand, card => isBasicEnergy(card, 'water')),
+        canUse: (game, player, pokemon) => player.active === pokemon && hasIn(game, player.hand, card => isBasicEnergy(card, 'water'))
+            && game.inPlay(game.opponentOf(player)).some(pk => canAffectFrom(game, player, pk, 'counters')),
         use: (game, player) => chooseFromHand(game, player, card => isBasicEnergy(card, 'water'), 'トラッシュする「基本水エネルギー」を選ぶ', 'discard-hand', inst => {
             game.moveCard(player.hand, player.discard, inst);
             game.log(`${player.name}は手札の${game.cardName(inst)}をトラッシュした`);
             const opponent = game.opponentOf(player);
-            choosePokemon(game, player, game.inPlay(opponent), 'ダメカンを6個のせる相手のポケモンを選ぶ', 'snipe-target', target => {
+            // ダメカンの効果を受けないポケモンは選べない
+            const targets = game.inPlay(opponent).filter(pk => game.canAffect(pk, 'counters'));
+            choosePokemon(game, player, targets, 'ダメカンを6個のせる相手のポケモンを選ぶ', 'snipe-target', target => {
                 game.putDamage(target, 60);
                 game.runNext(() => game.checkKnockouts());
             }, { amount: 60 });
@@ -663,7 +677,7 @@ export const ABILITY_EFFECTS = {
     },
     'みわくのいざない': {
         type: 'activated',
-        canUse: (game, player) => game.opponentOf(player).bench.length > 0,
+        canUse: (game, player) => gustTargets(game, player).length > 0,
         use: (game, player) => lureOpponent(game, player, target => game.addCondition(target, 'confused')),
         cpuWants: (game, player) => hasWeakerBench(game, player)
     },
@@ -757,7 +771,7 @@ export const ABILITY_EFFECTS = {
     },
     'やけつくじょうき': {
         type: 'activated',
-        canUse: (game, player, pokemon) => player.active === pokemon && Boolean(game.opponentOf(player).active),
+        canUse: (game, player, pokemon) => player.active === pokemon && canAffectFrom(game, player, game.opponentOf(player).active, 'condition'),
         use: (game, player) => game.addCondition(game.opponentOf(player).active, 'burned'),
         cpuWants: (game, player) => !game.hasCondition(game.opponentOf(player).active, 'burned')
     },
@@ -785,7 +799,7 @@ export const ABILITY_EFFECTS = {
     },
     'やすらぐひかり': {
         type: 'activated',
-        canUse: (game, player, pokemon) => player.active === pokemon && Boolean(game.opponentOf(player).active),
+        canUse: (game, player, pokemon) => player.active === pokemon && canAffectFrom(game, player, game.opponentOf(player).active, 'condition'),
         use: (game, player) => game.addCondition(game.opponentOf(player).active, 'asleep'),
         cpuWants: (game, player) => !game.hasCondition(game.opponentOf(player).active, 'asleep')
     },
@@ -797,9 +811,10 @@ export const ABILITY_EFFECTS = {
     },
     'よくばりオーダー': {
         type: 'onEvolve',
-        canUse: (game, player) => hasIn(game, player.discard, card => card.name === 'ペパーのサンドウィッチ'),
+        canUse: (game, player) => player.discard.some(inst => game.cardName(inst) === 'ペパーのサンドウィッチ' && !game.isDiscardLocked(inst)),
         use: (game, player) => {
-            const candidates = cardsIn(game, player.discard, card => card.name === 'ペパーのサンドウィッチ');
+            // トラッシュから動かせないカードは選べない
+            const candidates = cardsIn(game, player.discard, card => card.name === 'ペパーのサンドウィッチ').filter(inst => !game.isDiscardLocked(inst));
             game.promptCards({
                 player,
                 cards: candidates,
@@ -809,15 +824,15 @@ export const ABILITY_EFFECTS = {
                 purpose: 'discard-to-hand',
                 cpuAnswer: (g, prompt) => allIndices(prompt.max),
                 callback: selected => {
-                    selected.forEach(inst => game.removeCard(player.discard, inst));
-                    game.addToHand(player, selected, { reveal: true });
+                    const moved = selected.filter(inst => game.moveCard(player.discard, player.hand, inst));
+                    if (moved.length) game.log(`${player.name}は${names(game, moved)}を手札に加えた`);
                 }
             });
         }
     },
     'よりどりねんえき': {
         type: 'activated',
-        canUse: (game, player) => Boolean(game.opponentOf(player).active),
+        canUse: (game, player) => canAffectFrom(game, player, game.opponentOf(player).active, 'condition'),
         use: (game, player) => {
             if (!game.flipCoin()) return;
             const conditions = ['poisoned', 'burned', 'confused'];
@@ -941,9 +956,8 @@ export const ABILITY_EFFECTS = {
             const sources = game.inPlay(player).filter(pokemon => pokemon.damage >= 10 && nameStarts('ロケット団の')(game.topCard(pokemon)));
             choosePokemon(game, player, sources, 'ダメカンを1個とる「ロケット団のポケモン」を選ぶ', 'counter-source', from => {
                 choosePokemon(game, player, game.inPlay(player).filter(pokemon => pokemon !== from), 'ダメカンをのせるポケモンを選ぶ', 'counter-target', to => {
-                    from.damage -= 10;
-                    to.damage += 10;
-                    game.log(`${game.topCard(from).name}のダメカンを1個、${game.topCard(to).name}にのせ替えた`);
+                    // のせ替えを止める効果（かんしのめ）は、本体の game.moveCounters が見る
+                    game.moveCounters(from, to, 10);
                     game.runNext(() => game.checkKnockouts());
                 });
             });

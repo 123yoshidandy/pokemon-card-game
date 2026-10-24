@@ -30,6 +30,11 @@ const cardsIn = (game, list, filter) => list.filter(inst => filter(game.cardOf(i
 const hasIn = (game, list, filter) => list.some(inst => filter(game.cardOf(inst)));
 const allIndices = count => Array.from({ length: count }, (_, index) => index);
 
+// player の特性の効果を、そのポケモンに与えられるか（kind は game.canAffect と同じ）
+//   canUse は効果の出どころなしで呼ばれるので、出どころを入れて確かめる
+const canAffectFrom = (game, player, pokemon, kind) => Boolean(pokemon)
+    && game.withSource({ player, kind: 'ability' }, () => game.canAffect(pokemon, kind));
+
 // そのポケモンが、持ち主のバトル場にいるか
 function isActive(game, pokemon) {
     const owner = game.ownerOf(pokemon);
@@ -318,7 +323,8 @@ const bothDraw = (game, player) => {
 
 // 相手のポケモンに、ダメカンをのせる（ポケモンを選ぶ）
 function placeCountersOnOpponent(game, player, { counters, count, title, purpose, then }) {
-    const targets = game.inPlay(game.opponentOf(player));
+    // ダメカンの効果を受けないポケモン（ばけがくれ・バトルコロシアムのベンチなど）は選べない
+    const targets = game.inPlay(game.opponentOf(player)).filter(target => canAffectFrom(game, player, target, 'counters'));
     if (targets.length === 0) return;
     const n = Math.min(count, targets.length);
     game.promptPokemon({
@@ -362,14 +368,13 @@ function switchSelfIn(game, player, pokemon) {
     if (player.bench.includes(pokemon)) game.switchActive(player, pokemon);
 }
 
-// 進化しているポケモンから、進化カードを1枚はがして持ち主の手札にもどす（退化）
+// player の特性で、そのポケモンを退化させて、はがしたカードを手札にもどせるか（効果を受けない・手札にもどせない（なぎのきょうち）ものはのぞく）
+const canDevolveToHand = (game, player, pokemon) => pokemon.cards.length > 1 && game.topCard(pokemon).stage > 0
+    && canAffectFrom(game, player, pokemon, 'devolve') && !game.hookAny('blockReturnToHand', pokemon);
+
+// 進化しているポケモンから、進化カードを1枚はがして持ち主の手札にもどす（退化。本体の game.devolve が、効果を受けないポケモンを見る）
 function devolveOne(game, owner, target) {
-    const removed = target.cards.pop();
-    owner.hand.push(removed);
-    game.clearConditionsOnStageChange(target);
-    target.enteredTurn = game.turn;
-    target.evolvedFrom = null;
-    game.log(`${game.cardName(removed)}をはがして${owner.name}の手札にもどし、${game.topCard(target).name}に退化させた`);
+    if (game.devolve(target, 1, 'hand').length > 0) target.evolvedFrom = null;
     game.runNext(() => game.checkKnockouts());
 }
 
@@ -879,21 +884,20 @@ export const ABILITY_EFFECTS = {
         type: 'activated',
         canUse: (game, player, pokemon) => hasEnergyOf(game, pokemon, 'darkness')
             && game.inPlay(player).some(pk => pk.damage > 0)
-            && game.inPlay(game.opponentOf(player)).length > 0,
+            && game.inPlay(game.opponentOf(player)).some(pk => canAffectFrom(game, player, pk, 'moveCounters')),
         use: (game, player) => {
             const opponent = game.opponentOf(player);
             const moveTo = (from, counters) => game.promptPokemon({
                 player,
-                pokemon: game.inPlay(opponent),
+                // のせ替えの効果を受けないポケモンは選べない
+                pokemon: game.inPlay(opponent).filter(pk => game.canAffect(pk, 'moveCounters')),
                 min: 1,
                 max: 1,
                 title: `ダメカンを${counters}個のせ替える相手のポケモンを選ぶ`,
                 purpose: 'snipe-target',
                 amount: counters * 10,
                 callback: ([to]) => {
-                    from.damage -= counters * 10;
-                    to.damage += counters * 10;
-                    game.log(`${game.topCard(from).name}のダメカンを${counters}個、${game.topCard(to).name}にのせ替えた`);
+                    game.moveCounters(from, to, counters * 10);
                     game.runNext(() => game.checkKnockouts());
                 }
             });
@@ -995,12 +999,14 @@ export const ABILITY_EFFECTS = {
     },
     'きらぼしもよう': {
         type: 'onEvolve',
-        canUse: (game, player) => game.opponentOf(player).bench.some(pokemon => remainingHp(game, pokemon) <= 90),
+        canUse: (game, player) => canAffectFrom(game, player, game.opponentOf(player).active, 'switch')
+            && game.opponentOf(player).bench.some(pokemon => remainingHp(game, pokemon) <= 90 && canAffectFrom(game, player, pokemon, 'switch')),
         use: (game, player) => {
             const opponent = game.opponentOf(player);
             game.promptPokemon({
                 player,
-                pokemon: opponent.bench.filter(pokemon => remainingHp(game, pokemon) <= 90),
+                // 入れ替えの効果を受けないポケモンは選べない
+                pokemon: opponent.bench.filter(pokemon => remainingHp(game, pokemon) <= 90 && game.canAffect(pokemon, 'switch')),
                 min: 1,
                 max: 1,
                 title: 'バトル場に呼び出す相手のポケモンを選ぶ',
@@ -1012,12 +1018,12 @@ export const ABILITY_EFFECTS = {
     'げんしのつばさ': {
         type: 'activated',
         canUse: (game, player, pokemon) => player.active === pokemon
-            && game.inPlay(game.opponentOf(player)).some(pk => pk.cards.length > 1 && game.topCard(pk).stage > 0),
+            && game.inPlay(game.opponentOf(player)).some(pk => canDevolveToHand(game, player, pk)),
         use: (game, player) => {
             const opponent = game.opponentOf(player);
             game.promptPokemon({
                 player,
-                pokemon: game.inPlay(opponent).filter(pk => pk.cards.length > 1 && game.topCard(pk).stage > 0),
+                pokemon: game.inPlay(opponent).filter(pk => canDevolveToHand(game, player, pk)),
                 min: 1,
                 max: 1,
                 title: '退化させる相手のポケモンを選ぶ',
@@ -1038,7 +1044,20 @@ export const ABILITY_EFFECTS = {
             const opponent = game.opponentOf(player);
             game.runNext(
                 () => game.promptSwitchOwnActive(player, 'switch'),
-                () => game.promptSwitchOwnActive(opponent, 'forced-switch')
+                () => {
+                    // 入れ替えの効果を受けないポケモンは、相手がバトル場に出す候補にしない
+                    const bench = opponent.bench.filter(pk => game.canAffect(pk, 'switch'));
+                    if (bench.length === 0 || !game.canAffect(opponent.active, 'switch')) return;
+                    game.promptPokemon({
+                        player: opponent,
+                        pokemon: bench,
+                        min: 1,
+                        max: 1,
+                        title: 'バトル場に出すベンチポケモンを選ぶ',
+                        purpose: 'forced-switch',
+                        callback: ([target]) => { if (target) game.switchActive(opponent, target); }
+                    });
+                }
             );
         },
         cpuWants: (game, player) => !canAttackWith(game, player.active) && player.bench.some(pokemon => canAttackWith(game, pokemon))

@@ -11,9 +11,6 @@
  *   コバルトコマンド：カードのデータに「未来」の印がない
  *   しゅんぱつりょく：対戦準備で、たねポケモン以外をウラでバトル場に出す仕組みがない
  *   どっきりおとし：カードが山札からトラッシュされたときのフックがない
- *   なぎのきょうち：blockReturnToHand は game.returnToHand（ポケモンとついているカードをまとめてもどす）だけが見る。
- *     ついているエネルギーや進化カードだけを手札にもどす効果（items.js・supporters.js・abilities-a/b.js）は確かめないので、
- *     「そのポケモンについているすべてのカードは、手札にもどせない」が守れない
  *   にじいろDNA：進化元の名前と違うポケモンにのせて進化する仕組みがない
  *   ぬめぬめスリップ：にげるときにコインを投げて、にげるのを失敗させる仕組みがない（blockRetreat は何度も呼ばれるのでコインを投げられない）
  *
@@ -36,6 +33,18 @@ const remainingHp = (game, pokemon) => game.maxHp(pokemon) - pokemon.damage;
 const cardsIn = (game, list, filter) => list.filter(inst => filter(game.cardOf(inst)));
 const hasIn = (game, list, filter) => list.some(inst => filter(game.cardOf(inst)));
 const allIndices = count => Array.from({ length: count }, (_, index) => index);
+
+// player の特性の効果を、そのポケモンに与えられるか（kind は game.canAffect と同じ）
+//   canUse は効果の出どころなしで呼ばれるので、出どころを入れて確かめる
+const canAffectFrom = (game, player, pokemon, kind) => Boolean(pokemon)
+    && game.withSource({ player, kind: 'ability' }, () => game.canAffect(pokemon, kind));
+
+// 相手のベンチポケモンを、バトルポケモンと入れ替えられるか（入れ替えの効果を受けないものは選べない）
+const gustTargets = (game, player) => {
+    const opponent = game.opponentOf(player);
+    if (!canAffectFrom(game, player, opponent.active, 'switch')) return [];
+    return opponent.bench.filter(pokemon => canAffectFrom(game, player, pokemon, 'switch'));
+};
 
 // そのポケモンが、持ち主のバトル場にいるか / ベンチにいるか
 function isActive(game, pokemon) {
@@ -179,10 +188,11 @@ function attachOneFromHand(game, player, { filter, targets, after = () => {} }) 
 // 相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える
 function gustOpponent(game, player) {
     const opponent = game.opponentOf(player);
-    if (opponent.bench.length === 0) return;
+    const targets = gustTargets(game, player);
+    if (targets.length === 0) return;
     game.promptPokemon({
         player,
-        pokemon: opponent.bench,
+        pokemon: targets,
         min: 1,
         max: 1,
         title: 'バトル場に出す相手のベンチポケモンを選ぶ',
@@ -239,7 +249,8 @@ function conditionOnAttacker(condition) {
 
 // 相手のポケモン1匹に、ダメカンを count 個のせる
 function snipeCounters(game, player, count) {
-    const targets = game.inPlay(game.opponentOf(player));
+    // ダメカンの効果を受けないポケモン（ばけがくれ・バトルコロシアムのベンチなど）は選べない
+    const targets = game.inPlay(game.opponentOf(player)).filter(pokemon => canAffectFrom(game, player, pokemon, 'counters'));
     if (targets.length === 0) return;
     game.promptPokemon({
         player,
@@ -256,7 +267,7 @@ function snipeCounters(game, player, count) {
 // 「自分の番に、このカードを手札から出して進化させたとき、1回使える。相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える」
 const gustOnEvolve = {
     type: 'onEvolve',
-    canUse: (game, player) => game.opponentOf(player).bench.length > 0,
+    canUse: (game, player) => gustTargets(game, player).length > 0,
     use: (game, player) => gustOpponent(game, player)
 };
 
@@ -316,13 +327,13 @@ export const ABILITY_EFFECTS = {
                 if (!hitInActive(game, source, target) || !attackerInPlay(game, ctx) || ctx.attacker.energies.length === 0) return;
                 const attacker = ctx.attacker;
                 game.runNext(() => {
-                    if (!game.ownerOf(attacker)) return;
+                    // 特性の効果を受けないポケモン（ひかりのつばさなど）なら、選ばせない
+                    if (!game.ownerOf(attacker) || !game.canAffect(attacker, 'energy')) return;
                     chooseEnergyOn(game, source.player, attacker, {
                         title: 'トラッシュする、ワザを使ったポケモンのエネルギーを選ぶ',
                         purpose: 'discard-opponent-energy',
                         then: inst => {
-                            game.moveCard(attacker.energies, game.ownerOf(attacker).discard, inst);
-                            game.log(`${game.topCard(attacker).name}の${game.cardName(inst)}をトラッシュした`);
+                            if (game.removeEnergy(attacker, inst, 'discard')) game.log(`${game.topCard(attacker).name}の${game.cardName(inst)}をトラッシュした`);
                         }
                     });
                 });
@@ -593,7 +604,7 @@ export const ABILITY_EFFECTS = {
 
     'こっそりかみつく': {
         type: 'onEvolve',
-        canUse: (game, player) => game.inPlay(game.opponentOf(player)).length > 0,
+        canUse: (game, player) => game.inPlay(game.opponentOf(player)).some(pokemon => canAffectFrom(game, player, pokemon, 'counters')),
         use: (game, player) => snipeCounters(game, player, 2)
     },
     'ユンゲラー/サイコドロー': drawOnEvolve(2),
@@ -602,7 +613,8 @@ export const ABILITY_EFFECTS = {
     'どすこいキャッチャー': gustOnEvolve,
     'でたとこハンマー': {
         type: 'onEvolve',
-        canUse: (game, player) => (game.opponentOf(player).active?.energies.length ?? 0) > 0,
+        canUse: (game, player) => (game.opponentOf(player).active?.energies.length ?? 0) > 0
+            && canAffectFrom(game, player, game.opponentOf(player).active, 'energy'),
         use: (game, player) => {
             if (!game.flipCoin()) return;
             const target = game.opponentOf(player).active;
@@ -610,8 +622,7 @@ export const ABILITY_EFFECTS = {
                 title: 'トラッシュする、相手のバトルポケモンのエネルギーを選ぶ',
                 purpose: 'discard-opponent-energy',
                 then: inst => {
-                    game.moveCard(target.energies, game.opponentOf(player).discard, inst);
-                    game.log(`${game.topCard(target).name}の${game.cardName(inst)}をトラッシュした`);
+                    if (game.removeEnergy(target, inst, 'discard')) game.log(`${game.topCard(target).name}の${game.cardName(inst)}をトラッシュした`);
                 }
             });
         }
@@ -1019,7 +1030,10 @@ export const ABILITY_EFFECTS = {
 
     'さざめくかぜ': {
         type: 'activated',
-        canUse: (game, player) => (game.opponentOf(player).active?.energies.length ?? 0) > 0,
+        // 効果を受けないポケモンと、ついているカードを手札にもどせないポケモン（なぎのきょうち）には使えない
+        canUse: (game, player) => (game.opponentOf(player).active?.energies.length ?? 0) > 0
+            && canAffectFrom(game, player, game.opponentOf(player).active, 'energy')
+            && !game.hookAny('blockReturnToHand', game.opponentOf(player).active),
         use: (game, player) => {
             if (!game.flipCoin()) return;
             const opponent = game.opponentOf(player);
@@ -1028,8 +1042,7 @@ export const ABILITY_EFFECTS = {
                 title: '相手の手札にもどす、相手のバトルポケモンのエネルギーを選ぶ',
                 purpose: 'discard-opponent-energy',
                 then: inst => {
-                    game.moveCard(target.energies, opponent.hand, inst);
-                    game.log(`${game.topCard(target).name}の${game.cardName(inst)}を${opponent.name}の手札にもどした`);
+                    if (game.removeEnergy(target, inst, 'hand')) game.log(`${game.topCard(target).name}の${game.cardName(inst)}を${opponent.name}の手札にもどした`);
                 }
             });
         }
@@ -1043,7 +1056,7 @@ export const ABILITY_EFFECTS = {
     },
     'さそうしっぽ': {
         type: 'activated',
-        canUse: (game, player) => hasIn(game, player.hand, card => card.name === 'のんびりじゃらし') && game.opponentOf(player).bench.length > 0,
+        canUse: (game, player) => hasIn(game, player.hand, card => card.name === 'のんびりじゃらし') && gustTargets(game, player).length > 0,
         use: (game, player) => discardFromHand(game, player, {
             count: 1,
             filter: card => card.name === 'のんびりじゃらし',
@@ -1064,7 +1077,7 @@ export const ABILITY_EFFECTS = {
     },
     'ねっぱりんぷん': {
         type: 'activated',
-        canUse: (game, player) => hasIn(game, player.hand, isBasicEnergy('fire')) && Boolean(game.opponentOf(player).active),
+        canUse: (game, player) => hasIn(game, player.hand, isBasicEnergy('fire')) && canAffectFrom(game, player, game.opponentOf(player).active, 'condition'),
         use: (game, player) => discardFromHand(game, player, {
             count: 1,
             filter: isBasicEnergy('fire'),

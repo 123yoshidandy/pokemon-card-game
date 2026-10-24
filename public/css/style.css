@@ -488,6 +488,11 @@ button { font: inherit; color: inherit; }
 .slot-bench {
     width: min(calc((100cqh - 6px) * 0.6), calc((100cqw - min(calc((100cqh - 6px) * 0.716), 150px) - 40px) / 5), 118px);
 }
+/* ベンチが5匹より多いとき（ゼロの大空洞など）は、並ぶ数に合わせて小さくする */
+.bench-wide { gap: 3px; }
+.bench-wide .slot-bench {
+    width: min(calc((100cqh - 6px) * 0.6), calc((100cqw - min(calc((100cqh - 6px) * 0.716), 150px) - 40px) / var(--bench-slots)), 118px);
+}
 .slot-empty { border: 1.5px dashed var(--line); }
 
 /* 押せるもの・選べるものは金色の輪でゆっくり光らせる */

@@ -86,7 +86,7 @@ export function pokemonTile(pokemon, { active = false } = {}) {
         <div class="mon-art">${emblemSvg(card.type)}</div>
         <div class="mon-hp ${hpClass}"><span class="mon-hp-bar" style="width:${ratio * 100}%"></span><span class="mon-hp-text">${remaining}/${pokemon.hp}</span></div>
         <div class="mon-energies">${energies}</div>
-        ${pokemon.tool ? `<span class="mon-tool" title="${escape(getCard(pokemon.tool).name)}"><svg viewBox="0 0 24 24" fill="currentColor">${TRAINER_ICONS.tool}</svg></span>` : ''}
+        ${pokemon.tool ? `<span class="mon-tool" title="${escape([pokemon.tool, pokemon.tool2].filter(Boolean).map(tool => getCard(tool).name).join('・'))}"><svg viewBox="0 0 24 24" fill="currentColor">${TRAINER_ICONS.tool}</svg></span>` : ''}
         ${conditions ? `<div class="mon-conds">${conditions}</div>` : ''}
     </div>`;
 }
@@ -124,7 +124,7 @@ export function cardDetail(id, pokemon = null) {
         if (pokemon) {
             const extras = [];
             if (pokemon.energies.length) extras.push(`エネルギー ${pokemon.energies.map(e => energyDot(getCard(e).energyType)).join('')}`);
-            if (pokemon.tool) extras.push(`どうぐ：${escape(getCard(pokemon.tool).name)}（${escape(getCard(pokemon.tool).text)}）`);
+            [pokemon.tool, pokemon.tool2].filter(Boolean).forEach(tool => extras.push(`どうぐ：${escape(getCard(tool).name)}（${escape(getCard(tool).text)}）`));
             if (pokemon.conditions.length) extras.push(`特殊状態：${pokemon.conditions.map(c => CONDITION_NAMES[c]).join('・')}`);
             if (pokemon.cards.length > 1) extras.push(`進化元：${pokemon.cards.slice(0, -1).map(c => escape(getCard(c).name)).join(' → ')}`);
             if (extras.length) parts.push(`<div class="detail-extra">${extras.map(e => `<div>${e}</div>`).join('')}</div>`);

@@ -201,6 +201,37 @@ export const ATTACK_OVERRIDES = {
     },
     'レジギガス/ジュエルブレイク': bonus(ctx => (ctx.defender && ctx.game.topCard(ctx.defender).tera ? 230 : 0)),
 
+    'クレセリア/クレセントパージ': {
+        // のぞむなら、ウラの自分のサイドを1枚選び、オモテにする。その場合、80ダメージ追加（そのサイドは対戦が終わるまでオモテのまま）
+        before: ctx => {
+            const { game, player } = ctx;
+            const faceDown = player.prizes.filter(inst => !inst.faceUp);
+            if (faceDown.length === 0) return;
+            game.promptConfirm({
+                player,
+                title: 'ウラの自分のサイドを1枚オモテにして、80ダメージ追加しますか？',
+                purpose: 'optional-bonus',
+                cpuAnswer: () => true,
+                callback: yes => {
+                    if (!yes) return;
+                    game.promptChoose({
+                        player,
+                        options: faceDown.map((_, index) => `ウラのサイド ${index + 1}枚目`),
+                        title: 'オモテにするサイドを選ぶ',
+                        purpose: 'choose-prize',
+                        cpuAnswer: () => [0],
+                        callback: ([index]) => {
+                            faceDown[index].faceUp = true;
+                            game.log(`${player.name}のサイドの${game.cardName(faceDown[index])}がオモテになった`);
+                            ctx.damage += 80;
+                        }
+                    });
+                }
+            });
+        },
+        expected: ctx => ctx.damage + 80
+    },
+
     // ===== そのほか =====
     'ランターン/さくらんフラッシュ': {
         after: ctx => {

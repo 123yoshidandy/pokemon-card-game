@@ -89,6 +89,19 @@ export const ABILITY_EFFECTS = {
                 && card.evolvesFrom === 'イーブイ' && (card.rule === 'ex' || card.rule === 'mega')
         }
     },
+    'マルチアダプタ': {
+        // 名前に「ロトム」とつく自分のポケモン全員は、それぞれ「ポケモンのどうぐ」を2枚までつけられる
+        // （この特性がなくなったときに多くついているどうぐは、本体の場の確かめなおしでトラッシュする）
+        type: 'passive',
+        hooks: {
+            allowSecondTool: (game, source, pokemon) => game.ownerOf(pokemon) === source.player && game.topCard(pokemon).name.includes('ロトム')
+        }
+    },
+    'しゅんぱつりょく': {
+        // 対戦準備でポケモンをバトル場に出すとき、このカードが手札にあるなら、ウラにしてバトル場に出してよい
+        type: 'passive',
+        setupAsActive: true
+    },
     'きおくにもぐる': {
         // このポケモンがいるかぎり、自分の進化しているポケモン全員は、進化前に持っていたワザを、すべて使える（エネルギーは必要）
         type: 'passive',

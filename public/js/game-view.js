@@ -37,8 +37,11 @@ function playerView(game, player, viewerId) {
         hand: isMe ? player.hand.map(cardView) : null,
         discard: player.discard.map(cardView),
         prizeCount: player.prizes.length,
+        // オモテになっているサイド（効果でオモテにしたもの。おたがいに見える）
+        faceUpPrizes: player.prizes.filter(inst => inst.faceUp).map(inst => inst.id),
         active: player.active ? pokemonView(game, player.active, isMe) : null,
-        bench: player.bench.map(pokemon => pokemonView(game, pokemon, isMe))
+        bench: player.bench.map(pokemon => pokemonView(game, pokemon, isMe)),
+        benchLimit: game.benchLimit(player)
     };
 }
 
@@ -58,6 +61,7 @@ function pokemonView(game, pokemon, isMine) {
         damage: pokemon.damage,
         energies: pokemon.energies.map(inst => inst.id),
         tool: pokemon.tool?.id ?? null,
+        tool2: pokemon.tool2?.id ?? null,
         conditions: [pokemon.rotation, pokemon.poisoned && 'poisoned', pokemon.burned && 'burned'].filter(Boolean),
         effects: pokemon.effects.map(effect => effect.kind),
         retreat: game.retreatCost(pokemon),

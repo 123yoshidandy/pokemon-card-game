@@ -12,6 +12,26 @@ const CORE_MEMORY_ATTACK = (() => {
     return { name: 'ジオバスター', cost: ['fighting', 'fighting', 'fighting', 'fighting'], damage: 350, damageText: '350', text, supported: true, ...compileAttackText(text) };
 })();
 
+const FLUORITE_ATTACK = (() => {
+    const text = 'このポケモンについているエネルギーをすべてトラッシュし、自分の「テラスタル」のポケモン全員のHPを、すべて回復する。';
+    return {
+        name: 'GWP フローライト',
+        cost: ['grass', 'water', 'psychic'],
+        damage: 0,
+        damageText: '',
+        text,
+        supported: true,
+        after: ctx => {
+            const { game, player, attacker } = ctx;
+            game.discardEnergyFrom(attacker, Infinity);
+            game.inPlay(player).filter(pokemon => game.topCard(pokemon).tera && pokemon.damage > 0).forEach(pokemon => game.heal(pokemon, pokemon.damage));
+        }
+    };
+})();
+
+const N_TEAM = ['Nのヒヒダルマ', 'Nのゾロアークex', 'Nのバイバニラ', 'Nのギギギアル', 'Nのレシラム', 'Nのゼクロム'];
+const isBasicCard = card => card.kind === 'pokemon' && card.stage === 0;
+
 const DELTA_GIFT_ATTACK = {
     name: 'デルタギフト',
     cost: ['colorless'],
@@ -372,6 +392,139 @@ export const TRAINER_EFFECTS = {
             const active = game.opponentOf(player).active;
             return Boolean(active) && game.hasCondition(active, 'confused');
         }
+    },
+
+    'ワザマシン フローライト': {
+        // ワザは英語版（Technical Machine: Fluorite）のカードで、使うためのエネルギーが [G][W][P] だと確かめた
+        hooks: {
+            extraAttacks: (game, source, pokemon) => (pokemon === source.pokemon ? [FLUORITE_ATTACK] : []),
+            onTurnEnd: (game, source, player) => {
+                if (player === source.player && source.pokemon.tool === source.inst) game.discardTool(source.pokemon);
+            }
+        },
+        cpuWants: (game, player) => game.inPlay(player).some(pokemon => game.topCard(pokemon).tera && pokemon.damage >= 100)
+    },
+    'リトライバッジ': {
+        hooks: {
+            // 自分の番ごとに1回、このカードをつけている [C] ポケモンのワザで投げたコインを、はじめから投げなおしてよい
+            // （本体が投げなおせるのは、ダメージの前に投げたコイン）
+            allowCoinRetry: (game, source, ctx) => ctx.attacker === source.pokemon && game.typesOf(ctx.attacker).includes('colorless')
+        },
+        cpuTarget: (game, player, pokemon) => game.typesOf(pokemon).includes('colorless'),
+        cpuWants: (game, player) => game.inPlay(player).some(pokemon => game.typesOf(pokemon).includes('colorless') && !pokemon.tool)
+    },
+    'バーベナとヘレナ': {
+        // 自分の場に、並んだ「Nの〜」の6匹がすべていなければ使えない
+        canPlay: (game, player) => N_TEAM.every(name => game.inPlay(player).some(pokemon => game.topCard(pokemon).name === name)),
+        play: (game, player) => game.addPlayerEffect(player, 'verbenaHelena', game.turn, {
+            hooks: {
+                // この番、自分の「Nのポケモン」のワザのダメージで、相手のバトルポケモンがきぜつしたなら、サイドを3枚多くとる
+                prizeModifier: (g, source, pokemon, owner, info) => {
+                    const attack = g.currentAttack;
+                    if (!info.byAttack || !attack || attack.player !== source.player || owner === source.player) return 0;
+                    return owner.active === pokemon && g.topCard(attack.attacker).name.startsWith('Nの') ? 3 : 0;
+                }
+            }
+        }),
+        cpuWants: () => true
+    },
+    'アンジュフラエッテ': {
+        // 場に出ている「プリズムタワー」をトラッシュしなければ場に出せず、「プリズムタワー」を出した番でも場に出せる
+        canPlay: game => Boolean(game.stadium) && game.cardName(game.stadium.inst) === 'プリズムタワー',
+        ignoreStadiumLimit: game => Boolean(game.stadium) && game.cardName(game.stadium.inst) === 'プリズムタワー',
+        hooks: {
+            maxHp: (game, source, pokemon) => (game.topCard(pokemon).name === 'メガフラエッテex' ? 150 : 0)
+        },
+        cpuWants: (game, player) => game.inPlay(player).some(pokemon => game.topCard(pokemon).name === 'メガフラエッテex')
+    },
+    '変化の書': {
+        // 2枚同時にしか使えない（効果は2枚で1回）。トラッシュのたねポケモン1枚と、場のたねポケモン1匹を入れ替える（ついているものはすべて引きつぐ）
+        canPlay: (game, player) => player.hand.filter(inst => game.cardName(inst) === '変化の書').length >= 2
+            && player.discard.some(inst => isBasicCard(game.cardOf(inst)))
+            && game.inPlay(player).some(pokemon => pokemon.cards.length === 1 && isBasicCard(game.topCard(pokemon))),
+        play: (game, player, inst) => {
+            const partner = player.hand.find(card => card !== inst && game.cardName(card) === '変化の書');
+            if (partner) {
+                game.moveCard(player.hand, player.discard, partner);
+                game.log(`${player.name}はもう1枚の${game.cardName(partner)}もいっしょに使った`);
+            }
+            const fromDiscard = player.discard.filter(card => isBasicCard(game.cardOf(card)));
+            game.promptCards({
+                player,
+                cards: fromDiscard,
+                min: 1,
+                max: 1,
+                title: '場に出すトラッシュのたねポケモンを選ぶ',
+                purpose: 'search-pokemon',
+                callback: ([chosen]) => {
+                    const targets = game.inPlay(player).filter(pokemon => pokemon.cards.length === 1 && isBasicCard(game.topCard(pokemon)));
+                    game.promptPokemon({
+                        player,
+                        pokemon: targets,
+                        min: 1,
+                        max: 1,
+                        title: '入れ替える場のたねポケモンを選ぶ',
+                        purpose: 'switch',
+                        callback: ([target]) => {
+                            const old = target.cards[0];
+                            game.removeCard(player.discard, chosen);
+                            target.cards = [chosen];
+                            game.resetForms([old]);
+                            player.discard.push(old);
+                            game.log(`${player.name}は${game.cardName(old)}を${game.cardName(chosen)}と入れ替えた`);
+                            game.runNext(() => game.checkKnockouts());
+                        }
+                    });
+                }
+            });
+        },
+        cpuWants: () => false
+    },
+    'ロケット団のおじゃまロボ': {
+        // ウラの相手のサイド1枚と、相手の手札からオモテを見ないで1枚選び、オモテを見る。のぞむなら入れ替えさせる（そのサイドはオモテのまま）
+        canPlay: (game, player) => game.opponentOf(player).prizes.some(inst => !inst.faceUp) && game.opponentOf(player).hand.length > 0,
+        play: (game, player) => {
+            const opponent = game.opponentOf(player);
+            const faceDown = opponent.prizes.filter(inst => !inst.faceUp);
+            game.promptChoose({
+                player,
+                options: faceDown.map((_, index) => `ウラのサイド ${index + 1}枚目`),
+                title: 'オモテを見る相手のサイドを選ぶ',
+                purpose: 'choose-prize',
+                cpuAnswer: () => [0],
+                callback: ([index]) => {
+                    const prize = faceDown[index];
+                    const handCard = opponent.hand[Math.floor(game.random() * opponent.hand.length)];
+                    prize.faceUp = true;
+                    game.log(`${opponent.name}のサイドの${game.cardName(prize)}がオモテになった`);
+                    game.log(`${opponent.name}の手札から選んだのは${game.cardName(handCard)}`, { to: player.id });
+                    game.promptConfirm({
+                        player,
+                        title: `サイドの${game.cardName(prize)}と、手札の${game.cardName(handCard)}を入れ替えさせますか？`,
+                        purpose: 'swap-prize',
+                        cpuAnswer: () => true,
+                        callback: yes => {
+                            if (!yes) return;
+                            const prizeIndex = opponent.prizes.indexOf(prize);
+                            game.removeCard(opponent.hand, handCard);
+                            opponent.prizes[prizeIndex] = handCard;
+                            handCard.faceUp = true;
+                            delete prize.faceUp;
+                            opponent.hand.push(prize);
+                            game.log(`${opponent.name}はサイドと手札のカードを入れ替えた（サイドの${game.cardName(handCard)}はオモテ）`);
+                        }
+                    });
+                }
+            });
+        },
+        cpuWants: (game, player) => game.opponentOf(player).hand.length >= 3
+    },
+    'ゼロの大空洞': {
+        hooks: {
+            // 自分の場に「テラスタル」のポケモンがいるプレイヤーは、ベンチに8匹まで出せる（多すぎるときは本体がトラッシュさせる）
+            benchLimit: (game, source, player) => (game.inPlay(player).some(pokemon => game.topCard(pokemon).tera) ? 8 : 0)
+        },
+        cpuWants: (game, player) => countTagged(game, player, 'tera') > 0 && player.bench.length >= 4
     },
 
     // ===== 文の記号を tools/data/text-fixes.json で直したもの =====

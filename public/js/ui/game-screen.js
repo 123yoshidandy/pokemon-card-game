@@ -292,11 +292,13 @@ export default class GameScreen {
             return `<div class="slot ${active ? 'slot-active' : 'slot-bench'} ${classes.join(' ')}">${pokemonTile(pokemon, { active })}</div>`;
         };
         const active = player.active ? tile(player.active, true) : '<div class="slot slot-active slot-empty"></div>';
-        const bench = Array.from({ length: BENCH_SIZE }, (_, index) => {
+        // ベンチの数は、スタジアムなどで増えることがある（8匹まで）
+        const slots = Math.max(BENCH_SIZE, player.benchLimit ?? BENCH_SIZE, player.bench.length);
+        const bench = Array.from({ length: slots }, (_, index) => {
             const pokemon = player.bench[index];
             return pokemon ? tile(pokemon, false) : '<div class="slot slot-bench slot-empty"></div>';
         }).join('');
-        return `${active}<div class="bench">${bench}</div>`;
+        return `${active}<div class="bench ${slots > BENCH_SIZE ? 'bench-wide' : ''}" style="--bench-slots:${slots}">${bench}</div>`;
     }
 
     infoHtml(player) {

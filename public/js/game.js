@@ -57,7 +57,6 @@ export default class Game {
         this.seed = seed >>> 0;
         this.random = createRandom(this.seed);
         this.decks = decks ? [...decks] : [null, null];
-        this.benchSize = BENCH_SIZE;
         this.players = players.map((player, id) => ({
             id,
             name: player.name,
@@ -163,9 +162,11 @@ export default class Game {
     // バトル場とベンチに、たねポケモンをウラで出す
     promptSetupPokemon(player) {
         const basics = () => player.hand.filter(inst => isBasicPokemon(this.cardOf(inst)));
+        // 特性で、たねポケモン以外もウラにしてバトル場に出せることがある（ability.setupAsActive）
+        const activeCandidates = player.hand.filter(inst => isBasicPokemon(this.cardOf(inst)) || this.cardOf(inst).ability?.setupAsActive);
         this.promptCards({
             player,
-            cards: basics(),
+            cards: activeCandidates,
             min: 1,
             max: 1,
             title: 'バトル場に出すたねポケモンを選ぶ',
@@ -290,6 +291,7 @@ export default class Game {
     // HP がなくなったポケモンをきぜつさせ、サイドを取り、勝敗とバトル場の補充を確かめる
     checkKnockouts() {
         if (this.phase === 'end') return;
+        this.enforceStateChecks();
         const knocked = [];
         this.players.forEach(player => this.inPlay(player).forEach(pokemon => {
             if (pokemon.damage < this.maxHp(pokemon)) return;
@@ -316,6 +318,7 @@ export default class Game {
             const taker = this.opponentOf(player);
             const count = Math.min(prizes, taker.prizes.length);
             const taken = taker.prizes.splice(0, count);
+            taken.forEach(inst => { delete inst.faceUp; }); // 手札に加えたら、オモテのサイドではなくなる
             // その番にとったサイドの枚数（「前の相手の番に、相手がとったサイドの枚数」に使う）
             taker.prizesTakenLog = { turn: this.turn, count: (taker.prizesTakenLog?.turn === this.turn ? taker.prizesTakenLog.count : 0) + count };
             taker.hand.push(...taken);
@@ -474,7 +477,7 @@ export default class Game {
     checkPlayBasic(player, uid) {
         const inst = this.findInHand(player, uid);
         if (!inst || !isBasicPokemon(this.cardOf(inst))) return 'たねポケモンを選んでください';
-        if (player.bench.length >= BENCH_SIZE) return 'ベンチがいっぱいです';
+        if (player.bench.length >= this.benchLimit(player)) return 'ベンチがいっぱいです';
         if (this.cardOf(inst).ability?.cannotPlayFromHand) return `${this.cardName(inst)}は手札から出せません`;
         const blocked = this.hookAny('blockPlayPokemon', player, this.cardOf(inst));
         if (blocked) return typeof blocked === 'string' ? blocked : '今はポケモンを出せません';
@@ -523,7 +526,7 @@ export default class Game {
         const inst = this.findInHand(player, uid);
         const card = inst && this.cardOf(inst);
         if (!card || card.kind !== 'trainer') return 'トレーナーズを選んでください';
-        if (card.playAsPokemon && player.bench.length >= BENCH_SIZE) return 'ベンチがいっぱいです';
+        if (card.playAsPokemon && player.bench.length >= this.benchLimit(player)) return 'ベンチがいっぱいです';
         if (card.trainerType === 'item' && !card.playAsPokemon && this.hasPlayerEffect(player, 'itemLock')) return 'この番はグッズを使えません';
         if (card.trainerType === 'supporter' && this.hasPlayerEffect(player, 'supporterLock')) return 'この番はサポートを使えません';
         if (card.trainerType === 'supporter') {
@@ -531,13 +534,13 @@ export default class Game {
             if (this.turn === 1 && !card.firstTurnOk) return '先攻の最初の番はサポートを使えません';
         }
         if (card.trainerType === 'stadium') {
-            if (this.turnState.stadiumPlayed) return 'スタジアムはこの番にもう出しました';
+            if (this.turnState.stadiumPlayed && !card.ignoreStadiumLimit?.(this, player)) return 'スタジアムはこの番にもう出しました';
             if (this.stadium && this.cardOf(this.stadium.inst).name === card.name) return '同じ名前のスタジアムが出ています';
         }
         if (card.trainerType === 'tool') {
             const target = this.ownPokemon(player, targetId);
             if (!target) return 'つけるポケモンを選んでください';
-            if (target.tool) return 'そのポケモンはもうどうぐをつけています';
+            if (target.tool && (target.tool2 || !this.canHoldSecondTool(target))) return 'そのポケモンはもうどうぐをつけています';
         }
         const blocked = this.hookAny('blockTrainer', player, card);
         if (blocked) return typeof blocked === 'string' ? blocked : `今は${card.name}を使えません`;
@@ -685,7 +688,8 @@ export default class Game {
         switch (card.trainerType) {
             case 'tool': {
                 const target = this.ownPokemon(player, targetId);
-                target.tool = inst;
+                if (target.tool) target.tool2 = inst;
+                else target.tool = inst;
                 this.log(`${this.topCard(target).name}に${card.name}をつけた`);
                 return;
             }
@@ -811,7 +815,28 @@ export default class Game {
             },
             // ワザの前に、特性などが ctx を変える（ctx.ignoreEffects を立てる、など）
             () => { if (!ctx.failed) this.hookAll('beforeAttack', ctx); },
-            () => { if (!ctx.failed) attack.before?.(ctx); },
+            () => {
+                ctx.coinsBefore = this.coinFlips ?? 0;
+                if (!ctx.failed) attack.before?.(ctx);
+            },
+            // ダメージの前に投げたコインは、どうぐなどで投げなおせることがある（フック allowCoinRetry。この番に1回）
+            () => {
+                if ((this.coinFlips ?? 0) === ctx.coinsBefore || this.turnState.coinRetried || !this.hookAny('allowCoinRetry', ctx)) return;
+                this.promptConfirm({
+                    player,
+                    title: 'コインの結果をすべてなくし、はじめから投げなおしますか？',
+                    purpose: 'coin-retry',
+                    cpuAnswer: () => ctx.failed || ctx.damage < attack.damage,
+                    callback: yes => {
+                        if (!yes) return;
+                        this.turnState.coinRetried = true;
+                        this.log('コインを投げなおす');
+                        ctx.damage = attack.damage;
+                        ctx.failed = false;
+                        attack.before?.(ctx);
+                    }
+                });
+            },
             () => { if (!ctx.failed && ctx.damage > 0 && ctx.defender) this.dealAttackDamage(ctx, ctx.defender, ctx.damage); },
             () => { if (!ctx.failed) attack.after?.(ctx); },
             () => {
@@ -1100,7 +1125,7 @@ export default class Game {
         if (player.active === pokemon) player.active = null;
         else this.removeCard(player.bench, pokemon);
         this.resetForms(pokemon.cards);
-        player.hand.push(...pokemon.cards, ...pokemon.energies, ...(pokemon.tool ? [pokemon.tool] : []));
+        player.hand.push(...pokemon.cards, ...pokemon.energies, ...[pokemon.tool, pokemon.tool2].filter(Boolean));
         this.log(`${player.name}は${this.topCard(pokemon).name}と、ついているカードを手札にもどした`);
     }
 
@@ -1178,7 +1203,7 @@ export default class Game {
         this.searchDeck({
             player,
             filter,
-            max: Math.min(max, BENCH_SIZE - player.bench.length),
+            max: Math.min(max, this.benchLimit(player) - player.bench.length),
             title: 'ベンチに出すポケモンを選ぶ',
             purpose,
             onSelected: selected => selected.forEach(inst => {
@@ -1286,6 +1311,7 @@ export default class Game {
     }
 
     flipCoin() {
+        this.coinFlips = (this.coinFlips ?? 0) + 1; // 投げた回数（コインを投げなおす効果のため）
         const heads = this.random() < 0.5;
         this.log(`コイン：${heads ? 'オモテ' : 'ウラ'}`);
         return heads;
@@ -1303,10 +1329,11 @@ export default class Game {
             if (abilities && top.ability?.hooks && !this.abilitySuppressed(pokemon)) {
                 sources.push({ kind: 'ability', hooks: top.ability.hooks, player, pokemon, card: top, inst: pokemon.cards[pokemon.cards.length - 1] });
             }
-            if (pokemon.tool) {
-                const card = this.cardOf(pokemon.tool);
-                if (card.hooks && !this.toolSuppressed(pokemon)) sources.push({ kind: 'tool', hooks: card.hooks, player, pokemon, card, inst: pokemon.tool });
-            }
+            // ポケモンのどうぐ（特性で2枚つけられることがある：tool2）
+            [pokemon.tool, pokemon.tool2].filter(Boolean).forEach(inst => {
+                const card = this.cardOf(inst);
+                if (card.hooks && !this.toolSuppressed(pokemon)) sources.push({ kind: 'tool', hooks: card.hooks, player, pokemon, card, inst });
+            });
             pokemon.energies.forEach(inst => {
                 const card = this.cardOf(inst);
                 if (card.hooks) sources.push({ kind: 'energy', hooks: card.hooks, player, pokemon, card, inst });
@@ -1340,6 +1367,54 @@ export default class Game {
     // 起きたことを知らせるフック（ダメージを受けた・きぜつした・番の終わり など）
     hookAll(name, ...args) {
         this.passiveSources().forEach(source => source.hooks[name]?.(this, source, ...args));
+    }
+
+    // ベンチに出せるポケモンの数（スタジアムなどのフック benchLimit で増えることがある。重ならない）
+    benchLimit(player) {
+        return this.hookAny('benchLimit', player) || BENCH_SIZE;
+    }
+
+    // カードの効果から使うベンチの数（手番のプレイヤーのもの）
+    get benchSize() {
+        return this.benchLimit(this.players[this.current] ?? this.players[0]);
+    }
+
+    // そのポケモンに、2枚目のポケモンのどうぐをつけられるか（フック allowSecondTool）
+    canHoldSecondTool(pokemon) {
+        return Boolean(this.hookAny('allowSecondTool', pokemon));
+    }
+
+    // 場の決まりを確かめなおす（ベンチが多すぎる・2枚目のどうぐをつけられなくなった）。きぜつの確認のたびに呼ぶ
+    enforceStateChecks() {
+        this.players.forEach(player => this.inPlay(player).forEach(pokemon => {
+            if (pokemon.tool2 && !this.canHoldSecondTool(pokemon)) {
+                const name = this.cardName(pokemon.tool2);
+                player.discard.push(pokemon.tool2);
+                pokemon.tool2 = null;
+                this.log(`${this.topCard(pokemon).name}の${name}をトラッシュした`);
+            }
+        }));
+        // ベンチが多すぎるなら、持ち主がトラッシュするポケモンを選ぶ（スタジアムの持ち主から）
+        const order = this.stadium ? [this.stadium.owner, 1 - this.stadium.owner] : [this.current, 1 - this.current];
+        const steps = order.map(id => this.players[id]).filter(player => player.bench.length > this.benchLimit(player)).map(player => () => {
+            const excess = player.bench.length - this.benchLimit(player);
+            if (excess <= 0) return;
+            this.promptPokemon({
+                player,
+                pokemon: player.bench,
+                min: excess,
+                max: excess,
+                title: `ベンチが多すぎます。トラッシュするポケモンを${excess}匹選ぶ`,
+                purpose: 'bench-overflow',
+                cpuAnswer: g => player.bench.map((pokemon, index) => ({ index, hp: g.maxHp(pokemon) - pokemon.damage }))
+                    .sort((a, b) => a.hp - b.hp).slice(0, excess).map(entry => entry.index).sort((a, b) => a - b),
+                callback: selected => selected.forEach(pokemon => {
+                    this.removeFromPlay(player, pokemon);
+                    this.log(`${player.name}は${this.topCard(pokemon).name}をトラッシュした`);
+                })
+            });
+        });
+        this.runNext(...steps);
     }
 
     // 配列を集めるフック（ポケモンのタイプを増やす、など）
@@ -1446,6 +1521,7 @@ export default class Game {
             cards: [inst],
             energies: [],
             tool: null,
+            tool2: null, // 2枚目のポケモンのどうぐ（特性でつけられるときだけ）
             damage: 0,
             rotation: null,
             poisoned: false,
@@ -1464,7 +1540,7 @@ export default class Game {
         if (player.active === pokemon) player.active = null;
         else this.removeCard(player.bench, pokemon);
         this.resetForms(pokemon.cards);
-        player.discard.push(...pokemon.cards, ...pokemon.energies, ...(pokemon.tool ? [pokemon.tool] : []));
+        player.discard.push(...pokemon.cards, ...pokemon.energies, ...[pokemon.tool, pokemon.tool2].filter(Boolean));
     }
 
     // 場では別の形で働くカード（たねポケモンとして出した化石など）は、inst.form の形の定義を返す
@@ -1474,7 +1550,7 @@ export default class Game {
 
     // トレーナーズ（化石など）を、たねポケモンとしてベンチに出す（カードの定義に「<ID>#pokemon」の形がある）
     playAsPokemon(player, inst) {
-        if (player.bench.length >= BENCH_SIZE) {
+        if (player.bench.length >= this.benchLimit(player)) {
             player.discard.push(inst);
             return;
         }

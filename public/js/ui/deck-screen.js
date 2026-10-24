@@ -40,7 +40,7 @@ export default class DeckScreens {
         this.kind = 'pokemon';
         this.query = '';
         this.type = 'all';
-        $('pool-type').innerHTML = ['<option value="all">すべてのタイプ</option>',
+        $('pool-type').innerHTML = ['<option value="all">全タイプ</option>',
             ...TYPE_ORDER.map(type => `<option value="${type}">${TYPE_NAMES[type]}</option>`)].join('');
         this.bind();
     }
@@ -171,13 +171,15 @@ export default class DeckScreens {
         }).join('') + note;
 
         const entries = sortedEntries(deck);
+        // 同じ名前の別の版を見分けられるように、ポケモンは HP と版の番号も出す
+        const sub = card => (card.kind === 'pokemon' ? `HP${card.hp} ${card.prints?.[0] ?? ''}` : '');
         $('deck-cards').innerHTML = entries.length
             ? entries.map(([id, count]) => `<li class="deck-card-row">
-                <span class="deck-card-name" data-row="${id}">${escape(getCard(id).name)}</span>
+                <span class="deck-card-name" data-row="${id}">${escape(getCard(id).name)}<span class="deck-card-sub">${escape(sub(getCard(id)))}</span></span>
                 <button type="button" class="step-btn" data-minus="${id}" aria-label="減らす">−</button>
                 <span class="deck-card-count">${count}</span>
                 <button type="button" class="step-btn" data-plus="${id}" aria-label="増やす" ${canAdd(deck, id) ? '' : 'disabled'}>＋</button>
             </li>`).join('')
-            : '';
+            : '<li class="deck-empty">左のカードをタップすると、デッキに入ります。長押しで説明が出ます。</li>';
     }
 }

@@ -324,12 +324,16 @@ button { font: inherit; color: inherit; }
     gap: 6px;
     padding: 6px 6px 0 8px;
     min-height: 0;
+    min-width: 0;
+    overflow: hidden; /* 右のデッキの欄に重ならないように */
 }
-.pool-bar { display: flex; gap: 6px; align-items: center; min-width: 0; }
+/* 狭いときは、検索とタイプの選択が2行目に折り返す */
+.pool-bar { display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: center; min-width: 0; }
 .pool-tabs { flex: none; }
-.pool-search, .pool-type { max-width: none; height: 32px; padding: 0 8px; font-size: 14px; border-radius: 8px; }
-.pool-search { flex: 1 1 90px; min-width: 70px; }
-.pool-type { flex: 0 0 auto; width: auto; }
+.pool-tabs .segment-item { padding: 5px 10px; font-size: 13px; }
+.pool-search, .pool-type { max-width: none; height: 30px; padding: 0 8px; font-size: 13px; border-radius: 8px; }
+.pool-search { flex: 1 1 80px; min-width: 64px; }
+.pool-type { flex: 0 1 auto; width: auto; min-width: 0; max-width: 9em; }
 .pool-type[hidden] { display: none; }
 .pool-note { grid-column: 1 / -1; margin: 6px 2px; color: var(--muted, #aab); font-size: 13px; }
 .pool {
@@ -345,6 +349,16 @@ button { font: inherit; color: inherit; }
 .pool::-webkit-scrollbar { display: none; }
 .pool-card { position: relative; cursor: pointer; }
 .pool-card.maxed .card { opacity: 0.45; }
+/* デッキ構築の一覧では、長い名前も2行まで出す（同じ名前の別の版や、長い名前を見分けるため） */
+.pool-card .card-name {
+    font-size: 11.5cqw;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 2.2em;
+    align-content: center;
+}
 .pool-count {
     position: absolute;
     bottom: 22%;
@@ -378,6 +392,8 @@ button { font: inherit; color: inherit; }
     font-size: 13px;
 }
 .deck-card-name { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+.deck-card-sub { display: block; font-size: 10px; line-height: 1.2; color: var(--ink-dim); overflow: hidden; text-overflow: ellipsis; }
+.deck-empty { padding: 8px 2px; font-size: 12px; line-height: 1.6; color: var(--ink-dim); }
 .deck-card-count { width: 22px; text-align: center; font-weight: 800; font-variant-numeric: tabular-nums; }
 .step-btn {
     width: 26px;

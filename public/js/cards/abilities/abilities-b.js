@@ -9,18 +9,18 @@
  *
  * まだ書いていない特性（ゲームの本体に仕組みが要るもの・文の意味が確かめられないもの）
  *   コバルトコマンド：カードのデータに「未来」の印がない
- *   こんぺきはとう：ワザを使う前に ctx.ignoreEffects を立てるフックがない（damageDealt は「ダメージを受けない」効果の判定より後に呼ばれる）
- *   しめりけ：特性をなくすフック suppressAbility は、特性からは書けない
  *   しゅんぱつりょく：対戦準備で、たねポケモン以外をウラでバトル場に出す仕組みがない
- *   ダークインパルス：相手が手札から進化させたことを、ほかのポケモンに知らせるフックがない
- *   ダブルタイプ・デュアルコア：ポケモンのタイプを増やす仕組みがない（弱点・抵抗力・タイプの判定は card.type だけを見る）
- *   てっぺきシェル：弱点・抵抗力などを計算し終えたダメージで「受けない」を決めるフックがない（effect の preventDamageUpTo は「以下」だけ）
- *   デビューライブ：先攻の最初の番にワザを使えるようにするフックがない（ワザの firstTurnOk だけを見る）
  *   どっきりおとし：カードが山札からトラッシュされたときのフックがない
- *   なぎのきょうち：ポケモンやカードを手札にもどす効果を止めるフックがない
+ *   なぎのきょうち：blockReturnToHand は game.returnToHand（ポケモンとついているカードをまとめてもどす）だけが見る。
+ *     ついているエネルギーや進化カードだけを手札にもどす効果（items.js・supporters.js・abilities-a/b.js）は確かめないので、
+ *     「そのポケモンについているすべてのカードは、手札にもどせない」が守れない
  *   にじいろDNA：進化元の名前と違うポケモンにのせて進化する仕組みがない
- *   にらみをきかす：手札からポケモンを場に出すこと（たねポケモン・進化）を止めるフックがない（blockTrainer はトレーナーズだけ）
- *   ぬめぬめスリップ：にげるときにコインを投げて、にげるのを失敗させる仕組みがない
+ *   ぬめぬめスリップ：にげるときにコインを投げて、にげるのを失敗させる仕組みがない（blockRetreat は何度も呼ばれるのでコインを投げられない）
+ *
+ * フックが足されてから書いた特性で、割り切ったところ
+ *   こんぺきはとう：ワザの前に ctx.ignoreEffects を立てる。本体は、ctx.ignoreEffects のとき、ベンチのポケモンにかかっている効果も計算しない
+ *   ダブルタイプ・デュアルコア：タイプが増えるのは弱点・抵抗力など game.typesOf を使うところだけ（「[P]ポケモン」の判定に card.type を見る効果は、増えたタイプを見ない）
+ *   デュアルコア：つけている「ブーストエナジー 未来」の名前だけを見る（「未来」の印はいらない）
  *
  * 割り切ったところ
  *   さかてにとる：本体はワザでのきぜつだけを記録する。ワザ以外のきぜつは、キチキギスexが場にいたときだけ、この特性が自分で記録する
@@ -1072,5 +1072,87 @@ export const ABILITY_EFFECTS = {
             then: () => game.addCondition(game.opponentOf(player).active, 'burned')
         }),
         cpuWants: (game, player) => !game.opponentOf(player).active?.burned
+    },
+
+    // ===== ワザ・ダメージ =====
+    'こんぺきはとう': {
+        // このポケモンが使うワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない
+        type: 'passive',
+        hooks: {
+            beforeAttack: (game, source, ctx) => {
+                if (ctx.attacker === source.pokemon) ctx.ignoreEffects = true;
+            }
+        }
+    },
+    'てっぺきシェル': {
+        // 相手のポケモンから「200」以上のワザのダメージを受けない（弱点・抵抗力などを計算し終えたダメージで決める）
+        type: 'passive',
+        hooks: {
+            preventFinalDamage: (game, source, ctx, target, damage) => target === source.pokemon && damage >= 200
+        }
+    },
+    'デビューライブ': {
+        // このポケモンは、先攻プレイヤーの最初の番でも、ワザが使える
+        type: 'passive',
+        hooks: {
+            allowFirstTurnAttack: (game, source, player, pokemon) => pokemon === source.pokemon
+        }
+    },
+
+    // ===== タイプ =====
+    'メレシー/ダブルタイプ': {
+        // 場にいるかぎり [F] と [P] の2つのタイプになる
+        type: 'passive',
+        hooks: {
+            extraTypes: (game, source, pokemon) => (pokemon === source.pokemon ? ['fighting', 'psychic'] : [])
+        }
+    },
+    'スコヴィランex/ダブルタイプ': {
+        // 場にいるかぎり [G] と [R] の2つのタイプになる
+        type: 'passive',
+        hooks: {
+            extraTypes: (game, source, pokemon) => (pokemon === source.pokemon ? ['grass', 'fire'] : [])
+        }
+    },
+    'デュアルコア': {
+        // 「ブーストエナジー 未来」がついているかぎり、[F] と [M] の2つのタイプになる（どうぐの名前だけを見る）
+        type: 'passive',
+        hooks: {
+            extraTypes: (game, source, pokemon) => (pokemon === source.pokemon && pokemon.tool && game.cardName(pokemon.tool) === 'ブーストエナジー 未来'
+                ? ['fighting', 'metal']
+                : [])
+        }
+    },
+
+    // ===== ほかのポケモン・相手の手札から出すポケモン =====
+    'しめりけ': {
+        // おたがいのポケモン全員は、そのポケモン自身をきぜつさせる効果の特性（「使ったなら、このポケモンをきぜつさせる」）が、すべてなくなる
+        type: 'passive',
+        hooks: {
+            suppressAbility: (game, source, pokemon) => /このポケモンをきぜつさせる/.test(game.topCard(pokemon).ability?.text ?? '')
+        }
+    },
+    'ダークインパルス': {
+        // 相手が手札からポケモンを出して進化させるたび、そのポケモンにダメカンを4個のせる。何匹いても重ならない
+        type: 'passive',
+        hooks: {
+            onEvolved: (game, source, player, pokemon, { fromHand }) => {
+                if (!fromHand || player === source.player) return;
+                const first = game.inPlay(source.player).find(holder => game.topCard(holder).ability?.name === 'ダークインパルス' && !game.abilitySuppressed(holder));
+                if (first !== source.pokemon) return;
+                game.log(`${source.card.name}の特性「ダークインパルス」`);
+                putCounters(game, pokemon, 4);
+            }
+        }
+    },
+    'にらみをきかす': {
+        // このポケモンがバトル場にいるかぎり、相手は手札から特性を持つポケモン（「ロケット団のポケモン」をのぞく）を場に出せない
+        type: 'passive',
+        hooks: {
+            blockPlayPokemon: (game, source, player, card) => (player !== source.player && isActive(game, source.pokemon)
+                && card.ability && !card.name.startsWith('ロケット団の')
+                ? `${source.card.name}の特性「にらみをきかす」で、特性を持つポケモンを場に出せません`
+                : null)
+        }
     }
 };

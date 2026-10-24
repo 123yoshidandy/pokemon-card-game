@@ -7,20 +7,16 @@
  *   印があるので、その版の文（[M]・[G]・[F] など）のとおりに書いた。効果は名前で引くので、どの版も同じ動きになる
  *
  * まだ書いていない特性（ゲームの本体に仕組みが要るもの・文の意味が確かめられないもの）
- *   ねんちゃくしばり：特性で、ほかのポケモンの特性をなくす仕組みがない（suppressAbility は特性以外のカードだけが書ける）
- *   ばけがくれ・ひかりのつばさ：「相手の特性の効果を受けない」を、ほかの特性に守らせる仕組みがない
- *   バックリロード・マイティチェンジ：「バトル場からベンチにもどったとき」に特性を使う仕組みがない
+ *   ばけがくれ・ひかりのつばさ：「相手の特性の効果を受けない」を、ほかの特性に守らせる仕組みがない（特性の効果の側が確かめない）
  *   マイティソウル：「マイティチェンジの効果でしか場に出せない」（手札からの進化を止める）仕組みがない
- *   フェアリーゾーン：弱点のタイプを変える仕組みがない（弱点はカードのデータをそのまま使っている）
+ *     （blockPlayPokemon・blockEvolve は場のカードのフックだけを見るので、手札のこのカード自身が止められない）
  *   ほうせきさがし：カードのデータに「テラスタル」の印がない
- *   マグマのはどう：やけどでのせるダメカンの数を増やす仕組みがない（やけどのダメージは決まった数）
- *   もうどくしはい：どくでのせるダメカンの数を、場にいるかぎり増やす仕組みがない（どくの数は、どくにした効果が決める）
- *   マルチアダプタ：ポケモンのどうぐを2枚つける仕組みがない
+ *   マルチアダプタ：ポケモンのどうぐを2枚つける仕組みがない（pokemon.tool は1枚だけ）
  *   ゆきにまぎれる・ワイドウォール：「相手のグッズ・サポートの効果を受けない」をトレーナーズに守らせる仕組みがない
- *   ようがんちたい：相手のバトルポケモンがベンチにもどったことを知らせるフックがない
- *   ラスターアシスト：ほかのポケモン（メガラティアスex）がバトル場に出たときに、この特性を使う仕組みがない
  *
- * 「〜したとき」の特性（onEvolve・onBench・onActive）は、CPU はいつも「使う」と答える（cpuWants を見る仕組みがない）
+ * フックが足されてから書いた特性で、割り切ったところ
+ *   ラスターアシスト：「〜がバトル場に出たとき」はフック onPokemonToActive で知り、使うかどうかを持ち主に聞いてから使う
+ *   マイティチェンジ：「イルカマンex」はマイティソウルが書けないため、まだデッキに入らない（山札にあれば動く）
  */
 
 import { shuffle } from '../../random.js';
@@ -47,10 +43,14 @@ function bestIndices(items, score, count) {
         .sort((a, b) => a - b);
 }
 
-// そのポケモンが、持ち主のバトル場にいるか
+// そのポケモンが、持ち主のバトル場にいるか / ベンチにいるか
 function isActive(game, pokemon) {
     const owner = game.ownerOf(pokemon);
     return Boolean(owner) && owner.active === pokemon;
+}
+function isBenched(game, pokemon) {
+    const owner = game.ownerOf(pokemon);
+    return Boolean(owner) && owner.active !== pokemon;
 }
 
 // エネルギー1枚が、そのタイプのエネルギーになるか（どのタイプにもなる特殊エネルギーをふくむ）
@@ -962,6 +962,125 @@ export const ABILITY_EFFECTS = {
                 source.player.hand.push(...taken);
                 game.log(`${source.player.name}はサイドを1枚多く取った（残り${source.player.prizes.length}枚）`);
                 game.log(`サイドから${names(game, taken)}を手札に加えた`, { to: source.player.id });
+            }
+        }
+    },
+
+    // ===== ほかのポケモンの特性をなくす =====
+    'ねんちゃくしばり': {
+        // このポケモンがベンチにいるかぎり、おたがいのベンチの2進化ポケモンの特性は、すべてなくなる
+        type: 'passive',
+        hooks: {
+            suppressAbility: (game, source, pokemon) => isBenched(game, source.pokemon) && isBenched(game, pokemon) && game.topCard(pokemon).stage === 2
+        }
+    },
+
+    // ===== 特殊状態・弱点 =====
+    'マグマのはどう': {
+        // 相手のやけどのポケモンは、やけどでのせるダメカンの数が3個多くなる
+        type: 'passive',
+        hooks: {
+            burnDamage: (game, source, pokemon) => (game.ownerOf(pokemon) === game.opponentOf(source.player) ? 30 : 0)
+        }
+    },
+    'もうどくしはい': {
+        // このポケモンがバトル場にいるかぎり、相手のどくのポケモンは、どくでのせるダメカンの数が5個多くなる
+        type: 'passive',
+        hooks: {
+            poisonDamage: (game, source, pokemon) => (isActive(game, source.pokemon) && game.ownerOf(pokemon) === game.opponentOf(source.player) ? 50 : 0)
+        }
+    },
+    'ようがんちたい': {
+        // 相手の番に、相手のバトルポケモンがベンチにもどるたび、新しく出てきたポケモンをやけどにする
+        type: 'passive',
+        hooks: {
+            onSwitchOut: (game, source, player) => {
+                if (player === source.player || game.current !== player.id || game.phase !== 'main' || !player.active) return;
+                game.log(`${source.card.name}の特性「ようがんちたい」`);
+                game.addCondition(player.active, 'burned');
+            }
+        }
+    },
+    'フェアリーゾーン': {
+        // 相手の場の [N] ポケモン全員の弱点は、すべて [P] タイプになる
+        type: 'passive',
+        hooks: {
+            weaknessOverride: (game, source, pokemon) => (game.ownerOf(pokemon) === game.opponentOf(source.player) && game.typesOf(pokemon).includes('dragon')
+                ? 'psychic'
+                : null)
+        }
+    },
+
+    // ===== バトル場からベンチにもどったとき・ベンチからバトル場に出たとき =====
+    'バックリロード': {
+        // 自分の番に、このポケモンがバトル場からベンチに戻ったとき、1回使える。手札から「基本水エネルギー」を2枚まで選び、このポケモンにつける
+        type: 'onToBench',
+        canUse: (game, player) => hasIn(game, player.hand, card => isBasicEnergy(card, 'water')),
+        use: (game, player, pokemon) => {
+            const candidates = cardsIn(game, player.hand, card => isBasicEnergy(card, 'water'));
+            if (candidates.length === 0) return;
+            game.promptCards({
+                player,
+                cards: candidates,
+                min: 1,
+                max: Math.min(2, candidates.length),
+                title: 'このポケモンにつける「基本水エネルギー」を2枚まで選ぶ',
+                purpose: 'attach-from-hand',
+                cpuAnswer: (g, prompt) => allIndices(prompt.max),
+                callback: selected => selected.forEach(inst => attachFromHand(game, player, pokemon, inst))
+            });
+        }
+    },
+    'マイティチェンジ': {
+        // 自分の番に、このポケモンがバトル場からベンチにもどったとき、1回使える。山札の「イルカマンex」とこのカードを入れ替える
+        // （ついているカード・ダメカン・特殊状態・効果などは、すべて引きつぐ）。入れ替えたなら、このカードは山札にもどす。そして山札を切る
+        type: 'onToBench',
+        canUse: (game, player) => player.deck.length > 0,
+        use: (game, player, pokemon) => searchThen(game, player, card => card.name === 'イルカマンex', 1, '入れ替える「イルカマンex」を選ぶ', ([inst]) => {
+            if (!inst) return;
+            if (!game.inPlay(player).includes(pokemon)) {
+                player.deck.push(inst);
+                return;
+            }
+            const old = pokemon.cards.pop();
+            pokemon.cards.push(inst);
+            player.deck.push(old);
+            game.log(`${player.name}は${game.cardName(old)}を${game.cardName(inst)}と入れ替え、${game.cardName(old)}を山札にもどした`);
+        }),
+        cpuWants: (game, player) => hasIn(game, player.deck, card => card.name === 'イルカマンex')
+    },
+    'ラスターアシスト': {
+        // 自分の番に、自分の「メガラティアスex」がベンチからバトル場に出たとき、1回使える。
+        // 自分のベンチポケモンについているエネルギーを好きなだけ選び、バトルポケモンにつけ替える
+        type: 'passive',
+        hooks: {
+            onPokemonToActive: (game, source, player, pokemon) => {
+                if (player !== source.player || game.current !== player.id || game.phase !== 'main') return;
+                if (game.topCard(pokemon).name !== 'メガラティアスex') return;
+                if (!player.bench.some(benched => benched.energies.length > 0)) return;
+                game.runNext(() => game.promptConfirm({
+                    player,
+                    title: `特性「ラスターアシスト」を使いますか？（${source.card.name}）`,
+                    card: source.inst.id,
+                    purpose: `ability-${source.card.id}`,
+                    callback: yes => {
+                        if (!yes || player.active !== pokemon || !game.inPlay(player).includes(source.pokemon)) return;
+                        game.log(`${source.card.name}の特性「ラスターアシスト」`);
+                        const from = new Map(player.bench.flatMap(benched => benched.energies.map(inst => [inst, benched])));
+                        const energies = [...from.keys()];
+                        if (energies.length === 0) return;
+                        game.promptCards({
+                            player,
+                            cards: energies,
+                            min: 0,
+                            max: energies.length,
+                            title: 'バトルポケモンにつけ替える、ベンチポケモンのエネルギーを選ぶ',
+                            purpose: 'move-energy-to-active',
+                            cpuAnswer: (g, prompt) => allIndices(prompt.max),
+                            callback: selected => selected.forEach(inst => game.moveEnergy(from.get(inst), pokemon, inst))
+                        });
+                    }
+                }));
             }
         }
     }

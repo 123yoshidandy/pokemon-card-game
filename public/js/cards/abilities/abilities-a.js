@@ -8,16 +8,15 @@
  * からぬけ：テッカニン（M1S-065）の文は「手札から選び…そして山札を切る」で食い違っている。M1S-008 と同じく山札から選ぶ
  *
  * まだ書いていない特性（ゲームの本体に仕組みが要るもの・文の意味が確かめられないもの）
- *   あなぼこ・うずまくことだま：相手のバトルポケモンがベンチにもどったことを知らせるフックがない
- *   あんやのはばたき・イニシャライズ：特性が、ほかのポケモンの特性をなくす仕組みがない（suppressAbility は特性以外のカードだけ）
+ *   イニシャライズ：カードのデータに「未来」の印がない
  *   エキサイトターボ・エキサイトパワー・エキサイトヒール：文の「タイプの『メガシンカex』」のタイプの記号が抜けていて、どのタイプか確かめられない
  *   エキサイトダイブ・きんきゅうかいてん：手札にあるポケモンの特性を使う仕組みがない
- *   おいしげる：基本エネルギーが出すエネルギーを変えるフックがない
+ *   おいしげる：基本エネルギーが出すエネルギーを変えるフックがない（energyUnits は基本エネルギーのタイプをそのまま使う）
  *   おまつりおんど：ワザを2回続けて使う仕組みがない
  *   かんしのめ：ダメカンののせ替えを止めるフックがない（のせ替える効果の側が確かめない）
  *   きおくにもぐる：進化前のワザを使う仕組みがない
  *   きらめくウロコ：カードのデータに「テラスタル」の印がない
- *   きんちょうかん：相手のグッズ・サポートの効果を受けない、を確かめる仕組みがない
+ *   きんちょうかん：相手のグッズ・サポートの効果を受けない、を確かめる仕組みがない（トレーナーズの効果の側が確かめない）
  */
 
 const isPokemon = card => card.kind === 'pokemon';
@@ -1076,5 +1075,42 @@ export const ABILITY_EFFECTS = {
         canUse: (game, player, pokemon) => player.bench.includes(pokemon) && hasInPlay(game, player, card => isMega(card)),
         use: switchSelfIn,
         cpuWants: (game, player, pokemon) => !canAttackWith(game, player.active) && canAttackWith(game, pokemon)
+    },
+
+    // ===== 相手のバトルポケモンがベンチにもどったとき =====
+    'あなぼこ': {
+        // 相手の番に、相手のバトルポケモンがベンチにもどるたび、そのポケモンにダメカンを2個のせる
+        type: 'passive',
+        hooks: {
+            onSwitchOut: (game, source, player, pokemon) => {
+                if (player === source.player || game.current !== player.id || game.phase !== 'main') return;
+                game.log(`${source.card.name}の特性「あなぼこ」`);
+                game.putDamage(pokemon, 20);
+                game.runNext(() => game.checkKnockouts());
+            }
+        }
+    },
+    'うずまくことだま': {
+        // このポケモンがバトル場にいるかぎり、相手の番に、相手のバトルポケモンがベンチにもどるたび、新しく出てきたポケモンをこんらんにする
+        type: 'passive',
+        hooks: {
+            onSwitchOut: (game, source, player) => {
+                if (player === source.player || game.current !== player.id || game.phase !== 'main') return;
+                if (!isActive(game, source.pokemon) || !player.active) return;
+                game.log(`${source.card.name}の特性「うずまくことだま」`);
+                game.addCondition(player.active, 'confused');
+            }
+        }
+    },
+
+    // ===== ほかのポケモンの特性をなくす =====
+    'あんやのはばたき': {
+        // このポケモンがバトル場にいるかぎり、相手のバトルポケモンの特性（「あんやのはばたき」をのぞく）は、すべてなくなる
+        type: 'passive',
+        hooks: {
+            suppressAbility: (game, source, pokemon) => isActive(game, source.pokemon)
+                && game.opponentOf(source.player).active === pokemon
+                && game.topCard(pokemon).ability?.name !== 'あんやのはばたき'
+        }
     }
 };

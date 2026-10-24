@@ -1,0 +1,3792 @@
+{
+ "id": "M1S",
+ "name": "メガシンフォニア",
+ "releaseDate": "2025-08-01",
+ "total": 92,
+ "cards": [
+  {
+   "id": "M1S-001",
+   "localId": "001",
+   "name": "モンジャラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "どくのこな",
+     "effect": "相手のバトルポケモンをどくにする。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっかける",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-002",
+   "localId": "002",
+   "name": "モジャンボ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モンジャラ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "すいとる",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ムキムキウィップ",
+     "effect": "このワザを使うためのエネルギーより、2個多くのエネルギーがついているなら、140ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-003",
+   "localId": "003",
+   "name": "チコリータ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はっぱカッター",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-004",
+   "localId": "004",
+   "name": "ベイリーフ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チコリータ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "つきとばす",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。[バトル場に出すポケモンは相手が選ぶ。]",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-005",
+   "localId": "005",
+   "name": "メガニウム",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 160,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ベイリーフ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おいしげる",
+     "effect": "このポケモンがいるかぎり、自分のポケモン全員についている「基本草エネルギー」は、それぞれ草エネルギー2個ぶんとしてはたらく。この特製の効果は重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ソーラービーム",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-006",
+   "localId": "006",
+   "name": "ツボツボ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はっこうジュース",
+     "effect": "このポケモンに草エネルギーがついているなら、自分の番に1回使える。自分のポケモン1匹のHPを「30」回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ころがる",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-007",
+   "localId": "007",
+   "name": "ツチニン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっかく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-008",
+   "localId": "008",
+   "name": "テッカニン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ツチニン",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "からぬけ",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。山札から「ヌケニン」を1枚選び、ベンチに出す。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "とんぼがえり",
+     "effect": "このポケモンをベンチポケモンと入れ替える。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-009",
+   "localId": "009",
+   "name": "ダダリン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "グラウンドパワー",
+     "effect": "場に自分のスタジアムが出ているなら、50ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-010",
+   "localId": "010",
+   "name": "シシコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ほのお",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-011",
+   "localId": "011",
+   "name": "カエンジシ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シシコ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いかくのキバ",
+     "effect": "このポケモンがバトル場にいるかぎり、相手のバトルポケモンが使うワザのダメージは「-30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "やきこがす",
+     "effect": "相手のバトルポケモンをやけどにする。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-012",
+   "localId": "012",
+   "name": "ヤクデ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ぶつかる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "かえん",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-013",
+   "localId": "013",
+   "name": "マルヤクデ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤクデ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "まきつきクラッシュ",
+     "effect": "コインを2回投げ、オモテの数ぶん、相手のバトルポケモンについているエネルギーを選び、トラッシュする。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヒートクローラー",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-014",
+   "localId": "014",
+   "name": "イーユイ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "やけつくだいち",
+     "effect": "場に出ている相手のスタジアムをトラッシュする。トラッシュした場合、次の相手の番、相手は手札からスタジアムを出せない。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-015",
+   "localId": "015",
+   "name": "マンタイン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "たきのぼり",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-016",
+   "localId": "016",
+   "name": "カイオーガ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ぎゃくりゅう",
+     "effect": "自分のトラッシュにある「基本水エネルギー」をすべて相手に見せ、その枚数×20ダメージ。その後、見せたエネルギーを山札に戻して切る。",
+     "damage": "20×"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "うずまくなみ",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-017",
+   "localId": "017",
+   "name": "ユキカブリ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "たたく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "スノーアイス",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-018",
+   "localId": "018",
+   "name": "メガユキノオーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 350,
+   "types": [
+    "Water"
+   ],
+   "stage": "MEGA",
+   "evolveFrom": "ユキカブリ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "アバランチハンマー",
+     "effect": "自分の山札を上から6枚トラッシュし、その中にある「基本水エネルギー」の枚数×100ダメージ。",
+     "damage": "100×"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water"
+     ],
+     "name": "フロストバリア",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-019",
+   "localId": "019",
+   "name": "ウデッポウ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "スプラッシュ",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-020",
+   "localId": "020",
+   "name": "ブロスター",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ウデッポウ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "バックリロード",
+     "effect": "自分の番に、このポケモンがバトル場からベンチに戻ったとき、1回使える。自分の手札から「基本水エネルギー」を2枚まで選び、このポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water"
+     ],
+     "name": "アクアランチャー",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-021",
+   "localId": "021",
+   "name": "メッソン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ふいをつく",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-022",
+   "localId": "022",
+   "name": "ジメレオン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "メッソン",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "にどづき",
+     "effect": "コインを2回投げ、オモテの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-023",
+   "localId": "023",
+   "name": "インテレオン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジメレオン",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "しとめる",
+     "effect": "おたがいの場のポケモン（このポケモンをのぞく）の中から、残りHPが一番少ないポケモンを1匹選び、きぜつさせる。"
+    },
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ウォーターショット",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-024",
+   "localId": "024",
+   "name": "ユキハミ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "かくれる",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-025",
+   "localId": "025",
+   "name": "モスノウ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ユキハミ",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "こごえるはばたき",
+     "effect": "相手のポケモン全員に、それぞれ20ダメージ。相手のバトルポケモンをねむりにする。[ベンチは弱点・抵抗力を計算しない。]"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-026",
+   "localId": "026",
+   "name": "コオリッポ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いてつくずつき",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-027",
+   "localId": "027",
+   "name": "コイル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "ビーム",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-028",
+   "localId": "028",
+   "name": "レアコイル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コイル",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "でんきショック",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-029",
+   "localId": "029",
+   "name": "ジバコイル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "レアコイル",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "アッパースパーク",
+     "effect": "この番に、このポケモンが「レアコイル」から進化していたなら、120ダメージ追加。",
+     "damage": "50+"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "フラッシュボルト",
+     "effect": "次の自分の番、このポケモンは「フラッシュボルト」が使えない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-030",
+   "localId": "030",
+   "name": "ライコウ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "エレキフォール",
+     "effect": "自分の場に雷エネルギーが4個以上あるなら、90ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-031",
+   "localId": "031",
+   "name": "ラクライ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "でんげき",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-032",
+   "localId": "032",
+   "name": "メガライボルトex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 330,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ラクライ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "フラッシュレイ",
+     "effect": "次の相手の番、このポケモンはたねポケモンからワザのダメージを受けない。",
+     "damage": 120
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ライオットブラスター",
+     "effect": "のぞむなら、このポケモンについているエネルギーをすべてトラッシュし、130ダメージ追加。",
+     "damage": "200+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-033",
+   "localId": "033",
+   "name": "パチリス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "しびれるまえば",
+     "effect": "次の相手の番、このワザを受けたポケモンに、相手が手札からエネルギーをつけるたび、そのポケモンにダメカンを8個のせる。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-034",
+   "localId": "034",
+   "name": "エリキテル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ダブルひっかき",
+     "effect": "コインを2回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-035",
+   "localId": "035",
+   "name": "エレザード",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エリキテル",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "せんこうだん",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ヘッドボルト",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-036",
+   "localId": "036",
+   "name": "ケーシィ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "テレポートアタック",
+     "effect": "このポケモンをベンチポケモンと入れ替える。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-037",
+   "localId": "037",
+   "name": "ユンゲラー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ケーシィ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "サイコドロー",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分の山札を2枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ちょうねんりき",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-038",
+   "localId": "038",
+   "name": "フーディン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ユンゲラー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "サイコドロー",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分の山札を3枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ハンドパワー",
+     "effect": "自分の手札の枚数×2個ぶんのダメカンを、相手のバトルポケモンにのせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-039",
+   "localId": "039",
+   "name": "ルージュラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "サイコキネシス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-040",
+   "localId": "040",
+   "name": "ラルトス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ずつき",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-041",
+   "localId": "041",
+   "name": "キルリア",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ラルトス",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "コールサイン",
+     "effect": "自分の山札からポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "サイコショット",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-042",
+   "localId": "042",
+   "name": "メガサーナイトex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 360,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "キルリア",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "あふれるねがい",
+     "effect": "自分のベンチポケモン全員に、山札から「基本超エネルギー」を1枚ずつつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "メガシンフォニア",
+     "effect": "自分のポケモン全員についている超エネルギーの数×50ダメージ。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-043",
+   "localId": "043",
+   "name": "ヌケニン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "もろいぬけがら",
+     "effect": "このポケモンが、相手の「ポケモンex」からワザのダメージを受けてきぜつしても、相手はサイドをとれない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ダメージビート",
+     "effect": "相手のバトルポケモンにのっているダメカンの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-044",
+   "localId": "044",
+   "name": "バネブー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "トリプルスピン",
+     "effect": "コインを3回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-045",
+   "localId": "045",
+   "name": "ブーピッグ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "バネブー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エナジーステップ",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分の山札の上から4枚見て、その中から基本エネルギーを好きなだけ選び、自分のポケモンに好きなようにつける。残りのカードは山札にもどして切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ねんどうだん",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-046",
+   "localId": "046",
+   "name": "ゼルネアス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ジオゲート",
+     "effect": "自分の山札から超タイプのたねポケモンを3枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ブライトホーン",
+     "effect": "次の自分の番、このポケモンは「ブライトホーン」が使えない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-047",
+   "localId": "047",
+   "name": "ボチ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ふむ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "とっしん",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-048",
+   "localId": "048",
+   "name": "ハカドッグ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ボチ",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ホラーバイト",
+     "effect": "ウラが出るまでコインを投げ、オモテの数ぶん、相手の手札からオモテを見ないで選び、そのカードをのオモテを見て、相手の山札にもどして切る。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-049",
+   "localId": "049",
+   "name": "メガラティアスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひるがえす",
+     "effect": "のぞむなら、このポケモンをベンチポケモンと入れ替える。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Fire",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ミラージュインパルス",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 300
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-050",
+   "localId": "050",
+   "name": "ラティオス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ラスターアシスト",
+     "effect": "自分の番に、自分の「メガラティアスex」がベンチからバトル場に出たとき、1回使える。自分のベンチポケモンについているエネルギーを好きなだけ選び、バトルポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ドラゴンクロー",
+     "damage": 130
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-051",
+   "localId": "051",
+   "name": "メガガルーラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 300,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おつかいダッシュ",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札を2枚引く。この特性は別の「おつかいダッシュ」を使った番は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マシンガンコンボ",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×50ダメージ追加。",
+     "damage": "200+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-052",
+   "localId": "052",
+   "name": "デリバード",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ファストギフト",
+     "effect": "このワザは、先行プレイヤーの最初の番でも使える。自分の山札から好きなカードを1枚選び、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-053",
+   "localId": "053",
+   "name": "ミミロル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "あまえる",
+     "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-20」される。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "スキップ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-054",
+   "localId": "054",
+   "name": "ミミロップ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ミミロル",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "とびだしキック",
+     "effect": "相手のベンチポケモン1匹に、50ダメージ。[ベンチは弱点・抵抗力を計算しない。]",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かいてんげり",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-055",
+   "localId": "055",
+   "name": "ヌイコグマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なぐる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はねまわる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-056",
+   "localId": "056",
+   "name": "キテルグマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヌイコグマ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "げんこつ",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっさつラリアット",
+     "effect": "コインを2回投げ、すべてオモテなら、100ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-057",
+   "localId": "057",
+   "name": "あやしい時計",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の進化している超ポケモンを1匹選び、「進化カード」を好きなだけはがして退化させる。はがしたカードは、手札に戻す。[退化したポケモンは、その番に進化できない。]",
+   "trainerType": "Item",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-058",
+   "localId": "058",
+   "name": "メガシグナル",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「メガシンカex」を1枚選び、相手に見せて手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-059",
+   "localId": "059",
+   "name": "アセロラのいたずら",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、相手のサイドの残り枚数が2枚以下のカードの時にしか使えない。自分の場のポケモンを1匹を選ぶ。次の相手の番、そのポケモンは相手の「ポケモンex」からワザのダメージや効果を受けない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-060",
+   "localId": "060",
+   "name": "ミツルの思いやり",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の「メガシンカex」1匹のHPを、すべて回復する。その後、回復したポケモンについているエネルギーを、すべて手札にもどす。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-061",
+   "localId": "061",
+   "name": "活力の森",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの草ポケモン全員は、出したばかりの番（最初の自分の番をのぞく）でも草ポケモンに進化できる。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-062",
+   "localId": "062",
+   "name": "なみのりビーチ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分のバトル場の水ポケモンを、ベンチの水ポケモンと入れ替えてよい。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-063",
+   "localId": "063",
+   "name": "ミステリーガーデン",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、手札からエネルギーカードを1枚トラッシュするなら、自分の手札の枚数が、自分の場の超エネルギーポケモンの数と同じ枚数になるように山札を引いてもよい。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-064",
+   "localId": "064",
+   "name": "ツボツボ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ころがる",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-065",
+   "localId": "065",
+   "name": "テッカニン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ツチニン",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "からぬけ",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分の手札から「ヌケニン」を1枚選び、ベンチに出す。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "とんぼがえり",
+     "effect": "このポケモンをベンチポケモンと入れ替える。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-066",
+   "localId": "066",
+   "name": "シシコ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ほのお",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-067",
+   "localId": "067",
+   "name": "ユキカブリ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "たたく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "スノーアイス",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-068",
+   "localId": "068",
+   "name": "ブロスター",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ウデッポウ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "バックリロード",
+     "effect": "自分の番に、このポケモンがバトル場からベンチに戻ったとき、1回使える。自分の手札から「基本水エネルギー」を2枚まで選び、このポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water"
+     ],
+     "name": "アクアランチャー",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-069",
+   "localId": "069",
+   "name": "インテレオン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジメレオン",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "しとめる",
+     "effect": "おたがいの場のポケモン（このポケモンをのぞく）の中から、残りHPが一番少ないポケモンを1匹選び、きぜつさせる。"
+    },
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ウォーターショット",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-070",
+   "localId": "070",
+   "name": "エリキテル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ダブルひっかき",
+     "effect": "コインを2回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-071",
+   "localId": "071",
+   "name": "フーディン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ユンゲラー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "サイコドロー",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分の山札を3枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ハンドパワー",
+     "effect": "自分の手札の枚数×2個ぶんのダメカンを、相手のバトルポケモンにのせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-072",
+   "localId": "072",
+   "name": "ヌケニン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "もろいぬけがら",
+     "effect": "このポケモンが、相手の「ポケモンex」からワザのダメージを受けてきぜつしても、相手はサイドをとれない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ダメージビート",
+     "effect": "相手のバトルポケモンにのっているダメカンの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-073",
+   "localId": "073",
+   "name": "ハカドッグ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ボチ",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ホラーバイト",
+     "effect": "ウラが出るまでコインを投げ、オモテの数ぶん、相手の手札からオモテを見ないで選び、そのカードをのオモテを見て、相手の山札にもどして切る。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-074",
+   "localId": "074",
+   "name": "デリバード",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ファストギフト",
+     "effect": "このワザは、先行プレイヤーの最初の番でも使える。自分の山札から好きなカードを1枚選び、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-075",
+   "localId": "075",
+   "name": "ヌイコグマ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なぐる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はねまわる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-076",
+   "localId": "076",
+   "name": "メガユキノオーex",
+   "category": "Pokemon",
+   "rarity": "Secret Rare",
+   "hp": 350,
+   "types": [
+    "Water"
+   ],
+   "stage": "MEGA",
+   "evolveFrom": "ユキカブリ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "アバランチハンマー",
+     "effect": "自分の山札を上から6枚トラッシュし、その中にある「基本水エネルギー」の枚数×100ダメージ。",
+     "damage": "100×"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water"
+     ],
+     "name": "フロストバリア",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-077",
+   "localId": "077",
+   "name": "メガライボルトex",
+   "category": "Pokemon",
+   "rarity": "Secret Rare",
+   "hp": 330,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ラクライ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "フラッシュレイ",
+     "effect": "次の相手の番、このポケモンはたねポケモンからワザのダメージを受けない。",
+     "damage": 120
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ライオットブラスター",
+     "effect": "のぞむなら、このポケモンについているエネルギーをすべてトラッシュし、130ダメージ追加。",
+     "damage": "200+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-078",
+   "localId": "078",
+   "name": "メガサーナイトex",
+   "category": "Pokemon",
+   "rarity": "Secret Rare",
+   "hp": 360,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "キルリア",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "あふれるねがい",
+     "effect": "自分のベンチポケモン全員に、山札から「基本超エネルギー」を1枚ずつつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "メガシンフォニア",
+     "effect": "自分のポケモン全員についている超エネルギーの数×50ダメージ。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-079",
+   "localId": "079",
+   "name": "メガラティアスex",
+   "category": "Pokemon",
+   "rarity": "Secret Rare",
+   "hp": 280,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひるがえす",
+     "effect": "のぞむなら、このポケモンをベンチポケモンと入れ替える。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Fire",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ミラージュインパルス",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 300
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-080",
+   "localId": "080",
+   "name": "メガガルーラex",
+   "category": "Pokemon",
+   "rarity": "Secret Rare",
+   "hp": 300,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おつかいダッシュ",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札を2枚引く。この特性は別の「おつかいダッシュ」を使った番は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マシンガンコンボ",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×50ダメージ追加。",
+     "damage": "200+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-081",
+   "localId": "081",
+   "name": "なかよしポフィン",
+   "category": "Trainer",
+   "rarity": "Secret Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、HPが「70」以下のたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-082",
+   "localId": "082",
+   "name": "ふしぎなアメ",
+   "category": "Trainer",
+   "rarity": "Secret Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札から2進化ポケモンを1枚選び、そのポケモンへと進化する自分の場のたねポケモンにのせ、1進化をとばして進化させる。（最初の自分の番や、出したばかりのポケモンには使えない。）",
+   "trainerType": "Item",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-083",
+   "localId": "083",
+   "name": "メガシグナル",
+   "category": "Trainer",
+   "rarity": "Secret Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「メガシンカex」を1枚選び、相手に見せて手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-084",
+   "localId": "084",
+   "name": "アセロラのいたずら",
+   "category": "Trainer",
+   "rarity": "Secret Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、相手のサイドの残り枚数が2枚以下のカードの時にしか使えない。自分の場のポケモンを1匹を選ぶ。次の相手の番、そのポケモンは相手の「ポケモンex」からワザのダメージや効果を受けない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-085",
+   "localId": "085",
+   "name": "ミツルの思いやり",
+   "category": "Trainer",
+   "rarity": "Secret Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の「メガシンカex」1匹のHPを、すべて回復する。その後、回復したポケモンについているエネルギーを、すべて手札にもどす。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-086",
+   "localId": "086",
+   "name": "ミステリーガーデン",
+   "category": "Trainer",
+   "rarity": "Secret Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、手札からエネルギーカードを1枚トラッシュするなら、自分の手札の枚数が、自分の場の超エネルギーポケモンの数と同じ枚数になるように山札を引いてもよい。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-087",
+   "localId": "087",
+   "name": "メガサーナイトex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 360,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "キルリア",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "あふれるねがい",
+     "effect": "自分のベンチポケモン全員に、山札から「基本超エネルギー」を1枚ずつつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "メガシンフォニア",
+     "effect": "自分のポケモン全員についている超エネルギーの数×50ダメージ。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-088",
+   "localId": "088",
+   "name": "メガラティアスex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 280,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひるがえす",
+     "effect": "のぞむなら、このポケモンをベンチポケモンと入れ替える。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Fire",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ミラージュインパルス",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 300
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-089",
+   "localId": "089",
+   "name": "メガガルーラex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 300,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おつかいダッシュ",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札を2枚引く。この特性は別の「おつかいダッシュ」を使った番は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マシンガンコンボ",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×50ダメージ追加。",
+     "damage": "200+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-090",
+   "localId": "090",
+   "name": "アセロラのいたずら",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、相手のサイドの残り枚数が2枚以下のカードの時にしか使えない。自分の場のポケモンを1匹を選ぶ。次の相手の番、そのポケモンは相手の「ポケモンex」からワザのダメージや効果を受けない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-091",
+   "localId": "091",
+   "name": "ミツルの思いやり",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の「メガシンカex」1匹のHPを、すべて回復する。その後、回復したポケモンについているエネルギーを、すべて手札にもどす。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  },
+  {
+   "id": "M1S-092",
+   "localId": "092",
+   "name": "メガサーナイトex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 360,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "キルリア",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "あふれるねがい",
+     "effect": "自分のベンチポケモン全員に、山札から「基本超エネルギー」を1枚ずつつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "メガシンフォニア",
+     "effect": "自分のポケモン全員についている超エネルギーの数×50ダメージ。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1S",
+    "name": "メガシンフォニア"
+   }
+  }
+ ]
+}

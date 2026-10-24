@@ -1,0 +1,4145 @@
+{
+ "id": "SV9",
+ "name": "バトルパートナーズ",
+ "releaseDate": "2025-01-24",
+ "total": 132,
+ "cards": [
+  {
+   "id": "SV9-001",
+   "localId": "001",
+   "name": "キャタピー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "むしくい",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-002",
+   "localId": "002",
+   "name": "トランセル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "かたくなる",
+     "effect": "次の相手の番、このポケモンは「60」以下のワザのダメージを受けない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-003",
+   "localId": "003",
+   "name": "バタフリー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "りんぷんハリケーン",
+     "effect": "コインを4回投げ、オモテの数×60ダメージ。オモテが2回以上なら、相手のバトルポケモンをマヒにする。",
+     "damage": "60×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-004",
+   "localId": "004",
+   "name": "パラス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "きゅうけつ",
+     "effect": "相手のバトルポケモンに与えたダメージぶん、このポケモンのHPを回復する。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-005",
+   "localId": "005",
+   "name": "パラセクト",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "キノコのほうし",
+     "effect": "相手のバトルポケモンをねむりにする。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "シザースイング",
+     "effect": "コインを2回投げ、オモテの数×30ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-006",
+   "localId": "006",
+   "name": "マラカッチ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "さくれつばり",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けてきぜつしたとき、ワザを使ったポケモンにダメカンを6個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "おいつめる",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-007",
+   "localId": "007",
+   "name": "カブルモ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つきとばす",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-008",
+   "localId": "008",
+   "name": "チョボマキ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "シェルヒット",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージを受けない。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-009",
+   "localId": "009",
+   "name": "アギルダー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "うつせみポイズン",
+     "effect": "相手のバトルポケモンをどくとこんらんにする。このポケモンをベンチポケモンと入れ替える。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-010",
+   "localId": "010",
+   "name": "ニャオハ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふみまくる",
+     "effect": "コインを3回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-011",
+   "localId": "011",
+   "name": "ニャローテ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マジカルリーフ",
+     "effect": "コインを1回投げオモテなら、30ダメージ追加し、このポケモンのHPを「30」回復する。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-012",
+   "localId": "012",
+   "name": "マスカーニャ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 160,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ショータイム",
+     "effect": "このポケモンがベンチにいるなら、自分の番に1回使える。このポケモンをバトルポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ライジングブルーム",
+     "effect": "相手のバトルポケモンが「ポケモンex」なら、90ダメージ追加。",
+     "damage": "90+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-013",
+   "localId": "013",
+   "name": "ブーバー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "やきこがす",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをやけどにする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-014",
+   "localId": "014",
+   "name": "ブーバーン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マグマのはどう",
+     "effect": "このポケモンがいるかぎり、相手のやけどのポケモンは、やけどでのせるダメカンの数が3個多くなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "やきこがす",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをやけどにする。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-015",
+   "localId": "015",
+   "name": "Nのダルマッカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ころがりタックル",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ほのお",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-016",
+   "localId": "016",
+   "name": "Nのヒヒダルマ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "バックドラフト",
+     "effect": "相手のトラッシュにある基本エネルギーの枚数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ひだるまキャノン",
+     "effect": "このポケモンについているエネルギーをすべてトラッシュし、相手のベンチポケモン1匹にも、90ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-017",
+   "localId": "017",
+   "name": "ボルケニオンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 220,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "やけつくじょうき",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。相手のバトルポケモンをやけどにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートサイクロン",
+     "effect": "このポケモンについているエネルギーを1個選び、ベンチポケモンにつけ替える。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-018",
+   "localId": "018",
+   "name": "フリーザー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つめたいはばたき",
+     "effect": "自分の山札から「基本エネルギー」を2枚まで選び、このポケモンにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "アイスブラスト",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-019",
+   "localId": "019",
+   "name": "テッポウオ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "じたばた",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージ。",
+     "damage": "10×"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "みずかけ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-020",
+   "localId": "020",
+   "name": "オクタン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "アクアウォッシャー",
+     "effect": "のぞむなら、相手のバトルポケモンについているエネルギーを1個選び、相手の手札にもどす。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たこなぐり",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×90ダメージ。",
+     "damage": "90×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-021",
+   "localId": "021",
+   "name": "ハスボー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "みずでっぽう",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-022",
+   "localId": "022",
+   "name": "ハスブレロ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "アクアスラッシュ",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-023",
+   "localId": "023",
+   "name": "ルンパッパ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "バイタルサンバ",
+     "effect": "このポケモンがいるかぎり、自分の場のポケモン全員の最大HPは、それぞれ「＋40」される。この効果は、この特性を持つポケモンが何匹いても、重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "ハイドロスプラッシュ",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-024",
+   "localId": "024",
+   "name": "ホエルコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "なみのり",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-025",
+   "localId": "025",
+   "name": "ホエルオー",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 240,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハイドロポンプ",
+     "effect": "このポケモンについているエネルギーの数×50ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-026",
+   "localId": "026",
+   "name": "ナンジャモのビリリダマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "チェインボルト",
+     "effect": "自分の「ナンジャモのポケモン」全員についているエネルギーの数×20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-027",
+   "localId": "027",
+   "name": "ナンジャモのマルマイン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "どきどきボム",
+     "effect": "このポケモンに100ダメージ。コインを1回投げオモテなら、相手のバトルポケモンをきぜつさせる。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ライトニングボール",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-028",
+   "localId": "028",
+   "name": "Nのバチュル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "バチバチショート",
+     "effect": "ダメージを与える前に、相手のバトルポケモンについている「ポケモンのどうぐ」をトラッシュする。トラッシュした場合、相手のバトルポケモンをマヒにする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-029",
+   "localId": "029",
+   "name": "ナンジャモのズピカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "プチでんき",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-030",
+   "localId": "030",
+   "name": "ナンジャモのハラバリーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エレキストリーマー",
+     "effect": "自分の番に何回でも使える。自分の手札から「基本エネルギー」を1枚選び、自分の「ナンジャモのポケモン」につける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "サンダーボルト",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 230
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-031",
+   "localId": "031",
+   "name": "ナンジャモのカイデン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "でんこうせっか",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-032",
+   "localId": "032",
+   "name": "ナンジャモのタイカイデン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "フラッシュドロー",
+     "effect": "自分の番に、このポケモンについている「基本エネルギー」を1個トラッシュするなら、1回使える。自分の手札が6枚になるように、山札を引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マッハボルト",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-033",
+   "localId": "033",
+   "name": "リーリエのピッピex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 190,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "フェアリーゾーン",
+     "effect": "このポケモンがいるかぎり、相手の場のポケモン全員の弱点は、すべてタイプになる。［弱点は「×2」で計算する。］"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "フルムーンロンド",
+     "effect": "おたがいのベンチポケモンの数×20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-034",
+   "localId": "034",
+   "name": "バリヤード",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ものまね",
+     "effect": "自分の手札をすべて山札にもどして切る。その後、相手の手札の枚数ぶん、自分の山札を引く。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ねんりき",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-035",
+   "localId": "035",
+   "name": "カゲボウズ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ホロウショット",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-036",
+   "localId": "036",
+   "name": "ジュペッタ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "のろいのことば",
+     "effect": "相手は相手自身の手札を3枚選び、山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ホロウショット",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-037",
+   "localId": "037",
+   "name": "ダンバル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "かいてんアタック",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ビーム",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-038",
+   "localId": "038",
+   "name": "メタング",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "サイコパンチ",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "しねんのずつき",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-039",
+   "localId": "039",
+   "name": "メタグロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 170,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "たたきつぶす",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ジョイントビーム",
+     "effect": "自分のベンチに「ダンバル」「メタング」がいるなら、150ダメージ追加。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-040",
+   "localId": "040",
+   "name": "Nのシンボラー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ねんどうだん",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ビクトリーシンボル",
+     "effect": "このワザを使ったとき、自分のサイドの残り枚数が1枚なら、この対戦は自分の勝ちになる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-041",
+   "localId": "041",
+   "name": "リーリエのアブリー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "じっとする",
+     "effect": "このポケモンのHPを「10」回復する。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-042",
+   "localId": "042",
+   "name": "リーリエのアブリボン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おさそいウインク",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。相手の手札を見て、その中からたねポケモンを好きなだけ選び、相手のベンチに出す。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "マジカルショット",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-043",
+   "localId": "043",
+   "name": "リーリエのキュワワー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はなまねき",
+     "effect": "自分の山札からたねポケモンの「リーリエのポケモン」を好きなだけ選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ぱっときえる",
+     "effect": "このポケモンと、ついているすべてのカードを、手札にもどす。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-044",
+   "localId": "044",
+   "name": "ウリムー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "つきたおし",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-045",
+   "localId": "045",
+   "name": "イノムー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かいりき",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "キバでつく",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-046",
+   "localId": "046",
+   "name": "マンムーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 340,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マンモスキャリー",
+     "effect": "自分の番に1回使える。自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "とどろくこうしん",
+     "effect": "自分のベンチの2進化ポケモンの数×40ダメージ追加。",
+     "damage": "180+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-047",
+   "localId": "047",
+   "name": "ヨーギラス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かみくだく",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-048",
+   "localId": "048",
+   "name": "サナギラス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "とっしん",
+     "effect": "このポケモンにも20ダメージ。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-049",
+   "localId": "049",
+   "name": "レジロック",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "がんせきアーマー",
+     "effect": "このポケモンにエネルギーがついているなら、このポケモンが受けるワザのダメージは「-30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "バスターラリアット",
+     "effect": "このワザのダメージは抵抗力を計算しない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-050",
+   "localId": "050",
+   "name": "ヤンチャム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "どつく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きあいづき",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-051",
+   "localId": "051",
+   "name": "イワンコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ほりかえす",
+     "effect": "自分の山札を上から1枚見て、もとにもどす。のぞむなら、そのカードをトラッシュする。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ふむ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-052",
+   "localId": "052",
+   "name": "ルガルガン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "とげをまとう",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分のトラッシュから「スパイクエネルギー」を2枚まで選び、このポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クラッチファング",
+     "effect": "相手のバトルポケモンにのっているダメカンの数×40ダメージ追加。",
+     "damage": "40+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-053",
+   "localId": "053",
+   "name": "ホップのスナヘビ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なわばりづくり",
+     "effect": "自分の山札からスタジアムを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "かじる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-054",
+   "localId": "054",
+   "name": "ホップのサダイジャ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "じひびき",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "グラウンドブレイク",
+     "effect": "自分のベンチポケモン全員にも、それぞれ20ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-055",
+   "localId": "055",
+   "name": "ガケガニ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ちょっきんバサミ",
+     "effect": "コインを2回投げ、オモテの数ぶん、相手のバトルポケモンについているエネルギーを選び、トラッシュする。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-056",
+   "localId": "056",
+   "name": "ドガース",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ガスでつつむ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-057",
+   "localId": "057",
+   "name": "マタドガス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "じゅうまんガス",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "クレイジーボム",
+     "effect": "前の自分の番に、このポケモンが「じゅうまんガス」を使っていたなら、120ダメージ追加。",
+     "damage": "50+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-058",
+   "localId": "058",
+   "name": "バンギラス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 190,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いあつのがんこう",
+     "effect": "このポケモンがバトル場にいるかぎり、相手は手札からグッズを出して使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "クラックストンプ",
+     "effect": "相手の山札を上から2枚トラッシュする。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-059",
+   "localId": "059",
+   "name": "Nのチョロネコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ちょろまかす",
+     "effect": "相手の手札を見て、その中からカードを1枚選び、相手の山札の下にもどす。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-060",
+   "localId": "060",
+   "name": "Nのゾロア",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ひっかく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-061",
+   "localId": "061",
+   "name": "Nのゾロアークex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "とりひき",
+     "effect": "自分の番に、自分の手札を1枚トラッシュするなら、1回使える。自分の山札を2枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ナイトジョーカー",
+     "effect": "自分のベンチの「Nのポケモン」が持つワザを1つ選び、このワザとして使う。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-062",
+   "localId": "062",
+   "name": "ゴロンダ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "いちゃもん",
+     "effect": "相手のバトルポケモンが持つワザを1つ選ぶ。次の相手の番、このワザを受けたポケモンは、選ばれたワザが使えない。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "パワータックル",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-063",
+   "localId": "063",
+   "name": "シュバルゴ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つきさす",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "アイアンバスター",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-064",
+   "localId": "064",
+   "name": "Nのギアル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ダブルスピン",
+     "effect": "コインを2回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-065",
+   "localId": "065",
+   "name": "Nのギギアル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぐるぐるギア",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "がちんこ",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-066",
+   "localId": "066",
+   "name": "Nのギギギアル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "マグネブラスト",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "トリプルスマッシュ",
+     "effect": "コインを3回投げ、オモテの数×120ダメージ。",
+     "damage": "120×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-067",
+   "localId": "067",
+   "name": "マギアナ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 90,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "オートヒール",
+     "effect": "このポケモンがバトル場にいるかぎり、自分の手札からエネルギーをポケモンにつけるたび、そのポケモンのHPを「90」回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "スパイクドロー",
+     "effect": "自分の山札を2枚引く。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-068",
+   "localId": "068",
+   "name": "ホップのアーマーガア",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 170,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つきぬける",
+     "effect": "相手のベンチポケモン1匹にも、50ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "はがねのつばさ",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-60」される。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-069",
+   "localId": "069",
+   "name": "ホップのザシアンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "せつなぎり",
+     "effect": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ブレイブスラッシュ",
+     "effect": "次の自分の番、このポケモンは「ブレイブスラッシュ」が使えない。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-070",
+   "localId": "070",
+   "name": "タツベイ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Water"
+     ],
+     "name": "とつげき",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 50
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-071",
+   "localId": "071",
+   "name": "コモルー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ガードプレス",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Colorless"
+     ],
+     "name": "ヘビーインパクト",
+     "damage": 80
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-072",
+   "localId": "072",
+   "name": "ボーマンダex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 320,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ワイドブラスト",
+     "effect": "相手のベンチポケモン全員に、それぞれ50ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ドラゴンインパクト",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 300
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-073",
+   "localId": "073",
+   "name": "クリムガン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "りゅうのたけり",
+     "effect": "自分のトラッシュから「基本エネルギー」を1枚選び、自分のポケモンにつける。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Colorless"
+     ],
+     "name": "スラッシュクロー",
+     "damage": 120
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-074",
+   "localId": "074",
+   "name": "Nのレシラム",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Lightning"
+     ],
+     "name": "パワーレイジ",
+     "effect": "このポケモンにのっているダメカンの数×20ダメージ。",
+     "damage": "20×"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "イノセントフレイム",
+     "damage": 170
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-075",
+   "localId": "075",
+   "name": "ホップのカビゴン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ふとっぱら",
+     "effect": "このポケモンがいるかぎり、自分の「ホップのポケモン」が使うワザの、相手のバトルポケモンへのダメージは「+30」される。この効果は、この特性を持つポケモンが何匹いても、重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダイナミックプレス",
+     "effect": "このポケモンにも80ダメージ。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-076",
+   "localId": "076",
+   "name": "オタチ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひらてうち",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-077",
+   "localId": "077",
+   "name": "オオタチ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっかく",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ジェットヘッド",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-078",
+   "localId": "078",
+   "name": "ノコッチ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いれかわる",
+     "effect": "このポケモンをベンチポケモンと入れ替える。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-079",
+   "localId": "079",
+   "name": "ノココッチex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぎゃっきょうテール",
+     "effect": "相手の場の「ポケモンex」の数×60ダメージ。",
+     "damage": "60×"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ドリルブレイク",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-080",
+   "localId": "080",
+   "name": "オンバット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "クイックドロー",
+     "effect": "自分の山札を1枚引く。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-081",
+   "localId": "081",
+   "name": "オンバーン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "チューニングエコー",
+     "effect": "自分の手札と相手の手札が同じ枚数なら、このポケモンが「パニックハウル」を使うためのエネルギーは、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "パニックハウル",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-082",
+   "localId": "082",
+   "name": "ネッコアラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "おやすみノック",
+     "effect": "おたがいのバトルポケモンを、それぞれねむりにする。次の自分の番、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+100」される。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-083",
+   "localId": "083",
+   "name": "ホップのココガラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "こわいしせん",
+     "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-20」される。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つつく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-084",
+   "localId": "084",
+   "name": "ホップのアオガラス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "スピードひこう",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "するどいはね",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-085",
+   "localId": "085",
+   "name": "ホップのウールー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "けとばす",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-086",
+   "localId": "086",
+   "name": "ホップのバイウールー",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "チャレンジホーン",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ずつき",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-087",
+   "localId": "087",
+   "name": "ホップのウッウ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "きまぐれスピット",
+     "effect": "相手のサイドの残り枚数が4枚・3枚でないなら、このワザは失敗。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-088",
+   "localId": "088",
+   "name": "いいきずぐすり",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のポケモン1匹のHPを「60」回復する。その後、回復したポケモンについているエネルギーを1個選び、トラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-089",
+   "localId": "089",
+   "name": "Nのポイントアップ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュから基本エネルギーを1枚選び、ベンチの「Nのポケモン」につける。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-090",
+   "localId": "090",
+   "name": "とりかえチケット",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のサイドを数えたあと、すべてウラにして切り、山札の下にもどす。その後、もどした枚数ぶん、山札を上からサイドとして置く。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-091",
+   "localId": "091",
+   "name": "ホップのバッグ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からたねポケモンの「ホップのポケモン」を2枚まで選び、ベンチに出す。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-092",
+   "localId": "092",
+   "name": "ホップのこだわりハチマキ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけている「ホップのポケモン」は、ワザを使うためのエネルギーがエネルギー1個ぶん少なくなり、そのポケモンが使うワザの、相手のバトルポケモンへのダメージは「+30」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-093",
+   "localId": "093",
+   "name": "リーリエのしんじゅ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけている「リーリエのポケモン」が、相手のポケモンからワザのダメージを受けてきぜつしたとき、とられるサイドは1枚少なくなる。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-094",
+   "localId": "094",
+   "name": "アイリスの闘志",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札を1枚トラッシュしなければ使えない。\n\n自分の手札が6枚になるように、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-095",
+   "localId": "095",
+   "name": "怖いお兄さん",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手のポケモンを1匹選び、そのポケモンについている「ポケモンのどうぐ」と「特殊エネルギー」を1枚ずつトラッシュする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-096",
+   "localId": "096",
+   "name": "タケシのスカウト",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からたねポケモンを2枚まで、または進化ポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-097",
+   "localId": "097",
+   "name": "Nの城",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場の「Nのポケモン」全員のにげるためのエネルギーは、すべてなくなる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-098",
+   "localId": "098",
+   "name": "ハッコウシティ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分のトラッシュから「基本エネルギー」を2枚まで選び、相手に見せて、手札に加えてよい。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-099",
+   "localId": "099",
+   "name": "ハロンタウン",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの「ホップのポケモン」が使うワザの、相手のバトルポケモンへのダメージは「+30」される。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  },
+  {
+   "id": "SV9-100",
+   "localId": "100",
+   "name": "スパイクエネルギー",
+   "category": "Energy",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。\n\nこのカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを2個のせる。",
+   "energyType": "Special",
+   "set": {
+    "id": "SV9",
+    "name": "バトルパートナーズ"
+   }
+  }
+ ]
+}

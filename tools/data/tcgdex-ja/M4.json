@@ -1,0 +1,4843 @@
+{
+ "id": "M4",
+ "name": "ニンジャスピナー",
+ "releaseDate": "2026-03-13",
+ "total": 120,
+ "cards": [
+  {
+   "id": "M4-001",
+   "localId": "001",
+   "name": "ビードル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ふいをつく",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-002",
+   "localId": "002",
+   "name": "コクーン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ビードル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かたいからだ",
+     "effect": "このポケモンが受けるワザのダメージは「-20」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ぶらさがる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-003",
+   "localId": "003",
+   "name": "スピアーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 310,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "コクーン",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ビーランブル",
+     "effect": "自分の場の「スピアー（『ポケモンex』をふくむ）」の数×110ダメージ。",
+     "damage": "110×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-004",
+   "localId": "004",
+   "name": "マスキッパ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "まるかじり",
+     "effect": "相手のバトルポケモンのにげるためのエネルギーがないなら、80ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-005",
+   "localId": "005",
+   "name": "ハリマロン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "たたく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "トゲでさす",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-006",
+   "localId": "006",
+   "name": "ハリボーグ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ハリマロン",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "リーフチャージ",
+     "effect": "自分の山札から「基本[G]エネルギー」を1枚選び、このポケモンにつける。そして山札を切る。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "つるのムチ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-007",
+   "localId": "007",
+   "name": "ブリガロン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 180,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ハリボーグ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ニードルアーマー",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、このポケモンについている[G]エネルギーの数×3個ぶんのダメカンを、ワザを使ったポケモンにのせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "かこいこむ",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-008",
+   "localId": "008",
+   "name": "ロコン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "こがす",
+     "effect": "相手のバトルポケモンをやけどにする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-009",
+   "localId": "009",
+   "name": "キュウコン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロコン",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "きゅうびうつし",
+     "effect": "自分のベンチポケモンを1匹選び、選んだポケモンにのっているダメカンをすべて、相手のバトルポケモンにのせ替える。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "おにび",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-010",
+   "localId": "010",
+   "name": "ホウオウ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "さいきのほのお",
+     "effect": "自分のトラッシュからたねポケモンを3枚まで選び、ベンチに出す。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "ぐれんのつばさ",
+     "effect": "このポケモンについている[R]エネルギーを1個選び、トラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-011",
+   "localId": "011",
+   "name": "フォッコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ひをはく",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-012",
+   "localId": "012",
+   "name": "テールナー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "フォッコ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "かえんほうしゃ",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-013",
+   "localId": "013",
+   "name": "マフォクシー",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 160,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "テールナー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "フレアマジック",
+     "effect": "自分の番に、自分の手札から「基本[R]エネルギー」を1枚トラッシュするなら、1回使える。自分の手札が7枚になるように、山札を引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "エナジーストーム",
+     "effect": "おたがいのポケモン全員についているエネルギーの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-014",
+   "localId": "014",
+   "name": "シシコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-015",
+   "localId": "015",
+   "name": "メガカエンジシex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 340,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シシコ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ほえたてる",
+     "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-50」される。",
+     "damage": 80
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ビッグバンファイヤー 290-",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージぶん、このワザのダメージは小さくなる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-016",
+   "localId": "016",
+   "name": "テッポウオ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "するどいひれ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-017",
+   "localId": "017",
+   "name": "オクタン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "テッポウオ",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "すみふんしゃ",
+     "effect": "次の相手の番、このワザを受けたポケモンがワザを使うとき、相手はコインを2回投げる。1回でもウラなら、そのワザは失敗。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "あばれまわる",
+     "effect": "このポケモンをこんらんにする。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-018",
+   "localId": "018",
+   "name": "デリバード",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ハッピープレゼント",
+     "effect": "おたがいのプレイヤーは、のぞむなら、それぞれ自分の手札から基本エネルギーを3枚まで選び、自分のポケモンに好きなようにつける。（相手から行う。）"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はばたく",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-019",
+   "localId": "019",
+   "name": "ケルディオ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "つきぬける",
+     "effect": "相手のベンチポケモン1匹にも、20ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "エネリフレクト",
+     "effect": "このポケモンについているエネルギーを1個選び、ベンチポケモンにつけ替える。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-020",
+   "localId": "020",
+   "name": "ケロマツ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "みずでっぽう",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-021",
+   "localId": "021",
+   "name": "ゲコガシラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ケロマツ",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "よびよせのじゅつ",
+     "effect": "自分の山札からポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "アクアエッジ",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-022",
+   "localId": "022",
+   "name": "メガゲッコウガex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 350,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ゲコガシラ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ひっさつしゅりけん",
+     "effect": "このポケモンがバトル場にいて、自分の番に、自分の手札から「基本[W]エネルギー」を1枚トラッシュするなら、1回使える。相手のポケモン1匹に、ダメカンを6個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "ニンジャスピナー",
+     "effect": "のぞむなら、このポケモンについている[W]エネルギーを1個手札にもどし、80ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-023",
+   "localId": "023",
+   "name": "カチコール",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ひんやり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "こおりのいぶき",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-024",
+   "localId": "024",
+   "name": "クレベース",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カチコール",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ひょうざんくずし",
+     "effect": "自分の山札を上から6枚トラッシュし、その中にある「基本[W]エネルギー」の枚数×60ダメージ。",
+     "damage": "60×"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "フロストスタンプ",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-025",
+   "localId": "025",
+   "name": "コソクムシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "かじる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "どつく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-026",
+   "localId": "026",
+   "name": "グソクムシャ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コソクムシ",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "きゅうしょぎり",
+     "effect": "このワザのダメージで、相手のポケモンがきぜつしたなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "そこぢから",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-027",
+   "localId": "027",
+   "name": "メリープ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "でんじは",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-028",
+   "localId": "028",
+   "name": "モココ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "メリープ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "でんじしょうがい",
+     "effect": "次の相手の番、相手は手札からグッズを出して使えない。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-029",
+   "localId": "029",
+   "name": "デンリュウ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 160,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "モココ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "シンクロパルス",
+     "effect": "自分の手札と相手の手札が同じ枚数なら、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+80」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "フラッシュボルト",
+     "effect": "次の自分の番、このポケモンは「フラッシュボルト」が使えない。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-030",
+   "localId": "030",
+   "name": "エモンガ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ちいさなおつかい",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "スカイリターン",
+     "effect": "このポケモンと、ついているすべてのカードを、手札にもどす。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-031",
+   "localId": "031",
+   "name": "デオキシス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ゲノムチャージ",
+     "effect": "自分の山札から「基本[P]エネルギー」を2枚まで選び、このポケモンにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "サイコキネシス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×20ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-032",
+   "localId": "032",
+   "name": "デオキシス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "サイコスピア",
+     "effect": "このワザを使うためのエネルギーより、2個多くエネルギーがついているなら、相手のベンチポケモン1匹にも、120ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-033",
+   "localId": "033",
+   "name": "デオキシス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "サイコプロテクト",
+     "effect": "次の相手の番、このポケモンは特性を持つポケモンからワザのダメージを受けない。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-034",
+   "localId": "034",
+   "name": "デオキシス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "サイコスピード",
+     "effect": "のぞむなら、自分の手札が5枚になるように、山札を引く。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-035",
+   "localId": "035",
+   "name": "メガフラエッテex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 250,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "やさしいひかり",
+     "effect": "おたがいのポケモン全員のHPを、それぞれ「30」回復する。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "エタニティブルーム",
+     "effect": "自分の山札から「基本[P]エネルギー」を4枚まで選び、ベンチポケモンに好きなようにつける。そして山札を切る。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-036",
+   "localId": "036",
+   "name": "ニャスパー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "バディアタック",
+     "effect": "この番に、手札から「マチエール」を出して使っていたなら、60ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-037",
+   "localId": "037",
+   "name": "ニャオニクス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ニャスパー",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "トリックステップ",
+     "effect": "のぞむなら、相手のバトルポケモンについているエネルギーを1個選び、相手のベンチポケモンにつけ替える。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-038",
+   "localId": "038",
+   "name": "ボクレー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "うらみしんか",
+     "effect": "自分の番に1回使える。このポケモンから進化するカードを、自分の手札から1枚選び、このポケモンにのせて進化させる。その後、進化させたポケモンに、ダメカンを2個のせる。（最初の自分の番には使えない。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "つぶやく",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-039",
+   "localId": "039",
+   "name": "オーロット",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ボクレー",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "のろいのねっこ",
+     "effect": "次の相手の番、このワザを受けたポケモンは、手札から出すエネルギーをつけられない。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "オーバーペイン",
+     "effect": "相手のポケモン全員にのっているダメカンの数×10ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-040",
+   "localId": "040",
+   "name": "バケッチャ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ふむ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-041",
+   "localId": "041",
+   "name": "パンプジンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "バケッチャ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ホラーロンド",
+     "effect": "ダメカンがのっている自分のベンチポケモンの数×50ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ゴーストタッチ",
+     "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-042",
+   "localId": "042",
+   "name": "ゼルネアス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ジオストーム",
+     "effect": "自分のポケモン全員についている[P]エネルギーの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-043",
+   "localId": "043",
+   "name": "ウソッキー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "しれんのたび",
+     "effect": "自分の山札から「変化の書」を2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "いわとばし",
+     "effect": "このワザのダメージは抵抗力を計算しない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-044",
+   "localId": "044",
+   "name": "ゴマゾウ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "どろかけ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ころがる",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-045",
+   "localId": "045",
+   "name": "ドンファン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゴマゾウ",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "たたみかける",
+     "effect": "次の自分の番、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+120」される。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スマッシュヘッド",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-046",
+   "localId": "046",
+   "name": "ヤジロン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "れんぞくスピン",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-047",
+   "localId": "047",
+   "name": "ネンドール",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤジロン",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "たいかこうせん",
+     "effect": "相手の進化しているバトルポケモンから、「進化カード」を1枚はがして退化させる。はがしたカードは、相手の手札にもどす。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-048",
+   "localId": "048",
+   "name": "ズバット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ちょうおんぱ",
+     "effect": "相手のバトルポケモンをこんらんにする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-049",
+   "localId": "049",
+   "name": "ゴルバット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ズバット",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "おんみつひこう",
+     "effect": "次の相手の番、このポケモンはたねポケモンからワザのダメージを受けない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-050",
+   "localId": "050",
+   "name": "クロバット",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ゴルバット",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "よるこうさく",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札から好きなカードを1枚選ぶ。残りの山札を切り、選んだカードを山札の上にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "どくおんぱ",
+     "effect": "相手のバトルポケモンをどくとこんらんにする。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-051",
+   "localId": "051",
+   "name": "ハリーセン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "どくのトゲ",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンをどくにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ベノムショック",
+     "effect": "相手のバトルポケモンがどくなら、50ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-052",
+   "localId": "052",
+   "name": "スカンプー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ひっかく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-053",
+   "localId": "053",
+   "name": "スカタンク",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "スカンプー",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "うしろげり",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "スマッシュターン",
+     "effect": "このポケモンをベンチポケモンと入れ替える。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-054",
+   "localId": "054",
+   "name": "ヤブクロン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "アシッドボム",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-055",
+   "localId": "055",
+   "name": "ダストダス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤブクロン",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ゴミダウナー",
+     "effect": "このポケモンがいるかぎり、「ポケモンのどうぐ」がついている相手のバトルポケモンが使うワザのダメージは「-20」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ヘドロばくだん",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-056",
+   "localId": "056",
+   "name": "クズモー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっかける",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-057",
+   "localId": "057",
+   "name": "ダンバル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ずつき",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ビーム",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-058",
+   "localId": "058",
+   "name": "メタング",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ダンバル",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "メタルクロー",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ガードプレス",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-059",
+   "localId": "059",
+   "name": "メタグロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 180,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "メタング",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "はねかえす",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "メタリックハンマー",
+     "effect": "のぞむなら、このポケモンについている[M]エネルギーを3個トラッシュし、150ダメージ追加。",
+     "damage": "150+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-060",
+   "localId": "060",
+   "name": "テッシード",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "ころがりタックル",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-061",
+   "localId": "061",
+   "name": "ナットレイ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "テッシード",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "どっきりおとし",
+     "effect": "相手の番に、このカードが相手のワザ・特性・グッズ・サポートの効果で山札からトラッシュされたとき、相手の山札を上から8枚トラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "スペシャルウィップ",
+     "effect": "このポケモンに特殊エネルギーがついているなら、70ダメージ追加。",
+     "damage": "70+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-062",
+   "localId": "062",
+   "name": "コバルオンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "メタルロード",
+     "effect": "自分の番に、このポケモンがベンチからバトル場に出たとき、1回使える。自分の場のポケモンについている[M]エネルギーを好きなだけ選び、このポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "パワータックル",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-063",
+   "localId": "063",
+   "name": "メガドラミドロex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 330,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "クズモー",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ふしょくえき",
+     "effect": "相手のポケモン全員についている「ポケモンのどうぐ」と「特殊エネルギー」を、すべてトラッシュする。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Darkness"
+     ],
+     "name": "デッドリーポイズン",
+     "effect": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は16個になる。"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-064",
+   "localId": "064",
+   "name": "ヌメラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Psychic"
+     ],
+     "name": "すいとる",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-065",
+   "localId": "065",
+   "name": "ヌメイル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヌメラ",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Psychic"
+     ],
+     "name": "ひっぱたく",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-066",
+   "localId": "066",
+   "name": "ヌメルゴン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ヌメイル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ぬめぬめスリップ",
+     "effect": "このポケモンがいるかぎり、相手のバトルポケモンがにげるとき、相手はコインを1回投げる。ウラなら、にげるためのエネルギーはトラッシュせず、入れ替えをしない。この特性の効果は重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Psychic"
+     ],
+     "name": "りゅうのはどう",
+     "effect": "自分の山札を上から1枚トラッシュする。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-067",
+   "localId": "067",
+   "name": "ケンタロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "むれでねらう",
+     "effect": "相手のポケモンを1匹選び、自分の場の、名前に「ケンタロス」とつくポケモンの数ぶんコインを投げる。選んだポケモンに、オモテの数×50ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-068",
+   "localId": "068",
+   "name": "ミネズミ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かんしのめ",
+     "effect": "このポケモンがいるかぎり、おたがいのポケモン全員にのっているダメカンは、別のポケモンにのせ替えられない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-069",
+   "localId": "069",
+   "name": "ミルホッグ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ミネズミ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぬきうちチェック",
+     "effect": "コインを3回投げる。オモテが出たなら、相手の手札を見て、その中からカードをオモテの数ぶん選び、相手の山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "けたぐり",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-070",
+   "localId": "070",
+   "name": "チラーミィ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "とっしん",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-071",
+   "localId": "071",
+   "name": "チラチーノex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 240,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チラーミィ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "なめらかコート",
+     "effect": "このポケモンがワザのダメージを受けるとき、自分はコインを1回投げる。オモテなら、このポケモンはそのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "エナジービンタ",
+     "effect": "このポケモンについているエネルギーの数×40ダメージ。",
+     "damage": "40×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-072",
+   "localId": "072",
+   "name": "スペシャルレッドカード",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、相手のサイドの残り枚数が3枚以下のときにしか使えない。相手は相手自身の手札をすべてウラにして切り、山札の下にもどす。その後、相手は山札を3枚引く。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-073",
+   "localId": "073",
+   "name": "大漁ネット",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュから[W]ポケモンと「基本[W]エネルギー」をそれぞれ3枚まで選び、相手に見せて、山札にもどして切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-074",
+   "localId": "074",
+   "name": "変化の書",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "「変化の書」は、2枚同時にしか使えない。（効果は、2枚で1回はたらく。）自分のトラッシュからたねポケモンを1枚選び、自分の場のたねポケモン1匹と入れ替える（ついているカード・ダメカン・特殊状態・効果などは、すべて引きつぐ）。入れ替えたポケモンはトラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-075",
+   "localId": "075",
+   "name": "AZの安らぎ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトルポケモンをベンチポケモンと入れ替える。「ポケモンex」をベンチに入れ替えた場合、そのポケモンのHPを「80」回復する。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-076",
+   "localId": "076",
+   "name": "ジプソ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュから「基本[M]エネルギー」を2枚まで選び、自分の[M]ポケモン1匹につける。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-077",
+   "localId": "077",
+   "name": "ホミカの演奏",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "次の相手の番、相手のどくのポケモンは、にげられない。（新しくどくにしたポケモンもふくむ。）",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-078",
+   "localId": "078",
+   "name": "マチエール",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手の手札を見て、その中にあるポケモンの枚数ぶん、自分の山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-079",
+   "localId": "079",
+   "name": "アンジュフラエッテ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、場に出ている「プリズムタワー」をトラッシュしなければ場に出せず、「プリズムタワー」を出した番でも場に出せる。おたがいの場の「メガフラエッテex」全員は、それぞれ最大HPが「+150」される。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-080",
+   "localId": "080",
+   "name": "プリズムタワー",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分の手札を2枚トラッシュするなら、自分の山札を1枚引いてよい。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-081",
+   "localId": "081",
+   "name": "ニトロ炎エネルギー",
+   "category": "Energy",
+   "rarity": "Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、[R]エネルギー1個ぶんとしてはたらく。このカードをつけている[R]ポケモンが使うワザの効果で、このカードがトラッシュされたなら、ワザのダメージや効果のあとに、手札にもどす。",
+   "energyType": "Special",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-082",
+   "localId": "082",
+   "name": "バブル水エネルギー",
+   "category": "Energy",
+   "rarity": "Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、[W]エネルギー1個ぶんとしてはたらく。このカードをつけている[W]ポケモンは、特殊状態にならず、受けている特殊状態は、すべて回復する。",
+   "energyType": "Special",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-083",
+   "localId": "083",
+   "name": "マグネット鋼エネルギー",
+   "category": "Energy",
+   "rarity": "Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、[M]エネルギー1個ぶんとしてはたらく。このカードをつけている[M]ポケモンは、にげるためのエネルギーが、すべてなくなる。",
+   "energyType": "Special",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-084",
+   "localId": "084",
+   "name": "ハリマロン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "たたく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "トゲでさす",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-085",
+   "localId": "085",
+   "name": "フォッコ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ひをはく",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-086",
+   "localId": "086",
+   "name": "ケロマツ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "みずでっぽう",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-087",
+   "localId": "087",
+   "name": "ゲコガシラ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ケロマツ",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "よびよせのじゅつ",
+     "effect": "自分の山札からポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "アクアエッジ",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-088",
+   "localId": "088",
+   "name": "デンリュウ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 160,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "モココ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "シンクロパルス",
+     "effect": "自分の手札と相手の手札が同じ枚数なら、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+80」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "フラッシュボルト",
+     "effect": "次の自分の番、このポケモンは「フラッシュボルト」が使えない。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-089",
+   "localId": "089",
+   "name": "ゼルネアス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ジオストーム",
+     "effect": "自分のポケモン全員についている[P]エネルギーの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-090",
+   "localId": "090",
+   "name": "ネンドール",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤジロン",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "たいかこうせん",
+     "effect": "相手の進化しているバトルポケモンから、「進化カード」を1枚はがして退化させる。はがしたカードは、相手の手札にもどす。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-091",
+   "localId": "091",
+   "name": "クロバット",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ゴルバット",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "よるこうさく",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札から好きなカードを1枚選ぶ。残りの山札を切り、選んだカードを山札の上にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "どくおんぱ",
+     "effect": "相手のバトルポケモンをどくとこんらんにする。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-092",
+   "localId": "092",
+   "name": "メタング",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ダンバル",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "メタルクロー",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ガードプレス",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-093",
+   "localId": "093",
+   "name": "ヌメイル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヌメラ",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Psychic"
+     ],
+     "name": "ひっぱたく",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-094",
+   "localId": "094",
+   "name": "ケンタロス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "むれでねらう",
+     "effect": "相手のポケモンを1匹選び、自分の場の、名前に「ケンタロス」とつくポケモンの数ぶんコインを投げる。選んだポケモンに、オモテの数×50ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-095",
+   "localId": "095",
+   "name": "ミルホッグ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ミネズミ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぬきうちチェック",
+     "effect": "コインを3回投げる。オモテが出たなら、相手の手札を見て、その中からカードをオモテの数ぶん選び、相手の山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "けたぐり",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-096",
+   "localId": "096",
+   "name": "スピアーex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 310,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "コクーン",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ビーランブル",
+     "effect": "自分の場の「スピアー（『ポケモンex』をふくむ）」の数×110ダメージ。",
+     "damage": "110×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-097",
+   "localId": "097",
+   "name": "メガカエンジシex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 340,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シシコ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ほえたてる",
+     "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-50」される。",
+     "damage": 80
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ビッグバンファイヤー 290-",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージぶん、このワザのダメージは小さくなる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-098",
+   "localId": "098",
+   "name": "メガゲッコウガex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 350,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ゲコガシラ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ひっさつしゅりけん",
+     "effect": "このポケモンがバトル場にいて、自分の番に、自分の手札から「基本[W]エネルギー」を1枚トラッシュするなら、1回使える。相手のポケモン1匹に、ダメカンを6個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "ニンジャスピナー",
+     "effect": "のぞむなら、このポケモンについている[W]エネルギーを1個手札にもどし、80ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-099",
+   "localId": "099",
+   "name": "メガフラエッテex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 250,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "やさしいひかり",
+     "effect": "おたがいのポケモン全員のHPを、それぞれ「30」回復する。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "エタニティブルーム",
+     "effect": "自分の山札から「基本[P]エネルギー」を4枚まで選び、ベンチポケモンに好きなようにつける。そして山札を切る。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-100",
+   "localId": "100",
+   "name": "パンプジンex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 270,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "バケッチャ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ホラーロンド",
+     "effect": "ダメカンがのっている自分のベンチポケモンの数×50ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ゴーストタッチ",
+     "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-101",
+   "localId": "101",
+   "name": "コバルオンex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 210,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "メタルロード",
+     "effect": "自分の番に、このポケモンがベンチからバトル場に出たとき、1回使える。自分の場のポケモンについている[M]エネルギーを好きなだけ選び、このポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "パワータックル",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-102",
+   "localId": "102",
+   "name": "メガドラミドロex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 330,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "クズモー",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ふしょくえき",
+     "effect": "相手のポケモン全員についている「ポケモンのどうぐ」と「特殊エネルギー」を、すべてトラッシュする。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Darkness"
+     ],
+     "name": "デッドリーポイズン",
+     "effect": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は16個になる。"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-103",
+   "localId": "103",
+   "name": "チラチーノex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 240,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チラーミィ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "なめらかコート",
+     "effect": "このポケモンがワザのダメージを受けるとき、自分はコインを1回投げる。オモテなら、このポケモンはそのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "エナジービンタ",
+     "effect": "このポケモンについているエネルギーの数×40ダメージ。",
+     "damage": "40×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-104",
+   "localId": "104",
+   "name": "エネルギー回収",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュから基本エネルギーを2枚選び、相手に見せてから、手札に加える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-105",
+   "localId": "105",
+   "name": "ジャンボアイス",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "エネルギーが3個以上ついている自分のバトルポケモンのHPを「80」回復する。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-106",
+   "localId": "106",
+   "name": "スペシャルレッドカード",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、相手のサイドの残り枚数が3枚以下のときにしか使えない。相手は相手自身の手札をすべてウラにして切り、山札の下にもどす。その後、相手は山札を3枚引く。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-107",
+   "localId": "107",
+   "name": "ツールスクラッパー",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場のポケモンについている「ポケモンのどうぐ」を2枚まで選び、トラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-108",
+   "localId": "108",
+   "name": "AZの安らぎ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトルポケモンをベンチポケモンと入れ替える。「ポケモンex」をベンチに入れ替えた場合、そのポケモンのHPを「80」回復する。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-109",
+   "localId": "109",
+   "name": "ジプソ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュから「基本[M]エネルギー」を2枚まで選び、自分の[M]ポケモン1匹につける。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-110",
+   "localId": "110",
+   "name": "ホミカの演奏",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "次の相手の番、相手のどくのポケモンは、にげられない。（新しくどくにしたポケモンもふくむ。）",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-111",
+   "localId": "111",
+   "name": "マチエール",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手の手札を見て、その中にあるポケモンの枚数ぶん、自分の山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-112",
+   "localId": "112",
+   "name": "なみのりビーチ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分のバトル場の[W]ポケモンを、ベンチの[W]ポケモンと入れ替えてよい。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-113",
+   "localId": "113",
+   "name": "プリズムタワー",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分の手札を2枚トラッシュするなら、自分の山札を1枚引いてよい。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-114",
+   "localId": "114",
+   "name": "メガゲッコウガex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 350,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ゲコガシラ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ひっさつしゅりけん",
+     "effect": "このポケモンがバトル場にいて、自分の番に、自分の手札から「基本[W]エネルギー」を1枚トラッシュするなら、1回使える。相手のポケモン1匹に、ダメカンを6個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "ニンジャスピナー",
+     "effect": "のぞむなら、このポケモンについている[W]エネルギーを1個手札にもどし、80ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-115",
+   "localId": "115",
+   "name": "メガフラエッテex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 250,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "やさしいひかり",
+     "effect": "おたがいのポケモン全員のHPを、それぞれ「30」回復する。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "エタニティブルーム",
+     "effect": "自分の山札から「基本[P]エネルギー」を4枚まで選び、ベンチポケモンに好きなようにつける。そして山札を切る。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-116",
+   "localId": "116",
+   "name": "メガドラミドロex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 330,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "クズモー",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ふしょくえき",
+     "effect": "相手のポケモン全員についている「ポケモンのどうぐ」と「特殊エネルギー」を、すべてトラッシュする。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Darkness"
+     ],
+     "name": "デッドリーポイズン",
+     "effect": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は16個になる。"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-117",
+   "localId": "117",
+   "name": "チラチーノex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 240,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チラーミィ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "なめらかコート",
+     "effect": "このポケモンがワザのダメージを受けるとき、自分はコインを1回投げる。オモテなら、このポケモンはそのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "エナジービンタ",
+     "effect": "このポケモンについているエネルギーの数×40ダメージ。",
+     "damage": "40×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-118",
+   "localId": "118",
+   "name": "AZの安らぎ",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトルポケモンをベンチポケモンと入れ替える。「ポケモンex」をベンチに入れ替えた場合、そのポケモンのHPを「80」回復する。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-119",
+   "localId": "119",
+   "name": "ホミカの演奏",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "次の相手の番、相手のどくのポケモンは、にげられない。（新しくどくにしたポケモンもふくむ。）",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  },
+  {
+   "id": "M4-120",
+   "localId": "120",
+   "name": "メガゲッコウガex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 350,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ゲコガシラ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ひっさつしゅりけん",
+     "effect": "このポケモンがバトル場にいて、自分の番に、自分の手札から「基本[W]エネルギー」を1枚トラッシュするなら、1回使える。相手のポケモン1匹に、ダメカンを6個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "ニンジャスピナー",
+     "effect": "のぞむなら、このポケモンについている[W]エネルギーを1個手札にもどし、80ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M4",
+    "name": "ニンジャスピナー"
+   }
+  }
+ ]
+}

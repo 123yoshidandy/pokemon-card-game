@@ -1,0 +1,7767 @@
+{
+ "id": "SV11W",
+ "name": "ホワイトフレア",
+ "releaseDate": "2025-06-06",
+ "total": 174,
+ "cards": [
+  {
+   "id": "SV11W-001",
+   "localId": "001",
+   "name": "クルミル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "むしくい",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-002",
+   "localId": "002",
+   "name": "クルマユ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "クルミル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はっぱヒール",
+     "effect": "自分の番に1回使える。自分のバトルポケモンのHPを「20」回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "むしのさざめき",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-003",
+   "localId": "003",
+   "name": "ハハコモリ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "クルマユ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いやしのおくるみ",
+     "effect": "自分のたねポケモン全員のHPを、それぞれ「100」回復する。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "シザークロス",
+     "effect": "コインを1回投げオモテなら、40ダメージ追加。",
+     "damage": "90＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-004",
+   "localId": "004",
+   "name": "モンメン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "すいとる",
+     "effect": "このポケモンのHPを「10」回復する。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-005",
+   "localId": "005",
+   "name": "エルフーンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "エナジーギフト",
+     "effect": "自分の山札から基本エネルギーを3枚まで選び、自分のポケモンに好きなようにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ワンダーコットン",
+     "effect": "相手の手札を見て、その中にあるトレーナーズの枚数×50ダメージ。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-006",
+   "localId": "006",
+   "name": "シキジカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "うしろげり",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-007",
+   "localId": "007",
+   "name": "メブキジカ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シキジカ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つきとばす",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ソーラービーム",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-008",
+   "localId": "008",
+   "name": "チョボマキ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しげきしんか",
+     "effect": "自分の場に「カブルモ」がいるなら、このポケモンは、最初の自分の番や、出したばかりの番でも進化できる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "とびだしヘッド",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-009",
+   "localId": "009",
+   "name": "アギルダー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チョボマキ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "アシッドボム",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-010",
+   "localId": "010",
+   "name": "ビリジオン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ギガドレイン",
+     "effect": "相手のバトルポケモンに与えたダメージぶん、このポケモンのHPを回復する。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "エメラルドブレード",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-011",
+   "localId": "011",
+   "name": "ポカブ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "たいあたり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "ころがる",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-012",
+   "localId": "012",
+   "name": "チャオブー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ポカブ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "かえん",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートスタンプ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-013",
+   "localId": "013",
+   "name": "エンブオー",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 180,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "チャオブー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "れっからんぶ",
+     "effect": "自分の番に何回でも使える。自分の手札から「基本エネルギー」を1枚選び、自分のポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートスタンプ",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-014",
+   "localId": "014",
+   "name": "バオップ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっかく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-015",
+   "localId": "015",
+   "name": "バオッキー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "バオップ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-016",
+   "localId": "016",
+   "name": "クイタラン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ベロベロキャッチ",
+     "effect": "自分の山札からポケモンと「基本エネルギー」を合計3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "ほのおのツメ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-017",
+   "localId": "017",
+   "name": "レシラムex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ブレイズバースト",
+     "effect": "相手がすでにとったサイドの枚数×50ダメージ追加。このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-018",
+   "localId": "018",
+   "name": "ミジュマル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "たいあたり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "みずでっぽう",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-019",
+   "localId": "019",
+   "name": "フタチマル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ミジュマル",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "エナジーシェル",
+     "effect": "このポケモンについているエネルギーの数×30ダメージ。",
+     "damage": "30x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-020",
+   "localId": "020",
+   "name": "ダイケンキ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 160,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "フタチマル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "げきりゅうのうず",
+     "effect": "自分の番に1回使える。自分のバトルポケモンをベンチポケモンと入れ替える。その後、相手は相手自身のバトルポケモンをベンチポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "エナジースラッシュ",
+     "effect": "このポケモンについているエネルギーの数×50ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-021",
+   "localId": "021",
+   "name": "バスラオ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "むらがるキバ",
+     "effect": "相手のバトルポケモンにダメカンがのっていないなら、このワザは失敗。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-022",
+   "localId": "022",
+   "name": "コアルヒー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "しょうか",
+     "effect": "相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つばさでうつ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-023",
+   "localId": "023",
+   "name": "スワンナ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コアルヒー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はばたく",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "エアスラッシュ",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-024",
+   "localId": "024",
+   "name": "バニプッチ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "たたく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "アイスエッジ",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-025",
+   "localId": "025",
+   "name": "バニリッチ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "バニプッチ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "れいとうビーム",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-026",
+   "localId": "026",
+   "name": "バイバニラ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "バニリッチ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダブルフリーズ",
+     "effect": "コインを2回投げ、オモテの数×90ダメージ。1回でもオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": "90x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-027",
+   "localId": "027",
+   "name": "ケルディオex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "しっぷうづき",
+     "effect": "この番に、このポケモンがベンチからバトル場に出ていたなら、90ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ソニックエッジ",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-028",
+   "localId": "028",
+   "name": "シママ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "けとばす",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "エレキック",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-029",
+   "localId": "029",
+   "name": "ゼブライカ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シママ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "けとばす",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "エレキバレット",
+     "effect": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-030",
+   "localId": "030",
+   "name": "バチュル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "ふいをつく",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-031",
+   "localId": "031",
+   "name": "デンチュラ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "バチュル",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "ほうでん",
+     "effect": "このポケモンについているエネルギーをすべてトラッシュし、その枚数×50ダメージ。",
+     "damage": "50x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-032",
+   "localId": "032",
+   "name": "マッギョ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "マッドボルト",
+     "effect": "このポケモンにエネルギーがついているなら、20ダメージ追加。",
+     "damage": "20+"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "はねまわる",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-033",
+   "localId": "033",
+   "name": "コロモリ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ハートスタンプ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-034",
+   "localId": "034",
+   "name": "ココロモリ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コロモリ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ハッピーリターン",
+     "effect": "自分のベンチポケモンを1匹選び、そのポケモンと、ついているすべてのカードを、手札にもどす。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かぜおこし",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-035",
+   "localId": "035",
+   "name": "シンボラー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "リフレクター",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-40」される。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "テレキネシス",
+     "effect": "相手のポケモン1匹に、70ダメージ。このワザのダメージは弱点・抵抗力を計算しない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-036",
+   "localId": "036",
+   "name": "デスマス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ねんじる",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-037",
+   "localId": "037",
+   "name": "デスカーン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "デスマス",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "のびるダメカーン",
+     "effect": "自分のベンチポケモンを1匹選び、選んだポケモンにのっているダメカンをすべて、相手のポケモン1匹にのせ替える。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "まどわす",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-038",
+   "localId": "038",
+   "name": "ゴチム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ちょうねんりき",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-039",
+   "localId": "039",
+   "name": "ゴチミル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゴチム",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "フォーチュンアイ",
+     "effect": "相手の山札を上から5枚見て、好きな順番に入れ替えて、山札の上にもどす。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "サイコショット",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-040",
+   "localId": "040",
+   "name": "ゴチルゼル",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ゴチミル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ねじれたみらい",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。相手は相手自身の手札をすべて山札にもどして切る。その後、相手は山札を3枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "シンクロショット",
+     "effect": "自分の手札と相手の手札が同じ枚数なら、90ダメージ追加。",
+     "damage": "90+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-041",
+   "localId": "041",
+   "name": "プルリル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "うみのかげ",
+     "effect": "次の相手の番、相手は手札からグッズを出して使えない。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-042",
+   "localId": "042",
+   "name": "ブルンゲルex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "プルリル",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "うみののろい",
+     "effect": "このポケモンがバトル場にいるかぎり、相手は手札から「グッズ」を出して使えず、「ポケモンのどうぐ」も出してつけられない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "パワープレス",
+     "effect": "このワザを使うためのエネルギーより、2個多くエネルギーがついているなら、80ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-043",
+   "localId": "043",
+   "name": "ダンゴロ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "かたくなる",
+     "effect": "次の相手の番、このポケモンは「40」以下のワザのダメージを受けない。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "いわころがり",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-044",
+   "localId": "044",
+   "name": "ガントル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ダンゴロ",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "うちおとす",
+     "effect": "相手のバトルポケモンの抵抗力がタイプなら、50ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "パワージェム",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-045",
+   "localId": "045",
+   "name": "ギガイアス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 170,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ガントル",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "リベンジキャノン",
+     "effect": "自分のベンチのポケモン全員にのっているダメカンの数×20ダメージ。",
+     "damage": "20x"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ヘビーインパクト",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-046",
+   "localId": "046",
+   "name": "ダゲキ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ひじうち",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ライジングチョップ",
+     "effect": "相手のバトルポケモンが「ポケモンex」でないなら、このワザは失敗。このワザのダメージは弱点・抵抗力を計算しない。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-047",
+   "localId": "047",
+   "name": "アーケン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "古びたはねの化石",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "アクロバット",
+     "effect": "コインを2回投げ、オモテの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-048",
+   "localId": "048",
+   "name": "アーケオス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "アーケン",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "げんしのつばさ",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。相手の進化しているポケモンを1匹選び、「進化カード」を1枚はがして退化させる。はがしたカードは、相手の手札にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "いわおとし",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-049",
+   "localId": "049",
+   "name": "コジョフー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "キック",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-050",
+   "localId": "050",
+   "name": "コジョンド",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コジョフー",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ローキック",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "スマッシュアッパー",
+     "effect": "このワザのダメージは抵抗力を計算しない。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-051",
+   "localId": "051",
+   "name": "テラキオン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "かたきうち",
+     "effect": "前の相手の番に、ワザのダメージで、自分のポケモンがきぜつしていたなら、80ダメージ追加。",
+     "damage": "50+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ランドクラッシュ",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-052",
+   "localId": "052",
+   "name": "チョロネコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "わるいおさそい",
+     "effect": "自分の山札からポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-053",
+   "localId": "053",
+   "name": "レパルダス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チョロネコ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "はたきおとす",
+     "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-054",
+   "localId": "054",
+   "name": "ズルッグ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ずつき",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "せめこむ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-055",
+   "localId": "055",
+   "name": "ズルズキン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ズルッグ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ごろつきアタック",
+     "effect": "自分の場のポケモンの数ぶんコインを投げ、オモテの数×60ダメージ。",
+     "damage": "60x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-056",
+   "localId": "056",
+   "name": "ヤブクロン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "よだれ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ヘドロばくだん",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-057",
+   "localId": "057",
+   "name": "ダストダス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤブクロン",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ガスでつつむ",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダストシュート",
+     "effect": "相手のバトルポケモンをどくにする。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-058",
+   "localId": "058",
+   "name": "ゾロア",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "とっしん",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-059",
+   "localId": "059",
+   "name": "ゾロアーク",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゾロア",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "マインドジャック",
+     "effect": "相手のベンチポケモンの数×30ダメージ。",
+     "damage": "30x"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "イカサマ",
+     "effect": "相手のバトルポケモンが持つワザを1つ選び、このワザとして使う。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-060",
+   "localId": "060",
+   "name": "モノズ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "のしかかり",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "やみのキバ",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-061",
+   "localId": "061",
+   "name": "ジヘッド",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モノズ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダブルアタック",
+     "effect": "コインを2回投げ、オモテの数×40ダメージ。",
+     "damage": "40x"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "しっこくのキバ",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-062",
+   "localId": "062",
+   "name": "サザンドラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジヘッド",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "グリードイーター",
+     "effect": "このポケモンが使うワザのダメージで、相手のたねポケモンがきぜつしたなら、サイドを1枚多くとる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダークバイト",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-063",
+   "localId": "063",
+   "name": "テッシード",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "チクッ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "メタルクロー",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-064",
+   "localId": "064",
+   "name": "ナットレイ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "テッシード",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "パワーウィップ",
+     "effect": "相手のポケモン1匹に、このポケモンについているエネルギーの数×20ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "メタルクロー",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-065",
+   "localId": "065",
+   "name": "ギアル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "かたいギア",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-10」される。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-066",
+   "localId": "066",
+   "name": "ギギアル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ギアル",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "かたいギア",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-20」される。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-067",
+   "localId": "067",
+   "name": "ギギギアル",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ギギアル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ギアコーティング",
+     "effect": "このポケモンがいるかぎり、エネルギーがついている自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-20」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-068",
+   "localId": "068",
+   "name": "アイアント",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いっしょにかむ",
+     "effect": "自分のベンチに「アイアント」がいるなら、20ダメージ追加。",
+     "damage": "20+"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "はさむ",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-069",
+   "localId": "069",
+   "name": "クリムガン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひきさく",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Colorless"
+     ],
+     "name": "おそいかかる",
+     "effect": "コインを1回投げオモテなら、60ダメージ追加。",
+     "damage": "90+"
+    }
+   ],
+   "weaknesses": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-070",
+   "localId": "070",
+   "name": "ミネズミ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ちょうたつ",
+     "effect": "自分の山札からグッズを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かじる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-071",
+   "localId": "071",
+   "name": "ミルホッグ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ミネズミ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "きあいだめ",
+     "effect": "次の自分の番、このポケモンの「ひっさつまえば」のダメージは「240」になる。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっさつまえば",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-072",
+   "localId": "072",
+   "name": "ヨーテリー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "じゃれつく",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-073",
+   "localId": "073",
+   "name": "ハーデリア",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヨーテリー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ほえる",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つきたおし",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-074",
+   "localId": "074",
+   "name": "ムーランド",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ハーデリア",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かぎわける",
+     "effect": "コインを3回投げ、オモテの数ぶんまで、自分のトラッシュから好きなカードを選び、相手に見せて、手札に加える。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スペシャルファング",
+     "effect": "このポケモンに特殊エネルギーがついているなら、100ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-075",
+   "localId": "075",
+   "name": "バッフロンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 220,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アフロガード",
+     "effect": "このポケモンが受けるワザのダメージは「-30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ゴールドブレイク",
+     "effect": "相手のバトルポケモンが「ポケモンex」なら、100ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-076",
+   "localId": "076",
+   "name": "ワシボン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つつく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かっくう",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-077",
+   "localId": "077",
+   "name": "ウォーグル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ワシボン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つばめがえし",
+     "effect": "コインを1回投げオモテなら、40ダメージ追加。",
+     "damage": "40+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードウイング",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-078",
+   "localId": "078",
+   "name": "トルネロス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かぜをまとう",
+     "effect": "自分の手札から基本エネルギーを1枚選び、このポケモンにつける。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぼうふう",
+     "effect": "このポケモンについている基本エネルギーを1個選び、ベンチポケモンにつけ替える。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-079",
+   "localId": "079",
+   "name": "エネルギー回収",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュから基本エネルギーを2枚まで選び、相手に見せて、手札に加える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-080",
+   "localId": "080",
+   "name": "ツールスクラッパー",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場のポケモンについている「ポケモンのどうぐ」を2枚まで選び、トラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-081",
+   "localId": "081",
+   "name": "古びたはねの化石",
+   "category": "Trainer",
+   "rarity": "Common",
+   "hp": 60,
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はねのまもり",
+     "effect": "このポケモンは、ベンチにいるかぎり、相手のポケモンからワザのダメージを受けない。"
+    }
+   ],
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。 自分の番の中でなら、場に出ているこのカードをトラッシュできる。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-082",
+   "localId": "082",
+   "name": "ブレイブバングル",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモン（「ルールを持つポケモン」をのぞく）が使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+30」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-083",
+   "localId": "083",
+   "name": "クラウン",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分はコインを1回投げ、オモテなら自分は5枚、相手は3枚、山札を引く。ウラなら自分は3枚、相手は5枚、山札を引く。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-084",
+   "localId": "084",
+   "name": "チェレン",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を3枚引く。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-085",
+   "localId": "085",
+   "name": "トウコ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から進化ポケモンとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-086",
+   "localId": "086",
+   "name": "イグニッションエネルギー",
+   "category": "Energy",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "ポケモンについているこのカードは、自分の番の終わりにトラッシュする。 このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。 進化ポケモンについているなら、エネルギー3個ぶんとしてはたらく。",
+   "energyType": "Special",
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-087",
+   "localId": "087",
+   "name": "クルミル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "むしくい",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-088",
+   "localId": "088",
+   "name": "クルマユ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "クルミル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はっぱヒール",
+     "effect": "自分の番に1回使える。自分のバトルポケモンのHPを「20」回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "むしのさざめき",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-089",
+   "localId": "089",
+   "name": "ハハコモリ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "クルマユ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いやしのおくるみ",
+     "effect": "自分のたねポケモン全員のHPを、それぞれ「100」回復する。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "シザークロス",
+     "effect": "コインを1回投げオモテなら、40ダメージ追加。",
+     "damage": "90+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-090",
+   "localId": "090",
+   "name": "モンメン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "すいとる",
+     "effect": "このポケモンのHPを「10」回復する。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-091",
+   "localId": "091",
+   "name": "シキジカ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "うしろげり",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-092",
+   "localId": "092",
+   "name": "メブキジカ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シキジカ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つきとばす",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ソーラービーム",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-093",
+   "localId": "093",
+   "name": "チョボマキ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しげきしんか",
+     "effect": "自分の場に「カブルモ」がいるなら、このポケモンは、最初の自分の番や、出したばかりの番でも進化できる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "とびだしヘッド",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-094",
+   "localId": "094",
+   "name": "アギルダー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チョボマキ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "アシッドボム",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-095",
+   "localId": "095",
+   "name": "ビリジオン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ギガドレイン",
+     "effect": "相手のバトルポケモンに与えたダメージぶん、このポケモンのHPを回復する。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "エメラルドブレード",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-096",
+   "localId": "096",
+   "name": "ポカブ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "たいあたり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "ころがる",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-097",
+   "localId": "097",
+   "name": "チャオブー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ポカブ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "かえん",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートスタンプ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-098",
+   "localId": "098",
+   "name": "エンブオー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 180,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "チャオブー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "れっからんぶ",
+     "effect": "自分の番に何回でも使える。自分の手札から「基本エネルギー」を1枚選び、自分のポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートスタンプ",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-099",
+   "localId": "099",
+   "name": "バオップ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっかく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-100",
+   "localId": "100",
+   "name": "バオッキー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "バオップ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-101",
+   "localId": "101",
+   "name": "クイタラン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ベロベロキャッチ",
+     "effect": "自分の山札からポケモンと「基本エネルギー」を合計3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "ほのおのツメ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-102",
+   "localId": "102",
+   "name": "ミジュマル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "たいあたり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "みずでっぽう",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-103",
+   "localId": "103",
+   "name": "フタチマル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ミジュマル",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "エナジーシェル",
+     "effect": "このポケモンについているエネルギーの数×30ダメージ。",
+     "damage": "30x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-104",
+   "localId": "104",
+   "name": "ダイケンキ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 160,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "フタチマル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "げきりゅうのうず",
+     "effect": "自分の番に1回使える。自分のバトルポケモンをベンチポケモンと入れ替える。その後、相手は相手自身のバトルポケモンをベンチポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "エナジースラッシュ",
+     "effect": "このポケモンについているエネルギーの数×50ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-105",
+   "localId": "105",
+   "name": "バスラオ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "むらがるキバ",
+     "effect": "相手のバトルポケモンにダメカンがのっていないなら、このワザは失敗。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-106",
+   "localId": "106",
+   "name": "コアルヒー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "しょうか",
+     "effect": "相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つばさでうつ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-107",
+   "localId": "107",
+   "name": "スワンナ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コアルヒー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はばたく",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "エアスラッシュ",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-108",
+   "localId": "108",
+   "name": "バニプッチ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "たたく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "アイスエッジ",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-109",
+   "localId": "109",
+   "name": "バニリッチ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "バニプッチ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "れいとうビーム",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-110",
+   "localId": "110",
+   "name": "バイバニラ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "バニリッチ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダブルフリーズ",
+     "effect": "コインを2回投げ、オモテの数×90ダメージ。1回でもオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": "90x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-111",
+   "localId": "111",
+   "name": "シママ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "けとばす",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "エレキック",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-112",
+   "localId": "112",
+   "name": "ゼブライカ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シママ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "けとばす",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "エレキバレット",
+     "effect": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-113",
+   "localId": "113",
+   "name": "バチュル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 40,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "ふいをつく",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-114",
+   "localId": "114",
+   "name": "デンチュラ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "バチュル",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "ほうでん",
+     "effect": "このポケモンについているエネルギーをすべてトラッシュし、その枚数×50ダメージ。",
+     "damage": "50x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-115",
+   "localId": "115",
+   "name": "マッギョ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "マッドボルト",
+     "effect": "このポケモンにエネルギーがついているなら、20ダメージ追加。",
+     "damage": "20+"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "はねまわる",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-116",
+   "localId": "116",
+   "name": "コロモリ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ハートスタンプ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-117",
+   "localId": "117",
+   "name": "ココロモリ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コロモリ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ハッピーリターン",
+     "effect": "自分のベンチポケモンを1匹選び、そのポケモンと、ついているすべてのカードを、手札にもどす。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かぜおこし",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-118",
+   "localId": "118",
+   "name": "シンボラー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "リフレクター",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-40」される。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "テレキネシス",
+     "effect": "相手のポケモン1匹に、70ダメージ。このワザのダメージは弱点・抵抗力を計算しない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-119",
+   "localId": "119",
+   "name": "デスマス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ねんじる",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-120",
+   "localId": "120",
+   "name": "デスカーン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "デスマス",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "のびるダメカーン",
+     "effect": "自分のベンチポケモンを1匹選び、選んだポケモンにのっているダメカンをすべて、相手のポケモン1匹にのせ替える。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "まどわす",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-121",
+   "localId": "121",
+   "name": "ゴチム",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ちょうねんりき",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-122",
+   "localId": "122",
+   "name": "ゴチミル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゴチム",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "フォーチュンアイ",
+     "effect": "相手の山札を上から5枚見て、好きな順番に入れ替えて、山札の上にもどす。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "サイコショット",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-123",
+   "localId": "123",
+   "name": "ゴチルゼル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 150,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ゴチミル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ねじれたみらい",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。相手は相手自身の手札をすべて山札にもどして切る。その後、相手は山札を3枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "シンクロショット",
+     "effect": "自分の手札と相手の手札が同じ枚数なら、90ダメージ追加。",
+     "damage": "90+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-124",
+   "localId": "124",
+   "name": "プルリル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "うみのかげ",
+     "effect": "次の相手の番、相手は手札からグッズを出して使えない。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-125",
+   "localId": "125",
+   "name": "ダンゴロ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "かたくなる",
+     "effect": "次の相手の番、このポケモンは「40」以下のワザのダメージを受けない。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "いわころがり",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-126",
+   "localId": "126",
+   "name": "ガントル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ダンゴロ",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "うちおとす",
+     "effect": "相手のバトルポケモンの抵抗力がタイプなら、50ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "パワージェム",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-127",
+   "localId": "127",
+   "name": "ギガイアス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 170,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ガントル",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "リベンジキャノン",
+     "effect": "自分のベンチのポケモン全員にのっているダメカンの数×20ダメージ。",
+     "damage": "20x"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ヘビーインパクト",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-128",
+   "localId": "128",
+   "name": "ダゲキ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ひじうち",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ライジングチョップ",
+     "effect": "相手のバトルポケモンが「ポケモンex」でないなら、このワザは失敗。このワザのダメージは弱点・抵抗力を計算しない。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-129",
+   "localId": "129",
+   "name": "アーケン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "古びたはねの化石",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "アクロバット",
+     "effect": "コインを2回投げ、オモテの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-130",
+   "localId": "130",
+   "name": "アーケオス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "アーケン",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "げんしのつばさ",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。相手の進化しているポケモンを1匹選び、「進化カード」を1枚はがして退化させる。はがしたカードは、相手の手札にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "いわおとし",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-131",
+   "localId": "131",
+   "name": "コジョフー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "キック",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-132",
+   "localId": "132",
+   "name": "コジョンド",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コジョフー",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ローキック",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "スマッシュアッパー",
+     "effect": "このワザのダメージは抵抗力を計算しない。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-133",
+   "localId": "133",
+   "name": "テラキオン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "かたきうち",
+     "effect": "前の相手の番に、ワザのダメージで、自分のポケモンがきぜつしていたなら、80ダメージ追加。",
+     "damage": "50+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ランドクラッシュ",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-134",
+   "localId": "134",
+   "name": "チョロネコ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "わるいおさそい",
+     "effect": "自分の山札からポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-135",
+   "localId": "135",
+   "name": "レパルダス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チョロネコ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "はたきおとす",
+     "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-136",
+   "localId": "136",
+   "name": "ズルッグ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ずつき",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "せめこむ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-137",
+   "localId": "137",
+   "name": "ズルズキン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ズルッグ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ごろつきアタック",
+     "effect": "自分の場のポケモンの数ぶんコインを投げ、オモテの数×60ダメージ。",
+     "damage": "60x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-138",
+   "localId": "138",
+   "name": "ヤブクロン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "よだれ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ヘドロばくだん",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-139",
+   "localId": "139",
+   "name": "ダストダス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤブクロン",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ガスでつつむ",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダストシュート",
+     "effect": "相手のバトルポケモンをどくにする。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-140",
+   "localId": "140",
+   "name": "ゾロア",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "とっしん",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-141",
+   "localId": "141",
+   "name": "ゾロアーク",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゾロア",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "マインドジャック",
+     "effect": "相手のベンチポケモンの数×30ダメージ。",
+     "damage": "30x"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "イカサマ",
+     "effect": "相手のバトルポケモンが持つワザを1つ選び、このワザとして使う。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-142",
+   "localId": "142",
+   "name": "モノズ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "のしかかり",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "やみのキバ",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-143",
+   "localId": "143",
+   "name": "ジヘッド",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モノズ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダブルアタック",
+     "effect": "コインを2回投げ、オモテの数×40ダメージ。",
+     "damage": "40x"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "しっこくのキバ",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-144",
+   "localId": "144",
+   "name": "テッシード",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "チクッ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "メタルクロー",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-145",
+   "localId": "145",
+   "name": "ナットレイ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "テッシード",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "パワーウィップ",
+     "effect": "相手のポケモン1匹に、このポケモンについているエネルギーの数×20ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "メタルクロー",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-146",
+   "localId": "146",
+   "name": "ギアル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "かたいギア",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-10」される。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-147",
+   "localId": "147",
+   "name": "ギギアル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ギアル",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "かたいギア",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-20」される。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-148",
+   "localId": "148",
+   "name": "ギギギアル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 150,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ギギアル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ギアコーティング",
+     "effect": "このポケモンがいるかぎり、エネルギーがついている自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-20」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-149",
+   "localId": "149",
+   "name": "アイアント",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いっしょにかむ",
+     "effect": "自分のベンチに「アイアント」がいるなら、20ダメージ追加。",
+     "damage": "20+"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "はさむ",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-150",
+   "localId": "150",
+   "name": "クリムガン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひきさく",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Colorless"
+     ],
+     "name": "おそいかかる",
+     "effect": "コインを1回投げオモテなら、60ダメージ追加。",
+     "damage": "90+"
+    }
+   ],
+   "weaknesses": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-151",
+   "localId": "151",
+   "name": "ミネズミ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ちょうたつ",
+     "effect": "自分の山札からグッズを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かじる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-152",
+   "localId": "152",
+   "name": "ミルホッグ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ミネズミ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "きあいだめ",
+     "effect": "次の自分の番、このポケモンの「ひっさつまえば」のダメージは「240」になる。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっさつまえば",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-153",
+   "localId": "153",
+   "name": "ヨーテリー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "じゃれつく",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-154",
+   "localId": "154",
+   "name": "ハーデリア",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヨーテリー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ほえる",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つきたおし",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-155",
+   "localId": "155",
+   "name": "ムーランド",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 160,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ハーデリア",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かぎわける",
+     "effect": "コインを3回投げ、オモテの数ぶんまで、自分のトラッシュから好きなカードを選び、相手に見せて、手札に加える。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スペシャルファング",
+     "effect": "このポケモンに特殊エネルギーがついているなら、100ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-156",
+   "localId": "156",
+   "name": "ワシボン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つつく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かっくう",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-157",
+   "localId": "157",
+   "name": "ウォーグル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ワシボン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つばめがえし",
+     "effect": "コインを1回投げオモテなら、40ダメージ追加。",
+     "damage": "40+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードウイング",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-158",
+   "localId": "158",
+   "name": "トルネロス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かぜをまとう",
+     "effect": "自分の手札から基本エネルギーを1枚選び、このポケモンにつける。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぼうふう",
+     "effect": "このポケモンについている基本エネルギーを1個選び、ベンチポケモンにつけ替える。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-159",
+   "localId": "159",
+   "name": "エルフーンex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 230,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モンメン",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "エナジーギフト",
+     "effect": "自分の山札から基本エネルギーを3枚まで選び、自分のポケモンに好きなようにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ワンダーコットン",
+     "effect": "相手の手札を見て、その中にあるトレーナーズの枚数×50ダメージ。",
+     "damage": "50x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-160",
+   "localId": "160",
+   "name": "レシラムex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ブレイズバースト",
+     "effect": "相手がすでにとったサイドの枚数×50ダメージ追加。このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-161",
+   "localId": "161",
+   "name": "ケルディオex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 210,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "しっぷうづき",
+     "effect": "この番に、このポケモンがベンチからバトル場に出ていたなら、90ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ソニックエッジ",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-162",
+   "localId": "162",
+   "name": "ブルンゲルex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 270,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "プルリル",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "うみののろい",
+     "effect": "このポケモンがバトル場にいるかぎり、相手は手札から「グッズ」を出して使えず、「ポケモンのどうぐ」も出してつけられない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "パワープレス",
+     "effect": "このワザを使うためのエネルギーより、2個多くエネルギーがついているなら、80ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-163",
+   "localId": "163",
+   "name": "サザンドラex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジヘッド",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "グリードイーター",
+     "effect": "このポケモンが使うワザのダメージで、相手のたねポケモンがきぜつしたなら、サイドを1枚多くとる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダークバイト",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-164",
+   "localId": "164",
+   "name": "バッフロンex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 220,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アフロガード",
+     "effect": "このポケモンが受けるワザのダメージは「-30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ゴールドブレイク",
+     "effect": "相手のバトルポケモンが「ポケモンex」なら、100ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-165",
+   "localId": "165",
+   "name": "クラウン",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分はコインを1回投げ、オモテなら自分は5枚、相手は3枚、山札を引く。ウラなら自分は3枚、相手は5枚、山札を引く。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-166",
+   "localId": "166",
+   "name": "トウコ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から進化ポケモンとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-167",
+   "localId": "167",
+   "name": "エルフーンex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 230,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モンメン",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "エナジーギフト",
+     "effect": "自分の山札から基本エネルギーを3枚まで選び、自分のポケモンに好きなようにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ワンダーコットン",
+     "effect": "相手の手札を見て、その中にあるトレーナーズの枚数×50ダメージ。",
+     "damage": "50x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-168",
+   "localId": "168",
+   "name": "レシラムex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ブレイズバースト",
+     "effect": "相手がすでにとったサイドの枚数×50ダメージ追加。このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-169",
+   "localId": "169",
+   "name": "ケルディオex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 210,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "しっぷうづき",
+     "effect": "この番に、このポケモンがベンチからバトル場に出ていたなら、90ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ソニックエッジ",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-170",
+   "localId": "170",
+   "name": "ブルンゲルex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 270,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "プルリル",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "うみののろい",
+     "effect": "このポケモンがバトル場にいるかぎり、相手は手札から「グッズ」を出して使えず、「ポケモンのどうぐ」も出してつけられない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "パワープレス",
+     "effect": "このワザを使うためのエネルギーより、2個多くエネルギーがついているなら、80ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-171",
+   "localId": "171",
+   "name": "サザンドラex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジヘッド",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "グリードイーター",
+     "effect": "このポケモンが使うワザのダメージで、相手のたねポケモンがきぜつしたなら、サイドを1枚多くとる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダークバイト",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-172",
+   "localId": "172",
+   "name": "バッフロンex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 220,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アフロガード",
+     "effect": "このポケモンが受けるワザのダメージは「-30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ゴールドブレイク",
+     "effect": "相手のバトルポケモンが「ポケモンex」なら、100ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-173",
+   "localId": "173",
+   "name": "トウコ",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から進化ポケモンとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  },
+  {
+   "id": "SV11W-174",
+   "localId": "174",
+   "name": "レシラムex",
+   "category": "Pokemon",
+   "rarity": "Black White Rare",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ブレイズバースト",
+     "effect": "相手がすでにとったサイドの枚数×50ダメージ追加。このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11W",
+    "name": "ホワイトフレア"
+   }
+  }
+ ]
+}

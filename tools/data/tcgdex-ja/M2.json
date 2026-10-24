@@ -1,0 +1,4797 @@
+{
+ "id": "M2",
+ "name": "インフェルノX",
+ "releaseDate": "2025-09-26",
+ "total": 116,
+ "cards": [
+  {
+   "id": "M2-001",
+   "localId": "001",
+   "name": "ナゾノクサ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "タネばくだん",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-002",
+   "localId": "002",
+   "name": "クサイハナ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ナゾノクサ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "よだれまき",
+     "effect": "おたがいのベンチポケモン全員にも、それぞれ20ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-003",
+   "localId": "003",
+   "name": "ラフレシア",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ラフレシアGX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "かふんばくだん",
+     "effect": "相手のバトルポケモンをどくとねむりにする。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はつらつフラワー",
+     "effect": "この番に、このポケモンのHPを回復していたなら、120ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-004",
+   "localId": "004",
+   "name": "メガヘラクロスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "パンツァーホーン",
+     "effect": "前の相手の番に、このポケモンが受けたワザのダメージと同じダメージ追加。",
+     "damage": "100+"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "やまどつき",
+     "effect": "相手の山札を上から2枚トラッシュする。",
+     "damage": 170
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-005",
+   "localId": "005",
+   "name": "ハスボー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ずつき",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-006",
+   "localId": "006",
+   "name": "ハスブレロ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ハスボー",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "メガドレイン",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-007",
+   "localId": "007",
+   "name": "ルンパッパ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ハスブレロ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エキサイトヒール",
+     "effect": "自分の場にタイプの「メガシンカex」がいるなら、自分の番に1回使える。自分のポケモン1匹のHPを「60」回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "つきたおし",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-008",
+   "localId": "008",
+   "name": "ゲノセクト",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "バグズキャノン",
+     "effect": "相手のポケモン1匹に、このポケモンについているエネルギーの数×20ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "スピードアタック",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-009",
+   "localId": "009",
+   "name": "マメバッタ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はねまくる",
+     "effect": "コインを3回投げ、オモテの数×10ダメージ。",
+     "damage": "10x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-010",
+   "localId": "010",
+   "name": "エクスレッグ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "マメバッタ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "けたぐり",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ジャンプシュート",
+     "effect": "このポケモンと、ついているすべてのカードを、山札にもどして切る。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-011",
+   "localId": "011",
+   "name": "ヒトカゲ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "みがる",
+     "effect": "このポケモンにエネルギーがついていないなら、このポケモンはにげるためのエネルギーが、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ひだね",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-012",
+   "localId": "012",
+   "name": "リザード",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒトカゲ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ひをはく",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-013",
+   "localId": "013",
+   "name": "メガリザードンXex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 360,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "メガリザードンYex",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "インフェルノX",
+     "effect": "自分の場のポケモンについているエネルギーを好きなだけトラッシュし、その枚数×90ダメージ。",
+     "damage": "90x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-014",
+   "localId": "014",
+   "name": "ファイヤー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "とうしのつばさ",
+     "effect": "相手のバトルポケモンが「ポケモンex」なら、90ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-015",
+   "localId": "015",
+   "name": "ダルマッカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ブレイズボール",
+     "effect": "このポケモンについているエネルギーの数×20ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-016",
+   "localId": "016",
+   "name": "ヒヒダルマ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ダルマッカ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ブレイズボール",
+     "effect": "このポケモンについているエネルギーの数×40ダメージ追加。",
+     "damage": "40+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-017",
+   "localId": "017",
+   "name": "レシラム",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "かえん",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "バーニングフレア",
+     "effect": "このポケモンにも60ダメージ。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-018",
+   "localId": "018",
+   "name": "オドリドリex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 190,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エキサイトターボ",
+     "effect": "自分の場にタイプの「メガシンカex」がいるなら、自分の番に何回でも使える。自分の手札から「基本エネルギー」を1枚選び、ベンチのポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ほのおのつばさ",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-019",
+   "localId": "019",
+   "name": "カルボウ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ちからをあつめる",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "チョップ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-020",
+   "localId": "020",
+   "name": "ソウブレイズ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "グレンアルマex",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "れんごくざん",
+     "effect": "自分の手札から「基本エネルギー」を4枚選び、トラッシュする。4枚トラッシュできないなら、このワザは失敗。",
+     "damage": 220
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-021",
+   "localId": "021",
+   "name": "パウワウ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "バブルドレイン",
+     "effect": "このポケモンのHPを「20」回復する。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-022",
+   "localId": "022",
+   "name": "ジュゴン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "パウワウ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "あついしぼう",
+     "effect": "このポケモンが、相手のまたはポケモンから受けるワザのダメージは「-30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "たたきつける",
+     "effect": "コインを2回投げ、オモテの数×70ダメージ。",
+     "damage": "70x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-023",
+   "localId": "023",
+   "name": "ウリムー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふむ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "スノーアイス",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-024",
+   "localId": "024",
+   "name": "イノムー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ウリムー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つきあげる",
+     "effect": "コインを1回投げオモテなら、30ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "フロストスマッシュ",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-025",
+   "localId": "025",
+   "name": "マンムー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 180,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "イノムー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶちこわす",
+     "effect": "場にスタジアムが出ているなら、120ダメージ追加。その後、そのスタジアムをトラッシュする。",
+     "damage": "120+"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ブリザードエッジ",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-026",
+   "localId": "026",
+   "name": "スイクン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "クリスタルフォール",
+     "effect": "自分の場にエネルギーが4個以上あるなら、90ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-027",
+   "localId": "027",
+   "name": "ポッチャマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "フレンドコール",
+     "effect": "自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-028",
+   "localId": "028",
+   "name": "ポッタイシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ポッチャマ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つつく",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ねらってダイブ",
+     "effect": "相手のベンチポケモン1匹に、70ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-029",
+   "localId": "029",
+   "name": "ロトムex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 190,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マルチアダプタ",
+     "effect": "このポケモンがいるかぎり、名前に「ロトム」とつく自分のポケモン全員は、それぞれ「ポケモンのどうぐ」を2枚までつけられる。（この特性がなくなったとき、多くついている「ポケモンのどうぐ」をトラッシュする。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "10まんボルト",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-030",
+   "localId": "030",
+   "name": "ワンパチ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "じゃれつく",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-031",
+   "localId": "031",
+   "name": "パルスワン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ワンパチ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "エレキラン",
+     "effect": "コインを1回投げオモテなら、70ダメージ追加。",
+     "damage": "70+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-032",
+   "localId": "032",
+   "name": "パモ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "なきごえ",
+     "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-30」される。"
+    },
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "プチでんき",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-033",
+   "localId": "033",
+   "name": "パモット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "パモ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ビリリパンチ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-034",
+   "localId": "034",
+   "name": "パーモット",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "パモット",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ボルテージフィスト",
+     "effect": "のぞむなら、このポケモンにも60ダメージを与え、相手のバトルポケモンをマヒにする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-035",
+   "localId": "035",
+   "name": "ムウマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ちょっとうらむ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-036",
+   "localId": "036",
+   "name": "ムウマージex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 260,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ムウマ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "うずまくことだま",
+     "effect": "このポケモンがバトル場にいるかぎり、相手の番に、相手のバトルポケモンがベンチにもどるたび、新しく出てきたポケモンをこんらんにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "シックスマジック",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-037",
+   "localId": "037",
+   "name": "モンメン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-038",
+   "localId": "038",
+   "name": "エルフーン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エルフーンex",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いやしのわたげ",
+     "effect": "自分のベンチポケモン1匹のHPを、すべて回復する。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "とんぼがえり",
+     "effect": "このポケモンをベンチポケモンと入れ替える。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-039",
+   "localId": "039",
+   "name": "ザシアン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "リミットブレイク",
+     "effect": "相手のサイドの残り枚数が3枚以下なら、90ダメージ追加。",
+     "damage": "50+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-040",
+   "localId": "040",
+   "name": "アノクサ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "そっとのせる",
+     "effect": "相手のポケモン1匹に、ダメカンを1個のせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-041",
+   "localId": "041",
+   "name": "アノホラグサ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アノクサ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "パニックプリズン",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。相手のバトルポケモンをこんらんにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ねんどうだん",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-042",
+   "localId": "042",
+   "name": "パルデア ケンタロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "いかりのとっしん",
+     "effect": "自分の場の、ダメカンがのっている名前に「ケンタロス」とつくポケモンの数×40ダメージ。",
+     "damage": "40x"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "すてみタックル",
+     "effect": "このポケモンにも20ダメージ。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-043",
+   "localId": "043",
+   "name": "グライガー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "どくづき",
+     "effect": "相手のバトルポケモンをどくにする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-044",
+   "localId": "044",
+   "name": "グライオン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "グライガー",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ポイズンサークル",
+     "effect": "相手のバトルポケモンをどくにする。次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-045",
+   "localId": "045",
+   "name": "ナックラー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "にどずつき",
+     "effect": "コインを2回投げ、オモテの数×10ダメージ。",
+     "damage": "10x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-046",
+   "localId": "046",
+   "name": "ビブラーバ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ナックラー",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ちょうしんどう",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-047",
+   "localId": "047",
+   "name": "フライゴン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ビブラーバ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "すなのはばたき",
+     "effect": "自分の番に、このカードを手札から出して進化させたときと、このポケモンがバトル場で相手のワザのダメージを受けてきぜつしたとき、それぞれ1回使える。相手の山札を上から2枚トラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "カッターウインド",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-048",
+   "localId": "048",
+   "name": "ニューラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ツメをたてる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ひっかく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-049",
+   "localId": "049",
+   "name": "マニューラ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ニューラ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "むくいのツメ",
+     "effect": "このポケモンの残りHPが「50」以下なら、170ダメージ追加。",
+     "damage": "20+"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "いあいぎり",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-050",
+   "localId": "050",
+   "name": "キバニア",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "とつげき",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-051",
+   "localId": "051",
+   "name": "メガサメハダーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "キバニア",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "よくばるキバ",
+     "effect": "自分の山札を2枚引く。",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ハングリージョー",
+     "effect": "このポケモンにダメカンがのっているなら、150ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-052",
+   "localId": "052",
+   "name": "ハブネーク",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エキサイトパワー",
+     "effect": "自分の場にタイプの「メガシンカex」がいるなら、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+120」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "しっこくのキバ",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-053",
+   "localId": "053",
+   "name": "メグロコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ぶつかる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "うしろげり",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-054",
+   "localId": "054",
+   "name": "ワルビル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "メグロコ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "かみつく",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "がちんこ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-055",
+   "localId": "055",
+   "name": "ワルビアル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 170,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ワルビル",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "リベンジファング",
+     "effect": "前の相手の番に、ワザのダメージで、自分のポケモンがきぜつしていたなら、160ダメージ追加。",
+     "damage": "60+"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-056",
+   "localId": "056",
+   "name": "エレズン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "やんちゃげり",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-057",
+   "localId": "057",
+   "name": "ストリンダー",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エレズン",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "バッドアッパー",
+     "effect": "自分の番に1回使える。自分の山札から「基本エネルギー」を1枚選び、ベンチのポケモンにつける。そして山札を切る。その後、つけたポケモンにダメカンを2個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-058",
+   "localId": "058",
+   "name": "エンペルトex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 320,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ポッタイシ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こうていのかまえ",
+     "effect": "このポケモンは、相手のポケモンが使うワザの効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "アイアンフェザー",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-60」される。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-059",
+   "localId": "059",
+   "name": "ドーミラー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "てっぺき",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージを受けない。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ころがる",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-060",
+   "localId": "060",
+   "name": "ドータクン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドーミラー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "トリプルドロー",
+     "effect": "自分の山札を3枚引く。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "どうぐおとし",
+     "effect": "おたがいのポケモン全員についている「ポケモンのどうぐ」の数×40ダメージ。",
+     "damage": "40x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-061",
+   "localId": "061",
+   "name": "トゲデマル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ともだちをさがす",
+     "effect": "自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "かじる",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-062",
+   "localId": "062",
+   "name": "ジュラルドン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Metal"
+     ],
+     "name": "はかいこうせん",
+     "effect": "相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-063",
+   "localId": "063",
+   "name": "ブリジュラス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 180,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ジュラルドン",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Metal"
+     ],
+     "name": "コーティングアタック",
+     "effect": "次の相手の番、このポケモンはたねポケモンからワザのダメージを受けない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-064",
+   "localId": "064",
+   "name": "プリン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "たまころがり",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×20ダメージ。",
+     "damage": "20x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-065",
+   "localId": "065",
+   "name": "プクリン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "プリン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "りんしょう",
+     "effect": "自分の場の、ワザ「りんしょう」を持つポケモンの数×40ダメージ。",
+     "damage": "40x"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ちきゅうなげ",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-066",
+   "localId": "066",
+   "name": "エイパム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おどろかす",
+     "effect": "相手の手札からオモテを見ないで1枚選び、そのカードのオモテを見て、相手の山札にもどして切る。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-067",
+   "localId": "067",
+   "name": "エテボース",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エイパム",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ビンタ",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "デュアルテール",
+     "effect": "このポケモンについているエネルギーを2個トラッシュし、相手のポケモン2匹に、それぞれ60ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-068",
+   "localId": "068",
+   "name": "ドーブル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "エナジースケッチ",
+     "effect": "コインを3回投げ、オモテの数ぶんまで、自分のトラッシュから基本エネルギーを選び、ベンチポケモンに好きなようにつける。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっかける",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-069",
+   "localId": "069",
+   "name": "ジグザグマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふいをつく",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-070",
+   "localId": "070",
+   "name": "マッスグマ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ジグザグマ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エキサイトダッシュ",
+     "effect": "このポケモンがベンチにいて、自分の場に「メガシンカex」がいるなら、自分の番に1回使える。このポケモンをバトルポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-071",
+   "localId": "071",
+   "name": "ミミロル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はしゃぐ",
+     "effect": "このポケモンをベンチポケモンと入れ替える。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "キック",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-072",
+   "localId": "072",
+   "name": "メガミミロップex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 330,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ミミロル",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "しっぷうづき",
+     "effect": "この番に、このポケモンがベンチからバトル場に出ていたなら、170ダメージ追加。",
+     "damage": "60+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スパイクホッパー",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-073",
+   "localId": "073",
+   "name": "ジャンボアイス",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "エネルギーが3個以上ついている自分のバトルポケモンのHPを「80」回復する。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-074",
+   "localId": "074",
+   "name": "ヒートバーナー",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札から「基本エネルギー」を1枚トラッシュしなければ使えない。相手の場のポケモンについている「ポケモンのどうぐ」「特殊エネルギー」と場に出ている「スタジアム」の中から1枚選び、トラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-075",
+   "localId": "075",
+   "name": "せいなるおまもり",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが、相手の特性を持つポケモンから受けるワザのダメージは「-30」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-076",
+   "localId": "076",
+   "name": "ギーマの一手",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を上から7枚見て、その中からポケモンを1枚選び、ベンチに出す。残りのカードはすべてウラにして切り、山札の下にもどす。（最初の自分の番には使えない。） サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-077",
+   "localId": "077",
+   "name": "ヒカリ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「たねポケモン」「1進化ポケモン」「2進化ポケモン」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-078",
+   "localId": "078",
+   "name": "ひふきやろう",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「基本エネルギー」を7枚まで選び、相手に見せて、手札に加える。そして山札を切る。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-079",
+   "localId": "079",
+   "name": "バトルコロシアム",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのベンチポケモン全員は、相手のワザや特性の効果で、ダメカンがのらない。［ワザのダメージは受ける。］ スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-080",
+   "localId": "080",
+   "name": "めまいの谷",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのこんらんのポケモンは、進化・退化してもこんらんが回復しない。 スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-081",
+   "localId": "081",
+   "name": "ルンパッパ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 160,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ハスブレロ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エキサイトヒール",
+     "effect": "自分の場にタイプの「メガシンカex」がいるなら、自分の番に1回使える。自分のポケモン1匹のHPを「60」回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "つきたおし",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-082",
+   "localId": "082",
+   "name": "マメバッタ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はねまくる",
+     "effect": "コインを3回投げ、オモテの数×10ダメージ。",
+     "damage": "10x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-083",
+   "localId": "083",
+   "name": "カルボウ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ちからをあつめる",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "チョップ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-084",
+   "localId": "084",
+   "name": "ジュゴン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "パウワウ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "あついしぼう",
+     "effect": "このポケモンが、相手のまたはポケモンから受けるワザのダメージは「-30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "たたきつける",
+     "effect": "コインを2回投げ、オモテの数×70ダメージ。",
+     "damage": "70x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-085",
+   "localId": "085",
+   "name": "ポッチャマ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "フレンドコール",
+     "effect": "自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-086",
+   "localId": "086",
+   "name": "ワンパチ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "じゃれつく",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-087",
+   "localId": "087",
+   "name": "ザシアン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "リミットブレイク",
+     "effect": "相手のサイドの残り枚数が3枚以下なら、90ダメージ追加。",
+     "damage": "50+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-088",
+   "localId": "088",
+   "name": "フライゴン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ビブラーバ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "すなのはばたき",
+     "effect": "自分の番に、このカードを手札から出して進化させたときと、このポケモンがバトル場で相手のワザのダメージを受けてきぜつしたとき、それぞれ1回使える。相手の山札を上から2枚トラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "カッターウインド",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-089",
+   "localId": "089",
+   "name": "ストリンダー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エレズン",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "バッドアッパー",
+     "effect": "自分の番に1回使える。自分の山札から「基本エネルギー」を1枚選び、ベンチのポケモンにつける。そして山札を切る。その後、つけたポケモンにダメカンを2個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-090",
+   "localId": "090",
+   "name": "トゲデマル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ともだちをさがす",
+     "effect": "自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "かじる",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-091",
+   "localId": "091",
+   "name": "プクリン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "プリン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "りんしょう",
+     "effect": "自分の場の、ワザ「りんしょう」を持つポケモンの数×40ダメージ。",
+     "damage": "40x"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ちきゅうなげ",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-092",
+   "localId": "092",
+   "name": "エテボース",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エイパム",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ビンタ",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "デュアルテール",
+     "effect": "このポケモンについているエネルギーを2個トラッシュし、相手のポケモン2匹に、それぞれ60ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-093",
+   "localId": "093",
+   "name": "メガヘラクロスex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 280,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "パンツァーホーン",
+     "effect": "前の相手の番に、このポケモンが受けたワザのダメージと同じダメージ追加。",
+     "damage": "100+"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "やまどつき",
+     "effect": "相手の山札を上から2枚トラッシュする。",
+     "damage": 170
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-094",
+   "localId": "094",
+   "name": "メガリザードンXex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 360,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "メガリザードンYex",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "インフェルノX",
+     "effect": "自分の場のポケモンについているエネルギーを好きなだけトラッシュし、その枚数×90ダメージ。",
+     "damage": "90x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-095",
+   "localId": "095",
+   "name": "オドリドリex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 190,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エキサイトターボ",
+     "effect": "自分の場にタイプの「メガシンカex」がいるなら、自分の番に何回でも使える。自分の手札から「基本エネルギー」を1枚選び、ベンチのポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ほのおのつばさ",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-096",
+   "localId": "096",
+   "name": "ロトムex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 190,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マルチアダプタ",
+     "effect": "このポケモンがいるかぎり、名前に「ロトム」とつく自分のポケモン全員は、それぞれ「ポケモンのどうぐ」を2枚までつけられる。（この特性がなくなったとき、多くついている「ポケモンのどうぐ」をトラッシュする。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "10まんボルト",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-097",
+   "localId": "097",
+   "name": "ムウマージex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 260,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ムウマ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "うずまくことだま",
+     "effect": "このポケモンがバトル場にいるかぎり、相手の番に、相手のバトルポケモンがベンチにもどるたび、新しく出てきたポケモンをこんらんにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "シックスマジック",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-098",
+   "localId": "098",
+   "name": "メガサメハダーex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "キバニア",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "よくばるキバ",
+     "effect": "自分の山札を2枚引く。",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ハングリージョー",
+     "effect": "このポケモンにダメカンがのっているなら、150ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-099",
+   "localId": "099",
+   "name": "エンペルトex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 320,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ポッタイシ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こうていのかまえ",
+     "effect": "このポケモンは、相手のポケモンが使うワザの効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "アイアンフェザー",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-60」される。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-100",
+   "localId": "100",
+   "name": "メガミミロップex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 330,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ミミロル",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "しっぷうづき",
+     "effect": "この番に、このポケモンがベンチからバトル場に出ていたなら、170ダメージ追加。",
+     "damage": "60+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スパイクホッパー",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-101",
+   "localId": "101",
+   "name": "ヒートバーナー",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札から「基本エネルギー」を1枚トラッシュしなければ使えない。相手の場のポケモンについている「ポケモンのどうぐ」「特殊エネルギー」と場に出ている「スタジアム」の中から1枚選び、トラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-102",
+   "localId": "102",
+   "name": "ポケモンいれかえ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトルポケモンをベンチポケモンと入れ替える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-103",
+   "localId": "103",
+   "name": "せいなるおまもり",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが、相手の特性を持つポケモンから受けるワザのダメージは「-30」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-104",
+   "localId": "104",
+   "name": "パンクメット",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを4個のせる。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-105",
+   "localId": "105",
+   "name": "ギーマの一手",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を上から7枚見て、その中からポケモンを1枚選び、ベンチに出す。残りのカードはすべてウラにして切り、山札の下にもどす。（最初の自分の番には使えない。） サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-106",
+   "localId": "106",
+   "name": "ヒカリ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「たねポケモン」「1進化ポケモン」「2進化ポケモン」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-107",
+   "localId": "107",
+   "name": "ひふきやろう",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「基本エネルギー」を7枚まで選び、相手に見せて、手札に加える。そして山札を切る。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-108",
+   "localId": "108",
+   "name": "バトルコロシアム",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのベンチポケモン全員は、相手のワザや特性の効果で、ダメカンがのらない。［ワザのダメージは受ける。］ スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-109",
+   "localId": "109",
+   "name": "イグニッションエネルギー",
+   "category": "Energy",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "ポケモンについているこのカードは、自分の番の終わりにトラッシュする。このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。進化ポケモンについているなら、エネルギー3個ぶんとしてはたらく。",
+   "energyType": "Special",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-110",
+   "localId": "110",
+   "name": "メガリザードンXex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 360,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "メガリザードンYex",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "インフェルノX",
+     "effect": "自分の場のポケモンについているエネルギーを好きなだけトラッシュし、その枚数×90ダメージ。",
+     "damage": "90x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-111",
+   "localId": "111",
+   "name": "オドリドリex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 190,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エキサイトターボ",
+     "effect": "自分の場にタイプの「メガシンカex」がいるなら、自分の番に何回でも使える。自分の手札から「基本エネルギー」を1枚選び、ベンチのポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ほのおのつばさ",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-112",
+   "localId": "112",
+   "name": "ロトムex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 190,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マルチアダプタ",
+     "effect": "このポケモンがいるかぎり、名前に「ロトム」とつく自分のポケモン全員は、それぞれ「ポケモンのどうぐ」を2枚までつけられる。（この特性がなくなったとき、多くついている「ポケモンのどうぐ」をトラッシュする。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "10まんボルト",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-113",
+   "localId": "113",
+   "name": "メガサメハダーex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "キバニア",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "よくばるキバ",
+     "effect": "自分の山札を2枚引く。",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ハングリージョー",
+     "effect": "このポケモンにダメカンがのっているなら、150ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-114",
+   "localId": "114",
+   "name": "メガミミロップex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 330,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ミミロル",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "しっぷうづき",
+     "effect": "この番に、このポケモンがベンチからバトル場に出ていたなら、170ダメージ追加。",
+     "damage": "60+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スパイクホッパー",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-115",
+   "localId": "115",
+   "name": "ヒカリ",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「たねポケモン」「1進化ポケモン」「2進化ポケモン」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  },
+  {
+   "id": "M2-116",
+   "localId": "116",
+   "name": "メガリザードンXex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 360,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "メガリザードンYex",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "インフェルノX",
+     "effect": "自分の場のポケモンについているエネルギーを好きなだけトラッシュし、その枚数×90ダメージ。",
+     "damage": "90x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2",
+    "name": "インフェルノX"
+   }
+  }
+ ]
+}

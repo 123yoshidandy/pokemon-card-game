@@ -1,0 +1,4576 @@
+{
+ "id": "M6",
+ "name": "ストームエメラルダ",
+ "releaseDate": "2026-07-31",
+ "total": 113,
+ "cards": [
+  {
+   "id": "M6-001",
+   "localId": "001",
+   "name": "ヘラクロス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "スパイクドロー",
+     "effect": "自分の山札を2枚引く。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "10まんばりき",
+     "effect": "このポケモンにも30ダメージ。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-002",
+   "localId": "002",
+   "name": "アメタマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふえる",
+     "effect": "自分の山札から「アメタマ」を2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "むしくい",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-003",
+   "localId": "003",
+   "name": "アメモース",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アメタマ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "こわいもよう",
+     "effect": "次の相手の番、このワザを受けたポケモンは、ワザが使えない。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "バグパニック",
+     "effect": "自分の山札を下から7枚オモテにして、その中にある、ワザ「バグパニック」を持つポケモンの枚数×50ダメージ。オモテにしたポケモンは山札にもどして切る。残りのカードはトラッシュする。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-004",
+   "localId": "004",
+   "name": "サボネア",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はねとばす",
+     "effect": "コインを1回投げオモテなら、10ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-005",
+   "localId": "005",
+   "name": "ノクタス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "サボネア",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ちょくげきだん",
+     "effect": "相手のポケモン1匹に、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "パニッシュニードル",
+     "effect": "相手の場の特性を持つポケモンの数×50ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-006",
+   "localId": "006",
+   "name": "ミツハニー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ぱっときえる",
+     "effect": "このポケモンと、ついているすべてのカードを、手札にもどす。",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "バグパニック",
+     "effect": "自分の山札を下から7枚オモテにして、その中にある、ワザ「バグパニック」を持つポケモンの枚数×50ダメージ。オモテにしたポケモンは山札にもどして切る。残りのカードはトラッシュする。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-007",
+   "localId": "007",
+   "name": "ビークイン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ミツハニー",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "つきさす",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クリーンヒット",
+     "effect": "相手のバトルポケモンが進化ポケモンなら、80ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-008",
+   "localId": "008",
+   "name": "コソクムシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "よわごし",
+     "effect": "相手の場に「ポケモンex」がいるなら、このポケモンはにげるためのエネルギーが、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ぶつかる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-009",
+   "localId": "009",
+   "name": "メガグソクムシャex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 340,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コソクムシ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "とどめをさす",
+     "effect": "相手のバトルポケモンにダメカンがのっているなら、160ダメージ追加。",
+     "damage": "60+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クワトロホールド",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-010",
+   "localId": "010",
+   "name": "ガーディ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ほえる",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "うしろげり",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-011",
+   "localId": "011",
+   "name": "ウインディ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ガーディ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はりきりファング",
+     "effect": "相手のサイドの残り枚数が4枚以下なら、90ダメージ追加。",
+     "damage": "90+"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヒートタックル",
+     "effect": "このポケモンにも50ダメージ。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-012",
+   "localId": "012",
+   "name": "ブーバー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ちからをあつめる",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "かえん",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-013",
+   "localId": "013",
+   "name": "ブーバーン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ブーバー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "バディブースト",
+     "effect": "自分の番に1回使える。自分の手札から「基本[R]エネルギー」と「基本[L]エネルギー」をそれぞれ1枚まで選び、自分の「エレキブル」または「ブーバーン」に好きなようにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートスタンプ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-014",
+   "localId": "014",
+   "name": "コータス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "やきこがす",
+     "effect": "相手のバトルポケモンをやけどにする。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "かえんばく",
+     "effect": "次の自分の番、このポケモンは「かえんばく」が使えない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-015",
+   "localId": "015",
+   "name": "ヒートロトムex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 190,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "さいかねつ",
+     "effect": "自分のトラッシュにある「基本[R]エネルギー」をすべて相手に見せて、その枚数×30ダメージ。その後、見せたエネルギーを山札にもどして切る。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ストロングフレア",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 170
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-016",
+   "localId": "016",
+   "name": "クイタラン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "はかいび",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-017",
+   "localId": "017",
+   "name": "マンタイン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なみをおこす",
+     "effect": "おたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、それぞれ山札を4枚引く。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "バブルドレイン",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-018",
+   "localId": "018",
+   "name": "カイオーガ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "たきのぼり",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "あらぶるうず",
+     "effect": "名前に「伝説」とつくスタジアムが場に出ているなら、相手のベンチポケモン全員にも、それぞれ50ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-019",
+   "localId": "019",
+   "name": "プルリル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっかける",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-020",
+   "localId": "020",
+   "name": "ブルンゲル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "プルリル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しんかいドロー",
+     "effect": "自分の番に1回使える。自分の山札を1枚引く。その後、のぞむなら、自分の手札を1枚選び、山札の下にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-021",
+   "localId": "021",
+   "name": "ヨワシex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 260,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "オーシャンゲイン",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。このポケモンのHPを「50」回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "ハイドロスプラッシュ",
+     "damage": 220
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-022",
+   "localId": "022",
+   "name": "エレブー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ずつき",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-023",
+   "localId": "023",
+   "name": "エレキブル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エレブー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "のしかかり",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ボルテージハンマー",
+     "effect": "このポケモンについている基本エネルギーを好きなだけトラッシュし、その枚数×60ダメージ。",
+     "damage": "60×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-024",
+   "localId": "024",
+   "name": "ライコウex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 200,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "いかずちをまとう",
+     "effect": "このワザは、先攻プレイヤーの最初の番でも使える。自分の山札からエネルギーを1枚選び、このポケモンにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "パワーラッシュ",
+     "effect": "コインを1回投げウラなら、次の自分の番、このポケモンはワザが使えない。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-025",
+   "localId": "025",
+   "name": "ボルトロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "けしんだんけつ",
+     "effect": "自分の場に「トルネロス」「ボルトロス」「ランドロス」「ラブトロス」がいるなら、このポケモンはワザを使うための[C]エネルギーが、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "サンダーエッジ",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-026",
+   "localId": "026",
+   "name": "バチンウニ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "エナジークラッシュ",
+     "effect": "相手のポケモン全員についているエネルギーの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-027",
+   "localId": "027",
+   "name": "カイデン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "こうそくいどう",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-028",
+   "localId": "028",
+   "name": "タイカイデン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カイデン",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "しゅうげき",
+     "effect": "この番に、このポケモンが「カイデン」から進化していたなら、90ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "スピードひこう",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-029",
+   "localId": "029",
+   "name": "スリープ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "はたく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-030",
+   "localId": "030",
+   "name": "スリーパー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "スリープ",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "マインドルーラー",
+     "effect": "相手の手札の枚数×20ダメージ。",
+     "damage": "20×"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "さいみんはどう",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-031",
+   "localId": "031",
+   "name": "ギラティナ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "カオスクローラー",
+     "effect": "次の相手の番、このポケモンはワザのダメージを受けない。前の自分の番に、自分のポケモンが「カオスクローラー」を使っていたなら、このワザは使えない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-032",
+   "localId": "032",
+   "name": "ゴビット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "なぐる",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-033",
+   "localId": "033",
+   "name": "メガゴルーグex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 350,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゴビット",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きどうせいげん",
+     "effect": "自分の手札が10枚以上のときにしか、このポケモンはワザが使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ゴライアスパンチ",
+     "effect": "このポケモンにも30ダメージ。",
+     "damage": 300
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-034",
+   "localId": "034",
+   "name": "ラブトロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "けしんだんけつ",
+     "effect": "自分の場に「トルネロス」「ボルトロス」「ランドロス」「ラブトロス」がいるなら、このポケモンはワザを使うための[C]エネルギーが、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ライジングハート",
+     "effect": "相手のバトルポケモンが「ポケモンex」なら、100ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-035",
+   "localId": "035",
+   "name": "サンド",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "かくせい",
+     "effect": "このポケモンから進化するカードを、自分の山札から1枚選び、このポケモンにのせて進化させる。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-036",
+   "localId": "036",
+   "name": "サンドパン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "サンド",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はんげきばり",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを3個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "あなほりクロー",
+     "effect": "相手の山札を上から1枚トラッシュする。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-037",
+   "localId": "037",
+   "name": "イワーク",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ガードプレス",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-038",
+   "localId": "038",
+   "name": "ハガネール",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 190,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "イワーク",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こうみつどアーマー",
+     "effect": "このポケモンのHPがまんたんの状態なら、このポケモンが相手のポケモンから受けるワザのダメージは「-60」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハードスイング",
+     "effect": "このワザのダメージは抵抗力を計算しない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-039",
+   "localId": "039",
+   "name": "グラードン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "かいりき",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "あらぶるだいち",
+     "effect": "名前に「伝説」とつくスタジアムが場に出ているなら、170ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-040",
+   "localId": "040",
+   "name": "ランドロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "けしんだんけつ",
+     "effect": "自分の場に「トルネロス」「ボルトロス」「ランドロス」「ラブトロス」がいるなら、このポケモンはワザを使うための[C]エネルギーが、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ガイアクラッシュ",
+     "effect": "場に出ているスタジアムをトラッシュする。",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-041",
+   "localId": "041",
+   "name": "ニドラン♀",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ともだちをさがす",
+     "effect": "自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "かじる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-042",
+   "localId": "042",
+   "name": "ニドリーナ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ニドラン♀",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-043",
+   "localId": "043",
+   "name": "ニドクイン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 170,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ニドリーナ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ははのいざない",
+     "effect": "自分の番に1回使える。コインを1回投げオモテなら、相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ギガインパクト",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-044",
+   "localId": "044",
+   "name": "イトマル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "どくばり",
+     "effect": "相手のバトルポケモンをどくにする。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "バグパニック",
+     "effect": "自分の山札を下から7枚オモテにして、その中にある、ワザ「バグパニック」を持つポケモンの枚数×50ダメージ。オモテにしたポケモンは山札にもどして切る。残りのカードはトラッシュする。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-045",
+   "localId": "045",
+   "name": "アリアドス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "イトマル",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "げきつうどく",
+     "effect": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は4個になる。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おんみつばり",
+     "effect": "次の相手の番、このポケモンはたねポケモンからワザのダメージを受けない。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-046",
+   "localId": "046",
+   "name": "ヤミラミ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "おびきだす",
+     "effect": "相手の山札を上から5枚オモテにして、その中からたねポケモンを好きなだけ選び、相手のベンチに出す。残りのカードは山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ふきつなめ",
+     "effect": "相手のポケモン1匹に、ダメカンを5個のせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-047",
+   "localId": "047",
+   "name": "マーイーカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "はたきおとす",
+     "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-048",
+   "localId": "048",
+   "name": "メガカラマネロex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 320,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "マーイーカ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "サイコマリオネット",
+     "effect": "相手のベンチポケモンの数×70ダメージ。",
+     "damage": "70×"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ぶきみなねんぱ",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-049",
+   "localId": "049",
+   "name": "クリムガン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Water"
+     ],
+     "name": "ひきずりだす",
+     "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンに40ダメージ。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ツメできりさく",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-050",
+   "localId": "050",
+   "name": "ジャラコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Fighting"
+     ],
+     "name": "かたいあたま",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-051",
+   "localId": "051",
+   "name": "ジャランゴ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ジャラコ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Fighting"
+     ],
+     "name": "ダブルスマッシュ",
+     "effect": "コインを2回投げ、オモテの数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-052",
+   "localId": "052",
+   "name": "ジャラランガ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 160,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジャランゴ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スケイルビート",
+     "effect": "自分の番に1回使える。自分の山札を上から6枚見て、その中から基本エネルギーを好きなだけ選び、自分の[N]ポケモンに好きなようにつける。残りのカードは山札にもどして切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 170
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-053",
+   "localId": "053",
+   "name": "モトトカゲ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Grass",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ブレイクスルー",
+     "effect": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-054",
+   "localId": "054",
+   "name": "ルリリ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [],
+     "name": "ぴょんぴょんチャージ",
+     "effect": "自分の山札からエネルギーを1枚選び、ベンチポケモンにつける。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-055",
+   "localId": "055",
+   "name": "チルット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はしゃぐ",
+     "effect": "このポケモンをベンチポケモンと入れ替える。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つつく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-056",
+   "localId": "056",
+   "name": "チルタリス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チルット",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "コットンキャリー",
+     "effect": "このポケモンがいるかぎり、自分のたねポケモン全員は、にげるためのエネルギーが、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はばたく",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-057",
+   "localId": "057",
+   "name": "カクレオン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "カラフルウィップ",
+     "effect": "自分の手札からポケモンを好きなだけ相手に見せて、見せたポケモンのタイプの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-058",
+   "localId": "058",
+   "name": "メガレックウザex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はしゃのほうこう",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。自分の山札を上から4枚見て、その中から基本エネルギーを1枚選び、このポケモンにつける。残りのカードはウラにして切り、山札の下にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ストームエメラルダ",
+     "effect": "自分のポケモン全員についている[R]と[L]エネルギーの数×50ダメージ。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-059",
+   "localId": "059",
+   "name": "トルネロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "けしんだんけつ",
+     "effect": "自分の場に「トルネロス」「ボルトロス」「ランドロス」「ラブトロス」がいるなら、このポケモンはワザを使うための[C]エネルギーが、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スクリューダイブ",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-060",
+   "localId": "060",
+   "name": "ヤヤコマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふいをつく",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-061",
+   "localId": "061",
+   "name": "ヒノヤコマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤヤコマ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "わしづかみ",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-062",
+   "localId": "062",
+   "name": "ファイアローex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ヒノヤコマ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エキサイトダイブ",
+     "effect": "自分の番に、このカードが手札にあり、自分の場に[C]タイプの「メガシンカex」がいるなら、1回使える。このカードをベンチに出す。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かぎづめハント",
+     "effect": "のぞむなら、自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-063",
+   "localId": "063",
+   "name": "おいしいおむすび",
+   "category": "Trainer",
+   "rarity": "Common",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトルポケモンのHPを「30」回復する。自分のトラッシュにある「おいしいおむすび」（このカードをのぞく）1枚につき、回復するHPは「30」多くなる。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-064",
+   "localId": "064",
+   "name": "ぼうけんのランタン",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「基本[R]エネルギー」と「基本[L]エネルギー」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-065",
+   "localId": "065",
+   "name": "とくちゅうチョッキ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモン（「メガシンカex」をのぞく）が、相手の「メガシンカex」から受けるワザのダメージは「-60」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-066",
+   "localId": "066",
+   "name": "メガレックウザキャップ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "デルタギフト",
+     "effect": "「メガレックウザキャップ」がついている自分のポケモン全員に、山札から基本エネルギーを1枚ずつつける。そして山札を切る。"
+    }
+   ],
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンは、このカードに書かれているワザを使える。［ワザを使うためのエネルギーは必要。］",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-067",
+   "localId": "067",
+   "name": "MCの盛り上げ",
+   "category": "Trainer",
+   "rarity": "Common",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を2枚引く。相手のサイドの残り枚数が3枚以下なら、さらに2枚引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-068",
+   "localId": "068",
+   "name": "ギリー",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からサポートとスタジアムを合計3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-069",
+   "localId": "069",
+   "name": "ヒガナの信頼",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトルポケモンをベンチポケモンと入れ替える。その後、ベンチに入れ替えたポケモンについているエネルギーを1個選び、新しいバトルポケモンにつけ替える。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-070",
+   "localId": "070",
+   "name": "フウとランの修行",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を2枚引く。その後、名前に「伝説」とつくスタジアムが場に出ているなら、この「フウとランの修行」はトラッシュせず、手札にもどす。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-071",
+   "localId": "071",
+   "name": "伝説の海溝",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのポケモン全員は、HPを回復するとき、回復するHPが2倍になる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-072",
+   "localId": "072",
+   "name": "伝説の海溝",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのポケモン全員は、HPを回復するとき、回復するHPが2倍になる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-073",
+   "localId": "073",
+   "name": "伝説の山頂",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの[C]ポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、とられるサイドは1枚少なくなる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-074",
+   "localId": "074",
+   "name": "伝説の山頂",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの[C]ポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、とられるサイドは1枚少なくなる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-075",
+   "localId": "075",
+   "name": "伝説の溶岩洞",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場の進化ポケモン全員は、特性がすべてなくなる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-076",
+   "localId": "076",
+   "name": "伝説の溶岩洞",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場の進化ポケモン全員は、特性がすべてなくなる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-077",
+   "localId": "077",
+   "name": "アメモース",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アメタマ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "こわいもよう",
+     "effect": "次の相手の番、このワザを受けたポケモンは、ワザが使えない。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "バグパニック",
+     "effect": "自分の山札を下から7枚オモテにして、その中にある、ワザ「バグパニック」を持つポケモンの枚数×50ダメージ。オモテにしたポケモンは山札にもどして切る。残りのカードはトラッシュする。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-078",
+   "localId": "078",
+   "name": "ガーディ",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ほえる",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "うしろげり",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-079",
+   "localId": "079",
+   "name": "ブーバーン",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ブーバー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "バディブースト",
+     "effect": "自分の番に1回使える。自分の手札から「基本[R]エネルギー」と「基本[L]エネルギー」をそれぞれ1枚まで選び、自分の「エレキブル」または「ブーバーン」に好きなようにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートスタンプ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-080",
+   "localId": "080",
+   "name": "カイオーガ",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "たきのぼり",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "あらぶるうず",
+     "effect": "名前に「伝説」とつくスタジアムが場に出ているなら、相手のベンチポケモン全員にも、それぞれ50ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-081",
+   "localId": "081",
+   "name": "エレキブル",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 140,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エレブー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "のしかかり",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ボルテージハンマー",
+     "effect": "このポケモンについている基本エネルギーを好きなだけトラッシュし、その枚数×60ダメージ。",
+     "damage": "60×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-082",
+   "localId": "082",
+   "name": "バチンウニ",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 80,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "エナジークラッシュ",
+     "effect": "相手のポケモン全員についているエネルギーの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-083",
+   "localId": "083",
+   "name": "ラブトロス",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "けしんだんけつ",
+     "effect": "自分の場に「トルネロス」「ボルトロス」「ランドロス」「ラブトロス」がいるなら、このポケモンはワザを使うための[C]エネルギーが、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ライジングハート",
+     "effect": "相手のバトルポケモンが「ポケモンex」なら、100ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-084",
+   "localId": "084",
+   "name": "グラードン",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "かいりき",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "あらぶるだいち",
+     "effect": "名前に「伝説」とつくスタジアムが場に出ているなら、170ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-085",
+   "localId": "085",
+   "name": "マーイーカ",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "はたきおとす",
+     "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-086",
+   "localId": "086",
+   "name": "ルリリ",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 30,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [],
+     "name": "ぴょんぴょんチャージ",
+     "effect": "自分の山札からエネルギーを1枚選び、ベンチポケモンにつける。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-087",
+   "localId": "087",
+   "name": "チルタリス",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チルット",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "コットンキャリー",
+     "effect": "このポケモンがいるかぎり、自分のたねポケモン全員は、にげるためのエネルギーが、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はばたく",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-088",
+   "localId": "088",
+   "name": "カクレオン",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "カラフルウィップ",
+     "effect": "自分の手札からポケモンを好きなだけ相手に見せて、見せたポケモンのタイプの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-089",
+   "localId": "089",
+   "name": "メガグソクムシャex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 340,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コソクムシ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "とどめをさす",
+     "effect": "相手のバトルポケモンにダメカンがのっているなら、160ダメージ追加。",
+     "damage": "60+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クワトロホールド",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-090",
+   "localId": "090",
+   "name": "ヒートロトムex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 190,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "さいかねつ",
+     "effect": "自分のトラッシュにある「基本[R]エネルギー」をすべて相手に見せて、その枚数×30ダメージ。その後、見せたエネルギーを山札にもどして切る。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ストロングフレア",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 170
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-091",
+   "localId": "091",
+   "name": "ヨワシex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 260,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "オーシャンゲイン",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。このポケモンのHPを「50」回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "ハイドロスプラッシュ",
+     "damage": 220
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-092",
+   "localId": "092",
+   "name": "ライコウex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 200,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "いかずちをまとう",
+     "effect": "このワザは、先攻プレイヤーの最初の番でも使える。自分の山札からエネルギーを1枚選び、このポケモンにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "パワーラッシュ",
+     "effect": "コインを1回投げウラなら、次の自分の番、このポケモンはワザが使えない。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-093",
+   "localId": "093",
+   "name": "メガゴルーグex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 350,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゴビット",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きどうせいげん",
+     "effect": "自分の手札が10枚以上のときにしか、このポケモンはワザが使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ゴライアスパンチ",
+     "effect": "このポケモンにも30ダメージ。",
+     "damage": 300
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-094",
+   "localId": "094",
+   "name": "メガカラマネロex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 320,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "マーイーカ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "サイコマリオネット",
+     "effect": "相手のベンチポケモンの数×70ダメージ。",
+     "damage": "70×"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ぶきみなねんぱ",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-095",
+   "localId": "095",
+   "name": "メガレックウザex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 280,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はしゃのほうこう",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。自分の山札を上から4枚見て、その中から基本エネルギーを1枚選び、このポケモンにつける。残りのカードはウラにして切り、山札の下にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ストームエメラルダ",
+     "effect": "自分のポケモン全員についている[R]と[L]エネルギーの数×50ダメージ。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-096",
+   "localId": "096",
+   "name": "ファイアローex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 280,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ヒノヤコマ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エキサイトダイブ",
+     "effect": "自分の番に、このカードが手札にあり、自分の場に[C]タイプの「メガシンカex」がいるなら、1回使える。このカードをベンチに出す。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かぎづめハント",
+     "effect": "のぞむなら、自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-097",
+   "localId": "097",
+   "name": "ぼうけんのランタン",
+   "category": "Trainer",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「基本[R]エネルギー」と「基本[L]エネルギー」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-098",
+   "localId": "098",
+   "name": "とくちゅうチョッキ",
+   "category": "Trainer",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモン（「メガシンカex」をのぞく）が、相手の「メガシンカex」から受けるワザのダメージは「-60」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-100",
+   "localId": "100",
+   "name": "MCの盛り上げ",
+   "category": "Trainer",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を2枚引く。相手のサイドの残り枚数が3枚以下なら、さらに2枚引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-101",
+   "localId": "101",
+   "name": "ギリー",
+   "category": "Trainer",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からサポートとスタジアムを合計3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-102",
+   "localId": "102",
+   "name": "ヒガナの信頼",
+   "category": "Trainer",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトルポケモンをベンチポケモンと入れ替える。その後、ベンチに入れ替えたポケモンについているエネルギーを1個選び、新しいバトルポケモンにつけ替える。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-103",
+   "localId": "103",
+   "name": "フウとランの修行",
+   "category": "Trainer",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を2枚引く。その後、名前に「伝説」とつくスタジアムが場に出ているなら、この「フウとランの修行」はトラッシュせず、手札にもどす。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-104",
+   "localId": "104",
+   "name": "グロウ草エネルギー",
+   "category": "Energy",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、[G]エネルギー1個ぶんとしてはたらく。このカードをつけている[G]ポケモンは、最大HPが「＋20」される。",
+   "energyType": "Special",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-105",
+   "localId": "105",
+   "name": "ニトロ炎エネルギー",
+   "category": "Energy",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、[R]エネルギー1個ぶんとしてはたらく。このカードをつけている[R]ポケモンが使うワザの効果で、このカードがトラッシュされたなら、ワザのダメージや効果のあとに、手札にもどす。",
+   "energyType": "Special",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-106",
+   "localId": "106",
+   "name": "バブル水エネルギー",
+   "category": "Energy",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、[W]エネルギー1個ぶんとしてはたらく。このカードをつけている[W]ポケモンは、特殊状態にならず、受けている特殊状態は、すべて回復する。",
+   "energyType": "Special",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-107",
+   "localId": "107",
+   "name": "メガグソクムシャex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 340,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コソクムシ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "とどめをさす",
+     "effect": "相手のバトルポケモンにダメカンがのっているなら、160ダメージ追加。",
+     "damage": "60+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クワトロホールド",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-108",
+   "localId": "108",
+   "name": "ライコウex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 200,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "いかずちをまとう",
+     "effect": "このワザは、先攻プレイヤーの最初の番でも使える。自分の山札からエネルギーを1枚選び、このポケモンにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "パワーラッシュ",
+     "effect": "コインを1回投げウラなら、次の自分の番、このポケモンはワザが使えない。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-109",
+   "localId": "109",
+   "name": "メガゴルーグex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 350,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゴビット",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きどうせいげん",
+     "effect": "自分の手札が10枚以上のときにしか、このポケモンはワザが使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ゴライアスパンチ",
+     "effect": "このポケモンにも30ダメージ。",
+     "damage": 300
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-110",
+   "localId": "110",
+   "name": "メガレックウザex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 280,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はしゃのほうこう",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。自分の山札を上から4枚見て、その中から基本エネルギーを1枚選び、このポケモンにつける。残りのカードはウラにして切り、山札の下にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ストームエメラルダ",
+     "effect": "自分のポケモン全員についている[R]と[L]エネルギーの数×50ダメージ。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-111",
+   "localId": "111",
+   "name": "ギリー",
+   "category": "Trainer",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からサポートとスタジアムを合計3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-112",
+   "localId": "112",
+   "name": "ヒガナの信頼",
+   "category": "Trainer",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトルポケモンをベンチポケモンと入れ替える。その後、ベンチに入れ替えたポケモンについているエネルギーを1個選び、新しいバトルポケモンにつけ替える。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  },
+  {
+   "id": "M6-113",
+   "localId": "113",
+   "name": "メガレックウザex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 280,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はしゃのほうこう",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。自分の山札を上から4枚見て、その中から基本エネルギーを1枚選び、このポケモンにつける。残りのカードはウラにして切り、山札の下にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ストームエメラルダ",
+     "effect": "自分のポケモン全員についている[R]と[L]エネルギーの数×50ダメージ。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M6",
+    "name": "ストームエメラルダ"
+   }
+  }
+ ]
+}

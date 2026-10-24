@@ -1,0 +1,9967 @@
+{
+ "id": "M2a",
+ "name": "MEGAドリームex",
+ "releaseDate": "2025-11-28",
+ "total": 250,
+ "cards": [
+  {
+   "id": "M2a-001",
+   "localId": "001",
+   "name": "ヒビキのカイロス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はさむ",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "いっぽんがえし",
+     "effect": "前の相手の番に、ワザのダメージで、自分の「ヒビキのポケモン」がきぜつしていたなら、100ダメージ追加。",
+     "damage": "70+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-002",
+   "localId": "002",
+   "name": "ヤンヤンマ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふきとばし",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "するどいはね",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-003",
+   "localId": "003",
+   "name": "メガヤンマex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤンヤンマ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "バズブースト",
+     "effect": "自分の番に、このポケモンがベンチからバトル場に出たとき、1回使える。自分の山札から「基本[G]エネルギー」を3枚まで選び、このポケモンにつける。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ジェットサイクロン",
+     "effect": "このポケモンについているエネルギーを3個選び、ベンチポケモン1匹につけ替える。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-004",
+   "localId": "004",
+   "name": "ケムッソ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "むしくい",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-005",
+   "localId": "005",
+   "name": "カラサリス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ケムッソ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ふえるまゆ",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分の山札から「カラサリス」または「マユルド」を1枚選び、ベンチに出す。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "たいあたり",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-006",
+   "localId": "006",
+   "name": "アゲハント",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "カラサリス",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "しびれごな",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "エナジーストロー",
+     "effect": "相手の手札を見て、その中にあるエネルギーの枚数×80ダメージ。",
+     "damage": "80×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-007",
+   "localId": "007",
+   "name": "マユルド",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ケムッソ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "いれかわる",
+     "effect": "このポケモンをベンチポケモンと入れ替える。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-008",
+   "localId": "008",
+   "name": "ドクケイル",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "マユルド",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "さざめくかぜ",
+     "effect": "自分の番に1回使える。コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、相手の手札にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "ゆうやみどく",
+     "effect": "相手のバトルポケモンをどくとねむりにする。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-009",
+   "localId": "009",
+   "name": "シロナのロゼリア",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "トゲでさす",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-010",
+   "localId": "010",
+   "name": "シロナのロズレイド",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シロナのロゼリア",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "グローリーエール",
+     "effect": "このポケモンがいるかぎり、自分の「シロナのポケモン」が使うワザの、相手のバトルポケモンへのダメージは「+30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "リーフステップ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-011",
+   "localId": "011",
+   "name": "スボミー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 30,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [],
+     "name": "むずむずかふん",
+     "effect": "次の相手の番、相手は手札からグッズを出して使えない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-012",
+   "localId": "012",
+   "name": "シェイミ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はなのカーテン",
+     "effect": "このポケモンがいるかぎり、自分のベンチポケモン（「ルールを持つポケモン」をのぞく）全員は、相手のワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "けとばす",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-013",
+   "localId": "013",
+   "name": "イシズマイ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かくせい",
+     "effect": "このポケモンから進化するカードを、自分の山札から1枚選び、このポケモンにのせて進化させる。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-014",
+   "localId": "014",
+   "name": "イワパレス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 150,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "イシズマイ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しんぴのいしやど",
+     "effect": "このポケモンは、相手の「ポケモンex」からワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "グレートシザー",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-015",
+   "localId": "015",
+   "name": "ロケット団のタマンチュラ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "とっしん",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-016",
+   "localId": "016",
+   "name": "ロケット団のワナイダー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のタマンチュラ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "チャージアップ",
+     "effect": "自分の番に1回使える。自分のトラッシュから基本エネルギーを1枚選び、このポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ロケットラッシュ",
+     "effect": "自分の場の「ロケット団のポケモン」の数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-017",
+   "localId": "017",
+   "name": "オーガポン みどりのめんex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "みどりのまい",
+     "effect": "自分の番に1回使える。自分の手札から「基本[G]エネルギー」を1枚選び、このポケモンにつける。その後、自分の山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "まんようしぐれ",
+     "effect": "おたがいのバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-018",
+   "localId": "018",
+   "name": "ヒビキのマグマッグ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ひをはく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-019",
+   "localId": "019",
+   "name": "ヒビキのマグカルゴ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒビキのマグマッグ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "とけてながれる",
+     "effect": "このポケモンにエネルギーがついていないなら、このポケモンのにげるためのエネルギーは、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "ようがんバースト",
+     "effect": "このポケモンについている[R]エネルギーを5枚までトラッシュし、その枚数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-020",
+   "localId": "020",
+   "name": "エンテイ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "フレアフォール",
+     "effect": "自分の場に[R]エネルギーが4個以上あるなら、90ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-021",
+   "localId": "021",
+   "name": "ヒビキのホウオウex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こんじきのほのお",
+     "effect": "自分の番に1回使える。自分の手札から「基本[R]エネルギー」を2枚まで選び、ベンチの「ヒビキのポケモン」1匹につける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "シャイニングフェザー",
+     "effect": "自分のポケモン全員のHPを、それぞれ「50」回復する。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-022",
+   "localId": "022",
+   "name": "ドンメル",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しゃくねつボディ",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンをやけどにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "かえん",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-023",
+   "localId": "023",
+   "name": "バクーダ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドンメル",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "やけどあぶり",
+     "effect": "相手のバトルポケモンがやけどでないなら、このワザは失敗。",
+     "damage": 110
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "パワースタンプ",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 170
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-024",
+   "localId": "024",
+   "name": "ポカブ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "たいあたり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "ころがる",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-025",
+   "localId": "025",
+   "name": "チャオブー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 110,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ポカブ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "かえん",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートスタンプ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-026",
+   "localId": "026",
+   "name": "エンブオー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 180,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "チャオブー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "れっからんぶ",
+     "effect": "自分の番に何回でも使える。自分の手札から「基本[R]エネルギー」を1枚選び、自分のポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートスタンプ",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-027",
+   "localId": "027",
+   "name": "Nのダルマッカ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ころがりタックル",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ほのお",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-028",
+   "localId": "028",
+   "name": "Nのヒヒダルマ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "Nのダルマッカ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "バックドラフト",
+     "effect": "相手のトラッシュにある基本エネルギーの枚数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ひだるまキャノン",
+     "effect": "このポケモンについているエネルギーをすべてトラッシュし、相手のベンチポケモン1匹にも、90ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-029",
+   "localId": "029",
+   "name": "レシラムex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ブレイズバースト",
+     "effect": "相手がすでにとったサイドの枚数×50ダメージ追加。このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-030",
+   "localId": "030",
+   "name": "カルボウ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "おにび",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-031",
+   "localId": "031",
+   "name": "ソウブレイズex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カルボウ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "しんえんほむら",
+     "effect": "自分のトラッシュにあるエネルギーの枚数×20ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Psychic",
+      "Metal"
+     ],
+     "name": "アメジストレイジ",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 280
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-032",
+   "localId": "032",
+   "name": "コダック",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しめりけ",
+     "effect": "このポケモンがいるかぎり、おたがいのポケモン全員は、そのポケモン自身をきぜつさせる効果の特性が、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-033",
+   "localId": "033",
+   "name": "ゴルダック",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コダック",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しめりけ",
+     "effect": "このポケモンがいるかぎり、おたがいのポケモン全員は、そのポケモン自身をきぜつさせる効果の特性が、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハイドロポンプ",
+     "effect": "このポケモンについている[W]エネルギーの数×20ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-034",
+   "localId": "034",
+   "name": "ロケット団のフリーザー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "レジストヴェール",
+     "effect": "このポケモンがいるかぎり、自分の場のたねポケモンの「ロケット団のポケモン」全員は、相手のポケモンが使うワザの効果を受けない。（すでに受けている効果は、なくならない。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダークフロスト",
+     "effect": "このポケモンに「ロケット団エネルギー」がついているなら、60ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-035",
+   "localId": "035",
+   "name": "ユキワラシ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ひんやり",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-036",
+   "localId": "036",
+   "name": "メガユキメノコex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 310,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ユキワラシ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "うらみぶし",
+     "effect": "相手の手札の枚数×50ダメージ。",
+     "damage": "50×"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "アブソリュートスノー",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-037",
+   "localId": "037",
+   "name": "Nのバニプッチ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "スノーアイス",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-038",
+   "localId": "038",
+   "name": "Nのバニリッチ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "Nのバニプッチ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はねまわる",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぜったいれいど",
+     "effect": "次の相手の番、このワザを受けたポケモンは、ワザが使えない。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-039",
+   "localId": "039",
+   "name": "Nのバイバニラ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "Nのバニリッチ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かさねゆき",
+     "effect": "相手のポケモン全員に、それぞれのっているダメカンの数が2倍になるように、ダメカンをのせる。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ふぶき",
+     "effect": "相手のベンチポケモン全員にも、それぞれ10ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-040",
+   "localId": "040",
+   "name": "ユキハミ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 50,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "つらら",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-041",
+   "localId": "041",
+   "name": "モスノウ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ユキハミ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いざなうはね",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。おたがいのプレイヤーは、それぞれ山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "コールドサイクロン",
+     "effect": "このポケモンについている[W]エネルギーを1個選び、ベンチポケモンにつけ替える。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-042",
+   "localId": "042",
+   "name": "ブリザポス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "アイスショット",
+     "effect": "相手のベンチポケモン1匹にも、20ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water"
+     ],
+     "name": "フロストタイフーン",
+     "effect": "次の自分の番、このポケモンは「フロストタイフーン」が使えない。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-043",
+   "localId": "043",
+   "name": "パオジアン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ゆきにしずめる",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。場に出ているスタジアムをトラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "アイシクルループ",
+     "effect": "このポケモンについているエネルギーを1個選び、手札にもどす。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-044",
+   "localId": "044",
+   "name": "ピカチュウex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 200,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "がんばりハート",
+     "effect": "このポケモンのHPがまんたんの状態で、このポケモンがワザのダメージを受けてきぜつするとき、きぜつせず、残りHPが「10」の状態で場に残る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Lightning",
+      "Metal"
+     ],
+     "name": "トパーズボルト",
+     "effect": "このポケモンについているエネルギーを3個選び、トラッシュする。",
+     "damage": 300
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-045",
+   "localId": "045",
+   "name": "コイル",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "ピッカリだま",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-046",
+   "localId": "046",
+   "name": "レアコイル",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コイル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かじょうほうでん",
+     "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。自分のトラッシュから基本エネルギーを3枚まで選び、自分の[L]ポケモンに好きなようにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ライトニングボール",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-047",
+   "localId": "047",
+   "name": "シビシラス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 40,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "じっとする",
+     "effect": "このポケモンのHPを「10」回復する。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-048",
+   "localId": "048",
+   "name": "シビビール",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シビシラス",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エレキダイナモ",
+     "effect": "自分のトラッシュから[雷]エネルギーを1枚選び、自分のベンチポケモンにつける。この特性は、自分の番に1回使える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ライトニングボール",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-049",
+   "localId": "049",
+   "name": "メガシビルドンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 350,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "シビビール",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ばくれつだん",
+     "effect": "相手のポケモン2匹に、それぞれ60ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ディザスターショック",
+     "effect": "のぞむなら、このポケモンについている[L]エネルギーを2個トラッシュし、相手のバトルポケモンをマヒにする。",
+     "damage": 190
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-050",
+   "localId": "050",
+   "name": "マッギョ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 110,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "とびつくわな",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。次の自分の番、このワザを受けたポケモンが受けるワザのダメージは「+100」される。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-051",
+   "localId": "051",
+   "name": "ゼクロムex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ボルテージバースト",
+     "effect": "相手がすでにとったサイドの枚数×50ダメージ追加。このポケモンにも30ダメージ。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-052",
+   "localId": "052",
+   "name": "エリキテル",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "エレキック",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-053",
+   "localId": "053",
+   "name": "エレザード",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エリキテル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エリマキはつでん",
+     "effect": "この番に、手札から「カナリィ」を出して使っていたなら、自分の番に1回使える。自分の山札から「基本[L]エネルギー」を2枚まで選び、このポケモンにつける。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "パワフルボルト",
+     "effect": "このポケモンについているエネルギーの数ぶんコインを投げ、オモテの数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-054",
+   "localId": "054",
+   "name": "カプ・コケコ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "ファストフライト",
+     "effect": "このワザは、先攻プレイヤーの最初の番でも使える。自分の手札をすべてトラッシュし、山札を5枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "サンダーブラスト",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-055",
+   "localId": "055",
+   "name": "ゼラオラ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっかく",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "サンダーブリッツ",
+     "effect": "このポケモンについているエネルギーをすべてトラッシュし、相手のベンチの「ポケモンex」1匹に、210ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-056",
+   "localId": "056",
+   "name": "ナンジャモのズピカ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "プチでんき",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-057",
+   "localId": "057",
+   "name": "ナンジャモのハラバリーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ナンジャモのズピカ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エレキストリーマー",
+     "effect": "自分の番に何回でも使える。自分の手札から「基本[L]エネルギー」を1枚選び、自分の「ナンジャモのポケモン」につける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "サンダーボルト",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 230
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-058",
+   "localId": "058",
+   "name": "ナンジャモのカイデン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "でんこうせっか",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-059",
+   "localId": "059",
+   "name": "ナンジャモのタイカイデン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ナンジャモのカイデン",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "フラッシュドロー",
+     "effect": "自分の番に、このポケモンについている「基本[L]エネルギー」を1個トラッシュするなら、1回使える。自分の手札が6枚になるように、山札を引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マッハボルト",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-060",
+   "localId": "060",
+   "name": "リーリエのピッピex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 190,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "フェアリーゾーン",
+     "effect": "このポケモンがいるかぎり、相手の場の[N]ポケモン全員の弱点は、すべて[P]タイプになる。［弱点は「×2」で計算する。］"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "フルムーンロンド",
+     "effect": "おたがいのベンチポケモンの数×20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-061",
+   "localId": "061",
+   "name": "ロケット団のタマタマ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ねんじる",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-062",
+   "localId": "062",
+   "name": "ロケット団のナッシー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のタマタマ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "トライキネシス",
+     "effect": "コインを3回投げ、すべてオモテなら、相手のポケモンを1匹選び、きぜつさせる。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "すてみタックル",
+     "effect": "このポケモンにも30ダメージ。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-063",
+   "localId": "063",
+   "name": "ロケット団のミュウツーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "パワーセーバー",
+     "effect": "自分の場の「ロケット団のポケモン」が4匹以上のときにしか、このポケモンはワザが使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "イレイザーボール",
+     "effect": "のぞむなら、自分のベンチポケモンについているエネルギーを2枚までトラッシュし、その枚数×60ダメージ追加。",
+     "damage": "160+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-064",
+   "localId": "064",
+   "name": "トゲピー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 50,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はたく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-065",
+   "localId": "065",
+   "name": "トゲチック",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "トゲピー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ドレインキッス",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-066",
+   "localId": "066",
+   "name": "トゲキッス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "トゲチック",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ワンダーキッス",
+     "effect": "このポケモンがいるかぎり、相手のバトルポケモンがきぜつするたび、自分はコインを1回投げる。オモテなら、サイドを1枚多くとる。この効果は、この特性を持つポケモンが何匹いても、重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードウイング",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-067",
+   "localId": "067",
+   "name": "ムウマ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "かくせい",
+     "effect": "このポケモンから進化するカードを、自分の山札から1枚選び、このポケモンにのせて進化させる。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-068",
+   "localId": "068",
+   "name": "ムウマージ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ムウマ",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "アサシンマジック",
+     "effect": "相手のバトルポケモンが特殊状態なら、相手のベンチポケモン1匹に、ダメカンを6個のせる。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-069",
+   "localId": "069",
+   "name": "ラルトス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ずつき",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-070",
+   "localId": "070",
+   "name": "キルリア",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ラルトス",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "コールサイン",
+     "effect": "自分の山札からポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "サイコショット",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-071",
+   "localId": "071",
+   "name": "メガサーナイトex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 360,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "キルリア",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "あふれるねがい",
+     "effect": "自分のベンチポケモン全員に、山札から「基本[P]エネルギー」を1枚ずつつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "メガシンフォニア",
+     "effect": "自分のポケモン全員についている[P]エネルギーの数×50ダメージ。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-072",
+   "localId": "072",
+   "name": "ヨマワル",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "むかえにいく",
+     "effect": "自分のトラッシュから「ヨマワル」を3枚まで選び、ベンチに出す。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "つぶやく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-073",
+   "localId": "073",
+   "name": "サマヨール",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヨマワル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "カースドボム",
+     "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。相手のポケモン1匹に、ダメカンを5個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "おにび",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-074",
+   "localId": "074",
+   "name": "ヨノワール",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 160,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "サマヨール",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "カースドボム",
+     "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。相手のポケモン1匹に、ダメカンを13個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "かげしばり",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-075",
+   "localId": "075",
+   "name": "ラティアスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スカイライン",
+     "effect": "このポケモンがいるかぎり、自分のたねポケモン全員のにげるためのエネルギーは、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "むげんのやいば",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-076",
+   "localId": "076",
+   "name": "ロトム",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ロトコール",
+     "effect": "自分の山札から、名前に「ロトム」とつくポケモンを好きなだけ選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ガジェットショー",
+     "effect": "自分のポケモン全員についている「ポケモンのどうぐ」の数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-077",
+   "localId": "077",
+   "name": "ホップのボクレー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はねてかわす",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-078",
+   "localId": "078",
+   "name": "ホップのオーロット",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ホップのボクレー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ホラーリベンジ",
+     "effect": "前の相手の番に、ワザのダメージで、自分の「ホップのポケモン」がきぜつしていたなら、100ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おいつめる",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-079",
+   "localId": "079",
+   "name": "ロケット団のミミッキュ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ほうせきごっこ",
+     "effect": "相手のバトル場の「テラスタル」のポケモンが持つワザを1つ選び、このワザとして使う。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-080",
+   "localId": "080",
+   "name": "レイスポス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ホロウショット",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ファントムビット",
+     "effect": "このポケモンについているエネルギーをすべてトラッシュし、相手のポケモン1匹に、ダメカンを12個のせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-081",
+   "localId": "081",
+   "name": "マシマシラ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アドレナブレイン",
+     "effect": "このポケモンに[D]エネルギーがついているなら、自分の番に1回使える。自分の場のポケモン1匹にのっているダメカンを3個まで選び、相手の場のポケモン1匹にのせ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "サイコトリップ",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-082",
+   "localId": "082",
+   "name": "ロケット団のディグダ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "もぐりまくる",
+     "effect": "ウラが出るまでコインを投げ、オモテの数ぶん、相手の山札を上からトラッシュする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-083",
+   "localId": "083",
+   "name": "ロケット団のダグトリオ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のディグダ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "あなぼこ",
+     "effect": "このポケモンがいるかぎり、相手の番に、相手のバトルポケモンがベンチにもどるたび、そのポケモンにダメカンを2個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "マッドショット",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-084",
+   "localId": "084",
+   "name": "アサナン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ひっぱたく",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-085",
+   "localId": "085",
+   "name": "チャーレム",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アサナン",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "セブンスキック",
+     "effect": "自分の手札が7枚でないなら、このワザは失敗。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-086",
+   "localId": "086",
+   "name": "ルナトーン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ルナサイクル",
+     "effect": "自分の場に「ソルロック」がいて、自分の番に、自分の手札から「基本[F]エネルギー」を1枚トラッシュするなら、1回使える。自分の山札を3枚引く。この特性は別の「ルナサイクル」を使った番は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "パワージェム",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-087",
+   "localId": "087",
+   "name": "ソルロック",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "コスモビーム",
+     "effect": "自分のベンチに「ルナトーン」がいないなら、このワザは失敗。このワザのダメージは弱点・抵抗力を計算しない。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-088",
+   "localId": "088",
+   "name": "シロナのフカマル",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "いわとばし",
+     "effect": "このワザのダメージは抵抗力を計算しない。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-089",
+   "localId": "089",
+   "name": "シロナのガバイト",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シロナのフカマル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おうじゃのよびごえ",
+     "effect": "自分の番に1回使える。自分の山札から「シロナのポケモン」を1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "リューノスライス",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-090",
+   "localId": "090",
+   "name": "シロナのガブリアスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 330,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "シロナのガバイト",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "スクリューダイブ",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 100
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "リューノバスター",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-091",
+   "localId": "091",
+   "name": "リオル",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "かそくづき",
+     "effect": "次の自分の番、このポケモンは「かそくづき」が使えない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-092",
+   "localId": "092",
+   "name": "メガルカリオex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 340,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "リオル",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "はどうづき",
+     "effect": "自分のトラッシュから「基本[F]エネルギー」を3枚まで選び、ベンチポケモンに好きなようにつける。",
+     "damage": 130
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "メガブレイブ",
+     "effect": "次の自分の番、このポケモンは「メガブレイブ」が使えない。",
+     "damage": 270
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-093",
+   "localId": "093",
+   "name": "ヤンチャム",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "とつげき",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-094",
+   "localId": "094",
+   "name": "メガルチャブルex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 250,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ふんばりボディ",
+     "effect": "このポケモンが、ワザのダメージを受けてきぜつするとき、自分はコインを1回投げる。オモテなら、このポケモンはきぜつせず、残りHPが「10」の状態で場に残る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "サマーソルトダイブ",
+     "effect": "場にスタジアムが出ているなら、140ダメージ追加。その後、そのスタジアムをトラッシュする。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-095",
+   "localId": "095",
+   "name": "タンドン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "どろかけ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-096",
+   "localId": "096",
+   "name": "トロッゴン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "タンドン",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ガードプレス",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-20」される。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "パワージェム",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-097",
+   "localId": "097",
+   "name": "セキタンザン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 180,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "トロッゴン",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "タールキャノン",
+     "effect": "相手のポケモン1匹に、140ダメージ。自分のトラッシュに「基本[F]エネルギー」が10枚以上ないなら、このワザは失敗。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きょたいでつっこむ",
+     "effect": "このポケモンについているエネルギーを3個選び、トラッシュする。",
+     "damage": 220
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-098",
+   "localId": "098",
+   "name": "イイネイヌ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "なぐる",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "おれいまいり",
+     "effect": "前の相手の番に、相手がとったサイドの枚数×60ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-099",
+   "localId": "099",
+   "name": "ロケット団のズバット",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 50,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "どくをとばす",
+     "effect": "相手のバトルポケモンをどくにする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-100",
+   "localId": "100",
+   "name": "ロケット団のゴルバット",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のズバット",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こっそりかみつく",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。相手のポケモン1匹に、ダメカンを2個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "あやしいひかり",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-101",
+   "localId": "101",
+   "name": "ロケット団のクロバットex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 310,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ロケット団のゴルバット",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かみつきまわる",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。相手のポケモン2匹に、それぞれダメカンを2個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "アサシンリターン",
+     "effect": "のぞむなら、このポケモンを手札にもどす。（ポケモン以外のカードは、すべてトラッシュする。）",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-102",
+   "localId": "102",
+   "name": "ロケット団のヤミカラス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "たぶらかす",
+     "effect": "自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "いちゃもん",
+     "effect": "相手のバトルポケモンが持つワザを1つ選ぶ。次の相手の番、このワザを受けたポケモンは、選ばれたワザが使えない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-103",
+   "localId": "103",
+   "name": "ロケット団のドンカラス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のヤミカラス",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ロケットフェザー",
+     "effect": "自分の手札から、名前に「ロケット団」とつくサポートを好きなだけトラッシュし、その枚数×60ダメージ。",
+     "damage": "60×"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-104",
+   "localId": "104",
+   "name": "ロケット団のニューラ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ひっかく",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ねくびをかく",
+     "effect": "相手のベンチポケモン1匹に、そのポケモンにのっているダメカンの数×20ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-105",
+   "localId": "105",
+   "name": "ガラル ジグザグマ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "かじる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-106",
+   "localId": "106",
+   "name": "ガラル マッスグマ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ガラル ジグザグマ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "かじる",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ツメできりさく",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-107",
+   "localId": "107",
+   "name": "ガラル タチフサグマ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 170,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ガラル マッスグマ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "スカーシャウト",
+     "effect": "相手のバトルポケモンにのっているダメカンの数×70ダメージ。",
+     "damage": "70×"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "パンクスマッシュ",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-108",
+   "localId": "108",
+   "name": "シロナのミカルゲ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "レイジングカース",
+     "effect": "自分のベンチの「シロナのポケモン」全員にのっているダメカンの数×10ダメージ。このワザのダメージは弱点を計算しない。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-109",
+   "localId": "109",
+   "name": "ズルッグ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "はたきおとす",
+     "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-110",
+   "localId": "110",
+   "name": "メガズルズキンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ズルッグ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はんげきトサカ",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを5個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "アウトローレッグ",
+     "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。相手の山札を上から1枚トラッシュする。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-111",
+   "localId": "111",
+   "name": "Nのゾロア",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ひっかく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-112",
+   "localId": "112",
+   "name": "Nのゾロアークex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "Nのゾロア",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "とりひき",
+     "effect": "自分の番に、自分の手札を1枚トラッシュするなら、1回使える。自分の山札を2枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ナイトジョーカー",
+     "effect": "自分のベンチの「Nのポケモン」が持つワザを1つ選び、このワザとして使う。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-113",
+   "localId": "113",
+   "name": "ゴロンダ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤンチャム",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "どつく",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "おやぶんパンチ",
+     "effect": "自分のベンチの「ヤンチャム」にダメカンがのっているなら、120ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-114",
+   "localId": "114",
+   "name": "キチキギスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "さかてにとる",
+     "effect": "前の相手の番に、自分のポケモンがきぜつしていたなら、自分の番に1回使える。自分の山札を3枚引く。この番、すでに別の「さかてにとる」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クルーエルアロー",
+     "effect": "相手のポケモン1匹に、100ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-115",
+   "localId": "115",
+   "name": "モモワロウ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "さいごのくさり",
+     "effect": "このポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、自分の山札から好きなカードを1枚選び、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "もちラッシュ",
+     "effect": "次の自分の番、このポケモンの「もちラッシュ」のダメージは「+50」される。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-116",
+   "localId": "116",
+   "name": "コマタナ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "つきとばす",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-117",
+   "localId": "117",
+   "name": "キリキザン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コマタナ",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "クイックドロー",
+     "effect": "自分の山札を2枚引く。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-118",
+   "localId": "118",
+   "name": "ドドゲザン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 170,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "キリキザン",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "そうだいしょう",
+     "effect": "このポケモンが使うワザの、相手のバトルポケモンへのダメージは、相手がすでにとったサイド1枚につき「+30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "もろはぎり",
+     "effect": "このポケモンにも50ダメージ。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-119",
+   "localId": "119",
+   "name": "ゲノセクトex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 220,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "メタルシグナル",
+     "effect": "自分の番に1回使える。自分の山札から[M]タイプの進化ポケモンを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "プロテクトチャージ",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-120",
+   "localId": "120",
+   "name": "マギアナ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "オートヒール",
+     "effect": "このポケモンがバトル場にいるかぎり、自分の手札からエネルギーをポケモンにつけるたび、そのポケモンのHPを「90」回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "スパイクドロー",
+     "effect": "自分の山札を2枚引く。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-121",
+   "localId": "121",
+   "name": "ジュラルドン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ぶちかます",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "レイジングハンマー",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-122",
+   "localId": "122",
+   "name": "ブリジュラスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 300,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ジュラルドン",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ごうきんビルド",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分のトラッシュから「基本[M]エネルギー」を2枚まで選び、自分の[M]ポケモンに好きなようにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Metal"
+     ],
+     "name": "メタルディフェンダー",
+     "effect": "次の相手の番、このポケモンの弱点は、すべてなくなる。",
+     "damage": 220
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-123",
+   "localId": "123",
+   "name": "ホップのザシアンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "せつなぎり",
+     "effect": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ブレイブスラッシュ",
+     "effect": "次の自分の番、このポケモンは「ブレイブスラッシュ」が使えない。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-124",
+   "localId": "124",
+   "name": "ミニリュウ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Lightning"
+     ],
+     "name": "ずつき",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-125",
+   "localId": "125",
+   "name": "ハクリュー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ミニリュウ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しんかのみちびき",
+     "effect": "このポケモンにエネルギーがついているなら、自分の番に1回使える。自分の山札から進化ポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Lightning"
+     ],
+     "name": "しっぽのムチ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-126",
+   "localId": "126",
+   "name": "メガカイリューex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 370,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ハクリュー",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スカイキャリー",
+     "effect": "自分の番に1回使える。自分のバトルポケモンをベンチポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "リューノグライド",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 330
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-127",
+   "localId": "127",
+   "name": "レックウザ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "アサルトブレイク",
+     "effect": "この番に、このポケモンがベンチからバトル場に出ていたなら、90ダメージ追加。",
+     "damage": "20+"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ドラゴンクロー",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-128",
+   "localId": "128",
+   "name": "Nのレシラム",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 130,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Lightning"
+     ],
+     "name": "パワーレイジ",
+     "effect": "このポケモンにのっているダメカンの数×20ダメージ。",
+     "damage": "20×"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "イノセントフレイム",
+     "damage": 170
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-129",
+   "localId": "129",
+   "name": "Nのゼクロム",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 130,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひきさく",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Fire",
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ランページサンダー",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-130",
+   "localId": "130",
+   "name": "オンバット",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ガラクタはこび",
+     "effect": "自分の山札から「ポケモンのどうぐ」を1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Darkness"
+     ],
+     "name": "かみつく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-131",
+   "localId": "131",
+   "name": "オンバーン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "オンバット",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "こうそくいどう",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Darkness"
+     ],
+     "name": "きょうかスラッシュ",
+     "effect": "このポケモンに「ポケモンのどうぐ」がついているなら、70ダメージ追加。",
+     "damage": "70+"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-132",
+   "localId": "132",
+   "name": "ドラメシヤ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ちょっとうらむ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Psychic"
+     ],
+     "name": "かみつく",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-133",
+   "localId": "133",
+   "name": "ドロンチ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドラメシヤ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ていさつしれい",
+     "effect": "自分の番に1回使える。自分の山札を上から2枚見て、どちらか1枚を選び、手札に加える。残りのカードは、山札の下にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Psychic"
+     ],
+     "name": "リューズヘッド",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-134",
+   "localId": "134",
+   "name": "ドラパルトex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 320,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ドロンチ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ジェットヘッド",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Fire",
+      "Psychic"
+     ],
+     "name": "ファントムダイブ",
+     "effect": "ダメカン6個を、相手のベンチポケモンに好きなようにのせる。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-135",
+   "localId": "135",
+   "name": "シャリタツ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きゃくよせ",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札を上から6枚見て、その中からサポートを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Water"
+     ],
+     "name": "なみのり",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-136",
+   "localId": "136",
+   "name": "ホップのカビゴン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 150,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ふとっぱら",
+     "effect": "このポケモンがいるかぎり、自分の「ホップのポケモン」が使うワザの、相手のバトルポケモンへのダメージは「+30」される。この効果は、この特性を持つポケモンが何匹いても、重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダイナミックプレス",
+     "effect": "このポケモンにも80ダメージ。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-137",
+   "localId": "137",
+   "name": "ホーホー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "さんどづき",
+     "effect": "コインを3回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-138",
+   "localId": "138",
+   "name": "ヨルノズク",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ホーホー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ほうせきさがし",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、自分の場に「テラスタル」のポケモンがいるなら、1回使える。自分の山札からトレーナーズを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードウイング",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-139",
+   "localId": "139",
+   "name": "スピンロトム",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ファンコール",
+     "effect": "最初の自分の番にだけ1回使える。自分の山札から、HPが「100」以下の[C]ポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。この番、すでに別の「ファンコール」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "とつげきランディング",
+     "effect": "場にスタジアムが出ていないなら、このワザは失敗。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-140",
+   "localId": "140",
+   "name": "バッフロン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "カーリーウォール",
+     "effect": "このポケモンと、自分の別の「バッフロン」がいるかぎり、自分の[C]タイプのたねポケモン全員が、相手のポケモンから受けるワザのダメージは「-60」される。この効果は、この特性を持つポケモンが何匹いても、重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "そこぢから",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-141",
+   "localId": "141",
+   "name": "ホップのウールー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "けとばす",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-142",
+   "localId": "142",
+   "name": "ホップのバイウールー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ホップのウールー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "チャレンジホーン",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ずつき",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-143",
+   "localId": "143",
+   "name": "ホップのウッウ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "きまぐれスピット",
+     "effect": "相手のサイドの残り枚数が4枚・3枚でないなら、このワザは失敗。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-144",
+   "localId": "144",
+   "name": "テラパゴス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "プリズムチャージ",
+     "effect": "自分の山札から、それぞれちがうタイプの基本エネルギーを3枚まで選び、自分の「テラスタル」のポケモンに好きなようにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハードタックル",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-145",
+   "localId": "145",
+   "name": "テラパゴスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ユニオンビート",
+     "effect": "このワザは、後攻プレイヤーの最初の番には使えない。自分のベンチポケモンの数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Water",
+      "Lightning"
+     ],
+     "name": "クラウンオパール",
+     "effect": "次の相手の番、このポケモンはたねポケモン（[C]ポケモンをのぞく）からワザのダメージを受けない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-146",
+   "localId": "146",
+   "name": "Nのポイントアップ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュから基本エネルギーを1枚選び、ベンチの「Nのポケモン」につける。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-147",
+   "localId": "147",
+   "name": "エネルギーリサイクル",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュから基本エネルギーを5枚選び、相手に見せてから、山札にもどす。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-148",
+   "localId": "148",
+   "name": "改造ハンマー",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手のポケモンについている特殊エネルギーを1個選び、トラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-149",
+   "localId": "149",
+   "name": "ガラスのラッパ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の場に「テラスタル」のポケモンがいるときにしか使えない。自分のベンチの[C]ポケモンを2匹まで選び、トラッシュから基本エネルギーを1枚ずつつける。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-150",
+   "localId": "150",
+   "name": "せいなるはい",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモンを5枚選び、相手に見せてから、山札にもどす。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-151",
+   "localId": "151",
+   "name": "ツールスクラッパー",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場のポケモンについている「ポケモンのどうぐ」を2枚まで選び、トラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-152",
+   "localId": "152",
+   "name": "テラスタルオーブ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「テラスタル」のポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-153",
+   "localId": "153",
+   "name": "なかよしポフィン",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、HPが「70」以下のたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-154",
+   "localId": "154",
+   "name": "パワープロテイン",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "この番、自分の[F]ポケモンが使うワザの、相手のバトルポケモンへのダメージは「+30」される。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-155",
+   "localId": "155",
+   "name": "ファイトゴング",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から[F]タイプのたねポケモンまたは「基本[F]エネルギー」を1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-156",
+   "localId": "156",
+   "name": "ホップのバッグ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からたねポケモンの「ホップのポケモン」を2枚まで選び、ベンチに出す。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-157",
+   "localId": "157",
+   "name": "むしとりセット",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を上から7枚見て、その中から[G]ポケモンと「基本[G]エネルギー」を合計2枚まで選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-158",
+   "localId": "158",
+   "name": "メガシグナル",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「メガシンカex」を1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-159",
+   "localId": "159",
+   "name": "夜のタンカ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモンまたは基本エネルギーを1枚選び、相手に見せて、手札に加える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-160",
+   "localId": "160",
+   "name": "ロケット団のレシーバー",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、名前に「ロケット団」とつくサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-161",
+   "localId": "161",
+   "name": "カウンターゲイン",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のサイドの残り枚数が、相手のサイドの残り枚数より多いなら、このカードをつけているポケモンがワザを使うためのエネルギーは、エネルギー1個ぶん少なくなる。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-162",
+   "localId": "162",
+   "name": "シロナのパワーウエイト",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけている「シロナのポケモン」の最大HPは「＋70」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-163",
+   "localId": "163",
+   "name": "でんきだま",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけている「ピカチュウex」が使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+50」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-164",
+   "localId": "164",
+   "name": "ぶあついうろこ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけている[N]ポケモンが、相手の[G][R][W][L]ポケモンから受けるワザのダメージは「-50」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-165",
+   "localId": "165",
+   "name": "ふうせん",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンは、にげるためのエネルギーが2個ぶん少なくなる。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-166",
+   "localId": "166",
+   "name": "ブレイブバングル",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモン（「ルールを持つポケモン」をのぞく）が使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+30」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-167",
+   "localId": "167",
+   "name": "ホップのこだわりハチマキ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけている「ホップのポケモン」は、ワザを使うためのエネルギーが[C]エネルギー1個ぶん少なくなり、そのポケモンが使うワザの、相手のバトルポケモンへのダメージは「+30」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-168",
+   "localId": "168",
+   "name": "アイリスの闘志",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札を1枚トラッシュしなければ使えない。自分の手札が6枚になるように、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-169",
+   "localId": "169",
+   "name": "アセロラのいたずら",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、相手のサイドの残り枚数が2枚以下のときにしか使えない。 自分の場のポケモンを1匹選ぶ。次の相手の番、そのポケモンは相手の「ポケモンex」からワザのダメージや効果を受けない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-170",
+   "localId": "170",
+   "name": "カナリィ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札を1枚トラッシュしなければ使えない。自分の山札から[L]ポケモンを4枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-171",
+   "localId": "171",
+   "name": "サーファー",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトルポケモンをベンチポケモンと入れ替える。その後、自分の手札が5枚になるように、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-172",
+   "localId": "172",
+   "name": "トウコ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から進化ポケモンとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-173",
+   "localId": "173",
+   "name": "バーベナとヘレナ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の場に「Nのヒヒダルマ」「Nのゾロアークex」「Nのバイバニラ」「Nのギギギアル」「Nのレシラム」「Nのゼクロム」がいなければ使えない。この番、自分の「Nのポケモン」が使うワザのダメージで、相手のバトルポケモンがきぜつしたなら、サイドを3枚多くとる。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-174",
+   "localId": "174",
+   "name": "ヒビキの冒険",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「ヒビキのポケモン」と「基本[R]エネルギー」を合計3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-175",
+   "localId": "175",
+   "name": "リーリエの決心",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札をすべて山札にもどして切る。その後、山札を6枚引く。自分のサイドの残り枚数が6枚なら、引く枚数は8枚になる。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-176",
+   "localId": "176",
+   "name": "ロケット団のアテナ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札が5枚になるように、山札を引く。自分の場のポケモン全員が「ロケット団のポケモン」なら、8枚になるように引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-177",
+   "localId": "177",
+   "name": "ロケット団のアポロ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、前の相手の番に、自分の「ロケット団のポケモン」がきぜつしていなければ使えない。おたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分は5枚、相手は3枚、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-178",
+   "localId": "178",
+   "name": "ロケット団のサカキ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトル場の「ロケット団のポケモン」を、ベンチの「ロケット団のポケモン」と入れ替える。その後、相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-179",
+   "localId": "179",
+   "name": "ロケット団のラムダ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からトレーナーズを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-180",
+   "localId": "180",
+   "name": "ロケット団のランス",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、先攻プレイヤーの最初の番でも使える。自分の山札からたねポケモンの「ロケット団のポケモン」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-181",
+   "localId": "181",
+   "name": "Nの城",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場の「Nのポケモン」全員のにげるためのエネルギーは、すべてなくなる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-182",
+   "localId": "182",
+   "name": "活力の森",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの[G]ポケモン全員は、出したばかりの番（最初の自分の番をのぞく）でも[G]ポケモンに進化できる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-183",
+   "localId": "183",
+   "name": "グラビティーマウンテン",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場の2進化ポケモン全員の最大HPは、それぞれ「-30」される。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-184",
+   "localId": "184",
+   "name": "ゼロの大空洞",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の場に「テラスタル」のポケモンがいるプレイヤーが、ベンチに出せるポケモンの数は8匹になる。（このカードがトラッシュされたときか、自分の場に「テラスタル」のポケモンがいなくなったとき、ベンチが5匹になるまでトラッシュする。おたがいにトラッシュするなら、このカードの持ち主から行う。）",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-185",
+   "localId": "185",
+   "name": "ハッコウシティ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分のトラッシュから「基本[L]エネルギー」を2枚まで選び、相手に見せて、手札に加えてよい。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-186",
+   "localId": "186",
+   "name": "ハロンタウン",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの「ホップのポケモン」が使うワザの、相手のバトルポケモンへのダメージは「+30」される。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-187",
+   "localId": "187",
+   "name": "ミステリーガーデン",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、手札からエネルギーを1枚トラッシュするなら、自分の手札の枚数が、自分の場の[P]ポケモンの数と同じ枚数になるように、山札を引いてよい。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-188",
+   "localId": "188",
+   "name": "夜の鉱山",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場の「テラスタル」のポケモン全員は、ワザを使うためのエネルギーが、それぞれ[C]エネルギー1個ぶん多くなる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-189",
+   "localId": "189",
+   "name": "ロケット団の監視塔",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場の[C]ポケモン全員の特性は、すべてなくなる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-190",
+   "localId": "190",
+   "name": "ロケット団のファクトリー",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "この番に、手札から、名前に「ロケット団」とつくサポートを出して使っていたプレイヤーは、自分の番ごとに1回、自分の山札を2枚引いてよい。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-191",
+   "localId": "191",
+   "name": "イグニッションエネルギー",
+   "category": "Energy",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "ポケモンについているこのカードは、自分の番の終わりにトラッシュする。このカードは、ポケモンについているかぎり、[C]エネルギー1個ぶんとしてはたらく。進化ポケモンについているなら、[C]エネルギー3個ぶんとしてはたらく。",
+   "energyType": "Special",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-192",
+   "localId": "192",
+   "name": "プリズムエネルギー",
+   "category": "Energy",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、[無]エネルギー1個ぶんとしてはたらく。たねポケモンについているかぎり、すべてのタイプのエネルギー1個ぶんとしてはたらく。",
+   "energyType": "Special",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-193",
+   "localId": "193",
+   "name": "ロケット団エネルギー",
+   "category": "Energy",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは「ロケット団のポケモン」にしかつけられず、「ロケット団のポケモン」以外についているなら、トラッシュする。このカードは、ポケモンについているかぎり、[P][D]の2つのタイプのエネルギー2個ぶんとしてはたらく。",
+   "energyType": "Special",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-194",
+   "localId": "194",
+   "name": "アゲハント",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "カラサリス",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "しびれごな",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "エナジーストロー",
+     "effect": "相手の手札を見て、その中にあるエネルギーの枚数×80ダメージ。",
+     "damage": "80×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-195",
+   "localId": "195",
+   "name": "ドクケイル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "マユルド",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "さざめくかぜ",
+     "effect": "自分の番に1回使える。コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、相手の手札にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "ゆうやみどく",
+     "effect": "相手のバトルポケモンをどくとねむりにする。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-196",
+   "localId": "196",
+   "name": "スボミー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 30,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [],
+     "name": "むずむずかふん",
+     "effect": "次の相手の番、相手は手札からグッズを出して使えない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-197",
+   "localId": "197",
+   "name": "ヒビキのマグカルゴ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒビキのマグマッグ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "とけてながれる",
+     "effect": "このポケモンにエネルギーがついていないなら、このポケモンのにげるためのエネルギーは、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "ようがんバースト",
+     "effect": "このポケモンについている[R]エネルギーを5枚までトラッシュし、その枚数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-198",
+   "localId": "198",
+   "name": "ドンメル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しゃくねつボディ",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンをやけどにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "かえん",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-199",
+   "localId": "199",
+   "name": "コダック",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しめりけ",
+     "effect": "このポケモンがいるかぎり、おたがいのポケモン全員は、そのポケモン自身をきぜつさせる効果の特性が、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-200",
+   "localId": "200",
+   "name": "ユキワラシ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ひんやり",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-201",
+   "localId": "201",
+   "name": "エレザード",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エリキテル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エリマキはつでん",
+     "effect": "この番に、手札から「カナリィ」を出して使っていたなら、自分の番に1回使える。自分の山札から「基本[L]エネルギー」を2枚まで選び、このポケモンにつける。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "パワフルボルト",
+     "effect": "このポケモンについているエネルギーの数ぶんコインを投げ、オモテの数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-202",
+   "localId": "202",
+   "name": "ムウマ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "かくせい",
+     "effect": "このポケモンから進化するカードを、自分の山札から1枚選び、このポケモンにのせて進化させる。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-203",
+   "localId": "203",
+   "name": "トゲキッス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "トゲチック",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ワンダーキッス",
+     "effect": "このポケモンがいるかぎり、相手のバトルポケモンがきぜつするたび、自分はコインを1回投げる。オモテなら、サイドを1枚多くとる。この効果は、この特性を持つポケモンが何匹いても、重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードウイング",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-204",
+   "localId": "204",
+   "name": "ホップのオーロット",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ホップのボクレー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ホラーリベンジ",
+     "effect": "前の相手の番に、ワザのダメージで、自分の「ホップのポケモン」がきぜつしていたなら、100ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おいつめる",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-205",
+   "localId": "205",
+   "name": "ロケット団のミミッキュ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ほうせきごっこ",
+     "effect": "相手のバトル場の「テラスタル」のポケモンが持つワザを1つ選び、このワザとして使う。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-206",
+   "localId": "206",
+   "name": "ロケット団のダグトリオ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のディグダ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "あなぼこ",
+     "effect": "このポケモンがいるかぎり、相手の番に、相手のバトルポケモンがベンチにもどるたび、そのポケモンにダメカンを2個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "マッドショット",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-207",
+   "localId": "207",
+   "name": "チャーレム",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アサナン",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "セブンスキック",
+     "effect": "自分の手札が7枚でないなら、このワザは失敗。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-208",
+   "localId": "208",
+   "name": "シロナのミカルゲ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "レイジングカース",
+     "effect": "自分のベンチの「シロナのポケモン」全員にのっているダメカンの数×10ダメージ。このワザのダメージは弱点を計算しない。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-209",
+   "localId": "209",
+   "name": "ガラル タチフサグマ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 170,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ガラル マッスグマ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "スカーシャウト",
+     "effect": "相手のバトルポケモンにのっているダメカンの数×70ダメージ。",
+     "damage": "70×"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "パンクスマッシュ",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-210",
+   "localId": "210",
+   "name": "Nのゼクロム",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひきさく",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Fire",
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ランページサンダー",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-211",
+   "localId": "211",
+   "name": "ドラメシヤ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ちょっとうらむ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Psychic"
+     ],
+     "name": "かみつく",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-212",
+   "localId": "212",
+   "name": "ドロンチ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドラメシヤ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ていさつしれい",
+     "effect": "自分の番に1回使える。自分の山札を上から2枚見て、どちらか1枚を選び、手札に加える。残りのカードは、山札の下にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Psychic"
+     ],
+     "name": "リューズヘッド",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-213",
+   "localId": "213",
+   "name": "スピンロトム",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ファンコール",
+     "effect": "最初の自分の番にだけ1回使える。自分の山札から、HPが「100」以下の[C]ポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。この番、すでに別の「ファンコール」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "とつげきランディング",
+     "effect": "場にスタジアムが出ていないなら、このワザは失敗。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-214",
+   "localId": "214",
+   "name": "Nのポイントアップ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュから基本エネルギーを1枚選び、ベンチの「Nのポケモン」につける。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-215",
+   "localId": "215",
+   "name": "ガラスのラッパ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の場に「テラスタル」のポケモンがいるときにしか使えない。自分のベンチの[C]ポケモンを2匹まで選び、トラッシュから基本エネルギーを1枚ずつつける。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-216",
+   "localId": "216",
+   "name": "ハイパーボール",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札を2枚トラッシュしなければ使えない。自分の山札からポケモンを1枚選び、相手に見せてから、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-217",
+   "localId": "217",
+   "name": "ロケット団のレシーバー",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、名前に「ロケット団」とつくサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-218",
+   "localId": "218",
+   "name": "カウンターゲイン",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のサイドの残り枚数が、相手のサイドの残り枚数より多いなら、このカードをつけているポケモンがワザを使うためのエネルギーは、エネルギー1個ぶん少なくなる。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-219",
+   "localId": "219",
+   "name": "カナリィ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札を1枚トラッシュしなければ使えない。自分の山札から[L]ポケモンを4枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-220",
+   "localId": "220",
+   "name": "からておうの稽古",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "この番、自分のポケモンが使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+40」される。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-221",
+   "localId": "221",
+   "name": "バーベナとヘレナ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の場に「Nのヒヒダルマ」「Nのゾロアークex」「Nのバイバニラ」「Nのギギギアル」「Nのレシラム」「Nのゼクロム」がいなければ使えない。この番、自分の「Nのポケモン」が使うワザのダメージで、相手のバトルポケモンがきぜつしたなら、サイドを3枚多くとる。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-222",
+   "localId": "222",
+   "name": "ジャミングタワー",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのポケモン全員についている「ポケモンのどうぐ」の効果は、すべてなくなる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-223",
+   "localId": "223",
+   "name": "メガリザードンXex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 360,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "リザード",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "インフェルノX",
+     "effect": "自分の場のポケモンについている[R]エネルギーを好きなだけトラッシュし、その枚数×90ダメージ。",
+     "damage": "90×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-224",
+   "localId": "224",
+   "name": "メガユキメノコex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 310,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ユキワラシ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "うらみぶし",
+     "effect": "相手の手札の枚数×50ダメージ。",
+     "damage": "50×"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "アブソリュートスノー",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-225",
+   "localId": "225",
+   "name": "メガシビルドンex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 350,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "シビビール",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ばくれつだん",
+     "effect": "相手のポケモン2匹に、それぞれ60ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ディザスターショック",
+     "effect": "のぞむなら、このポケモンについている[L]エネルギーを2個トラッシュし、相手のバトルポケモンをマヒにする。",
+     "damage": 190
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-226",
+   "localId": "226",
+   "name": "メガサーナイトex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 360,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "キルリア",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "あふれるねがい",
+     "effect": "自分のベンチポケモン全員に、山札から「基本[P]エネルギー」を1枚ずつつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "メガシンフォニア",
+     "effect": "自分のポケモン全員についている[P]エネルギーの数×50ダメージ。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-227",
+   "localId": "227",
+   "name": "メガディアンシーex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 270,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ダイヤコート",
+     "effect": "このポケモンが受けるワザのダメージは「-30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ガーランドレイ",
+     "effect": "このポケモンについているエネルギーを2枚までトラッシュし、その枚数×120ダメージ。",
+     "damage": "120×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-228",
+   "localId": "228",
+   "name": "メガルカリオex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 340,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "リオル",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "はどうづき",
+     "effect": "自分のトラッシュから「基本[F]エネルギー」を3枚まで選び、ベンチポケモンに好きなようにつける。",
+     "damage": 130
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "メガブレイブ",
+     "effect": "次の自分の番、このポケモンは「メガブレイブ」が使えない。",
+     "damage": 270
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-229",
+   "localId": "229",
+   "name": "メガルチャブルex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 250,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ふんばりボディ",
+     "effect": "このポケモンが、ワザのダメージを受けてきぜつするとき、自分はコインを1回投げる。オモテなら、このポケモンはきぜつせず、残りHPが「10」の状態で場に残る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "サマーソルトダイブ",
+     "effect": "場にスタジアムが出ているなら、140ダメージ追加。その後、そのスタジアムをトラッシュする。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-230",
+   "localId": "230",
+   "name": "メガゲンガーex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 350,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ゴースト",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かげかくし",
+     "effect": "このポケモンがいるかぎり、自分の[D]ポケモンが、相手の「ポケモンex」からワザのダメージを受けてきぜつしたとき、とられるサイドは1枚少なくなる。この特性の効果は重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ヴォイドゲイル",
+     "effect": "このポケモンについているエネルギーを1個選び、ベンチポケモンにつけ替える。",
+     "damage": 230
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-231",
+   "localId": "231",
+   "name": "メガズルズキンex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ズルッグ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はんげきトサカ",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを5個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "アウトローレッグ",
+     "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。相手の山札を上から1枚トラッシュする。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-232",
+   "localId": "232",
+   "name": "メガカイリューex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 370,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ハクリュー",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スカイキャリー",
+     "effect": "自分の番に1回使える。自分のバトルポケモンをベンチポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "リューノグライド",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 330
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-233",
+   "localId": "233",
+   "name": "メガユキメノコex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 310,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ユキワラシ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "うらみぶし",
+     "effect": "相手の手札の枚数×50ダメージ。",
+     "damage": "50×"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "アブソリュートスノー",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-234",
+   "localId": "234",
+   "name": "ピカチュウex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 200,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "がんばりハート",
+     "effect": "このポケモンのHPがまんたんの状態で、このポケモンがワザのダメージを受けてきぜつするとき、きぜつせず、残りHPが「10」の状態で場に残る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Lightning",
+      "Metal"
+     ],
+     "name": "トパーズボルト",
+     "effect": "このポケモンについているエネルギーを3個選び、トラッシュする。",
+     "damage": 300
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-235",
+   "localId": "235",
+   "name": "メガシビルドンex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 350,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "シビビール",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ばくれつだん",
+     "effect": "相手のポケモン2匹に、それぞれ60ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ディザスターショック",
+     "effect": "のぞむなら、このポケモンについている[L]エネルギーを2個トラッシュし、相手のバトルポケモンをマヒにする。",
+     "damage": 190
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-236",
+   "localId": "236",
+   "name": "ナンジャモのハラバリーex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 280,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ナンジャモのズピカ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エレキストリーマー",
+     "effect": "自分の番に何回でも使える。自分の手札から「基本[L]エネルギー」を1枚選び、自分の「ナンジャモのポケモン」につける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "サンダーボルト",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 230
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-237",
+   "localId": "237",
+   "name": "ロケット団のミュウツーex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 280,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "パワーセーバー",
+     "effect": "自分の場の「ロケット団のポケモン」が4匹以上のときにしか、このポケモンはワザが使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "イレイザーボール",
+     "effect": "のぞむなら、自分のベンチポケモンについているエネルギーを2枚までトラッシュし、その枚数×60ダメージ追加。",
+     "damage": "160+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-238",
+   "localId": "238",
+   "name": "メガディアンシーex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 270,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ダイヤコート",
+     "effect": "このポケモンが受けるワザのダメージは「-30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ガーランドレイ",
+     "effect": "このポケモンについているエネルギーを2枚までトラッシュし、その枚数×120ダメージ。",
+     "damage": "120×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-239",
+   "localId": "239",
+   "name": "メガルチャブルex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 250,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ふんばりボディ",
+     "effect": "このポケモンが、ワザのダメージを受けてきぜつするとき、自分はコインを1回投げる。オモテなら、このポケモンはきぜつせず、残りHPが「10」の状態で場に残る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "サマーソルトダイブ",
+     "effect": "場にスタジアムが出ているなら、140ダメージ追加。その後、そのスタジアムをトラッシュする。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-240",
+   "localId": "240",
+   "name": "メガゲンガーex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 350,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ゴースト",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かげかくし",
+     "effect": "このポケモンがいるかぎり、自分の[D]ポケモンが、相手の「ポケモンex」からワザのダメージを受けてきぜつしたとき、とられるサイドは1枚少なくなる。この特性の効果は重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ヴォイドゲイル",
+     "effect": "このポケモンについているエネルギーを1個選び、ベンチポケモンにつけ替える。",
+     "damage": 230
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-241",
+   "localId": "241",
+   "name": "メガズルズキンex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ズルッグ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はんげきトサカ",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを5個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "アウトローレッグ",
+     "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。相手の山札を上から1枚トラッシュする。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-242",
+   "localId": "242",
+   "name": "Nのゾロアークex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 280,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "Nのゾロア",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "とりひき",
+     "effect": "自分の番に、自分の手札を1枚トラッシュするなら、1回使える。自分の山札を2枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ナイトジョーカー",
+     "effect": "自分のベンチの「Nのポケモン」が持つワザを1つ選び、このワザとして使う。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-243",
+   "localId": "243",
+   "name": "マリィのオーロンゲex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 320,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "マリィのギモー",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "パンクアップ",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分の山札から「基本[D]エネルギー」を5枚まで選び、自分の「マリィのポケモン」に好きなようにつける。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "シャドーバレット",
+     "effect": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-244",
+   "localId": "244",
+   "name": "キチキギスex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 210,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "さかてにとる",
+     "effect": "前の相手の番に、自分のポケモンがきぜつしていたなら、自分の番に1回使える。自分の山札を3枚引く。この番、すでに別の「さかてにとる」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クルーエルアロー",
+     "effect": "相手のポケモン1匹に、100ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-245",
+   "localId": "245",
+   "name": "ダイゴのメタグロスex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 340,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ダイゴのメタング",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エクスブート",
+     "effect": "自分の番に1回使える。自分の山札から「基本[P]エネルギー」と「基本[M]エネルギー」をそれぞれ1枚まで選び、自分の[P]または[M]ポケモンに好きなようにつける。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "メタルスタンプ",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-246",
+   "localId": "246",
+   "name": "メガカイリューex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 370,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ハクリュー",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スカイキャリー",
+     "effect": "自分の番に1回使える。自分のバトルポケモンをベンチポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "リューノグライド",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 330
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-247",
+   "localId": "247",
+   "name": "アイリスの闘志",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札を1枚トラッシュしなければ使えない。自分の手札が6枚になるように、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-248",
+   "localId": "248",
+   "name": "カナリィ",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札を1枚トラッシュしなければ使えない。自分の山札から[L]ポケモンを4枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-249",
+   "localId": "249",
+   "name": "サーファー",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトルポケモンをベンチポケモンと入れ替える。その後、自分の手札が5枚になるように、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  },
+  {
+   "id": "M2a-250",
+   "localId": "250",
+   "name": "メガカイリューex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 370,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ハクリュー",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スカイキャリー",
+     "effect": "自分の番に1回使える。自分のバトルポケモンをベンチポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "リューノグライド",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 330
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M2a",
+    "name": "MEGAドリームex"
+   }
+  }
+ ]
+}

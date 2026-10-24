@@ -1,0 +1,4232 @@
+{
+ "id": "SV5K",
+ "name": "ワイルドフォース",
+ "releaseDate": "2024-01-26",
+ "total": 100,
+ "cards": [
+  {
+   "id": "SV5K-001",
+   "localId": "001",
+   "name": "ロゼリア",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "どくのトゲ",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンをどくにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "リーフステップ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-002",
+   "localId": "002",
+   "name": "ロズレイド",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロゼリア",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "どくのトゲ",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンをどくにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "しばりつける",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-003",
+   "localId": "003",
+   "name": "ナエトル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かたいこうら",
+     "effect": "このポケモンが受けるワザのダメージは「-20」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "このは",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-004",
+   "localId": "004",
+   "name": "ハヤシガメ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ナエトル",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "いあいぎり",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "こうらでぶつかる",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-20」される。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-005",
+   "localId": "005",
+   "name": "ドダイトスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 340,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ハヤシガメ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "もりのこうしん",
+     "effect": "自分の場の[G]ポケモンの数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ジャングルハンマー",
+     "effect": "このポケモンのHPを「50」回復する。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-006",
+   "localId": "006",
+   "name": "シェイミ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ピンポイントダイブ",
+     "effect": "相手のベンチの「ポケモンex・V」1匹に、60ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "うしろげり",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-007",
+   "localId": "007",
+   "name": "モンメン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "トリプルスピン",
+     "effect": "コインを3回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-008",
+   "localId": "008",
+   "name": "エルフーン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モンメン",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かるがるヒール",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分のバトル場の[G]ポケモンのHPを、すべて回復する。その後、回復したポケモンについているエネルギーを、すべてトラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "タネばくだん",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-009",
+   "localId": "009",
+   "name": "クイタラン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ひだね",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "なめやきファイヤー",
+     "effect": "コインを3回投げ、ウラの数ぶん、このポケモンについているエネルギーを選び、トラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-010",
+   "localId": "010",
+   "name": "ヤクデ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ヒートダイブ",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-011",
+   "localId": "011",
+   "name": "マルヤクデ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤクデ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "こがす",
+     "effect": "相手のバトルポケモンをやけどにする。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "くろこげブレス",
+     "effect": "相手のバトルポケモンがやけどでないなら、このワザは失敗。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-012",
+   "localId": "012",
+   "name": "ウガツホムラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートブラスト",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "れっかばくしん",
+     "effect": "このワザを使ったなら、このポケモンは、バトル場をはなれるまで「れっかばくしん」が使えない。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-013",
+   "localId": "013",
+   "name": "ワニノコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "かじりつく",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-014",
+   "localId": "014",
+   "name": "アリゲイツ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ワニノコ",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ぎゃくふんしゃ",
+     "effect": "このポケモンをベンチポケモンと入れ替える。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-015",
+   "localId": "015",
+   "name": "オーダイル",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 180,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "アリゲイツ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "トレントハート",
+     "effect": "自分の番に1回使える。このポケモンにダメカンを5個のせる。その場合、この番、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+120」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "おおなみ",
+     "effect": "次の自分の番、このポケモンは「おおなみ」が使えない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-016",
+   "localId": "016",
+   "name": "キバニア",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スプラッシュ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-017",
+   "localId": "017",
+   "name": "サメハダー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "キバニア",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かみすてる",
+     "effect": "コインを3回投げ、オモテの数ぶん、相手の手札からオモテを見ないで選び、トラッシュする。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ジェットヘッド",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-018",
+   "localId": "018",
+   "name": "ケルディオ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "クイックドロー",
+     "effect": "自分の山札を2枚引く。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "アクアブレード",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-019",
+   "localId": "019",
+   "name": "ユキハミ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "こなゆき",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-020",
+   "localId": "020",
+   "name": "モスノウ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ユキハミ",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "いてつくれいき",
+     "effect": "次の相手の番、このワザを受けたポケモンは、ワザが使えない。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-021",
+   "localId": "021",
+   "name": "ウミディグダ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ほりだしもの",
+     "effect": "自分の山札からグッズを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "アクアボム",
+     "effect": "このポケモンにも20ダメージ。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-022",
+   "localId": "022",
+   "name": "ナミイルカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "みずかけ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "するどいひれ",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-023",
+   "localId": "023",
+   "name": "イルカマン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ナミイルカ",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ヴァンガードパンチ",
+     "effect": "このポケモンにも、このポケモンにのっているダメカンの数×10ダメージ。",
+     "damage": 130
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダブルアタック",
+     "effect": "コインを2回投げ、オモテの数×90ダメージ。",
+     "damage": "90×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-024",
+   "localId": "024",
+   "name": "ウネルミナモex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 220,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こんぺきはとう",
+     "effect": "このポケモンが使うワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "カタルシスロアー",
+     "effect": "相手のバトルポケモンが特殊状態なら、120ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-025",
+   "localId": "025",
+   "name": "ウミトリオex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 250,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ウミディグダ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "トリコロポンプ",
+     "effect": "自分の手札からエネルギーを3枚までトラッシュし、その枚数×60ダメージを、相手のポケモン1匹に与える。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "しびれホールド",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-026",
+   "localId": "026",
+   "name": "マリル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "たまころがり",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マジカルショット",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-027",
+   "localId": "027",
+   "name": "マリルリ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "マリル",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "じゃれつく",
+     "effect": "コインを1回投げオモテなら、30ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "パワータックル",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-028",
+   "localId": "028",
+   "name": "ドーミラー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ミラーアタック",
+     "effect": "相手のバトルポケモンが[P]ポケモンなら、30ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-029",
+   "localId": "029",
+   "name": "ドータクン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドーミラー",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "しんかジャマー",
+     "effect": "次の相手の番、相手は手札からポケモンを出して進化させられない。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ちょうねんりき",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-030",
+   "localId": "030",
+   "name": "ユニラン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふいをつく",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-031",
+   "localId": "031",
+   "name": "ダブラン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ユニラン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ダブルトリック",
+     "effect": "コインを2回投げ、オモテの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-032",
+   "localId": "032",
+   "name": "ランクルス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ダブラン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "サモンゲート",
+     "effect": "自分の山札を上から8枚見て、その中からポケモンを好きなだけ選び、ベンチに出す。残りのカードは山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ブレインシェイク",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-033",
+   "localId": "033",
+   "name": "ハバタクカミ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "あんやのはばたき",
+     "effect": "このポケモンがバトル場にいるかぎり、相手のバトルポケモンの特性（「あんやのはばたき」をのぞく）は、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たたりとばす",
+     "effect": "ダメカン2個を、相手のベンチポケモンに好きなようにのせる。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-034",
+   "localId": "034",
+   "name": "ジーランス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きおくにもぐる",
+     "effect": "このポケモンがいるかぎり、自分の進化しているポケモン全員は、進化前に持っていたワザを、すべて使える。［ワザを使うためのエネルギーは必要。］"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ひれカッター",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-035",
+   "localId": "035",
+   "name": "ゴビット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "てっぺき",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージを受けない。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "パンチ",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-036",
+   "localId": "036",
+   "name": "ゴルーグ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゴビット",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "てっぺき",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージを受けない。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "とうしのこぶし",
+     "effect": "相手のバトルポケモンが「ポケモンex・V」なら、120ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-037",
+   "localId": "037",
+   "name": "ドロバンコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "けとばす",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "どろかけ",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-038",
+   "localId": "038",
+   "name": "バンバドロ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドロバンコ",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "マッドストック",
+     "effect": "自分のベンチポケモン全員に、トラッシュから「基本[F]エネルギー」を1枚ずつつける。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "10まんばりき",
+     "effect": "このポケモンにも40ダメージ。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-039",
+   "localId": "039",
+   "name": "タンドン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ころがりタックル",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "パワージェム",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-040",
+   "localId": "040",
+   "name": "トロッゴン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "タンドン",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "はねとばす",
+     "effect": "コインを1回投げオモテなら、40ダメージ追加。",
+     "damage": "20+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ロックスマッシュ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-041",
+   "localId": "041",
+   "name": "セキタンザン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 180,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "トロッゴン",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ガトリングタール",
+     "effect": "このポケモンについている[R]エネルギーの数×80ダメージ追加。",
+     "damage": "40+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "やまなだれ",
+     "effect": "相手の山札を上から2枚トラッシュする。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-042",
+   "localId": "042",
+   "name": "イダイナキバ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "じばんほうかい",
+     "effect": "相手の山札を上から1枚トラッシュする。この番、手札から「古代」のサポートを出して使っていたなら、さらに3枚トラッシュする。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きょだいなキバ",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-043",
+   "localId": "043",
+   "name": "アーボ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "まぜこみどく",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをどくとこんらんにする。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "かみつく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-044",
+   "localId": "044",
+   "name": "アーボック",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アーボ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "パニックどく",
+     "effect": "相手のバトルポケモンをどくとやけどとこんらんにする。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "やみのキバ",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-045",
+   "localId": "045",
+   "name": "ゴース",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ふしぎなビーム",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ガスでつつむ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-046",
+   "localId": "046",
+   "name": "ゴースト",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゴース",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "どくのいき",
+     "effect": "相手のバトルポケモンをどくにする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-047",
+   "localId": "047",
+   "name": "ゲンガーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 310,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ゴースト",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "むしばむのろい",
+     "effect": "このポケモンがいるかぎり、相手は手札からエネルギーをポケモンにつけるたび、そのポケモンにダメカンを2個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "トリックステップ",
+     "effect": "のぞむなら、相手のバトルポケモンについているエネルギーを1個選び、相手のベンチポケモンにつけ替える。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-048",
+   "localId": "048",
+   "name": "ポチエナ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "かじりつくす",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-049",
+   "localId": "049",
+   "name": "グラエナ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ポチエナ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "けりとばす",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "するどいキバ",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-050",
+   "localId": "050",
+   "name": "ヤミラミ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ツメできりさく",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダメージコレクト",
+     "effect": "相手のベンチポケモンにのっているダメカンを好きなだけ選び、相手のバトルポケモンにのせ替える。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-051",
+   "localId": "051",
+   "name": "トドロクツキ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "あだうちやばね",
+     "effect": "自分のトラッシュにある「古代」のカードの枚数×10ダメージ追加。",
+     "damage": "70+"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードウイング",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-052",
+   "localId": "052",
+   "name": "コライドン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "げんせいらんだ",
+     "effect": "自分の場の「古代」のポケモンの数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ひきさく",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-053",
+   "localId": "053",
+   "name": "タケルライコex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 240,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はじけるほうこう",
+     "effect": "自分の手札をすべてトラッシュし、山札を6枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Fighting"
+     ],
+     "name": "きょくらいごう",
+     "effect": "自分の場のポケモンについている基本エネルギーを好きなだけトラッシュし、その枚数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-054",
+   "localId": "054",
+   "name": "ホーホー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "サイレントウイング",
+     "effect": "相手の手札を見る。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-055",
+   "localId": "055",
+   "name": "ヨルノズク",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ホーホー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かぎづめハント",
+     "effect": "のぞむなら、自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-056",
+   "localId": "056",
+   "name": "ノコッチ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かじる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "あなをほる",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-057",
+   "localId": "057",
+   "name": "ノココッチ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ノコッチ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "にげあしドロー",
+     "effect": "自分の番に1回使える。自分の山札を3枚引く。その後、このポケモンと、ついているすべてのカードを、山札にもどして切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ランドクラッシュ",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-058",
+   "localId": "058",
+   "name": "ペラップ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "アカペラ",
+     "effect": "自分の山札からたねポケモンを3枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かぜおこし",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-059",
+   "localId": "059",
+   "name": "チラーミィ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "たたく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おそうじ",
+     "effect": "相手の場のポケモンについている「ポケモンのどうぐ」を2枚まで選び、トラッシュする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-060",
+   "localId": "060",
+   "name": "チラチーノ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チラーミィ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スペシャルころころ",
+     "effect": "このポケモンについている特殊エネルギーの枚数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-061",
+   "localId": "061",
+   "name": "おとりよせボックス",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードを使ったら、自分の番は終わる。自分の山札からグッズを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-062",
+   "localId": "062",
+   "name": "覚醒のドラム",
+   "category": "Trainer",
+   "rarity": "ACE SPEC Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の場の「古代」のポケモンの数ぶん、山札を引く。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-063",
+   "localId": "063",
+   "name": "なかよしポフィン",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、HPが「70」以下のたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-064",
+   "localId": "064",
+   "name": "緊急ボード",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンは、にげるためのエネルギーが1個ぶん少なくなる。そのポケモンの残りHPが「30」以下なら、にげるためのエネルギーは、すべてなくなる。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-065",
+   "localId": "065",
+   "name": "ブーストエナジー 古代",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけている「古代」のポケモンは、最大HPが「+60」され、そのポケモンは、特殊状態にならず、受けている特殊状態は、すべて回復する。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-066",
+   "localId": "066",
+   "name": "マキシマムベルト",
+   "category": "Trainer",
+   "rarity": "ACE SPEC Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+50」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-067",
+   "localId": "067",
+   "name": "探検家の先導",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を上から6枚見て、その中からカードを2枚選び、手札に加える。残りのカードはトラッシュする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-068",
+   "localId": "068",
+   "name": "ビワ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手の手札を見て、その中からグッズを2枚まで選び、トラッシュする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-069",
+   "localId": "069",
+   "name": "マツバの確信",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札を1枚トラッシュしなければ使えない。相手のベンチポケモンの数ぶん、自分の山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-070",
+   "localId": "070",
+   "name": "危険な密林",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのどくのポケモン（[D]ポケモンをのぞく）全員は、どくでのせるダメカンの数がそれぞれ2個多くなる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-071",
+   "localId": "071",
+   "name": "ネオアッパーエネルギー",
+   "category": "Energy",
+   "rarity": "ACE SPEC Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、[C]エネルギー1個ぶんとしてはたらく。2進化ポケモンについているなら、すべてのタイプのエネルギー2個ぶんとしてはたらく。",
+   "energyType": "Special",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-072",
+   "localId": "072",
+   "name": "ハヤシガメ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ナエトル",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "いあいぎり",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "こうらでぶつかる",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-20」される。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-073",
+   "localId": "073",
+   "name": "ユキハミ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 50,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "こなゆき",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-074",
+   "localId": "074",
+   "name": "ドーミラー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ミラーアタック",
+     "effect": "相手のバトルポケモンが[P]ポケモンなら、30ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-075",
+   "localId": "075",
+   "name": "ランクルス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ダブラン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "サモンゲート",
+     "effect": "自分の山札を上から8枚見て、その中からポケモンを好きなだけ選び、ベンチに出す。残りのカードは山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ブレインシェイク",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-076",
+   "localId": "076",
+   "name": "ハバタクカミ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "あんやのはばたき",
+     "effect": "このポケモンがバトル場にいるかぎり、相手のバトルポケモンの特性（「あんやのはばたき」をのぞく）は、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たたりとばす",
+     "effect": "ダメカン2個を、相手のベンチポケモンに好きなようにのせる。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-077",
+   "localId": "077",
+   "name": "ジーランス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きおくにもぐる",
+     "effect": "このポケモンがいるかぎり、自分の進化しているポケモン全員は、進化前に持っていたワザを、すべて使える。［ワザを使うためのエネルギーは必要。］"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ひれカッター",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-078",
+   "localId": "078",
+   "name": "バンバドロ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドロバンコ",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "マッドストック",
+     "effect": "自分のベンチポケモン全員に、トラッシュから「基本[F]エネルギー」を1枚ずつつける。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "10まんばりき",
+     "effect": "このポケモンにも40ダメージ。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-079",
+   "localId": "079",
+   "name": "アーボック",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アーボ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "パニックどく",
+     "effect": "相手のバトルポケモンをどくとやけどとこんらんにする。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "やみのキバ",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-080",
+   "localId": "080",
+   "name": "ゴース",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ふしぎなビーム",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ガスでつつむ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-081",
+   "localId": "081",
+   "name": "ペラップ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "アカペラ",
+     "effect": "自分の山札からたねポケモンを3枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かぜおこし",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-082",
+   "localId": "082",
+   "name": "チラーミィ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "たたく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おそうじ",
+     "effect": "相手の場のポケモンについている「ポケモンのどうぐ」を2枚まで選び、トラッシュする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-083",
+   "localId": "083",
+   "name": "チラチーノ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チラーミィ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スペシャルころころ",
+     "effect": "このポケモンについている特殊エネルギーの枚数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-084",
+   "localId": "084",
+   "name": "ドダイトスex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 340,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ハヤシガメ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "もりのこうしん",
+     "effect": "自分の場の[G]ポケモンの数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ジャングルハンマー",
+     "effect": "このポケモンのHPを「50」回復する。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-085",
+   "localId": "085",
+   "name": "ウガツホムラex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートブラスト",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "れっかばくしん",
+     "effect": "このワザを使ったなら、このポケモンは、バトル場をはなれるまで「れっかばくしん」が使えない。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-086",
+   "localId": "086",
+   "name": "ウネルミナモex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 220,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こんぺきはとう",
+     "effect": "このポケモンが使うワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "カタルシスロアー",
+     "effect": "相手のバトルポケモンが特殊状態なら、120ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-087",
+   "localId": "087",
+   "name": "ウミトリオex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 250,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ウミディグダ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "トリコロポンプ",
+     "effect": "自分の手札からエネルギーを3枚までトラッシュし、その枚数×60ダメージを、相手のポケモン1匹に与える。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "しびれホールド",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-088",
+   "localId": "088",
+   "name": "ゲンガーex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 310,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ゴースト",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "むしばむのろい",
+     "effect": "このポケモンがいるかぎり、相手は手札からエネルギーをポケモンにつけるたび、そのポケモンにダメカンを2個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "トリックステップ",
+     "effect": "のぞむなら、相手のバトルポケモンについているエネルギーを1個選び、相手のベンチポケモンにつけ替える。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-089",
+   "localId": "089",
+   "name": "タケルライコex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 240,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はじけるほうこう",
+     "effect": "自分の手札をすべてトラッシュし、山札を6枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Fighting"
+     ],
+     "name": "きょくらいごう",
+     "effect": "自分の場のポケモンについている基本エネルギーを好きなだけトラッシュし、その枚数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-090",
+   "localId": "090",
+   "name": "探検家の先導",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を上から6枚見て、その中からカードを2枚選び、手札に加える。残りのカードはトラッシュする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-091",
+   "localId": "091",
+   "name": "ビワ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手の手札を見て、その中からグッズを2枚まで選び、トラッシュする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-092",
+   "localId": "092",
+   "name": "マツバの確信",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札を1枚トラッシュしなければ使えない。相手のベンチポケモンの数ぶん、自分の山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-093",
+   "localId": "093",
+   "name": "ウガツホムラex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートブラスト",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "れっかばくしん",
+     "effect": "このワザを使ったなら、このポケモンは、バトル場をはなれるまで「れっかばくしん」が使えない。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-094",
+   "localId": "094",
+   "name": "ウネルミナモex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 220,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こんぺきはとう",
+     "effect": "このポケモンが使うワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "カタルシスロアー",
+     "effect": "相手のバトルポケモンが特殊状態なら、120ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-095",
+   "localId": "095",
+   "name": "タケルライコex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 240,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はじけるほうこう",
+     "effect": "自分の手札をすべてトラッシュし、山札を6枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Fighting"
+     ],
+     "name": "きょくらいごう",
+     "effect": "自分の場のポケモンについている基本エネルギーを好きなだけトラッシュし、その枚数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-096",
+   "localId": "096",
+   "name": "ビワ",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手の手札を見て、その中からグッズを2枚まで選び、トラッシュする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-097",
+   "localId": "097",
+   "name": "マツバの確信",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札を1枚トラッシュしなければ使えない。相手のベンチポケモンの数ぶん、自分の山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-098",
+   "localId": "098",
+   "name": "ウガツホムラex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートブラスト",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "れっかばくしん",
+     "effect": "このワザを使ったなら、このポケモンは、バトル場をはなれるまで「れっかばくしん」が使えない。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-099",
+   "localId": "099",
+   "name": "ウネルミナモex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 220,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こんぺきはとう",
+     "effect": "このポケモンが使うワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "カタルシスロアー",
+     "effect": "相手のバトルポケモンが特殊状態なら、120ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  },
+  {
+   "id": "SV5K-100",
+   "localId": "100",
+   "name": "タケルライコex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 240,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はじけるほうこう",
+     "effect": "自分の手札をすべてトラッシュし、山札を6枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Fighting"
+     ],
+     "name": "きょくらいごう",
+     "effect": "自分の場のポケモンについている基本エネルギーを好きなだけトラッシュし、その枚数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5K",
+    "name": "ワイルドフォース"
+   }
+  }
+ ]
+}

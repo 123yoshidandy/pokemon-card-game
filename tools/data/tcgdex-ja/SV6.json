@@ -1,0 +1,5756 @@
+{
+ "id": "SV6",
+ "name": "変幻の仮面",
+ "releaseDate": "2024-04-26",
+ "total": 133,
+ "cards": [
+  {
+   "id": "SV6-001",
+   "localId": "001",
+   "name": "ヒマナッツ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "タネマシンガン",
+     "effect": "コインを4回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-002",
+   "localId": "002",
+   "name": "キマワリ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒマナッツ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ひざしがえし",
+     "effect": "相手のポケモン全員についている[R]エネルギーの数×60ダメージ。",
+     "damage": "60×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "メガドレイン",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-003",
+   "localId": "003",
+   "name": "ヘラクロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "のしかかり",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ちきゅうなげ",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-004",
+   "localId": "004",
+   "name": "バルビート",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ファストサイン",
+     "effect": "このワザは、先攻プレイヤーの最初の番でも使える。自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "れんけいアタック",
+     "effect": "自分のベンチに「イルミーゼ」がいるなら、60ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-005",
+   "localId": "005",
+   "name": "イルミーゼ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "スローパフューム",
+     "effect": "このワザは、後攻プレイヤーの最初の番にだけ使える。相手のベンチポケモンを1匹選び、そのポケモンと、ついているすべてのカードを、相手の山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "かっくう",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-006",
+   "localId": "006",
+   "name": "ボクレー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "やどりぎのタネ",
+     "effect": "このポケモンのHPを「20」回復する。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-007",
+   "localId": "007",
+   "name": "オーロット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ボクレー",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ギガドレイン",
+     "effect": "相手のバトルポケモンに与えたダメージぶん、このポケモンのHPを回復する。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "フォレストダンプ",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-008",
+   "localId": "008",
+   "name": "サルノリ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "けとばす",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "えだづき",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-009",
+   "localId": "009",
+   "name": "バチンキー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "サルノリ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ドンドンだいこ",
+     "effect": "自分のバトルポケモンが特性「おまつりおんど」を持つポケモンなら、自分の番に1回使える。自分の山札から好きなカードを1枚選び、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "たたく",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-010",
+   "localId": "010",
+   "name": "ゴリランダー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 180,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "バチンキー",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ドラムアタック",
+     "effect": "次の相手の番、このワザを受けたポケモンは、ワザを使うためのエネルギーとにげるためのエネルギーが、それぞれ[C]エネルギー1個ぶん多くなる。",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "ウッドハンマー",
+     "effect": "このポケモンにも50ダメージ。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-011",
+   "localId": "011",
+   "name": "カジッチュ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ローリングアタック",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-012",
+   "localId": "012",
+   "name": "カミッチュ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カジッチュ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おまつりおんど",
+     "effect": "場に「お祭り会場」が出ているなら、このポケモンは、持っているワザを2回連続で使える。（1回目のワザで相手のバトルポケモンがきぜつしたなら、次のバトルポケモンが出たあと、2回目のワザを使う。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ともだちのわ",
+     "effect": "自分のベンチポケモンの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-013",
+   "localId": "013",
+   "name": "チャデス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "おちゃだし",
+     "effect": "自分のトラッシュから「基本[G]エネルギー」を1枚選び、相手に見せて、手札に加える。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ふいをつく",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-014",
+   "localId": "014",
+   "name": "ヤバソチャ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チャデス",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "のろいのしずく",
+     "effect": "ダメカン4個を、相手のポケモンに好きなようにのせる。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ぶちまけちゃ",
+     "effect": "自分の場のポケモンについている[G]エネルギーを3枚までトラッシュし、その枚数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-015",
+   "localId": "015",
+   "name": "オーガポン みどりのめん",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "やまあるき",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "おにがえし",
+     "effect": "相手のベンチポケモンの数×20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-016",
+   "localId": "016",
+   "name": "オーガポン みどりのめんex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "みどりのまい",
+     "effect": "自分の番に1回使える。自分の手札から「基本[G]エネルギー」を1枚選び、このポケモンにつける。その後、自分の山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "まんようしぐれ",
+     "effect": "おたがいのバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-017",
+   "localId": "017",
+   "name": "ダルマッカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "かいりき",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "ほのおタックル",
+     "effect": "このポケモンにも20ダメージ。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-018",
+   "localId": "018",
+   "name": "ヒヒダルマ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ダルマッカ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "ころがりタックル",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "もうかのとっしん",
+     "effect": "このポケモンにも70ダメージ。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-019",
+   "localId": "019",
+   "name": "ヒトモシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを1枚選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ひだね",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-020",
+   "localId": "020",
+   "name": "ランプラー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒトモシ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ひだね",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "もえつくす",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-021",
+   "localId": "021",
+   "name": "シャンデラ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ランプラー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いざなうあかり",
+     "effect": "自分の番に1回使える。おたがいのプレイヤーは、それぞれ山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "マインドルーラー",
+     "effect": "相手の手札の枚数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-022",
+   "localId": "022",
+   "name": "オーガポン かまどのめんex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "いかりがま",
+     "effect": "このポケモンにのっているダメカンの数×20ダメージ。",
+     "damage": "20×"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "ダイナミックブレイズ",
+     "effect": "相手のバトルポケモンが進化ポケモンなら、140ダメージ追加。その場合、このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": "140+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-023",
+   "localId": "023",
+   "name": "ニョロモ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ふむ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "しっぽビンタ",
+     "effect": "コインを2回投げ、オモテの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-024",
+   "localId": "024",
+   "name": "ニョロゾ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ニョロモ",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "さいみんじゅつ",
+     "effect": "相手のバトルポケモンをねむりにする。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おうふくビンタ",
+     "effect": "コインを2回投げ、オモテの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-025",
+   "localId": "025",
+   "name": "ニョロボン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 170,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ニョロゾ",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "さいみんじゅつ",
+     "effect": "相手のバトルポケモンをねむりにする。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ジャンピングアッパー",
+     "effect": "のぞむなら、120ダメージ追加。その場合、このポケモンと、ついているすべてのカードを、自分の山札にもどして切る。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-026",
+   "localId": "026",
+   "name": "トサキント",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おまつりおんど",
+     "effect": "場に「お祭り会場」が出ているなら、このポケモンは、持っているワザを2回連続で使える。（1回目のワザで相手のバトルポケモンがきぜつしたなら、次のバトルポケモンが出たあと、2回目のワザを使う。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "うずしお",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-027",
+   "localId": "027",
+   "name": "アズマオウ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "トサキント",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "つつきおとす",
+     "effect": "ダメージを与える前に、相手のバトルポケモンについている「ポケモンのどうぐ」をトラッシュする。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つのドリル",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-028",
+   "localId": "028",
+   "name": "ルージュラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "おさそいキッス",
+     "effect": "自分の山札からたねポケモンを1枚選び、ベンチに出す。そして山札を切る。その後、このポケモンについているエネルギーを1個選び、新しく出したポケモンにつけ替える。"
+    },
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "スノーアイス",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-029",
+   "localId": "029",
+   "name": "ヒンバス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "じたばた",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-030",
+   "localId": "030",
+   "name": "ミロカロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒンバス",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "なぎのきょうち",
+     "effect": "このポケモンがいるかぎり、相手の場のポケモンと、そのポケモンについているすべてのカードは、手札にもどせない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハイドロスプラッシュ",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-031",
+   "localId": "031",
+   "name": "ユキワラシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "おどろかす",
+     "effect": "相手の手札からオモテを見ないで1枚選び、そのカードのオモテを見て、相手の山札にもどして切る。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-032",
+   "localId": "032",
+   "name": "オニゴーリ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ユキワラシ",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ダメージビート",
+     "effect": "相手のバトルポケモンにのっているダメカンの数×20ダメージ。",
+     "damage": "20×"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クレイジーヘッズ",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-033",
+   "localId": "033",
+   "name": "ユキメノコ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ユキワラシ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いてつくとばり",
+     "effect": "このポケモンがいるかぎり、ポケモンチェックのたび、おたがいの特性を持つポケモン（「ユキメノコ」をのぞく）全員に、それぞれダメカンを1個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "フロストスマッシュ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-034",
+   "localId": "034",
+   "name": "ナミイルカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "アクアスラッシュ",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-035",
+   "localId": "035",
+   "name": "イルカマン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ナミイルカ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マイティチェンジ",
+     "effect": "自分の番に、このポケモンがバトル場からベンチにもどったとき、1回使える。自分の山札から「イルカマンex」を1枚選び、このカードと入れ替える（ついているカード・ダメカン・特殊状態・効果などは、すべて引きつぐ）。入れ替えたなら、このカードは山札にもどす。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "スプラッシュ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-036",
+   "localId": "036",
+   "name": "イルカマンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 340,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ナミイルカ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マイティソウル",
+     "effect": "このカードは、「イルカマン」の特性「マイティチェンジ」の効果によってしか場に出せない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ギガインパクト",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-037",
+   "localId": "037",
+   "name": "テツノツツミ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "インタージェット",
+     "effect": "このポケモンをベンチポケモンと入れ替える。その後、相手は相手自身のバトルポケモンをベンチポケモンと入れ替える。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-038",
+   "localId": "038",
+   "name": "オーガポン いどのめんex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "すすりなく",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "げきりゅうポンプ",
+     "effect": "のぞむなら、このポケモンについているエネルギーを3個選び、山札にもどして切る。その場合、相手のベンチポケモン1匹にも、120ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-039",
+   "localId": "039",
+   "name": "コリンク",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "こうきしん",
+     "effect": "相手の手札を見る。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "バチバチ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-040",
+   "localId": "040",
+   "name": "ルクシオ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コリンク",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "かじりつく",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-041",
+   "localId": "041",
+   "name": "レントラーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 310,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ルクシオ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つきさすがんこう",
+     "effect": "相手の手札を見て、その中からカードを1枚選び、トラッシュする。",
+     "damage": 120
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ボルトストライク",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-042",
+   "localId": "042",
+   "name": "エモンガ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "スカイウェーブ",
+     "effect": "おたがいのベンチポケモン全員にも、それぞれ10ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-043",
+   "localId": "043",
+   "name": "カイデン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "でんきショック",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-044",
+   "localId": "044",
+   "name": "タイカイデン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カイデン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふうりょくチャージ",
+     "effect": "次の自分の番、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+120」される。",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ストロングボルト",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-045",
+   "localId": "045",
+   "name": "ピッピ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ムーンキック",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-046",
+   "localId": "046",
+   "name": "ピクシー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ピッピ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ゆびをふる",
+     "effect": "相手のバトルポケモンが持っているワザを1つ選び、このワザとして使う。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マジカルショット",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-047",
+   "localId": "047",
+   "name": "ケーシィ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "テレポーター",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。このポケモンと、ついているすべてのカードを、自分の山札にもどして切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ビーム",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-048",
+   "localId": "048",
+   "name": "ユンゲラー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ケーシィ",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "サイコキネシス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-049",
+   "localId": "049",
+   "name": "フーディン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ユンゲラー",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ストレンジハック",
+     "effect": "相手のバトルポケモンをこんらんにする。相手の場のポケモンにのっているダメカンを好きなだけ選び、相手の場のポケモンに好きなようにのせ替える。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "サイコキネシス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×50ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-050",
+   "localId": "050",
+   "name": "チリーン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ハイパーボイス",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おかえりチャイム",
+     "effect": "自分のベンチポケモンを1匹選び、そのポケモンと、ついているすべてのカードを、山札にもどして切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-051",
+   "localId": "051",
+   "name": "ペロッパフ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おまつりおんど",
+     "effect": "場に「お祭り会場」が出ているなら、このポケモンは、持っているワザを2回連続で使える。（1回目のワザで相手のバトルポケモンがきぜつしたなら、次のバトルポケモンが出たあと、2回目のワザを使う。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "そっとのせる",
+     "effect": "相手のポケモン1匹に、ダメカンを2個のせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-052",
+   "localId": "052",
+   "name": "ペロリーム",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ペロッパフ",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ペロペロリン",
+     "effect": "コインを2回投げ、オモテの数×90ダメージ。すべてウラなら、相手のバトルポケモンをこんらんにする。",
+     "damage": "90×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-053",
+   "localId": "053",
+   "name": "スナバァ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "すなかけ",
+     "effect": "次の相手の番、このワザを受けたポケモンがワザを使うとき、相手はコインを1回投げる。ウラならそのワザは失敗。",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ホロウショット",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-054",
+   "localId": "054",
+   "name": "シロデスナ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 150,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "スナバァ",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "すなかけ",
+     "effect": "次の相手の番、このワザを受けたポケモンがワザを使うとき、相手はコインを1回投げる。ウラならそのワザは失敗。",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "サンドホロウ",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-055",
+   "localId": "055",
+   "name": "マシマシラ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アドレナブレイン",
+     "effect": "このポケモンに[D]エネルギーがついているなら、自分の番に1回使える。自分の場のポケモン1匹にのっているダメカンを3個まで選び、相手の場のポケモン1匹にのせ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "サイコトリップ",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-056",
+   "localId": "056",
+   "name": "キチキギス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アドレナフェロモン",
+     "effect": "このポケモンに[D]エネルギーがついているなら、このポケモンがワザのダメージを受けるとき、自分はコインを1回投げる。オモテなら、このポケモンはそのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "エナジーフェザー",
+     "effect": "このポケモンについているエネルギーの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-057",
+   "localId": "057",
+   "name": "サンド",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ころがる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ダブルひっかき",
+     "effect": "コインを2回投げ、オモテの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-058",
+   "localId": "058",
+   "name": "サンドパン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "サンド",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ツメをたてる",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "じしん",
+     "effect": "自分のベンチポケモン全員にも、それぞれ10ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-059",
+   "localId": "059",
+   "name": "ドッコラー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ぜんりょくパンチ",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-060",
+   "localId": "060",
+   "name": "ドテッコツ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドッコラー",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "げんこつ",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ばかぢから",
+     "effect": "のぞむなら、30ダメージ追加。その場合、このポケモンにも30ダメージ。",
+     "damage": "50+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-061",
+   "localId": "061",
+   "name": "ローブシン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 180,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ドテッコツ",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "あばれまわる",
+     "effect": "このポケモンをこんらんにする。",
+     "damage": 80
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ガッツスイング",
+     "effect": "このワザは、このポケモンが特殊状態なら、このワザを使うためのエネルギーがこのポケモンについていなくても、使える。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-062",
+   "localId": "062",
+   "name": "キラーメ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ロックショット",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-063",
+   "localId": "063",
+   "name": "キラフロル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "キラーメ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "しんけいどく",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをどくとマヒにする。"
+    },
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ベノムショック",
+     "effect": "相手のバトルポケモンがどくなら、100ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-064",
+   "localId": "064",
+   "name": "イイネイヌ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アドレナパワー",
+     "effect": "このポケモンに[D]エネルギーがついているなら、このポケモンの最大HPは「＋100」され、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+100」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "グッドパンチ",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-065",
+   "localId": "065",
+   "name": "オーガポン いしずえのめんex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いしずえのかまえ",
+     "effect": "このポケモンは、相手の特性を持つポケモンからワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶちやぶる",
+     "effect": "このワザのダメージは、弱点・抵抗力と、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-066",
+   "localId": "066",
+   "name": "ポチエナ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "れんぞくステップ",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "やみのキバ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-067",
+   "localId": "067",
+   "name": "グラエナ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ポチエナ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "むれでかる",
+     "effect": "自分のベンチに「グラエナ」がいるなら、90ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "おいつめる",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-068",
+   "localId": "068",
+   "name": "フシデ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "どくえき",
+     "effect": "相手のバトルポケモンをどくにする。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かいてんアタック",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-069",
+   "localId": "069",
+   "name": "ホイーガ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "フシデ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ポイズンサークル",
+     "effect": "相手のバトルポケモンをどくにする。次の相手の番、このワザを受けたポケモンは、にげられない。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かいてんアタック",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-070",
+   "localId": "070",
+   "name": "ペンドラー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 170,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ホイーガ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ひどうなひとさし",
+     "effect": "相手のバトルポケモンの残りHPが「10」になるように、ダメカンをのせる。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヘドロばくだん",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-071",
+   "localId": "071",
+   "name": "アラブルタケ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "どくをとばす",
+     "effect": "相手のバトルポケモンをどくにする。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "まくしなぐる",
+     "effect": "相手のバトルポケモンにのっているダメカンの数×50ダメージ追加。",
+     "damage": "50+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-072",
+   "localId": "072",
+   "name": "エアームド",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "カッターウインド",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おおあらし",
+     "effect": "場に出ているスタジアムをトラッシュする。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-073",
+   "localId": "073",
+   "name": "ココドラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "すてみタックル",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-074",
+   "localId": "074",
+   "name": "コドラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ココドラ",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "こうてつタックル",
+     "effect": "このポケモンにも20ダメージ。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "メタルクロー",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-075",
+   "localId": "075",
+   "name": "ボスゴドラ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 180,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "コドラ",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "アングリースラム",
+     "effect": "自分の場のダメカンがのっているポケモンの数×50ダメージ。",
+     "damage": "50×"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ガードクロー",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-50」される。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-076",
+   "localId": "076",
+   "name": "ヒードラン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しゃくねつボディ",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンをやけどにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スチールバースト",
+     "effect": "このポケモンについている[M]エネルギーをすべてトラッシュし、その枚数×50ダメージ。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-077",
+   "localId": "077",
+   "name": "ブロロン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "メタルコーティング",
+     "effect": "自分のトラッシュから「基本[M]エネルギー」を1枚選び、このポケモンにつける。"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-078",
+   "localId": "078",
+   "name": "ブロロローム",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ブロロン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "まきかえす",
+     "effect": "前の相手の番に、ワザのダメージで、自分のポケモンがきぜつしていたなら、90ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つっぱしる",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×100ダメージ。",
+     "damage": "100×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-079",
+   "localId": "079",
+   "name": "ドラメシヤ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ちょっとうらむ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Psychic"
+     ],
+     "name": "かみつく",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-080",
+   "localId": "080",
+   "name": "ドロンチ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドラメシヤ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ていさつしれい",
+     "effect": "自分の番に1回使える。自分の山札を上から2枚見て、どちらか1枚を選び、手札に加える。残りのカードは、山札の下にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Psychic"
+     ],
+     "name": "リューズヘッド",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-081",
+   "localId": "081",
+   "name": "ドラパルトex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 320,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ドロンチ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ジェットヘッド",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Fire",
+      "Psychic"
+     ],
+     "name": "ファントムダイブ",
+     "effect": "ダメカン6個を、相手のベンチポケモンに好きなようにのせる。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-082",
+   "localId": "082",
+   "name": "シャリタツ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きゃくよせ",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札を上から6枚見て、その中からサポートを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Water"
+     ],
+     "name": "なみのり",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-083",
+   "localId": "083",
+   "name": "カモネギ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "でたとこせおい",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。自分の山札から「ポケモンのどうぐ」を1枚選び、このポケモンにつける。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "おんそくぎり",
+     "effect": "相手のバトルポケモンについている特殊エネルギーを1個選び、トラッシュする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-084",
+   "localId": "084",
+   "name": "ラッキー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ラッキーアタッチ",
+     "effect": "自分の手札から基本エネルギーを1枚選び、自分のポケモンにつける。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "そこぢから",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-085",
+   "localId": "085",
+   "name": "ハピナスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 300,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ラッキー",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ハッピースイッチ",
+     "effect": "自分の番に1回使える。自分の場のポケモンについている基本エネルギーを1個選び、自分の別のポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おんがえし",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-086",
+   "localId": "086",
+   "name": "エイパム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぶらさがる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "やんちゃげり",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-087",
+   "localId": "087",
+   "name": "エテボース",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エイパム",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いけずなしっぽ",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。コインを2回投げ、オモテの数ぶん、相手の手札からオモテを見ないで選び、そのカードのオモテを見て、相手の山札にもどして切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-088",
+   "localId": "088",
+   "name": "コアルヒー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ダブルドロー",
+     "effect": "自分の山札を2枚引く。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "するどいはね",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-089",
+   "localId": "089",
+   "name": "スワンナ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コアルヒー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "とうしのつばさ",
+     "effect": "相手のバトルポケモンが「ポケモンex・V」なら、90ダメージ追加。",
+     "damage": "20+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かぜおこし",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-090",
+   "localId": "090",
+   "name": "鬼の仮面",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュから、名前に「オーガポン」とつく「ポケモンex」を1枚選び、自分の場の、名前に「オーガポン」とつく「ポケモンex」1匹と入れ替える（ついているカード・ダメカン・特殊状態・効果などは、すべて引きつぐ）。入れ替えたポケモンはトラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-091",
+   "localId": "091",
+   "name": "おはやし笛",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手の山札を上から5枚オモテにして、その中からたねポケモンを好きなだけ選び、相手のベンチに出す。残りのカードは山札にもどして切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-092",
+   "localId": "092",
+   "name": "シークレットボックス",
+   "category": "Trainer",
+   "rarity": "ACE SPEC Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札を3枚トラッシュしなければ使えない。 自分の山札から「グッズ」「ポケモンのどうぐ」「サポート」「スタジアム」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-093",
+   "localId": "093",
+   "name": "ポケモン回収サイクロン",
+   "category": "Trainer",
+   "rarity": "ACE SPEC Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の場のポケモンを1匹選び、そのポケモンと、ついているすべてのカードを、手札にもどす。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-094",
+   "localId": "094",
+   "name": "むしとりセット",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を上から7枚見て、その中から[G]ポケモンと「基本[G]エネルギー」を合計2枚まで選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-095",
+   "localId": "095",
+   "name": "ハンディサーキュレーター",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンについているエネルギーを1個選び、相手のベンチポケモンにつけ替える。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-096",
+   "localId": "096",
+   "name": "スグリ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、2つの効果から1つを選んで使う。◆自分のバトルポケモンをベンチポケモンと入れ替える。◆この番、自分のポケモンが使うワザの、相手のバトル場の「ポケモンex・V」へのダメージは「+30」される。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-097",
+   "localId": "097",
+   "name": "ゼイユ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、先攻プレイヤーの最初の番でも使える。自分の手札をすべてトラッシュし、山札を5枚引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-098",
+   "localId": "098",
+   "name": "ハッサク",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、前の相手の番に、自分のポケモンがきぜつしていなければ使えない。自分の山札を上から8枚見て、その中からカードを3枚まで選び、手札に加える。残りのカードは山札にもどして切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-099",
+   "localId": "099",
+   "name": "お祭り会場",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "エネルギーがついているおたがいのポケモン全員は、特殊状態にならず、受けている特殊状態は、すべて回復する。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-100",
+   "localId": "100",
+   "name": "ジャミングタワー",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのポケモン全員についている「ポケモンのどうぐ」の効果は、すべてなくなる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-101",
+   "localId": "101",
+   "name": "レガシーエネルギー",
+   "category": "Energy",
+   "rarity": "ACE SPEC Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、すべてのタイプのエネルギー1個ぶんとしてはたらく。 このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、とられるサイドは1枚少なくなる。対戦中、自分の「レガシーエネルギー」のこの効果は、1回しかはたらかない。",
+   "energyType": "Special",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-102",
+   "localId": "102",
+   "name": "キマワリ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒマナッツ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ひざしがえし",
+     "effect": "相手のポケモン全員についている[R]エネルギーの数×60ダメージ。",
+     "damage": "60×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "メガドレイン",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-103",
+   "localId": "103",
+   "name": "カミッチュ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カジッチュ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おまつりおんど",
+     "effect": "場に「お祭り会場」が出ているなら、このポケモンは、持っているワザを2回連続で使える。（1回目のワザで相手のバトルポケモンがきぜつしたなら、次のバトルポケモンが出たあと、2回目のワザを使う。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ともだちのわ",
+     "effect": "自分のベンチポケモンの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-104",
+   "localId": "104",
+   "name": "ユキメノコ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ユキワラシ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いてつくとばり",
+     "effect": "このポケモンがいるかぎり、ポケモンチェックのたび、おたがいの特性を持つポケモン（「ユキメノコ」をのぞく）全員に、それぞれダメカンを1個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "フロストスマッシュ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-105",
+   "localId": "105",
+   "name": "カイデン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "でんきショック",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-106",
+   "localId": "106",
+   "name": "チリーン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ハイパーボイス",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おかえりチャイム",
+     "effect": "自分のベンチポケモンを1匹選び、そのポケモンと、ついているすべてのカードを、山札にもどして切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-107",
+   "localId": "107",
+   "name": "マシマシラ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アドレナブレイン",
+     "effect": "このポケモンに[D]エネルギーがついているなら、自分の番に1回使える。自分の場のポケモン1匹にのっているダメカンを3個まで選び、相手の場のポケモン1匹にのせ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "サイコトリップ",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-108",
+   "localId": "108",
+   "name": "キチキギス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アドレナフェロモン",
+     "effect": "このポケモンに[D]エネルギーがついているなら、このポケモンがワザのダメージを受けるとき、自分はコインを1回投げる。オモテなら、このポケモンはそのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "エナジーフェザー",
+     "effect": "このポケモンについているエネルギーの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-109",
+   "localId": "109",
+   "name": "ドッコラー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ぜんりょくパンチ",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-110",
+   "localId": "110",
+   "name": "イイネイヌ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アドレナパワー",
+     "effect": "このポケモンに[D]エネルギーがついているなら、このポケモンの最大HPは「＋100」され、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+100」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "グッドパンチ",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-111",
+   "localId": "111",
+   "name": "コドラ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ココドラ",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "こうてつタックル",
+     "effect": "このポケモンにも20ダメージ。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "メタルクロー",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-112",
+   "localId": "112",
+   "name": "シャリタツ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きゃくよせ",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札を上から6枚見て、その中からサポートを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Water"
+     ],
+     "name": "なみのり",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-113",
+   "localId": "113",
+   "name": "ラッキー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ラッキーアタッチ",
+     "effect": "自分の手札から基本エネルギーを1枚選び、自分のポケモンにつける。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "そこぢから",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-114",
+   "localId": "114",
+   "name": "オーガポン みどりのめんex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 210,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "みどりのまい",
+     "effect": "自分の番に1回使える。自分の手札から「基本[G]エネルギー」を1枚選び、このポケモンにつける。その後、自分の山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "まんようしぐれ",
+     "effect": "おたがいのバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-115",
+   "localId": "115",
+   "name": "オーガポン かまどのめんex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 210,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "いかりがま",
+     "effect": "このポケモンにのっているダメカンの数×20ダメージ。",
+     "damage": "20×"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "ダイナミックブレイズ",
+     "effect": "相手のバトルポケモンが進化ポケモンなら、140ダメージ追加。その場合、このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": "140+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-116",
+   "localId": "116",
+   "name": "イルカマンex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 340,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ナミイルカ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マイティソウル",
+     "effect": "このカードは、「イルカマン」の特性「マイティチェンジ」の効果によってしか場に出せない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ギガインパクト",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-117",
+   "localId": "117",
+   "name": "オーガポン いどのめんex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 210,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "すすりなく",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "げきりゅうポンプ",
+     "effect": "のぞむなら、このポケモンについているエネルギーを3個選び、山札にもどして切る。その場合、相手のベンチポケモン1匹にも、120ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-118",
+   "localId": "118",
+   "name": "レントラーex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 310,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ルクシオ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つきさすがんこう",
+     "effect": "相手の手札を見て、その中からカードを1枚選び、トラッシュする。",
+     "damage": 120
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ボルトストライク",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-119",
+   "localId": "119",
+   "name": "オーガポン いしずえのめんex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 210,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いしずえのかまえ",
+     "effect": "このポケモンは、相手の特性を持つポケモンからワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶちやぶる",
+     "effect": "このワザのダメージは、弱点・抵抗力と、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-120",
+   "localId": "120",
+   "name": "ドラパルトex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 320,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ドロンチ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ジェットヘッド",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Fire",
+      "Psychic"
+     ],
+     "name": "ファントムダイブ",
+     "effect": "ダメカン6個を、相手のベンチポケモンに好きなようにのせる。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-121",
+   "localId": "121",
+   "name": "ハピナスex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 300,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ラッキー",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ハッピースイッチ",
+     "effect": "自分の番に1回使える。自分の場のポケモンについている基本エネルギーを1個選び、自分の別のポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おんがえし",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-122",
+   "localId": "122",
+   "name": "スグリ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、2つの効果から1つを選んで使う。◆自分のバトルポケモンをベンチポケモンと入れ替える。◆この番、自分のポケモンが使うワザの、相手のバトル場の「ポケモンex・V」へのダメージは「+30」される。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-123",
+   "localId": "123",
+   "name": "ゼイユ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、先攻プレイヤーの最初の番でも使える。自分の手札をすべてトラッシュし、山札を5枚引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-124",
+   "localId": "124",
+   "name": "ハッサク",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、前の相手の番に、自分のポケモンがきぜつしていなければ使えない。自分の山札を上から8枚見て、その中からカードを3枚まで選び、手札に加える。残りのカードは山札にもどして切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-125",
+   "localId": "125",
+   "name": "オーガポン みどりのめんex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 210,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "みどりのまい",
+     "effect": "自分の番に1回使える。自分の手札から「基本[G]エネルギー」を1枚選び、このポケモンにつける。その後、自分の山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "まんようしぐれ",
+     "effect": "おたがいのバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-126",
+   "localId": "126",
+   "name": "オーガポン かまどのめんex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 210,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "いかりがま",
+     "effect": "このポケモンにのっているダメカンの数×20ダメージ。",
+     "damage": "20×"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "ダイナミックブレイズ",
+     "effect": "相手のバトルポケモンが進化ポケモンなら、140ダメージ追加。その場合、このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": "140+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-127",
+   "localId": "127",
+   "name": "オーガポン いどのめんex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 210,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "すすりなく",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "げきりゅうポンプ",
+     "effect": "のぞむなら、このポケモンについているエネルギーを3個選び、山札にもどして切る。その場合、相手のベンチポケモン1匹にも、120ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-128",
+   "localId": "128",
+   "name": "オーガポン いしずえのめんex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 210,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いしずえのかまえ",
+     "effect": "このポケモンは、相手の特性を持つポケモンからワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶちやぶる",
+     "effect": "このワザのダメージは、弱点・抵抗力と、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-129",
+   "localId": "129",
+   "name": "スグリ",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、2つの効果から1つを選んで使う。◆自分のバトルポケモンをベンチポケモンと入れ替える。◆この番、自分のポケモンが使うワザの、相手のバトル場の「ポケモンex・V」へのダメージは「+30」される。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-130",
+   "localId": "130",
+   "name": "ゼイユ",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、先攻プレイヤーの最初の番でも使える。自分の手札をすべてトラッシュし、山札を5枚引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-131",
+   "localId": "131",
+   "name": "オーガポン みどりのめんex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 210,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "みどりのまい",
+     "effect": "自分の番に1回使える。自分の手札から「基本[G]エネルギー」を1枚選び、このポケモンにつける。その後、自分の山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "まんようしぐれ",
+     "effect": "おたがいのバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-132",
+   "localId": "132",
+   "name": "改造ハンマー",
+   "category": "Trainer",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手のポケモンについている特殊エネルギーを1個選び、トラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  },
+  {
+   "id": "SV6-133",
+   "localId": "133",
+   "name": "なかよしポフィン",
+   "category": "Trainer",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、HPが「70」以下のたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV6",
+    "name": "変幻の仮面"
+   }
+  }
+ ]
+}

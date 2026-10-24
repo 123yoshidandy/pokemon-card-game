@@ -1,0 +1,4342 @@
+{
+ "id": "SV5M",
+ "name": "サイバージャッジ",
+ "releaseDate": "2024-01-26",
+ "total": 100,
+ "cards": [
+  {
+   "id": "SV5M-001",
+   "localId": "001",
+   "name": "ストライク",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "きる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スラッシュダウン",
+     "effect": "次の自分の番、このポケモンは「スラッシュダウン」が使えない。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-002",
+   "localId": "002",
+   "name": "クヌギダマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-003",
+   "localId": "003",
+   "name": "タネボー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "こうちょく",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶらさがる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-004",
+   "localId": "004",
+   "name": "コノハナ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "タネボー",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "どつく",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "れんぞくビンタ",
+     "effect": "コインを3回投げ、オモテの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-005",
+   "localId": "005",
+   "name": "ダーテング",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "コノハナ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "おいだしトルネード",
+     "effect": "相手のベンチポケモンを3匹選ぶ。その後、選んでいない相手のベンチポケモン全員と、ついているすべてのカードを、相手の山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "エネループ",
+     "effect": "このポケモンについているエネルギーを1個選び、手札にもどす。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-006",
+   "localId": "006",
+   "name": "キノココ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "にどずつき",
+     "effect": "コインを2回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "タネばくだん",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-007",
+   "localId": "007",
+   "name": "キノガッサ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "キノココ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "パンチ",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ナックルインパクト",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-008",
+   "localId": "008",
+   "name": "シキジカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はねまわる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "らくようタックル",
+     "effect": "このポケモンについている[G]エネルギーを1個選び、トラッシュする。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-009",
+   "localId": "009",
+   "name": "メブキジカ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シキジカ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しきのうつろい",
+     "effect": "自分の番に1回使える。自分の山札からスタジアムを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かいりきホーン",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-010",
+   "localId": "010",
+   "name": "アゴジムシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "むれる",
+     "effect": "自分の山札から「アゴジムシ」を2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はさむ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-011",
+   "localId": "011",
+   "name": "ダダリン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かいてんアタック",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "スチールアンカー",
+     "effect": "自分のベンチに[M]ポケモンがいるなら、80ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-012",
+   "localId": "012",
+   "name": "アノクサ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "トゲでさす",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-013",
+   "localId": "013",
+   "name": "アノホラグサ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アノクサ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ざっそうだましい",
+     "effect": "相手がすでにとったサイド1枚につき、このポケモンの最大HPは「＋50」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "パワフルニードル",
+     "effect": "このポケモンについているエネルギーの数ぶんコインを投げ、オモテの数×80ダメージ。",
+     "damage": "80×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-014",
+   "localId": "014",
+   "name": "シガロコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ちょっとつっこむ",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-015",
+   "localId": "015",
+   "name": "ベラカス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シガロコ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スフィアシールド",
+     "effect": "このポケモンがいるかぎり、自分のベンチポケモン全員は、相手のポケモンからワザのダメージや効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "サイコキネシス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-016",
+   "localId": "016",
+   "name": "テツノイサハex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 220,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ラピッドバーニア",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。このポケモンをバトルポケモンと入れ替える。入れ替えた場合、自分の場のポケモンについているエネルギーを好きなだけ選び、このポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "プリズムエッジ",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-017",
+   "localId": "017",
+   "name": "マグマッグ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "あぶりやき",
+     "effect": "相手のバトルポケモンがやけどなら、40ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-018",
+   "localId": "018",
+   "name": "マグカルゴ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "マグマッグ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ようがんちたい",
+     "effect": "このポケモンがいるかぎり、相手の番に、相手のバトルポケモンがベンチにもどるたび、新しく出てきたポケモンをやけどにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヒートブラスト",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-019",
+   "localId": "019",
+   "name": "ビクティニ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぱたぱた",
+     "effect": "自分の手札をすべて山札にもどして切る。その後、山札を6枚引く。"
+    },
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "やきおとす",
+     "effect": "相手のバトルポケモンについている特殊エネルギーを1個選び、トラッシュする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-020",
+   "localId": "020",
+   "name": "ニャビー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ねこだまし",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-021",
+   "localId": "021",
+   "name": "ニャヒート",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ニャビー",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "かみつく",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "フレアストライク",
+     "effect": "次の自分の番、このポケモンは「フレアストライク」が使えない。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-022",
+   "localId": "022",
+   "name": "ガオガエンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 320,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ニャヒート",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ハッスルプレー",
+     "effect": "相手のベンチポケモンの数ぶん、このポケモンがワザを使うための[C]エネルギーは少なくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ブレイズボム",
+     "effect": "相手のバトルポケモンをやけどにする。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-023",
+   "localId": "023",
+   "name": "ピカチュウ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "でんじスパーク",
+     "effect": "相手のポケモン1匹に、10ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-024",
+   "localId": "024",
+   "name": "ライチュウ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ピカチュウ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "まきこみボルト",
+     "effect": "このポケモン以外の、ダメカンがのっているおたがいのポケモン全員に、それぞれ50ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ライトニングボール",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-025",
+   "localId": "025",
+   "name": "エレブー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "チョップ",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ビリリパンチ",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-026",
+   "localId": "026",
+   "name": "エレキブル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エレブー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ろうでんナックル",
+     "effect": "相手の場に[W]ポケモンがいるなら、120ダメージ追加。",
+     "damage": "40+"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "エレキスラッグ",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-027",
+   "localId": "027",
+   "name": "デンヂムシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アゴジムシ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "バチバチ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-028",
+   "localId": "028",
+   "name": "クワガノン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "デンヂムシ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "マッハボルト",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ちょくれつキャノン",
+     "effect": "自分のベンチの「デンヂムシ」の数×80ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-029",
+   "localId": "029",
+   "name": "ゼラオラ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ビリビリナックル",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ストロングボルト",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-030",
+   "localId": "030",
+   "name": "テツノイバラ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "デスタプレッサー",
+     "effect": "自分の山札を上から5枚オモテにして、その中にある「未来」のカードの枚数×70ダメージ。オモテにした「未来」のカードはトラッシュし、残りのカードは山札にもどして切る。",
+     "damage": "70×"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "メガトンラリアット",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-031",
+   "localId": "031",
+   "name": "バリヤード",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "そっくりショー",
+     "effect": "相手の手札を見る。のぞむなら、その中にあるサポートを1枚選び、その効果を、このワザの効果として使う。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ぶきみなねんぱ",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-032",
+   "localId": "032",
+   "name": "キリンリキ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "サイコダメージ",
+     "effect": "相手のバトルポケモンにのっているダメカンの数×10ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-033",
+   "localId": "033",
+   "name": "アブリー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "プチドレイン",
+     "effect": "このポケモンのHPを「10」回復する。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-034",
+   "localId": "034",
+   "name": "アブリボン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アブリー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "よけいなかふん",
+     "effect": "次の自分の番、このワザを受けたポケモンがきぜつしたとき、サイドを2枚多くとる。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-035",
+   "localId": "035",
+   "name": "テツノブジン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "えんざん",
+     "effect": "自分の山札を上から4枚見て、好きな順番に入れ替えて、山札の上にもどす。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "マジェスティソード",
+     "effect": "この番、手札から「未来」のサポートを出して使っていたなら、100ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-036",
+   "localId": "036",
+   "name": "テツノカシラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 220,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "コバルトコマンド",
+     "effect": "このポケモンがいるかぎり、自分の「未来」のポケモン（「テツノカシラex」をのぞく）が使うワザの、相手のバトルポケモンへのダメージは「+20」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ツインショーテル",
+     "effect": "相手のポケモン2匹に、それぞれ50ダメージ。このワザのダメージは、弱点・抵抗力と、ダメージを受けるポケモンにかかっている効果を計算しない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-037",
+   "localId": "037",
+   "name": "アサナン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ビンタ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "キック",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-038",
+   "localId": "038",
+   "name": "チャーレム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アサナン",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ローキック",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "とびひざげり",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-039",
+   "localId": "039",
+   "name": "モグリュー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ほりまくり",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。自分の山札から「基本[F]エネルギー」を3枚まで選び、トラッシュする。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "すなしぶき",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-040",
+   "localId": "040",
+   "name": "ドリュウズ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モグリュー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "マッドショット",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ワイルドタックル",
+     "effect": "このポケモンにも50ダメージ。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-041",
+   "localId": "041",
+   "name": "テツノイワオex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 240,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "リパルサーアックス",
+     "effect": "次の相手の番、このポケモンがワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを8個のせる。",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "パワースタンプ",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-042",
+   "localId": "042",
+   "name": "リキキリンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 260,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "キリンリキ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "テイルアーマー",
+     "effect": "このポケモンは、相手のたねポケモンの「ポケモンex」からワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダーティビーム",
+     "effect": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-043",
+   "localId": "043",
+   "name": "フォレトス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "クヌギダマ",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "とげキャノン",
+     "effect": "コインを3回投げ、オモテの数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "こうてつタックル",
+     "effect": "このポケモンにも40ダメージ。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-044",
+   "localId": "044",
+   "name": "ハッサムex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ストライク",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はがねのつばさ",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-50」される。",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "クロスブレイカー",
+     "effect": "このポケモンについている[M]エネルギーを2枚までトラッシュし、その枚数×120ダメージ。",
+     "damage": "120×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-045",
+   "localId": "045",
+   "name": "クチート",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "さそっていたぶる",
+     "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンに30ダメージ。"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "するどいキバ",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-046",
+   "localId": "046",
+   "name": "ダンバル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ツメをたてる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "アイアンタックル",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-047",
+   "localId": "047",
+   "name": "メタング",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ダンバル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "メタルメーカー",
+     "effect": "自分の番に1回使える。自分の山札を上から4枚見て、その中から「基本[M]エネルギー」を好きなだけ選び、自分のポケモンに好きなようにつける。残りのカードはすべてウラにして切り、山札の下にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ビーム",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-048",
+   "localId": "048",
+   "name": "メタグロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 180,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "メタング",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "コメットパンチ",
+     "effect": "次の自分の番、このポケモンの「コメットパンチ」のダメージは「+60」される。",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ラスターブラスト",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-049",
+   "localId": "049",
+   "name": "メルタン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "ずつき",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-050",
+   "localId": "050",
+   "name": "メルメタル",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 160,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "メルタン",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 120
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "アイアンバッシュ",
+     "damage": 230
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-051",
+   "localId": "051",
+   "name": "テツノワダチ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "デュアルコア",
+     "effect": "このポケモンに「ブーストエナジー 未来」がついているかぎり、このポケモンは[F]と[M]の2つのタイプになる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "パスホイール",
+     "effect": "このポケモンについているエネルギーを1個選び、ベンチポケモンにつけ替える。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-052",
+   "localId": "052",
+   "name": "ミライドン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 110,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "アクセルピーク",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、自分の「未来」のポケモンに好きなようにつける。そして山札を切る。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Psychic"
+     ],
+     "name": "スパーキングアタック",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-053",
+   "localId": "053",
+   "name": "ベロリンガ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ベロでひきこむ",
+     "effect": "相手の手札を見て、その中からたねポケモンを2枚まで選び、相手のベンチに出す。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かいりき",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-054",
+   "localId": "054",
+   "name": "ベロベルト",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 150,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ベロリンガ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "のしかかり",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ベロベロハリケーン",
+     "effect": "コインを4回投げ、オモテの数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-055",
+   "localId": "055",
+   "name": "エネコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを1枚選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-056",
+   "localId": "056",
+   "name": "エネコロロ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エネコ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "しっぽでまどわす",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "エナジーミキサー",
+     "effect": "自分の場のポケモンについているエネルギーを好きなだけ選び、自分のポケモンに好きなようにつけ替える。",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-057",
+   "localId": "057",
+   "name": "マメパト",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きんきゅうしんか",
+     "effect": "このポケモンの残りHPが「30」以下なら、自分の番に1回使える。自分の山札から「ケンホロウ（『ポケモンex』をふくむ）」を1枚選び、この「マメパト」にのせて進化させる。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かぜおこし",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-058",
+   "localId": "058",
+   "name": "ハトーボー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "マメパト",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "スピードひこう",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ジェットウイング",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-059",
+   "localId": "059",
+   "name": "ケンホロウ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ハトーボー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "リバースウインド",
+     "effect": "のぞむなら、相手のバトルポケモンについているエネルギーを2個選び、相手の手札にもどす。",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "そこぢから",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-060",
+   "localId": "060",
+   "name": "ジジーロン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "げきこうほう",
+     "effect": "自分のベンチポケモン全員にダメカンがのっているなら、120ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-061",
+   "localId": "061",
+   "name": "ハンドトリマー",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、それぞれ自分の手札が5枚になるようにトラッシュする。（トラッシュは相手から行う。手札が5枚以下のプレイヤーはトラッシュしない。）",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-062",
+   "localId": "062",
+   "name": "プライムキャッチャー",
+   "category": "Trainer",
+   "rarity": "ACE SPEC Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、自分のバトルポケモンをベンチポケモンと入れ替える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-063",
+   "localId": "063",
+   "name": "リブートポッド",
+   "category": "Trainer",
+   "rarity": "ACE SPEC Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の「未来」のポケモン全員に、トラッシュから基本エネルギーを1枚ずつつける。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-064",
+   "localId": "064",
+   "name": "ヒーローマント",
+   "category": "Trainer",
+   "rarity": "ACE SPEC Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンの最大HPは「＋100」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-065",
+   "localId": "065",
+   "name": "ブーストエナジー 未来",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけている「未来」のポケモンは、にげるためのエネルギーがすべてなくなり、そのポケモンが使うワザの、相手のバトルポケモンへのダメージは「+20」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-066",
+   "localId": "066",
+   "name": "ヘビーバトン",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているにげるためのエネルギーが4個のポケモンが、バトル場で相手のポケモンからワザのダメージを受けてきぜつしたとき、そのポケモンについている基本エネルギーを3枚まで選び、自分のベンチポケモンに好きなようにつけ替える。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-067",
+   "localId": "067",
+   "name": "暗号マニアの解読",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から好きなカードを2枚選ぶ。残りの山札を切り、選んだカードを好きな順番に入れ替えて、山札の上にもどす。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-068",
+   "localId": "068",
+   "name": "セイジ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の場のポケモン1匹から進化するカード（特性を持つポケモンをのぞく）を、自分の山札から1枚選び、そのポケモンにのせて進化させる。そして山札を切る。（対戦準備で出したポケモンや、この番出したばかりのポケモンにも使える。）",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-069",
+   "localId": "069",
+   "name": "ベルのまごころ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "残りHPが「30」以下の自分のポケモン1匹のHPを、すべて回復する。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-070",
+   "localId": "070",
+   "name": "フルメタルラボ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの[M]ポケモンが、相手のポケモンから受けるワザのダメージは「-30」される。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-071",
+   "localId": "071",
+   "name": "ミストエネルギー",
+   "category": "Energy",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、[C]エネルギー1個ぶんとしてはたらく。このカードをつけているポケモンは、相手のポケモンが使うワザの効果を受けない。（すでに受けている効果は、なくならない。）",
+   "energyType": "Special",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-072",
+   "localId": "072",
+   "name": "ダーテング",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 150,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "コノハナ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "おいだしトルネード",
+     "effect": "相手のベンチポケモンを3匹選ぶ。その後、選んでいない相手のベンチポケモン全員と、ついているすべてのカードを、相手の山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "エネループ",
+     "effect": "このポケモンについているエネルギーを1個選び、手札にもどす。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-073",
+   "localId": "073",
+   "name": "シキジカ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はねまわる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "らくようタックル",
+     "effect": "このポケモンについている[G]エネルギーを1個選び、トラッシュする。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-074",
+   "localId": "074",
+   "name": "メブキジカ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シキジカ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しきのうつろい",
+     "effect": "自分の番に1回使える。自分の山札からスタジアムを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かいりきホーン",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-075",
+   "localId": "075",
+   "name": "ニャビー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ねこだまし",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-076",
+   "localId": "076",
+   "name": "デンヂムシ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アゴジムシ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "バチバチ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-077",
+   "localId": "077",
+   "name": "テツノイバラ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "デスタプレッサー",
+     "effect": "自分の山札を上から5枚オモテにして、その中にある「未来」のカードの枚数×70ダメージ。オモテにした「未来」のカードはトラッシュし、残りのカードは山札にもどして切る。",
+     "damage": "70×"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "メガトンラリアット",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-078",
+   "localId": "078",
+   "name": "アブリー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 30,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "プチドレイン",
+     "effect": "このポケモンのHPを「10」回復する。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-079",
+   "localId": "079",
+   "name": "ドリュウズ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モグリュー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "マッドショット",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ワイルドタックル",
+     "effect": "このポケモンにも50ダメージ。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-080",
+   "localId": "080",
+   "name": "メタグロス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 180,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "メタング",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "コメットパンチ",
+     "effect": "次の自分の番、このポケモンの「コメットパンチ」のダメージは「+60」される。",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ラスターブラスト",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-081",
+   "localId": "081",
+   "name": "メルタン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "ずつき",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-082",
+   "localId": "082",
+   "name": "ベロリンガ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ベロでひきこむ",
+     "effect": "相手の手札を見て、その中からたねポケモンを2枚まで選び、相手のベンチに出す。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かいりき",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-083",
+   "localId": "083",
+   "name": "ジジーロン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "げきこうほう",
+     "effect": "自分のベンチポケモン全員にダメカンがのっているなら、120ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-084",
+   "localId": "084",
+   "name": "テツノイサハex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 220,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ラピッドバーニア",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。このポケモンをバトルポケモンと入れ替える。入れ替えた場合、自分の場のポケモンについているエネルギーを好きなだけ選び、このポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "プリズムエッジ",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-085",
+   "localId": "085",
+   "name": "ガオガエンex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 320,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ニャヒート",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ハッスルプレー",
+     "effect": "相手のベンチポケモンの数ぶん、このポケモンがワザを使うための[C]エネルギーは少なくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ブレイズボム",
+     "effect": "相手のバトルポケモンをやけどにする。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-086",
+   "localId": "086",
+   "name": "テツノカシラex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 220,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "コバルトコマンド",
+     "effect": "このポケモンがいるかぎり、自分の「未来」のポケモン（「テツノカシラex」をのぞく）が使うワザの、相手のバトルポケモンへのダメージは「+20」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ツインショーテル",
+     "effect": "相手のポケモン2匹に、それぞれ50ダメージ。このワザのダメージは、弱点・抵抗力と、ダメージを受けるポケモンにかかっている効果を計算しない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-087",
+   "localId": "087",
+   "name": "テツノイワオex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 240,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "リパルサーアックス",
+     "effect": "次の相手の番、このポケモンがワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを8個のせる。",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "パワースタンプ",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-088",
+   "localId": "088",
+   "name": "リキキリンex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 260,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "キリンリキ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "テイルアーマー",
+     "effect": "このポケモンは、相手のたねポケモンの「ポケモンex」からワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダーティビーム",
+     "effect": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-089",
+   "localId": "089",
+   "name": "ハッサムex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 270,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ストライク",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はがねのつばさ",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-50」される。",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "クロスブレイカー",
+     "effect": "このポケモンについている[M]エネルギーを2枚までトラッシュし、その枚数×120ダメージ。",
+     "damage": "120×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-090",
+   "localId": "090",
+   "name": "暗号マニアの解読",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から好きなカードを2枚選ぶ。残りの山札を切り、選んだカードを好きな順番に入れ替えて、山札の上にもどす。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-091",
+   "localId": "091",
+   "name": "セイジ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の場のポケモン1匹から進化するカード（特性を持つポケモンをのぞく）を、自分の山札から1枚選び、そのポケモンにのせて進化させる。そして山札を切る。（対戦準備で出したポケモンや、この番出したばかりのポケモンにも使える。）",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-092",
+   "localId": "092",
+   "name": "ベルのまごころ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "残りHPが「30」以下の自分のポケモン1匹のHPを、すべて回復する。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-093",
+   "localId": "093",
+   "name": "テツノイサハex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 220,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ラピッドバーニア",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。このポケモンをバトルポケモンと入れ替える。入れ替えた場合、自分の場のポケモンについているエネルギーを好きなだけ選び、このポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "プリズムエッジ",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-094",
+   "localId": "094",
+   "name": "テツノカシラex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 220,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "コバルトコマンド",
+     "effect": "このポケモンがいるかぎり、自分の「未来」のポケモン（「テツノカシラex」をのぞく）が使うワザの、相手のバトルポケモンへのダメージは「+20」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ツインショーテル",
+     "effect": "相手のポケモン2匹に、それぞれ50ダメージ。このワザのダメージは、弱点・抵抗力と、ダメージを受けるポケモンにかかっている効果を計算しない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-095",
+   "localId": "095",
+   "name": "テツノイワオex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 240,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "リパルサーアックス",
+     "effect": "次の相手の番、このポケモンがワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを8個のせる。",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "パワースタンプ",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-096",
+   "localId": "096",
+   "name": "セイジ",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の場のポケモン1匹から進化するカード（特性を持つポケモンをのぞく）を、自分の山札から1枚選び、そのポケモンにのせて進化させる。そして山札を切る。（対戦準備で出したポケモンや、この番出したばかりのポケモンにも使える。）",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-097",
+   "localId": "097",
+   "name": "ベルのまごころ",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "残りHPが「30」以下の自分のポケモン1匹のHPを、すべて回復する。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-098",
+   "localId": "098",
+   "name": "テツノイサハex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 220,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ラピッドバーニア",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。このポケモンをバトルポケモンと入れ替える。入れ替えた場合、自分の場のポケモンについているエネルギーを好きなだけ選び、このポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "プリズムエッジ",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-099",
+   "localId": "099",
+   "name": "テツノカシラex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 220,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "コバルトコマンド",
+     "effect": "このポケモンがいるかぎり、自分の「未来」のポケモン（「テツノカシラex」をのぞく）が使うワザの、相手のバトルポケモンへのダメージは「+20」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ツインショーテル",
+     "effect": "相手のポケモン2匹に、それぞれ50ダメージ。このワザのダメージは、弱点・抵抗力と、ダメージを受けるポケモンにかかっている効果を計算しない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  },
+  {
+   "id": "SV5M-100",
+   "localId": "100",
+   "name": "テツノイワオex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 240,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "リパルサーアックス",
+     "effect": "次の相手の番、このポケモンがワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを8個のせる。",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "パワースタンプ",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5M",
+    "name": "サイバージャッジ"
+   }
+  }
+ ]
+}

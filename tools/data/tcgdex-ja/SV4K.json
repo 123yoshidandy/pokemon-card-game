@@ -1,0 +1,23 @@
+{
+ "id": "SV4K",
+ "name": "古代の咆哮",
+ "releaseDate": "2023-10-27",
+ "total": 95,
+ "cards": [
+  {
+   "id": "SV4K-095",
+   "localId": "095",
+   "name": "基本悪エネルギー",
+   "category": "Energy",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "energyType": "Normal",
+   "set": {
+    "id": "SV4K",
+    "name": "古代の咆哮"
+   }
+  }
+ ]
+}

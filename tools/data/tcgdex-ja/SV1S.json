@@ -1,0 +1,23 @@
+{
+ "id": "SV1S",
+ "name": "スカーレットex",
+ "releaseDate": "2023-01-20",
+ "total": 108,
+ "cards": [
+  {
+   "id": "SV1S-108",
+   "localId": "108",
+   "name": "基本闘エネルギー",
+   "category": "Energy",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "energyType": "Normal",
+   "set": {
+    "id": "SV1S",
+    "name": "スカーレットex"
+   }
+  }
+ ]
+}

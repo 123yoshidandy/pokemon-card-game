@@ -1,0 +1,4870 @@
+{
+ "id": "M5",
+ "name": "アビスアイ",
+ "releaseDate": "2026-05-22",
+ "total": 118,
+ "cards": [
+  {
+   "id": "M5-001",
+   "localId": "001",
+   "name": "トロピウス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かじつのかおり",
+     "effect": "自分の山札を上から6枚見て、その中からポケモンを好きなだけ選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ソーラービーム",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-002",
+   "localId": "002",
+   "name": "アゴジムシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いとをはく",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-003",
+   "localId": "003",
+   "name": "カリキリ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "とつげき",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-004",
+   "localId": "004",
+   "name": "ラランテスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 260,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カリキリ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はつらつカッター",
+     "effect": "この番に、このポケモンのHPを回復していたなら、200ダメージ追加。",
+     "damage": "60+"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "リーフガード",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-50」される。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-005",
+   "localId": "005",
+   "name": "チャデス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ばけがくれ",
+     "effect": "このポケモンは、相手のワザや特性の効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっそりのせる",
+     "effect": "相手のバトルポケモンに、ダメカンを1個のせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-006",
+   "localId": "006",
+   "name": "ヤバソチャ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チャデス",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ばけがくれ",
+     "effect": "このポケモンは、相手のワザや特性の効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "まっちゃスピン",
+     "effect": "自分のトラッシュに、特性「ばけがくれ」を持つポケモンが6枚以上あるなら、相手のポケモン全員に、それぞれダメカンを4個のせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-007",
+   "localId": "007",
+   "name": "ヒードラン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "こがす",
+     "effect": "相手のバトルポケモンをやけどにする。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ようがんウォール",
+     "effect": "次の相手の番、このポケモンはやけどのポケモンからワザのダメージを受けない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-008",
+   "localId": "008",
+   "name": "ヤクデ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "のやき",
+     "effect": "相手の山札を上から1枚トラッシュする。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "バグパニック",
+     "effect": "自分の山札を下から7枚オモテにして、その中にある、ワザ「バグパニック」を持つポケモンの枚数×50ダメージ。オモテにしたポケモンは山札にもどして切る。残りのカードはトラッシュする。",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-009",
+   "localId": "009",
+   "name": "マルヤクデ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤクデ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "のやき",
+     "effect": "相手の山札を上から2枚トラッシュする。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヒートタックル",
+     "effect": "このポケモンにも30ダメージ。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-010",
+   "localId": "010",
+   "name": "カルボウ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ぜんりょくパンチ",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-011",
+   "localId": "011",
+   "name": "グレンアルマ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カルボウ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "フレイムレギオン",
+     "effect": "[R]エネルギーがついている自分のベンチポケモンの数×40ダメージ追加。",
+     "damage": "40+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-012",
+   "localId": "012",
+   "name": "トサキント",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つきさす",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-013",
+   "localId": "013",
+   "name": "アズマオウ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "トサキント",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハイドロショット",
+     "effect": "相手のポケモン1匹に、このポケモンについている[W]エネルギーの数×30ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-014",
+   "localId": "014",
+   "name": "ホエルコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "みずでっぽう",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water"
+     ],
+     "name": "スプラッシュ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-015",
+   "localId": "015",
+   "name": "ホエルオーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 380,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ホエルコ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water"
+     ],
+     "name": "なみのり",
+     "damage": 120
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water",
+      "Water",
+      "Water"
+     ],
+     "name": "フォーリングダウン",
+     "effect": "このポケモンをねむりにする。",
+     "damage": 270
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-016",
+   "localId": "016",
+   "name": "ジーランス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "フォッシルビート",
+     "effect": "名前に「古びた」とつく自分のベンチポケモンの数×30ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-017",
+   "localId": "017",
+   "name": "アシマリ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "はたく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-018",
+   "localId": "018",
+   "name": "オシャマリ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アシマリ",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ハイパーボイス",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-019",
+   "localId": "019",
+   "name": "アシレーヌ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "オシャマリ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "まんたんメロディ",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分のポケモン1匹のHPを、すべて回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "アクアリターン",
+     "effect": "このポケモンと、ついているすべてのカードを、山札にもどして切る。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-020",
+   "localId": "020",
+   "name": "ナミイルカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "ドレインフィン",
+     "effect": "このポケモンのHPを「20」回復する。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-021",
+   "localId": "021",
+   "name": "イルカマン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ナミイルカ",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "ジャスティスナックル",
+     "effect": "相手のサイドの残り枚数が1枚なら、200ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-022",
+   "localId": "022",
+   "name": "ラクライ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "たいあたり",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-023",
+   "localId": "023",
+   "name": "ライボルト",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ラクライ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "フラッシュバリア",
+     "effect": "次の相手の番、このポケモンは進化ポケモンからワザのダメージを受けない。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ソニックエッジ",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-024",
+   "localId": "024",
+   "name": "デンヂムシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アゴジムシ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "はさむ",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ぶつかる",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-025",
+   "localId": "025",
+   "name": "クワガノン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "デンヂムシ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "クイックダイブ",
+     "effect": "相手のポケモン1匹に、50ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ギガレールガン",
+     "effect": "このポケモンに「ボルト[L]エネルギー」がついていないなら、このワザは失敗。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-026",
+   "localId": "026",
+   "name": "メガゼラオラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "サンダーフィスト",
+     "effect": "このポケモンについている[L]エネルギーの数×60ダメージ。",
+     "damage": "60×"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ゼプトターン",
+     "effect": "このポケモンをベンチポケモンと入れ替える。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-027",
+   "localId": "027",
+   "name": "ミライドン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "フォトンコード",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けてきぜつしたとき、このポケモンについている「基本[L]エネルギー」を2枚まで選び、ベンチポケモン1匹につけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "かみなり",
+     "effect": "このポケモンにも30ダメージ。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-028",
+   "localId": "028",
+   "name": "ヤドン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "すてほうだい",
+     "effect": "自分の手札を好きなだけ選び、トラッシュする。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ずつき",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-029",
+   "localId": "029",
+   "name": "ヤドラン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤドン",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "スッカラカン",
+     "effect": "自分の手札が1枚もないなら、160ダメージ追加。",
+     "damage": "50+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "しねんのずつき",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-030",
+   "localId": "030",
+   "name": "ルージュラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "きょうれつキッス",
+     "effect": "次の相手の番の終わりに、このワザを受けたポケモンと、ついているすべてのカードを、トラッシュする。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ねんりき",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-031",
+   "localId": "031",
+   "name": "カゲボウズ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ばけがくれ",
+     "effect": "このポケモンは、相手のワザや特性の効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ぶらさがる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-032",
+   "localId": "032",
+   "name": "ジュペッタ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カゲボウズ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ばけがくれ",
+     "effect": "このポケモンは、相手のワザや特性の効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "にんぎょうキャッチ",
+     "effect": "のぞむなら、自分の山札から好きなカードを1枚選び、手札に加える。そして山札を切る。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-033",
+   "localId": "033",
+   "name": "ミカルゲ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "たましいエンド",
+     "effect": "自分のトラッシュに、特性「ばけがくれ」を持つポケモンが13枚以上あるなら、相手のポケモンを2匹選び、それぞれのっているダメカンの数が4倍になるように、ダメカンをのせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-034",
+   "localId": "034",
+   "name": "ヒトモシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "おにび",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-035",
+   "localId": "035",
+   "name": "ランプラー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒトモシ",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ふえるあかり",
+     "effect": "自分の山札から「ランプラー」を3枚まで選び、ベンチに出す。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-036",
+   "localId": "036",
+   "name": "メガシャンデラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 350,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ランプラー",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "じゅばくのほのお",
+     "effect": "このポケモンがいるかぎり、相手のバトルポケモンは、にげるためのエネルギーが1個ぶん多くなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ファントムメイズ",
+     "effect": "相手のバトルポケモンのにげるためのエネルギーの数×50ダメージ追加。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-037",
+   "localId": "037",
+   "name": "ダダリン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "むねんのイカリ",
+     "effect": "自分のトラッシュに、特性「ばけがくれ」を持つポケモンが4枚以上あるなら、140ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-038",
+   "localId": "038",
+   "name": "マーシャドー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "かげむすび",
+     "effect": "相手のバトルポケモンのにげるためのエネルギーの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-039",
+   "localId": "039",
+   "name": "コノヨザル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "オコリザル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "くちないからだ",
+     "effect": "このポケモンが、ワザのダメージを受けてきぜつするとき、自分はコインを1回投げる。オモテなら、このポケモンはきぜつせず、残りHPが「10」の状態で場に残る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ゴーストブロー",
+     "effect": "相手のベンチポケモン1匹に、ダメカンを5個のせる。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-040",
+   "localId": "040",
+   "name": "マンキー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "けたぐり",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-041",
+   "localId": "041",
+   "name": "オコリザル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "マンキー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "どつく",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-042",
+   "localId": "042",
+   "name": "ズガイドス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "つきとばす",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-043",
+   "localId": "043",
+   "name": "ラムパルドex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 330,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ズガイドス",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はかいのずつき",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ランページハンマー",
+     "effect": "次の自分の番、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+150」される。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-044",
+   "localId": "044",
+   "name": "モグリュー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ツメをたてる",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-045",
+   "localId": "045",
+   "name": "コライドン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "バトルクロー",
+     "effect": "相手のバトルポケモンが進化ポケモンなら、30ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ガイアインパクト",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 190
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-046",
+   "localId": "046",
+   "name": "メガダークライex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ナイトレイド",
+     "effect": "自分のベンチポケモンにダメカンがのっているなら、110ダメージ追加。",
+     "damage": "110+"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "アビスアイ",
+     "effect": "相手のバトルポケモンが特殊状態なら、そのポケモンをきぜつさせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-047",
+   "localId": "047",
+   "name": "バルチャイ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "はばたく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "かぜおこし",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-048",
+   "localId": "048",
+   "name": "バルジーナ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "バルチャイ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ボーンスナイプ",
+     "effect": "特殊エネルギーがついている相手のポケモン1匹に、70ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ブラストウインド",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-049",
+   "localId": "049",
+   "name": "マーイーカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ちょうたつ",
+     "effect": "自分の山札からグッズを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "かいてんアタック",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-050",
+   "localId": "050",
+   "name": "カラマネロ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "マーイーカ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "まどわす",
+     "effect": "相手のバトルポケモンをこんらんにする。"
+    },
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ブレインクラッシュ",
+     "effect": "相手のバトルポケモンがこんらんでないなら、このワザは失敗。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-051",
+   "localId": "051",
+   "name": "クスネ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "かじる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "うしろげり",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-052",
+   "localId": "052",
+   "name": "フォクスライ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "クスネ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スキルシーフ",
+     "effect": "自分の手札が1枚もないなら、相手の場のポケモンが持つワザを1つ選び、このワザとして使う。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "するどいキバ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-053",
+   "localId": "053",
+   "name": "モルペコex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 180,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ホイールドロー",
+     "effect": "自分の手札をすべて山札にもどして切る。その後、山札を6枚引く。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "はらぺこボンバー",
+     "effect": "このポケモンにのっているダメカンの数×40ダメージ追加。",
+     "damage": "40+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-054",
+   "localId": "054",
+   "name": "ザルード",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "うしろなげ",
+     "effect": "自分のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "シャドーウィップ",
+     "effect": "自分のベンチポケモンに「シャドー[D]エネルギー」がついているなら、70ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-055",
+   "localId": "055",
+   "name": "オラチフ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "かみつく",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-056",
+   "localId": "056",
+   "name": "マフィティフ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 140,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "オラチフ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "かみつく",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "とびこみヘッド",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「+100」される。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-057",
+   "localId": "057",
+   "name": "イーユイ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 90,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "うずまくねたみ",
+     "effect": "このポケモンにダメカンが2個以上のっているなら、90ダメージ追加。このワザのダメージは弱点を計算しない。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-058",
+   "localId": "058",
+   "name": "エアームド",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "スチールカッター",
+     "effect": "自分の手札から「基本[M]エネルギー」を2枚までトラッシュし、その枚数×40ダメージ。",
+     "damage": "40×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-059",
+   "localId": "059",
+   "name": "タテトプス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "くだく",
+     "effect": "相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-060",
+   "localId": "060",
+   "name": "トリデプス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 160,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "タテトプス",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "たいこのぼうへき",
+     "effect": "このポケモンがベンチにいるかぎり、自分のポケモン全員は、ついているエネルギーが2個以下の相手のポケモンからワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-061",
+   "localId": "061",
+   "name": "ドーミラー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ミラーアタック",
+     "effect": "相手のバトルポケモンが[M]ポケモンなら、30ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-062",
+   "localId": "062",
+   "name": "ドータクン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドーミラー",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ひっぱたく",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "メタルブロック",
+     "effect": "次の相手の番、このポケモンが進化ポケモンから受けるワザのダメージは「-100」される。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-063",
+   "localId": "063",
+   "name": "メガドリュウズex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 340,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モグリュー",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "ほりくずす",
+     "effect": "相手の山札を上から2枚トラッシュする。",
+     "damage": 90
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Metal"
+     ],
+     "name": "マキシマムドリル",
+     "effect": "このワザを使うためのエネルギーより、2個多くエネルギーがついているなら、130ダメージ追加。",
+     "damage": "200+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-064",
+   "localId": "064",
+   "name": "ツツケラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "にどづき",
+     "effect": "コインを2回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-065",
+   "localId": "065",
+   "name": "ケララッパ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ツツケラ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "そらをとぶ",
+     "effect": "コインを1回投げウラなら、このワザは失敗。オモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-066",
+   "localId": "066",
+   "name": "ドデカバシ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ケララッパ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スカイドロー",
+     "effect": "自分の番に1回使える。自分の山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "フェザーロンド",
+     "effect": "おたがいのベンチポケモンの数×20ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-067",
+   "localId": "067",
+   "name": "タイプ：ヌル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "パワーエッジ",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-068",
+   "localId": "068",
+   "name": "シルヴァディ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "タイプ：ヌル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "バディコール",
+     "effect": "自分の手札が1枚もないなら、自分の番に1回使える。自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "エアスラッシュ",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-069",
+   "localId": "069",
+   "name": "オトシドリ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おとどけチャレンジ",
+     "effect": "コインを2回投げ、すべてオモテなら、自分の山札からポケモンを1枚選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードウイング",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-070",
+   "localId": "070",
+   "name": "ダークベル",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのバトルポケモン（[D]ポケモンをのぞく）を、それぞれこんらんにする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-071",
+   "localId": "071",
+   "name": "古びたずがいの化石",
+   "category": "Trainer",
+   "rarity": "Common",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、HP60の[C]タイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。自分の番の中でなら、場に出ているこのカードをトラッシュできる。 Ability: ずがいのトゲ このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを3個のせる。グッズは、自分の番に何枚でも使える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-072",
+   "localId": "072",
+   "name": "古びたたての化石",
+   "category": "Trainer",
+   "rarity": "Common",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、HP60の[C]タイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。自分の番の中でなら、場に出ているこのカードをトラッシュできる。グッズは、自分の番に何枚でも使える。 Ability: たてのまもり このポケモンがバトル場にいるかぎり、自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-10」される。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-073",
+   "localId": "073",
+   "name": "ごうかいボム",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモン（「メガシンカex」をのぞく）が、バトル場で相手の「メガシンカex」から「240」以上のワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを12個のせる。その後、このカードをトラッシュする。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-074",
+   "localId": "074",
+   "name": "リトライバッジ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の番ごとに1回、このカードをつけている[C]ポケモンのワザで自分がコインを投げたとき、そのコインの結果をすべてなくし、はじめからコインを投げなおしてよい。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-075",
+   "localId": "075",
+   "name": "カスミの元気",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードを使ったなら、自分の番は終わる。自分の山札から「基本[W]エネルギー」を4枚まで選び、自分のポケモン1匹につける。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-076",
+   "localId": "076",
+   "name": "グラジオの決戦",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札がこのカード1枚だけのときにしか使えない。この番、自分のポケモン（「ルールを持つポケモン」をのぞく）が使うワザの、相手のバトルポケモンへのダメージは「+80」される。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-077",
+   "localId": "077",
+   "name": "サビ組のしたっぱ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、前の相手の番に、自分のポケモンがきぜつしていなければ使えない。相手の場のポケモンについているエネルギーを1個選び、トラッシュする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-078",
+   "localId": "078",
+   "name": "ムク",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札からポケモン（「ルールを持つポケモン」をのぞく）を2枚までトラッシュし、その枚数×3枚ぶん、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-079",
+   "localId": "079",
+   "name": "化石採掘場",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分の山札から、名前に「古びた」とつくグッズを2枚まで選び、ベンチに出してよい。そして山札を切る。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-080",
+   "localId": "080",
+   "name": "ボルト雷エネルギー",
+   "category": "Energy",
+   "rarity": "Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、[L]エネルギー1個ぶんとしてはたらく。このカードをつけている[L]ポケモンが使うワザの、相手のバトルポケモンへのダメージは「+20」される。",
+   "energyType": "Special",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-081",
+   "localId": "081",
+   "name": "シャドー悪エネルギー",
+   "category": "Energy",
+   "rarity": "Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、[D]エネルギー1個ぶんとしてはたらく。このカードをつけている[D]ポケモンは、ベンチにいるかぎり、相手のワザのダメージを受けない。",
+   "energyType": "Special",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-082",
+   "localId": "082",
+   "name": "カリキリ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "とつげき",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-083",
+   "localId": "083",
+   "name": "グレンアルマ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カルボウ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "フレイムレギオン",
+     "effect": "[R]エネルギーがついている自分のベンチポケモンの数×40ダメージ追加。",
+     "damage": "40+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-084",
+   "localId": "084",
+   "name": "トサキント",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つきさす",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-085",
+   "localId": "085",
+   "name": "アシレーヌ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "オシャマリ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "まんたんメロディ",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分のポケモン1匹のHPを、すべて回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "アクアリターン",
+     "effect": "このポケモンと、ついているすべてのカードを、山札にもどして切る。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-086",
+   "localId": "086",
+   "name": "ライボルト",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ラクライ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "フラッシュバリア",
+     "effect": "次の相手の番、このポケモンは進化ポケモンからワザのダメージを受けない。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ソニックエッジ",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-087",
+   "localId": "087",
+   "name": "ヤドラン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤドン",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "スッカラカン",
+     "effect": "自分の手札が1枚もないなら、160ダメージ追加。",
+     "damage": "50+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "しねんのずつき",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-088",
+   "localId": "088",
+   "name": "ダダリン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "むねんのイカリ",
+     "effect": "自分のトラッシュに、特性「ばけがくれ」を持つポケモンが4枚以上あるなら、140ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-089",
+   "localId": "089",
+   "name": "フォクスライ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "クスネ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スキルシーフ",
+     "effect": "自分の手札が1枚もないなら、相手の場のポケモンが持つワザを1つ選び、このワザとして使う。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "するどいキバ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-090",
+   "localId": "090",
+   "name": "ザルード",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "うしろなげ",
+     "effect": "自分のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "シャドーウィップ",
+     "effect": "自分のベンチポケモンに「シャドー[D]エネルギー」がついているなら、70ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-091",
+   "localId": "091",
+   "name": "トリデプス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 160,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "タテトプス",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "たいこのぼうへき",
+     "effect": "このポケモンがベンチにいるかぎり、自分のポケモン全員は、ついているエネルギーが2個以下の相手のポケモンからワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-092",
+   "localId": "092",
+   "name": "ドデカバシ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 150,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ケララッパ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スカイドロー",
+     "effect": "自分の番に1回使える。自分の山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "フェザーロンド",
+     "effect": "おたがいのベンチポケモンの数×20ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-093",
+   "localId": "093",
+   "name": "シルヴァディ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "タイプ：ヌル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "バディコール",
+     "effect": "自分の手札が1枚もないなら、自分の番に1回使える。自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "エアスラッシュ",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-094",
+   "localId": "094",
+   "name": "ラランテスex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 260,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カリキリ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はつらつカッター",
+     "effect": "この番に、このポケモンのHPを回復していたなら、200ダメージ追加。",
+     "damage": "60+"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "リーフガード",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-50」される。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-095",
+   "localId": "095",
+   "name": "ホエルオーex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 380,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ホエルコ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water"
+     ],
+     "name": "なみのり",
+     "damage": 120
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water",
+      "Water",
+      "Water"
+     ],
+     "name": "フォーリングダウン",
+     "effect": "このポケモンをねむりにする。",
+     "damage": 270
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-096",
+   "localId": "096",
+   "name": "メガゼラオラex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 270,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "サンダーフィスト",
+     "effect": "このポケモンについている[L]エネルギーの数×60ダメージ。",
+     "damage": "60×"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ゼプトターン",
+     "effect": "このポケモンをベンチポケモンと入れ替える。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-097",
+   "localId": "097",
+   "name": "メガシャンデラex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 350,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ランプラー",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "じゅばくのほのお",
+     "effect": "このポケモンがいるかぎり、相手のバトルポケモンは、にげるためのエネルギーが1個ぶん多くなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ファントムメイズ",
+     "effect": "相手のバトルポケモンのにげるためのエネルギーの数×50ダメージ追加。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-098",
+   "localId": "098",
+   "name": "ラムパルドex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 330,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ズガイドス",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はかいのずつき",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ランページハンマー",
+     "effect": "次の自分の番、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+150」される。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-099",
+   "localId": "099",
+   "name": "メガダークライex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 280,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ナイトレイド",
+     "effect": "自分のベンチポケモンにダメカンがのっているなら、110ダメージ追加。",
+     "damage": "110+"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "アビスアイ",
+     "effect": "相手のバトルポケモンが特殊状態なら、そのポケモンをきぜつさせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-100",
+   "localId": "100",
+   "name": "モルペコex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 180,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ホイールドロー",
+     "effect": "自分の手札をすべて山札にもどして切る。その後、山札を6枚引く。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "はらぺこボンバー",
+     "effect": "このポケモンにのっているダメカンの数×40ダメージ追加。",
+     "damage": "40+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-101",
+   "localId": "101",
+   "name": "メガドリュウズex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 340,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モグリュー",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "ほりくずす",
+     "effect": "相手の山札を上から2枚トラッシュする。",
+     "damage": 90
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Metal"
+     ],
+     "name": "マキシマムドリル",
+     "effect": "このワザを使うためのエネルギーより、2個多くエネルギーがついているなら、130ダメージ追加。",
+     "damage": "200+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-102",
+   "localId": "102",
+   "name": "アイアンディフェンダー",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "次の相手の番、自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-30」される。（新しく場に出したポケモンもふくむ。）",
+   "trainerType": "Item",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-103",
+   "localId": "103",
+   "name": "エネルギーつけかえ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の場のポケモンについている基本エネルギーを1個選び、自分の別のポケモンにつけ替える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-104",
+   "localId": "104",
+   "name": "クラッシュハンマー",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "コインを1回投げオモテなら、相手の場のポケモンについているエネルギーを1個選び、トラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-105",
+   "localId": "105",
+   "name": "ダークベル",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのバトルポケモン（[D]ポケモンをのぞく）を、それぞれこんらんにする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-106",
+   "localId": "106",
+   "name": "ごうかいボム",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモン（「メガシンカex」をのぞく）が、バトル場で相手の「メガシンカex」から「240」以上のワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを12個のせる。その後、このカードをトラッシュする。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-107",
+   "localId": "107",
+   "name": "ブレイブバングル",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモン（「ルールを持つポケモン」をのぞく）が使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+30」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-108",
+   "localId": "108",
+   "name": "カスミの元気",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードを使ったなら、自分の番は終わる。自分の山札から「基本[W]エネルギー」を4枚まで選び、自分のポケモン1匹につける。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-109",
+   "localId": "109",
+   "name": "グラジオの決戦",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札がこのカード1枚だけのときにしか使えない。この番、自分のポケモン（「ルールを持つポケモン」をのぞく）が使うワザの、相手のバトルポケモンへのダメージは「+80」される。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-110",
+   "localId": "110",
+   "name": "サビ組のしたっぱ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、前の相手の番に、自分のポケモンがきぜつしていなければ使えない。相手の場のポケモンについているエネルギーを1個選び、トラッシュする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-111",
+   "localId": "111",
+   "name": "ムク",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札からポケモン（「ルールを持つポケモン」をのぞく）を2枚までトラッシュし、その枚数×3枚ぶん、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-112",
+   "localId": "112",
+   "name": "メガゼラオラex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 270,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "サンダーフィスト",
+     "effect": "このポケモンについている[L]エネルギーの数×60ダメージ。",
+     "damage": "60×"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ゼプトターン",
+     "effect": "このポケモンをベンチポケモンと入れ替える。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-113",
+   "localId": "113",
+   "name": "メガシャンデラex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 350,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ランプラー",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "じゅばくのほのお",
+     "effect": "このポケモンがいるかぎり、相手のバトルポケモンは、にげるためのエネルギーが1個ぶん多くなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ファントムメイズ",
+     "effect": "相手のバトルポケモンのにげるためのエネルギーの数×50ダメージ追加。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-114",
+   "localId": "114",
+   "name": "メガダークライex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 280,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ナイトレイド",
+     "effect": "自分のベンチポケモンにダメカンがのっているなら、110ダメージ追加。",
+     "damage": "110+"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "アビスアイ",
+     "effect": "相手のバトルポケモンが特殊状態なら、そのポケモンをきぜつさせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-115",
+   "localId": "115",
+   "name": "モルペコex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 180,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ホイールドロー",
+     "effect": "自分の手札をすべて山札にもどして切る。その後、山札を6枚引く。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "はらぺこボンバー",
+     "effect": "このポケモンにのっているダメカンの数×40ダメージ追加。",
+     "damage": "40+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-116",
+   "localId": "116",
+   "name": "グラジオの決戦",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札がこのカード1枚だけのときにしか使えない。この番、自分のポケモン（「ルールを持つポケモン」をのぞく）が使うワザの、相手のバトルポケモンへのダメージは「+80」される。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-117",
+   "localId": "117",
+   "name": "ムク",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札からポケモン（「ルールを持つポケモン」をのぞく）を2枚までトラッシュし、その枚数×3枚ぶん、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  },
+  {
+   "id": "M5-118",
+   "localId": "118",
+   "name": "メガダークライex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 280,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ナイトレイド",
+     "effect": "自分のベンチポケモンにダメカンがのっているなら、110ダメージ追加。",
+     "damage": "110+"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "アビスアイ",
+     "effect": "相手のバトルポケモンが特殊状態なら、そのポケモンをきぜつさせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M5",
+    "name": "アビスアイ"
+   }
+  }
+ ]
+}

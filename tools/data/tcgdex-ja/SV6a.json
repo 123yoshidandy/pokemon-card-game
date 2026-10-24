@@ -1,0 +1,3965 @@
+{
+ "id": "SV6a",
+ "name": "ナイトワンダラー",
+ "releaseDate": "2024-06-07",
+ "total": 94,
+ "cards": [
+  {
+   "id": "SV6a-001",
+   "localId": "001",
+   "name": "バチュル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はねてかわす",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-002",
+   "localId": "002",
+   "name": "デンチュラ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "バチュル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ふくがん",
+     "effect": "このポケモンが使うワザの、相手のバトル場の特性を持つポケモンへのダメージは「+50」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ビリビリウェブ",
+     "effect": "このポケモンに[L]エネルギーがついているなら、80ダメージ追加。",
+     "damage": "50+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-003",
+   "localId": "003",
+   "name": "モクロー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "くわえる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "このは",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-004",
+   "localId": "004",
+   "name": "フクスロー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モクロー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "だんけつのつばさ",
+     "effect": "自分のトラッシュにある、ワザ「だんけつのつばさ」を持つポケモンの枚数×20ダメージ。",
+     "damage": "20×"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "カッターウインド",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-005",
+   "localId": "005",
+   "name": "ジュナイパー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "フクスロー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "フェザーストック",
+     "effect": "自分の手札が7枚になるように、山札を引く。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ストロングショット",
+     "effect": "自分の手札から「基本[G]エネルギー」を1枚トラッシュする。トラッシュできないなら、このワザは失敗。",
+     "damage": 170
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-006",
+   "localId": "006",
+   "name": "カプ・ブルル",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ウッドハンマー",
+     "effect": "このポケモンにも30ダメージ。",
+     "damage": 220
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-007",
+   "localId": "007",
+   "name": "デルビル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かじる",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "うしろげり",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-008",
+   "localId": "008",
+   "name": "ヘルガー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "デルビル",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "バークアウト",
+     "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-100」される。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-009",
+   "localId": "009",
+   "name": "テツノドクガ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きゅういん",
+     "effect": "相手のバトルポケモンに与えたダメージぶん、このポケモンのHPを回復する。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ワイルドリジェクター",
+     "effect": "次の相手の番、このポケモンは「古代」のポケモンからワザのダメージを受けない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-010",
+   "localId": "010",
+   "name": "タッツー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "じっとする",
+     "effect": "このポケモンのHPを「30」回復する。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひれカッター",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-011",
+   "localId": "011",
+   "name": "シードラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "タッツー",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "えんぐん",
+     "effect": "自分の山札からポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "するどいひれ",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-012",
+   "localId": "012",
+   "name": "キングドラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 310,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "シードラ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "おうのごうれい",
+     "effect": "自分のトラッシュから[W]ポケモンを3枚まで選び、ベンチに出す。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハイドロポンプ",
+     "effect": "このポケモンについている[W]エネルギーの数×50ダメージ追加。",
+     "damage": "50+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-013",
+   "localId": "013",
+   "name": "ニューラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "いあいぎり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "つめよる",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-014",
+   "localId": "014",
+   "name": "マニューラ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ニューラ",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "きりさく",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "ヘイルクロー",
+     "effect": "このポケモンについているエネルギーをすべてトラッシュし、相手のバトルポケモンをマヒにする。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-015",
+   "localId": "015",
+   "name": "ブロロロームex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ブロロン",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "アクセルフラッシュ",
+     "effect": "この番、このポケモンがベンチからバトル場に出ていたなら、120ダメージ追加。",
+     "damage": "20+"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Metal"
+     ],
+     "name": "スピードブレイク",
+     "effect": "このポケモンと、ついているすべてのカードを、トラッシュする。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-016",
+   "localId": "016",
+   "name": "スリープ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ぶきみなしせん",
+     "effect": "相手の手札を見る。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-017",
+   "localId": "017",
+   "name": "スリーパー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "スリープ",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "はくちゅうむ",
+     "effect": "次の相手の番、このワザを受けたポケモンに、相手が手札からエネルギーをつけたなら、相手の番は終わる。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-018",
+   "localId": "018",
+   "name": "ヨマワル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "むかえにいく",
+     "effect": "自分のトラッシュから「ヨマワル」を3枚まで選び、ベンチに出す。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "つぶやく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-019",
+   "localId": "019",
+   "name": "サマヨール",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヨマワル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "カースドボム",
+     "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。相手のポケモン1匹に、ダメカンを5個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "おにび",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-020",
+   "localId": "020",
+   "name": "ヨノワール",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 160,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "サマヨール",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "カースドボム",
+     "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。相手のポケモン1匹に、ダメカンを13個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "かげしばり",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-021",
+   "localId": "021",
+   "name": "クレセリア",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "いやしのまい",
+     "effect": "自分のポケモン全員のHPを、それぞれ「20」回復する。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "クレセントパージ",
+     "effect": "のぞむなら、ウラになっている自分のサイドを1枚選び、オモテにする。その場合、80ダメージ追加。（対戦が終わるまで、そのサイドはオモテのまま。）",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-022",
+   "localId": "022",
+   "name": "ニンフィア",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "イーブイ",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ミスティックリターン",
+     "effect": "コインを1回投げオモテなら、相手のベンチポケモンを1匹選び、そのポケモンと、ついているすべてのカードを、相手の山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "チャームボイス",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-023",
+   "localId": "023",
+   "name": "グレッグル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "なぐる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "かえるとび",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-024",
+   "localId": "024",
+   "name": "ドクロッグ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "グレッグル",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "どつく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クリーンヒット",
+     "effect": "相手のバトルポケモンが進化ポケモンなら、90ダメージ追加。",
+     "damage": "90+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-025",
+   "localId": "025",
+   "name": "ガチグマ アカツキ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "けいけんそく",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。自分の手札から「基本[F]エネルギー」を2枚まで選び、このポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "マッドバイト",
+     "effect": "相手のバトルポケモンにのっているダメカンの数×30ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-026",
+   "localId": "026",
+   "name": "チヲハウハネ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "てつつぶし",
+     "effect": "相手の場に「未来」のポケモンがいるなら、120ダメージ追加。",
+     "damage": "20+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "スマッシュウイング",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-027",
+   "localId": "027",
+   "name": "ズバット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "みちびく",
+     "effect": "自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "やみのキバ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-028",
+   "localId": "028",
+   "name": "ゴルバット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ズバット",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "スピードひこう",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "しっこくのやいば",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-029",
+   "localId": "029",
+   "name": "クロバット",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ゴルバット",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かげのつかい",
+     "effect": "この番、手札から「アンズの秘技」を出して使っていたなら、自分の番に1回使える。自分の手札が8枚になるように、山札を引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "どくどくのキバ",
+     "effect": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は2個になる。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-030",
+   "localId": "030",
+   "name": "アブソル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "バッドフォール",
+     "effect": "自分の場に[D]エネルギーが3個以上あるなら、50ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-031",
+   "localId": "031",
+   "name": "ゾロア",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふむ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダブルひっかき",
+     "effect": "コインを2回投げ、オモテの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-032",
+   "localId": "032",
+   "name": "ゾロアーク",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゾロア",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "げんえいジャック",
+     "effect": "相手の場の「ポケモンex・V」の数×60ダメージ。",
+     "damage": "60×"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ツメできりさく",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-033",
+   "localId": "033",
+   "name": "マーイーカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いたずらしょくしゅ",
+     "effect": "相手の山札を上から1枚見て、もとにもどす。のぞむなら、その山札を切る。"
+    },
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "つつく",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-034",
+   "localId": "034",
+   "name": "カラマネロ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "マーイーカ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "けったくテンタクル",
+     "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンに120ダメージ。この番、手札から「クセロシキのたくらみ」を出して使っていないなら、このワザは失敗。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かいてんアタック",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-035",
+   "localId": "035",
+   "name": "イベルタル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "むしばむかぜ",
+     "effect": "ダメカンがのっている相手のポケモン全員に、それぞれダメカンを2個のせる。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "はかいビーム",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-036",
+   "localId": "036",
+   "name": "イイネイヌex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 250,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ポイズンマッスル",
+     "effect": "自分の山札から「基本[D]エネルギー」を2枚まで選び、このポケモンにつける。そして山札を切る。つけた場合、このポケモンをどくにする。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "クレイジーチェーン",
+     "effect": "このポケモンがどくなら、130ダメージ追加。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-037",
+   "localId": "037",
+   "name": "マシマシラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ひょうしぬけ",
+     "effect": "このポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、自分の場に「モモワロウex」がいるなら、とられるサイドは1枚少なくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダーティヘッド",
+     "effect": "次の自分の番、このポケモンは「ダーティヘッド」が使えない。",
+     "damage": 190
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-038",
+   "localId": "038",
+   "name": "キチキギスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "さかてにとる",
+     "effect": "前の相手の番に、自分のポケモンがきぜつしていたなら、自分の番に1回使える。自分の山札を3枚引く。この番、すでに別の「さかてにとる」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クルーエルアロー",
+     "effect": "相手のポケモン1匹に、100ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-039",
+   "localId": "039",
+   "name": "モモワロウex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 190,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しはいのくさり",
+     "effect": "自分の番に1回使える。自分のベンチの[D]ポケモン（「モモワロウex」をのぞく）を1匹選び、バトルポケモンと入れ替える。その後、新しいバトルポケモンをどくにする。この番、すでに別の「しはいのくさり」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "イライラバースト",
+     "effect": "相手がすでにとったサイドの枚数×60ダメージ。",
+     "damage": "60×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-040",
+   "localId": "040",
+   "name": "ゲノセクト",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エースキャンセラー",
+     "effect": "このポケモンに「ポケモンのどうぐ」がついているなら、相手は手札から「ACE SPEC」のカードを出して使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マグネブラスト",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-041",
+   "localId": "041",
+   "name": "ゾウドウ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "がちんこ",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-042",
+   "localId": "042",
+   "name": "ダイオウドウ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 200,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゾウドウ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "どでかいからだ",
+     "effect": "このポケモンがバトル場にいるかぎり、相手は手札からスタジアムを出せない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ノーズラリアット",
+     "effect": "のぞむなら、100ダメージ追加。その場合、次の自分の番、このポケモンはワザが使えない。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-043",
+   "localId": "043",
+   "name": "ブロロン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "こうちょく",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "とびだしヘッド",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-044",
+   "localId": "044",
+   "name": "キバゴ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ひっかく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Metal"
+     ],
+     "name": "するどいキバ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-045",
+   "localId": "045",
+   "name": "オノンド",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "キバゴ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きんちょうかん",
+     "effect": "このポケモンは、相手が手札からグッズまたはサポートを出して使ったとき、その効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Metal"
+     ],
+     "name": "りゅうのはどう",
+     "effect": "自分の山札を上から1枚トラッシュする。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-046",
+   "localId": "046",
+   "name": "オノノクス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 170,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "オノンド",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "アックスダウン",
+     "effect": "相手のバトルポケモンに特殊エネルギーがついているなら、そのポケモンをきぜつさせる。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Metal"
+     ],
+     "name": "りゅうのはどう",
+     "effect": "自分の山札を上から3枚トラッシュする。",
+     "damage": 230
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-047",
+   "localId": "047",
+   "name": "キュレム",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アンチプラズマ",
+     "effect": "相手のトラッシュに、名前に「アクロマ」とつくカードがあるなら、このポケモンが「トライフロスト」を使うためのエネルギーは、[C]エネルギー1個になる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "トライフロスト",
+     "effect": "このポケモンについているエネルギーをすべてトラッシュし、相手のポケモン3匹に、それぞれ110ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-048",
+   "localId": "048",
+   "name": "ニャース",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "みだれひっかき",
+     "effect": "コインを3回投げ、オモテの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-049",
+   "localId": "049",
+   "name": "ペルシアン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ニャース",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "みだれひっかき",
+     "effect": "コインを3回投げ、オモテの数×50ダメージ。",
+     "damage": "50×"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スラッシュクロー",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-050",
+   "localId": "050",
+   "name": "イーブイ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "カラフルキャッチ",
+     "effect": "自分の山札から、それぞれちがうタイプの基本エネルギーを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ずつき",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-051",
+   "localId": "051",
+   "name": "トリミアン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "エネアシスト",
+     "effect": "自分のトラッシュから基本エネルギーを1枚選び、ベンチポケモンにつける。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-052",
+   "localId": "052",
+   "name": "ヌイコグマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "とっしん",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-053",
+   "localId": "053",
+   "name": "キテルグマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヌイコグマ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "パワーチャージ",
+     "effect": "自分の山札から基本エネルギーを1枚選び、このポケモンにつける。そして山札を切る。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-054",
+   "localId": "054",
+   "name": "デンジャラス光線",
+   "category": "Trainer",
+   "rarity": "ACE SPEC Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手のバトルポケモンをやけどとこんらんにする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-055",
+   "localId": "055",
+   "name": "ポケバイタルA",
+   "category": "Trainer",
+   "rarity": "ACE SPEC Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のポケモン1匹のHPを「150」回復する。このカードは、トラッシュにあるかぎり、手札に加えられず、山札にもどせない。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-056",
+   "localId": "056",
+   "name": "夜のタンカ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモンまたは基本エネルギーを1枚選び、相手に見せて、手札に加える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-057",
+   "localId": "057",
+   "name": "くさりもち",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているどくのポケモンが使うワザの、相手のバトルポケモンへのダメージは「+40」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-058",
+   "localId": "058",
+   "name": "力の砂時計",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の番の終わりに、このカードをつけているポケモンがバトル場にいるなら、自分のトラッシュから基本エネルギーを1枚選び、そのポケモンにつけてよい。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-059",
+   "localId": "059",
+   "name": "アクロマの執念",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からスタジアムとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-060",
+   "localId": "060",
+   "name": "アンズの秘技",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の[D]ポケモンを2匹まで選び、自分の山札から「基本[D]エネルギー」を1枚ずつつける。そして山札を切る。バトルポケモンにつけた場合、そのポケモンをどくにする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-061",
+   "localId": "061",
+   "name": "カシオペア",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札がこのカード1枚だけのときにしか使えない。自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-062",
+   "localId": "062",
+   "name": "クセロシキのたくらみ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手は相手自身の手札を、3枚になるようにトラッシュする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-063",
+   "localId": "063",
+   "name": "ニュートラルセンター",
+   "category": "Trainer",
+   "rarity": "ACE SPEC Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのポケモン（「ルールを持つポケモン」をのぞく）全員は、相手の「ポケモンex・V」からワザのダメージを受けない。このカードは、トラッシュにあるかぎり、手札に加えられず、山札にもどせない。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-064",
+   "localId": "064",
+   "name": "夜のアカデミー",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分の手札を1枚選び、山札の上にもどしてよい。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-065",
+   "localId": "065",
+   "name": "カプ・ブルル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ウッドハンマー",
+     "effect": "このポケモンにも30ダメージ。",
+     "damage": 220
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-066",
+   "localId": "066",
+   "name": "ヘルガー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "デルビル",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "バークアウト",
+     "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-100」される。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-067",
+   "localId": "067",
+   "name": "タッツー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "じっとする",
+     "effect": "このポケモンのHPを「30」回復する。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひれカッター",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-068",
+   "localId": "068",
+   "name": "ヨマワル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "むかえにいく",
+     "effect": "自分のトラッシュから「ヨマワル」を3枚まで選び、ベンチに出す。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "つぶやく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-069",
+   "localId": "069",
+   "name": "サマヨール",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヨマワル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "カースドボム",
+     "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。相手のポケモン1匹に、ダメカンを5個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "おにび",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-070",
+   "localId": "070",
+   "name": "ヨノワール",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 160,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "サマヨール",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "カースドボム",
+     "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。相手のポケモン1匹に、ダメカンを13個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "かげしばり",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-071",
+   "localId": "071",
+   "name": "クレセリア",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "いやしのまい",
+     "effect": "自分のポケモン全員のHPを、それぞれ「20」回復する。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "クレセントパージ",
+     "effect": "のぞむなら、ウラになっている自分のサイドを1枚選び、オモテにする。その場合、80ダメージ追加。（対戦が終わるまで、そのサイドはオモテのまま。）",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-072",
+   "localId": "072",
+   "name": "ゾロア",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふむ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダブルひっかき",
+     "effect": "コインを2回投げ、オモテの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-073",
+   "localId": "073",
+   "name": "ゾウドウ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "がちんこ",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-074",
+   "localId": "074",
+   "name": "オノンド",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "キバゴ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きんちょうかん",
+     "effect": "このポケモンは、相手が手札からグッズまたはサポートを出して使ったとき、その効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Metal"
+     ],
+     "name": "りゅうのはどう",
+     "effect": "自分の山札を上から1枚トラッシュする。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-075",
+   "localId": "075",
+   "name": "ペルシアン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ニャース",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "みだれひっかき",
+     "effect": "コインを3回投げ、オモテの数×50ダメージ。",
+     "damage": "50×"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スラッシュクロー",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-076",
+   "localId": "076",
+   "name": "キテルグマ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヌイコグマ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "パワーチャージ",
+     "effect": "自分の山札から基本エネルギーを1枚選び、このポケモンにつける。そして山札を切る。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-077",
+   "localId": "077",
+   "name": "キングドラex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 310,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "シードラ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "おうのごうれい",
+     "effect": "自分のトラッシュから[W]ポケモンを3枚まで選び、ベンチに出す。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハイドロポンプ",
+     "effect": "このポケモンについている[W]エネルギーの数×50ダメージ追加。",
+     "damage": "50+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-078",
+   "localId": "078",
+   "name": "ブロロロームex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 280,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ブロロン",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "アクセルフラッシュ",
+     "effect": "この番、このポケモンがベンチからバトル場に出ていたなら、120ダメージ追加。",
+     "damage": "20+"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Metal"
+     ],
+     "name": "スピードブレイク",
+     "effect": "このポケモンと、ついているすべてのカードを、トラッシュする。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-079",
+   "localId": "079",
+   "name": "イイネイヌex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 250,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ポイズンマッスル",
+     "effect": "自分の山札から「基本[D]エネルギー」を2枚まで選び、このポケモンにつける。そして山札を切る。つけた場合、このポケモンをどくにする。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "クレイジーチェーン",
+     "effect": "このポケモンがどくなら、130ダメージ追加。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-080",
+   "localId": "080",
+   "name": "マシマシラex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 210,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ひょうしぬけ",
+     "effect": "このポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、自分の場に「モモワロウex」がいるなら、とられるサイドは1枚少なくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダーティヘッド",
+     "effect": "次の自分の番、このポケモンは「ダーティヘッド」が使えない。",
+     "damage": 190
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-081",
+   "localId": "081",
+   "name": "キチキギスex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 210,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "さかてにとる",
+     "effect": "前の相手の番に、自分のポケモンがきぜつしていたなら、自分の番に1回使える。自分の山札を3枚引く。この番、すでに別の「さかてにとる」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クルーエルアロー",
+     "effect": "相手のポケモン1匹に、100ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-082",
+   "localId": "082",
+   "name": "モモワロウex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 190,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しはいのくさり",
+     "effect": "自分の番に1回使える。自分のベンチの[D]ポケモン（「モモワロウex」をのぞく）を1匹選び、バトルポケモンと入れ替える。その後、新しいバトルポケモンをどくにする。この番、すでに別の「しはいのくさり」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "イライラバースト",
+     "effect": "相手がすでにとったサイドの枚数×60ダメージ。",
+     "damage": "60×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-083",
+   "localId": "083",
+   "name": "アクロマの執念",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からスタジアムとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-084",
+   "localId": "084",
+   "name": "アンズの秘技",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の[D]ポケモンを2匹まで選び、自分の山札から「基本[D]エネルギー」を1枚ずつつける。そして山札を切る。バトルポケモンにつけた場合、そのポケモンをどくにする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-085",
+   "localId": "085",
+   "name": "カシオペア",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札がこのカード1枚だけのときにしか使えない。自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-086",
+   "localId": "086",
+   "name": "クセロシキのたくらみ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手は相手自身の手札を、3枚になるようにトラッシュする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-087",
+   "localId": "087",
+   "name": "イイネイヌex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 250,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ポイズンマッスル",
+     "effect": "自分の山札から「基本[D]エネルギー」を2枚まで選び、このポケモンにつける。そして山札を切る。つけた場合、このポケモンをどくにする。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "クレイジーチェーン",
+     "effect": "このポケモンがどくなら、130ダメージ追加。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-088",
+   "localId": "088",
+   "name": "マシマシラex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 210,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ひょうしぬけ",
+     "effect": "このポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、自分の場に「モモワロウex」がいるなら、とられるサイドは1枚少なくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダーティヘッド",
+     "effect": "次の自分の番、このポケモンは「ダーティヘッド」が使えない。",
+     "damage": 190
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-089",
+   "localId": "089",
+   "name": "キチキギスex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 210,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "さかてにとる",
+     "effect": "前の相手の番に、自分のポケモンがきぜつしていたなら、自分の番に1回使える。自分の山札を3枚引く。この番、すでに別の「さかてにとる」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クルーエルアロー",
+     "effect": "相手のポケモン1匹に、100ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-090",
+   "localId": "090",
+   "name": "モモワロウex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 190,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しはいのくさり",
+     "effect": "自分の番に1回使える。自分のベンチの[D]ポケモン（「モモワロウex」をのぞく）を1匹選び、バトルポケモンと入れ替える。その後、新しいバトルポケモンをどくにする。この番、すでに別の「しはいのくさり」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "イライラバースト",
+     "effect": "相手がすでにとったサイドの枚数×60ダメージ。",
+     "damage": "60×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-091",
+   "localId": "091",
+   "name": "カシオペア",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札がこのカード1枚だけのときにしか使えない。自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-092",
+   "localId": "092",
+   "name": "モモワロウex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 190,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しはいのくさり",
+     "effect": "自分の番に1回使える。自分のベンチの[D]ポケモン（「モモワロウex」をのぞく）を1匹選び、バトルポケモンと入れ替える。その後、新しいバトルポケモンをどくにする。この番、すでに別の「しはいのくさり」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "イライラバースト",
+     "effect": "相手がすでにとったサイドの枚数×60ダメージ。",
+     "damage": "60×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  },
+  {
+   "id": "SV6a-094",
+   "localId": "094",
+   "name": "力の砂時計",
+   "category": "Trainer",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の番の終わりに、このカードをつけているポケモンがバトル場にいるなら、自分のトラッシュから基本エネルギーを1枚選び、そのポケモンにつけてよい。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV6a",
+    "name": "ナイトワンダラー"
+   }
+  }
+ ]
+}

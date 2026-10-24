@@ -1,0 +1,2557 @@
+{
+ "id": "SV5a",
+ "name": "クリムゾンヘイズ",
+ "releaseDate": "2024-03-22",
+ "total": 96,
+ "cards": [
+  {
+   "id": "SV5a-001",
+   "localId": "001",
+   "name": "モンジャラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "つるでうつ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-002",
+   "localId": "002",
+   "name": "モジャンボ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 150,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "みつりんボディ",
+     "effect": "このポケモンが受けるワザのダメージは「-30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おおいかぶさる",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージぶん、このワザのダメージは小さくなる。",
+     "damage": "150-"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-003",
+   "localId": "003",
+   "name": "カイロス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "スロークランチ",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。次の相手の番の終わりに、このワザを受けたポケモンはきぜつする。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かいりきホーン",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-004",
+   "localId": "004",
+   "name": "イトマル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "むしくい",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-005",
+   "localId": "005",
+   "name": "アリアドス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ビッグネット",
+     "effect": "このポケモンがいるかぎり、相手のバトル場の進化ポケモンのにげるためのエネルギーは、1個ぶん多くなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "いとがらめ",
+     "effect": "相手のバトルポケモンのにげるためのエネルギーの数×30ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-006",
+   "localId": "006",
+   "name": "リーフィア",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "わかばのめぐみ",
+     "effect": "自分の手札から「基本エネルギー」を1枚選び、ベンチポケモンにつける。その後、つけたポケモンのHPをすべて回復する。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ソーラービーム",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-007",
+   "localId": "007",
+   "name": "テツノイサハ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "リカバーネット",
+     "effect": "自分のトラッシュからポケモンを2枚まで選び、相手に見せて、手札に加える。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "アベンジエッジ",
+     "effect": "前の相手の番に、ワザのダメージで、自分のポケモンがきぜつしていたなら、60ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-008",
+   "localId": "008",
+   "name": "チャデス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "くらがくれ",
+     "effect": "このポケモンは、ベンチにいるかぎり、相手のポケモンからワザのダメージや効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ひっかける",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-009",
+   "localId": "009",
+   "name": "ヤバソチャex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 240,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "せんじがえし",
+     "effect": "自分のトラッシュにある「基本エネルギー」をすべて相手に見せ、その枚数×2個ぶんのダメカンを、相手のポケモン1匹にのせる。その後、見せたエネルギーを山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "まっちゃスプラッシュ",
+     "effect": "自分のポケモン全員のHPを、それぞれ「30」回復する。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-010",
+   "localId": "010",
+   "name": "ロコン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "ひだね",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-011",
+   "localId": "011",
+   "name": "キュウコン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "あやしいともしび",
+     "effect": "相手のバトルポケモンをやけどとこんらんにする。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-012",
+   "localId": "012",
+   "name": "マグマッグ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "あついマグマ",
+     "effect": "相手のバトルポケモンをやけどにする。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-013",
+   "localId": "013",
+   "name": "マグカルゴex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "あついマグマ",
+     "effect": "相手のバトルポケモンをやけどにする。",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "グラウンドバーン",
+     "effect": "おたがいの山札を上から1枚ずつトラッシュし、その中にあるエネルギーの枚数×140ダメージ追加。",
+     "damage": "140+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-014",
+   "localId": "014",
+   "name": "コータス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "こうらでぶつかる",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ほのおのうず",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-015",
+   "localId": "015",
+   "name": "ヒコザル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ひをふく",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-016",
+   "localId": "016",
+   "name": "モウカザル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "チョップ",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートブロー",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-017",
+   "localId": "017",
+   "name": "ゴウカザル",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かえんぶとう",
+     "effect": "自分の番に1回使える。自分の手札から「基本エネルギー」と「基本エネルギー」をそれぞれ1枚まで選び、自分のポケモンに好きなようにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "バーンアウト",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-018",
+   "localId": "018",
+   "name": "イーユイ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひきつける",
+     "effect": "自分の山札を2枚引く。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "グラウンドメルト",
+     "effect": "場にスタジアムが出ているなら、60ダメージ追加。その後、そのスタジアムをトラッシュする。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-019",
+   "localId": "019",
+   "name": "ヘイガニ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "はさむ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-020",
+   "localId": "020",
+   "name": "シザリガー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "ジョキジョキ",
+     "effect": "コインを2回投げ、オモテの数ぶん、相手の山札を上からトラッシュする。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "あばれハンマー",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-021",
+   "localId": "021",
+   "name": "グレイシア",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "しみいるれいき",
+     "effect": "次の相手の番の終わりに、このワザを受けたポケモンにダメカンを9個のせる。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "つららミサイル",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-022",
+   "localId": "022",
+   "name": "フィオネ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "まねきよせる",
+     "effect": "自分のトラッシュからサポートを1枚選び、相手に見せて、手札に加える。"
+    },
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "エナジープレス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-023",
+   "localId": "023",
+   "name": "ケロマツ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "むれる",
+     "effect": "自分の山札から「ケロマツ」を2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "はねまわる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-024",
+   "localId": "024",
+   "name": "ゲコガシラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "しびれみず",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-025",
+   "localId": "025",
+   "name": "ウッウ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "みずでっぽう",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピットシュート",
+     "effect": "このポケモンについているエネルギーをすべてトラッシュし、相手のポケモン1匹に、120ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-026",
+   "localId": "026",
+   "name": "ウネルミナモ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "オーロラゲイン",
+     "effect": "このポケモンのHPを「20」回復する。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "うねりさく",
+     "effect": "このポケモンにダメカンを9個までのせ、のせた数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-027",
+   "localId": "027",
+   "name": "サンダー",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "でんじは",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "10まんボルト",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 190
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-028",
+   "localId": "028",
+   "name": "エリキテル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "バチバチ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-029",
+   "localId": "029",
+   "name": "エレザード",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "ワイルドボルト",
+     "effect": "このポケモンにも20ダメージ。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-030",
+   "localId": "030",
+   "name": "モルペコ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おやつさがし",
+     "effect": "自分の番に1回使える。自分の山札を上から1枚見て、もとにもどす。のぞむなら、そのカードをトラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "ひろってつける",
+     "effect": "自分のトラッシュから基本エネルギーを2枚まで選び、自分のポケモンに好きなようにつける。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-031",
+   "localId": "031",
+   "name": "ズピカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "エレキボール",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-032",
+   "localId": "032",
+   "name": "ハラバリー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "でんきショック",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ライトニングボール",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-033",
+   "localId": "033",
+   "name": "テツノイバラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "イニシャライズ",
+     "effect": "このポケモンがバトル場にいるかぎり、おたがいの場の「ルールを持つポケモン」（「未来」のポケモンをのぞく）の特性は、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ボルトサイクロン",
+     "effect": "このポケモンについているエネルギーを1個選び、ベンチポケモンにつけ替える。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-034",
+   "localId": "034",
+   "name": "キリンリキ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "どっちもヘッド",
+     "effect": "自分のベンチポケモン1匹にも、10ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-035",
+   "localId": "035",
+   "name": "リキキリン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ミッドランブル",
+     "effect": "自分の場の1進化ポケモンの数×40ダメージ。",
+     "damage": "40×"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶきみなねんぱ",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-036",
+   "localId": "036",
+   "name": "フラベベ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "きずをなおす",
+     "effect": "自分のポケモン1匹のHPを「30」回復する。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ようせいのかぜ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-037",
+   "localId": "037",
+   "name": "フラエッテ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ちいさなおつかい",
+     "effect": "自分の山札から基本エネルギーを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "かいてんアタック",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-038",
+   "localId": "038",
+   "name": "フラージェス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "みわくのいざない",
+     "effect": "自分の番に1回使える。コインを1回投げオモテなら、相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンをこんらんにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "マジカルショット",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-039",
+   "localId": "039",
+   "name": "ラブトロス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ハートサイン",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ラブレゾナンス",
+     "effect": "自分の場に、相手の場のポケモンと同じタイプのポケモンがいるなら、120ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-040",
+   "localId": "040",
+   "name": "サケブシッポex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 190,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぜっきょう",
+     "effect": "このワザは、後攻プレイヤーの最初の番にだけ使える。次の相手の番、相手は手札からサポートを出して使えない。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かみくだく",
+     "effect": "相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-041",
+   "localId": "041",
+   "name": "ヒスイ ガーディ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "name": "まるやけ",
+     "effect": "場に出ているスタジアムをトラッシュする。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "とっしん",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-042",
+   "localId": "042",
+   "name": "ヒスイ ウインディ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "name": "プライドファング",
+     "effect": "自分のベンチポケモンにダメカンがのっているなら、90ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "やきこがす",
+     "effect": "相手のバトルポケモンをやけどにする。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-043",
+   "localId": "043",
+   "name": "ノズパス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "パワーラッシュ",
+     "effect": "コインを1回投げウラなら、次の自分の番、このポケモンはワザが使えない。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-044",
+   "localId": "044",
+   "name": "ダイノーズ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "アサルトレーザー",
+     "effect": "相手のバトルポケモンに「ポケモンのどうぐ」がついているなら、80ダメージ追加。",
+     "damage": "80+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ランドクラッシュ",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-045",
+   "localId": "045",
+   "name": "ゲッコウガex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 310,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "しのびのやいば",
+     "effect": "のぞむなら、自分の山札から好きなカードを1枚選び、手札に加える。そして山札を切る。",
+     "damage": 170
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶんしんれんだ",
+     "effect": "このポケモンについているエネルギーを2個トラッシュし、相手のポケモン2匹に、それぞれ120ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-046",
+   "localId": "046",
+   "name": "ルチャブル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "サイドカウンター",
+     "effect": "自分のサイドの残り枚数が、相手のサイドの残り枚数より多いなら、90ダメージ追加。",
+     "damage": "50+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-047",
+   "localId": "047",
+   "name": "ディンルー",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "グラウンドクラック",
+     "effect": "場にスタジアムが出ているなら、相手のベンチポケモン全員にも、それぞれ30ダメージを与え、そのスタジアムをトラッシュする。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-048",
+   "localId": "048",
+   "name": "カジッチュ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ともだちをさがす",
+     "effect": "自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Fire"
+     ],
+     "name": "ころがりタックル",
+     "damage": 30
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-049",
+   "localId": "049",
+   "name": "カミッチュ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Fire"
+     ],
+     "name": "みつあめキャッチャー",
+     "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンに70ダメージ。"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-050",
+   "localId": "050",
+   "name": "イーブイ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かくせい",
+     "effect": "このポケモンから進化するカードを、自分の山札から1枚選び、このポケモンにのせて進化させる。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "でんこうせっか",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-051",
+   "localId": "051",
+   "name": "カビゴン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はらごしらえ",
+     "effect": "自分の手札からエネルギーを1枚選び、このポケモンにつける。その後、このポケモンのHPを「60」回復する。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヘビーインパクト",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-052",
+   "localId": "052",
+   "name": "ガチグマ アカツキex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 260,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ろうれんのわざ",
+     "effect": "相手がすでにとったサイドの枚数ぶん、このポケモンが「ブラッドムーン」を使うためのエネルギーは少なくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ブラッドムーン",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-053",
+   "localId": "053",
+   "name": "アンフェアスタンプ",
+   "category": "Trainer",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、前の相手の番に、自分のポケモンがきぜつしていなければ使えない。\n\nおたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分は5枚、相手は2枚、山札を引く。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-054",
+   "localId": "054",
+   "name": "改造ハンマー",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手の場のポケモンについている特殊エネルギーを1個選び、トラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-055",
+   "localId": "055",
+   "name": "ハイパーアロマ",
+   "category": "Trainer",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から1進化ポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-058",
+   "localId": "058",
+   "name": "ラブラブボール",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、相手の場のポケモンと同じ名前のポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-059",
+   "localId": "059",
+   "name": "サバイブギプス",
+   "category": "Trainer",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンのHPがまんたんの状態で、相手のポケモンからワザのダメージを受けてきぜつするとき、そのポケモンはきぜつせず、残りHPが「10」の状態で場に残る。その後、このカードをトラッシュする。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-060",
+   "localId": "060",
+   "name": "ラッキーメット",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、自分の山札を2枚引く。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-061",
+   "localId": "061",
+   "name": "管理人",
+   "category": "Trainer",
+   "rarity": "Common",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を2枚引く。その後、場に「公民館」が出ているなら、この「管理人」はトラッシュせず、山札にもどして切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-062",
+   "localId": "062",
+   "name": "ゴヨウ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、それぞれ自分の手札をすべてウラにして切り、山札の下にもどす。その後、おたがいのプレイヤーは、それぞれコインを1回投げ、オモテなら6枚、ウラなら3枚、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-063",
+   "localId": "063",
+   "name": "サザレ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札からポケモンを2枚まで選び、相手に見せて、山札にもどす。その後、もどした枚数ぶんまで、自分の山札からポケモンを選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-064",
+   "localId": "064",
+   "name": "スイレンのお世話",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモン（「ルールを持つポケモン」をのぞく）と基本エネルギーを合計3枚まで選び、相手に見せて、手札に加える。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-065",
+   "localId": "065",
+   "name": "公民館",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "この番、手札からサポートを出して使っていたプレイヤーは、自分の番ごとに1回、自分のポケモン全員のHPを、それぞれ「10」回復してよい。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  },
+  {
+   "id": "SV5a-066",
+   "localId": "066",
+   "name": "ブーメランエネルギー",
+   "category": "Energy",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。\n\nこのカードをつけているポケモンが使うワザの効果で、このカードがトラッシュされたなら、ワザのダメージや効果のあとに、もとのポケモンにつけなおす。",
+   "energyType": "Special",
+   "set": {
+    "id": "SV5a",
+    "name": "クリムゾンヘイズ"
+   }
+  }
+ ]
+}

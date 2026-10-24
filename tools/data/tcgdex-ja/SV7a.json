@@ -1,0 +1,2541 @@
+{
+ "id": "SV7a",
+ "name": "楽園ドラゴーナ",
+ "releaseDate": "2024-09-13",
+ "total": 94,
+ "cards": [
+  {
+   "id": "SV7a-001",
+   "localId": "001",
+   "name": "タマタマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "そうじゅくしんか",
+     "effect": "このワザは、先攻プレイヤーの最初の番でも使える。このポケモンから進化するカードを、自分の山札から1枚選び、このポケモンにのせて進化させる。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-002",
+   "localId": "002",
+   "name": "ネマシュ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "くっつく",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-003",
+   "localId": "003",
+   "name": "マシェード",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "やすらぐひかり",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。相手のバトルポケモンをねむりにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "スパイラルラッシュ",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×30ダメージ追加。",
+     "damage": "60＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-004",
+   "localId": "004",
+   "name": "ダダリン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "レスキューアンカー",
+     "effect": "自分のトラッシュからポケモンを2枚まで選び、相手に見せて、手札に加える。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はかいのイカリ",
+     "effect": "ダメージを与える前に、相手のバトルポケモンについている「ポケモンのどうぐ」をトラッシュする。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-005",
+   "localId": "005",
+   "name": "ザルード",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "リーフドレイン",
+     "effect": "このポケモンのHPを「20」回復する。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ジャングルウィップ",
+     "effect": "のぞむなら、このポケモンについているエネルギーをすべて手札にもどし、80ダメージ追加。",
+     "damage": "80＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-006",
+   "localId": "006",
+   "name": "ポワルン たいようのすがた",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "こがす",
+     "effect": "相手のバトルポケモンをやけどにする。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "サニーアシスト",
+     "effect": "このポケモンについているエネルギーをすべて、ベンチポケモン1匹につけ替える。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-007",
+   "localId": "007",
+   "name": "バオップ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "かえん",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-008",
+   "localId": "008",
+   "name": "バオッキー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ダブルスマッシュ",
+     "effect": "コインを2回投げ、オモテの数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-009",
+   "localId": "009",
+   "name": "ウガツホムラ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "つきたおし",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "えんじょうとつげき",
+     "effect": "相手のサイドの残り枚数が4枚以下なら、70ダメージ追加。",
+     "damage": "100＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-010",
+   "localId": "010",
+   "name": "フリージオ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "コールサイン",
+     "effect": "自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "れいとうビーム",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-011",
+   "localId": "011",
+   "name": "ブラックキュレムex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "アイスエイジ",
+     "effect": "相手のバトルポケモンがポケモンなら、そのポケモンをマヒにする。",
+     "damage": 90
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ブラックフロスト",
+     "effect": "このポケモンにも30ダメージ。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-012",
+   "localId": "012",
+   "name": "ハギギシリ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はんげき",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを3個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "かじりつく",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-013",
+   "localId": "013",
+   "name": "クワッス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "つばめがえし",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "10＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-014",
+   "localId": "014",
+   "name": "ウェルカモ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "アクアエッジ",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-015",
+   "localId": "015",
+   "name": "ウェーニバル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 170,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アップテンポ",
+     "effect": "自分の番に、自分の手札を1枚山札の下にもどすなら、1回使える。自分の手札が5枚になるように、山札を引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "ハイドロスプラッシュ",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-016",
+   "localId": "016",
+   "name": "アルクジラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "ドレインフィン",
+     "effect": "このポケモンのHPを「20」回復する。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-017",
+   "localId": "017",
+   "name": "ハルクジラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 180,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "がっちりボディ",
+     "effect": "このポケモンが受けるワザのダメージは「-30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "デンジャーマウス",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-018",
+   "localId": "018",
+   "name": "ムチュール",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "name": "るんるんキッス",
+     "effect": "自分の山札から「基本エネルギー」を2枚まで選び、ベンチポケモン1匹につける。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-019",
+   "localId": "019",
+   "name": "ラティアスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スカイライン",
+     "effect": "このポケモンがいるかぎり、自分のたねポケモン全員のにげるためのエネルギーは、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "むげんのやいば",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-020",
+   "localId": "020",
+   "name": "ラティオス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ちょくげきひこう",
+     "effect": "相手のポケモン1匹に、50ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ジェットヘッド",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-021",
+   "localId": "021",
+   "name": "カプ・テテフ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "まどわす",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "メンタルクラッシュ",
+     "effect": "相手のバトルポケモンがこんらんなら、90ダメージ追加。",
+     "damage": "90＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-022",
+   "localId": "022",
+   "name": "ヒラヒナ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はねてかわす",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-023",
+   "localId": "023",
+   "name": "クエスパトラ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ミスティックアイ",
+     "effect": "相手の進化しているポケモンを1匹選び、「進化カード」を1枚はがして退化させる。はがしたカードは、相手の手札にもどす。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "スパイラルドレイン",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-024",
+   "localId": "024",
+   "name": "コレクレー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ちいさなおつかい",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-025",
+   "localId": "025",
+   "name": "ナックラー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-026",
+   "localId": "026",
+   "name": "ビブラーバ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いやなおと",
+     "effect": "次の自分の番、このワザを受けたポケモンが受けるワザのダメージは「+50」される。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "カッターウインド",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-027",
+   "localId": "027",
+   "name": "フライゴンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 310,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ストームバック",
+     "effect": "のぞむなら、このポケモンをベンチポケモンと入れ替える。",
+     "damage": 130
+    },
+    {
+     "cost": [
+      "Water",
+      "Fighting",
+      "Metal"
+     ],
+     "name": "ペリドットソニック",
+     "effect": "相手の「ポケモンex・V」全員に、それぞれ100ダメージ。このワザのダメージは弱点・抵抗力を計算しない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-028",
+   "localId": "028",
+   "name": "モグリュー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ほるほる",
+     "effect": "相手の山札を上から1枚トラッシュする。"
+    },
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "どろかけ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-029",
+   "localId": "029",
+   "name": "ドリュウズ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "あなほりクロー",
+     "effect": "相手の山札を上から1枚トラッシュする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ドリルスマッシュ",
+     "effect": "自分のベンチにポケモンがいるなら、80ダメージ追加。",
+     "damage": "60＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-030",
+   "localId": "030",
+   "name": "ランドロス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "きあいのこぶし",
+     "effect": "自分のトラッシュからエネルギーを1枚選び、このポケモンにつける。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "バスタースイング",
+     "effect": "このワザのダメージは抵抗力を計算しない。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-031",
+   "localId": "031",
+   "name": "ナゲツケサル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "れんけいスロー",
+     "effect": "自分の場のたねポケモンの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-032",
+   "localId": "032",
+   "name": "タタッコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ちょっとつっこむ",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-033",
+   "localId": "033",
+   "name": "オトスパス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "チョップ",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "テンタクルレイジ",
+     "effect": "このワザは、このポケモンにダメカンがのっているなら、エネルギー1個で使える。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-034",
+   "localId": "034",
+   "name": "エアームド",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "はがねのつばさ",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-035",
+   "localId": "035",
+   "name": "クレッフィ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "さしこみドロー",
+     "effect": "自分の手札を1枚トラッシュする。その後、自分の山札を2枚引く。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっかける",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-036",
+   "localId": "036",
+   "name": "ジュラルドン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "がちんこ",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Metal"
+     ],
+     "name": "ジュラルビーム",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-037",
+   "localId": "037",
+   "name": "ブリジュラスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 300,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ごうきんビルド",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分のトラッシュから「基本エネルギー」を2枚まで選び、自分のポケモンに好きなようにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Metal"
+     ],
+     "name": "メタルディフェンダー",
+     "effect": "次の相手の番、このポケモンの弱点は、すべてなくなる。",
+     "damage": 220
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-038",
+   "localId": "038",
+   "name": "サーフゴー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "リッチストライク",
+     "effect": "この番、このポケモンが「コレクレー」から進化していたなら、90ダメージ追加。",
+     "damage": "30＋"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "サーフリターン",
+     "effect": "のぞむなら、このポケモンと、ついているすべてのカードを、自分の山札にもどして切る。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-039",
+   "localId": "039",
+   "name": "テツノカシラ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "デリートスラッシュ",
+     "effect": "相手のベンチポケモンの数が3匹以上なら、80ダメージ追加。",
+     "damage": "40＋"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スライスブレード",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-040",
+   "localId": "040",
+   "name": "アローラ ナッシーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 300,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Water"
+     ],
+     "name": "トロピカルフィーバー",
+     "effect": "自分の手札から基本エネルギーを好きなだけ選び、自分のポケモンに好きなようにつける。",
+     "damage": 150
+    },
+    {
+     "cost": [
+      "Grass",
+      "Water",
+      "Fighting"
+     ],
+     "name": "ブンブンスフェーン",
+     "effect": "コインを1回投げオモテなら、相手のバトル場のたねポケモンをきぜつさせる。ウラなら、相手のベンチのたねポケモンを1匹選び、きぜつさせる。"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-041",
+   "localId": "041",
+   "name": "チルタリス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ハミングチャージ",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、自分のポケモンに好きなようにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Metal"
+     ],
+     "name": "コットンウイング",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージを受けない。",
+     "damage": 100
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-042",
+   "localId": "042",
+   "name": "ディアルガ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "タイムコントロール",
+     "effect": "自分の山札から好きなカードを2枚選ぶ。残りの山札を切り、選んだカードを好きな順番に入れ替えて、山札の上にもどす。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "バスターテール",
+     "damage": 160
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-043",
+   "localId": "043",
+   "name": "パルキア",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Water"
+     ],
+     "name": "スペースクラッシュ",
+     "effect": "このポケモンについている基本エネルギーの数×40ダメージ。",
+     "damage": "40×"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-044",
+   "localId": "044",
+   "name": "バクガメス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "こがしつくす",
+     "effect": "相手のバトル場の「ポケモンex」についているエネルギーを1個選び、トラッシュする。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ばくねつスタンプ",
+     "damage": 100
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-045",
+   "localId": "045",
+   "name": "カジッチュ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "えいようそ",
+     "effect": "自分のポケモン1匹のHPを「30」回復する。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Fire"
+     ],
+     "name": "ころばす",
+     "effect": "コインを1回投げオモテなら、30ダメージ追加。",
+     "damage": "20＋"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-046",
+   "localId": "046",
+   "name": "アップリュー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "サワースピット",
+     "effect": "相手のバトルポケモンにのっているダメカンの数×20ダメージ。",
+     "damage": "20×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Fire"
+     ],
+     "name": "スピードひこう",
+     "damage": 70
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-047",
+   "localId": "047",
+   "name": "タルップル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スイートメルト",
+     "effect": "次の相手の番、このワザを受けたポケモンは、ワザが使えない。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Grass",
+      "Fire"
+     ],
+     "name": "ワイルドタックル",
+     "effect": "このポケモンにも20ダメージ。",
+     "damage": 130
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-048",
+   "localId": "048",
+   "name": "チルット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "チャームボイス",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-049",
+   "localId": "049",
+   "name": "ワシボン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はばたく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-050",
+   "localId": "050",
+   "name": "ウォーグル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひきずりだす",
+     "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンに40ダメージ。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ブラストウインド",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-051",
+   "localId": "051",
+   "name": "モトトカゲex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ブレイクスルー",
+     "effect": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 130
+    },
+    {
+     "cost": [
+      "Grass",
+      "Fire",
+      "Psychic"
+     ],
+     "name": "ジルコンロード",
+     "effect": "のぞむなら、自分の山札を5枚引く。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-052",
+   "localId": "052",
+   "name": "エネルギー転送PRO",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、それぞれちがうタイプの基本エネルギーを好きなだけ選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-053",
+   "localId": "053",
+   "name": "おたすけベル",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、後攻プレイヤーの最初の番しか使えない。\n\n自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-054",
+   "localId": "054",
+   "name": "ダークボール",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を下から7枚見て、その中からポケモンを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-055",
+   "localId": "055",
+   "name": "ぼうがいレター",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手は相手自身の手札を数えたあと、すべてウラにして切り、山札の下にもどす。その後、相手はもどした枚数ぶん、山札を引く。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-056",
+   "localId": "056",
+   "name": "メガトンブロアー",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手のポケモン全員についている「ポケモンのどうぐ」と「特殊エネルギー」と、場に出ている「スタジアム」を、すべてトラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-057",
+   "localId": "057",
+   "name": "竜の秘薬",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトル場のポケモンのHPを「60」回復する。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-058",
+   "localId": "058",
+   "name": "イトケのみ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-059",
+   "localId": "059",
+   "name": "カウンターゲイン",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のサイドの残り枚数が、相手のサイドの残り枚数より多いなら、このカードをつけているポケモンがワザを使うためのエネルギーは、エネルギー1個ぶん少なくなる。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-060",
+   "localId": "060",
+   "name": "カキツバタ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を上から7枚見て、その中からポケモンとトレーナーズを1枚ずつ選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-061",
+   "localId": "061",
+   "name": "サーファー",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトルポケモンをベンチポケモンと入れ替える。その後、自分の手札が5枚になるように、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-062",
+   "localId": "062",
+   "name": "ドラセナ",
+   "category": "Trainer",
+   "rarity": "Common",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札をすべて山札にもどして切る。その後、コインを1回投げ、オモテなら8枚、ウラなら3枚、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-063",
+   "localId": "063",
+   "name": "ルチアのアピール",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手のベンチのたねポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンをこんらんにする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  },
+  {
+   "id": "SV7a-064",
+   "localId": "064",
+   "name": "リッチエネルギー",
+   "category": "Energy",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。\n\nこのカードを手札からポケモンにつけたとき、自分の山札を4枚引く。",
+   "energyType": "Special",
+   "set": {
+    "id": "SV7a",
+    "name": "楽園ドラゴーナ"
+   }
+  }
+ ]
+}

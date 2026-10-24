@@ -1,0 +1,23 @@
+{
+ "id": "SV2P",
+ "name": "スノーハザード",
+ "releaseDate": "2023-04-14",
+ "total": 99,
+ "cards": [
+  {
+   "id": "SV2P-099",
+   "localId": "099",
+   "name": "基本水エネルギー",
+   "category": "Energy",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "energyType": "Normal",
+   "set": {
+    "id": "SV2P",
+    "name": "スノーハザード"
+   }
+  }
+ ]
+}

@@ -1,0 +1,7800 @@
+{
+ "id": "SV11B",
+ "name": "ブラックボルト",
+ "releaseDate": "2025-06-06",
+ "total": 174,
+ "cards": [
+  {
+   "id": "SV11B-001",
+   "localId": "001",
+   "name": "ツタージャ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "たいあたり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "つるのムチ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-002",
+   "localId": "002",
+   "name": "ジャノビー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ツタージャ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "まきつく",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つるのムチ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-003",
+   "localId": "003",
+   "name": "ジャローダex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 320,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジャノビー",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ロイヤルエール",
+     "effect": "このポケモンがいるかぎり、自分のポケモンが使うワザの、相手のバトルポケモンへのダメージは「+20」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "グラスオーダー",
+     "effect": "のぞむなら、自分の山札から好きなカードを3枚まで選び、手札に加える。そして山札を切る。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-004",
+   "localId": "004",
+   "name": "ヤナップ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっかく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-005",
+   "localId": "005",
+   "name": "ヤナッキー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤナップ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-006",
+   "localId": "006",
+   "name": "チュリネ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かくれる",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "このは",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-007",
+   "localId": "007",
+   "name": "ドレディア",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チュリネ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "げんわくアロマ",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをどくとマヒにする。ウラなら、相手のバトルポケモンをこんらんにする。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "いあいぎり",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-008",
+   "localId": "008",
+   "name": "マラカッチ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はつらつニードル",
+     "effect": "この番に、このポケモンのHPを回復していたなら、100ダメージ追加。",
+     "damage": "20+"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "つきさす",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-009",
+   "localId": "009",
+   "name": "カブルモ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しげきしんか",
+     "effect": "自分の場に「チョボマキ」がいるなら、このポケモンは、最初の自分の番や、出したばかりの番でも進化できる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つのでつく",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-010",
+   "localId": "010",
+   "name": "タマゲタケ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "どくのほうし",
+     "effect": "相手のバトルポケモンをどくにする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-011",
+   "localId": "011",
+   "name": "モロバレル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "タマゲタケ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "あぶないはんのう",
+     "effect": "相手のバトルポケモンが特殊状態なら、120ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "タネばくだん",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-012",
+   "localId": "012",
+   "name": "ビクティニ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "Vフォース",
+     "effect": "自分のベンチポケモンが4匹以下なら、このワザは失敗。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-013",
+   "localId": "013",
+   "name": "ダルマッカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "おにび",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-014",
+   "localId": "014",
+   "name": "ヒヒダルマ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ダルマッカ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "やきこがす",
+     "effect": "相手のバトルポケモンをやけどにする。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スマッシュヘッド",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-015",
+   "localId": "015",
+   "name": "ヒトモシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "てらしてもやす",
+     "effect": "自分の山札を上から1枚見て、もとにもどす。のぞむなら、そのカードをトラッシュする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-016",
+   "localId": "016",
+   "name": "ランプラー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒトモシ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "だいもんじ",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-017",
+   "localId": "017",
+   "name": "シャンデラ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ランプラー",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "はじけるひばしら",
+     "effect": "自分のトラッシュに「基本エネルギー」が10枚以上あるなら、100ダメージ追加。",
+     "damage": "50+"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "もえつくす",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-018",
+   "localId": "018",
+   "name": "メラルバ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つつきおとす",
+     "effect": "ダメージを与える前に、相手のバトルポケモンについている「ポケモンのどうぐ」をトラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-019",
+   "localId": "019",
+   "name": "ウルガモス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "メラルバ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ねっぱりんぷん",
+     "effect": "自分の番に、自分の手札から「基本エネルギー」を1枚トラッシュするなら、1回使える。相手のバトルポケモンをやけどにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ほのおのつばさ",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-020",
+   "localId": "020",
+   "name": "ヒヤップ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっかく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-021",
+   "localId": "021",
+   "name": "ヒヤッキー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒヤップ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-022",
+   "localId": "022",
+   "name": "オタマロ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "りんしょう",
+     "effect": "自分の場の、ワザ「りんしょう」を持つポケモンの数×20ダメージ。",
+     "damage": "20x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-023",
+   "localId": "023",
+   "name": "ガマガル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "オタマロ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "りんしょう",
+     "effect": "自分の場の、ワザ「りんしょう」を持つポケモンの数×40ダメージ。",
+     "damage": "40x"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スプラッシュ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-024",
+   "localId": "024",
+   "name": "ガマゲロゲ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 170,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ガマガル",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "りんしょう",
+     "effect": "自分の場の、ワザ「りんしょう」を持つポケモンの数×70ダメージ。",
+     "damage": "70x"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハイパーボイス",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-025",
+   "localId": "025",
+   "name": "プロトーガ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "古びたふたの化石",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "たいこのもくず",
+     "effect": "相手のトラッシュにあるグッズの枚数×30ダメージ。",
+     "damage": "30x"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "なみのり",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-026",
+   "localId": "026",
+   "name": "アバゴーラ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 180,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "プロトーガ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マイティシェル",
+     "effect": "このポケモンは、特殊エネルギーがついている相手のポケモンから、ワザのダメージや効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かじりつく",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-027",
+   "localId": "027",
+   "name": "ママンボウ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "やさしいヒレ",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分のトラッシュから、HPが「70」以下のたねポケモンを1枚選び、ベンチに出す。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たきのぼり",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-028",
+   "localId": "028",
+   "name": "クマシュン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "はなみずまみれ",
+     "effect": "次の相手の番、このワザを受けたポケモンは、ワザが使えない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-029",
+   "localId": "029",
+   "name": "ツンベアー",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "クマシュン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "れんぞくずつき",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×50ダメージ。",
+     "damage": "50x"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "ぜったいれいど",
+     "effect": "次の相手の番、このワザを受けたポケモンは、ワザが使えない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-030",
+   "localId": "030",
+   "name": "フリージオ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ひきずりだす",
+     "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンに20ダメージ。"
+    },
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "つらら",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-031",
+   "localId": "031",
+   "name": "キュレムex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "ブリザードバースト",
+     "effect": "相手のベンチポケモン全員にも、それぞれ、相手がすでにとったサイドの枚数×10ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-032",
+   "localId": "032",
+   "name": "エモンガ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "バチバチ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-033",
+   "localId": "033",
+   "name": "シビシラス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "じっとする",
+     "effect": "このポケモンのHPを「10」回復する。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-034",
+   "localId": "034",
+   "name": "シビビール",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シビシラス",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エレキダイナモ",
+     "effect": "自分の番に1回使える。自分のトラッシュから「基本エネルギー」を1枚選び、ベンチポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ライトニングボール",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-035",
+   "localId": "035",
+   "name": "シビルドン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "シビビール",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "かみなりのキバ",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "バリバリかいてん",
+     "effect": "コインを4回投げ、オモテの数×100ダメージ。",
+     "damage": "100x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-036",
+   "localId": "036",
+   "name": "ボルトロス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "じゅうでん",
+     "effect": "自分の山札から「基本エネルギー」を1枚選び、このポケモンにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ディザスターボルト",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-037",
+   "localId": "037",
+   "name": "ゼクロムex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ボルテージバースト",
+     "effect": "相手がすでにとったサイドの枚数×50ダメージ追加。このポケモンにも30ダメージ。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-038",
+   "localId": "038",
+   "name": "ムンナ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ねむる",
+     "effect": "このポケモンをねむりにする。このポケモンのHPを「30」回復する。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "つぶやく",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-039",
+   "localId": "039",
+   "name": "ムシャーナ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ムンナ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ドリームコール",
+     "effect": "自分の山札から「マコモ」を好きなだけ選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ねむりのはどう",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-040",
+   "localId": "040",
+   "name": "ユニラン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ころがる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-041",
+   "localId": "041",
+   "name": "ダブラン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ユニラン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "さいぼうしんか",
+     "effect": "自分の場のポケモン1匹から進化するカードを、自分の山札から1枚選び、そのポケモンにのせて進化させる。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "しるをとばす",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-042",
+   "localId": "042",
+   "name": "ランクルス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ダブラン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "さいぼうかくせい",
+     "effect": "自分のベンチポケモン全員からそれぞれ進化するカードを、自分の山札から1枚ずつ選び、それぞれにのせて進化させる。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "エボルラリアット",
+     "effect": "自分の場の進化ポケモンの数×40ダメージ追加。",
+     "damage": "40+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-043",
+   "localId": "043",
+   "name": "リグレー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ちょっとずらす",
+     "effect": "相手の場のポケモンについているエネルギーを1個選び、相手の別のポケモンにつけ替える。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ビーム",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-044",
+   "localId": "044",
+   "name": "オーベム",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "リグレー",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "めいそう",
+     "effect": "このポケモンのHPを「40」回復する。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "サイコキネシス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-045",
+   "localId": "045",
+   "name": "ゴビット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぜんりょくパンチ",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-046",
+   "localId": "046",
+   "name": "ゴルーグ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゴビット",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダブルスマッシュ",
+     "effect": "コインを2回投げ、オモテの数×80ダメージ。",
+     "damage": "80x"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ゴルーグハンマー",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-047",
+   "localId": "047",
+   "name": "メロエッタex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 200,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "デビューライブ",
+     "effect": "このポケモンは、先攻プレイヤーの最初の番でも、ワザが使える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "エコーボイス",
+     "effect": "次の自分の番、このポケモンの「エコーボイス」のダメージは「+80」される。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-048",
+   "localId": "048",
+   "name": "モグリュー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "どろかけ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "どつく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-049",
+   "localId": "049",
+   "name": "ドリュウズex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モグリュー",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "かんつうドリル",
+     "effect": "ダメカンがのっている相手のベンチポケモン1匹にも、60ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "がんせきおとし",
+     "effect": "このワザのダメージは抵抗力を計算しない。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-050",
+   "localId": "050",
+   "name": "ドッコラー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "けたぐり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かいりき",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-051",
+   "localId": "051",
+   "name": "ドテッコツ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドッコラー",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "けたぐり",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "アームハンマー",
+     "effect": "相手の山札を上から1枚トラッシュする。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-052",
+   "localId": "052",
+   "name": "ローブシン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ドテッコツ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マスターアーツ",
+     "effect": "このポケモンについているエネルギー1個につき、このポケモンの最大HPは「＋40」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ふりまわす",
+     "effect": "コインを2回投げ、オモテの数×50ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-053",
+   "localId": "053",
+   "name": "ナゲキ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "せおいなげ",
+     "effect": "相手のバトルポケモンのにげるためのエネルギーの数×30ダメージぶん、このワザのダメージは小さくなる。",
+     "damage": "120-"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-054",
+   "localId": "054",
+   "name": "イシズマイ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "じたばた",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージ。",
+     "damage": "10x"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ツメをたてる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-055",
+   "localId": "055",
+   "name": "イワパレス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "イシズマイ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "がんじょう",
+     "effect": "このポケモンのHPがまんたんの状態で、このポケモンがワザのダメージを受けてきぜつするとき、きぜつせず、残りHPが「10」の状態で場に残る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ストーンエッジ",
+     "effect": "コインを1回投げオモテなら、60ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-056",
+   "localId": "056",
+   "name": "ランドロス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ほうさく",
+     "effect": "自分のトラッシュから「基本エネルギー」を1枚選び、このポケモンにつける。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "じしん",
+     "effect": "自分のベンチポケモン全員にも、それぞれ10ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-057",
+   "localId": "057",
+   "name": "フシデ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "どくをとばす",
+     "effect": "相手のバトルポケモンをどくにする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-058",
+   "localId": "058",
+   "name": "ホイーガ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "フシデ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ベノムショック",
+     "effect": "相手のバトルポケモンがどくなら、60ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-059",
+   "localId": "059",
+   "name": "ペンドラー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ホイーガ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "どくのトゲ",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンをどくにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ベノムショック",
+     "effect": "相手のバトルポケモンがどくなら、90ダメージ追加。",
+     "damage": "90+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-060",
+   "localId": "060",
+   "name": "メグロコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "シメる",
+     "effect": "相手は相手自身の手札を1枚選び、トラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-061",
+   "localId": "061",
+   "name": "ワルビル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "メグロコ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "シメる",
+     "effect": "相手は相手自身の手札を2枚選び、トラッシュする。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-062",
+   "localId": "062",
+   "name": "ワルビアル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 170,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ワルビル",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "シメる",
+     "effect": "相手は相手自身の手札を2枚選び、トラッシュする。",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "カースドスラッグ",
+     "effect": "相手の手札が3枚以下なら、120ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-063",
+   "localId": "063",
+   "name": "バルチャイ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "やんちゃげり",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-064",
+   "localId": "064",
+   "name": "バルジーナ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "バルチャイ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "えものをねらう",
+     "effect": "自分の番に1回使える。相手の手札を見て、その中から、HPが「70」以下のたねポケモンを1枚選び、相手のベンチに出す。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "カッターウインド",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-065",
+   "localId": "065",
+   "name": "シュバルゴ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カブルモ",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ワイルドランス",
+     "effect": "このポケモンにも30ダメージ。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-066",
+   "localId": "066",
+   "name": "コマタナ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "おいつめる",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-067",
+   "localId": "067",
+   "name": "キリキザン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コマタナ",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "きる",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "とどめをさす",
+     "effect": "相手のバトルポケモンにダメカンがのっているなら、60ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-068",
+   "localId": "068",
+   "name": "コバルオン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ホーリーエッジ",
+     "effect": "相手のバトルポケモンについている特殊エネルギーを1個選び、トラッシュする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "メタルアームズ",
+     "effect": "このポケモンに「ポケモンのどうぐ」がついているなら、40ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-069",
+   "localId": "069",
+   "name": "ゲノセクトex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 220,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "メタルシグナル",
+     "effect": "自分の番に1回使える。自分の山札からタイプの進化ポケモンを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "プロテクトチャージ",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-070",
+   "localId": "070",
+   "name": "キバゴ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ちからをあつめる",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-071",
+   "localId": "071",
+   "name": "オノンド",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "キバゴ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Metal"
+     ],
+     "name": "そこぢから",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-072",
+   "localId": "072",
+   "name": "オノノクス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 170,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "オノンド",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ふりおろす",
+     "effect": "相手のバトルポケモンが進化ポケモンなら、80ダメージ追加。",
+     "damage": "80+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "アックスボンバー",
+     "effect": "相手のバトルポケモンがたねポケモンなら、そのポケモンをきぜつさせる。"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-073",
+   "localId": "073",
+   "name": "マメパト",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "さぐる",
+     "effect": "相手の手札を見る。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふむ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-074",
+   "localId": "074",
+   "name": "ハトーボー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "マメパト",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "そらをとぶ",
+     "effect": "コインを1回投げウラなら、このワザは失敗。オモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-075",
+   "localId": "075",
+   "name": "ケンホロウ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ハトーボー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "くわえる",
+     "effect": "自分の山札を4枚引く。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "こうそくフライト",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-076",
+   "localId": "076",
+   "name": "タブンネ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "おんがえし",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-077",
+   "localId": "077",
+   "name": "チラーミィ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "スイープビンタ",
+     "effect": "コインを2回投げ、オモテの数×20ダメージ。",
+     "damage": "20x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-078",
+   "localId": "078",
+   "name": "チラチーノ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チラーミィ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ともだちのわ",
+     "effect": "自分のベンチポケモンの数×20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-079",
+   "localId": "079",
+   "name": "エネルギーコイン",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "コインを2回投げ、すべてオモテなら、自分の山札から基本エネルギーを1枚選び、自分のポケモンにつける。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-080",
+   "localId": "080",
+   "name": "古びたふたの化石",
+   "category": "Trainer",
+   "rarity": "Common",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ふたのまもり",
+     "effect": "このポケモンは、相手のポケモンが使うワザの効果を受けない。"
+    }
+   ],
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。 自分の番の中でなら、場に出ているこのカードをトラッシュできる。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-081",
+   "localId": "081",
+   "name": "ポケギア3.0",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を上から7枚見て、その中からサポートを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-082",
+   "localId": "082",
+   "name": "ふうせん",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンは、にげるためのエネルギーが2個ぶん少なくなる。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-083",
+   "localId": "083",
+   "name": "Nの筋書き",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のベンチポケモンについているエネルギーを2個まで選び、バトルポケモンにつけ替える。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-084",
+   "localId": "084",
+   "name": "博士の研究",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札をすべてトラッシュし、山札を7枚引く。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-085",
+   "localId": "085",
+   "name": "マコモ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のポケモン全員のHPを、それぞれ「40」回復する。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-086",
+   "localId": "086",
+   "name": "プリズムエネルギー",
+   "category": "Energy",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。 たねポケモンについているなら、すべてのタイプのエネルギー1個ぶんとしてはたらく。",
+   "energyType": "Special",
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-087",
+   "localId": "087",
+   "name": "ツタージャ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "たいあたり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "つるのムチ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-088",
+   "localId": "088",
+   "name": "ジャノビー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ツタージャ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "まきつく",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つるのムチ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-089",
+   "localId": "089",
+   "name": "ヤナップ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっかく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-090",
+   "localId": "090",
+   "name": "ヤナッキー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤナップ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-091",
+   "localId": "091",
+   "name": "チュリネ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かくれる",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "このは",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-092",
+   "localId": "092",
+   "name": "ドレディア",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チュリネ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "げんわくアロマ",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをどくとマヒにする。ウラなら、相手のバトルポケモンをこんらんにする。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "いあいぎり",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-093",
+   "localId": "093",
+   "name": "マラカッチ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はつらつニードル",
+     "effect": "この番に、このポケモンのHPを回復していたなら、100ダメージ追加。",
+     "damage": "20+"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "つきさす",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-094",
+   "localId": "094",
+   "name": "カブルモ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しげきしんか",
+     "effect": "自分の場に「チョボマキ」がいるなら、このポケモンは、最初の自分の番や、出したばかりの番でも進化できる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つのでつく",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-095",
+   "localId": "095",
+   "name": "タマゲタケ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "どくのほうし",
+     "effect": "相手のバトルポケモンをどくにする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-096",
+   "localId": "096",
+   "name": "モロバレル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "タマゲタケ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "あぶないはんのう",
+     "effect": "相手のバトルポケモンが特殊状態なら、120ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "タネばくだん",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-097",
+   "localId": "097",
+   "name": "ビクティニ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "Vフォース",
+     "effect": "自分のベンチポケモンが4匹以下なら、このワザは失敗。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-098",
+   "localId": "098",
+   "name": "ダルマッカ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "おにび",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-099",
+   "localId": "099",
+   "name": "ヒヒダルマ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ダルマッカ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "やきこがす",
+     "effect": "相手のバトルポケモンをやけどにする。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スマッシュヘッド",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-100",
+   "localId": "100",
+   "name": "ヒトモシ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "てらしてもやす",
+     "effect": "自分の山札を上から1枚見て、もとにもどす。のぞむなら、そのカードをトラッシュする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-101",
+   "localId": "101",
+   "name": "ランプラー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒトモシ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "だいもんじ",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-102",
+   "localId": "102",
+   "name": "シャンデラ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 150,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ランプラー",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "はじけるひばしら",
+     "effect": "自分のトラッシュに「基本エネルギー」が10枚以上あるなら、100ダメージ追加。",
+     "damage": "50+"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "もえつくす",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-103",
+   "localId": "103",
+   "name": "メラルバ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つつきおとす",
+     "effect": "ダメージを与える前に、相手のバトルポケモンについている「ポケモンのどうぐ」をトラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-104",
+   "localId": "104",
+   "name": "ウルガモス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "メラルバ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ねっぱりんぷん",
+     "effect": "自分の番に、自分の手札から「基本エネルギー」を1枚トラッシュするなら、1回使える。相手のバトルポケモンをやけどにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ほのおのつばさ",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-105",
+   "localId": "105",
+   "name": "ヒヤップ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっかく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-106",
+   "localId": "106",
+   "name": "ヒヤッキー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒヤップ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-107",
+   "localId": "107",
+   "name": "オタマロ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "りんしょう",
+     "effect": "自分の場の、ワザ「りんしょう」を持つポケモンの数×20ダメージ。",
+     "damage": "20x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-108",
+   "localId": "108",
+   "name": "ガマガル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "オタマロ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "りんしょう",
+     "effect": "自分の場の、ワザ「りんしょう」を持つポケモンの数×40ダメージ。",
+     "damage": "40x"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スプラッシュ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-109",
+   "localId": "109",
+   "name": "ガマゲロゲ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 170,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ガマガル",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "りんしょう",
+     "effect": "自分の場の、ワザ「りんしょう」を持つポケモンの数×70ダメージ。",
+     "damage": "70x"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハイパーボイス",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-110",
+   "localId": "110",
+   "name": "プロトーガ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "古びたふたの化石",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "たいこのもくず",
+     "effect": "相手のトラッシュにあるグッズの枚数×30ダメージ。",
+     "damage": "30x"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "なみのり",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-111",
+   "localId": "111",
+   "name": "アバゴーラ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 180,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "プロトーガ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マイティシェル",
+     "effect": "このポケモンは、特殊エネルギーがついている相手のポケモンから、ワザのダメージや効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かじりつく",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-112",
+   "localId": "112",
+   "name": "ママンボウ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "やさしいヒレ",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分のトラッシュから、HPが「70」以下のたねポケモンを1枚選び、ベンチに出す。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たきのぼり",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-113",
+   "localId": "113",
+   "name": "クマシュン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "はなみずまみれ",
+     "effect": "次の相手の番、このワザを受けたポケモンは、ワザが使えない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-114",
+   "localId": "114",
+   "name": "ツンベアー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "クマシュン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "れんぞくずつき",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×50ダメージ。",
+     "damage": "50x"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "ぜったいれいど",
+     "effect": "次の相手の番、このワザを受けたポケモンは、ワザが使えない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-115",
+   "localId": "115",
+   "name": "フリージオ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ひきずりだす",
+     "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンに20ダメージ。"
+    },
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "つらら",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-116",
+   "localId": "116",
+   "name": "エモンガ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "バチバチ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-117",
+   "localId": "117",
+   "name": "シビシラス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 40,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "じっとする",
+     "effect": "このポケモンのHPを「10」回復する。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-118",
+   "localId": "118",
+   "name": "シビビール",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シビシラス",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "エレキダイナモ",
+     "effect": "自分の番に1回使える。自分のトラッシュから「基本エネルギー」を1枚選び、ベンチポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ライトニングボール",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-119",
+   "localId": "119",
+   "name": "シビルドン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 160,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "シビビール",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "かみなりのキバ",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "バリバリかいてん",
+     "effect": "コインを4回投げ、オモテの数×100ダメージ。",
+     "damage": "100x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-120",
+   "localId": "120",
+   "name": "ボルトロス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "じゅうでん",
+     "effect": "自分の山札から「基本エネルギー」を1枚選び、このポケモンにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ディザスターボルト",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-121",
+   "localId": "121",
+   "name": "ムンナ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ねむる",
+     "effect": "このポケモンをねむりにする。このポケモンのHPを「30」回復する。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "つぶやく",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-122",
+   "localId": "122",
+   "name": "ムシャーナ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ムンナ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ドリームコール",
+     "effect": "自分の山札から「マコモ」を好きなだけ選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ねむりのはどう",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-123",
+   "localId": "123",
+   "name": "ユニラン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 40,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ころがる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-124",
+   "localId": "124",
+   "name": "ダブラン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ユニラン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "さいぼうしんか",
+     "effect": "自分の場のポケモン1匹から進化するカードを、自分の山札から1枚選び、そのポケモンにのせて進化させる。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "しるをとばす",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-125",
+   "localId": "125",
+   "name": "ランクルス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ダブラン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "さいぼうかくせい",
+     "effect": "自分のベンチポケモン全員からそれぞれ進化するカードを、自分の山札から1枚ずつ選び、それぞれにのせて進化させる。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "エボルラリアット",
+     "effect": "自分の場の進化ポケモンの数×40ダメージ追加。",
+     "damage": "40+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-126",
+   "localId": "126",
+   "name": "リグレー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ちょっとずらす",
+     "effect": "相手の場のポケモンについているエネルギーを1個選び、相手の別のポケモンにつけ替える。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ビーム",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-127",
+   "localId": "127",
+   "name": "オーベム",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "リグレー",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "めいそう",
+     "effect": "このポケモンのHPを「40」回復する。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "サイコキネシス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-128",
+   "localId": "128",
+   "name": "ゴビット",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぜんりょくパンチ",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-129",
+   "localId": "129",
+   "name": "ゴルーグ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 160,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゴビット",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダブルスマッシュ",
+     "effect": "コインを2回投げ、オモテの数×80ダメージ。",
+     "damage": "80x"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ゴルーグハンマー",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-130",
+   "localId": "130",
+   "name": "モグリュー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "どろかけ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "どつく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-131",
+   "localId": "131",
+   "name": "ドッコラー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "けたぐり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かいりき",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-132",
+   "localId": "132",
+   "name": "ドテッコツ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドッコラー",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "けたぐり",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "アームハンマー",
+     "effect": "相手の山札を上から1枚トラッシュする。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-133",
+   "localId": "133",
+   "name": "ローブシン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ドテッコツ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マスターアーツ",
+     "effect": "このポケモンについているエネルギー1個につき、このポケモンの最大HPは「＋40」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ふりまわす",
+     "effect": "コインを2回投げ、オモテの数×50ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-134",
+   "localId": "134",
+   "name": "ナゲキ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "せおいなげ",
+     "effect": "相手のバトルポケモンのにげるためのエネルギーの数×30ダメージぶん、このワザのダメージは小さくなる。",
+     "damage": "120-"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-135",
+   "localId": "135",
+   "name": "イシズマイ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "じたばた",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージ。",
+     "damage": "10x"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ツメをたてる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-136",
+   "localId": "136",
+   "name": "イワパレス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "イシズマイ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "がんじょう",
+     "effect": "このポケモンのHPがまんたんの状態で、このポケモンがワザのダメージを受けてきぜつするとき、きぜつせず、残りHPが「10」の状態で場に残る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ストーンエッジ",
+     "effect": "コインを1回投げオモテなら、60ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-137",
+   "localId": "137",
+   "name": "ランドロス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ほうさく",
+     "effect": "自分のトラッシュから「基本エネルギー」を1枚選び、このポケモンにつける。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "じしん",
+     "effect": "自分のベンチポケモン全員にも、それぞれ10ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-138",
+   "localId": "138",
+   "name": "フシデ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "どくをとばす",
+     "effect": "相手のバトルポケモンをどくにする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-139",
+   "localId": "139",
+   "name": "ホイーガ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "フシデ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ベノムショック",
+     "effect": "相手のバトルポケモンがどくなら、60ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-140",
+   "localId": "140",
+   "name": "ペンドラー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 160,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ホイーガ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "どくのトゲ",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンをどくにする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ベノムショック",
+     "effect": "相手のバトルポケモンがどくなら、90ダメージ追加。",
+     "damage": "90+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-141",
+   "localId": "141",
+   "name": "メグロコ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "シメる",
+     "effect": "相手は相手自身の手札を1枚選び、トラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-142",
+   "localId": "142",
+   "name": "ワルビル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "メグロコ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "シメる",
+     "effect": "相手は相手自身の手札を2枚選び、トラッシュする。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-143",
+   "localId": "143",
+   "name": "ワルビアル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 170,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ワルビル",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "シメる",
+     "effect": "相手は相手自身の手札を2枚選び、トラッシュする。",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "カースドスラッグ",
+     "effect": "相手の手札が3枚以下なら、120ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-144",
+   "localId": "144",
+   "name": "バルチャイ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "やんちゃげり",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-145",
+   "localId": "145",
+   "name": "バルジーナ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "バルチャイ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "えものをねらう",
+     "effect": "自分の番に1回使える。相手の手札を見て、その中から、HPが「70」以下のたねポケモンを1枚選び、相手のベンチに出す。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "カッターウインド",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-146",
+   "localId": "146",
+   "name": "シュバルゴ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カブルモ",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ワイルドランス",
+     "effect": "このポケモンにも30ダメージ。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-147",
+   "localId": "147",
+   "name": "コマタナ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "おいつめる",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-148",
+   "localId": "148",
+   "name": "キリキザン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コマタナ",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "きる",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "とどめをさす",
+     "effect": "相手のバトルポケモンにダメカンがのっているなら、60ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-149",
+   "localId": "149",
+   "name": "コバルオン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ホーリーエッジ",
+     "effect": "相手のバトルポケモンについている特殊エネルギーを1個選び、トラッシュする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "メタルアームズ",
+     "effect": "このポケモンに「ポケモンのどうぐ」がついているなら、40ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-150",
+   "localId": "150",
+   "name": "キバゴ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ちからをあつめる",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-151",
+   "localId": "151",
+   "name": "オノンド",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "キバゴ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Metal"
+     ],
+     "name": "そこぢから",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-152",
+   "localId": "152",
+   "name": "オノノクス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 170,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "オノンド",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ふりおろす",
+     "effect": "相手のバトルポケモンが進化ポケモンなら、80ダメージ追加。",
+     "damage": "80+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "アックスボンバー",
+     "effect": "相手のバトルポケモンがたねポケモンなら、そのポケモンをきぜつさせる。"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-153",
+   "localId": "153",
+   "name": "マメパト",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "さぐる",
+     "effect": "相手の手札を見る。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふむ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-154",
+   "localId": "154",
+   "name": "ハトーボー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "マメパト",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "そらをとぶ",
+     "effect": "コインを1回投げウラなら、このワザは失敗。オモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-155",
+   "localId": "155",
+   "name": "ケンホロウ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 150,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ハトーボー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "くわえる",
+     "effect": "自分の山札を4枚引く。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "こうそくフライト",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-156",
+   "localId": "156",
+   "name": "タブンネ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "おんがえし",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-157",
+   "localId": "157",
+   "name": "チラーミィ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "スイープビンタ",
+     "effect": "コインを2回投げ、オモテの数×20ダメージ。",
+     "damage": "20x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-158",
+   "localId": "158",
+   "name": "チラチーノ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "チラーミィ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ともだちのわ",
+     "effect": "自分のベンチポケモンの数×20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-159",
+   "localId": "159",
+   "name": "ジャローダex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 320,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジャノビー",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ロイヤルエール",
+     "effect": "このポケモンがいるかぎり、自分のポケモンが使うワザの、相手のバトルポケモンへのダメージは「+20」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "グラスオーダー",
+     "effect": "のぞむなら、自分の山札から好きなカードを3枚まで選び、手札に加える。そして山札を切る。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-160",
+   "localId": "160",
+   "name": "キュレムex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 230,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "ブリザードバースト",
+     "effect": "相手のベンチポケモン全員にも、それぞれ、相手がすでにとったサイドの枚数×10ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-161",
+   "localId": "161",
+   "name": "ゼクロムex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 230,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ボルテージバースト",
+     "effect": "相手がすでにとったサイドの枚数×50ダメージ追加。このポケモンにも30ダメージ。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-162",
+   "localId": "162",
+   "name": "メロエッタex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 200,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "デビューライブ",
+     "effect": "このポケモンは、先攻プレイヤーの最初の番でも、ワザが使える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "エコーボイス",
+     "effect": "次の自分の番、このポケモンの「エコーボイス」のダメージは「+80」される。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-163",
+   "localId": "163",
+   "name": "ドリュウズex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 270,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モグリュー",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "かんつうドリル",
+     "effect": "ダメカンがのっている相手のベンチポケモン1匹にも、60ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "がんせきおとし",
+     "effect": "このワザのダメージは抵抗力を計算しない。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-164",
+   "localId": "164",
+   "name": "ゲノセクトex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 220,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "メタルシグナル",
+     "effect": "自分の番に1回使える。自分の山札からタイプの進化ポケモンを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "プロテクトチャージ",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-165",
+   "localId": "165",
+   "name": "Nの筋書き",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のベンチポケモンについているエネルギーを2個まで選び、バトルポケモンにつけ替える。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-166",
+   "localId": "166",
+   "name": "マコモ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のポケモン全員のHPを、それぞれ「40」回復する。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-167",
+   "localId": "167",
+   "name": "ジャローダex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 320,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジャノビー",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ロイヤルエール",
+     "effect": "このポケモンがいるかぎり、自分のポケモンが使うワザの、相手のバトルポケモンへのダメージは「+20」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "グラスオーダー",
+     "effect": "のぞむなら、自分の山札から好きなカードを3枚まで選び、手札に加える。そして山札を切る。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-168",
+   "localId": "168",
+   "name": "キュレムex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 230,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "ブリザードバースト",
+     "effect": "相手のベンチポケモン全員にも、それぞれ、相手がすでにとったサイドの枚数×10ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-169",
+   "localId": "169",
+   "name": "ゼクロムex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 230,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ボルテージバースト",
+     "effect": "相手がすでにとったサイドの枚数×50ダメージ追加。このポケモンにも30ダメージ。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-170",
+   "localId": "170",
+   "name": "メロエッタex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 200,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "デビューライブ",
+     "effect": "このポケモンは、先攻プレイヤーの最初の番でも、ワザが使える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "エコーボイス",
+     "effect": "次の自分の番、このポケモンの「エコーボイス」のダメージは「+80」される。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-171",
+   "localId": "171",
+   "name": "ドリュウズex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 270,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モグリュー",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "かんつうドリル",
+     "effect": "ダメカンがのっている相手のベンチポケモン1匹にも、60ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "がんせきおとし",
+     "effect": "このワザのダメージは抵抗力を計算しない。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-172",
+   "localId": "172",
+   "name": "ゲノセクトex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 220,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "メタルシグナル",
+     "effect": "自分の番に1回使える。自分の山札からタイプの進化ポケモンを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "プロテクトチャージ",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-173",
+   "localId": "173",
+   "name": "Nの筋書き",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のベンチポケモンについているエネルギーを2個まで選び、バトルポケモンにつけ替える。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  },
+  {
+   "id": "SV11B-174",
+   "localId": "174",
+   "name": "ゼクロムex",
+   "category": "Pokemon",
+   "rarity": "Black White Rare",
+   "hp": 230,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ボルテージバースト",
+     "effect": "相手がすでにとったサイドの枚数×50ダメージ追加。このポケモンにも30ダメージ。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV11B",
+    "name": "ブラックボルト"
+   }
+  }
+ ]
+}

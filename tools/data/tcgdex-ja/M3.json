@@ -1,0 +1,4735 @@
+{
+ "id": "M3",
+ "name": "ムニキスゼロ",
+ "releaseDate": "2026-01-23",
+ "total": 117,
+ "cards": [
+  {
+   "id": "M3-001",
+   "localId": "001",
+   "name": "イトマル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ねばるいと",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-002",
+   "localId": "002",
+   "name": "アリアドス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "イトマル",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ポイズンサークル",
+     "effect": "相手のバトルポケモンをどくにする。次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-003",
+   "localId": "003",
+   "name": "シェイミ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はなをとどける",
+     "effect": "自分の山札からエネルギーを1枚選び、ベンチのポケモンにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "リーフステップ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-004",
+   "localId": "004",
+   "name": "ツタージャ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "とつげき",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-005",
+   "localId": "005",
+   "name": "ジャノビー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ツタージャ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ソーラーカッター",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-006",
+   "localId": "006",
+   "name": "ジャローダ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 160,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジャノビー",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ロイヤルコマンド",
+     "effect": "自分の場のポケモンの数×20ダメージ。",
+     "damage": "20x"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "ソーラーワインダー",
+     "effect": "自分のトラッシュに「メイのはげまし」があるなら、150ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-007",
+   "localId": "007",
+   "name": "コフキムシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "かじる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-008",
+   "localId": "008",
+   "name": "コフーライ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コフキムシ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "かくれる",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-009",
+   "localId": "009",
+   "name": "ビビヨン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "コフーライ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おおきなはね",
+     "effect": "自分の番に1回使える。相手は相手自身の手札をすべてウラにして切り、山札の下にもどす。その後、相手は山札を4枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ふきぬける",
+     "effect": "場にスタジアムが出ているなら、60ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-010",
+   "localId": "010",
+   "name": "モクロー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ともだちをさがす",
+     "effect": "自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-011",
+   "localId": "011",
+   "name": "フクスロー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モクロー",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "このは",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "フェザーショット",
+     "effect": "このポケモンについているエネルギーをすべてトラッシュし、相手のポケモン1匹に、90ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-012",
+   "localId": "012",
+   "name": "ジュナイパーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 320,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "フクスロー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スナイパーアイ",
+     "effect": "相手の手札が4枚なら、このポケモンはワザを使うためのエネルギーが、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クラッシュアロー",
+     "effect": "相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-013",
+   "localId": "013",
+   "name": "ヒノヤコマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤヤコマ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "ほのお",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-014",
+   "localId": "014",
+   "name": "ファイアロー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ヒノヤコマ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スカイハント",
+     "effect": "自分の番に1回使える。コインを1回投げオモテなら、相手の手札からオモテを見ないで1枚選び、トラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "ほのおのつばさ",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-015",
+   "localId": "015",
+   "name": "ヤトウモリ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ほのおのツメ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-016",
+   "localId": "016",
+   "name": "エンニュートex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 260,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤトウモリ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "わるだくみ",
+     "effect": "自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "フェイタルネイル",
+     "effect": "相手のバトルポケモンをどくとやけどにする。このポケモンをベンチポケモンと入れ替える。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-017",
+   "localId": "017",
+   "name": "バクガメス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こうらのトゲ",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンについているエネルギーを1個選び、トラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートブレス",
+     "effect": "コインを1回投げオモテなら、80ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-018",
+   "localId": "018",
+   "name": "パウワウ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "みずかけ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "スプラッシュ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-019",
+   "localId": "019",
+   "name": "ジュゴン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "パウワウ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おしながす",
+     "effect": "自分の番に何回でも使える。自分のベンチポケモンについているエネルギーを1個選び、バトルポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "スプラッシュ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-020",
+   "localId": "020",
+   "name": "ヒトデマン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "みずでっぽう",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-021",
+   "localId": "021",
+   "name": "メガスターミーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 330,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒトデマン",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ジェットブロー",
+     "effect": "相手のベンチポケモン1匹にも、50ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 120
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ネビュラビーム",
+     "effect": "このワザのダメージは、弱点・抵抗力と、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-022",
+   "localId": "022",
+   "name": "アマルス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "古びたヒレの化石",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "こごえるかぜ",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-023",
+   "localId": "023",
+   "name": "アマルルガ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 170,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "アマルス",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ツンドラウォール",
+     "effect": "このポケモンがいるかぎり、エネルギーがついている自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-50」される。この特性の効果は重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "いてつくれいき",
+     "effect": "次の相手の番、このワザを受けたポケモンは、ワザが使えない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-024",
+   "localId": "024",
+   "name": "ボルケニオン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "かいりき",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "パワフルスチーム",
+     "effect": "このポケモンについているエネルギーの数ぶんコインを投げ、オモテの数×90ダメージ。",
+     "damage": "90x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-025",
+   "localId": "025",
+   "name": "コリンク",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "ダブルひっかき",
+     "effect": "コインを2回投げ、オモテの数×10ダメージ。",
+     "damage": "10x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-026",
+   "localId": "026",
+   "name": "ルクシオ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コリンク",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "とうしのおたけび",
+     "effect": "相手のバトルポケモンが「ポケモンex」なら、このポケモンは、最初の自分の番や、出したばかりの番でも進化できる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "バチバチ",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-027",
+   "localId": "027",
+   "name": "レントラー",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ルクシオ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "せめたてる",
+     "effect": "自分がすでにとったサイドの枚数×70ダメージ。",
+     "damage": "70x"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ストロングボルト",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-028",
+   "localId": "028",
+   "name": "デデンネ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "しっぽはつでん",
+     "effect": "相手のポケモン全員についているエネルギーの数ぶんまで、自分のトラッシュから「基本エネルギー」を選び、自分のポケモンに好きなようにつける。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "でんきショック",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-029",
+   "localId": "029",
+   "name": "ピッピ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "このゆびとまれ",
+     "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "はねまわる",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-030",
+   "localId": "030",
+   "name": "メガピクシーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 320,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ピッピ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ひかりのつばさ",
+     "effect": "このポケモンは、相手のポケモンから特性の効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "シューティングムーン",
+     "effect": "のぞむなら、自分の手札からエネルギーを4枚までトラッシュし、その枚数×40ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-031",
+   "localId": "031",
+   "name": "クチート",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ダブルイーター",
+     "effect": "自分の手札からエネルギーを2枚までトラッシュし、その枚数×60ダメージ。",
+     "damage": "60x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-032",
+   "localId": "032",
+   "name": "ニャスパー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひとやすみ",
+     "effect": "このポケモンのHPを「20」回復する。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ふむ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-033",
+   "localId": "033",
+   "name": "ニャオニクス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ニャスパー",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "まどわす",
+     "effect": "相手のバトルポケモンをこんらんにする。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "サイコキネシス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-034",
+   "localId": "034",
+   "name": "シュシュプ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "あまいかおり",
+     "effect": "自分のポケモン1匹のHPを「30」回復する。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ぶつかる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-035",
+   "localId": "035",
+   "name": "フレフワン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シュシュプ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かおりあつめ",
+     "effect": "自分の番に1回使える。自分の山札から「基本エネルギー」を2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ドレインキッス",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-036",
+   "localId": "036",
+   "name": "ノズパス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "いわころがり",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-037",
+   "localId": "037",
+   "name": "ダイノーズ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ノズパス",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "いわころがり",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ノーズボンバー",
+     "effect": "このポケモンについているエネルギーを3個選び、トラッシュする。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-038",
+   "localId": "038",
+   "name": "ヒポポタス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "すなかけ",
+     "effect": "次の相手の番、このワザを受けたポケモンがワザを使うとき、相手はコインを1回投げる。ウラならそのワザは失敗。",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-039",
+   "localId": "039",
+   "name": "カバルドン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒポポタス",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "たつまきふんしゃ",
+     "effect": "この番に、手札から「タラゴン」を出して使っていたなら、相手の山札を上から3枚トラッシュする。",
+     "damage": 80
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヘビーインパクト",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-040",
+   "localId": "040",
+   "name": "ランドロス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "がんせきおとし",
+     "effect": "このワザのダメージは抵抗力を計算しない。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "スクリューナックル",
+     "effect": "このポケモンについているエネルギーを1個選び、手札にもどす。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-041",
+   "localId": "041",
+   "name": "カメテテ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ダブルドロー",
+     "effect": "自分の山札を2枚引く。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ひっかく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-042",
+   "localId": "042",
+   "name": "ガメノデス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カメテテ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ストーンアームズ",
+     "effect": "自分の番に1回使える。自分の手札から「基本エネルギー」を1枚選び、自分のポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-043",
+   "localId": "043",
+   "name": "チゴラス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "古びたアゴの化石",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "いきりたつ",
+     "effect": "このポケモンにのっているダメカンの数×20ダメージ。",
+     "damage": "20x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-044",
+   "localId": "044",
+   "name": "ガチゴラス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 180,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "チゴラス",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ティラノガッツ",
+     "effect": "このポケモンに特殊エネルギーがついているなら、このポケモンは最大HPが「＋150」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "あばれまくる",
+     "effect": "ウラが出るまでコインを投げ、オモテの数ぶん、相手の山札を上からトラッシュする。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-045",
+   "localId": "045",
+   "name": "ルチャブル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "リベンジキック",
+     "effect": "自分のベンチポケモンにダメカンがのっているなら、60ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-046",
+   "localId": "046",
+   "name": "メガジガルデex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 310,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ガイアウェーブ",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 200
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ムニキスゼロ",
+     "effect": "相手のポケモン全員に対して、それぞれ1回ずつコインを投げ、オモテが出たポケモン全員に、それぞれ150ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-047",
+   "localId": "047",
+   "name": "ゴース",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ふいをつく",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-048",
+   "localId": "048",
+   "name": "ゴースト",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゴース",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "のろう",
+     "effect": "相手のバトルポケモンに、ダメカンを3個のせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-049",
+   "localId": "049",
+   "name": "ゲンガー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "メガゲンガーex",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "むげんのかげ",
+     "effect": "このポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、トラッシュせず、手札にもどす。（ポケモン以外のカードは、すべてトラッシュする。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "マインドジャック",
+     "effect": "相手のベンチポケモンの数×30ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-050",
+   "localId": "050",
+   "name": "スコルピ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "どくづき",
+     "effect": "相手のバトルポケモンをどくにする。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-051",
+   "localId": "051",
+   "name": "ドラピオン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "スコルピ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "たたきつぶす",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ハザードテール",
+     "effect": "このポケモンにも70ダメージ。相手のバトルポケモンをどくとマヒにする。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-052",
+   "localId": "052",
+   "name": "イベルタルex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "デスソウル",
+     "effect": "残りHPが「50」以下の相手のポケモン全員を、それぞれきぜつさせる。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダークストライク",
+     "effect": "次の自分の番、このポケモンは「ダークストライク」が使えない。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-053",
+   "localId": "053",
+   "name": "パオジアン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ひるがえす",
+     "effect": "のぞむなら、このポケモンをベンチポケモンと入れ替える。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ライジングブレード",
+     "effect": "相手のバトルポケモンが「ポケモンex」なら、80ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-054",
+   "localId": "054",
+   "name": "メガエアームドex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 260,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ソニックリッパー",
+     "effect": "このポケモンについているエネルギーをすべて山札にもどして切り、相手のポケモン1匹に、220ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-055",
+   "localId": "055",
+   "name": "ヒトツキ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いあいぎり",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-056",
+   "localId": "056",
+   "name": "ニダンギル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒトツキ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ソードウェポン",
+     "effect": "自分の手札から「ヒトツキ」「ニダンギル」「ギルガルド」を好きなだけ相手に見せて、その枚数×60ダメージ。",
+     "damage": "60x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-057",
+   "localId": "057",
+   "name": "ギルガルド",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ニダンギル",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きりさく",
+     "damage": 80
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "メタルスラッシュ",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 230
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-058",
+   "localId": "058",
+   "name": "クレッフィ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "メモリーロック",
+     "effect": "相手のバトルポケモンが持つワザを1つ選ぶ。次の相手の番、このワザを受けたポケモンは、選ばれたワザが使えない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-059",
+   "localId": "059",
+   "name": "コラッタ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "とっしん",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-060",
+   "localId": "060",
+   "name": "ラッタ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コラッタ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "こそげおとす",
+     "effect": "ダメージを与える前に、相手のバトルポケモンについている「ポケモンのどうぐ」をトラッシュする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぎゃくしゅうまえば",
+     "effect": "自分のベンチの「コラッタ」全員にのっているダメカンの数×40ダメージ。",
+     "damage": "40x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-061",
+   "localId": "061",
+   "name": "ニャースex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 170,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おくのてキャッチ",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。この番、名前に「おくのて」とつく特性を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "しっぽをまく",
+     "effect": "このポケモンと、ついているすべてのカードを、手札にもどす。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-062",
+   "localId": "062",
+   "name": "カビゴン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 160,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "おおぐい",
+     "effect": "ウラが出るまでコインを投げ、オモテの数ぶんまで、自分の山札から基本エネルギーを選び、このポケモンにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たおれこむ",
+     "effect": "このポケモンをねむりにする。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-063",
+   "localId": "063",
+   "name": "ホルビー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "けとばす",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-064",
+   "localId": "064",
+   "name": "ホルード",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ホルビー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "じしん",
+     "effect": "自分のベンチポケモン全員にも、それぞれ30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 140
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はりたおす",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-065",
+   "localId": "065",
+   "name": "ヤヤコマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "とりぶえ",
+     "effect": "自分の山札から、抵抗力がタイプのポケモンを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つつく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-066",
+   "localId": "066",
+   "name": "トリミアン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ハンドカット",
+     "effect": "相手の手札を、オモテを見ないで5枚になるように、トラッシュする。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ずつき",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-067",
+   "localId": "067",
+   "name": "エネはたき",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手の手札を見て、その中からエネルギーを1枚選び、相手の山札の下にもどす。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-068",
+   "localId": "068",
+   "name": "古びたアゴの化石",
+   "category": "Trainer",
+   "rarity": "Common",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いかくのアゴ",
+     "effect": "このポケモンがバトル場にいるかぎり、相手のバトルポケモンが使うワザのダメージは「-30」される。"
+    }
+   ],
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。自分の番の中でなら、場に出ているこのカードをトラッシュできる。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-069",
+   "localId": "069",
+   "name": "古びたヒレの化石",
+   "category": "Trainer",
+   "rarity": "Common",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ヒレのまもり",
+     "effect": "このポケモンは、相手が手札からサポートを出して使ったとき、その効果を受けない。"
+    }
+   ],
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。自分の番の中でなら、場に出ているこのカードをトラッシュできる。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-070",
+   "localId": "070",
+   "name": "ポケパッド",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からポケモン（「ルールを持つポケモン」をのぞく）を1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-071",
+   "localId": "071",
+   "name": "ミアレガレット",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトルポケモンのHPを「20」回復し、特殊状態も1つ回復する。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-072",
+   "localId": "072",
+   "name": "コアメモリ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけている「メガジガルデex」は、このカードに書かれているワザを使える。［ワザを使うためのエネルギーは必要。］",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-073",
+   "localId": "073",
+   "name": "タラゴン",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモンと「基本エネルギー」を合計4枚まで選び、相手に見せて、手札に加える。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-074",
+   "localId": "074",
+   "name": "ピュール",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札が5枚になるように、山札を引く。のぞむなら、山札を引く前に、自分の手札を好きなだけトラッシュする。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-075",
+   "localId": "075",
+   "name": "メイのはげまし",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分のサイドの残り枚数が、相手のサイドの残り枚数より多いときにしか使えない。自分のトラッシュから基本エネルギーを2枚まで選び、自分の2進化ポケモン1匹につける。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-076",
+   "localId": "076",
+   "name": "ユカリ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のポケモン1匹のHPを「150」回復する。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-077",
+   "localId": "077",
+   "name": "ミアレシティ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分の山札からたねポケモンを1枚選び、ベンチに出してよい。そして山札を切る。この効果を使ったなら、自分の番は終わる。 スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-078",
+   "localId": "078",
+   "name": "グロウ草エネルギー",
+   "category": "Energy",
+   "rarity": "Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。このカードをつけているポケモンは、最大HPが「＋20」される。",
+   "energyType": "Special",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-079",
+   "localId": "079",
+   "name": "テレパス超エネルギー",
+   "category": "Energy",
+   "rarity": "Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。このカードを手札からポケモンにつけたとき、自分の山札からタイプのたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。",
+   "energyType": "Special",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-080",
+   "localId": "080",
+   "name": "ロック闘エネルギー",
+   "category": "Energy",
+   "rarity": "Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。このカードをつけているポケモンは、相手のポケモンが使うワザの効果を受けない。（すでに受けている効果は、なくならない。）",
+   "energyType": "Special",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-081",
+   "localId": "081",
+   "name": "コフーライ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コフキムシ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "かくれる",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-082",
+   "localId": "082",
+   "name": "モクロー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ともだちをさがす",
+     "effect": "自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-083",
+   "localId": "083",
+   "name": "ファイアロー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 150,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ヒノヤコマ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スカイハント",
+     "effect": "自分の番に1回使える。コインを1回投げオモテなら、相手の手札からオモテを見ないで1枚選び、トラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "ほのおのつばさ",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-084",
+   "localId": "084",
+   "name": "アマルルガ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 170,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "アマルス",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ツンドラウォール",
+     "effect": "このポケモンがいるかぎり、エネルギーがついている自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-50」される。この特性の効果は重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "いてつくれいき",
+     "effect": "次の相手の番、このワザを受けたポケモンは、ワザが使えない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-085",
+   "localId": "085",
+   "name": "デデンネ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "しっぽはつでん",
+     "effect": "相手のポケモン全員についているエネルギーの数ぶんまで、自分のトラッシュから「基本エネルギー」を選び、自分のポケモンに好きなようにつける。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "でんきショック",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-086",
+   "localId": "086",
+   "name": "ピッピ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "このゆびとまれ",
+     "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "はねまわる",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-087",
+   "localId": "087",
+   "name": "ニャスパー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひとやすみ",
+     "effect": "このポケモンのHPを「20」回復する。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ふむ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-088",
+   "localId": "088",
+   "name": "ダイノーズ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ノズパス",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "いわころがり",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ノーズボンバー",
+     "effect": "このポケモンについているエネルギーを3個選び、トラッシュする。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-089",
+   "localId": "089",
+   "name": "チゴラス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "古びたアゴの化石",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "いきりたつ",
+     "effect": "このポケモンにのっているダメカンの数×20ダメージ。",
+     "damage": "20x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-090",
+   "localId": "090",
+   "name": "ドラピオン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "スコルピ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "たたきつぶす",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ハザードテール",
+     "effect": "このポケモンにも70ダメージ。相手のバトルポケモンをどくとマヒにする。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-091",
+   "localId": "091",
+   "name": "ニダンギル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒトツキ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ソードウェポン",
+     "effect": "自分の手札から「ヒトツキ」「ニダンギル」「ギルガルド」を好きなだけ相手に見せて、その枚数×60ダメージ。",
+     "damage": "60x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-092",
+   "localId": "092",
+   "name": "ラッタ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コラッタ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "こそげおとす",
+     "effect": "ダメージを与える前に、相手のバトルポケモンについている「ポケモンのどうぐ」をトラッシュする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぎゃくしゅうまえば",
+     "effect": "自分のベンチの「コラッタ」全員にのっているダメカンの数×40ダメージ。",
+     "damage": "40x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-093",
+   "localId": "093",
+   "name": "ジュナイパーex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 320,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "フクスロー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スナイパーアイ",
+     "effect": "相手の手札が4枚なら、このポケモンはワザを使うためのエネルギーが、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クラッシュアロー",
+     "effect": "相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-094",
+   "localId": "094",
+   "name": "エンニュートex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 260,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤトウモリ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "わるだくみ",
+     "effect": "自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "フェイタルネイル",
+     "effect": "相手のバトルポケモンをどくとやけどにする。このポケモンをベンチポケモンと入れ替える。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-095",
+   "localId": "095",
+   "name": "メガスターミーex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 330,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒトデマン",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ジェットブロー",
+     "effect": "相手のベンチポケモン1匹にも、50ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 120
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ネビュラビーム",
+     "effect": "このワザのダメージは、弱点・抵抗力と、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-096",
+   "localId": "096",
+   "name": "メガピクシーex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 320,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ピッピ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ひかりのつばさ",
+     "effect": "このポケモンは、相手のポケモンから特性の効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "シューティングムーン",
+     "effect": "のぞむなら、自分の手札からエネルギーを4枚までトラッシュし、その枚数×40ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-097",
+   "localId": "097",
+   "name": "メガジガルデex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 310,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ガイアウェーブ",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 200
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ムニキスゼロ",
+     "effect": "相手のポケモン全員に対して、それぞれ1回ずつコインを投げ、オモテが出たポケモン全員に、それぞれ150ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-098",
+   "localId": "098",
+   "name": "イベルタルex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 210,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "デスソウル",
+     "effect": "残りHPが「50」以下の相手のポケモン全員を、それぞれきぜつさせる。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダークストライク",
+     "effect": "次の自分の番、このポケモンは「ダークストライク」が使えない。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-099",
+   "localId": "099",
+   "name": "メガエアームドex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 260,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ソニックリッパー",
+     "effect": "このポケモンについているエネルギーをすべて山札にもどして切り、相手のポケモン1匹に、220ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-100",
+   "localId": "100",
+   "name": "ニャースex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 170,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おくのてキャッチ",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。この番、名前に「おくのて」とつく特性を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "しっぽをまく",
+     "effect": "このポケモンと、ついているすべてのカードを、手札にもどす。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-101",
+   "localId": "101",
+   "name": "エネルギーリサイクル",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュから基本エネルギーを5枚まで選び、相手に見せて、山札にもどして切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-102",
+   "localId": "102",
+   "name": "せいなるはい",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモンを5枚まで選び、相手に見せて、山札にもどして切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-103",
+   "localId": "103",
+   "name": "ポケパッド",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からポケモン（「ルールを持つポケモン」をのぞく）を1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-104",
+   "localId": "104",
+   "name": "ワンダーパッチ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュから「基本エネルギー」を1枚選び、ベンチのポケモンにつける。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-105",
+   "localId": "105",
+   "name": "タラゴン",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモンと「基本エネルギー」を合計4枚まで選び、相手に見せて、手札に加える。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-106",
+   "localId": "106",
+   "name": "ピュール",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札が5枚になるように、山札を引く。のぞむなら、山札を引く前に、自分の手札を好きなだけトラッシュする。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-107",
+   "localId": "107",
+   "name": "メイのはげまし",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分のサイドの残り枚数が、相手のサイドの残り枚数より多いときにしか使えない。自分のトラッシュから基本エネルギーを2枚まで選び、自分の2進化ポケモン1匹につける。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-108",
+   "localId": "108",
+   "name": "ユカリ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のポケモン1匹のHPを「150」回復する。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-109",
+   "localId": "109",
+   "name": "活力の森",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのポケモン全員は、出したばかりの番（最初の自分の番をのぞく）でもポケモンに進化できる。 スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-110",
+   "localId": "110",
+   "name": "ミアレシティ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分の山札からたねポケモンを1枚選び、ベンチに出してよい。そして山札を切る。この効果を使ったなら、自分の番は終わる。 スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-111",
+   "localId": "111",
+   "name": "メガスターミーex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 330,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒトデマン",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ジェットブロー",
+     "effect": "相手のベンチポケモン1匹にも、50ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 120
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ネビュラビーム",
+     "effect": "このワザのダメージは、弱点・抵抗力と、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-112",
+   "localId": "112",
+   "name": "メガピクシーex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 320,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ピッピ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ひかりのつばさ",
+     "effect": "このポケモンは、相手のポケモンから特性の効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "シューティングムーン",
+     "effect": "のぞむなら、自分の手札からエネルギーを4枚までトラッシュし、その枚数×40ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-113",
+   "localId": "113",
+   "name": "メガジガルデex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 310,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ガイアウェーブ",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 200
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ムニキスゼロ",
+     "effect": "相手のポケモン全員に対して、それぞれ1回ずつコインを投げ、オモテが出たポケモン全員に、それぞれ150ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-114",
+   "localId": "114",
+   "name": "ニャースex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 170,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おくのてキャッチ",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。この番、名前に「おくのて」とつく特性を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "しっぽをまく",
+     "effect": "このポケモンと、ついているすべてのカードを、手札にもどす。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-115",
+   "localId": "115",
+   "name": "メイのはげまし",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分のサイドの残り枚数が、相手のサイドの残り枚数より多いときにしか使えない。自分のトラッシュから基本エネルギーを2枚まで選び、自分の2進化ポケモン1匹につける。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-116",
+   "localId": "116",
+   "name": "ユカリ",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のポケモン1匹のHPを「150」回復する。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  },
+  {
+   "id": "M3-117",
+   "localId": "117",
+   "name": "メガジガルデex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 310,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ガイアウェーブ",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 200
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ムニキスゼロ",
+     "effect": "相手のポケモン全員に対して、それぞれ1回ずつコインを投げ、オモテが出たポケモン全員に、それぞれ150ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M3",
+    "name": "ムニキスゼロ"
+   }
+  }
+ ]
+}

@@ -1,0 +1,2471 @@
+{
+ "id": "M-P",
+ "name": "メガ プロモカード",
+ "releaseDate": "2025-07-28",
+ "total": 132,
+ "cards": [
+  {
+   "id": "M-P-001",
+   "localId": "001",
+   "name": "チコリータ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はっぱカッター",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-002",
+   "localId": "002",
+   "name": "ラプラスex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 210,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ハイドロターン",
+     "effect": "このポケモンについている[W]エネルギーの数×30ダメージ。このポケモンをベンチポケモンと入れ替える。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water"
+     ],
+     "name": "なみのり",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-003",
+   "localId": "003",
+   "name": "マシマシラ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アドレナブレイン",
+     "effect": "このポケモンに[D]エネルギーがついているなら、自分の番に1回使える。自分の場のポケモン1匹にのっているダメカンを3個まで選び、相手の場のポケモン1匹にのせ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "サイコトリップ",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-004",
+   "localId": "004",
+   "name": "マクノシタ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "どつく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "がちんこ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-005",
+   "localId": "005",
+   "name": "あなあけスコップ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を上から2枚トラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-006",
+   "localId": "006",
+   "name": "カウンターゲイン",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のサイドの残り枚数が、相手のサイドの残り枚数より多いなら、このカードをつけているポケモンがワザを使うためのエネルギーは、エネルギー1個ぶん少なくなる。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-007",
+   "localId": "007",
+   "name": "リーリエの決心",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札をすべて山札にもどして切る。その後、山札を6枚引く。自分のサイドの残り枚数が6枚なら、引く枚数は8枚になる。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-008",
+   "localId": "008",
+   "name": "メガシグナル",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「メガシンカex」を1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-009",
+   "localId": "009",
+   "name": "基本草エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-010",
+   "localId": "010",
+   "name": "基本炎エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-011",
+   "localId": "011",
+   "name": "基本水エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-012",
+   "localId": "012",
+   "name": "基本雷エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-013",
+   "localId": "013",
+   "name": "基本超エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-014",
+   "localId": "014",
+   "name": "基本闘エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-015",
+   "localId": "015",
+   "name": "基本悪エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-016",
+   "localId": "016",
+   "name": "基本鋼エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-017",
+   "localId": "017",
+   "name": "ニャオハ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふみまくる",
+     "effect": "コインを3回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-018",
+   "localId": "018",
+   "name": "ホゲータ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ねつでこがす",
+     "effect": "相手のバトルポケモンをやけどにする。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-019",
+   "localId": "019",
+   "name": "クワッス",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "つばめがえし",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-020",
+   "localId": "020",
+   "name": "ピカチュウ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "でんじスパーク",
+     "effect": "相手のポケモン1匹に、10ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-021",
+   "localId": "021",
+   "name": "ラルトス",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ずつき",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-022",
+   "localId": "022",
+   "name": "リオル",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "かそくづき",
+     "effect": "次の自分の番、このポケモンは「かそくづき」が使えない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-023",
+   "localId": "023",
+   "name": "基本草エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-024",
+   "localId": "024",
+   "name": "基本炎エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-025",
+   "localId": "025",
+   "name": "基本水エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-026",
+   "localId": "026",
+   "name": "基本雷エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-027",
+   "localId": "027",
+   "name": "基本超エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-028",
+   "localId": "028",
+   "name": "基本闘エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-029",
+   "localId": "029",
+   "name": "基本悪エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-030",
+   "localId": "030",
+   "name": "基本鋼エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-031",
+   "localId": "031",
+   "name": "夜のタンカ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモンまたは基本エネルギーを1枚選び、相手に見せて、手札に加える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-032",
+   "localId": "032",
+   "name": "ラティアスex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 210,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スカイライン",
+     "effect": "このポケモンがいるかぎり、自分のたねポケモン全員のにげるためのエネルギーは、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "むげんのやいば",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-033",
+   "localId": "033",
+   "name": "おいわいファンファーレ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分のポケモン全員のHPを、それぞれ「10」回復してよい。その場合、自分の番は終わる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-034",
+   "localId": "034",
+   "name": "シェイミ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はなのカーテン",
+     "effect": "このポケモンがいるかぎり、自分のベンチポケモン（「ルールを持つポケモン」をのぞく）全員は、相手のワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "けとばす",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-035",
+   "localId": "035",
+   "name": "基本草エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-036",
+   "localId": "036",
+   "name": "基本炎エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-037",
+   "localId": "037",
+   "name": "基本水エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-038",
+   "localId": "038",
+   "name": "基本雷エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-039",
+   "localId": "039",
+   "name": "基本超エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-040",
+   "localId": "040",
+   "name": "基本闘エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-041",
+   "localId": "041",
+   "name": "基本悪エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-042",
+   "localId": "042",
+   "name": "基本鋼エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-043",
+   "localId": "043",
+   "name": "ロケット団のミュウツーex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 280,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "パワーセーバー",
+     "effect": "自分の場の「ロケット団のポケモン」が4匹以上のときにしか、このポケモンはワザが使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "イレイザーボール",
+     "effect": "のぞむなら、自分のベンチポケモンについているエネルギーを2枚までトラッシュし、その枚数×60ダメージ追加。",
+     "damage": "160+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-044",
+   "localId": "044",
+   "name": "ブレイブバングル",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモン（「ルールを持つポケモン」をのぞく）が使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+30」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-045",
+   "localId": "045",
+   "name": "リザード",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 110,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒトカゲ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ひをはく",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-046",
+   "localId": "046",
+   "name": "ワルビアルex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 320,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ワルビル",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "おいつめる",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 80
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ストロングバイト",
+     "effect": "このポケモンに「ポケモンのどうぐ」がついているなら、140ダメージ追加。",
+     "damage": "140+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-047",
+   "localId": "047",
+   "name": "エレズン",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "やんちゃげり",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-048",
+   "localId": "048",
+   "name": "ノココッチ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 140,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ノコッチ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "にげあしドロー",
+     "effect": "自分の番に1回使える。自分の山札を3枚引く。その後、このポケモンと、ついているすべてのカードを、山札にもどして切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ランドクラッシュ",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-049",
+   "localId": "049",
+   "name": "逆境ほけん",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンの弱点のタイプと、相手のバトルポケモンのタイプが同じなら、このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、自分の山札を3枚引く。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-050",
+   "localId": "050",
+   "name": "ふうせん",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンは、にげるためのエネルギーが2個ぶん少なくなる。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-051",
+   "localId": "051",
+   "name": "トウコ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から進化ポケモンとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-066",
+   "localId": "066",
+   "name": "ラルトス",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ずつき",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-067",
+   "localId": "067",
+   "name": "キルリア",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 100,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ラルトス",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "コールサイン",
+     "effect": "自分の山札からポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "サイコショット",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-068",
+   "localId": "068",
+   "name": "メガエルレイドex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 350,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "キルリア",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "はやてぎり",
+     "effect": "このポケモンにダメカンがのっていないなら、150ダメージ追加。",
+     "damage": "50+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "マーベラスエッジ",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-069",
+   "localId": "069",
+   "name": "パワープロテイン",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "この番、自分の[F]ポケモンが使うワザの、相手のバトルポケモンへのダメージは「+30」される。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-070",
+   "localId": "070",
+   "name": "ヤドン",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "まぬけがお",
+     "effect": "このポケモンはこんらんにならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ちょうねんりき",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-071",
+   "localId": "071",
+   "name": "メガヤドランex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 330,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤドン",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "シェルネードスピン",
+     "effect": "次の相手の番、このポケモンがワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを12個のせる。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-072",
+   "localId": "072",
+   "name": "ジーランス",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きおくにもぐる",
+     "effect": "このポケモンがいるかぎり、自分の進化しているポケモン全員は、進化前に持っていたワザを、すべて使える。［ワザを使うためのエネルギーは必要。］"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ひれカッター",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-073",
+   "localId": "073",
+   "name": "カメテテ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ダブルドロー",
+     "effect": "自分の山札を2枚引く。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ひっかく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-074",
+   "localId": "074",
+   "name": "ブレイブバングル",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモン（「ルールを持つポケモン」をのぞく）が使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+30」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-075",
+   "localId": "075",
+   "name": "ジェット",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手の場の「メガシンカex」の数ぶん、自分の山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-076",
+   "localId": "076",
+   "name": "ミツルの思いやり",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の「メガシンカex」1匹のHPを、すべて回復する。その後、回復したポケモンについているエネルギーを、すべて手札にもどす。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-085",
+   "localId": "085",
+   "name": "ポケパッド",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からポケモン（「ルールを持つポケモン」をのぞく）を1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-086",
+   "localId": "086",
+   "name": "メガガルーラex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 300,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おつかいダッシュ",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札を2枚引く。この特性は別の「おつかいダッシュ」を使った番は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マシンガンコンボ",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×50ダメージ追加。",
+     "damage": "200+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-087",
+   "localId": "087",
+   "name": "基本草エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-088",
+   "localId": "088",
+   "name": "基本炎エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-089",
+   "localId": "089",
+   "name": "基本水エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-090",
+   "localId": "090",
+   "name": "基本雷エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-091",
+   "localId": "091",
+   "name": "基本超エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-092",
+   "localId": "092",
+   "name": "基本闘エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-093",
+   "localId": "093",
+   "name": "基本悪エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-094",
+   "localId": "094",
+   "name": "基本鋼エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-095",
+   "localId": "095",
+   "name": "シェイミ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はなのカーテン",
+     "effect": "このポケモンがいるかぎり、自分のベンチポケモン（「ルールを持つポケモン」をのぞく）全員は、相手のワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "けとばす",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-096",
+   "localId": "096",
+   "name": "メガマフォクシーex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 350,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "テールナー",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "トリックポータル",
+     "effect": "自分の山札を上から9枚見て、その中からポケモンを好きなだけ選び、ベンチに出す。残りのカードは山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "あやしいともしび",
+     "effect": "相手のバトルポケモンをやけどとこんらんにする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-097",
+   "localId": "097",
+   "name": "パウワウ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 80,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "みずかけ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "スプラッシュ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-098",
+   "localId": "098",
+   "name": "シュシュプ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "あまいかおり",
+     "effect": "自分のポケモン1匹のHPを「30」回復する。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ぶつかる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-099",
+   "localId": "099",
+   "name": "グリ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのポケモン全員のHPを、それぞれ「50」回復する。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-100",
+   "localId": "100",
+   "name": "ヒカリ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「たねポケモン」「1進化ポケモン」「2進化ポケモン」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-133",
+   "localId": "133",
+   "name": "ピカチュウ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "げきとうスパーク",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-138",
+   "localId": "138",
+   "name": "コソクムシ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "よわごし",
+     "effect": "相手の場に「ポケモンex」がいるなら、このポケモンはにげるためのエネルギーが、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ぶつかる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-139",
+   "localId": "139",
+   "name": "メガシャリタツex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 260,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water"
+     ],
+     "name": "サンカンヘッド",
+     "effect": "コインを3回投げ、オモテの数×150ダメージ。",
+     "damage": "150×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-140",
+   "localId": "140",
+   "name": "シビシラス",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 40,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "じっとする",
+     "effect": "このポケモンのHPを「10」回復する。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-141",
+   "localId": "141",
+   "name": "ミネズミ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かんしのめ",
+     "effect": "このポケモンがいるかぎり、おたがいのポケモン全員にのっているダメカンは、別のポケモンにのせ替えられない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-142",
+   "localId": "142",
+   "name": "スペシャルレッドカード",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、相手のサイドの残り枚数が3枚以下のときにしか使えない。相手は相手自身の手札をすべてウラにして切り、山札の下にもどす。その後、相手は山札を3枚引く。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-143",
+   "localId": "143",
+   "name": "デウロ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "J",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、前の相手の番に、自分の「メガシンカex」がきぜつしていなければ使えない。自分の山札から基本エネルギーを2枚まで選び、自分の「メガシンカex」1匹につける。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  },
+  {
+   "id": "M-P-144",
+   "localId": "144",
+   "name": "ボスの指令",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M-P",
+    "name": "メガ プロモカード"
+   }
+  }
+ ]
+}

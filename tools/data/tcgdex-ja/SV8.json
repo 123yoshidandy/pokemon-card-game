@@ -1,0 +1,5834 @@
+{
+ "id": "SV8",
+ "name": "超電ブレイカー",
+ "releaseDate": "2024-10-18",
+ "total": 138,
+ "cards": [
+  {
+   "id": "SV8-001",
+   "localId": "001",
+   "name": "タマタマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "すいとる",
+     "effect": "このポケモンのHPを「10」回復する。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-002",
+   "localId": "002",
+   "name": "ナッシー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "タマタマ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "たまなげアワー",
+     "effect": "おたがいのバトルポケモンについているエネルギーの数ぶんコインを投げ、オモテの数×60ダメージ。",
+     "damage": "60×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-003",
+   "localId": "003",
+   "name": "アイアントex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 190,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いきなりけずる",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。相手の山札を上から1枚トラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "リベンジクラッシュ",
+     "effect": "相手がすでにとったサイドの枚数×30ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-004",
+   "localId": "004",
+   "name": "コフキムシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを1枚選び、ベンチに出す。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-005",
+   "localId": "005",
+   "name": "コフーライ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コフキムシ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "あるきまわる",
+     "effect": "このポケモンをベンチポケモンと入れ替える。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "たいあたり",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-006",
+   "localId": "006",
+   "name": "ビビヨン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "コフーライ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "エボルパウダー",
+     "effect": "自分のベンチポケモン全員からそれぞれ進化するカードを、自分の山札から1枚ずつ選び、それぞれにのせて進化させる。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "カッターウインド",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-007",
+   "localId": "007",
+   "name": "カプサイジ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "とびだしヘッド",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-008",
+   "localId": "008",
+   "name": "シガロコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ころがる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-009",
+   "localId": "009",
+   "name": "ベラカス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シガロコ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "トリプルドロー",
+     "effect": "自分の山札を3枚引く。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "どんでんがえし",
+     "effect": "自分の山札の残り枚数が3枚以下なら、200ダメージ追加。",
+     "damage": "40+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-010",
+   "localId": "010",
+   "name": "チオンジェン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "グリードハザード",
+     "effect": "自分の山札の残り枚数が3枚以下なら、相手のベンチポケモン2匹にも、それぞれ120ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "まきこみウィップ",
+     "effect": "自分の山札を上から3枚トラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-011",
+   "localId": "011",
+   "name": "パルデア ケンタロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "うしろげり",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きあいタックル",
+     "effect": "相手のバトルポケモンが1進化ポケモンなら、90ダメージ追加。",
+     "damage": "90+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-012",
+   "localId": "012",
+   "name": "ビクティニ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ビクトリーエール",
+     "effect": "このポケモンがいるかぎり、自分の[R]タイプの進化ポケモンが使うワザの、相手のバトルポケモンへのダメージは「+10」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ほのお",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-013",
+   "localId": "013",
+   "name": "メラルバ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ひをはく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-014",
+   "localId": "014",
+   "name": "ウルガモス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "メラルバ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "きゅうけつ",
+     "effect": "相手のバトルポケモンに与えたダメージぶん、このポケモンのHPを回復する。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "どとうのはばたき",
+     "effect": "このポケモンにも50ダメージ。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-015",
+   "localId": "015",
+   "name": "ヤクデ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ひだね",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっかける",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-016",
+   "localId": "016",
+   "name": "マルヤクデ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤクデ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "もえるねっぱ",
+     "effect": "自分のベンチポケモン全員にも、それぞれ30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 130
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヒートブラスト",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-017",
+   "localId": "017",
+   "name": "ホゲータ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ねつでこがす",
+     "effect": "相手のバトルポケモンをやけどにする。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-018",
+   "localId": "018",
+   "name": "アチゲータ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ホゲータ",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートブレス",
+     "effect": "コインを1回投げオモテなら、50ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-019",
+   "localId": "019",
+   "name": "ラウドボーン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 180,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "アチゲータ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "てんねん",
+     "effect": "このポケモンは、相手のポケモンが使うワザの効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "フレアリサイタル",
+     "effect": "おたがいのベンチポケモンの数×20ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-020",
+   "localId": "020",
+   "name": "カルボウ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "なぐる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "かえんほうしゃ",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-021",
+   "localId": "021",
+   "name": "グレンアルマ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カルボウ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かえん",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "グレンブラスター",
+     "effect": "このポケモンについている[R]エネルギーをすべてトラッシュし、相手のベンチポケモン1匹に、180ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-022",
+   "localId": "022",
+   "name": "ソウブレイズ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カルボウ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ブレイズカース",
+     "effect": "相手のポケモン全員についている特殊エネルギーを、すべてトラッシュする。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "こくえんぎり",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-023",
+   "localId": "023",
+   "name": "スコヴィランex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 260,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カプサイジ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ダブルタイプ",
+     "effect": "このポケモンは、場にいるかぎり[G]と[R]の2つのタイプになる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "スパイシーレイジ",
+     "effect": "このポケモンにのっているダメカンの数×70ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-024",
+   "localId": "024",
+   "name": "パルデア ケンタロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かちあげホーン",
+     "effect": "のぞむなら、相手のバトル場の2進化ポケモンについているエネルギーを2個選び、相手の手札にもどす。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "ジェットヘッド",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-025",
+   "localId": "025",
+   "name": "ヒンバス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はねにげ",
+     "effect": "このポケモンをベンチポケモンと入れ替える。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-026",
+   "localId": "026",
+   "name": "ミロカロスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒンバス",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きらめくウロコ",
+     "effect": "このポケモンは、相手の「テラスタル」のポケモンからワザのダメージや効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヒプノスプラッシュ",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-027",
+   "localId": "027",
+   "name": "タマザラシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "こなゆき",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-028",
+   "localId": "028",
+   "name": "トドグラー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "タマザラシ",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "つきたおし",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "アイスボール",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-029",
+   "localId": "029",
+   "name": "トドゼルガ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 170,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "トドグラー",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "とうけつファング",
+     "effect": "次の相手の番、ついているエネルギーが2個以下のポケモン全員は、ワザが使えない。（新しく場に出したポケモンもふくむ。）",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "メガトンフォール",
+     "effect": "このポケモンにも50ダメージ。",
+     "damage": 170
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-030",
+   "localId": "030",
+   "name": "カラナクシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "うちみず",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-031",
+   "localId": "031",
+   "name": "テツノツツミ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "ガストコリジョン 200-",
+     "effect": "相手のバトルポケモンのにげるためのエネルギーの数×50ダメージぶん、このワザのダメージは小さくなる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-032",
+   "localId": "032",
+   "name": "パオジアン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ゆきにしずめる",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。場に出ているスタジアムをトラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "アイシクルループ",
+     "effect": "このポケモンについているエネルギーを1個選び、手札にもどす。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-033",
+   "localId": "033",
+   "name": "ピカチュウex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 200,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "がんばりハート",
+     "effect": "このポケモンのHPがまんたんの状態で、このポケモンがワザのダメージを受けてきぜつするとき、きぜつせず、残りHPが「10」の状態で場に残る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Lightning",
+      "Metal"
+     ],
+     "name": "トパーズボルト",
+     "effect": "このポケモンについているエネルギーを3個選び、トラッシュする。",
+     "damage": 300
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-034",
+   "localId": "034",
+   "name": "コイル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "ピッカリだま",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-035",
+   "localId": "035",
+   "name": "レアコイル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コイル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かじょうほうでん",
+     "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。自分のトラッシュから基本エネルギーを3枚まで選び、自分の[L]ポケモンに好きなようにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ライトニングボール",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-036",
+   "localId": "036",
+   "name": "ジバコイル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 170,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "レアコイル",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きょうりょくじば",
+     "effect": "相手のバトルポケモンをこんらんにする。次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 80
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "でんじほう",
+     "effect": "次の自分の番、このポケモンは「でんじほう」が使えない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-037",
+   "localId": "037",
+   "name": "ロトム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "クラッシュパルス",
+     "effect": "相手の手札を見て、その中にある「グッズ」と「ポケモンのどうぐ」を、すべてトラッシュする。"
+    },
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "エネショート",
+     "effect": "相手のバトルポケモンについているエネルギーの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-038",
+   "localId": "038",
+   "name": "シママ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "くわえる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "バチバチ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-039",
+   "localId": "039",
+   "name": "ゼブライカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シママ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "キック",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "マッハボルト",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-040",
+   "localId": "040",
+   "name": "マッギョ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "バチッとしびれる",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。さらに、そのポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-041",
+   "localId": "041",
+   "name": "カプ・コケコ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かみなりをよぶ",
+     "effect": "自分の山札から[L]ポケモンを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "サイドカウンター",
+     "effect": "自分のサイドの残り枚数が、相手のサイドの残り枚数より多いなら、90ダメージ追加。",
+     "damage": "90+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-042",
+   "localId": "042",
+   "name": "カイデン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "つばめがえし",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-043",
+   "localId": "043",
+   "name": "タイカイデン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カイデン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かっくう",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ストームボルト",
+     "effect": "このポケモンについているエネルギーをすべて、ベンチポケモンに好きなようにつけ替える。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-044",
+   "localId": "044",
+   "name": "ミライドン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "プロテクトコード",
+     "effect": "次の相手の番、自分の「未来」のポケモン全員は、「ポケモンex」からワザのダメージを受けない。このポケモンがバトル場をはなれたら、この効果はなくなる。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "サンダークロー",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-045",
+   "localId": "045",
+   "name": "トゲピー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はたく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-046",
+   "localId": "046",
+   "name": "トゲチック",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "トゲピー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ドレインキッス",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-047",
+   "localId": "047",
+   "name": "トゲキッス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "トゲチック",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ワンダーキッス",
+     "effect": "このポケモンがいるかぎり、相手のバトルポケモンがきぜつするたび、自分はコインを1回投げる。オモテなら、サイドを1枚多くとる。この効果は、この特性を持つポケモンが何匹いても、重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードウイング",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-048",
+   "localId": "048",
+   "name": "ユクシー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "いたみのきおく",
+     "effect": "相手のポケモン全員に、それぞれダメカンを2個のせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-049",
+   "localId": "049",
+   "name": "エムリット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "こころをみたす",
+     "effect": "自分の手札から「基本[P]エネルギー」を2枚まで選び、自分のポケモンに好きなようにつける。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ゴッドバースト",
+     "effect": "自分のベンチに「ユクシー」「アグノム」がいないなら、このワザは失敗。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-050",
+   "localId": "050",
+   "name": "アグノム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "マインドキネシス",
+     "effect": "相手のポケモン全員にのっているダメカンの数×10ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-051",
+   "localId": "051",
+   "name": "デスマス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "つぶやく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ちょっとうらむ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-052",
+   "localId": "052",
+   "name": "デスカーン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "デスマス",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "めいふのおきて",
+     "effect": "おたがいの特性を持つポケモン全員に、それぞれダメカンを6個のせる。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ホロウショット",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-053",
+   "localId": "053",
+   "name": "ニャスパー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "みすかす",
+     "effect": "相手の手札を見る。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "サイコショット",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-054",
+   "localId": "054",
+   "name": "ニャオニクス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ニャスパー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "さそうしっぽ",
+     "effect": "自分の番に、自分の手札から「のんびりじゃらし」を1枚トラッシュするなら、1回使える。相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "サイコショット",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-055",
+   "localId": "055",
+   "name": "デデンネ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "でんじソナー",
+     "effect": "自分のトラッシュからトレーナーズを1枚選び、相手に見せて、手札に加える。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "かじる",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-056",
+   "localId": "056",
+   "name": "スナバァ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "すなしぶき",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-057",
+   "localId": "057",
+   "name": "シロデスナex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "スナバァ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "すなじごく",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 160
+    },
+    {
+     "cost": [
+      "Water",
+      "Psychic",
+      "Fighting"
+     ],
+     "name": "バライトジェイル",
+     "effect": "相手のベンチポケモン全員に、それぞれ残りHPが「100」になるように、ダメカンをのせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-058",
+   "localId": "058",
+   "name": "イエッサン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "せわやきヒール",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。自分のバトルポケモンのHPを「30」回復し、特殊状態も1つ回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ちょうねんりき",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-059",
+   "localId": "059",
+   "name": "ハバタクカミ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "まどわしうつす",
+     "effect": "自分のベンチの「古代」のポケモンを1匹選び、選んだポケモンにのっているダメカンをすべて、相手のバトルポケモンにのせ替える。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ムーンフォース",
+     "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-30」される。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-060",
+   "localId": "060",
+   "name": "マンキー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ダブルチョップ",
+     "effect": "コインを2回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-061",
+   "localId": "061",
+   "name": "オコリザル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "マンキー",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "あしばらい",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "メガトンパンチ",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-062",
+   "localId": "062",
+   "name": "コノヨザル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "オコリザル",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "あばれまわる",
+     "effect": "このポケモンをこんらんにする。",
+     "damage": 130
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "みちづれファイト",
+     "effect": "おたがいのバトルポケモンをきぜつさせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-063",
+   "localId": "063",
+   "name": "パルデア ケンタロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "けとばす",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ブロックスタンプ",
+     "effect": "次の相手の番、このワザを受けたたねポケモンは、ワザが使えない。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-064",
+   "localId": "064",
+   "name": "ゴマゾウ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ずつき",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-065",
+   "localId": "065",
+   "name": "ドンファン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ゴマゾウ",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "うちのめす",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ガードローリング",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。次の相手の番、このポケモンが受けるワザのダメージは「-100」される。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-066",
+   "localId": "066",
+   "name": "トリトドン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カラナクシ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ねんちゃくしばり",
+     "effect": "このポケモンがベンチにいるかぎり、おたがいのベンチの2進化ポケモンの特性は、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マッドショット",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-067",
+   "localId": "067",
+   "name": "キラーメ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "いわとばし",
+     "effect": "このワザのダメージは抵抗力を計算しない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-068",
+   "localId": "068",
+   "name": "キラフロル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "キラーメ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "むしばむはへん",
+     "effect": "相手のバトルポケモンをどくにする。次の相手の番、このワザを受けたポケモンは、手札から出すエネルギーをつけられない。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "いわおとし",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-069",
+   "localId": "069",
+   "name": "コライドン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はじょうもうこう",
+     "effect": "前の自分の番、このポケモン以外の「古代」のポケモンがワザを使っていたなら、150ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-070",
+   "localId": "070",
+   "name": "モノズ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ふみならす",
+     "effect": "相手の山札を上から1枚トラッシュする。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-071",
+   "localId": "071",
+   "name": "ジヘッド",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "モノズ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ふみならす",
+     "effect": "相手の山札を上から2枚トラッシュする。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "やみのキバ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-072",
+   "localId": "072",
+   "name": "サザンドラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジヘッド",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "クラッシュヘッズ",
+     "effect": "相手の山札を上から3枚トラッシュする。",
+     "damage": 200
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Darkness",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "オブシディアン",
+     "effect": "相手のベンチポケモン2匹にも、それぞれ130ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-073",
+   "localId": "073",
+   "name": "シルシュルー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "しるをとばす",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-074",
+   "localId": "074",
+   "name": "タギングル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シルシュルー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いたずらペイント",
+     "effect": "相手のトラッシュからエネルギーを3枚まで選び、相手のポケモンに好きなようにつける。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "エナジーグラフィティ",
+     "effect": "相手のポケモン全員についているエネルギーの数×40ダメージ。",
+     "damage": "40×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-075",
+   "localId": "075",
+   "name": "モモワロウ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "もうどくしはい",
+     "effect": "このポケモンがバトル場にいるかぎり、相手のどくのポケモンは、どくでのせるダメカンの数が5個多くなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ポイズンチェーン",
+     "effect": "相手のバトルポケモンをどくにする。次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-076",
+   "localId": "076",
+   "name": "アローラ ディグダ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [],
+     "name": "ふいをつく",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-077",
+   "localId": "077",
+   "name": "アローラ ダグトリオ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アローラディグダ",
+   "attacks": [
+    {
+     "cost": [],
+     "name": "スリービンゴ",
+     "effect": "自分の手札が3枚でないなら、このワザは失敗。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-078",
+   "localId": "078",
+   "name": "ドーミラー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "シールドアタック",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-079",
+   "localId": "079",
+   "name": "ドータクン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドーミラー",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "かいてんアタック",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダブルインパクト",
+     "effect": "コインを2回投げ、オモテの数×100ダメージ。",
+     "damage": "100×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-080",
+   "localId": "080",
+   "name": "ムゲンダイナ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ダイナブラスト",
+     "effect": "相手のバトルポケモンが「ポケモンex」なら、80ダメージ追加。",
+     "damage": "10+"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ワールドエンド",
+     "effect": "場に出ているスタジアムをトラッシュする。トラッシュできないなら、このワザは失敗。",
+     "damage": 230
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-081",
+   "localId": "081",
+   "name": "シャリタツex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 160,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Water"
+     ],
+     "name": "ふいうちポンプ",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 100
+    },
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Darkness"
+     ],
+     "name": "シナバールアー",
+     "effect": "自分の山札を上から10枚見て、その中からポケモンを好きなだけ選び、ベンチに出す。残りのカードは山札にもどして切る。"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-082",
+   "localId": "082",
+   "name": "ナマケロ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "のんびりする",
+     "effect": "このポケモンのHPを「60」回復する。次の自分の番、このポケモンはにげられない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-083",
+   "localId": "083",
+   "name": "ヤルキモノ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ナマケロ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スラッシュクロー",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-084",
+   "localId": "084",
+   "name": "ケッキングex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 340,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ヤルキモノ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "さぼりたいしつ",
+     "effect": "相手の場に「ポケモンex・V」がいないなら、このポケモンはワザが使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "グレートスイング",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 280
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-085",
+   "localId": "085",
+   "name": "ザングース",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "れんぞくぎり",
+     "effect": "コインを3回投げる。オモテが1回なら、20ダメージ追加。オモテが2回なら、50ダメージ追加。すべてオモテなら、80ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-086",
+   "localId": "086",
+   "name": "カクレオン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かくれじょうず",
+     "effect": "このポケモンがワザのダメージを受けるとき、自分はコインを1回投げる。オモテなら、このポケモンはそのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ベロウィップ",
+     "effect": "相手のポケモン1匹に、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-087",
+   "localId": "087",
+   "name": "バッフロン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "まちうけホーン",
+     "effect": "次の相手の番、このポケモンがワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを6個のせる。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スマッシュヘッド",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-088",
+   "localId": "088",
+   "name": "エリキテル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "プチボルト",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "とつげき",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-089",
+   "localId": "089",
+   "name": "エレザード",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エリキテル",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "パラボラチャージ",
+     "effect": "自分の山札からエネルギーを4枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "エレキスラッグ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-090",
+   "localId": "090",
+   "name": "ヤレユータン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "よわみをにぎる",
+     "effect": "次の自分の番の終わりまで、このワザを受けたポケモンの弱点は[C]タイプになる。［弱点は「×2」でダメージ計算をする。］"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひらてうち",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-091",
+   "localId": "091",
+   "name": "ワッカネズミ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "じゃれつく",
+     "effect": "コインを1回投げオモテなら、10ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-092",
+   "localId": "092",
+   "name": "イッカネズミ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ワッカネズミ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ファミリーマーチ",
+     "effect": "自分の山札から「イッカネズミ（『ポケモンex』をふくむ）」を2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "れんぞくまえば",
+     "effect": "コインを4回投げ、オモテの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-093",
+   "localId": "093",
+   "name": "テラパゴス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "プリズムチャージ",
+     "effect": "自分の山札から、それぞれちがうタイプの基本エネルギーを3枚まで選び、自分の「テラスタル」のポケモンに好きなようにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハードタックル",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-094",
+   "localId": "094",
+   "name": "推理セット",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を上から3枚見て、好きな順番に入れ替えて、山札の上にもどす。または、そのカードをすべてウラにして切り、山札の下にもどす。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-095",
+   "localId": "095",
+   "name": "スクランブルスイッチ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトルポケモンをベンチポケモンと入れ替える。その後、ベンチに入れ替えたポケモンについているエネルギーを好きなだけ選び、新しいバトルポケモンにつけ替える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-096",
+   "localId": "096",
+   "name": "のんびりじゃらし",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、後攻プレイヤーの最初の番しか使えない。相手の場のポケモンについているエネルギーを1個選び、相手の手札にもどす。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-097",
+   "localId": "097",
+   "name": "ミラクルインカム",
+   "category": "Trainer",
+   "rarity": "ACE SPEC Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからサポートを2枚まで選び、相手に見せて、手札に加える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-098",
+   "localId": "098",
+   "name": "希望のアミュレット",
+   "category": "Trainer",
+   "rarity": "ACE SPEC Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、自分の山札から好きなカードを3枚まで選び、手札に加える。そして山札を切る。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-099",
+   "localId": "099",
+   "name": "ナモのみ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが、相手の[D]ポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-100",
+   "localId": "100",
+   "name": "リリバのみ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが、相手の[M]ポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-101",
+   "localId": "101",
+   "name": "ワザマシン フローライト",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Water",
+      "Psychic"
+     ],
+     "name": "フローライト",
+     "effect": "このポケモンについているエネルギーをすべてトラッシュし、自分の「テラスタル」のポケモン全員のHPを、すべて回復する。"
+    }
+   ],
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンは、このカードに書かれているワザを使える。［ワザを使うためのエネルギーは必要。］ ポケモンについているこのカードは、自分の番の終わりにトラッシュする。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-102",
+   "localId": "102",
+   "name": "シアノ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「ポケモンex」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-103",
+   "localId": "103",
+   "name": "シトロンの機転",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の[L]ポケモン全員のHPを、それぞれ「60」回復する。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-104",
+   "localId": "104",
+   "name": "ミカンのまなざし",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "次の相手の番、自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-30」される。（新しく場に出したポケモンもふくむ。）",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-105",
+   "localId": "105",
+   "name": "エキサイトスタジアム",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場のたねポケモン全員の最大HPは、それぞれ「＋30」される。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-106",
+   "localId": "106",
+   "name": "グラビティーマウンテン",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場の2進化ポケモン全員の最大HPは、それぞれ「-30」される。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-107",
+   "localId": "107",
+   "name": "ビビヨン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "コフーライ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "エボルパウダー",
+     "effect": "自分のベンチポケモン全員からそれぞれ進化するカードを、自分の山札から1枚ずつ選び、それぞれにのせて進化させる。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "カッターウインド",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-108",
+   "localId": "108",
+   "name": "メラルバ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ひをはく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-109",
+   "localId": "109",
+   "name": "ソウブレイズ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カルボウ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ブレイズカース",
+     "effect": "相手のポケモン全員についている特殊エネルギーを、すべてトラッシュする。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "こくえんぎり",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-110",
+   "localId": "110",
+   "name": "ヒンバス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 30,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はねにげ",
+     "effect": "このポケモンをベンチポケモンと入れ替える。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-111",
+   "localId": "111",
+   "name": "タマザラシ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "こなゆき",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-112",
+   "localId": "112",
+   "name": "レアコイル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コイル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かじょうほうでん",
+     "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。自分のトラッシュから基本エネルギーを3枚まで選び、自分の[L]ポケモンに好きなようにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ライトニングボール",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-113",
+   "localId": "113",
+   "name": "マッギョ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "バチッとしびれる",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。さらに、そのポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-114",
+   "localId": "114",
+   "name": "エムリット",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "こころをみたす",
+     "effect": "自分の手札から「基本[P]エネルギー」を2枚まで選び、自分のポケモンに好きなようにつける。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ゴッドバースト",
+     "effect": "自分のベンチに「ユクシー」「アグノム」がいないなら、このワザは失敗。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-115",
+   "localId": "115",
+   "name": "ゴマゾウ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ずつき",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-116",
+   "localId": "116",
+   "name": "アローラ ダグトリオ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アローラディグダ",
+   "attacks": [
+    {
+     "cost": [],
+     "name": "スリービンゴ",
+     "effect": "自分の手札が3枚でないなら、このワザは失敗。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-117",
+   "localId": "117",
+   "name": "ナマケロ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "のんびりする",
+     "effect": "このポケモンのHPを「60」回復する。次の自分の番、このポケモンはにげられない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-118",
+   "localId": "118",
+   "name": "カクレオン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かくれじょうず",
+     "effect": "このポケモンがワザのダメージを受けるとき、自分はコインを1回投げる。オモテなら、このポケモンはそのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ベロウィップ",
+     "effect": "相手のポケモン1匹に、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-119",
+   "localId": "119",
+   "name": "アイアントex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 190,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いきなりけずる",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。相手の山札を上から1枚トラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "リベンジクラッシュ",
+     "effect": "相手がすでにとったサイドの枚数×30ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-120",
+   "localId": "120",
+   "name": "スコヴィランex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 260,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カプサイジ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ダブルタイプ",
+     "effect": "このポケモンは、場にいるかぎり[G]と[R]の2つのタイプになる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "スパイシーレイジ",
+     "effect": "このポケモンにのっているダメカンの数×70ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-121",
+   "localId": "121",
+   "name": "ミロカロスex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 270,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒンバス",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きらめくウロコ",
+     "effect": "このポケモンは、相手の「テラスタル」のポケモンからワザのダメージや効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヒプノスプラッシュ",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-122",
+   "localId": "122",
+   "name": "ピカチュウex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 200,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "がんばりハート",
+     "effect": "このポケモンのHPがまんたんの状態で、このポケモンがワザのダメージを受けてきぜつするとき、きぜつせず、残りHPが「10」の状態で場に残る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Lightning",
+      "Metal"
+     ],
+     "name": "トパーズボルト",
+     "effect": "このポケモンについているエネルギーを3個選び、トラッシュする。",
+     "damage": 300
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-123",
+   "localId": "123",
+   "name": "シロデスナex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 280,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "スナバァ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "すなじごく",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 160
+    },
+    {
+     "cost": [
+      "Water",
+      "Psychic",
+      "Fighting"
+     ],
+     "name": "バライトジェイル",
+     "effect": "相手のベンチポケモン全員に、それぞれ残りHPが「100」になるように、ダメカンをのせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-124",
+   "localId": "124",
+   "name": "サザンドラex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジヘッド",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "クラッシュヘッズ",
+     "effect": "相手の山札を上から3枚トラッシュする。",
+     "damage": 200
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Darkness",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "オブシディアン",
+     "effect": "相手のベンチポケモン2匹にも、それぞれ130ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-125",
+   "localId": "125",
+   "name": "シャリタツex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 160,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Water"
+     ],
+     "name": "ふいうちポンプ",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 100
+    },
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Darkness"
+     ],
+     "name": "シナバールアー",
+     "effect": "自分の山札を上から10枚見て、その中からポケモンを好きなだけ選び、ベンチに出す。残りのカードは山札にもどして切る。"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-126",
+   "localId": "126",
+   "name": "ケッキングex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 340,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ヤルキモノ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "さぼりたいしつ",
+     "effect": "相手の場に「ポケモンex・V」がいないなら、このポケモンはワザが使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "グレートスイング",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 280
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-127",
+   "localId": "127",
+   "name": "シアノ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「ポケモンex」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-128",
+   "localId": "128",
+   "name": "シトロンの機転",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の[L]ポケモン全員のHPを、それぞれ「60」回復する。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-129",
+   "localId": "129",
+   "name": "ミカンのまなざし",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "次の相手の番、自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-30」される。（新しく場に出したポケモンもふくむ。）",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-130",
+   "localId": "130",
+   "name": "アイアントex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 190,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いきなりけずる",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。相手の山札を上から1枚トラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "リベンジクラッシュ",
+     "effect": "相手がすでにとったサイドの枚数×30ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-131",
+   "localId": "131",
+   "name": "ミロカロスex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 270,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒンバス",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きらめくウロコ",
+     "effect": "このポケモンは、相手の「テラスタル」のポケモンからワザのダメージや効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヒプノスプラッシュ",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-132",
+   "localId": "132",
+   "name": "ピカチュウex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 200,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "がんばりハート",
+     "effect": "このポケモンのHPがまんたんの状態で、このポケモンがワザのダメージを受けてきぜつするとき、きぜつせず、残りHPが「10」の状態で場に残る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Lightning",
+      "Metal"
+     ],
+     "name": "トパーズボルト",
+     "effect": "このポケモンについているエネルギーを3個選び、トラッシュする。",
+     "damage": 300
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-133",
+   "localId": "133",
+   "name": "サザンドラex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジヘッド",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "クラッシュヘッズ",
+     "effect": "相手の山札を上から3枚トラッシュする。",
+     "damage": 200
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Darkness",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "オブシディアン",
+     "effect": "相手のベンチポケモン2匹にも、それぞれ130ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-134",
+   "localId": "134",
+   "name": "シトロンの機転",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の[L]ポケモン全員のHPを、それぞれ「60」回復する。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-135",
+   "localId": "135",
+   "name": "ミカンのまなざし",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "次の相手の番、自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-30」される。（新しく場に出したポケモンもふくむ。）",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-136",
+   "localId": "136",
+   "name": "ピカチュウex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 200,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "がんばりハート",
+     "effect": "このポケモンのHPがまんたんの状態で、このポケモンがワザのダメージを受けてきぜつするとき、きぜつせず、残りHPが「10」の状態で場に残る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Lightning",
+      "Metal"
+     ],
+     "name": "トパーズボルト",
+     "effect": "このポケモンについているエネルギーを3個選び、トラッシュする。",
+     "damage": 300
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-137",
+   "localId": "137",
+   "name": "夜のタンカ",
+   "category": "Trainer",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモンまたは基本エネルギーを1枚選び、相手に見せて、手札に加える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  },
+  {
+   "id": "SV8-138",
+   "localId": "138",
+   "name": "グラビティーマウンテン",
+   "category": "Trainer",
+   "rarity": "Secret Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場の2進化ポケモン全員の最大HPは、それぞれ「-30」される。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV8",
+    "name": "超電ブレイカー"
+   }
+  }
+ ]
+}

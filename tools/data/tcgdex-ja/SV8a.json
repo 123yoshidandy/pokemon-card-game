@@ -1,0 +1,6723 @@
+{
+ "id": "SV8a",
+ "name": "テラスタルフェスex",
+ "releaseDate": "2024-12-06",
+ "total": 237,
+ "cards": [
+  {
+   "id": "SV8a-001",
+   "localId": "001",
+   "name": "スボミー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 30,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "name": "むずむずかふん",
+     "effect": "次の相手の番、相手は手札からグッズを出して使えない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-002",
+   "localId": "002",
+   "name": "リーフィア",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "わかばのめぐみ",
+     "effect": "自分の手札から「基本エネルギー」を1枚選び、ベンチポケモンにつける。その後、つけたポケモンのHPをすべて回復する。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ソーラービーム",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-003",
+   "localId": "003",
+   "name": "リーフィアex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "あおばのあらし",
+     "effect": "相手のポケモン全員についているエネルギーの数×60ダメージ。",
+     "damage": "60×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Fire",
+      "Water"
+     ],
+     "name": "モスアゲート",
+     "effect": "自分のベンチポケモン全員のHPを、それぞれ「100」回復する。",
+     "damage": 230
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-004",
+   "localId": "004",
+   "name": "モンメン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "トリプルスピン",
+     "effect": "コインを3回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-005",
+   "localId": "005",
+   "name": "エルフーン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かるがるヒール",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分のバトル場のポケモンのHPを、すべて回復する。その後、回復したポケモンについているエネルギーを、すべてトラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "タネばくだん",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-006",
+   "localId": "006",
+   "name": "サルノリ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "けとばす",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "えだづき",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-007",
+   "localId": "007",
+   "name": "バチンキー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ドンドンだいこ",
+     "effect": "自分のバトルポケモンが特性「おまつりおんど」を持つポケモンなら、自分の番に1回使える。自分の山札から好きなカードを1枚選び、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "たたく",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-008",
+   "localId": "008",
+   "name": "カジッチュ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 40,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "しるをとばす",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-009",
+   "localId": "009",
+   "name": "カミッチュ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おまつりおんど",
+     "effect": "場に「お祭り会場」が出ているなら、このポケモンは、持っているワザを2回連続で使える。（1回目のワザで相手のバトルポケモンがきぜつしたなら、次のバトルポケモンが出たあと、2回目のワザを使う。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ともだちのわ",
+     "effect": "自分のベンチポケモンの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-010",
+   "localId": "010",
+   "name": "カミツオロチex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 330,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "じゅくせいチャージ",
+     "effect": "自分の番に1回使える。自分の手札から「基本エネルギー」を1枚選び、自分のポケモンにつける。その後、つけたポケモンのHPを「30」回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "みつあめストーム",
+     "effect": "自分のポケモン全員についているエネルギーの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-011",
+   "localId": "011",
+   "name": "アノクサ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "トゲでさす",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-012",
+   "localId": "012",
+   "name": "アノホラグサ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ざっそうだましい",
+     "effect": "相手がすでにとったサイド1枚につき、このポケモンの最大HPは「＋50」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "パワフルニードル",
+     "effect": "このポケモンについているエネルギーの数ぶんコインを投げ、オモテの数×80ダメージ。",
+     "damage": "80×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-013",
+   "localId": "013",
+   "name": "シガロコ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ちょっとつっこむ",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-014",
+   "localId": "014",
+   "name": "ベラカス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "スフィアシールド",
+     "effect": "このポケモンがいるかぎり、自分のベンチポケモン全員は、相手のポケモンからワザのダメージや効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "サイコキネシス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-016",
+   "localId": "016",
+   "name": "テツノイサハex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 220,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ラピッドバーニア",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。このポケモンをバトルポケモンと入れ替える。入れ替えた場合、自分の場のポケモンについているエネルギーを好きなだけ選び、このポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "プリズムエッジ",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-017",
+   "localId": "017",
+   "name": "チャデス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 30,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "くらがくれ",
+     "effect": "このポケモンは、ベンチにいるかぎり、相手のポケモンからワザのダメージや効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ひっかける",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-018",
+   "localId": "018",
+   "name": "ヤバソチャ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "のろいのしずく",
+     "effect": "ダメカン4個を、相手のポケモンに好きなようにのせる。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ぶちまけちゃ",
+     "effect": "自分の場のポケモンについているエネルギーを3枚までトラッシュし、その枚数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-019",
+   "localId": "019",
+   "name": "ヤバソチャex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 240,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "せんじがえし",
+     "effect": "自分のトラッシュにある「基本エネルギー」をすべて相手に見せ、その枚数×2個ぶんのダメカンを、相手のポケモン1匹にのせる。その後、見せたエネルギーを山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "まっちゃスプラッシュ",
+     "effect": "自分のポケモン全員のHPを、それぞれ「30」回復する。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-020",
+   "localId": "020",
+   "name": "オーガポン みどりのめんex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "みどりのまい",
+     "effect": "自分の番に1回使える。自分の手札から「基本エネルギー」を1枚選び、このポケモンにつける。その後、自分の山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "まんようしぐれ",
+     "effect": "おたがいのバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-022",
+   "localId": "022",
+   "name": "ブースターex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "バーニングチャージ",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、自分のポケモン1匹につける。そして山札を切る。",
+     "damage": 130
+    },
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Lightning"
+     ],
+     "name": "カーネリアン",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 280
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-026",
+   "localId": "026",
+   "name": "オーガポン かまどのめんex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "いかりがま",
+     "effect": "このポケモンにのっているダメカンの数×20ダメージ。",
+     "damage": "20×"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "ダイナミックブレイズ",
+     "effect": "相手のバトルポケモンが進化ポケモンなら、140ダメージ追加。その場合、このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": "140+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-027",
+   "localId": "027",
+   "name": "ウガツホムラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ヒートブラスト",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "れっかばくしん",
+     "effect": "このワザを使ったなら、このポケモンは、バトル場をはなれるまで「れっかばくしん」が使えない。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-028",
+   "localId": "028",
+   "name": "トサキント",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 50,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おまつりおんど",
+     "effect": "場に「お祭り会場」が出ているなら、このポケモンは、持っているワザを2回連続で使える。（1回目のワザで相手のバトルポケモンがきぜつしたなら、次のバトルポケモンが出たあと、2回目のワザを使う。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "うずしお",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-029",
+   "localId": "029",
+   "name": "アズマオウ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おまつりおんど",
+     "effect": "場に「お祭り会場」が出ているなら、このポケモンは、持っているワザを2回連続で使える。（1回目のワザで相手のバトルポケモンがきぜつしたなら、次のバトルポケモンが出たあと、2回目のワザを使う。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "クイックドロー",
+     "effect": "自分の山札を2枚引く。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-031",
+   "localId": "031",
+   "name": "シャワーズex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "ヘビースコール",
+     "effect": "相手の「ポケモンex」全員に、それぞれ60ダメージ。このワザのダメージは弱点・抵抗力を計算しない。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Lightning"
+     ],
+     "name": "アクアマリン",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 280
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-032",
+   "localId": "032",
+   "name": "ワニノコ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "かじりつく",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-033",
+   "localId": "033",
+   "name": "アリゲイツ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ぎゃくふんしゃ",
+     "effect": "このポケモンをベンチポケモンと入れ替える。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-034",
+   "localId": "034",
+   "name": "オーダイル",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 180,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "トレントハート",
+     "effect": "自分の番に1回使える。このポケモンにダメカンを5個のせる。その場合、この番、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+120」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "おおなみ",
+     "effect": "次の自分の番、このポケモンは「おおなみ」が使えない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-035",
+   "localId": "035",
+   "name": "ヒンバス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 30,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "じたばた",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-036",
+   "localId": "036",
+   "name": "ミロカロス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "なぎのきょうち",
+     "effect": "このポケモンがいるかぎり、相手の場のポケモンと、そのポケモンについているすべてのカードは、手札にもどせない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハイドロスプラッシュ",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-037",
+   "localId": "037",
+   "name": "ユキワラシ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "おどろかす",
+     "effect": "相手の手札からオモテを見ないで1枚選び、そのカードのオモテを見て、相手の山札にもどして切る。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-038",
+   "localId": "038",
+   "name": "ユキメノコ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いてつくとばり",
+     "effect": "このポケモンがいるかぎり、ポケモンチェックのたび、おたがいの特性を持つポケモン（「ユキメノコ」をのぞく）全員に、それぞれダメカンを1個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "フロストスマッシュ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-040",
+   "localId": "040",
+   "name": "グレイシア",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "しみいるれいき",
+     "effect": "次の相手の番の終わりに、このワザを受けたポケモンにダメカンを9個のせる。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "つららミサイル",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-041",
+   "localId": "041",
+   "name": "グレイシアex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "フロストバレット",
+     "effect": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 110
+    },
+    {
+     "cost": [
+      "Grass",
+      "Water",
+      "Darkness"
+     ],
+     "name": "ユークレース",
+     "effect": "ダメカンが6個のっている相手のポケモンを1匹選び、きぜつさせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-042",
+   "localId": "042",
+   "name": "ウミディグダ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ほりだしもの",
+     "effect": "自分の山札からグッズを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "アクアボム",
+     "effect": "このポケモンにも20ダメージ。",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-044",
+   "localId": "044",
+   "name": "ナミイルカ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "アクアスラッシュ",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-045",
+   "localId": "045",
+   "name": "イルカマン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マイティチェンジ",
+     "effect": "自分の番に、このポケモンがバトル場からベンチにもどったとき、1回使える。自分の山札から「イルカマンex」を1枚選び、このカードと入れ替える（ついているカード・ダメカン・特殊状態・効果などは、すべて引きつぐ）。入れ替えたなら、このカードは山札にもどす。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "スプラッシュ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-046",
+   "localId": "046",
+   "name": "イルカマンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 340,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マイティソウル",
+     "effect": "このカードは、「イルカマン」の特性「マイティチェンジ」の効果によってしか場に出せない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ギガインパクト",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-049",
+   "localId": "049",
+   "name": "ウネルミナモex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 220,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こんぺきはとう",
+     "effect": "このポケモンが使うワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "カタルシスロアー",
+     "effect": "相手のバトルポケモンが特殊状態なら、120ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-050",
+   "localId": "050",
+   "name": "オーガポン いどのめんex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "すすりなく",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "げきりゅうポンプ",
+     "effect": "のぞむなら、このポケモンについているエネルギーを3個選び、山札にもどして切る。その場合、相手のベンチポケモン1匹にも、120ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-052",
+   "localId": "052",
+   "name": "サンダースex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 260,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "フラッシュスピア",
+     "effect": "のぞむなら、自分のベンチポケモンについている基本エネルギーを2枚までトラッシュし、その枚数×90ダメージ追加。",
+     "damage": "60+"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Lightning"
+     ],
+     "name": "ドラバイト",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 280
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-053",
+   "localId": "053",
+   "name": "ゼラオラ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "コンバットサンダー",
+     "effect": "相手のベンチポケモンの数×20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-055",
+   "localId": "055",
+   "name": "テツノイバラ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "デスタプレッサー",
+     "effect": "自分の山札を上から5枚オモテにして、その中にある「未来」のカードの枚数×70ダメージ。オモテにした「未来」のカードはトラッシュし、残りのカードは山札にもどして切る。",
+     "damage": "70×"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "メガトンラリアット",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-056",
+   "localId": "056",
+   "name": "テツノイバラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "イニシャライズ",
+     "effect": "このポケモンがバトル場にいるかぎり、おたがいの場の「ルールを持つポケモン」（「未来」のポケモンをのぞく）の特性は、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ボルトサイクロン",
+     "effect": "このポケモンについているエネルギーを1個選び、ベンチポケモンにつけ替える。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-057",
+   "localId": "057",
+   "name": "ケーシィ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 40,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "テレポーター",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。このポケモンと、ついているすべてのカードを、自分の山札にもどして切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ビーム",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-058",
+   "localId": "058",
+   "name": "ユンゲラー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "サイコキネシス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-059",
+   "localId": "059",
+   "name": "フーディン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ストレンジハック",
+     "effect": "相手のバトルポケモンをこんらんにする。相手の場のポケモンにのっているダメカンを好きなだけ選び、相手の場のポケモンに好きなようにのせ替える。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "サイコキネシス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×50ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-063",
+   "localId": "063",
+   "name": "エーフィex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "サイコアウト",
+     "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。",
+     "damage": 160
+    },
+    {
+     "cost": [
+      "Grass",
+      "Psychic",
+      "Darkness"
+     ],
+     "name": "アマゼツ",
+     "effect": "相手の進化しているポケモン全員の上から、それぞれ「進化カード」を1枚ずつはがして退化させる。はがしたカードは、相手の山札にもどして切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-064",
+   "localId": "064",
+   "name": "ヨマワル",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "むかえにいく",
+     "effect": "自分のトラッシュから「ヨマワル」を3枚まで選び、ベンチに出す。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "つぶやく",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-065",
+   "localId": "065",
+   "name": "サマヨール",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "カースドボム",
+     "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。相手のポケモン1匹に、ダメカンを5個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "おにび",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-066",
+   "localId": "066",
+   "name": "ヨノワール",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 160,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "カースドボム",
+     "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。相手のポケモン1匹に、ダメカンを13個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "かげしばり",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-067",
+   "localId": "067",
+   "name": "ペロッパフ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 50,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おまつりおんど",
+     "effect": "場に「お祭り会場」が出ているなら、このポケモンは、持っているワザを2回連続で使える。（1回目のワザで相手のバトルポケモンがきぜつしたなら、次のバトルポケモンが出たあと、2回目のワザを使う。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "そっとのせる",
+     "effect": "相手のポケモン1匹に、ダメカンを2個のせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-068",
+   "localId": "068",
+   "name": "ニンフィア",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ミスティックリターン",
+     "effect": "コインを1回投げオモテなら、相手のベンチポケモンを1匹選び、そのポケモンと、ついているすべてのカードを、相手の山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "チャームボイス",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-069",
+   "localId": "069",
+   "name": "ニンフィアex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マジカルチャーム",
+     "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-100」される。",
+     "damage": 160
+    },
+    {
+     "cost": [
+      "Water",
+      "Lightning",
+      "Psychic"
+     ],
+     "name": "エンジェライト",
+     "effect": "相手のベンチポケモンを2匹選び、そのポケモンと、ついているすべてのカードを、山札にもどして切る。前の自分の番に、自分のポケモンが「エンジェライト」を使っていたなら、このワザは使えない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-072",
+   "localId": "072",
+   "name": "ハバタクカミ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "あんやのはばたき",
+     "effect": "このポケモンがバトル場にいるかぎり、相手のバトルポケモンの特性（「あんやのはばたき」をのぞく）は、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たたりとばす",
+     "effect": "ダメカン2個を、相手のベンチポケモンに好きなようにのせる。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-075",
+   "localId": "075",
+   "name": "マシマシラ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アドレナブレイン",
+     "effect": "このポケモンにエネルギーがついているなら、自分の番に1回使える。自分の場のポケモン1匹にのっているダメカンを3個まで選び、相手の場のポケモン1匹にのせ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "サイコトリップ",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-076",
+   "localId": "076",
+   "name": "キチキギス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アドレナフェロモン",
+     "effect": "このポケモンにエネルギーがついているなら、このポケモンがワザのダメージを受けるとき、自分はコインを1回投げる。オモテなら、このポケモンはそのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "エナジーフェザー",
+     "effect": "このポケモンについているエネルギーの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-077",
+   "localId": "077",
+   "name": "テツノイワオ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "アジャストホーン",
+     "effect": "自分の手札と相手の手札が同じ枚数でないなら、このワザは失敗。",
+     "damage": 170
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-078",
+   "localId": "078",
+   "name": "テツノカシラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 220,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "コバルトコマンド",
+     "effect": "このポケモンがいるかぎり、自分の「未来」のポケモン（「テツノカシラex」をのぞく）が使うワザの、相手のバトルポケモンへのダメージは「+20」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ツインショーテル",
+     "effect": "相手のポケモン2匹に、それぞれ50ダメージ。このワザのダメージは、弱点・抵抗力と、ダメージを受けるポケモンにかかっている効果を計算しない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-079",
+   "localId": "079",
+   "name": "ジーランス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きおくにもぐる",
+     "effect": "このポケモンがいるかぎり、自分の進化しているポケモン全員は、進化前に持っていたワザを、すべて使える。［ワザを使うためのエネルギーは必要。］"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ひれカッター",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-083",
+   "localId": "083",
+   "name": "モグリュー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ほりまくり",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。自分の山札から「基本エネルギー」を3枚まで選び、トラッシュする。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "すなしぶき",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-085",
+   "localId": "085",
+   "name": "ガチグマ アカツキ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "けいけんそく",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。自分の手札から「基本エネルギー」を2枚まで選び、このポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "マッドバイト",
+     "effect": "相手のバトルポケモンにのっているダメカンの数×30ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-086",
+   "localId": "086",
+   "name": "イダイナキバ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "じばんほうかい",
+     "effect": "相手の山札を上から1枚トラッシュする。この番、手札から「古代」のサポートを出して使っていたなら、さらに3枚トラッシュする。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きょだいなキバ",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-087",
+   "localId": "087",
+   "name": "チヲハウハネ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "てつつぶし",
+     "effect": "相手の場に「未来」のポケモンがいるなら、120ダメージ追加。",
+     "damage": "20+"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "スマッシュウイング",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-090",
+   "localId": "090",
+   "name": "イイネイヌ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アドレナパワー",
+     "effect": "このポケモンにエネルギーがついているなら、このポケモンの最大HPは「＋100」され、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+100」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "グッドパンチ",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-091",
+   "localId": "091",
+   "name": "オーガポン いしずえのめんex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いしずえのかまえ",
+     "effect": "このポケモンは、相手の特性を持つポケモンからワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶちやぶる",
+     "effect": "このワザのダメージは、弱点・抵抗力と、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-093",
+   "localId": "093",
+   "name": "ブラッキーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ムーンミラージュ",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 160
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Psychic",
+      "Darkness"
+     ],
+     "name": "オニキス",
+     "effect": "このポケモンについているエネルギーをすべてトラッシュし、自分のサイドを1枚とる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-096",
+   "localId": "096",
+   "name": "ゾロア",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふむ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダブルひっかき",
+     "effect": "コインを2回投げ、オモテの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-097",
+   "localId": "097",
+   "name": "ゾロアーク",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "げんえいジャック",
+     "effect": "相手の場の「ポケモンex・V」の数×60ダメージ。",
+     "damage": "60×"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ツメできりさく",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-100",
+   "localId": "100",
+   "name": "トドロクツキ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "あだうちやばね",
+     "effect": "自分のトラッシュにある「古代」のカードの枚数×10ダメージ追加。",
+     "damage": "70+"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードウイング",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-102",
+   "localId": "102",
+   "name": "イイネイヌex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 250,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ポイズンマッスル",
+     "effect": "自分の山札から「基本エネルギー」を2枚まで選び、このポケモンにつける。そして山札を切る。つけた場合、このポケモンをどくにする。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "クレイジーチェーン",
+     "effect": "このポケモンがどくなら、130ダメージ追加。",
+     "damage": "130+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-103",
+   "localId": "103",
+   "name": "マシマシラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ひょうしぬけ",
+     "effect": "このポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、自分の場に「モモワロウex」がいるなら、とられるサイドは1枚少なくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダーティヘッド",
+     "effect": "次の自分の番、このポケモンは「ダーティヘッド」が使えない。",
+     "damage": 190
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-104",
+   "localId": "104",
+   "name": "キチキギスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 210,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "さかてにとる",
+     "effect": "前の相手の番に、自分のポケモンがきぜつしていたなら、自分の番に1回使える。自分の山札を3枚引く。この番、すでに別の「さかてにとる」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クルーエルアロー",
+     "effect": "相手のポケモン1匹に、100ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-105",
+   "localId": "105",
+   "name": "モモワロウex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 190,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しはいのくさり",
+     "effect": "自分の番に1回使える。自分のベンチのポケモン（「モモワロウex」をのぞく）を1匹選び、バトルポケモンと入れ替える。その後、新しいバトルポケモンをどくにする。この番、すでに別の「しはいのくさり」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "イライラバースト",
+     "effect": "相手がすでにとったサイドの枚数×60ダメージ。",
+     "damage": "60×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-106",
+   "localId": "106",
+   "name": "ダンバル",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ツメをたてる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "アイアンタックル",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-107",
+   "localId": "107",
+   "name": "メタング",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "メタルメーカー",
+     "effect": "自分の番に1回使える。自分の山札を上から4枚見て、その中から「基本エネルギー」を好きなだけ選び、自分のポケモンに好きなようにつける。残りのカードはすべてウラにして切り、山札の下にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ビーム",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-112",
+   "localId": "112",
+   "name": "ジュラルドン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ぶちかます",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "レイジングハンマー",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-113",
+   "localId": "113",
+   "name": "ブリジュラス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 180,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はがねのかけはし",
+     "effect": "このポケモンがいるかぎり、エネルギーがついている自分のポケモン全員のにげるためのエネルギーは、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "アイアンブラスター",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-114",
+   "localId": "114",
+   "name": "ブロロン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "こうちょく",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "とびだしヘッド",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-116",
+   "localId": "116",
+   "name": "テツノワダチ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "デュアルコア",
+     "effect": "このポケモンに「ブーストエナジー 未来」がついているかぎり、このポケモンはとの2つのタイプになる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "パスホイール",
+     "effect": "このポケモンについているエネルギーを1個選び、ベンチポケモンにつけ替える。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-118",
+   "localId": "118",
+   "name": "ドラメシヤ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ちょっとうらむ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Psychic"
+     ],
+     "name": "かみつく",
+     "damage": 40
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-119",
+   "localId": "119",
+   "name": "ドロンチ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ていさつしれい",
+     "effect": "自分の番に1回使える。自分の山札を上から2枚見て、どちらか1枚を選び、手札に加える。残りのカードは、山札の下にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Psychic"
+     ],
+     "name": "リューズヘッド",
+     "damage": 70
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-120",
+   "localId": "120",
+   "name": "ドラパルトex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 320,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ジェットヘッド",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Fire",
+      "Psychic"
+     ],
+     "name": "ファントムダイブ",
+     "effect": "ダメカン6個を、相手のベンチポケモンに好きなようにのせる。",
+     "damage": 200
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-121",
+   "localId": "121",
+   "name": "シャリタツ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きゃくよせ",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札を上から6枚見て、その中からサポートを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Water"
+     ],
+     "name": "なみのり",
+     "damage": 50
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-122",
+   "localId": "122",
+   "name": "コライドン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "げんせいらんだ",
+     "effect": "自分の場の「古代」のポケモンの数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ひきさく",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 130
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-123",
+   "localId": "123",
+   "name": "ミライドン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 110,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "アクセルピーク",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、自分の「未来」のポケモンに好きなようにつける。そして山札を切る。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Psychic"
+     ],
+     "name": "スパーキングアタック",
+     "damage": 160
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-124",
+   "localId": "124",
+   "name": "タケルライコex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 240,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はじけるほうこう",
+     "effect": "自分の手札をすべてトラッシュし、山札を6枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Fighting"
+     ],
+     "name": "きょくらいごう",
+     "effect": "自分の場のポケモンについている基本エネルギーを好きなだけトラッシュし、その枚数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-125",
+   "localId": "125",
+   "name": "イーブイ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 50,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ブーストしんか",
+     "effect": "このポケモンは、バトル場にいるかぎり、最初の自分の番や、出したばかりの番でも進化できる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "とつげき",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-126",
+   "localId": "126",
+   "name": "イーブイex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 200,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "にじいろDNA",
+     "effect": "このポケモンは、「イーブイ」から進化する「ポケモンex」を手札から出して、このポケモンにのせて進化できる。（最初の自分の番や、出したばかりの番には進化できない。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Lightning"
+     ],
+     "name": "クォーツシャイン",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-127",
+   "localId": "127",
+   "name": "ホーホー",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ふみん",
+     "effect": "このポケモンはねむりにならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-128",
+   "localId": "128",
+   "name": "ヨルノズク",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ほうせきさがし",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、自分の場に「テラスタル」のポケモンがいるなら、1回使える。自分の山札からトレーナーズを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードウイング",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-129",
+   "localId": "129",
+   "name": "ノコッチ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かじる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "あなをほる",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-130",
+   "localId": "130",
+   "name": "ノココッチ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 140,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "にげあしドロー",
+     "effect": "自分の番に1回使える。自分の山札を3枚引く。その後、このポケモンと、ついているすべてのカードを、山札にもどして切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ランドクラッシュ",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-131",
+   "localId": "131",
+   "name": "スピンロトム",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ファンコール",
+     "effect": "最初の自分の番にだけ1回使える。自分の山札から、HPが「100」以下のポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。この番、すでに別の「ファンコール」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "とつげきランディング",
+     "effect": "場にスタジアムが出ていないなら、このワザは失敗。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-132",
+   "localId": "132",
+   "name": "レジギガス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 160,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ジュエルブレイク",
+     "effect": "相手のバトルポケモンが「テラスタル」のポケモンなら、230ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-133",
+   "localId": "133",
+   "name": "バッフロン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "カーリーウォール",
+     "effect": "このポケモンと、自分の別の「バッフロン」がいるかぎり、自分のタイプのたねポケモン全員が、相手のポケモンから受けるワザのダメージは「-60」される。この効果は、この特性を持つポケモンが何匹いても、重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "そこぢから",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-134",
+   "localId": "134",
+   "name": "ガチグマ アカツキex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 260,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ろうれんのわざ",
+     "effect": "相手がすでにとったサイドの枚数ぶん、このポケモンが「ブラッドムーン」を使うためのエネルギーは少なくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ブラッドムーン",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-136",
+   "localId": "136",
+   "name": "テラパゴスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ユニオンビート",
+     "effect": "このワザは、後攻プレイヤーの最初の番には使えない。自分のベンチポケモンの数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Water",
+      "Lightning"
+     ],
+     "name": "クラウンオパール",
+     "effect": "次の相手の番、このポケモンはたねポケモン（ポケモンをのぞく）からワザのダメージを受けない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-137",
+   "localId": "137",
+   "name": "鬼の仮面",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "自分のトラッシュから、名前に「オーガポン」とつく「ポケモンex」を1枚選び、自分の場の、名前に「オーガポン」とつく「ポケモンex」1匹と入れ替える（ついているカード・ダメカン・特殊状態・効果などは、すべて引きつぐ）。入れ替えたポケモンはトラッシュする。",
+   "trainerType": "Item",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-138",
+   "localId": "138",
+   "name": "改造ハンマー",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手の場のポケモンについている特殊エネルギーを1個選び、トラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-140",
+   "localId": "140",
+   "name": "ガラスのラッパ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の場に「テラスタル」のポケモンがいるときにしか使えない。\n\n自分のベンチのポケモンを2匹まで選び、トラッシュから基本エネルギーを1枚ずつつける。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-142",
+   "localId": "142",
+   "name": "つりざおMAX",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモンと基本エネルギーを合計5枚まで選び、相手に見せて、手札に加える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-145",
+   "localId": "145",
+   "name": "テラスタルオーブ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「テラスタル」のポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-146",
+   "localId": "146",
+   "name": "トレジャーガジェット",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「ポケモンのどうぐ」を5枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-147",
+   "localId": "147",
+   "name": "なかよしポフィン",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、HPが「70」以下のたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-148",
+   "localId": "148",
+   "name": "プライムキャッチャー",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、自分のバトルポケモンをベンチポケモンと入れ替える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-149",
+   "localId": "149",
+   "name": "ポケモン回収サイクロン",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の場のポケモンを1匹選び、そのポケモンと、ついているすべてのカードを、手札にもどす。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-150",
+   "localId": "150",
+   "name": "むしとりセット",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を上から7枚見て、その中からポケモンと「基本エネルギー」を合計2枚まで選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-151",
+   "localId": "151",
+   "name": "夜のタンカ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモンまたは基本エネルギーを1枚選び、相手に見せて、手札に加える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-152",
+   "localId": "152",
+   "name": "きらめく結晶",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけている「テラスタル」のポケモンがワザを使うとき、そのワザを使うためのエネルギーは、1個ぶん少なくなる。（少なくなるのは、どのタイプのエネルギーでもよい。）",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-153",
+   "localId": "153",
+   "name": "緊急ボード",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンは、にげるためのエネルギーが1個ぶん少なくなる。そのポケモンの残りHPが「30」以下なら、にげるためのエネルギーは、すべてなくなる。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-154",
+   "localId": "154",
+   "name": "くさりもち",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているどくのポケモンが使うワザの、相手のバトルポケモンへのダメージは「+40」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-156",
+   "localId": "156",
+   "name": "ハバンのみ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-159",
+   "localId": "159",
+   "name": "マキシマムベルト",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+50」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-162",
+   "localId": "162",
+   "name": "アオキの手際",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札をすべてトラッシュし、自分の山札から「ポケモン」「サポート」「基本エネルギー」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-163",
+   "localId": "163",
+   "name": "アカマツ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、それぞれちがうタイプの基本エネルギーを2枚まで選び、相手に見せて、どちらか1枚を手札に加え、残りのエネルギーを自分のポケモンにつける。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-164",
+   "localId": "164",
+   "name": "アクロマの執念",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からスタジアムとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-165",
+   "localId": "165",
+   "name": "暗号マニアの解読",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から好きなカードを2枚選ぶ。残りの山札を切り、選んだカードを好きな順番に入れ替えて、山札の上にもどす。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-166",
+   "localId": "166",
+   "name": "アンズの秘技",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のポケモンを2匹まで選び、自分の山札から「基本エネルギー」を1枚ずつつける。そして山札を切る。バトルポケモンにつけた場合、そのポケモンをどくにする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-168",
+   "localId": "168",
+   "name": "スイレンのお世話",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモン（「ルールを持つポケモン」をのぞく）と基本エネルギーを合計3枚まで選び、相手に見せて、手札に加える。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-169",
+   "localId": "169",
+   "name": "スグリ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、2つの効果から1つを選んで使う。\n\n◆自分のバトルポケモンをベンチポケモンと入れ替える。\n\n◆この番、自分のポケモンが使うワザの、相手のバトル場の「ポケモンex・V」へのダメージは「+30」される。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-170",
+   "localId": "170",
+   "name": "ゼイユ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、先攻プレイヤーの最初の番でも使える。\n\n自分の手札をすべてトラッシュし、山札を5枚引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-171",
+   "localId": "171",
+   "name": "タロ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札をすべて山札にもどして切る。その後、山札を4枚引く。相手のサイドの残り枚数が3枚以下なら、引く枚数は8枚になる。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-172",
+   "localId": "172",
+   "name": "探検家の先導",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "自分の山札を上から6枚見て、その中からカードを2枚選び、手札に加える。残りのカードはトラッシュする。",
+   "trainerType": "Supporter",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-173",
+   "localId": "173",
+   "name": "ネリネ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を4枚引く。このカードを使った番の終わりに、自分の手札が5枚以上あるなら、自分の手札をすべてトラッシュする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-174",
+   "localId": "174",
+   "name": "パルデアの仲間たち",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を3枚引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-176",
+   "localId": "176",
+   "name": "ブライア",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、相手のサイドの残り枚数が2枚のときにしか使えない。\n\nこの番、自分の「テラスタル」のポケモンが使うワザのダメージで、相手のバトルポケモンがきぜつしたなら、サイドを1枚多くとる。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-177",
+   "localId": "177",
+   "name": "ベルのまごころ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "残りHPが「30」以下の自分のポケモン1匹のHPを、すべて回復する。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-178",
+   "localId": "178",
+   "name": "マツバの確信",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札を1枚トラッシュしなければ使えない。\n\n相手のベンチポケモンの数ぶん、自分の山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-180",
+   "localId": "180",
+   "name": "お祭り会場",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "エネルギーがついているおたがいのポケモン全員は、特殊状態にならず、受けている特殊状態は、すべて回復する。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-181",
+   "localId": "181",
+   "name": "ジャミングタワー",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのポケモン全員についている「ポケモンのどうぐ」の効果は、すべてなくなる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-182",
+   "localId": "182",
+   "name": "ゼロの大空洞",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の場に「テラスタル」のポケモンがいるプレイヤーが、ベンチに出せるポケモンの数は8匹になる。\n\n（このカードがトラッシュされたときか、自分の場に「テラスタル」のポケモンがいなくなったとき、ベンチが5匹になるまでトラッシュする。おたがいにトラッシュするなら、このカードの持ち主から行う。）",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-184",
+   "localId": "184",
+   "name": "ニュートラルセンター",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのポケモン（「ルールを持つポケモン」をのぞく）全員は、相手の「ポケモンex・V」からワザのダメージを受けない。\n\nこのカードは、トラッシュにあるかぎり、手札に加えられず、山札にもどせない。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-186",
+   "localId": "186",
+   "name": "ミストエネルギー",
+   "category": "Energy",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。\n\nこのカードをつけているポケモンは、相手のポケモンが使うワザの効果を受けない。（すでに受けている効果は、なくならない。）",
+   "energyType": "Special",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-187",
+   "localId": "187",
+   "name": "レガシーエネルギー",
+   "category": "Energy",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、ポケモンについているかぎり、すべてのタイプのエネルギー1個ぶんとしてはたらく。\n\nこのカードをつけているポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、とられるサイドは1枚少なくなる。対戦中、自分の「レガシーエネルギー」のこの効果は、1回しかはたらかない。",
+   "energyType": "Special",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-188",
+   "localId": "188",
+   "name": "アオキの手際",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札をすべてトラッシュし、自分の山札から「ポケモン」「サポート」「基本エネルギー」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-193",
+   "localId": "193",
+   "name": "タイム",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札からポケモンを1枚選び、そのポケモンの名前を相手に伝えてから、ウラにして置く。相手はそのポケモンのHPを答える。ウラにしたポケモンをオモテにして、正解なら、相手は山札を4枚引く。不正解なら、自分は山札を4枚引く。その後、置いたカードを自分の手札にもどす。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-194",
+   "localId": "194",
+   "name": "ネリネ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を4枚引く。このカードを使った番の終わりに、自分の手札が5枚以上あるなら、自分の手札をすべてトラッシュする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-195",
+   "localId": "195",
+   "name": "パルデアの仲間たち",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を3枚引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-197",
+   "localId": "197",
+   "name": "ビワ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手の手札を見て、その中からグッズを2枚まで選び、トラッシュする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-200",
+   "localId": "200",
+   "name": "リーフィアex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 270,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "あおばのあらし",
+     "effect": "相手のポケモン全員についているエネルギーの数×60ダメージ。",
+     "damage": "60×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Fire",
+      "Water"
+     ],
+     "name": "モスアゲート",
+     "effect": "自分のベンチポケモン全員のHPを、それぞれ「100」回復する。",
+     "damage": 230
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-201",
+   "localId": "201",
+   "name": "オーガポン みどりのめんex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 210,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "みどりのまい",
+     "effect": "自分の番に1回使える。自分の手札から「基本エネルギー」を1枚選び、このポケモンにつける。その後、自分の山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "まんようしぐれ",
+     "effect": "おたがいのバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-202",
+   "localId": "202",
+   "name": "ブースターex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 270,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "バーニングチャージ",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、自分のポケモン1匹につける。そして山札を切る。",
+     "damage": 130
+    },
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Lightning"
+     ],
+     "name": "カーネリアン",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 280
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-203",
+   "localId": "203",
+   "name": "ソウブレイズex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 270,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "しんえんほむら",
+     "effect": "自分のトラッシュにあるエネルギーの枚数×20ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Psychic",
+      "Metal"
+     ],
+     "name": "アメジストレイジ",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 280
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-204",
+   "localId": "204",
+   "name": "オーガポン かまどのめんex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 210,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "いかりがま",
+     "effect": "このポケモンにのっているダメカンの数×20ダメージ。",
+     "damage": "20×"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "ダイナミックブレイズ",
+     "effect": "相手のバトルポケモンが進化ポケモンなら、140ダメージ追加。その場合、このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": "140+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-205",
+   "localId": "205",
+   "name": "シャワーズex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 280,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "ヘビースコール",
+     "effect": "相手の「ポケモンex」全員に、それぞれ60ダメージ。このワザのダメージは弱点・抵抗力を計算しない。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Lightning"
+     ],
+     "name": "アクアマリン",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 280
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-206",
+   "localId": "206",
+   "name": "グレイシアex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 270,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "フロストバレット",
+     "effect": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 110
+    },
+    {
+     "cost": [
+      "Grass",
+      "Water",
+      "Darkness"
+     ],
+     "name": "ユークレース",
+     "effect": "ダメカンが6個のっている相手のポケモンを1匹選び、きぜつさせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-207",
+   "localId": "207",
+   "name": "イルカマンex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 340,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マイティソウル",
+     "effect": "このカードは、「イルカマン」の特性「マイティチェンジ」の効果によってしか場に出せない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ギガインパクト",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-208",
+   "localId": "208",
+   "name": "オーガポン いどのめんex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 210,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "すすりなく",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "げきりゅうポンプ",
+     "effect": "のぞむなら、このポケモンについているエネルギーを3個選び、山札にもどして切る。その場合、相手のベンチポケモン1匹にも、120ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-209",
+   "localId": "209",
+   "name": "サンダースex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 260,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "フラッシュスピア",
+     "effect": "のぞむなら、自分のベンチポケモンについている基本エネルギーを2枚までトラッシュし、その枚数×90ダメージ追加。",
+     "damage": "60+"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Lightning"
+     ],
+     "name": "ドラバイト",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 280
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-211",
+   "localId": "211",
+   "name": "エーフィex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 270,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "サイコアウト",
+     "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。",
+     "damage": 160
+    },
+    {
+     "cost": [
+      "Grass",
+      "Psychic",
+      "Darkness"
+     ],
+     "name": "アマゼツ",
+     "effect": "相手の進化しているポケモン全員の上から、それぞれ「進化カード」を1枚ずつはがして退化させる。はがしたカードは、相手の山札にもどして切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-212",
+   "localId": "212",
+   "name": "ニンフィアex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 270,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マジカルチャーム",
+     "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-100」される。",
+     "damage": 160
+    },
+    {
+     "cost": [
+      "Water",
+      "Lightning",
+      "Psychic"
+     ],
+     "name": "エンジェライト",
+     "effect": "相手のベンチポケモンを2匹選び、そのポケモンと、ついているすべてのカードを、山札にもどして切る。前の自分の番に、自分のポケモンが「エンジェライト」を使っていたなら、このワザは使えない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-214",
+   "localId": "214",
+   "name": "テツノカシラex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 220,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "コバルトコマンド",
+     "effect": "このポケモンがいるかぎり、自分の「未来」のポケモン（「テツノカシラex」をのぞく）が使うワザの、相手のバトルポケモンへのダメージは「+20」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ツインショーテル",
+     "effect": "相手のポケモン2匹に、それぞれ50ダメージ。このワザのダメージは、弱点・抵抗力と、ダメージを受けるポケモンにかかっている効果を計算しない。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-216",
+   "localId": "216",
+   "name": "オーガポン いしずえのめんex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 210,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いしずえのかまえ",
+     "effect": "このポケモンは、相手の特性を持つポケモンからワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶちやぶる",
+     "effect": "このワザのダメージは、弱点・抵抗力と、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-217",
+   "localId": "217",
+   "name": "ブラッキーex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 280,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ムーンミラージュ",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 160
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Psychic",
+      "Darkness"
+     ],
+     "name": "オニキス",
+     "effect": "このポケモンについているエネルギーをすべてトラッシュし、自分のサイドを1枚とる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-219",
+   "localId": "219",
+   "name": "モモワロウex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 190,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しはいのくさり",
+     "effect": "自分の番に1回使える。自分のベンチのポケモン（「モモワロウex」をのぞく）を1匹選び、バトルポケモンと入れ替える。その後、新しいバトルポケモンをどくにする。この番、すでに別の「しはいのくさり」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "イライラバースト",
+     "effect": "相手がすでにとったサイドの枚数×60ダメージ。",
+     "damage": "60×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-221",
+   "localId": "221",
+   "name": "ドラパルトex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 320,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ジェットヘッド",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Fire",
+      "Psychic"
+     ],
+     "name": "ファントムダイブ",
+     "effect": "ダメカン6個を、相手のベンチポケモンに好きなようにのせる。",
+     "damage": 200
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-222",
+   "localId": "222",
+   "name": "タケルライコex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 240,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はじけるほうこう",
+     "effect": "自分の手札をすべてトラッシュし、山札を6枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Fighting"
+     ],
+     "name": "きょくらいごう",
+     "effect": "自分の場のポケモンについている基本エネルギーを好きなだけトラッシュし、その枚数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-223",
+   "localId": "223",
+   "name": "イーブイex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 200,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "にじいろDNA",
+     "effect": "このポケモンは、「イーブイ」から進化する「ポケモンex」を手札から出して、このポケモンにのせて進化できる。（最初の自分の番や、出したばかりの番には進化できない。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Lightning"
+     ],
+     "name": "クォーツシャイン",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-224",
+   "localId": "224",
+   "name": "イーブイex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 200,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "にじいろDNA",
+     "effect": "このポケモンは、「イーブイ」から進化する「ポケモンex」を手札から出して、このポケモンにのせて進化できる。（最初の自分の番や、出したばかりの番には進化できない。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Water",
+      "Lightning"
+     ],
+     "name": "クォーツシャイン",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-225",
+   "localId": "225",
+   "name": "ガチグマ アカツキex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 260,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ろうれんのわざ",
+     "effect": "相手がすでにとったサイドの枚数ぶん、このポケモンが「ブラッドムーン」を使うためのエネルギーは少なくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ブラッドムーン",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-226",
+   "localId": "226",
+   "name": "テラパゴスex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 230,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ユニオンビート",
+     "effect": "このワザは、後攻プレイヤーの最初の番には使えない。自分のベンチポケモンの数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Water",
+      "Lightning"
+     ],
+     "name": "クラウンオパール",
+     "effect": "次の相手の番、このポケモンはたねポケモン（ポケモンをのぞく）からワザのダメージを受けない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-227",
+   "localId": "227",
+   "name": "アカマツ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、それぞれちがうタイプの基本エネルギーを2枚まで選び、相手に見せて、どちらか1枚を手札に加え、残りのエネルギーを自分のポケモンにつける。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-228",
+   "localId": "228",
+   "name": "アンズの秘技",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のポケモンを2匹まで選び、自分の山札から「基本エネルギー」を1枚ずつつける。そして山札を切る。バトルポケモンにつけた場合、そのポケモンをどくにする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-229",
+   "localId": "229",
+   "name": "カキツバタ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を上から7枚見て、その中からポケモンとトレーナーズを1枚ずつ選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-230",
+   "localId": "230",
+   "name": "スグリ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、2つの効果から1つを選んで使う。\n\n◆自分のバトルポケモンをベンチポケモンと入れ替える。\n\n◆この番、自分のポケモンが使うワザの、相手のバトル場の「ポケモンex・V」へのダメージは「+30」される。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-231",
+   "localId": "231",
+   "name": "タロ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札をすべて山札にもどして切る。その後、山札を4枚引く。相手のサイドの残り枚数が3枚以下なら、引く枚数は8枚になる。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-232",
+   "localId": "232",
+   "name": "ネリネ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を4枚引く。このカードを使った番の終わりに、自分の手札が5枚以上あるなら、自分の手札をすべてトラッシュする。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-233",
+   "localId": "233",
+   "name": "テツノイサハex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 220,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ラピッドバーニア",
+     "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。このポケモンをバトルポケモンと入れ替える。入れ替えた場合、自分の場のポケモンについているエネルギーを好きなだけ選び、このポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "プリズムエッジ",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-234",
+   "localId": "234",
+   "name": "オーガポン みどりのめんex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 210,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "みどりのまい",
+     "effect": "自分の番に1回使える。自分の手札から「基本エネルギー」を1枚選び、このポケモンにつける。その後、自分の山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "まんようしぐれ",
+     "effect": "おたがいのバトルポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-235",
+   "localId": "235",
+   "name": "ウネルミナモex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 220,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こんぺきはとう",
+     "effect": "このポケモンが使うワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "カタルシスロアー",
+     "effect": "相手のバトルポケモンが特殊状態なら、120ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-236",
+   "localId": "236",
+   "name": "ピカチュウex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 200,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "がんばりハート",
+     "effect": "このポケモンのHPがまんたんの状態で、このポケモンがワザのダメージを受けてきぜつするとき、きぜつせず、残りHPが「10」の状態で場に残る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Lightning",
+      "Metal"
+     ],
+     "name": "トパーズボルト",
+     "effect": "このポケモンについているエネルギーを3個選び、トラッシュする。",
+     "damage": 300
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  },
+  {
+   "id": "SV8a-237",
+   "localId": "237",
+   "name": "テラパゴスex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 230,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ユニオンビート",
+     "effect": "このワザは、後攻プレイヤーの最初の番には使えない。自分のベンチポケモンの数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Water",
+      "Lightning"
+     ],
+     "name": "クラウンオパール",
+     "effect": "次の相手の番、このポケモンはたねポケモン（ポケモンをのぞく）からワザのダメージを受けない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV8a",
+    "name": "テラスタルフェスex"
+   }
+  }
+ ]
+}

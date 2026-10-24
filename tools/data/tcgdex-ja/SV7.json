@@ -1,0 +1,5439 @@
+{
+ "id": "SV7",
+ "name": "ステラミラクル",
+ "releaseDate": "2024-07-19",
+ "total": 135,
+ "cards": [
+  {
+   "id": "SV7-001",
+   "localId": "001",
+   "name": "レディバ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "とびだしヘッド",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-002",
+   "localId": "002",
+   "name": "レディアン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きらぼしもよう",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。相手のベンチの残りHPが「90」以下のポケモンを1匹選び、バトルポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードスター",
+     "effect": "このワザのダメージは、弱点・抵抗力と、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-003",
+   "localId": "003",
+   "name": "リリーラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "しばりつける",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-004",
+   "localId": "004",
+   "name": "ユレイドル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "よりどりねんえき",
+     "effect": "自分の番に1回使える。コインを1回投げオモテなら、どく・やけど・こんらんの中から1つ選び、相手のバトルポケモンをその状態にする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "しょうきのかぜ",
+     "effect": "相手のバトルポケモンが受けている特殊状態の数×100ダメージ。",
+     "damage": "100×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-005",
+   "localId": "005",
+   "name": "マスキッパ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つまみぐい",
+     "effect": "このポケモンのHPを「40」回復する。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おおいかぶさる",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージぶん、このワザのダメージは小さくなる。",
+     "damage": "130－"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-006",
+   "localId": "006",
+   "name": "カットロトム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かりとりダッシュ",
+     "effect": "ダメージを与える前に、相手のバトルポケモンについている「ポケモンのどうぐ」と「特殊エネルギー」を、すべてトラッシュする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-007",
+   "localId": "007",
+   "name": "アゴジムシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おそいかかる",
+     "effect": "コインを1回投げオモテなら、30ダメージ追加。",
+     "damage": "10＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-008",
+   "localId": "008",
+   "name": "ヒメンカ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ダブルスピン",
+     "effect": "コインを2回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-009",
+   "localId": "009",
+   "name": "ワタシラガ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "そよかぜギフト",
+     "effect": "このポケモンと、ついているすべてのカードを、自分の山札にもどす。その後、山札から好きなカードを3枚まで選び、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "このは",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-010",
+   "localId": "010",
+   "name": "カジッチュ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "しるをとばす",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-011",
+   "localId": "011",
+   "name": "カミッチュ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "コーティングアタック",
+     "effect": "次の相手の番、このポケモンはたねポケモンからワザのダメージを受けない。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-012",
+   "localId": "012",
+   "name": "カミツオロチex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 330,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "じゅくせいチャージ",
+     "effect": "自分の番に1回使える。自分の手札から「基本エネルギー」を1枚選び、自分のポケモンにつける。その後、つけたポケモンのHPを「30」回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "みつあめストーム",
+     "effect": "自分のポケモン全員についているエネルギーの数×30ダメージ追加。",
+     "damage": "30＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-013",
+   "localId": "013",
+   "name": "ヤトウモリ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ひのこ",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-014",
+   "localId": "014",
+   "name": "エンニュート",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "いきなりあぶる",
+     "effect": "相手は相手自身の手札を1枚選び、トラッシュする。この番、このポケモンが「ヤトウモリ」から進化していたなら、さらに2枚トラッシュする。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かえんほうしゃ",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-015",
+   "localId": "015",
+   "name": "バクガメス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "フレイムサークル",
+     "effect": "相手のバトルポケモンをやけどにする。次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "もうかのとっしん",
+     "effect": "このポケモンにも60ダメージ。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-016",
+   "localId": "016",
+   "name": "ヒバニー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "でんこうせっか",
+     "effect": "コインを1回投げオモテなら、10ダメージ追加。",
+     "damage": "10＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-017",
+   "localId": "017",
+   "name": "ラビフット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ローキック",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かえん",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-018",
+   "localId": "018",
+   "name": "エースバーンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 320,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "フレアストライク",
+     "effect": "次の自分の番、このポケモンは「フレアストライク」が使えない。",
+     "damage": 280
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fighting",
+      "Darkness"
+     ],
+     "name": "ガーネットボレー",
+     "effect": "相手のポケモン1匹に、180ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-019",
+   "localId": "019",
+   "name": "ラプラスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 220,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "パワースプラッシュ",
+     "effect": "このポケモンについているエネルギーの数×40ダメージ。",
+     "damage": "40×"
+    },
+    {
+     "cost": [
+      "Water",
+      "Psychic",
+      "Metal"
+     ],
+     "name": "ラリマーレイン",
+     "effect": "自分の山札を上から20枚見て、その中からエネルギーを好きなだけ選び、自分のポケモンに好きなようにつける。残りのカードは山札にもどして切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-020",
+   "localId": "020",
+   "name": "ケイコウオ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "うちみず",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-021",
+   "localId": "021",
+   "name": "ネオラント",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "おんがえし",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "ひれカッター",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-022",
+   "localId": "022",
+   "name": "プロトーガ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "スプラッシュターン",
+     "effect": "このポケモンをベンチポケモンと入れ替える。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-023",
+   "localId": "023",
+   "name": "アバゴーラ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "げんしのこころえ",
+     "effect": "このポケモンがいるかぎり、自分のポケモンが使うワザの、相手のバトル場の進化ポケモンへのダメージは「+30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "ハイドロクラッシュ",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-024",
+   "localId": "024",
+   "name": "ケケンカニ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "したごしらえ",
+     "effect": "自分のトラッシュにある「ハイダイ」の枚数ぶん、このポケモンがワザを使うためのエネルギーは少なくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おおぶりパンチ",
+     "effect": "次の自分の番、このポケモンは「おおぶりパンチ」が使えない。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-025",
+   "localId": "025",
+   "name": "カムカメ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ずつき",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-026",
+   "localId": "026",
+   "name": "カジリガメ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "てっぺきシェル",
+     "effect": "このポケモンは、相手のポケモンから「200」以上のワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハードクランチ",
+     "effect": "相手のバトルポケモンにダメカンがのっているなら、80ダメージ追加。",
+     "damage": "80＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-027",
+   "localId": "027",
+   "name": "ミガルーサ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "したごしらえ",
+     "effect": "自分のトラッシュにある「ハイダイ」の枚数ぶん、このポケモンがワザを使うためのエネルギーは少なくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ソニックエッジ",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-028",
+   "localId": "028",
+   "name": "エレブー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "マグナムパンチ",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-029",
+   "localId": "029",
+   "name": "エレキブル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "エレキスラッグ",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "ライトニングダウン",
+     "effect": "次の自分の番、自分のポケモン全員は、ワザが使えない。（新しく場に出したポケモンもふくむ。）",
+     "damage": 220
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-030",
+   "localId": "030",
+   "name": "チョンチー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダブルボルト",
+     "effect": "コインを2回投げ、オモテの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-031",
+   "localId": "031",
+   "name": "ランターン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "さくらんフラッシュ",
+     "effect": "相手のバトルポケモンをこんらんにする。このこんらんでのせるダメカンの数は8個になる。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "サンダーボルト",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-032",
+   "localId": "032",
+   "name": "バチュル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "バチュチャージ",
+     "effect": "自分の山札から「基本エネルギー」と「基本エネルギー」をそれぞれ2枚まで選び、自分のポケモンに好きなようにつける。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-033",
+   "localId": "033",
+   "name": "デンチュラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 260,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "アッパースレッド",
+     "effect": "相手のバトルポケモンが「ポケモンex・V」なら、110ダメージ追加。",
+     "damage": "110＋"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Lightning",
+      "Fighting"
+     ],
+     "name": "フルグライト",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。次の相手の番、相手は手札からグッズを出して使えない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-034",
+   "localId": "034",
+   "name": "デンヂムシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "へいれつにならぶ",
+     "effect": "自分の山札から「デンヂムシ」を3枚まで選び、ベンチに出す。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-035",
+   "localId": "035",
+   "name": "クワガノン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "ボルトチェンジ",
+     "effect": "このポケモンをベンチのポケモンと入れ替える。",
+     "damage": 90
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スパーキングアタック",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-036",
+   "localId": "036",
+   "name": "トゲデマル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "ビリビリチャンス",
+     "effect": "自分のサイドの残り枚数が1枚なら、相手のバトルポケモンをマヒにする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-037",
+   "localId": "037",
+   "name": "ゼラオラ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "コンバットサンダー",
+     "effect": "相手のベンチポケモンの数×20ダメージ追加。",
+     "damage": "20＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-038",
+   "localId": "038",
+   "name": "ヤドン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "しっぽをたらす",
+     "effect": "自分のトラッシュからポケモンを1枚選び、相手に見せて、手札に加える。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-039",
+   "localId": "039",
+   "name": "ヤドキング",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ひらめきチャレンジ",
+     "effect": "自分の山札を上から1枚トラッシュし、そのカードがポケモン（「ルールを持つポケモン」をのぞく）なら、そのポケモンが持っているワザを1つ選び、このワザとして使う。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ちょうねんりき",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-040",
+   "localId": "040",
+   "name": "フワンテ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ふくらむ",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-10」される。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-041",
+   "localId": "041",
+   "name": "フワライド",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "みんなでばくはつ",
+     "effect": "自分の場の「フワンテ」と「フワライド」の数×50ダメージ。自分の場の「フワンテ」と「フワライド」全員にも、それぞれ30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": "50×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-042",
+   "localId": "042",
+   "name": "キュワワー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "フラワーシャワー",
+     "effect": "おたがいのプレイヤーは、それぞれ山札を3枚引く。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "じゃれつく",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "20＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-043",
+   "localId": "043",
+   "name": "マホミル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "つぶやく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-044",
+   "localId": "044",
+   "name": "マホイップ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いろどりスイーツ",
+     "effect": "自分の山札から、このポケモンについている基本エネルギーと同じタイプのポケモンを合計5枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "マジカルショット",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-045",
+   "localId": "045",
+   "name": "パピモッチ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いいにおい",
+     "effect": "自分の山札からたねポケモンを1枚選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふむ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-046",
+   "localId": "046",
+   "name": "バウッツェルex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 250,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "まんぷくタイム",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分の進化ポケモン全員のHPを、すべて回復する。その後、回復したポケモンについているエネルギーを、すべてトラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ワンダーシャイン",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-047",
+   "localId": "047",
+   "name": "テツノイワオ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "アジャストホーン",
+     "effect": "自分の手札と相手の手札が同じ枚数でないなら、このワザは失敗。",
+     "damage": 170
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-048",
+   "localId": "048",
+   "name": "カラカラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "とつげき",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-049",
+   "localId": "049",
+   "name": "ガラガラ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "なきごえ",
+     "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-40」される。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ほねリベンジ",
+     "effect": "自分のベンチの「カラカラ」にダメカンがのっているなら、120ダメージ追加。",
+     "damage": "60＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-050",
+   "localId": "050",
+   "name": "サイホーン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "つのでつく",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-051",
+   "localId": "051",
+   "name": "サイドン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はかいのつの",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-052",
+   "localId": "052",
+   "name": "ドサイドン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 200,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ワイドウォール",
+     "effect": "このポケモンがバトル場にいるかぎり、自分のポケモン全員は、相手が手札からサポートを出して使ったとき、その効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ドリルライナー",
+     "effect": "相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-053",
+   "localId": "053",
+   "name": "アサナン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "めいそう",
+     "effect": "このポケモンのHPを「20」回復する。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "チョップ",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-054",
+   "localId": "054",
+   "name": "チャーレムex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 260,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きこうあつ",
+     "effect": "相手のバトルポケモンの残りHPが「50」になるように、ダメカンをのせる。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヨガキック",
+     "effect": "このワザのダメージは弱点・抵抗力を計算しない。",
+     "damage": 190
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-055",
+   "localId": "055",
+   "name": "コジョフー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "はたきおとす",
+     "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-056",
+   "localId": "056",
+   "name": "コジョンド",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "はやてまわし",
+     "effect": "相手の手札が5枚以下なら、60ダメージ追加。",
+     "damage": "30＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-057",
+   "localId": "057",
+   "name": "ヤンチャム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "にらみつける",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "けたぐり",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-058",
+   "localId": "058",
+   "name": "ディアンシー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "らんはんしゃ",
+     "effect": "相手のポケモン全員についている特殊エネルギーの枚数×40ダメージ。",
+     "damage": "40×"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "パワージェム",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-059",
+   "localId": "059",
+   "name": "マケンカニ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はさむ",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クラブハンマー",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-060",
+   "localId": "060",
+   "name": "タイレーツ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "じんけいをくむ",
+     "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "いっせいこうげき",
+     "effect": "前の自分の番、このポケモンが「じんけいをくむ」を使っていたなら、90ダメージ追加。",
+     "damage": "30＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-061",
+   "localId": "061",
+   "name": "ゴクリン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "よだれ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "どくのいき",
+     "effect": "相手のバトルポケモンをどくにする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-062",
+   "localId": "062",
+   "name": "マルノーム",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "パックンマウス",
+     "effect": "このポケモンについているエネルギーの数が、相手のバトルポケモンについているエネルギーの数より多いなら、160ダメージ追加。",
+     "damage": "10＋"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ベノムヒット",
+     "effect": "相手のバトルポケモンをどくにする。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-063",
+   "localId": "063",
+   "name": "ゴロンダ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ひっぱる",
+     "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "あばれまわる",
+     "effect": "このポケモンをこんらんにする。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-064",
+   "localId": "064",
+   "name": "ベロバー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひらてうち",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ツメできりさく",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-065",
+   "localId": "065",
+   "name": "ギモー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "やみのキバ",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-066",
+   "localId": "066",
+   "name": "オーロンゲ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 170,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ちょうはつクラッチ",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える（バトル場に出すポケモンは相手が選ぶ）。その後、新しく出てきたポケモンに160ダメージ。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "グーパンチ",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-067",
+   "localId": "067",
+   "name": "ギアル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひきつける",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ビーム",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-068",
+   "localId": "068",
+   "name": "ギギアル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "アイアンタックル",
+     "effect": "このポケモンにも20ダメージ。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-069",
+   "localId": "069",
+   "name": "ギギギアル",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きんきゅうかいてん",
+     "effect": "自分の番に、このカードが手札にあり、相手の場に2進化ポケモンがいるなら、1回使える。このカードをベンチに出す。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハイパービーム",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-070",
+   "localId": "070",
+   "name": "メルタン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ガラクタはこび",
+     "effect": "自分の山札から「ポケモンのどうぐ」を1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-071",
+   "localId": "071",
+   "name": "メルメタル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たたきつぶす",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "リモデルアックス",
+     "effect": "ダメージを与える前に、このポケモンについている「ポケモンのどうぐ」をトラッシュする。トラッシュできないなら、このワザは失敗。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-072",
+   "localId": "072",
+   "name": "ジュラルドン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ぶちかます",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "レイジングハンマー",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージ追加。",
+     "damage": "80＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-073",
+   "localId": "073",
+   "name": "ブリジュラス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 180,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はがねのかけはし",
+     "effect": "このポケモンがいるかぎり、エネルギーがついている自分のポケモン全員のにげるためのエネルギーは、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "アイアンブラスター",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-074",
+   "localId": "074",
+   "name": "ミミズズex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 220,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ボコスカがえし",
+     "effect": "このポケモンが、相手のポケモンからワザのダメージを受けたとき、このポケモンについているエネルギーの数×2個ぶんのダメカンを、ワザを使ったポケモンにのせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "がんせきふうじ",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-075",
+   "localId": "075",
+   "name": "タケルライコ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Fighting"
+     ],
+     "name": "らくらいあらし",
+     "effect": "相手のポケモン1匹に、このポケモンについているエネルギーの数×30ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "リューズヘッド",
+     "damage": 130
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-076",
+   "localId": "076",
+   "name": "ホーホー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "さんどづき",
+     "effect": "コインを3回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-077",
+   "localId": "077",
+   "name": "ヨルノズク",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ほうせきさがし",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、自分の場に「テラスタル」のポケモンがいるなら、1回使える。自分の山札からトレーナーズを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードウイング",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-078",
+   "localId": "078",
+   "name": "ニャルマー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっかける",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-079",
+   "localId": "079",
+   "name": "ブニャット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ごろにゃん",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-080",
+   "localId": "080",
+   "name": "スピンロトム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ファンコール",
+     "effect": "最初の自分の番にだけ1回使える。自分の山札から、HPが「100」以下のポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。この番、すでに別の「ファンコール」を使っていたなら、この特性は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "とつげきランディング",
+     "effect": "場にスタジアムが出ていないなら、このワザは失敗。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-081",
+   "localId": "081",
+   "name": "バッフロン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "カーリーウォール",
+     "effect": "このポケモンと、自分の別の「バッフロン」がいるかぎり、自分のタイプのたねポケモン全員が、相手のポケモンから受けるワザのダメージは「-60」される。この効果は、この特性を持つポケモンが何匹いても、重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "そこぢから",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-082",
+   "localId": "082",
+   "name": "トルネロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "げんこつ",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぼうふうしょうへき",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-50」される。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-083",
+   "localId": "083",
+   "name": "ヤヤコマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つきかえす",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-084",
+   "localId": "084",
+   "name": "ヒノヤコマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードひこう",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-085",
+   "localId": "085",
+   "name": "ファイアロー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage2",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "エアロチェイス",
+     "effect": "相手のバトルポケモンのにげるためのエネルギーが2個以上なら、110ダメージ追加。",
+     "damage": "110＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-086",
+   "localId": "086",
+   "name": "ウールー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つきくずす",
+     "effect": "のぞむなら、場に出ているスタジアムをトラッシュする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-087",
+   "localId": "087",
+   "name": "バイウールー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "やわらかウール",
+     "effect": "このポケモンが受けるワザのダメージは「-30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つきくずす",
+     "effect": "のぞむなら、場に出ているスタジアムをトラッシュする。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-088",
+   "localId": "088",
+   "name": "テラパゴスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ユニオンビート",
+     "effect": "このワザは、後攻プレイヤーの最初の番には使えない。自分のベンチポケモンの数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Water",
+      "Lightning"
+     ],
+     "name": "クラウンオパール",
+     "effect": "次の相手の番、このポケモンはたねポケモン（ポケモンをのぞく）からワザのダメージを受けない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-089",
+   "localId": "089",
+   "name": "ガラスのラッパ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の場に「テラスタル」のポケモンがいるときにしか使えない。\n\n自分のベンチのポケモンを2匹まで選び、トラッシュから基本エネルギーを1枚ずつつける。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-090",
+   "localId": "090",
+   "name": "古びたねっこの化石",
+   "category": "Trainer",
+   "rarity": "Common",
+   "hp": 60,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-091",
+   "localId": "091",
+   "name": "古びたふたの化石",
+   "category": "Trainer",
+   "rarity": "Common",
+   "hp": 60,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-092",
+   "localId": "092",
+   "name": "ウタンのみ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-093",
+   "localId": "093",
+   "name": "オッカのみ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-094",
+   "localId": "094",
+   "name": "きらめく結晶",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけている「テラスタル」のポケモンがワザを使うとき、そのワザを使うためのエネルギーは、1個ぶん少なくなる。（少なくなるのは、どのタイプのエネルギーでもよい。）",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-095",
+   "localId": "095",
+   "name": "重力玉",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンがバトル場にいるかぎり、おたがいのバトルポケモンのにげるためのエネルギーは、それぞれ1個ぶん多くなる。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-096",
+   "localId": "096",
+   "name": "デラックスボム",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを12個のせる。その後、このカードをトラッシュする。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-097",
+   "localId": "097",
+   "name": "アカマツ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、それぞれちがうタイプの基本エネルギーを2枚まで選び、相手に見せて、どちらか1枚を手札に加え、残りのエネルギーを自分のポケモンにつける。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-098",
+   "localId": "098",
+   "name": "タロ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札をすべて山札にもどして切る。その後、山札を4枚引く。相手のサイドの残り枚数が3枚以下なら、引く枚数は8枚になる。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-099",
+   "localId": "099",
+   "name": "ハイダイ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札を2枚選び、好きな順番に入れ替えて、山札の下にもどす。その後、山札を4枚引く。（自分の手札を2枚もどせないなら、このカードは使えない。）",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-100",
+   "localId": "100",
+   "name": "ブライア",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、相手のサイドの残り枚数が2枚のときにしか使えない。\n\nこの番、自分の「テラスタル」のポケモンが使うワザのダメージで、相手のバトルポケモンがきぜつしたなら、サイドを1枚多くとる。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-101",
+   "localId": "101",
+   "name": "偉大な大樹",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分の場のたねポケモン1匹から進化する1進化ポケモンを、自分の山札から1枚選び、そのポケモンにのせて進化させてよい。進化したなら、続けて2進化ポケモンを1枚選び、進化させてよい。そして山札を切る。（最初の自分の番や、出したばかりのたねポケモンは進化させられない。）",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-102",
+   "localId": "102",
+   "name": "ゼロの大空洞",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の場に「テラスタル」のポケモンがいるプレイヤーが、ベンチに出せるポケモンの数は8匹になる。\n\n（このカードがトラッシュされたときか、自分の場に「テラスタル」のポケモンがいなくなったとき、ベンチが5匹になるまでトラッシュする。おたがいにトラッシュするなら、このカードの持ち主から行う。）",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-103",
+   "localId": "103",
+   "name": "レディアン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きらぼしもよう",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。相手のベンチの残りHPが「90」以下のポケモンを1匹選び、バトルポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードスター",
+     "effect": "このワザのダメージは、弱点・抵抗力と、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-104",
+   "localId": "104",
+   "name": "リリーラ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "しばりつける",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-105",
+   "localId": "105",
+   "name": "バクガメス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "フレイムサークル",
+     "effect": "相手のバトルポケモンをやけどにする。次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "もうかのとっしん",
+     "effect": "このポケモンにも60ダメージ。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-106",
+   "localId": "106",
+   "name": "ラビフット",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 90,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ローキック",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かえん",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-107",
+   "localId": "107",
+   "name": "ケケンカニ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 160,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "したごしらえ",
+     "effect": "自分のトラッシュにある「ハイダイ」の枚数ぶん、このポケモンがワザを使うためのエネルギーは少なくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おおぶりパンチ",
+     "effect": "次の自分の番、このポケモンは「おおぶりパンチ」が使えない。",
+     "damage": 250
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-108",
+   "localId": "108",
+   "name": "バチュル",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 30,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "バチュチャージ",
+     "effect": "自分の山札から「基本エネルギー」と「基本エネルギー」をそれぞれ2枚まで選び、自分のポケモンに好きなようにつける。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-109",
+   "localId": "109",
+   "name": "ゼラオラ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "コンバットサンダー",
+     "effect": "相手のベンチポケモンの数×20ダメージ追加。",
+     "damage": "20＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-110",
+   "localId": "110",
+   "name": "マホミル",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "つぶやく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-111",
+   "localId": "111",
+   "name": "アサナン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "めいそう",
+     "effect": "このポケモンのHPを「20」回復する。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "チョップ",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-112",
+   "localId": "112",
+   "name": "ゴクリン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "よだれ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "どくのいき",
+     "effect": "相手のバトルポケモンをどくにする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-113",
+   "localId": "113",
+   "name": "ブリジュラス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 180,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はがねのかけはし",
+     "effect": "このポケモンがいるかぎり、エネルギーがついている自分のポケモン全員のにげるためのエネルギーは、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "アイアンブラスター",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-114",
+   "localId": "114",
+   "name": "ヨルノズク",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ほうせきさがし",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、自分の場に「テラスタル」のポケモンがいるなら、1回使える。自分の山札からトレーナーズを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードウイング",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "－30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-115",
+   "localId": "115",
+   "name": "カミツオロチex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 330,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "じゅくせいチャージ",
+     "effect": "自分の番に1回使える。自分の手札から「基本エネルギー」を1枚選び、自分のポケモンにつける。その後、つけたポケモンのHPを「30」回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "みつあめストーム",
+     "effect": "自分のポケモン全員についているエネルギーの数×30ダメージ追加。",
+     "damage": "30＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-116",
+   "localId": "116",
+   "name": "エースバーンex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 320,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "フレアストライク",
+     "effect": "次の自分の番、このポケモンは「フレアストライク」が使えない。",
+     "damage": 280
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fighting",
+      "Darkness"
+     ],
+     "name": "ガーネットボレー",
+     "effect": "相手のポケモン1匹に、180ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-117",
+   "localId": "117",
+   "name": "ラプラスex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 220,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "パワースプラッシュ",
+     "effect": "このポケモンについているエネルギーの数×40ダメージ。",
+     "damage": "40×"
+    },
+    {
+     "cost": [
+      "Water",
+      "Psychic",
+      "Metal"
+     ],
+     "name": "ラリマーレイン",
+     "effect": "自分の山札を上から20枚見て、その中からエネルギーを好きなだけ選び、自分のポケモンに好きなようにつける。残りのカードは山札にもどして切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-118",
+   "localId": "118",
+   "name": "デンチュラex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 260,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "アッパースレッド",
+     "effect": "相手のバトルポケモンが「ポケモンex・V」なら、110ダメージ追加。",
+     "damage": "110＋"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Lightning",
+      "Fighting"
+     ],
+     "name": "フルグライト",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。次の相手の番、相手は手札からグッズを出して使えない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-119",
+   "localId": "119",
+   "name": "バウッツェルex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 250,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "まんぷくタイム",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分の進化ポケモン全員のHPを、すべて回復する。その後、回復したポケモンについているエネルギーを、すべてトラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ワンダーシャイン",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-120",
+   "localId": "120",
+   "name": "チャーレムex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 260,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "きこうあつ",
+     "effect": "相手のバトルポケモンの残りHPが「50」になるように、ダメカンをのせる。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヨガキック",
+     "effect": "このワザのダメージは弱点・抵抗力を計算しない。",
+     "damage": 190
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-121",
+   "localId": "121",
+   "name": "ミミズズex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 220,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ボコスカがえし",
+     "effect": "このポケモンが、相手のポケモンからワザのダメージを受けたとき、このポケモンについているエネルギーの数×2個ぶんのダメカンを、ワザを使ったポケモンにのせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "がんせきふうじ",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "－30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-122",
+   "localId": "122",
+   "name": "テラパゴスex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 230,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ユニオンビート",
+     "effect": "このワザは、後攻プレイヤーの最初の番には使えない。自分のベンチポケモンの数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Water",
+      "Lightning"
+     ],
+     "name": "クラウンオパール",
+     "effect": "次の相手の番、このポケモンはたねポケモン（ポケモンをのぞく）からワザのダメージを受けない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-123",
+   "localId": "123",
+   "name": "アカマツ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、それぞれちがうタイプの基本エネルギーを2枚まで選び、相手に見せて、どちらか1枚を手札に加え、残りのエネルギーを自分のポケモンにつける。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-124",
+   "localId": "124",
+   "name": "タロ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札をすべて山札にもどして切る。その後、山札を4枚引く。相手のサイドの残り枚数が3枚以下なら、引く枚数は8枚になる。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-125",
+   "localId": "125",
+   "name": "ハイダイ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札を2枚選び、好きな順番に入れ替えて、山札の下にもどす。その後、山札を4枚引く。（自分の手札を2枚もどせないなら、このカードは使えない。）",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-126",
+   "localId": "126",
+   "name": "ブライア",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、相手のサイドの残り枚数が2枚のときにしか使えない。\n\nこの番、自分の「テラスタル」のポケモンが使うワザのダメージで、相手のバトルポケモンがきぜつしたなら、サイドを1枚多くとる。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-127",
+   "localId": "127",
+   "name": "カミツオロチex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 330,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "じゅくせいチャージ",
+     "effect": "自分の番に1回使える。自分の手札から「基本エネルギー」を1枚選び、自分のポケモンにつける。その後、つけたポケモンのHPを「30」回復する。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "みつあめストーム",
+     "effect": "自分のポケモン全員についているエネルギーの数×30ダメージ追加。",
+     "damage": "30＋"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-128",
+   "localId": "128",
+   "name": "デンチュラex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 260,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "アッパースレッド",
+     "effect": "相手のバトルポケモンが「ポケモンex・V」なら、110ダメージ追加。",
+     "damage": "110＋"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Lightning",
+      "Fighting"
+     ],
+     "name": "フルグライト",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。次の相手の番、相手は手札からグッズを出して使えない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-129",
+   "localId": "129",
+   "name": "バウッツェルex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 250,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "まんぷくタイム",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分の進化ポケモン全員のHPを、すべて回復する。その後、回復したポケモンについているエネルギーを、すべてトラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ワンダーシャイン",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-130",
+   "localId": "130",
+   "name": "テラパゴスex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 230,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ユニオンビート",
+     "effect": "このワザは、後攻プレイヤーの最初の番には使えない。自分のベンチポケモンの数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Water",
+      "Lightning"
+     ],
+     "name": "クラウンオパール",
+     "effect": "次の相手の番、このポケモンはたねポケモン（ポケモンをのぞく）からワザのダメージを受けない。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-131",
+   "localId": "131",
+   "name": "タロ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札をすべて山札にもどして切る。その後、山札を4枚引く。相手のサイドの残り枚数が3枚以下なら、引く枚数は8枚になる。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  },
+  {
+   "id": "SV7-132",
+   "localId": "132",
+   "name": "ブライア",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、相手のサイドの残り枚数が2枚のときにしか使えない。\n\nこの番、自分の「テラスタル」のポケモンが使うワザのダメージで、相手のバトルポケモンがきぜつしたなら、サイドを1枚多くとる。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV7",
+    "name": "ステラミラクル"
+   }
+  }
+ ]
+}

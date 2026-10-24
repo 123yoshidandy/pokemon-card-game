@@ -1,0 +1,3735 @@
+{
+ "id": "SV9a",
+ "name": "熱風のアリーナ",
+ "releaseDate": "2025-03-14",
+ "total": 92,
+ "cards": [
+  {
+   "id": "SV9a-001",
+   "localId": "001",
+   "name": "ヒビキのカイロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はさむ",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "いっぽんがえし",
+     "effect": "前の相手の番に、ワザのダメージで、自分の「ヒビキのポケモン」がきぜつしていたなら、100ダメージ追加。",
+     "damage": "70+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-002",
+   "localId": "002",
+   "name": "ヤンヤンマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふきとばし",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "するどいはね",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-003",
+   "localId": "003",
+   "name": "メガヤンマex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "バズブースト",
+     "effect": "自分の番に、このポケモンがベンチからバトル場に出たとき、1回使える。自分の山札から「基本エネルギー」を3枚まで選び、このポケモンにつける。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ジェットサイクロン",
+     "effect": "このポケモンについているエネルギーを3個選び、ベンチポケモン1匹につけ替える。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-004",
+   "localId": "004",
+   "name": "シロナのロゼリア",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "トゲでさす",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-005",
+   "localId": "005",
+   "name": "シロナのロズレイド",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "グローリーエール",
+     "effect": "このポケモンがいるかぎり、自分の「シロナのポケモン」が使うワザの、相手のバトルポケモンへのダメージは「+30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "リーフステップ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-006",
+   "localId": "006",
+   "name": "シェイミ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はなのカーテン",
+     "effect": "このポケモンがいるかぎり、自分のベンチポケモン（「ルールを持つポケモン」をのぞく）全員は、相手のワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "けとばす",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-007",
+   "localId": "007",
+   "name": "イシズマイ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かくせい",
+     "effect": "このポケモンから進化するカードを、自分の山札から1枚選び、このポケモンにのせて進化させる。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-008",
+   "localId": "008",
+   "name": "イワパレス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しんぴのいしやど",
+     "effect": "このポケモンは、相手の「ポケモンex」からワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "グレートシザー",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-009",
+   "localId": "009",
+   "name": "カジッチュ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 40,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "プチドレイン",
+     "effect": "このポケモンのHPを「10」回復する。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-010",
+   "localId": "010",
+   "name": "カミッチュ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "エネループ",
+     "effect": "このポケモンについているエネルギーを1個選び、手札にもどす。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-011",
+   "localId": "011",
+   "name": "カミツオロチ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 170,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "オロチブレス",
+     "effect": "自分の手札から「基本エネルギー」を6枚トラッシュし、相手のバトルポケモンをきぜつさせる。6枚トラッシュできないなら、このワザは失敗。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ウィップスマッシュ",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-012",
+   "localId": "012",
+   "name": "オーガポン みどりのめん",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "くさかぐら",
+     "effect": "自分の山札から「基本エネルギー」を1枚選び、自分のポケモンにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "おにハンマー",
+     "effect": "次の自分の番、このポケモンは「おにハンマー」が使えない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-013",
+   "localId": "013",
+   "name": "ポニータ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "にどずつき",
+     "effect": "コインを2回投げ、オモテの数×10ダメージ。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-014",
+   "localId": "014",
+   "name": "ギャロップ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いそぎあし",
+     "effect": "自分の番に1回使える。自分の山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ほのおのたてがみ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-015",
+   "localId": "015",
+   "name": "ヒビキのヒノアラシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ひのこ",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-016",
+   "localId": "016",
+   "name": "ヒビキのマグマラシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "たびのきずな",
+     "effect": "自分の番に1回使える。自分の山札から「ヒビキの冒険」を1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "かえん",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-017",
+   "localId": "017",
+   "name": "ヒビキのバクフーン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 170,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "バディブラスト",
+     "effect": "自分のトラッシュにある「ヒビキの冒険」の枚数×60ダメージ追加。",
+     "damage": "40+"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ばくねつほう",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-018",
+   "localId": "018",
+   "name": "ヒビキのマグマッグ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ひをはく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-019",
+   "localId": "019",
+   "name": "ヒビキのマグカルゴ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "とけてながれる",
+     "effect": "このポケモンにエネルギーがついていないなら、このポケモンのにげるためのエネルギーは、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "ようがんバースト",
+     "effect": "このポケモンについているエネルギーを5枚までトラッシュし、その枚数×70ダメージ。",
+     "damage": "70×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-020",
+   "localId": "020",
+   "name": "ヒビキのホウオウex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こんじきのほのお",
+     "effect": "自分の番に1回使える。自分の手札から「基本エネルギー」を2枚まで選び、ベンチの「ヒビキのポケモン」1匹につける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "シャイニングフェザー",
+     "effect": "自分のポケモン全員のHPを、それぞれ「50」回復する。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-021",
+   "localId": "021",
+   "name": "オーガポン かまどのめん",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ほのおかぐら",
+     "effect": "自分の山札から「基本エネルギー」を1枚選び、自分のポケモンにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "やきこがす",
+     "effect": "相手のバトルポケモンをやけどにする。",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-022",
+   "localId": "022",
+   "name": "カスミのコダック",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "どたばたジャンプ",
+     "effect": "このポケモンがベンチにいるなら、自分の番に1回使える。自分の山札を下から1枚トラッシュする。その後、このポケモンについているカードをすべてトラッシュし、このポケモンを山札の上にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "うちみず",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-023",
+   "localId": "023",
+   "name": "カスミのヒトデマン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "バブルこうせん",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-024",
+   "localId": "024",
+   "name": "カスミのスターミー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "サドンフラッシュ",
+     "effect": "この番に、このポケモンが「カスミのヒトデマン」から進化していたなら、80ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-025",
+   "localId": "025",
+   "name": "カスミのコイキング",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "すごいもぐる",
+     "effect": "このポケモンは、ベンチにいるかぎり、相手のポケモンからワザのダメージや効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "はねる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-026",
+   "localId": "026",
+   "name": "カスミのギャラドス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 180,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ザブザブパニック",
+     "effect": "自分の山札を上から7枚トラッシュし、その中にある「カスミのポケモン」の枚数×70ダメージ。",
+     "damage": "70×"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "たきのぼり",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-027",
+   "localId": "027",
+   "name": "カスミのラプラス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "いっしょにおよぐ",
+     "effect": "自分の山札から「カスミのポケモン」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "なみのり",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-028",
+   "localId": "028",
+   "name": "シロナのヒンバス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ゆらゆらおよぐ",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-029",
+   "localId": "029",
+   "name": "シロナのミロカロス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "アクアスプリット",
+     "effect": "相手のベンチポケモン2匹にも、それぞれ30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-030",
+   "localId": "030",
+   "name": "ブイゼル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "しっぽではたく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スプラッシュ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-031",
+   "localId": "031",
+   "name": "フローゼル",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "うずしお",
+     "effect": "相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "アクアスラッシュ",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-032",
+   "localId": "032",
+   "name": "ヘイラッシャex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 260,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "おおなみがえし",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダイナミックダイブ",
+     "effect": "のぞむなら、120ダメージ追加。その場合、このポケモンにも50ダメージ。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-033",
+   "localId": "033",
+   "name": "オーガポン いどのめん",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "みずかぐら",
+     "effect": "自分の山札から「基本エネルギー」を1枚選び、自分のポケモンにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "バブルドレイン",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-034",
+   "localId": "034",
+   "name": "エレブー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "エレキスラッグ",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-035",
+   "localId": "035",
+   "name": "エレキブルex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "デュアルボルト",
+     "effect": "相手のポケモン2匹に、それぞれ50ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "こうでんあつプレス",
+     "effect": "このワザを使うためのエネルギーより、2個多くエネルギーがついているなら、100ダメージ追加。",
+     "damage": "180+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-036",
+   "localId": "036",
+   "name": "ヒビキのピチュー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "name": "ビリリドロー",
+     "effect": "自分の山札を1枚引く。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-037",
+   "localId": "037",
+   "name": "ラクライ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "うしろげり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "プチボルト",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-038",
+   "localId": "038",
+   "name": "ライボルト",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "エレキック",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "フラッシュインパクト",
+     "effect": "自分のベンチポケモン1匹にも、40ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-039",
+   "localId": "039",
+   "name": "ロトム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "おどろかす",
+     "effect": "相手の手札からオモテを見ないで1枚選び、そのカードのオモテを見て、相手の山札にもどして切る。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ガジェットショー",
+     "effect": "自分のポケモン全員についている「ポケモンのどうぐ」の数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-040",
+   "localId": "040",
+   "name": "ゼラオラ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 100,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっかく",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Lightning"
+     ],
+     "name": "サンダーブリッツ",
+     "effect": "このポケモンについているエネルギーをすべてトラッシュし、相手のベンチの「ポケモンex」1匹に、210ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-041",
+   "localId": "041",
+   "name": "ヒビキのウソッキー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "かこいこむ",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "まねてみる",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンが持つワザを1つ選び、このワザとして使う。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-042",
+   "localId": "042",
+   "name": "シロナのフカマル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "いわとばし",
+     "effect": "このワザのダメージは抵抗力を計算しない。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-043",
+   "localId": "043",
+   "name": "シロナのガバイト",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "おうじゃのよびごえ",
+     "effect": "自分の番に1回使える。自分の山札から「シロナのポケモン」を1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "リューノスライス",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-044",
+   "localId": "044",
+   "name": "シロナのガブリアスex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 330,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "スクリューダイブ",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 100
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "リューノバスター",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-045",
+   "localId": "045",
+   "name": "ドロバンコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "つっぱしる",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×40ダメージ。",
+     "damage": "40×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-046",
+   "localId": "046",
+   "name": "バンバドロ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "マッドコート",
+     "effect": "このポケモンが受けるワザのダメージは「-30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ヘビーインパクト",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-047",
+   "localId": "047",
+   "name": "ペパーのノノクラゲ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ちょっとつっこむ",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-048",
+   "localId": "048",
+   "name": "ペパーのリククラゲ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひっぱる",
+     "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "とつげき",
+     "effect": "このポケモンにも30ダメージ。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-049",
+   "localId": "049",
+   "name": "オーガポン いしずえのめん",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "いわかぐら",
+     "effect": "自分の山札から「基本エネルギー」を1枚選び、自分のポケモンにつける。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "やまどつき",
+     "effect": "相手の山札を上から1枚トラッシュする。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-050",
+   "localId": "050",
+   "name": "シロナのミカルゲ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "レイジングカース",
+     "effect": "自分のベンチの「シロナのポケモン」全員にのっているダメカンの数×10ダメージ。このワザのダメージは弱点を計算しない。",
+     "damage": "10×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-051",
+   "localId": "051",
+   "name": "ペパーのオラチフ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふむ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "がちんこ",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-052",
+   "localId": "052",
+   "name": "ペパーのマフィティフex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ハッスルタックル",
+     "effect": "このポケモンにダメカンがのっていないなら、120ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おやぶんヘッド",
+     "effect": "次の自分の番、このポケモンは「おやぶんヘッド」が使えない。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-053",
+   "localId": "053",
+   "name": "ケンタロス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つのでつく",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クリーンヒット",
+     "effect": "相手のバトルポケモンが進化ポケモンなら、50ダメージ追加。",
+     "damage": "50+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-054",
+   "localId": "054",
+   "name": "ペパーのホシガリス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かじりとる",
+     "effect": "ダメージを与える前に、相手のバトルポケモンについている「ポケモンのどうぐ」をトラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-055",
+   "localId": "055",
+   "name": "ペパーのヨクバリス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "よくばりオーダー",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分のトラッシュから「ペパーのサンドウィッチ」を2枚まで選び、相手に見せて、手札に加える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ころがりタックル",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-056",
+   "localId": "056",
+   "name": "せいなるはい",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモンを5枚まで選び、相手に見せて、山札にもどして切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-057",
+   "localId": "057",
+   "name": "ペパーのサンドウィッチ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトルポケモンのHPを「30」回復する。そのポケモンが「ペパーのポケモン」なら、回復するHPは「100」になる。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-060",
+   "localId": "060",
+   "name": "シロナのパワーウエイト",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけている「シロナのポケモン」の最大HPは「＋70」される。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-061",
+   "localId": "061",
+   "name": "MCの盛り上げ",
+   "category": "Trainer",
+   "rarity": "Common",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を2枚引く。相手のサイドの残り枚数が3枚以下なら、さらに2枚引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-063",
+   "localId": "063",
+   "name": "ヒビキの冒険",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「ヒビキのポケモン」と「基本エネルギー」を合計3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-064",
+   "localId": "064",
+   "name": "ヤンヤンマ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふきとばし",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "するどいはね",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-065",
+   "localId": "065",
+   "name": "シロナのロズレイド",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "グローリーエール",
+     "effect": "このポケモンがいるかぎり、自分の「シロナのポケモン」が使うワザの、相手のバトルポケモンへのダメージは「+30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "リーフステップ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-066",
+   "localId": "066",
+   "name": "シェイミ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はなのカーテン",
+     "effect": "このポケモンがいるかぎり、自分のベンチポケモン（「ルールを持つポケモン」をのぞく）全員は、相手のワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "けとばす",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-067",
+   "localId": "067",
+   "name": "イワパレス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 150,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しんぴのいしやど",
+     "effect": "このポケモンは、相手の「ポケモンex」からワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "グレートシザー",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-068",
+   "localId": "068",
+   "name": "カミツオロチ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 170,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "オロチブレス",
+     "effect": "自分の手札から「基本エネルギー」を6枚トラッシュし、相手のバトルポケモンをきぜつさせる。6枚トラッシュできないなら、このワザは失敗。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ウィップスマッシュ",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-069",
+   "localId": "069",
+   "name": "ギャロップ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 110,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "いそぎあし",
+     "effect": "自分の番に1回使える。自分の山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ほのおのたてがみ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-070",
+   "localId": "070",
+   "name": "ヒビキのバクフーン",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 170,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "バディブラスト",
+     "effect": "自分のトラッシュにある「ヒビキの冒険」の枚数×60ダメージ追加。",
+     "damage": "40+"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ばくねつほう",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-071",
+   "localId": "071",
+   "name": "カスミのコダック",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "どたばたジャンプ",
+     "effect": "このポケモンがベンチにいるなら、自分の番に1回使える。自分の山札を下から1枚トラッシュする。その後、このポケモンについているカードをすべてトラッシュし、このポケモンを山札の上にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "うちみず",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-072",
+   "localId": "072",
+   "name": "カスミのラプラス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "いっしょにおよぐ",
+     "effect": "自分の山札から「カスミのポケモン」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "なみのり",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-073",
+   "localId": "073",
+   "name": "ラクライ",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "うしろげり",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "プチボルト",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-074",
+   "localId": "074",
+   "name": "ロトム",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "おどろかす",
+     "effect": "相手の手札からオモテを見ないで1枚選び、そのカードのオモテを見て、相手の山札にもどして切る。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ガジェットショー",
+     "effect": "自分のポケモン全員についている「ポケモンのどうぐ」の数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-075",
+   "localId": "075",
+   "name": "ペパーのヨクバリス",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "よくばりオーダー",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分のトラッシュから「ペパーのサンドウィッチ」を2枚まで選び、相手に見せて、手札に加える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ころがりタックル",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-076",
+   "localId": "076",
+   "name": "メガヤンマex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 280,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "バズブースト",
+     "effect": "自分の番に、このポケモンがベンチからバトル場に出たとき、1回使える。自分の山札から「基本エネルギー」を3枚まで選び、このポケモンにつける。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ジェットサイクロン",
+     "effect": "このポケモンについているエネルギーを3個選び、ベンチポケモン1匹につけ替える。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-077",
+   "localId": "077",
+   "name": "ヒビキのホウオウex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こんじきのほのお",
+     "effect": "自分の番に1回使える。自分の手札から「基本エネルギー」を2枚まで選び、ベンチの「ヒビキのポケモン」1匹につける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "シャイニングフェザー",
+     "effect": "自分のポケモン全員のHPを、それぞれ「50」回復する。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-078",
+   "localId": "078",
+   "name": "ヘイラッシャex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 260,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "おおなみがえし",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダイナミックダイブ",
+     "effect": "のぞむなら、120ダメージ追加。その場合、このポケモンにも50ダメージ。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-079",
+   "localId": "079",
+   "name": "エレキブルex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 280,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "デュアルボルト",
+     "effect": "相手のポケモン2匹に、それぞれ50ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "こうでんあつプレス",
+     "effect": "このワザを使うためのエネルギーより、2個多くエネルギーがついているなら、100ダメージ追加。",
+     "damage": "180+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "×2"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-080",
+   "localId": "080",
+   "name": "シロナのガブリアスex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 330,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "スクリューダイブ",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 100
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "リューノバスター",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-081",
+   "localId": "081",
+   "name": "ペパーのマフィティフex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 270,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ハッスルタックル",
+     "effect": "このポケモンにダメカンがのっていないなら、120ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おやぶんヘッド",
+     "effect": "次の自分の番、このポケモンは「おやぶんヘッド」が使えない。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-082",
+   "localId": "082",
+   "name": "MCの盛り上げ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を2枚引く。相手のサイドの残り枚数が3枚以下なら、さらに2枚引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-084",
+   "localId": "084",
+   "name": "ヒビキの冒険",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「ヒビキのポケモン」と「基本エネルギー」を合計3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-085",
+   "localId": "085",
+   "name": "メガヤンマex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 280,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "バズブースト",
+     "effect": "自分の番に、このポケモンがベンチからバトル場に出たとき、1回使える。自分の山札から「基本エネルギー」を3枚まで選び、このポケモンにつける。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ジェットサイクロン",
+     "effect": "このポケモンについているエネルギーを3個選び、ベンチポケモン1匹につけ替える。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "×2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-086",
+   "localId": "086",
+   "name": "ヒビキのホウオウex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こんじきのほのお",
+     "effect": "自分の番に1回使える。自分の手札から「基本エネルギー」を2枚まで選び、ベンチの「ヒビキのポケモン」1匹につける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "シャイニングフェザー",
+     "effect": "自分のポケモン全員のHPを、それぞれ「50」回復する。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-087",
+   "localId": "087",
+   "name": "シロナのガブリアスex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 330,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "スクリューダイブ",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 100
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "リューノバスター",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-088",
+   "localId": "088",
+   "name": "ペパーのマフィティフex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 270,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ハッスルタックル",
+     "effect": "このポケモンにダメカンがのっていないなら、120ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おやぶんヘッド",
+     "effect": "次の自分の番、このポケモンは「おやぶんヘッド」が使えない。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-089",
+   "localId": "089",
+   "name": "ヒビキの冒険",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から「ヒビキのポケモン」と「基本エネルギー」を合計3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-090",
+   "localId": "090",
+   "name": "ヒビキのホウオウex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こんじきのほのお",
+     "effect": "自分の番に1回使える。自分の手札から「基本エネルギー」を2枚まで選び、ベンチの「ヒビキのポケモン」1匹につける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "シャイニングフェザー",
+     "effect": "自分のポケモン全員のHPを、それぞれ「50」回復する。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "×2"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-091",
+   "localId": "091",
+   "name": "シロナのガブリアスex",
+   "category": "Pokemon",
+   "rarity": "None",
+   "hp": 330,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "スクリューダイブ",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 100
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "リューノバスター",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "×2"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  },
+  {
+   "id": "SV9a-092",
+   "localId": "092",
+   "name": "ハッコウシティ",
+   "category": "Trainer",
+   "rarity": "None",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分のトラッシュから「基本エネルギー」を2枚まで選び、相手に見せて、手札に加えてよい。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV9a",
+    "name": "熱風のアリーナ"
+   }
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "id": "SV3",
+ "name": "黒炎の支配者",
+ "releaseDate": "2023-07-28",
+ "total": 141,
+ "cards": [
+  {
+   "id": "SV3-141",
+   "localId": "141",
+   "name": "基本炎エネルギー",
+   "category": "Energy",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "energyType": "Normal",
+   "set": {
+    "id": "SV3",
+    "name": "黒炎の支配者"
+   }
+  }
+ ]
+}

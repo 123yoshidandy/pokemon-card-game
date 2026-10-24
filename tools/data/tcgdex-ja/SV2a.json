@@ -1,0 +1,26 @@
+{
+ "id": "SV2a",
+ "name": "ポケモンカード151",
+ "releaseDate": "2023-06-16",
+ "total": 210,
+ "cards": [
+  {
+   "id": "SV2a-210",
+   "localId": "210",
+   "name": "基本超エネルギー",
+   "category": "Energy",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "G",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV2a",
+    "name": "ポケモンカード151"
+   }
+  }
+ ]
+}

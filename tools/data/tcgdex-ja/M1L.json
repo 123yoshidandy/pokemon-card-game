@@ -1,0 +1,3832 @@
+{
+ "id": "M1L",
+ "name": "メガブレイブ",
+ "releaseDate": "2025-08-01",
+ "total": 92,
+ "cards": [
+  {
+   "id": "M1L-001",
+   "localId": "001",
+   "name": "フシギダネ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "しばりつける",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-002",
+   "localId": "002",
+   "name": "フシギソウ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "フシギダネ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "はっぱカッター",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-003",
+   "localId": "003",
+   "name": "メガフシギバナex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 380,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "フシギソウ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ソーラートランス",
+     "effect": "自分の番に何回でも使える。自分の場のポケモンについている「基本エネルギー」を1個選び、自分の別のポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "ジャングルダンプ",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-004",
+   "localId": "004",
+   "name": "タマタマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "みがつまる",
+     "effect": "自分の山札から「基本エネルギー」を1枚選び、このポケモンにつける。そして山札を切る。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-005",
+   "localId": "005",
+   "name": "ナッシー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アローラナッシー",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ガードプレス",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ウッドスタンプ",
+     "effect": "このポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-006",
+   "localId": "006",
+   "name": "セレビィ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ときをめぐる",
+     "effect": "自分の山札からポケモンとスタジアムを合計3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ソーラーカッター",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-007",
+   "localId": "007",
+   "name": "タネボー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ひとやすみ",
+     "effect": "このポケモンのHPを「20」回復する。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "タネばくだん",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-008",
+   "localId": "008",
+   "name": "コノハナ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "タネボー",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はたく",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "けたぐり",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-009",
+   "localId": "009",
+   "name": "ダーテング",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ダーテングGX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "とっぷうがえし",
+     "effect": "コインを1回投げオモテなら、相手のポケモンを1匹選び、そのポケモンと、ついているすべてのカードを、相手の山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "まどわす",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-010",
+   "localId": "010",
+   "name": "ロコン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふむ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "かえん",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-011",
+   "localId": "011",
+   "name": "キュウコン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロコン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "あやかしへんげ",
+     "effect": "自分の山札を上から1枚トラッシュし、そのカードがサポートなら、その効果を、このワザの効果として使う。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "かえん",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-012",
+   "localId": "012",
+   "name": "ドンメル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ほのお",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-013",
+   "localId": "013",
+   "name": "メガバクーダex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 340,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドンメル",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "あぶりやき",
+     "effect": "相手のバトルポケモンがやけどなら、160ダメージ追加。",
+     "damage": "80+"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ボルケーノメテオ",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 280
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-014",
+   "localId": "014",
+   "name": "ボルケニオン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "こがす",
+     "effect": "相手のバトルポケモンをやけどにする。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "バックファイヤー",
+     "effect": "このポケモンについているエネルギーを2個選び、手札にもどす。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-015",
+   "localId": "015",
+   "name": "ヒバニー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "けりつける",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-016",
+   "localId": "016",
+   "name": "ラビフット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒバニー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ジャンプキック",
+     "effect": "相手のポケモン1匹に、40ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-017",
+   "localId": "017",
+   "name": "エースバーン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 160,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ラビフット",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しゅんぱつりょく",
+     "effect": "対戦準備でポケモンをバトル場に出すとき、このカードが手札にあるなら、ウラにしてバトル場に出してよい。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "フレアターボ",
+     "effect": "自分の山札から基本エネルギーを3枚まで選び、ベンチポケモンに好きなようにつける。そして山札を切る。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-018",
+   "localId": "018",
+   "name": "ヘイガニ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はさむ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "とっしん",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-019",
+   "localId": "019",
+   "name": "コレクレー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ビンタ",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-020",
+   "localId": "020",
+   "name": "サンド",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ツメをたてる",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "どろかけ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-021",
+   "localId": "021",
+   "name": "サンドパン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "サンド",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "すなかけ",
+     "effect": "次の相手の番、このワザを受けたポケモンがワザを使うとき、相手はコインを1回投げる。ウラならそのワザは失敗。",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マッドショット",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-022",
+   "localId": "022",
+   "name": "イワーク",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "しめつける",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かいりき",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-023",
+   "localId": "023",
+   "name": "バルキー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Void"
+     ],
+     "name": "ボカボカなぐる",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×30ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-024",
+   "localId": "024",
+   "name": "マクノシタ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "どつく",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "がちんこ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-025",
+   "localId": "025",
+   "name": "ハリテヤマ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "マクノシタ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "どすこいキャッチャー",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ワイルドプレス",
+     "effect": "このポケモンにも70ダメージ。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-026",
+   "localId": "026",
+   "name": "ルナトーン",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ルナサイクル",
+     "effect": "自分の場に「ソルロック」がいて、自分の番に、自分の手札から「基本エネルギー」を1枚トラッシュするなら、1回使える。自分の山札を3枚引く。この特性は別の「ルナサイクル」を使った番は使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "パワージェム",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-027",
+   "localId": "027",
+   "name": "ソルロック",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "コスモビーム",
+     "effect": "自分のベンチに「ルナトーン」がいないなら、このワザは失敗。このワザのダメージは弱点・抵抗力を計算しない。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-028",
+   "localId": "028",
+   "name": "リオル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "かそくづき",
+     "effect": "次の自分の番、このポケモンは「かそくづき」が使えない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-029",
+   "localId": "029",
+   "name": "メガルカリオex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 340,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "リオル",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "はどうづき",
+     "effect": "自分のトラッシュから「基本エネルギー」を3枚まで選び、ベンチポケモンに好きなようにつける。",
+     "damage": 130
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "メガブレイブ",
+     "effect": "次の自分の番、このポケモンは「メガブレイブ」が使えない。",
+     "damage": 270
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-030",
+   "localId": "030",
+   "name": "グレッグル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ひらてうち",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-031",
+   "localId": "031",
+   "name": "ドクロッグ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "グレッグル",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "とつげき",
+     "effect": "このポケモンにも20ダメージ。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-032",
+   "localId": "032",
+   "name": "マーシャドー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 90,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "シャドーソバット",
+     "effect": "このワザのダメージで、相手のポケモンがきぜつしたなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-033",
+   "localId": "033",
+   "name": "イシヘンジン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ストーンキック",
+     "effect": "相手のベンチポケモン1匹にも、20ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "そこぢから",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-034",
+   "localId": "034",
+   "name": "コジオ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-035",
+   "localId": "035",
+   "name": "ジオヅム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コジオ",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "いわとばし",
+     "effect": "このワザのダメージは抵抗力を計算しない。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-036",
+   "localId": "036",
+   "name": "キョジオーン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 180,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジオヅム",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ちからのしお",
+     "effect": "このポケモンがいるかぎり、自分のポケモンが使うワザの、相手のバトルポケモンへのダメージは「+30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-037",
+   "localId": "037",
+   "name": "シザリガー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヘイガニ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はさむ",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "やりかえしシザー",
+     "effect": "このワザは、このポケモンにダメカンがのっているなら、エネルギー1個で使える。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-038",
+   "localId": "038",
+   "name": "メガアブソルex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "デスピリオド",
+     "effect": "相手のバトルポケモンにのっているダメカンが6個なら、そのポケモンをきぜつさせる。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "あくのかぎづめ",
+     "effect": "相手の手札を見て、その中からカードを1枚選び、トラッシュする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-039",
+   "localId": "039",
+   "name": "ミカルゲ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "うらみのうず",
+     "effect": "このポケモンがいるかぎり、自分のバトル場のポケモンが、相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを1個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "やまくずし",
+     "effect": "相手の山札を上から1枚トラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-040",
+   "localId": "040",
+   "name": "イベルタル",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 110,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "わしづかみ",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダークフェザー",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-041",
+   "localId": "041",
+   "name": "クスネ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "やみのキバ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-042",
+   "localId": "042",
+   "name": "フォクスライ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "クスネ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "よくばりハント",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "しっこくのキバ",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-043",
+   "localId": "043",
+   "name": "シルシュルー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "どくづき",
+     "effect": "相手のバトルポケモンをどくにする。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-044",
+   "localId": "044",
+   "name": "タギングル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シルシュルー",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ミラクルペイント",
+     "effect": "コインを1回投げオモテなら、特殊状態の中から1つ選び、相手のバトルポケモンをその状態にする。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-045",
+   "localId": "045",
+   "name": "ハガネール",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 200,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "イワーク",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ウェルカムテール",
+     "effect": "自分のサイドの残り枚数が6枚なら、200ダメージ追加。",
+     "damage": "40+"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ロケットずつき",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-046",
+   "localId": "046",
+   "name": "メガクチートex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 270,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "がっつく",
+     "effect": "自分がすでにとったサイドの枚数×80ダメージ。",
+     "damage": "80x"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ビッグバイト",
+     "effect": "相手のバトルポケモンにダメカンがのっているなら、このワザのダメージは「30」になる。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-047",
+   "localId": "047",
+   "name": "ディアルガ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 140,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ビーム",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "クロノバースト",
+     "effect": "のぞむなら、このポケモンについているエネルギーをすべて山札にもどして切り、80ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-048",
+   "localId": "048",
+   "name": "カヌチャン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "たたく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-049",
+   "localId": "049",
+   "name": "ナカヌチャン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カヌチャン",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "でたとこハンマー",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "なぐる",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-050",
+   "localId": "050",
+   "name": "デカヌチャン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 160,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ナカヌチャン",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "おおぶりスイング",
+     "effect": "相手のバトルポケモンについているエネルギーの数×60ダメージぶん、このワザのダメージは小さくなる。",
+     "damage": "240-"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-051",
+   "localId": "051",
+   "name": "サーフゴー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コレクレー",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つかみほうだい",
+     "effect": "ウラが出るまでコインを投げ、オモテの数ぶんまで、自分の山札から好きなカードを選び、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードアタック",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-052",
+   "localId": "052",
+   "name": "オニスズメ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ついばむ",
+     "effect": "ダメージを与える前に、相手のバトルポケモンについている「ポケモンのどうぐ」をトラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-053",
+   "localId": "053",
+   "name": "オニドリル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "オニスズメ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "マシンガンドリル",
+     "effect": "コインを5回投げ、オモテの数×30ダメージ。",
+     "damage": "30x"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-054",
+   "localId": "054",
+   "name": "ミルタンク",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "まんぷくミルク",
+     "effect": "コインを2回投げ、すべてオモテなら、自分のポケモン1匹のHPを、すべて回復する。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-055",
+   "localId": "055",
+   "name": "ヤングース",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かじる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-056",
+   "localId": "056",
+   "name": "デカグース",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤングース",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しょうこあつめ",
+     "effect": "自分の番に1回使える。自分の手札を1枚選び、山札の上のカードと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-057",
+   "localId": "057",
+   "name": "アイアンディフェンダー",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "次の相手の番、自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-30」される。（新しく場に出したポケモンもふくむ。）",
+   "trainerType": "Item",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-058",
+   "localId": "058",
+   "name": "パワープロテイン",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "この番、自分のポケモンが使うワザの、相手のバトルポケモンへのダメージは「+30」される。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-059",
+   "localId": "059",
+   "name": "ファイトゴング",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からタイプのたねポケモンまたは「基本エネルギー」を1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-060",
+   "localId": "060",
+   "name": "むしよけスプレー",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］",
+   "trainerType": "Item",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-061",
+   "localId": "061",
+   "name": "マチスの取引",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "「おたがいのプレイヤーは、それぞれサイドを1枚とる。」をのぞむか、相手にたずねる。相手がのぞむなら、おたがいのプレイヤーは、それぞれサイドを1枚とる。のぞまないなら、自分は山札を4枚引く。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-062",
+   "localId": "062",
+   "name": "リーリエの決心",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札をすべて山札にもどして切る。その後、山札を6枚引く。自分のサイドの残り枚数が6枚なら、引く枚数は8枚になる。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-063",
+   "localId": "063",
+   "name": "危ない廃墟",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、それぞれ、自分の番に、たねポケモン（ポケモンをのぞく）をベンチに出すたび、そのポケモンにダメカンを2個のせる。 スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-064",
+   "localId": "064",
+   "name": "フシギダネ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "しばりつける",
+     "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-065",
+   "localId": "065",
+   "name": "フシギソウ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "フシギダネ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass"
+     ],
+     "name": "はっぱカッター",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-066",
+   "localId": "066",
+   "name": "ナッシー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 140,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アローラナッシー",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "ガードプレス",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ウッドスタンプ",
+     "effect": "このポケモンについているエネルギーの数×30ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-067",
+   "localId": "067",
+   "name": "ロコン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ふむ",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "かえん",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-068",
+   "localId": "068",
+   "name": "リオル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "かそくづき",
+     "effect": "次の自分の番、このポケモンは「かそくづき」が使えない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-069",
+   "localId": "069",
+   "name": "マーシャドー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "シャドーソバット",
+     "effect": "このワザのダメージで、相手のポケモンがきぜつしたなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-070",
+   "localId": "070",
+   "name": "キョジオーン",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 180,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ジオヅム",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ちからのしお",
+     "effect": "このポケモンがいるかぎり、自分のポケモンが使うワザの、相手のバトルポケモンへのダメージは「+30」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-071",
+   "localId": "071",
+   "name": "ミカルゲ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "うらみのうず",
+     "effect": "このポケモンがいるかぎり、自分のバトル場のポケモンが、相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを1個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "やまくずし",
+     "effect": "相手の山札を上から1枚トラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-072",
+   "localId": "072",
+   "name": "シルシュルー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "どくづき",
+     "effect": "相手のバトルポケモンをどくにする。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-073",
+   "localId": "073",
+   "name": "ハガネール",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 200,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "イワーク",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ウェルカムテール",
+     "effect": "自分のサイドの残り枚数が6枚なら、200ダメージ追加。",
+     "damage": "40+"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ロケットずつき",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-074",
+   "localId": "074",
+   "name": "オニスズメ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ついばむ",
+     "effect": "ダメージを与える前に、相手のバトルポケモンについている「ポケモンのどうぐ」をトラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-075",
+   "localId": "075",
+   "name": "デカグース",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤングース",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しょうこあつめ",
+     "effect": "自分の番に1回使える。自分の手札を1枚選び、山札の上のカードと入れ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かみつく",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-076",
+   "localId": "076",
+   "name": "メガフシギバナex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 380,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "フシギソウ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ソーラートランス",
+     "effect": "自分の番に何回でも使える。自分の場のポケモンについている「基本エネルギー」を1個選び、自分の別のポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "ジャングルダンプ",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-077",
+   "localId": "077",
+   "name": "メガバクーダex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 340,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ドンメル",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "あぶりやき",
+     "effect": "相手のバトルポケモンがやけどなら、160ダメージ追加。",
+     "damage": "80+"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ボルケーノメテオ",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 280
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-078",
+   "localId": "078",
+   "name": "メガルカリオex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 340,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "リオル",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "はどうづき",
+     "effect": "自分のトラッシュから「基本エネルギー」を3枚まで選び、ベンチポケモンに好きなようにつける。",
+     "damage": 130
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "メガブレイブ",
+     "effect": "次の自分の番、このポケモンは「メガブレイブ」が使えない。",
+     "damage": 270
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-079",
+   "localId": "079",
+   "name": "メガアブソルex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 280,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "デスピリオド",
+     "effect": "相手のバトルポケモンにのっているダメカンが6個なら、そのポケモンをきぜつさせる。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "あくのかぎづめ",
+     "effect": "相手の手札を見て、その中からカードを1枚選び、トラッシュする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-080",
+   "localId": "080",
+   "name": "メガクチートex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 270,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "がっつく",
+     "effect": "自分がすでにとったサイドの枚数×80ダメージ。",
+     "damage": "80x"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ビッグバイト",
+     "effect": "相手のバトルポケモンにダメカンがのっているなら、このワザのダメージは「30」になる。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-081",
+   "localId": "081",
+   "name": "パワープロテイン",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "この番、自分のポケモンが使うワザの、相手のバトルポケモンへのダメージは「+30」される。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-082",
+   "localId": "082",
+   "name": "ファイトゴング",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からタイプのたねポケモンまたは「基本エネルギー」を1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-083",
+   "localId": "083",
+   "name": "夜のタンカ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモンまたは基本エネルギーを1枚選び、相手に見せて、手札に加える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-084",
+   "localId": "084",
+   "name": "ふうせん",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけているポケモンは、にげるためのエネルギーが2個ぶん少なくなる。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-085",
+   "localId": "085",
+   "name": "マチスの取引",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "「おたがいのプレイヤーは、それぞれサイドを1枚とる。」をのぞむか、相手にたずねる。相手がのぞむなら、おたがいのプレイヤーは、それぞれサイドを1枚とる。のぞまないなら、自分は山札を4枚引く。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-086",
+   "localId": "086",
+   "name": "リーリエの決心",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札をすべて山札にもどして切る。その後、山札を6枚引く。自分のサイドの残り枚数が6枚なら、引く枚数は8枚になる。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-087",
+   "localId": "087",
+   "name": "メガフシギバナex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 380,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "フシギソウ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ソーラートランス",
+     "effect": "自分の番に何回でも使える。自分の場のポケモンについている「基本エネルギー」を1個選び、自分の別のポケモンにつけ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "ジャングルダンプ",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-088",
+   "localId": "088",
+   "name": "メガルカリオex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 340,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "リオル",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "はどうづき",
+     "effect": "自分のトラッシュから「基本エネルギー」を3枚まで選び、ベンチポケモンに好きなようにつける。",
+     "damage": 130
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "メガブレイブ",
+     "effect": "次の自分の番、このポケモンは「メガブレイブ」が使えない。",
+     "damage": 270
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-089",
+   "localId": "089",
+   "name": "メガアブソルex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 280,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "デスピリオド",
+     "effect": "相手のバトルポケモンにのっているダメカンが6個なら、そのポケモンをきぜつさせる。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "あくのかぎづめ",
+     "effect": "相手の手札を見て、その中からカードを1枚選び、トラッシュする。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-090",
+   "localId": "090",
+   "name": "マチスの取引",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "「おたがいのプレイヤーは、それぞれサイドを1枚とる。」をのぞむか、相手にたずねる。相手がのぞむなら、おたがいのプレイヤーは、それぞれサイドを1枚とる。のぞまないなら、自分は山札を4枚引く。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-091",
+   "localId": "091",
+   "name": "リーリエの決心",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札をすべて山札にもどして切る。その後、山札を6枚引く。自分のサイドの残り枚数が6枚なら、引く枚数は8枚になる。 サポートは、自分の番に1枚しか使えない。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  },
+  {
+   "id": "M1L-092",
+   "localId": "092",
+   "name": "メガルカリオex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 340,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "リオル",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "はどうづき",
+     "effect": "自分のトラッシュから「基本エネルギー」を3枚まで選び、ベンチポケモンに好きなようにつける。",
+     "damage": 130
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "メガブレイブ",
+     "effect": "次の自分の番、このポケモンは「メガブレイブ」が使えない。",
+     "damage": 270
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "M1L",
+    "name": "メガブレイブ"
+   }
+  }
+ ]
+}

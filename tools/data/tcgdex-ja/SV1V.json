@@ -1,0 +1,24 @@
+{
+ "id": "SV1V",
+ "name": "バイオレットex",
+ "releaseDate": "2023-01-20",
+ "total": 108,
+ "cards": [
+  {
+   "id": "SV1V-108",
+   "localId": "108",
+   "name": "基本雷エネルギー",
+   "category": "Energy",
+   "rarity": "Hyper rare",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "energyType": "Normal",
+   "set": {
+    "id": "SV1V",
+    "name": "バイオレットex"
+   }
+  }
+ ]
+}

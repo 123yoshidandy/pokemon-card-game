@@ -1,0 +1,5657 @@
+{
+ "id": "SV10",
+ "name": "ロケット団の栄光",
+ "releaseDate": "2025-04-18",
+ "total": 132,
+ "cards": [
+  {
+   "id": "SV10-001",
+   "localId": "001",
+   "name": "クヌギダマ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぶらさがる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-002",
+   "localId": "002",
+   "name": "キノココ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ころがりタックル",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-003",
+   "localId": "003",
+   "name": "キノガッサ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "キノココ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダメージラッシュ",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×50ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "メガドレイン",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-004",
+   "localId": "004",
+   "name": "カットロトム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "かりとりカッター",
+     "effect": "場に出ているスタジアムをトラッシュする。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ガジェットショー",
+     "effect": "自分のポケモン全員についている「ポケモンのどうぐ」の数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-005",
+   "localId": "005",
+   "name": "カリキリ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "きる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-006",
+   "localId": "006",
+   "name": "ラランテス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "カリキリ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はっぱカッター",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "はなきりまい",
+     "effect": "自分の手札から「基本[G]エネルギー」を2枚トラッシュする。2枚トラッシュできないなら、このワザは失敗。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-007",
+   "localId": "007",
+   "name": "ロケット団のサッチムシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "サーチアイ",
+     "effect": "ウラになっている相手のサイドを1枚選び、そのカードのオモテを見て、もとにもどす。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-008",
+   "localId": "008",
+   "name": "ロケット団のタマンチュラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "とっしん",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-009",
+   "localId": "009",
+   "name": "ロケット団のワナイダー",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のタマンチュラ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "チャージアップ",
+     "effect": "自分の番に1回使える。自分のトラッシュから基本エネルギーを1枚選び、このポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ロケットラッシュ",
+     "effect": "自分の場の「ロケット団のポケモン」の数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-010",
+   "localId": "010",
+   "name": "ミニーブ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-011",
+   "localId": "011",
+   "name": "オリーニョ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ミニーブ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "えいようそ",
+     "effect": "自分のポケモン1匹のHPを「40」回復する。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たいあたり",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-012",
+   "localId": "012",
+   "name": "オリーヴァex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 310,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "オリーニョ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "オイルマシンガン",
+     "effect": "相手のポケモンを6回選び、選んだポケモン全員に、弱点・抵抗力を計算せず、選んだ回数×20ダメージ。（1匹を2回以上選べる。）"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "アロマシュート",
+     "effect": "このポケモンの特殊状態を、すべて回復する。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-013",
+   "localId": "013",
+   "name": "ガーディ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ひだね",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ツメをたてる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-014",
+   "localId": "014",
+   "name": "ウインディ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ガーディ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ほのお",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "こらしめファング",
+     "effect": "相手のバトルポケモンが[D]ポケモンなら、100ダメージ追加。",
+     "damage": "100+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-015",
+   "localId": "015",
+   "name": "ロケット団のファイヤーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 220,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "フレイムバリア",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-50」される。",
+     "damage": 110
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "イビルバーン",
+     "effect": "このポケモンについている「ロケット団エネルギー」を1枚選び、トラッシュする。その場合、相手のバトルポケモンと、ついているすべてのカードを、トラッシュする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-016",
+   "localId": "016",
+   "name": "ロケット団のデルビル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "ひをはく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-017",
+   "localId": "017",
+   "name": "ロケット団のヘルガー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のデルビル",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "あくのひだね",
+     "effect": "相手のバトルポケモンをやけどとこんらんにする。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "バーンアウト",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-018",
+   "localId": "018",
+   "name": "アチャモ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "もってくる",
+     "effect": "自分の山札を1枚引く。"
+    },
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "かえん",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-019",
+   "localId": "019",
+   "name": "ワカシャモ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アチャモ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かえん",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "にどげり",
+     "effect": "コインを2回投げ、オモテの数×40ダメージ。",
+     "damage": "40×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-020",
+   "localId": "020",
+   "name": "バシャーモ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 170,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ワカシャモ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヒートブラスト",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ごうかれんきゃく",
+     "effect": "このポケモンについているエネルギーを2個トラッシュし、相手のベンチポケモン1匹にも、120ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-021",
+   "localId": "021",
+   "name": "ヒートロトム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "こがす",
+     "effect": "相手のバトルポケモンをやけどにする。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ガジェットショー",
+     "effect": "自分のポケモン全員についている「ポケモンのどうぐ」の数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-022",
+   "localId": "022",
+   "name": "ロケット団のフリーザー",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "レジストヴェール",
+     "effect": "このポケモンがいるかぎり、自分の場のたねポケモンの「ロケット団のポケモン」全員は、相手のポケモンが使うワザの効果を受けない。（すでに受けている効果は、なくならない。）"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ダークフロスト",
+     "effect": "このポケモンに「ロケット団エネルギー」がついているなら、60ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-023",
+   "localId": "023",
+   "name": "パールル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "シェルプレス",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-10」される。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-024",
+   "localId": "024",
+   "name": "ハンテール",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 110,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "パールル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ダイバーキャッチ",
+     "effect": "自分の[W]ポケモンが、相手のポケモンからワザのダメージを受けてきぜつするたび、1回使える。きぜつしたポケモンについている「基本[W]エネルギー」はトラッシュせず、すべて手札にもどす。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スプラッシュ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-025",
+   "localId": "025",
+   "name": "サクラビス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "パールル",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "クレシェンドウェーブ",
+     "effect": "このポケモンについている[W]エネルギーの数×30ダメージ。のぞむなら、ダメージを与える前に、自分の手札から「基本[W]エネルギー」を好きなだけ選び、このポケモンにつける。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-026",
+   "localId": "026",
+   "name": "ユキカブリ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "なぐる",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つらら",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-027",
+   "localId": "027",
+   "name": "ユキノオー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ユキカブリ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "つきたおし",
+     "damage": 90
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "ひょうけつウッド",
+     "effect": "このポケモンに[G]エネルギーが2個以上ついているなら、120ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-028",
+   "localId": "028",
+   "name": "ウォッシュロトム",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "もみあらう",
+     "effect": "自分のポケモン全員のHPを、それぞれ「10」回復する。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ガジェットショー",
+     "effect": "自分のポケモン全員についている「ポケモンのどうぐ」の数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-029",
+   "localId": "029",
+   "name": "サシカマス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "とつげき",
+     "effect": "このポケモンにも10ダメージ。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-030",
+   "localId": "030",
+   "name": "カマスジョー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "サシカマス",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "するどいひれ",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Water",
+      "Water"
+     ],
+     "name": "ダイビング",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-031",
+   "localId": "031",
+   "name": "アルクジラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "フロストスマッシュ",
+     "damage": 80
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-032",
+   "localId": "032",
+   "name": "ハルクジラex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 300,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アルクジラ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ゆきにまぎれる",
+     "effect": "このポケモンは、相手が手札からグッズまたはサポートを出して使ったとき、その効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "クラッシュプレス",
+     "effect": "のぞむなら、場に出ているスタジアムをトラッシュする。その場合、140ダメージ追加。",
+     "damage": "140+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-033",
+   "localId": "033",
+   "name": "ロケット団のサンダー",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ジャミングウイング",
+     "effect": "のぞむなら、相手のバトルポケモンについているエネルギーを1個選び、相手のベンチポケモンにつけ替える。",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "バッドサンダー",
+     "effect": "このポケモンに「ロケット団エネルギー」がついているなら、60ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-034",
+   "localId": "034",
+   "name": "ロケット団のメリープ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ちょうたつ",
+     "effect": "自分の山札からグッズを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "プチボルト",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-035",
+   "localId": "035",
+   "name": "ロケット団のモココ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のメリープ",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "でんきショック",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-036",
+   "localId": "036",
+   "name": "ロケット団のデンリュウ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ロケット団のモココ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ダークインパルス",
+     "effect": "このポケモンがいるかぎり、相手が手札からポケモンを出して進化させるたび、そのポケモンにダメカンを4個のせる。この効果は、この特性を持つポケモンが何匹いても、重ならない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヘッドボルト",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-037",
+   "localId": "037",
+   "name": "ロケット団のスリープ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "さいみんこうせん",
+     "effect": "相手のバトルポケモンをねむりにする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-038",
+   "localId": "038",
+   "name": "ロケット団のスリーパー",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のスリープ",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "サイコショット",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "ベンチをあやつる",
+     "effect": "相手は相手自身のベンチポケモンの数ぶんコインを投げる。相手のバトルポケモンに、ウラの数×80ダメージ。このワザのダメージは弱点・抵抗力を計算しない。",
+     "damage": "80×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-039",
+   "localId": "039",
+   "name": "ロケット団のミュウツーex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 280,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "パワーセーバー",
+     "effect": "自分の場の「ロケット団のポケモン」が4匹以上のときにしか、このポケモンはワザが使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "イレイザーボール",
+     "effect": "のぞむなら、自分のベンチポケモンについているエネルギーを2枚までトラッシュし、その枚数×60ダメージ追加。",
+     "damage": "160+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-040",
+   "localId": "040",
+   "name": "ロケット団のソーナンス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ロケットミラー",
+     "effect": "自分のベンチの「ロケット団のポケモン」を1匹選び、選んだポケモンにのっているダメカンをすべて、相手のバトルポケモンにのせ替える。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "とびだしヘッド",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-041",
+   "localId": "041",
+   "name": "ロケット団のリーシャン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 30,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [],
+     "name": "リンリンさわぐ",
+     "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-042",
+   "localId": "042",
+   "name": "ロケット団のミミッキュ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 60,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ほうせきごっこ",
+     "effect": "相手のバトル場の「テラスタル」のポケモンが持つワザを1つ選び、このワザとして使う。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-043",
+   "localId": "043",
+   "name": "ロケット団のレドームシ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のサッチムシ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かくらんレーダー",
+     "effect": "相手の山札を上から5枚見て、好きな順番に入れ替えて、山札の上にもどす。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ちょうねんりき",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-044",
+   "localId": "044",
+   "name": "ロケット団のイオルブ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ロケット団のレドームシ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ロケットブレイン",
+     "effect": "自分の番に何回でも使える。自分の場の「ロケット団のポケモン」にのっているダメカンを1個選び、自分の別のポケモンにのせ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "サイコキネシス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×40ダメージ追加。",
+     "damage": "40+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-045",
+   "localId": "045",
+   "name": "マンキー",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "けりつける",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-046",
+   "localId": "046",
+   "name": "オコリザル",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "マンキー",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ひきずりだす",
+     "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンに30ダメージ。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-047",
+   "localId": "047",
+   "name": "コノヨザル",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 150,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "オコリザル",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ふんどのつぼ",
+     "effect": "このポケモンにダメカンが2個以上のっているなら、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+120」される。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "インパクトブロー",
+     "effect": "次の自分の番、このポケモンは「インパクトブロー」が使えない。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-048",
+   "localId": "048",
+   "name": "ロケット団のヨーギラス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "やまかじり",
+     "effect": "相手の山札を上から1枚トラッシュする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-049",
+   "localId": "049",
+   "name": "ロケット団のサナギラス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 100,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のヨーギラス",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ばくれつかくせい",
+     "effect": "このポケモンから進化するカードを、自分の山札から1枚選び、このポケモンにのせて進化させる。そして山札を切る。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-050",
+   "localId": "050",
+   "name": "ロケット団のバンギラス",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 180,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ロケット団のサナギラス",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "すなおこし",
+     "effect": "このポケモンがバトル場にいるかぎり、ポケモンチェックのたび、相手のたねポケモン全員に、それぞれダメカンを2個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶちぬきタックル",
+     "effect": "相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 180
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-051",
+   "localId": "051",
+   "name": "ノズパス",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ずつき",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "いわおとし",
+     "damage": 40
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-052",
+   "localId": "052",
+   "name": "ダイノーズ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ノズパス",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "パワージェム",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "マウンテンフォール",
+     "effect": "場にスタジアムが出ているなら、70ダメージ追加。",
+     "damage": "70+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-053",
+   "localId": "053",
+   "name": "アサナン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "ワンツーパンチ",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-054",
+   "localId": "054",
+   "name": "チャーレム",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 120,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アサナン",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "あいきしょう",
+     "effect": "このポケモンと相手のバトルポケモンについているエネルギーの数が同じなら、120ダメージ追加。",
+     "damage": "50+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Psychic",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-055",
+   "localId": "055",
+   "name": "レジロックex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 230,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "レジチャージ",
+     "effect": "自分のトラッシュから「基本[F]エネルギー」を2枚まで選び、このポケモンにつける。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ジャイアントロック",
+     "effect": "相手のバトルポケモンが2進化ポケモンなら、140ダメージ追加。",
+     "damage": "140+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-056",
+   "localId": "056",
+   "name": "ロケット団のアーボ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "あしをひっぱる",
+     "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
+    },
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "かじる",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-057",
+   "localId": "057",
+   "name": "ロケット団のアーボック",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のアーボ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "にらみをきかす",
+     "effect": "このポケモンがバトル場にいるかぎり、相手は手札から特性を持つポケモン（「ロケット団のポケモン」をのぞく）を場に出せない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "スピンテール",
+     "effect": "相手のポケモン全員に、それぞれ30ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-058",
+   "localId": "058",
+   "name": "ロケット団のニドラン♀",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ふいをつく",
+     "effect": "コインを1回投げウラなら、このワザは失敗。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-059",
+   "localId": "059",
+   "name": "ロケット団のニドリーナ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のニドラン♀",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "あくのめざめ",
+     "effect": "自分の[D]ポケモンを2匹まで選び、そのポケモンから進化するカードを、自分の山札から1枚ずつ選び、それぞれにのせて進化させる。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ひっかく",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-060",
+   "localId": "060",
+   "name": "ロケット団のニドクイン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 170,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ロケット団のニドリーナ",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ラブインパクト",
+     "effect": "自分のベンチに、名前に「ニドキング」とつくポケモンがいるなら、120ダメージ追加。",
+     "damage": "60+"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "メガトンキック",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-061",
+   "localId": "061",
+   "name": "ロケット団のニドラン♂",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "つきさす",
+     "damage": 10
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-062",
+   "localId": "062",
+   "name": "ロケット団のニドリーノ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のニドラン♂",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ぶちかます",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "つのでえぐる",
+     "effect": "相手のバトルポケモンにダメカンがのっているなら、60ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-063",
+   "localId": "063",
+   "name": "ロケット団のニドキングex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ロケット団のニドリーノ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダーティホーン",
+     "effect": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は8個になる。",
+     "damage": 100
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "キングインパクト",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-064",
+   "localId": "064",
+   "name": "ロケット団のズバット",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "どくをとばす",
+     "effect": "相手のバトルポケモンをどくにする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-065",
+   "localId": "065",
+   "name": "ロケット団のゴルバット",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のズバット",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こっそりかみつく",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。相手のポケモン1匹に、ダメカンを2個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "あやしいひかり",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-066",
+   "localId": "066",
+   "name": "ロケット団のクロバットex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 310,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ロケット団のゴルバット",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かみつきまわる",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。相手のポケモン2匹に、それぞれダメカンを2個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "アサシンリターン",
+     "effect": "のぞむなら、このポケモンを手札にもどす。（ポケモン以外のカードは、すべてトラッシュする。）",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-067",
+   "localId": "067",
+   "name": "ロケット団のベトベター",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "しんしょくヘドロ",
+     "effect": "次の相手の番の終わりに、このワザを受けたポケモンと、ついているすべてのカードを、トラッシュする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-068",
+   "localId": "068",
+   "name": "ロケット団のベトベトン",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 150,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のベトベター",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ベトベトまみれ",
+     "effect": "相手のバトルポケモンをこんらんにする。次の相手の番、このワザを受けたポケモンは、にげられない。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ベノムハザード",
+     "effect": "相手のバトルポケモンが受けている特殊状態の数×100ダメージ。",
+     "damage": "100×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-069",
+   "localId": "069",
+   "name": "ロケット団のドガース",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "アラートスモッグ",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、自分の山札から、名前に「ドガース」とつくポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ガスもれ",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-070",
+   "localId": "070",
+   "name": "ロケット団のマタドガス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のドガース",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "いっせいばくはつ",
+     "effect": "おたがいの場の、名前に「ドガース」または「マタドガス」とつくポケモンの数×40ダメージ。",
+     "damage": "40×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-071",
+   "localId": "071",
+   "name": "ロケット団のヤミカラス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "たぶらかす",
+     "effect": "自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "いちゃもん",
+     "effect": "相手のバトルポケモンが持つワザを1つ選ぶ。次の相手の番、このワザを受けたポケモンは、選ばれたワザが使えない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-072",
+   "localId": "072",
+   "name": "ロケット団のニューラ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ひっかく",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "ねくびをかく",
+     "effect": "相手のベンチポケモン1匹に、そのポケモンにのっているダメカンの数×20ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-073",
+   "localId": "073",
+   "name": "フォレトス",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "クヌギダマ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "アイアンシェイク",
+     "effect": "自分の場のポケモンについている[M]エネルギーを好きなだけ選び、自分のポケモンに好きなようにつけ替える。",
+     "damage": 20
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハリケーンニードル",
+     "effect": "コインを4回投げ、オモテの数×80ダメージ。",
+     "damage": "80×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-074",
+   "localId": "074",
+   "name": "エアームド",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 110,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はねやすめ",
+     "effect": "このポケモンのHPを「50」回復する。次の自分の番、このポケモンはにげられない。"
+    },
+    {
+     "cost": [
+      "Metal",
+      "Colorless"
+     ],
+     "name": "メタルクロー",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-075",
+   "localId": "075",
+   "name": "ザマゼンタ",
+   "category": "Pokemon",
+   "rarity": "Rare",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ストロングバッシュ",
+     "effect": "次の相手の番、このポケモンがワザのダメージを受けたとき、受けたダメージぶんのダメカンを、ワザを使ったポケモンにのせる。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-076",
+   "localId": "076",
+   "name": "ロケット団のコラッタ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 50,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "あぶないまえば",
+     "effect": "相手のバトルポケモンをどくにする。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-077",
+   "localId": "077",
+   "name": "ロケット団のラッタ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のコラッタ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "むこうみず",
+     "effect": "コインを2回投げ、すべてウラなら、このポケモンにも90ダメージ。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-078",
+   "localId": "078",
+   "name": "ロケット団のニャース",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ねこばば",
+     "effect": "相手の手札からオモテを見ないで1枚選び、そのカードのオモテを見て、相手の山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "みだれひっかき",
+     "effect": "コインを3回投げ、オモテの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-079",
+   "localId": "079",
+   "name": "ロケット団のペルシアンex",
+   "category": "Pokemon",
+   "rarity": "Double rare",
+   "hp": 260,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のニャース",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "こうまんしれい",
+     "effect": "相手の山札を上から10枚オモテにする。のぞむなら、その中にあるポケモンが持つワザを1つ選び、このワザとして使う。オモテにしたカードは山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クルーエルスラッシュ",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-080",
+   "localId": "080",
+   "name": "ガルーラ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ピヨピヨパンチ",
+     "effect": "コインを2回投げ、オモテの数×90ダメージ。",
+     "damage": "90×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-081",
+   "localId": "081",
+   "name": "ロケット団のポリゴン",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ハッキング",
+     "effect": "自分の手札を1枚選び、トラッシュする。その後、相手は相手自身の手札を1枚選び、トラッシュする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-082",
+   "localId": "082",
+   "name": "ロケット団のポリゴン2",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のポリゴン",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "Rコマンド",
+     "effect": "自分のトラッシュにある、名前に「ロケット団」とつくサポートの枚数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-083",
+   "localId": "083",
+   "name": "ロケット団のポリゴンZ",
+   "category": "Pokemon",
+   "rarity": "Uncommon",
+   "hp": 140,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ロケット団のポリゴン２",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "さいこうちく",
+     "effect": "自分の番に、自分の手札を2枚トラッシュするなら、1回使える。自分の山札を1枚引く。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "Rコマンド",
+     "effect": "自分のトラッシュにある、名前に「ロケット団」とつくサポートの枚数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-084",
+   "localId": "084",
+   "name": "スバメ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 60,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つばさでうつ",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-085",
+   "localId": "085",
+   "name": "オオスバメ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "スバメ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "くわえる",
+     "effect": "自分の山札を3枚引く。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードウイング",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-086",
+   "localId": "086",
+   "name": "イキリンコ",
+   "category": "Pokemon",
+   "rarity": "Common",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "つきとばす",
+     "effect": "のぞむなら、相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-087",
+   "localId": "087",
+   "name": "ロケット団のおじゃまロボ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "ウラになっている相手のサイド1枚と、相手の手札からオモテを見ないで1枚選び、それぞれオモテを見る。のぞむなら、選んだカードを相手に入れ替えさせる。（対戦が終わるまで、そのサイドはオモテのまま。）",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-088",
+   "localId": "088",
+   "name": "ロケット団のスーパーボール",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "コインを1回投げる。オモテなら進化ポケモンの「ロケット団のポケモン」、ウラならたねポケモンの「ロケット団のポケモン」を自分の山札から1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-089",
+   "localId": "089",
+   "name": "ロケット団のびっくりボム",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "コインを1回投げオモテなら、相手のポケモン1匹に、ダメカンを2個のせる。ウラなら、自分のバトルポケモンに、ダメカンを2個のせる。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-090",
+   "localId": "090",
+   "name": "ロケット団のレシーバー",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、名前に「ロケット団」とつくサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-091",
+   "localId": "091",
+   "name": "ロケット団のアテナ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札が5枚になるように、山札を引く。自分の場のポケモン全員が「ロケット団のポケモン」なら、8枚になるように引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-092",
+   "localId": "092",
+   "name": "ロケット団のアポロ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、前の相手の番に、自分の「ロケット団のポケモン」がきぜつしていなければ使えない。おたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分は5枚、相手は3枚、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-093",
+   "localId": "093",
+   "name": "ロケット団のサカキ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトル場の「ロケット団のポケモン」を、ベンチの「ロケット団のポケモン」と入れ替える。その後、相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-094",
+   "localId": "094",
+   "name": "ロケット団のラムダ",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からトレーナーズを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-095",
+   "localId": "095",
+   "name": "ロケット団のランス",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、先攻プレイヤーの最初の番でも使える。自分の山札からたねポケモンの「ロケット団のポケモン」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-096",
+   "localId": "096",
+   "name": "ロケット団の監視塔",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場の[C]ポケモン全員の特性は、すべてなくなる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-097",
+   "localId": "097",
+   "name": "ロケット団のファクトリー",
+   "category": "Trainer",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "この番に、手札から、名前に「ロケット団」とつくサポートを出して使っていたプレイヤーは、自分の番ごとに1回、自分の山札を2枚引いてよい。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-098",
+   "localId": "098",
+   "name": "ロケット団エネルギー",
+   "category": "Energy",
+   "rarity": "Uncommon",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは「ロケット団のポケモン」にしかつけられず、「ロケット団のポケモン」以外についているなら、トラッシュする。このカードは、ポケモンについているかぎり、[P][D]の2つのタイプのエネルギー2個ぶんとしてはたらく。",
+   "energyType": "Special",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-099",
+   "localId": "099",
+   "name": "ロケット団のワナイダー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のタマンチュラ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "チャージアップ",
+     "effect": "自分の番に1回使える。自分のトラッシュから基本エネルギーを1枚選び、このポケモンにつける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ロケットラッシュ",
+     "effect": "自分の場の「ロケット団のポケモン」の数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-100",
+   "localId": "100",
+   "name": "ロケット団のヘルガー",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のデルビル",
+   "attacks": [
+    {
+     "cost": [
+      "Fire"
+     ],
+     "name": "あくのひだね",
+     "effect": "相手のバトルポケモンをやけどとこんらんにする。"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless"
+     ],
+     "name": "バーンアウト",
+     "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-101",
+   "localId": "101",
+   "name": "バシャーモ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 170,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ワカシャモ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ヒートブラスト",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Colorless"
+     ],
+     "name": "ごうかれんきゃく",
+     "effect": "このポケモンについているエネルギーを2個トラッシュし、相手のベンチポケモン1匹にも、120ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-102",
+   "localId": "102",
+   "name": "パールル",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "シェルプレス",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-10」される。",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-103",
+   "localId": "103",
+   "name": "ロケット団のソーナンス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ロケットミラー",
+     "effect": "自分のベンチの「ロケット団のポケモン」を1匹選び、選んだポケモンにのっているダメカンをすべて、相手のバトルポケモンにのせ替える。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "とびだしヘッド",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-104",
+   "localId": "104",
+   "name": "ロケット団のイオルブ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ロケット団のレドームシ",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ロケットブレイン",
+     "effect": "自分の番に何回でも使える。自分の場の「ロケット団のポケモン」にのっているダメカンを1個選び、自分の別のポケモンにのせ替える。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "サイコキネシス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×40ダメージ追加。",
+     "damage": "40+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-105",
+   "localId": "105",
+   "name": "ロケット団のマタドガス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のドガース",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "いっせいばくはつ",
+     "effect": "おたがいの場の、名前に「ドガース」または「マタドガス」とつくポケモンの数×40ダメージ。",
+     "damage": "40×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-106",
+   "localId": "106",
+   "name": "ロケット団のヤミカラス",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 80,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "たぶらかす",
+     "effect": "自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "いちゃもん",
+     "effect": "相手のバトルポケモンが持つワザを1つ選ぶ。次の相手の番、このワザを受けたポケモンは、選ばれたワザが使えない。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-107",
+   "localId": "107",
+   "name": "ザマゼンタ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "ストロングバッシュ",
+     "effect": "次の相手の番、このポケモンがワザのダメージを受けたとき、受けたダメージぶんのダメカンを、ワザを使ったポケモンにのせる。",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-108",
+   "localId": "108",
+   "name": "ロケット団のラッタ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 90,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のコラッタ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "むこうみず",
+     "effect": "コインを2回投げ、すべてウラなら、このポケモンにも90ダメージ。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-109",
+   "localId": "109",
+   "name": "ロケット団のニャース",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ねこばば",
+     "effect": "相手の手札からオモテを見ないで1枚選び、そのカードのオモテを見て、相手の山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "みだれひっかき",
+     "effect": "コインを3回投げ、オモテの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-110",
+   "localId": "110",
+   "name": "ガルーラ",
+   "category": "Pokemon",
+   "rarity": "Illustration rare",
+   "hp": 120,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ひっぱたく",
+     "damage": 50
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ピヨピヨパンチ",
+     "effect": "コインを2回投げ、オモテの数×90ダメージ。",
+     "damage": "90×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-111",
+   "localId": "111",
+   "name": "オリーヴァex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 310,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "オリーニョ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "オイルマシンガン",
+     "effect": "相手のポケモンを6回選び、選んだポケモン全員に、弱点・抵抗力を計算せず、選んだ回数×20ダメージ。（1匹を2回以上選べる。）"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "アロマシュート",
+     "effect": "このポケモンの特殊状態を、すべて回復する。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-112",
+   "localId": "112",
+   "name": "ロケット団のファイヤーex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 220,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "フレイムバリア",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-50」される。",
+     "damage": 110
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "イビルバーン",
+     "effect": "このポケモンについている「ロケット団エネルギー」を1枚選び、トラッシュする。その場合、相手のバトルポケモンと、ついているすべてのカードを、トラッシュする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-113",
+   "localId": "113",
+   "name": "ハルクジラex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 300,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "アルクジラ",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ゆきにまぎれる",
+     "effect": "このポケモンは、相手が手札からグッズまたはサポートを出して使ったとき、その効果を受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "クラッシュプレス",
+     "effect": "のぞむなら、場に出ているスタジアムをトラッシュする。その場合、140ダメージ追加。",
+     "damage": "140+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-114",
+   "localId": "114",
+   "name": "ロケット団のミュウツーex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 280,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "パワーセーバー",
+     "effect": "自分の場の「ロケット団のポケモン」が4匹以上のときにしか、このポケモンはワザが使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "イレイザーボール",
+     "effect": "のぞむなら、自分のベンチポケモンについているエネルギーを2枚までトラッシュし、その枚数×60ダメージ追加。",
+     "damage": "160+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-115",
+   "localId": "115",
+   "name": "レジロックex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 230,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "レジチャージ",
+     "effect": "自分のトラッシュから「基本[F]エネルギー」を2枚まで選び、このポケモンにつける。"
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ジャイアントロック",
+     "effect": "相手のバトルポケモンが2進化ポケモンなら、140ダメージ追加。",
+     "damage": "140+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-116",
+   "localId": "116",
+   "name": "ロケット団のニドキングex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ロケット団のニドリーノ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダーティホーン",
+     "effect": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は8個になる。",
+     "damage": 100
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "キングインパクト",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-117",
+   "localId": "117",
+   "name": "ロケット団のクロバットex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 310,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ロケット団のゴルバット",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かみつきまわる",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。相手のポケモン2匹に、それぞれダメカンを2個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "アサシンリターン",
+     "effect": "のぞむなら、このポケモンを手札にもどす。（ポケモン以外のカードは、すべてトラッシュする。）",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-118",
+   "localId": "118",
+   "name": "ロケット団のペルシアンex",
+   "category": "Pokemon",
+   "rarity": "Ultra Rare",
+   "hp": 260,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ロケット団のニャース",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "こうまんしれい",
+     "effect": "相手の山札を上から10枚オモテにする。のぞむなら、その中にあるポケモンが持つワザを1つ選び、このワザとして使う。オモテにしたカードは山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "クルーエルスラッシュ",
+     "effect": "相手のバトルポケモンをこんらんにする。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-119",
+   "localId": "119",
+   "name": "ロケット団のアテナ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札が5枚になるように、山札を引く。自分の場のポケモン全員が「ロケット団のポケモン」なら、8枚になるように引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-120",
+   "localId": "120",
+   "name": "ロケット団のアポロ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、前の相手の番に、自分の「ロケット団のポケモン」がきぜつしていなければ使えない。おたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分は5枚、相手は3枚、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-121",
+   "localId": "121",
+   "name": "ロケット団のサカキ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトル場の「ロケット団のポケモン」を、ベンチの「ロケット団のポケモン」と入れ替える。その後、相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-122",
+   "localId": "122",
+   "name": "ロケット団のラムダ",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札からトレーナーズを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-123",
+   "localId": "123",
+   "name": "ロケット団のランス",
+   "category": "Trainer",
+   "rarity": "Ultra Rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、先攻プレイヤーの最初の番でも使える。自分の山札からたねポケモンの「ロケット団のポケモン」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-124",
+   "localId": "124",
+   "name": "ロケット団のファイヤーex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 220,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "フレイムバリア",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-50」される。",
+     "damage": 110
+    },
+    {
+     "cost": [
+      "Fire",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "イビルバーン",
+     "effect": "このポケモンについている「ロケット団エネルギー」を1枚選び、トラッシュする。その場合、相手のバトルポケモンと、ついているすべてのカードを、トラッシュする。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-125",
+   "localId": "125",
+   "name": "ロケット団のミュウツーex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 280,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "パワーセーバー",
+     "effect": "自分の場の「ロケット団のポケモン」が4匹以上のときにしか、このポケモンはワザが使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "イレイザーボール",
+     "effect": "のぞむなら、自分のベンチポケモンについているエネルギーを2枚までトラッシュし、その枚数×60ダメージ追加。",
+     "damage": "160+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-126",
+   "localId": "126",
+   "name": "ロケット団のニドキングex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 330,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ロケット団のニドリーノ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "ダーティホーン",
+     "effect": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は8個になる。",
+     "damage": 100
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Darkness",
+      "Darkness",
+      "Colorless"
+     ],
+     "name": "キングインパクト",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-127",
+   "localId": "127",
+   "name": "ロケット団のクロバットex",
+   "category": "Pokemon",
+   "rarity": "Special illustration rare",
+   "hp": 310,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ロケット団のゴルバット",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かみつきまわる",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。相手のポケモン2匹に、それぞれダメカンを2個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "アサシンリターン",
+     "effect": "のぞむなら、このポケモンを手札にもどす。（ポケモン以外のカードは、すべてトラッシュする。）",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-128",
+   "localId": "128",
+   "name": "ロケット団のアテナ",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札が5枚になるように、山札を引く。自分の場のポケモン全員が「ロケット団のポケモン」なら、8枚になるように引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-129",
+   "localId": "129",
+   "name": "ロケット団のサカキ",
+   "category": "Trainer",
+   "rarity": "Special illustration rare",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトル場の「ロケット団のポケモン」を、ベンチの「ロケット団のポケモン」と入れ替える。その後、相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-130",
+   "localId": "130",
+   "name": "ロケット団のミュウツーex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 280,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "パワーセーバー",
+     "effect": "自分の場の「ロケット団のポケモン」が4匹以上のときにしか、このポケモンはワザが使えない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "イレイザーボール",
+     "effect": "のぞむなら、自分のベンチポケモンについているエネルギーを2枚までトラッシュし、その枚数×60ダメージ追加。",
+     "damage": "160+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-131",
+   "localId": "131",
+   "name": "ロケット団のクロバットex",
+   "category": "Pokemon",
+   "rarity": "Mega Hyper Rare",
+   "hp": 310,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "ロケット団のゴルバット",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "かみつきまわる",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、1回使える。相手のポケモン2匹に、それぞれダメカンを2個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Darkness",
+      "Darkness"
+     ],
+     "name": "アサシンリターン",
+     "effect": "のぞむなら、このポケモンを手札にもどす。（ポケモン以外のカードは、すべてトラッシュする。）",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  },
+  {
+   "id": "SV10-132",
+   "localId": "132",
+   "name": "ジャミングタワー",
+   "category": "Trainer",
+   "rarity": "Mega Hyper Rare",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのポケモン全員についている「ポケモンのどうぐ」の効果は、すべてなくなる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV10",
+    "name": "ロケット団の栄光"
+   }
+  }
+ ]
+}

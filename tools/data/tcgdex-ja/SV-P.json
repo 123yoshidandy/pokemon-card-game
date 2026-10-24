@@ -1,0 +1,3816 @@
+{
+ "id": "SV-P",
+ "name": "スカーレット&バイオレット プロモカード",
+ "releaseDate": "2022-11-29",
+ "total": 288,
+ "cards": [
+  {
+   "id": "SV-P-037",
+   "localId": "037",
+   "name": "基本草エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-038",
+   "localId": "038",
+   "name": "基本炎エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-039",
+   "localId": "039",
+   "name": "基本水エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-040",
+   "localId": "040",
+   "name": "基本雷エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-041",
+   "localId": "041",
+   "name": "基本超エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-042",
+   "localId": "042",
+   "name": "基本闘エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-043",
+   "localId": "043",
+   "name": "基本悪エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-044",
+   "localId": "044",
+   "name": "基本鋼エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-079",
+   "localId": "079",
+   "name": "基本草エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-080",
+   "localId": "080",
+   "name": "基本炎エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-081",
+   "localId": "081",
+   "name": "基本水エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-082",
+   "localId": "082",
+   "name": "基本雷エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-083",
+   "localId": "083",
+   "name": "基本超エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-084",
+   "localId": "084",
+   "name": "基本闘エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-085",
+   "localId": "085",
+   "name": "基本悪エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-086",
+   "localId": "086",
+   "name": "基本鋼エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-100",
+   "localId": "100",
+   "name": "基本草エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-101",
+   "localId": "101",
+   "name": "基本炎エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-102",
+   "localId": "102",
+   "name": "基本水エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-103",
+   "localId": "103",
+   "name": "基本雷エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-104",
+   "localId": "104",
+   "name": "基本超エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-105",
+   "localId": "105",
+   "name": "基本闘エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-106",
+   "localId": "106",
+   "name": "基本悪エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-107",
+   "localId": "107",
+   "name": "基本鋼エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-121",
+   "localId": "121",
+   "name": "ウパー",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 60,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "みずくみ",
+     "effect": "自分のトラッシュから「基本[W]エネルギー」を3枚まで選び、相手に見せて、山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ずつき",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-122",
+   "localId": "122",
+   "name": "ヌオー",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ウパー",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ころがる",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Water",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ずぶぬれヘッド",
+     "effect": "自分の山札を上から3枚トラッシュし、その中にあるエネルギーの枚数×80ダメージ。",
+     "damage": "80×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-124",
+   "localId": "124",
+   "name": "カラミンゴex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 200,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ジャストビーク",
+     "effect": "このポケモンと相手のバトルポケモンについているエネルギーの数が同じなら、100ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ブレイブバード",
+     "effect": "このポケモンにも30ダメージ。",
+     "damage": 200
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-127",
+   "localId": "127",
+   "name": "タイム",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の手札からポケモンを1枚選び、そのポケモンの名前を相手に伝えてから、ウラにして置く。相手はそのポケモンのHPを答える。ウラにしたポケモンをオモテにして、正解なら、相手は山札を4枚引く。不正解なら、自分は山札を4枚引く。その後、置いたカードを自分の手札にもどす。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-129",
+   "localId": "129",
+   "name": "パチリス",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぱちぱちチャージ",
+     "effect": "コインを3回投げ、オモテの数ぶんまで、自分のトラッシュから「基本[L]エネルギー」を選び、ベンチポケモンに好きなようにつける。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "プチボルト",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-148",
+   "localId": "148",
+   "name": "オーガポン みどりのめん",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 110,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "やまあるき",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "おにがえし",
+     "effect": "相手のベンチポケモンの数×20ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-149",
+   "localId": "149",
+   "name": "鬼の仮面",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュから、名前に「オーガポン」とつく「ポケモンex」を1枚選び、自分の場の、名前に「オーガポン」とつく「ポケモンex」1匹と入れ替える（ついているカード・ダメカン・特殊状態・効果などは、すべて引きつぐ）。入れ替えたポケモンはトラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-150",
+   "localId": "150",
+   "name": "なかよしポフィン",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、HPが「70」以下のたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-151",
+   "localId": "151",
+   "name": "ミライドン",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 110,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "アクセルピーク",
+     "effect": "自分の山札から基本エネルギーを2枚まで選び、自分の「未来」のポケモンに好きなようにつける。そして山札を切る。",
+     "damage": 40
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Psychic"
+     ],
+     "name": "スパーキングアタック",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-152",
+   "localId": "152",
+   "name": "コライドン",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 140,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "げんせいらんだ",
+     "effect": "自分の場の「古代」のポケモンの数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Fire",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "ひきさく",
+     "effect": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-153",
+   "localId": "153",
+   "name": "ネモ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を3枚引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-156",
+   "localId": "156",
+   "name": "ミミッキュ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しんぴのまもり",
+     "effect": "このポケモンは、相手の「ポケモンex・V」からワザのダメージを受けない。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Psychic",
+      "Colorless"
+     ],
+     "name": "ゴーストアイ",
+     "effect": "相手のバトルポケモンに、ダメカンを7個のせる。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-158",
+   "localId": "158",
+   "name": "ズルズキン",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 120,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ズルッグ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "かっぱらう",
+     "effect": "自分のベンチポケモンの数ぶんまで、自分の山札から好きなカードを選び、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Darkness",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "とびひざげり",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-159",
+   "localId": "159",
+   "name": "ふしぎなアメ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のたねポケモン1匹から進化する1進化の上の2進化ポケモンを、手札から1枚選び、そのたねポケモンにのせて進化させる。[最初の自分の番と、この番出したばかりのたねポケモンには使えない。]",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-161",
+   "localId": "161",
+   "name": "ナンジャモ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、それぞれ自分の手札をすべてウラにして切り、山札の下にもどす。その後、それぞれ自分のサイドの残り枚数ぶん、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-162",
+   "localId": "162",
+   "name": "ザルード",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 120,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass"
+     ],
+     "name": "もぎとる",
+     "effect": "自分の山札から「基本[G]エネルギー」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Grass"
+     ],
+     "name": "ハンマーウィップ",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 130
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-163",
+   "localId": "163",
+   "name": "ヤンヤンマ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 60,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Colorless"
+     ],
+     "name": "サイレントウイング",
+     "effect": "相手の手札を見る。",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-164",
+   "localId": "164",
+   "name": "メガヤンマ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 130,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヤンヤンマ",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Grass",
+      "Colorless"
+     ],
+     "name": "ジャイロソニック",
+     "effect": "このポケモンをベンチポケモンと入れ替える。",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-165",
+   "localId": "165",
+   "name": "ミガルーサex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 210,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Water"
+     ],
+     "name": "ひれカッター",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "パージストライク",
+     "effect": "のぞむなら、自分の手札をすべてトラッシュする。トラッシュした場合、120ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-170",
+   "localId": "170",
+   "name": "ビリオとネア",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を2枚引く。その後、自分の手札が10枚以上あるなら、さらに2枚引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-171",
+   "localId": "171",
+   "name": "ゼイユ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、先攻プレイヤーの最初の番でも使える。自分の手札をすべてトラッシュし、山札を5枚引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-172",
+   "localId": "172",
+   "name": "ガルーラ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 130,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "なかまをよぶ",
+     "effect": "自分の山札からたねポケモンを1枚選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "メガトンパンチ",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-173",
+   "localId": "173",
+   "name": "ヨルノズク",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 100,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ホーホー",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ほうせきさがし",
+     "effect": "自分の番に、このカードを手札から出して進化させたとき、自分の場に「テラスタル」のポケモンがいるなら、1回使える。自分の山札からトレーナーズを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "スピードウイング",
+     "damage": 60
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-174",
+   "localId": "174",
+   "name": "おいわいファンファーレ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分のポケモン全員のHPを、それぞれ「10」回復してよい。その場合、自分の番は終わる。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-175",
+   "localId": "175",
+   "name": "基本草エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-176",
+   "localId": "176",
+   "name": "基本炎エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-177",
+   "localId": "177",
+   "name": "基本水エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-178",
+   "localId": "178",
+   "name": "基本雷エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-179",
+   "localId": "179",
+   "name": "基本超エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-180",
+   "localId": "180",
+   "name": "基本闘エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-181",
+   "localId": "181",
+   "name": "基本悪エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-182",
+   "localId": "182",
+   "name": "基本鋼エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-183",
+   "localId": "183",
+   "name": "アローラ ナッシーex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 300,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "タマタマ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Grass",
+      "Water"
+     ],
+     "name": "トロピカルフィーバー",
+     "effect": "自分の手札から基本エネルギーを好きなだけ選び、自分のポケモンに好きなようにつける。",
+     "damage": 150
+    },
+    {
+     "cost": [
+      "Grass",
+      "Water",
+      "Fighting"
+     ],
+     "name": "ブンブンスフェーン",
+     "effect": "コインを1回投げオモテなら、相手のバトル場のたねポケモンをきぜつさせる。ウラなら、相手のベンチのたねポケモンを1匹選び、きぜつさせる。"
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-184",
+   "localId": "184",
+   "name": "ベラカスex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 250,
+   "types": [
+    "Grass"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シガロコ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "さかさまドロー",
+     "effect": "自分の山札を下から3枚引く。"
+    },
+    {
+     "cost": [
+      "Grass",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "サイコキネシス",
+     "effect": "相手のバトルポケモンについているエネルギーの数×90ダメージ追加。",
+     "damage": "20+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-186",
+   "localId": "186",
+   "name": "ヒポポタス",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 90,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "つきとばす",
+     "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］",
+     "damage": 10
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-187",
+   "localId": "187",
+   "name": "カバルドン",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 160,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ヒポポタス",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "ぶつかる",
+     "damage": 60
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting",
+      "Colorless"
+     ],
+     "name": "おおすなあらし",
+     "effect": "ダメカンがのっているおたがいのベンチポケモン全員にも、それぞれ40ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 150
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 4,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-189",
+   "localId": "189",
+   "name": "わざマシンマシン",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、名前に「ワザマシン」とつく「ポケモンのどうぐ」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-191",
+   "localId": "191",
+   "name": "アカマツ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、それぞれちがうタイプの基本エネルギーを2枚まで選び、相手に見せて、どちらか1枚を手札に加え、残りのエネルギーを自分のポケモンにつける。そして山札を切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-192",
+   "localId": "192",
+   "name": "ニャース",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "みだれひっかき",
+     "effect": "コインを3回投げ、オモテの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-193",
+   "localId": "193",
+   "name": "パルデア ウパー",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 60,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ころばす",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-194",
+   "localId": "194",
+   "name": "スイクン",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "かけぬける",
+     "effect": "相手のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "オーロラビーム",
+     "damage": 100
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-195",
+   "localId": "195",
+   "name": "ジュラルドン",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 130,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Metal"
+     ],
+     "name": "ぶちかます",
+     "damage": 30
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal",
+      "Colorless"
+     ],
+     "name": "レイジングハンマー",
+     "effect": "このポケモンにのっているダメカンの数×10ダメージ追加。",
+     "damage": "80+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-196",
+   "localId": "196",
+   "name": "イーブイ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "カラフルキャッチ",
+     "effect": "自分の山札から、それぞれちがうタイプの基本エネルギーを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ずつき",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-197",
+   "localId": "197",
+   "name": "ピカチュウ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "げきとうスパーク",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-198",
+   "localId": "198",
+   "name": "イーブイ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "カラフルキャッチ",
+     "effect": "自分の山札から、それぞれちがうタイプの基本エネルギーを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ずつき",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-199",
+   "localId": "199",
+   "name": "リーリエのキュワワー",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "はなまねき",
+     "effect": "自分の山札からたねポケモンの「リーリエのポケモン」を好きなだけ選び、ベンチに出す。そして山札を切る。"
+    },
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ぱっときえる",
+     "effect": "このポケモンと、ついているすべてのカードを、手札にもどす。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-200",
+   "localId": "200",
+   "name": "Nのゾロア",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Darkness"
+     ],
+     "name": "ひっかく",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-201",
+   "localId": "201",
+   "name": "シャリタツ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きゃくよせ",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札を上から6枚見て、その中からサポートを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Water"
+     ],
+     "name": "なみのり",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-202",
+   "localId": "202",
+   "name": "基本草エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-203",
+   "localId": "203",
+   "name": "基本炎エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-204",
+   "localId": "204",
+   "name": "基本水エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-205",
+   "localId": "205",
+   "name": "基本雷エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-206",
+   "localId": "206",
+   "name": "基本超エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-207",
+   "localId": "207",
+   "name": "基本闘エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-208",
+   "localId": "208",
+   "name": "基本悪エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-209",
+   "localId": "209",
+   "name": "基本鋼エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-210",
+   "localId": "210",
+   "name": "ハッサムex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 270,
+   "types": [
+    "Metal"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ストライク",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "はがねのつばさ",
+     "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-50」される。",
+     "damage": 70
+    },
+    {
+     "cost": [
+      "Metal",
+      "Metal"
+     ],
+     "name": "クロスブレイカー",
+     "effect": "このポケモンについている[M]エネルギーを2枚までトラッシュし、その枚数×120ダメージ。",
+     "damage": "120×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fire",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Grass",
+     "value": "-30"
+    }
+   ],
+   "retreat": 2,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-211",
+   "localId": "211",
+   "name": "改造ハンマー",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "相手のポケモンについている特殊エネルギーを1個選び、トラッシュする。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-212",
+   "localId": "212",
+   "name": "ゼブライカ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 120,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "シママ",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ぜんそくりょく",
+     "effect": "自分の手札をすべてトラッシュし、山札を6枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ヘッドボルト",
+     "damage": 70
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-216",
+   "localId": "216",
+   "name": "ピカチュウ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "でんじスパーク",
+     "effect": "相手のポケモン1匹に、10ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-232",
+   "localId": "232",
+   "name": "ナンジャモのカイデン",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning"
+     ],
+     "name": "でんこうせっか",
+     "effect": "コインを1回投げオモテなら、20ダメージ追加。",
+     "damage": "10+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-233",
+   "localId": "233",
+   "name": "ホップのバチンウニex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 200,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "はんげきばり",
+     "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを3個のせる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "スパイクサンダー",
+     "effect": "自分の山札を2枚引く。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-234",
+   "localId": "234",
+   "name": "フワンテ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ひっぱる",
+     "effect": "コインを1回投げオモテなら、相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-235",
+   "localId": "235",
+   "name": "フワライド",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 110,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "フワンテ",
+   "attacks": [
+    {
+     "cost": [
+      "Psychic"
+     ],
+     "name": "ぶきみなかぜ",
+     "effect": "相手のバトルポケモンをこんらんにする。"
+    },
+    {
+     "cost": [
+      "Psychic",
+      "Psychic"
+     ],
+     "name": "バルーンリターン",
+     "effect": "このポケモンと、ついているすべてのカードを、手札にもどす。",
+     "damage": 110
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Darkness",
+     "value": "x2"
+    }
+   ],
+   "resistances": [
+    {
+     "type": "Fighting",
+     "value": "-30"
+    }
+   ],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-236",
+   "localId": "236",
+   "name": "シャリタツ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Dragon"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "きゃくよせ",
+     "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札を上から6枚見て、その中からサポートを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Water"
+     ],
+     "name": "なみのり",
+     "damage": 50
+    }
+   ],
+   "weaknesses": [],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-237",
+   "localId": "237",
+   "name": "なかよしポフィン",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、HPが「70」以下のたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-239",
+   "localId": "239",
+   "name": "ポケモンセンターのお姉さん",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のポケモンを1匹選び、そのポケモンのHPを「60」回復し、特殊状態もすべて回復する。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-240",
+   "localId": "240",
+   "name": "カキツバタ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を上から7枚見て、その中からポケモンとトレーナーズを1枚ずつ選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-241",
+   "localId": "241",
+   "name": "オーダイル",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 180,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "アリゲイツ",
+   "attacks": [
+    {
+     "cost": [
+      "Water",
+      "Water",
+      "Water",
+      "Colorless"
+     ],
+     "name": "ディープダイビング",
+     "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。",
+     "damage": 140
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-242",
+   "localId": "242",
+   "name": "ピカチュウ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "くつろぐ",
+     "effect": "このポケモンのHPを「20」回復する。"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-243",
+   "localId": "243",
+   "name": "ストリンダーex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 260,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "エレズン",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "ストラムサンダー",
+     "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-244",
+   "localId": "244",
+   "name": "なかよしポフィン",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札から、HPが「70」以下のたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-249",
+   "localId": "249",
+   "name": "からておうの稽古",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "この番、自分のポケモンが使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+40」される。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-250",
+   "localId": "250",
+   "name": "ポケモンセンターのお姉さん",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のポケモンを1匹選び、そのポケモンのHPを「60」回復し、特殊状態もすべて回復する。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-251",
+   "localId": "251",
+   "name": "エキサイトスタジアム",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "おたがいの場のたねポケモン全員の最大HPは、それぞれ「＋30」される。",
+   "trainerType": "Stadium",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-254",
+   "localId": "254",
+   "name": "ヒビキのホウオウex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 230,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "こんじきのほのお",
+     "effect": "自分の番に1回使える。自分の手札から「基本[R]エネルギー」を2枚まで選び、ベンチの「ヒビキのポケモン」1匹につける。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire",
+      "Fire",
+      "Fire"
+     ],
+     "name": "シャイニングフェザー",
+     "effect": "自分のポケモン全員のHPを、それぞれ「50」回復する。",
+     "damage": 160
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-255",
+   "localId": "255",
+   "name": "シロナのガブリアスex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 330,
+   "types": [
+    "Fighting"
+   ],
+   "stage": "Stage2",
+   "evolveFrom": "シロナのガバイト",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Fighting"
+     ],
+     "name": "スクリューダイブ",
+     "effect": "のぞむなら、自分の手札が6枚になるように、山札を引く。",
+     "damage": 100
+    },
+    {
+     "cost": [
+      "Fighting",
+      "Fighting"
+     ],
+     "name": "リューノバスター",
+     "effect": "このポケモンについているエネルギーを、すべてトラッシュする。",
+     "damage": 260
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 0,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-256",
+   "localId": "256",
+   "name": "ペパーのマフィティフex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 270,
+   "types": [
+    "Darkness"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "ペパーのオラチフ",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ハッスルタックル",
+     "effect": "このポケモンにダメカンがのっていないなら、120ダメージ追加。",
+     "damage": "30+"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おやぶんヘッド",
+     "effect": "次の自分の番、このポケモンは「おやぶんヘッド」が使えない。",
+     "damage": 210
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Grass",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-257",
+   "localId": "257",
+   "name": "ナンジャモのズピカ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 60,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Lightning",
+      "Colorless"
+     ],
+     "name": "プチでんき",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-258",
+   "localId": "258",
+   "name": "ガチグマ アカツキex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 260,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "ろうれんのわざ",
+     "effect": "相手がすでにとったサイドの枚数ぶん、このポケモンが「ブラッドムーン」を使うための[C]エネルギーは少なくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ブラッドムーン",
+     "effect": "次の自分の番、このポケモンはワザが使えない。",
+     "damage": 240
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 3,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-259",
+   "localId": "259",
+   "name": "ロケット団のニャース",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless"
+     ],
+     "name": "ねこばば",
+     "effect": "相手の手札からオモテを見ないで1枚選び、そのカードのオモテを見て、相手の山札にもどして切る。"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "みだれひっかき",
+     "effect": "コインを3回投げ、オモテの数×20ダメージ。",
+     "damage": "20×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-260",
+   "localId": "260",
+   "name": "トウホクのピカチュウ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "リニューアルオープン！",
+     "effect": "自分の山札を2枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "おどりまわる",
+     "effect": "ウラが出るまでコインを投げ、オモテの数×30ダメージ。",
+     "damage": "30×"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-261",
+   "localId": "261",
+   "name": "ヒロシマのピカチュウ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "リニューアルオープン！",
+     "effect": "自分の山札を2枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "のりこなす",
+     "effect": "コインを1回投げオモテなら、30ダメージ追加。",
+     "damage": "30+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-262",
+   "localId": "262",
+   "name": "コダック",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Water"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しめりけ",
+     "effect": "このポケモンがいるかぎり、おたがいのポケモン全員は、そのポケモン自身をきぜつさせる効果の特性が、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ぶつかる",
+     "damage": 20
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-263",
+   "localId": "263",
+   "name": "ゴルダック",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 120,
+   "types": [
+    "Water"
+   ],
+   "stage": "Stage1",
+   "evolveFrom": "コダック",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "しめりけ",
+     "effect": "このポケモンがいるかぎり、おたがいのポケモン全員は、そのポケモン自身をきぜつさせる効果の特性が、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "ハイドロポンプ",
+     "effect": "このポケモンについている[W]エネルギーの数×20ダメージ追加。",
+     "damage": "60+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Lightning",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-264",
+   "localId": "264",
+   "name": "ハバタクカミ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 90,
+   "types": [
+    "Psychic"
+   ],
+   "stage": "Basic",
+   "abilities": [
+    {
+     "type": "Ability",
+     "name": "あんやのはばたき",
+     "effect": "このポケモンがバトル場にいるかぎり、相手のバトルポケモンの特性（「あんやのはばたき」をのぞく）は、すべてなくなる。"
+    }
+   ],
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たたりとばす",
+     "effect": "ダメカン2個を、相手のベンチポケモンに好きなようにのせる。",
+     "damage": 90
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Metal",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-265",
+   "localId": "265",
+   "name": "ロケット団のガルーラex",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 230,
+   "types": [
+    "Colorless"
+   ],
+   "stage": "Basic",
+   "suffix": "EX",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "れんぞくパンチ",
+     "effect": "コインを4回投げ、オモテの数×30ダメージ。",
+     "damage": "30×"
+    },
+    {
+     "cost": [
+      "Colorless",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "バッドインパクト",
+     "effect": "この番に、手札から、名前に「ロケット団」とつくサポートを出して使っていたなら、100ダメージ追加。",
+     "damage": "120+"
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 2,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-266",
+   "localId": "266",
+   "name": "夜のタンカ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のトラッシュからポケモンまたは基本エネルギーを1枚選び、相手に見せて、手札に加える。",
+   "trainerType": "Item",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-267",
+   "localId": "267",
+   "name": "ロケット団のさいみん装置",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードをつけている「ロケット団のポケモン」が、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンをねむりにする。",
+   "trainerType": "Tool",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-268",
+   "localId": "268",
+   "name": "スグリ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "H",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、2つの効果から1つを選んで使う。◆自分のバトルポケモンをベンチポケモンと入れ替える。◆この番、自分のポケモンが使うワザの、相手のバトル場の「ポケモンex・V」へのダメージは「+30」される。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-269",
+   "localId": "269",
+   "name": "アイリスの闘志",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "このカードは、自分の手札を1枚トラッシュしなければ使えない。自分の手札が6枚になるように、山札を引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-270",
+   "localId": "270",
+   "name": "ロケット団のサカキ",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分のバトル場の「ロケット団のポケモン」を、ベンチの「ロケット団のポケモン」と入れ替える。その後、相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-271",
+   "localId": "271",
+   "name": "ビクティニ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "Vフォース",
+     "effect": "自分のベンチポケモンが4匹以下なら、このワザは失敗。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-279",
+   "localId": "279",
+   "name": "チェレン",
+   "category": "Trainer",
+   "rarity": "Promo",
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "effect": "自分の山札を3枚引く。",
+   "trainerType": "Supporter",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-280",
+   "localId": "280",
+   "name": "基本草エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-281",
+   "localId": "281",
+   "name": "基本炎エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-282",
+   "localId": "282",
+   "name": "基本水エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-283",
+   "localId": "283",
+   "name": "基本雷エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-284",
+   "localId": "284",
+   "name": "基本超エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-285",
+   "localId": "285",
+   "name": "基本闘エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-286",
+   "localId": "286",
+   "name": "基本悪エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-287",
+   "localId": "287",
+   "name": "基本鋼エネルギー",
+   "category": "Energy",
+   "rarity": "Promo",
+   "legal": {
+    "standard": true,
+    "expanded": true
+   },
+   "effect": "&copy;Pokémon/Nintendo/Creatures/GAME FREAK ポケットモンスター・ポケモン・Pokémonは任天堂・クリーチャーズ・ゲームフリークの商標です。 このホームページに掲載された画像その他の内容の無断転載はお断りします。",
+   "energyType": "Normal",
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-288",
+   "localId": "288",
+   "name": "ビクティニ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 80,
+   "types": [
+    "Fire"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Fire",
+      "Fire"
+     ],
+     "name": "Vフォース",
+     "effect": "自分のベンチポケモンが4匹以下なら、このワザは失敗。",
+     "damage": 120
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Water",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  },
+  {
+   "id": "SV-P-289",
+   "localId": "289",
+   "name": "フクオカのピカチュウ",
+   "category": "Pokemon",
+   "rarity": "Promo",
+   "hp": 70,
+   "types": [
+    "Lightning"
+   ],
+   "stage": "Basic",
+   "attacks": [
+    {
+     "cost": [
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "リニューアルオープン！",
+     "effect": "自分の山札を2枚引く。"
+    },
+    {
+     "cost": [
+      "Lightning",
+      "Colorless",
+      "Colorless"
+     ],
+     "name": "たべあるく",
+     "effect": "このポケモンのHPを「30」回復する。",
+     "damage": 30
+    }
+   ],
+   "weaknesses": [
+    {
+     "type": "Fighting",
+     "value": "x2"
+    }
+   ],
+   "resistances": [],
+   "retreat": 1,
+   "regulationMark": "I",
+   "legal": {
+    "standard": true,
+    "expanded": false
+   },
+   "set": {
+    "id": "SV-P",
+    "name": "スカーレット&バイオレット プロモカード"
+   }
+  }
+ ]
+}

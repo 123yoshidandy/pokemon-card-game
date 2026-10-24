@@ -32,7 +32,8 @@ export const CONDITION_NAMES = {
 const newTurnState = () => ({
     energyAttached: false,
     supporterPlayed: false,
-    supporterNames: [], // この番に使ったサポートの名前
+    supporterNames: [], // この番に使ったサポートの名前と、カードのID
+    supporterIds: [],
     stadiumPlayed: false,
     stadiumUsed: false,
     retreated: false,
@@ -315,6 +316,8 @@ export default class Game {
             const taker = this.opponentOf(player);
             const count = Math.min(prizes, taker.prizes.length);
             const taken = taker.prizes.splice(0, count);
+            // その番にとったサイドの枚数（「前の相手の番に、相手がとったサイドの枚数」に使う）
+            taker.prizesTakenLog = { turn: this.turn, count: (taker.prizesTakenLog?.turn === this.turn ? taker.prizesTakenLog.count : 0) + count };
             taker.hand.push(...taken);
             this.log(`${taker.name}はサイドを${count}枚取った（残り${taker.prizes.length}枚）`);
             this.log(`サイドから${taken.map(inst => this.cardName(inst)).join('と')}を手札に加えた`, { to: taker.id });
@@ -470,6 +473,7 @@ export default class Game {
         const inst = this.findInHand(player, uid);
         if (!inst || !isBasicPokemon(this.cardOf(inst))) return 'たねポケモンを選んでください';
         if (player.bench.length >= BENCH_SIZE) return 'ベンチがいっぱいです';
+        if (this.cardOf(inst).ability?.cannotPlayFromHand) return `${this.cardName(inst)}は手札から出せません`;
         const blocked = this.hookAny('blockPlayPokemon', player, this.cardOf(inst));
         if (blocked) return typeof blocked === 'string' ? blocked : '今はポケモンを出せません';
         return null;
@@ -481,7 +485,11 @@ export default class Game {
         if (!card || card.kind !== 'pokemon' || card.stage === 0) return '進化ポケモンを選んでください';
         const target = this.ownPokemon(player, targetId);
         if (!target) return '進化させるポケモンを選んでください';
-        if (this.topCard(target).name !== card.evolvesFrom) return `${card.name}は${this.topCard(target).name}から進化しません`;
+        if (card.ability?.cannotPlayFromHand) return `${card.name}は手札から出せません`;
+        // 特性などで、進化元の名前と違うポケモンにのせて進化できることがある（フック allowEvolveOnto）
+        if (this.topCard(target).name !== card.evolvesFrom && !this.hookAny('allowEvolveOnto', player, target, card)) {
+            return `${card.name}は${this.topCard(target).name}から進化しません`;
+        }
         const blocked = this.hookAny('blockPlayPokemon', player, card) || this.hookAny('blockEvolve', player, target, card);
         if (blocked) return typeof blocked === 'string' ? blocked : '今は進化できません';
         return this.checkCanEvolveNow(player, target, card);
@@ -665,6 +673,7 @@ export default class Game {
             case 'supporter':
                 this.turnState.supporterPlayed = true;
                 this.turnState.supporterNames.push(card.name);
+                this.turnState.supporterIds.push(card.id);
                 break;
         }
         // グッズとサポートは、効果を終えてからトラッシュする（afterPlay があれば、使ったカードの行き先はそれが決める）
@@ -696,6 +705,12 @@ export default class Game {
         const cost = this.retreatCost(active);
         const target = player.bench.find(pokemon => pokemon.id === targetId);
         const finish = discarded => {
+            // 相手の特性などで、にげるときにコインを投げ、ウラならにげられないことがある（フック retreatCoinFlip。重ならない）
+            if (this.hookAny('retreatCoinFlip', player, active) && !this.flipCoin()) {
+                this.turnState.retreated = true;
+                this.log(`${this.topCard(active).name}はにげられなかった`);
+                return;
+            }
             discarded.forEach(inst => this.moveCard(active.energies, player.discard, inst));
             this.turnState.retreated = true;
             this.log(`${this.topCard(active).name}はにげた`);
@@ -738,10 +753,14 @@ export default class Game {
                 this.currentAttack = ctx; // 使っている途中のワザ（フックが、ワザを使ったポケモンを知るため）
                 if (this.hasCondition(attacker, 'confused') && !this.flipCoin()) {
                     ctx.failed = true;
-                    attacker.damage += CONFUSION_DAMAGE;
-                    this.log(`こんらんでワザが失敗し、${this.topCard(attacker).name}に${CONFUSION_DAMAGE}ダメージ`);
+                    const confusion = attacker.confusionDamage ?? CONFUSION_DAMAGE;
+                    attacker.damage += confusion;
+                    this.log(`こんらんでワザが失敗し、${this.topCard(attacker).name}に${confusion}ダメージ`);
                     return;
                 }
+                // 前に使ったワザ（「前の自分の番、ほかのポケモンがワザを使っていたなら」に使う）
+                player.previousAttack = player.lastAttack ?? null;
+                player.lastAttack = { turn: this.turn, pokemonId: attacker.id, cardId: this.topCard(attacker).id, attack: attack.name };
                 // 前の相手の番のワザの効果で、コインのウラならワザが失敗する
                 if (this.hasEffect(attacker, 'attackCoinFlip') && !this.flipCoin()) {
                     ctx.failed = true;
@@ -789,6 +808,7 @@ export default class Game {
         if (guarded('preventAll') || guarded('preventDamage')
             || (guarded('preventDamageFromBasic') && attackerCard.stage === 0)
             || (guarded('preventDamageFromEx') && isPokemonEx(attackerCard))
+            || (guarded('preventDamageFromAncient') && attackerCard.ancient)
             || (opposing && this.hookAny('preventDamage', ctx, target))) {
             this.log(`${card.name}はワザのダメージを受けない`);
             return 0;
@@ -826,6 +846,11 @@ export default class Game {
         target.damage += damage;
         this.log(`${card.name}に${damage}ダメージ`);
         if (target === ctx.defender) ctx.dealt = (ctx.dealt ?? 0) + damage;
+        // その番に受けたワザのダメージ（「前の相手の番に受けたダメージ」に使う）
+        if (opposing && damage > 0) {
+            const log = target.damageTakenLog;
+            target.damageTakenLog = { turn: this.turn, amount: (log?.turn === this.turn ? log.amount : 0) + damage };
+        }
         // ダメージの計算が終わった後（0でも呼ぶ。きのみのように、働いた後にトラッシュするカードのため）
         if (opposing) this.hookAll('afterAttackDamage', ctx, target, damage);
         // ダメージを受けたら、ワザを使ったポケモンにダメカンをのせる効果
@@ -868,6 +893,7 @@ export default class Game {
         }
         if (condition === 'poisoned' || condition === 'burned') pokemon[condition] = true;
         else pokemon.rotation = condition;
+        if (condition === 'confused') pokemon.confusionDamage = null; // こんらんでのせるダメージ（null なら30。効果で変わる）
         this.log(`${this.topCard(pokemon).name}は${CONDITION_NAMES[condition]}になった`);
     }
 
@@ -875,8 +901,14 @@ export default class Game {
         pokemon.rotation = null;
         pokemon.poisoned = false;
         pokemon.poisonDamage = null;
+        pokemon.confusionDamage = null;
         pokemon.burned = false;
         pokemon.effects = [];
+    }
+
+    // カードの効果で勝つ（「この対戦は自分の勝ちになる」）
+    winByEffect(player, message) {
+        this.endGame(player.id, 'effect', message);
     }
 
     // 特殊状態にならない効果（フック conditionImmune）がかかっているか
@@ -1024,6 +1056,13 @@ export default class Game {
         const milled = player.deck.splice(0, count);
         player.discard.push(...milled);
         if (milled.length) this.log(`${player.name}は山札を上から${milled.length}枚トラッシュした（${milled.map(inst => this.cardName(inst)).join('・')}）`);
+        // 相手の番に、相手の効果で山札からトラッシュされたときに働く特性（カードの ability.onMilled）
+        if (player.id !== this.current) {
+            milled.forEach(inst => {
+                const ability = this.cardOf(inst).ability;
+                if (ability?.onMilled) this.runNext(() => ability.onMilled(this, player, inst));
+            });
+        }
     }
 
     // 手札からオモテを見ないで選ぶ（乱数はシード付きなので、記録から再現できる）
@@ -1298,7 +1337,8 @@ export default class Game {
 
     // ワザを使うためのエネルギー（特性・どうぐなどで変わることがある）
     attackCost(pokemon, attack) {
-        let cost = [...attack.cost];
+        // ワザ自身が、そのときの状況でコストを変えることがある（attack.costFor）
+        let cost = [...(attack.costFor?.(this, pokemon) ?? attack.cost)];
         for (const source of this.passiveSources()) {
             const changed = source.hooks.attackCost?.(this, source, pokemon, attack, cost);
             if (changed) cost = changed;
@@ -1310,7 +1350,8 @@ export default class Game {
     energyUnits(pokemon, energies = pokemon.energies) {
         return energies.flatMap(inst => {
             const card = this.cardOf(inst);
-            if (card.basic) return [card.energyType];
+            // 特性などで、基本エネルギーが2個ぶんになることがある（フック basicEnergyProvides。重ならない）
+            if (card.basic) return this.hookAny('basicEnergyProvides', pokemon, inst, card) ?? [card.energyType];
             return card.provides ? card.provides(this, pokemon, inst) : ['colorless'];
         });
     }

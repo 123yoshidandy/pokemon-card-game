@@ -30,8 +30,8 @@ const choose = (game, indices) => {
 describe('読み替えられないワザ（そのb）', () => {
     it('すべて書いたカードは使えるようになる', () => {
         ['SV11W-110', 'SV11W-141', 'SV11W-152', 'SV6a-005', 'SV6a-078', 'SV7-060', 'SV9-057', 'SV8a-212'].forEach(id => expect(CARDS[id].supported).toBe(true));
-        // 「未来」のサポートを見るワザが残っているので、テツノブジンはまだ使えない
-        expect(CARDS['SV5M-035'].supported).toBe(false);
+        // 「未来」のサポートを見るワザ（マジェスティソード）も書いたので、テツノブジンも使える
+        expect(CARDS['SV5M-035'].supported).toBe(true);
     });
 
     it('ダブルフリーズ（バイバニラ）：オモテの数×90ダメージ。1回でもオモテならマヒ', () => {

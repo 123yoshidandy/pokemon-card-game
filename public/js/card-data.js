@@ -26,6 +26,7 @@ import { ABILITY_EFFECTS as ABILITIES_A } from './cards/abilities/abilities-a.js
 import { ABILITY_EFFECTS as ABILITIES_B } from './cards/abilities/abilities-b.js';
 import { ABILITY_EFFECTS as ABILITIES_C } from './cards/abilities/abilities-c.js';
 import { ABILITY_EFFECTS as ABILITIES_TAGS } from './cards/abilities/abilities-tags.js';
+import { ABILITY_EFFECTS as ABILITIES_MORE } from './cards/abilities/abilities-more.js';
 import { TRAINER_EFFECTS as TRAINERS_BASE } from './cards/trainer-effects.js';
 import { TRAINER_EFFECTS as SUPPORTERS } from './cards/trainers/supporters.js';
 import { TRAINER_EFFECTS as ITEMS } from './cards/trainers/items.js';
@@ -40,7 +41,7 @@ const ATTACK_OVERRIDES = { ...OVERRIDES_BASE, ...OVERRIDES_A, ...OVERRIDES_B };
 // 効果は、種類ごとのファイルに分けて書く（同じ名前があれば、後のファイルのものを使う）
 const TRAINER_EFFECTS = { ...TRAINERS_BASE, ...SUPPORTERS, ...ITEMS, ...TOOLS, ...STADIUMS, ...EXTRAS };
 // 特性は「カード名/特性名」か「特性名」で引く（同じ名前・同じ文の特性を持つカードは、特性名だけで書ける）
-const ABILITY_EFFECTS = { ...ABILITIES_BASE, ...ABILITIES_A, ...ABILITIES_B, ...ABILITIES_C, ...ABILITIES_TAGS };
+const ABILITY_EFFECTS = { ...ABILITIES_BASE, ...ABILITIES_A, ...ABILITIES_B, ...ABILITIES_C, ...ABILITIES_TAGS, ...ABILITIES_MORE };
 
 export const TYPE_NAMES = {
     grass: '草',

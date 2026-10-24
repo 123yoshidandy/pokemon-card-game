@@ -527,6 +527,42 @@ export const TRAINER_EFFECTS = {
         cpuWants: (game, player) => countTagged(game, player, 'tera') > 0 && player.bench.length >= 4
     },
 
+    'バトルコロシアム': {
+        hooks: {
+            // おたがいのベンチポケモン全員は、相手のワザや特性の効果で、ダメカンがのらない（ワザのダメージは受ける）
+            preventEffectsFrom: (game, source, effect, target, effectKind) => effectKind === 'counters'
+                && (effect.kind === 'attack' || effect.kind === 'ability') && !isActive(game, target)
+        },
+        cpuWants: () => true
+    },
+    'ポケバイタルA': {
+        // 自分のポケモン1匹のHPを「150」回復する。このカードは、トラッシュにあるかぎり、手札に加えられず、山札にもどせない
+        lockedInDiscard: true,
+        canPlay: (game, player) => game.inPlay(player).some(pokemon => pokemon.damage > 0),
+        play: (game, player) => game.promptPokemon({
+            player,
+            pokemon: game.inPlay(player).filter(pokemon => pokemon.damage > 0),
+            min: 1,
+            max: 1,
+            title: 'HPを150回復するポケモンを選ぶ',
+            purpose: 'potion',
+            callback: ([target]) => game.heal(target, 150)
+        }),
+        cpuWants: (game, player) => game.inPlay(player).some(pokemon => pokemon.damage >= 120)
+    },
+    'ニュートラルセンター': {
+        // おたがいのポケモン（ルールを持つポケモンをのぞく）全員は、相手の「ポケモンex・V」からワザのダメージを受けない
+        // このカードは、トラッシュにあるかぎり、手札に加えられず、山札にもどせない
+        lockedInDiscard: true,
+        hooks: {
+            preventDamage: (game, source, ctx, target) => !game.topCard(target).rule && isPokemonEx(game.topCard(ctx.attacker))
+        },
+        cpuWants: (game, player) => {
+            const opponentActive = game.opponentOf(player).active;
+            return Boolean(opponentActive) && isPokemonEx(game.topCard(opponentActive)) && game.inPlay(player).some(pokemon => !game.topCard(pokemon).rule);
+        }
+    },
+
     // ===== 文の記号を tools/data/text-fixes.json で直したもの =====
     '危ない廃墟': {
         hooks: {

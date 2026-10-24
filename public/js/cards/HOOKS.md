@@ -140,6 +140,36 @@ suppressAbility は特性にも書ける（ほかのポケモンの特性をな�
 カードの判定：`card.kind`（'pokemon' 'trainer' 'energy'）・`card.stage`（0=たね）・`card.rule`（'ex' 'mega' か null）・`card.type`・`card.trainerType`・`card.basic`（基本エネルギー）・`card.energyType`・`card.aceSpec`・`card.tera`（テラスタル）・`card.ancient`（古代）・`card.future`（未来）
 （テラスタル・古代・未来・ACE SPEC の印は、tools/data/limitless-tags.json から補っている）
 
+## 効果の出どころと「効果を受けない」
+
+本体は、いま動いている効果の出どころを `game.effectSource` に覚えている（`{ player, kind, card, pokemon, trainerType, fromHand }`。kind は 'attack' 'ability' 'trainer' 'stadium' 'tool' 'energy' 'effect'）。
+トレーナーズの play・特性の use・スタジアムの use・ワザの手順・フック（hookAll）・選択の callback・runNext で足した手順は、自動で出どころが引き継がれる。
+
+相手のポケモンを変えるときは、**必ず本体の関数を通す**（直接 `pokemon.damage +=`・`energies.splice`・`cards.pop()`・`pokemon.tool = null` などをしない）。本体の関数が、効果を受けないポケモンを守る：
+
+| したいこと | 使う関数 |
+|---|---|
+| ダメカンをのせる | `game.putDamage(pokemon, amount)` |
+| 特殊状態にする | `game.addCondition(pokemon, condition)` |
+| 残る効果をつける | `game.addEffect(pokemon, kind, untilTurn, extra)` |
+| 入れ替える | `game.switchActive(player, benchPokemon)` |
+| エネルギーをはがす | `game.removeEnergy(pokemon, inst, 'discard' \| 'hand' \| 'deck')`（はがせたら true）・`game.discardEnergyFrom` |
+| エネルギーをつけ替える | `game.moveEnergy(source, target, inst)` |
+| どうぐをトラッシュ | `game.discardTool(pokemon)` |
+| 手札にもどす | `game.returnToHand(player, pokemon)` |
+| 退化させる | `game.devolve(pokemon, count, 'hand' \| 'deck' \| 'discard')`（はがしたカードを返す） |
+| ダメカンをのせ替える | `game.moveCounters(from, to, amount)`（のせ替えたダメージを返す） |
+
+相手のポケモンを選ばせるときは、効果を受けないものを候補から外す：`game.canAffect(pokemon, effectKind)`（effectKind は 'counters' 'condition' 'effect' 'switch' 'return' 'tool' 'energy' 'devolve' 'moveCounters' 'other'）。ワザの効果なら `game.canAffectByAttack(ctx, pokemon)` でもよい。
+
+| フック | 引数 | 返す値 | 使われ方 |
+|---|---|---|---|
+| preventEffectsFrom | effect（出どころ）, target, effectKind | true | 相手の効果を受けない（本体の関数が、出どころが相手のときに確かめる） |
+| blockMoveCounters | from, to | true | ダメカンをのせ替えられない |
+| blockReturnToHand | pokemon | true | 手札にもどせない（ポケモンも、ついているカードも） |
+
+トラッシュから動かせないカード（「トラッシュにあるかぎり、手札に加えられず、山札にもどせない」）は、カードの定義に `lockedInDiscard: true` を書く。トラッシュから手札・山札に移すときは `game.moveCard(player.discard, player.hand, inst)` を使い（動かせなければ false を返す）、候補から `game.isDiscardLocked(inst)` のものを外す。
+
 ## 守ること
 
 - 決まった乱数（`flipCoin` / `game.random`）だけを使う。記録から同じ対戦を作り直せなくなるので、Math.random・Date は使わない

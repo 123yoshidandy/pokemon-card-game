@@ -9,6 +9,9 @@ function benchFromHand(game, player, inst) {
     game.log(`${player.name}は${game.cardName(inst)}をベンチに出した`);
 }
 
+// 相手が手札から出したグッズ・サポートの効果か
+const fromHandItemOrSupporter = effect => effect.kind === 'trainer' && effect.fromHand && (effect.trainerType === 'item' || effect.trainerType === 'supporter');
+
 // 自分の場に、そのタイプの「メガシンカex」がいるか
 const hasMega = (game, player, type) => game.inPlay(player).some(pokemon => game.topCard(pokemon).rule === 'mega' && game.typesOf(pokemon).includes(type));
 
@@ -87,6 +90,56 @@ export const ABILITY_EFFECTS = {
             // このポケモンは、「イーブイ」から進化する「ポケモンex」を手札から出して、このポケモンにのせて進化できる
             allowEvolveOnto: (game, source, player, target, card) => target === source.pokemon
                 && card.evolvesFrom === 'イーブイ' && (card.rule === 'ex' || card.rule === 'mega')
+        }
+    },
+    // ===== 相手の効果を受けない・止める（本体の game.isEffectBlocked が、効果の出どころを見て確かめる）=====
+    'ばけがくれ': {
+        // このポケモンは、相手のワザや特性の効果を受けない（ダメージは受ける）
+        type: 'passive',
+        hooks: {
+            preventEffectsFrom: (game, source, effect, target) => target === source.pokemon && (effect.kind === 'attack' || effect.kind === 'ability')
+        }
+    },
+    'ひかりのつばさ': {
+        // このポケモンは、相手のポケモンから特性の効果を受けない
+        type: 'passive',
+        hooks: {
+            preventEffectsFrom: (game, source, effect, target) => target === source.pokemon && effect.kind === 'ability'
+        }
+    },
+    'ゆきにまぎれる': {
+        // このポケモンは、相手が手札からグッズまたはサポートを出して使ったとき、その効果を受けない
+        type: 'passive',
+        hooks: {
+            preventEffectsFrom: (game, source, effect, target) => target === source.pokemon && fromHandItemOrSupporter(effect)
+        }
+    },
+    'きんちょうかん': {
+        type: 'passive',
+        hooks: {
+            preventEffectsFrom: (game, source, effect, target) => target === source.pokemon && fromHandItemOrSupporter(effect)
+        }
+    },
+    'ワイドウォール': {
+        // このポケモンがバトル場にいるかぎり、自分のポケモン全員は、相手が手札からサポートを出して使ったとき、その効果を受けない
+        type: 'passive',
+        hooks: {
+            preventEffectsFrom: (game, source, effect, target) => isActive(game, source.pokemon) && game.ownerOf(target) === source.player
+                && effect.kind === 'trainer' && effect.fromHand && effect.trainerType === 'supporter'
+        }
+    },
+    'かんしのめ': {
+        // このポケモンがいるかぎり、おたがいのポケモン全員にのっているダメカンは、別のポケモンにのせ替えられない
+        type: 'passive',
+        hooks: {
+            blockMoveCounters: () => true
+        }
+    },
+    'なぎのきょうち': {
+        // このポケモンがいるかぎり、相手の場のポケモンと、そのポケモンについているすべてのカードは、手札にもどせない
+        type: 'passive',
+        hooks: {
+            blockReturnToHand: (game, source, pokemon) => game.ownerOf(pokemon) !== source.player
         }
     },
     'マルチアダプタ': {

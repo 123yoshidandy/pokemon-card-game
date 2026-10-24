@@ -232,6 +232,39 @@ export const ATTACK_OVERRIDES = {
         expected: ctx => ctx.damage + 80
     },
 
+    'メガピクシーex/シューティングムーン': {
+        // のぞむなら、自分の手札からエネルギーを4枚までトラッシュし、その枚数×40ダメージ追加
+        before: ctx => {
+            const { game, player } = ctx;
+            const energies = player.hand.filter(inst => game.cardOf(inst).kind === 'energy');
+            if (energies.length === 0) return;
+            game.promptCards({
+                player,
+                cards: energies,
+                min: 0,
+                max: Math.min(4, energies.length),
+                title: 'トラッシュする手札のエネルギーを4枚まで選ぶ（1枚につき40ダメージ追加）',
+                purpose: 'discard-for-damage',
+                cpuAnswer: () => Array.from({ length: Math.min(4, energies.length) }, (_, index) => index),
+                callback: selected => {
+                    selected.forEach(inst => game.moveCard(player.hand, player.discard, inst));
+                    if (selected.length) game.log(`${player.name}は手札のエネルギーを${selected.length}枚トラッシュした`);
+                    ctx.damage += selected.length * 40;
+                }
+            });
+        },
+        expected: ctx => ctx.damage + Math.min(4, ctx.player.hand.filter(inst => ctx.game.cardOf(inst).kind === 'energy').length) * 40
+    },
+    'ヤバソチャ/まっちゃスピン': {
+        // 自分のトラッシュに、特性「ばけがくれ」を持つポケモンが6枚以上あるなら、相手のポケモン全員に、それぞれダメカンを4個のせる
+        after: ctx => {
+            const { game, player, opponent } = ctx;
+            const count = player.discard.filter(inst => game.cardOf(inst).ability?.name === 'ばけがくれ').length;
+            if (count < 6) return;
+            game.inPlay(opponent).forEach(pokemon => game.putDamage(pokemon, 40));
+        }
+    },
+
     // ===== そのほか =====
     'ランターン/さくらんフラッシュ': {
         after: ctx => {

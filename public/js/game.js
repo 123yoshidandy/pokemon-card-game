@@ -575,7 +575,7 @@ export default class Game {
         const card = this.cardOf(inst);
         this.turnState.abilityNamesUsed.push(card.ability.name);
         this.log(`${player.name}は手札の${card.name}の特性「${card.ability.name}」を使った`);
-        card.ability.use(this, player, inst);
+        this.withSource({ player, kind: 'ability', card }, () => card.ability.use(this, player, inst));
     }
 
     checkStadium(player) {
@@ -671,7 +671,7 @@ export default class Game {
         this.log(`${player.name}は${this.topCard(target).name}に${this.cardName(inst)}をつけた`);
         // 特殊エネルギーの「手札からつけたとき」と、ほかのカードの「エネルギーがついたとき」
         const card = this.cardOf(inst);
-        if (card.onAttach) this.runNext(() => card.onAttach(this, player, target, inst));
+        if (card.onAttach) this.runNext(() => this.withSource({ player, kind: 'energy', card, pokemon: target }, () => card.onAttach(this, player, target, inst)));
         this.runNext(() => this.hookAll('onAttachEnergy', player, target, inst));
     }
 
@@ -707,10 +707,10 @@ export default class Game {
                 break;
         }
         // グッズとサポートは、効果を終えてからトラッシュする（afterPlay があれば、使ったカードの行き先はそれが決める）
-        this.runNext(() => card.play(this, player, inst), () => {
+        this.withSource({ player, kind: 'trainer', card, trainerType: card.trainerType, fromHand: true }, () => this.runNext(() => card.play(this, player, inst), () => {
             if (card.afterPlay) card.afterPlay(this, player, inst);
             else player.discard.push(inst);
-        });
+        }));
     }
 
     useAbility(player, targetId) {
@@ -720,14 +720,14 @@ export default class Game {
         this.turnState.abilityNamesUsed.push(card.ability.name);
         this.turnState.abilityUseCount[pokemon.id] = (this.turnState.abilityUseCount[pokemon.id] ?? 0) + 1;
         this.log(`${card.name}の特性「${card.ability.name}」`);
-        card.ability.use(this, player, pokemon);
+        this.withSource({ player, kind: 'ability', card, pokemon }, () => card.ability.use(this, player, pokemon));
     }
 
     useStadium(player) {
         const card = this.cardOf(this.stadium.inst);
         this.turnState.stadiumUsed = true;
         this.log(`${player.name}は${card.name}の効果を使った`);
-        card.use(this, player);
+        this.withSource({ player, kind: 'stadium', card }, () => card.use(this, player));
     }
 
     retreat(player, targetId) {
@@ -792,7 +792,8 @@ export default class Game {
     attackSteps(player, attacker, attack) {
         const opponent = this.opponentOf(player);
         const ctx = { game: this, player, opponent, attacker, defender: null, attack, damage: attack.damage, failed: false, dealt: 0 };
-        return [
+        const source = { player, kind: 'attack', card: this.topCard(attacker), pokemon: attacker, attack };
+        const steps = [
             () => {
                 ctx.defender = opponent.active;
                 this.log(`${this.topCard(attacker).name}の「${attack.name}」`);
@@ -846,6 +847,8 @@ export default class Game {
                 this.currentAttack = null;
             }
         ];
+        // ワザの手順は、ワザを出どころとして動かす（きぜつの確認は出どころなし）
+        return steps.map((step, index) => (index === steps.length - 1 ? step : () => this.withSource(source, step)));
     }
 
     endTurn() {
@@ -927,16 +930,79 @@ export default class Game {
         return damage;
     }
 
+    // その効果を受けないか（いま動いている効果の出どころが相手で、フック preventEffectsFrom が「受けない」と言うなら true）
+    //   effectKind：'counters'（ダメカン）・'condition'（特殊状態）・'effect'（残る効果）・'switch'（入れ替え）・'return'（手札にもどす）
+    //               'tool'（どうぐ）・'energy'（エネルギー）・'devolve'（退化）・'moveCounters'（ダメカンののせ替え）・'other'
+    isEffectBlocked(pokemon, effectKind = 'other') {
+        const source = this.effectSource;
+        if (!source || !pokemon) return false;
+        const owner = this.ownerOf(pokemon);
+        if (!owner || owner === source.player) return false;
+        return Boolean(this.hookAny('preventEffectsFrom', source, pokemon, effectKind));
+    }
+
+    canAffect(pokemon, effectKind = 'other') {
+        return !this.isEffectBlocked(pokemon, effectKind);
+    }
+
+    // ポケモンについているエネルギーを1枚はがす（to：'discard'・'hand'・'deck'。持ち主の場所へ）。はがせたら true
+    removeEnergy(pokemon, inst, to = 'discard') {
+        if (!pokemon.energies.includes(inst) || this.isEffectBlocked(pokemon, 'energy')) return false;
+        if (to === 'hand' && this.hookAny('blockReturnToHand', pokemon)) return false;
+        const owner = this.ownerOf(pokemon);
+        this.removeCard(pokemon.energies, inst);
+        (to === 'hand' ? owner.hand : to === 'deck' ? owner.deck : owner.discard).push(inst);
+        return true;
+    }
+
+    // ダメカンをのせ替える（from から to へ amount ぶん。のせ替えを止める効果を見る）。のせ替えたダメージを返す
+    moveCounters(from, to, amount) {
+        if (this.hookAny('blockMoveCounters', from, to) || this.isEffectBlocked(from, 'moveCounters') || this.isEffectBlocked(to, 'moveCounters')) {
+            this.log('ダメカンはのせ替えられない');
+            return 0;
+        }
+        const moved = Math.min(amount, from.damage);
+        from.damage -= moved;
+        to.damage += moved;
+        if (moved) this.log(`${this.topCard(from).name}のダメカン${moved / 10}個を${this.topCard(to).name}にのせ替えた`);
+        return moved;
+    }
+
+    // 進化カードを上から count 枚はがして退化させる（to：'hand'・'deck'・'discard'。持ち主の場所へ）。はがしたカードを返す
+    devolve(pokemon, count = 1, to = 'hand') {
+        if (this.isEffectBlocked(pokemon, 'devolve') || (to === 'hand' && this.hookAny('blockReturnToHand', pokemon))) return [];
+        const owner = this.ownerOf(pokemon);
+        const removed = [];
+        while (removed.length < count && pokemon.cards.length > 1) removed.push(pokemon.cards.pop());
+        if (removed.length === 0) return [];
+        (to === 'hand' ? owner.hand : to === 'deck' ? owner.deck : owner.discard).push(...removed);
+        if (to === 'deck') this.shuffleDeck(owner);
+        this.clearConditionsOnStageChange(pokemon);
+        pokemon.enteredTurn = this.turn;
+        this.log(`${removed.map(inst => this.cardName(inst)).join('と')}をはがして、${this.topCard(pokemon).name}に退化させた`);
+        return removed;
+    }
+
+    // トラッシュにあるかぎり、手札に加えられず、山札にもどせないカード（カードの lockedInDiscard）
+    isDiscardLocked(inst) {
+        return Boolean(this.cardOf(inst).lockedInDiscard);
+    }
+
     // ワザの効果を与えられるか（相手のポケモンに「ワザの効果を受けない」がかかっていないか。特性などのフック preventEffects も見る）
     canAffectByAttack(ctx, pokemon) {
         if (this.ownerOf(pokemon) === ctx.player) return true;
         if (this.hookAny('preventEffects', ctx, pokemon)) return false;
+        if (this.isEffectBlocked(pokemon, 'effect')) return false;
         if (ctx.ignoreEffects) return true;
         return !this.hasEffect(pokemon, 'preventAll');
     }
 
     // 弱点・抵抗力を計算しないダメージ（自分へのダメージなど）
     putDamage(pokemon, amount) {
+        if (this.isEffectBlocked(pokemon, 'counters')) {
+            this.log(`${this.topCard(pokemon).name}にはダメカンがのらない`);
+            return;
+        }
         pokemon.damage += amount;
         this.log(`${this.topCard(pokemon).name}に${amount}ダメージ`);
     }
@@ -953,6 +1019,10 @@ export default class Game {
     // 特殊状態にする。ねむり・マヒ・こんらんは重ならず、新しいものに置き換わる
     addCondition(pokemon, condition) {
         if (!pokemon) return;
+        if (this.isEffectBlocked(pokemon, 'condition')) {
+            this.log(`${this.topCard(pokemon).name}は効果を受けない`);
+            return;
+        }
         if (this.hookAny('conditionImmune', pokemon, condition)) {
             this.log(`${this.topCard(pokemon).name}は${CONDITION_NAMES[condition]}にならない`);
             return;
@@ -1005,7 +1075,7 @@ export default class Game {
 
     // ワザの効果を残す（untilTurn のターンの終わりまで）。extra には、どのワザか・いくつかなどを入れる
     addEffect(pokemon, kind, untilTurn, extra = {}) {
-        if (!pokemon) return;
+        if (!pokemon || this.isEffectBlocked(pokemon, 'effect')) return;
         pokemon.effects.push({ kind, untilTurn, ...extra });
     }
 
@@ -1036,7 +1106,7 @@ export default class Game {
     // 基本エネルギーを1個つけ替える（タイプが混ざっていても、最初の1個）
     moveBasicEnergy(source, target) {
         const inst = source.energies.find(energy => isBasicEnergy(this.cardOf(energy)));
-        if (!inst) return;
+        if (!inst || this.isEffectBlocked(source, 'energy')) return;
         this.moveCard(source.energies, target.energies, inst);
         this.log(`${this.cardName(inst)}を${this.topCard(source).name}から${this.topCard(target).name}につけ替えた`);
     }
@@ -1056,6 +1126,7 @@ export default class Game {
 
     // ポケモンについているエネルギーをトラッシュする（type を指定すればそのタイプだけ）
     discardEnergyFrom(pokemon, count, type) {
+        if (this.isEffectBlocked(pokemon, 'energy')) return;
         const owner = this.ownerOf(pokemon);
         const targets = pokemon.energies.filter(inst => !type || this.cardOf(inst).energyType === type).slice(0, count);
         targets.forEach(inst => this.moveCard(pokemon.energies, owner.discard, inst));
@@ -1065,6 +1136,11 @@ export default class Game {
     // バトルポケモンとベンチポケモンを入れ替える。ベンチに下がったポケモンの特殊状態は消える
     switchActive(player, benchPokemon) {
         const old = player.active;
+        // 相手の効果で入れ替えるとき、入れ替わるポケモンが効果を受けないなら、入れ替えない
+        if (this.isEffectBlocked(benchPokemon, 'switch') || (old && this.isEffectBlocked(old, 'switch'))) {
+            this.log('効果を受けないポケモンがいるので、入れ替えなかった');
+            return;
+        }
         this.removeCard(player.bench, benchPokemon);
         if (old) {
             this.clearConditions(old);
@@ -1098,7 +1174,7 @@ export default class Game {
 
     // エネルギーを1個つけ替える
     moveEnergy(source, target, inst) {
-        if (!inst || !source.energies.includes(inst)) return;
+        if (!inst || !source.energies.includes(inst) || this.isEffectBlocked(source, 'energy')) return;
         this.moveCard(source.energies, target.energies, inst);
         this.log(`${this.cardName(inst)}を${this.topCard(source).name}から${this.topCard(target).name}につけ替えた`);
     }
@@ -1118,7 +1194,7 @@ export default class Game {
     // ポケモンと、ついているすべてのカードを手札にもどす（バトル場が空いたら、きぜつの確認でベンチから出す）
     returnToHand(player, pokemon) {
         if (!this.inPlay(player).includes(pokemon)) return;
-        if (this.hookAny('blockReturnToHand', pokemon)) {
+        if (this.hookAny('blockReturnToHand', pokemon) || this.isEffectBlocked(pokemon, 'return')) {
             this.log(`${this.topCard(pokemon).name}は手札にもどらない`);
             return;
         }
@@ -1138,7 +1214,7 @@ export default class Game {
         if (player.id !== this.current) {
             milled.forEach(inst => {
                 const ability = this.cardOf(inst).ability;
-                if (ability?.onMilled) this.runNext(() => ability.onMilled(this, player, inst));
+                if (ability?.onMilled) this.runNext(() => this.withSource({ player, kind: 'ability', card: this.cardOf(inst) }, () => ability.onMilled(this, player, inst)));
             });
         }
     }
@@ -1161,7 +1237,7 @@ export default class Game {
     }
 
     discardTool(pokemon) {
-        if (!pokemon.tool) return;
+        if (!pokemon.tool || this.isEffectBlocked(pokemon, 'tool')) return;
         const owner = this.ownerOf(pokemon);
         const name = this.cardName(pokemon.tool);
         owner.discard.push(pokemon.tool);
@@ -1366,7 +1442,11 @@ export default class Game {
 
     // 起きたことを知らせるフック（ダメージを受けた・きぜつした・番の終わり など）
     hookAll(name, ...args) {
-        this.passiveSources().forEach(source => source.hooks[name]?.(this, source, ...args));
+        // 起きたことに応じて働く効果は、そのカード（特性・どうぐ・エネルギー・スタジアム・プレイヤーにかかる効果）を出どころとして動かす
+        this.passiveSources().forEach(source => {
+            if (!source.hooks[name]) return;
+            this.withSource({ player: source.player, kind: source.kind, card: source.card, pokemon: source.pokemon }, () => source.hooks[name](this, source, ...args));
+        });
     }
 
     // ベンチに出せるポケモンの数（スタジアムなどのフック benchLimit で増えることがある。重ならない）
@@ -1508,7 +1588,7 @@ export default class Game {
                 if (!yes) return;
                 this.log(`${card.name}の特性「${ability.name}」`);
                 this.turnState.abilityNamesUsed.push(ability.name);
-                ability.use(this, player, pokemon);
+                this.withSource({ player, kind: 'ability', card, pokemon }, () => ability.use(this, player, pokemon));
             }
         }));
     }
@@ -1624,9 +1704,16 @@ export default class Game {
         if (index !== -1) list.splice(index, 1);
     }
 
+    // カードを動かす。トラッシュから手札・山札へは、トラッシュから動かせないカード（lockedInDiscard）なら動かさない。動かせたら true
     moveCard(from, to, item) {
+        const owner = this.players.find(player => player.discard === from);
+        if (owner && (to === owner.hand || to === owner.deck) && this.isDiscardLocked(item)) {
+            this.log(`${this.cardName(item)}はトラッシュから動かせない`);
+            return false;
+        }
         this.removeCard(from, item);
         to.push(item);
+        return true;
     }
 
     // to を付けたログは、そのプレイヤーにだけ見せる
@@ -1636,8 +1723,22 @@ export default class Game {
 
     // ===== 手順と選択 =====
 
+    // 次に行う手順を先頭に足す。いま動いている効果の出どころ（effectSource）は、足した手順にも引き継ぐ
     runNext(...steps) {
-        this.effectQueue.unshift(...steps);
+        const source = this.effectSource;
+        this.effectQueue.unshift(...steps.map(step => (source ? () => this.withSource(source, step) : step)));
+    }
+
+    // 効果の出どころ { player, kind: 'attack' | 'ability' | 'trainer' | 'stadium' | 'tool' | 'energy' | 'effect', card } を決めて動かす
+    // （「相手のワザや特性の効果を受けない」などを、game.isEffectBlocked が確かめるため）
+    withSource(source, fn) {
+        const previous = this.effectSource;
+        this.effectSource = source;
+        try {
+            return fn();
+        } finally {
+            this.effectSource = previous;
+        }
     }
 
     processEffects() {
@@ -1671,7 +1772,7 @@ export default class Game {
 
     setPrompt(prompt) {
         this.promptCount++;
-        this.pendingPrompt = { ...prompt, id: this.promptCount };
+        this.pendingPrompt = { ...prompt, id: this.promptCount, source: this.effectSource ?? null };
     }
 
     promptItems(prompt) {
@@ -1684,7 +1785,8 @@ export default class Game {
     resolvePrompt(answer) {
         const prompt = this.pendingPrompt;
         this.pendingPrompt = null;
-        prompt.callback(prompt.type === 'confirm' ? Boolean(answer) : answer);
+        // 選択を出した効果の出どころのまま、続きを動かす
+        this.withSource(prompt.source, () => prompt.callback(prompt.type === 'confirm' ? Boolean(answer) : answer));
     }
 
     // ===== 画面とCPUのための情報 =====

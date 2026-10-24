@@ -18,7 +18,9 @@
 
 import { CATALOG, LEGACY_IDS } from './cards/catalog.js';
 import { compileAttackText } from './cards/attack-effects.js';
-import { ATTACK_OVERRIDES } from './cards/attack-overrides.js';
+import { ATTACK_OVERRIDES as OVERRIDES_BASE } from './cards/attack-overrides.js';
+import { ATTACK_OVERRIDES as OVERRIDES_A } from './cards/attack-overrides-a.js';
+import { ATTACK_OVERRIDES as OVERRIDES_B } from './cards/attack-overrides-b.js';
 import { ABILITY_EFFECTS as ABILITIES_BASE } from './cards/ability-effects.js';
 import { ABILITY_EFFECTS as ABILITIES_A } from './cards/abilities/abilities-a.js';
 import { ABILITY_EFFECTS as ABILITIES_B } from './cards/abilities/abilities-b.js';
@@ -30,6 +32,9 @@ import { TRAINER_EFFECTS as TOOLS } from './cards/trainers/tools.js';
 import { TRAINER_EFFECTS as STADIUMS } from './cards/trainers/stadiums.js';
 import { TRAINER_EFFECTS as EXTRAS } from './cards/trainers/extras.js';
 import { ENERGY_EFFECTS } from './cards/energy-effects.js';
+
+// 読み替えられないワザは「カードのID/ワザ名」か「カード名/ワザ名」で引く
+const ATTACK_OVERRIDES = { ...OVERRIDES_BASE, ...OVERRIDES_A, ...OVERRIDES_B };
 
 // 効果は、種類ごとのファイルに分けて書く（同じ名前があれば、後のファイルのものを使う）
 const TRAINER_EFFECTS = { ...TRAINERS_BASE, ...SUPPORTERS, ...ITEMS, ...TOOLS, ...STADIUMS, ...EXTRAS };
@@ -67,7 +72,7 @@ const hasRule = card => Boolean(card.rule);
 const isPokemonEx = card => card.rule === 'ex' || card.rule === 'mega';
 
 function buildAttack(card, attack) {
-    const override = ATTACK_OVERRIDES[`${card.name}/${attack.name}`];
+    const override = ATTACK_OVERRIDES[`${card.id}/${attack.name}`] ?? ATTACK_OVERRIDES[`${card.name}/${attack.name}`];
     if (override) return { ...attack, ...override, supported: true };
     if (!attack.text) return { ...attack, supported: true };
     const compiled = compileAttackText(attack.text);

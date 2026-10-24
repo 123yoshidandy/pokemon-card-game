@@ -1,10 +1,11 @@
 /**
  * トレーナーズの効果（カードの名前で引く。効果の文は catalog.js のものを使う）
  *
- * { canPlay(game, player), play(game, player), firstTurnOk }
+ * { canPlay(game, player), play(game, player), firstTurnOk, hooks, cpuWants(game, player) }
  *   サポートの firstTurnOk：先攻の最初の番でも使える
- *   どうぐ：hpBonus(ポケモンのカード)・retreatReduction・damageBonus({ game, attacker, target })
- *   スタジアム：hpModifier(ポケモンのカード)・canUse / use（自分の番に1回使える効果）
+ *   どうぐ・スタジアムのいるだけで働く効果は hooks に書く（cards/HOOKS.md）
+ *   スタジアム：canUse / use（自分の番に1回使える効果）
+ *   cpuWants：CPU が今使いたいか（書かなければ、CPU は使わない。ここにある前からのカードは cpu-player.js が名前で判断する）
  * ここにないトレーナーズは、まだ動かないのでデッキに入れられない
  */
 
@@ -204,13 +205,20 @@ export const TRAINER_EFFECTS = {
 
     // ===== ポケモンのどうぐ =====
     'ふうせん': {
-        retreatReduction: 2
+        retreatReduction: 2, // CPU がつけ先を選ぶときの目安
+        hooks: {
+            retreatCost: (game, source, pokemon) => (pokemon === source.pokemon ? -2 : 0)
+        }
     },
     'ブレイブバングル': {
-        damageBonus: ({ game, attacker, target }) => {
-            const owner = game.ownerOf(target);
-            const isActive = owner && owner.active === target;
-            return !hasRule(game.topCard(attacker)) && isActive && isPokemonEx(game.topCard(target)) ? 30 : 0;
+        damageBonus: true, // CPU がつけ先を選ぶときの目安（ルールを持たないポケモンにつける）
+        hooks: {
+            damageDealt: (game, source, ctx, target) => {
+                if (ctx.attacker !== source.pokemon) return 0;
+                const owner = game.ownerOf(target);
+                const isActive = owner && owner.active === target;
+                return !hasRule(game.topCard(ctx.attacker)) && isActive && isPokemonEx(game.topCard(target)) ? 30 : 0;
+            }
         }
     },
 
@@ -223,6 +231,9 @@ export const TRAINER_EFFECTS = {
         }
     },
     'グラビティーマウンテン': {
-        hpModifier: card => (card.stage === 2 ? -30 : 0)
+        hpModifier: card => (card.stage === 2 ? -30 : 0), // CPU が出すか決めるときの目安
+        hooks: {
+            maxHp: (game, source, pokemon) => (game.topCard(pokemon).stage === 2 ? -30 : 0)
+        }
     }
 };

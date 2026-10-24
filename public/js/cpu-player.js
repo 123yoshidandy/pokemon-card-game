@@ -52,8 +52,14 @@ function chooseMainAction(game, player) {
     const opponent = game.opponentOf(player);
     const active = player.active;
 
-    // 特性
-    if (legal.abilities.length) return { type: 'useAbility', target: legal.abilities[0] };
+    // 特性（cpuWants が false なら使わない。何回でも使える特性は、1つの番に3回まで）
+    const ability = legal.abilities.find(id => {
+        const pokemon = game.inPlay(player).find(pk => pk.id === id);
+        const card = game.topCard(pokemon);
+        if ((game.turnState.abilityUseCount[id] ?? 0) >= 3) return false;
+        return card.ability.cpuWants ? card.ability.cpuWants(game, player, pokemon) : true;
+    });
+    if (ability) return { type: 'useAbility', target: ability };
 
     // サポート
     const supporter = chooseSupporter(game, player, playable(card => card.trainerType === 'supporter'));
@@ -116,6 +122,10 @@ function chooseMainAction(game, player) {
     const potion = pick('きずぐすり');
     if (potion && game.inPlay(player).some(pokemon => pokemon.damage >= 30)) return { type: 'playTrainer', uid: potion };
 
+    // ほかのトレーナーズは、カードの cpuWants が「使いたい」と言えば使う（どうぐ・スタジアムは上で選んだ）
+    const generic = playable(card => card.kind === 'trainer' && card.trainerType !== 'tool' && card.cpuWants?.(game, player))[0];
+    if (generic) return { type: 'playTrainer', uid: generic };
+
     // バトルポケモンがワザを使えず、ベンチに使えるポケモンがいれば入れ替える
     if (active && bestAttack(game, player, active, opponent) === null) {
         const benchAttacker = player.bench.find(pokemon => bestAttack(game, player, pokemon, opponent) !== null);
@@ -149,7 +159,11 @@ function chooseSupporter(game, player, uids) {
     if (handSize <= 5 && byId('ガイ')) return byId('ガイ');
     if (handSize <= 5 && byId('MCの盛り上げ')) return byId('MCの盛り上げ');
     if (handSize <= 2 && byId('ジャッジマン')) return byId('ジャッジマン');
-    return null;
+    // ほかのサポートは、カードの cpuWants が「使いたい」と言えば使う
+    return uids.find(uid => {
+        const card = game.cardOf(player.hand.find(inst => inst.uid === uid));
+        return card.cpuWants?.(game, player);
+    }) ?? null;
 }
 
 // ベンチが少なく、山札にたねポケモンがあれば、たねポケモンを探す（場からいなくなると負けるため）
@@ -227,7 +241,7 @@ function bestAttack(game, player, attacker, opponent, legal) {
     let best = null;
     let bestDamage = -1;
     topAttacks(game, attacker).forEach((attack, index) => {
-        if (legal ? !legal.attacks[index] : !game.canPayCost(attacker, attack.cost)) return;
+        if (legal ? !legal.attacks[index] : !game.canPayCost(attacker, game.attackCost(attacker, attack))) return;
         const damage = estimateDamage(game, player, attacker, attack, opponent.active);
         if (damage > bestDamage) {
             best = index;
@@ -252,6 +266,12 @@ function answerPrompt(game, prompt) {
         const card = game.cardOf(inst);
         return card.kind === 'pokemon' ? card.hp : 0;
     };
+    // カードの効果が答え方を書いていれば、それを使う
+    if (prompt.cpuAnswer) {
+        const custom = prompt.cpuAnswer(game, prompt);
+        if (custom !== undefined && custom !== null) return custom;
+    }
+
     switch (prompt.purpose) {
         case 'first-player':
             return [1]; // 後攻は最初の番からワザを使える

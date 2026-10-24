@@ -19,8 +19,21 @@
 import { CATALOG, LEGACY_IDS } from './cards/catalog.js';
 import { compileAttackText } from './cards/attack-effects.js';
 import { ATTACK_OVERRIDES } from './cards/attack-overrides.js';
-import { ABILITY_EFFECTS } from './cards/ability-effects.js';
-import { TRAINER_EFFECTS } from './cards/trainer-effects.js';
+import { ABILITY_EFFECTS as ABILITIES_BASE } from './cards/ability-effects.js';
+import { ABILITY_EFFECTS as ABILITIES_A } from './cards/abilities/abilities-a.js';
+import { ABILITY_EFFECTS as ABILITIES_B } from './cards/abilities/abilities-b.js';
+import { ABILITY_EFFECTS as ABILITIES_C } from './cards/abilities/abilities-c.js';
+import { TRAINER_EFFECTS as TRAINERS_BASE } from './cards/trainer-effects.js';
+import { TRAINER_EFFECTS as SUPPORTERS } from './cards/trainers/supporters.js';
+import { TRAINER_EFFECTS as ITEMS } from './cards/trainers/items.js';
+import { TRAINER_EFFECTS as TOOLS } from './cards/trainers/tools.js';
+import { TRAINER_EFFECTS as STADIUMS } from './cards/trainers/stadiums.js';
+import { ENERGY_EFFECTS } from './cards/energy-effects.js';
+
+// 効果は、種類ごとのファイルに分けて書く（同じ名前があれば、後のファイルのものを使う）
+const TRAINER_EFFECTS = { ...TRAINERS_BASE, ...SUPPORTERS, ...ITEMS, ...TOOLS, ...STADIUMS };
+// 特性は「カード名/特性名」か「特性名」で引く（同じ名前・同じ文の特性を持つカードは、特性名だけで書ける）
+const ABILITY_EFFECTS = { ...ABILITIES_BASE, ...ABILITIES_A, ...ABILITIES_B, ...ABILITIES_C };
 
 export const TYPE_NAMES = {
     grass: '草',
@@ -63,7 +76,7 @@ function buildAttack(card, attack) {
 function buildPokemon(data) {
     const attacks = data.attacks.map(attack => buildAttack(data, attack));
     const abilityData = data.abilities?.[0] ?? null;
-    const abilityEffect = abilityData ? ABILITY_EFFECTS[`${data.name}/${abilityData.name}`] : null;
+    const abilityEffect = abilityData ? (ABILITY_EFFECTS[`${data.name}/${abilityData.name}`] ?? ABILITY_EFFECTS[abilityData.name]) : null;
     const ability = abilityData ? { name: abilityData.name, text: abilityData.text, type: 'unknown', ...abilityEffect } : null;
     const supported = data.stage >= 0
         && (data.abilities?.length ?? 0) <= 1
@@ -78,8 +91,11 @@ function buildTrainer(data) {
     return { canPlay: () => true, play: () => {}, ...data, ...effect, supported: Boolean(effect) && data.trainerType !== 'unknown' };
 }
 
+// 特殊エネルギー：{ provides(game, pokemon, inst) → タイプの配列（'any' はどのタイプにもなる）, hooks, onAttach(game, player, pokemon, inst) }
 function buildEnergy(data) {
-    return { ...data, supported: Boolean(data.basic) };
+    if (data.basic) return { ...data, supported: true };
+    const effect = ENERGY_EFFECTS[data.name];
+    return { ...data, ...effect, supported: Boolean(effect) };
 }
 
 const build = data => {

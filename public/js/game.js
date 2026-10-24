@@ -36,7 +36,9 @@ const newTurnState = () => ({
     stadiumUsed: false,
     retreated: false,
     attacked: false,
-    abilitiesUsed: []
+    abilitiesUsed: [], // 特性を使ったポケモンのID
+    abilityNamesUsed: [], // 使った特性の名前（「この番、すでに別の〜を使っていたなら」に使う）
+    abilityUseCount: {} // ポケモンのID → この番に特性を使った回数（何回でも使える特性のため）
 });
 
 export default class Game {
@@ -234,6 +236,7 @@ export default class Game {
     // 番の終わり：ポケモンチェック → きぜつの確認 → 相手の番
     queueEndOfTurn() {
         this.effectQueue.push(
+            () => this.hookAll('onTurnEnd', this.players[this.current]),
             () => this.pokemonCheckup(),
             () => this.checkKnockouts(),
             () => this.startTurn(1 - this.current)
@@ -281,11 +284,17 @@ export default class Game {
         if (this.phase === 'end') return;
         const knocked = [];
         this.players.forEach(player => this.inPlay(player).forEach(pokemon => {
-            if (pokemon.damage >= this.maxHp(pokemon)) knocked.push({ player, pokemon });
+            if (pokemon.damage < this.maxHp(pokemon)) return;
+            // 特性などで、きぜつせずに残ることがある（フック preventKnockout がダメージを直して true を返す）
+            if (this.hookAny('preventKnockout', pokemon, player, { byAttack: Boolean(this.resolvingAttack) })) return;
+            knocked.push({ player, pokemon });
         }));
         knocked.forEach(({ player, pokemon }) => {
             const card = this.topCard(pokemon);
             this.log(`${player.name}の${card.name}はきぜつした`);
+            const info = { byAttack: Boolean(this.resolvingAttack) };
+            const prizes = Math.max(0, this.prizeValue(card) + this.hookSum('prizeModifier', pokemon, player, info));
+            this.hookAll('onKnockout', pokemon, player, info);
             if (this.resolvingAttack) {
                 if (player.knockedOutByAttackTurn !== this.turn) player.knockedOutByAttackNames = [];
                 player.knockedOutByAttackTurn = this.turn;
@@ -293,7 +302,7 @@ export default class Game {
             }
             this.removeFromPlay(player, pokemon);
             const taker = this.opponentOf(player);
-            const count = Math.min(this.prizeValue(card), taker.prizes.length);
+            const count = Math.min(prizes, taker.prizes.length);
             const taken = taker.prizes.splice(0, count);
             taker.hand.push(...taken);
             this.log(`${taker.name}はサイドを${count}枚取った（残り${taker.prizes.length}枚）`);
@@ -343,6 +352,7 @@ export default class Game {
                 player.active = pokemon;
                 pokemon.movedToActiveTurn = this.turn;
                 this.log(`${player.name}は${this.topCard(pokemon).name}をバトル場に出した`);
+                if (this.phase === 'main' && player.id === this.current) this.triggerAbility(player, pokemon, 'onActive');
             }
         });
     }
@@ -458,11 +468,12 @@ export default class Game {
         const target = this.ownPokemon(player, targetId);
         if (!target) return '進化させるポケモンを選んでください';
         if (this.topCard(target).name !== card.evolvesFrom) return `${card.name}は${this.topCard(target).name}から進化しません`;
-        return this.checkCanEvolveNow(player, target);
+        return this.checkCanEvolveNow(player, target, card);
     }
 
-    // 最初の自分の番と、この番に出した（進化した）ポケモンは進化できない
-    checkCanEvolveNow(player, target) {
+    // 最初の自分の番と、この番に出した（進化した）ポケモンは進化できない（特性などで、できることもある）
+    checkCanEvolveNow(player, target, card = null) {
+        if (card && (card.canEvolveEarly?.(this, player, target) || this.hookAny('allowEarlyEvolve', player, target, card))) return null;
         if (player.turnsTaken <= 1) return '最初の自分の番は進化できません';
         if (target.enteredTurn >= this.turn) return 'この番に出したポケモンは進化できません';
         return null;
@@ -497,6 +508,8 @@ export default class Game {
             if (!target) return 'つけるポケモンを選んでください';
             if (target.tool) return 'そのポケモンはもうどうぐをつけています';
         }
+        const blocked = this.hookAny('blockTrainer', player, card);
+        if (blocked) return typeof blocked === 'string' ? blocked : `今は${card.name}を使えません`;
         if (!card.canPlay(this, player)) return `今は${card.name}を使えません`;
         return null;
     }
@@ -505,8 +518,12 @@ export default class Game {
         const pokemon = this.ownPokemon(player, targetId);
         const ability = pokemon && this.topCard(pokemon).ability;
         if (!ability || ability.type !== 'activated') return '使える特性がありません';
-        if (this.turnState.abilitiesUsed.includes(pokemon.id)) return 'この特性はこの番にもう使いました';
-        if (!ability.canUse(this, player, pokemon)) return `今は${ability.name}を使えません`;
+        if (this.abilitySuppressed(pokemon)) return 'このポケモンの特性は、今はなくなっています';
+        if (!ability.unlimited && this.turnState.abilitiesUsed.includes(pokemon.id)) return 'この特性はこの番にもう使いました';
+        if (ability.oncePerTurnByName && this.turnState.abilityNamesUsed.includes(ability.name)) return `この番は、もう「${ability.name}」を使いました`;
+        const blocked = this.hookAny('blockAbility', player, pokemon);
+        if (blocked) return typeof blocked === 'string' ? blocked : '今は特性を使えません';
+        if (ability.canUse && !ability.canUse(this, player, pokemon)) return `今は${ability.name}を使えません`;
         return null;
     }
 
@@ -523,9 +540,9 @@ export default class Game {
         if (!active) return 'バトルポケモンがいません';
         if (this.turnState.retreated) return 'にげるはこの番にもう使いました';
         if (active.rotation === 'asleep' || active.rotation === 'paralyzed') return `${CONDITION_NAMES[active.rotation]}のポケモンはにげられません`;
-        if (this.hasEffect(active, 'cannotRetreat')) return 'このポケモンはにげられません';
+        if (this.hasEffect(active, 'cannotRetreat') || this.hookAny('blockRetreat', player, active)) return 'このポケモンはにげられません';
         if (!player.bench.some(pokemon => pokemon.id === targetId)) return '入れ替えるベンチポケモンを選んでください';
-        if (active.energies.length < this.retreatCost(active)) return 'にげるためのエネルギーが足りません';
+        if (this.energyUnits(active).length < this.retreatCost(active)) return 'にげるためのエネルギーが足りません';
         return null;
     }
 
@@ -537,7 +554,10 @@ export default class Game {
         if (active.rotation === 'asleep' || active.rotation === 'paralyzed') return `${CONDITION_NAMES[active.rotation]}のポケモンはワザを使えません`;
         if (active.effects.some(effect => effect.kind === 'cannotAttack' && effect.untilTurn >= this.turn)) return 'このポケモンはこの番ワザを使えません';
         if (active.effects.some(effect => effect.kind === 'cannotUseAttack' && effect.attack === attack.name && effect.untilTurn >= this.turn)) return `この番は「${attack.name}」を使えません`;
-        if (!this.canPayCost(active, attack.cost)) return 'エネルギーが足りません';
+        const blocked = this.hookAny('blockAttack', player, active, attack);
+        if (blocked) return typeof blocked === 'string' ? blocked : 'このポケモンは今ワザを使えません';
+        if (attack.canUse && !attack.canUse(this, player, active)) return `今は「${attack.name}」を使えません`;
+        if (!this.canPayCost(active, this.attackCost(active, attack))) return 'エネルギーが足りません';
         return null;
     }
 
@@ -561,8 +581,10 @@ export default class Game {
     playBasic(player, uid) {
         const inst = this.findInHand(player, uid);
         this.removeCard(player.hand, inst);
-        player.bench.push(this.createPokemon(inst));
+        const pokemon = this.createPokemon(inst);
+        player.bench.push(pokemon);
         this.log(`${player.name}は${this.cardName(inst)}をベンチに出した`);
+        this.triggerAbility(player, pokemon, 'onBench');
     }
 
     evolve(player, uid, targetId) {
@@ -571,7 +593,7 @@ export default class Game {
     }
 
     // 手札のカードをのせて進化させる（ふしぎなアメからも使う）。特殊状態とワザの効果は消える
-    evolveInto(player, pokemon, inst) {
+    evolveInto(player, pokemon, inst, { fromHand = true } = {}) {
         const beforeCard = this.topCard(pokemon);
         const before = beforeCard.name;
         this.removeCard(player.hand, inst);
@@ -581,20 +603,8 @@ export default class Game {
         this.clearConditions(pokemon);
         const card = this.cardOf(inst);
         this.log(`${player.name}は${before}を${card.name}に進化させた`);
-        const ability = card.ability;
-        if (ability?.type === 'onEvolve' && ability.canUse(this, player, pokemon)) {
-            this.runNext(() => this.promptConfirm({
-                player,
-                title: `特性「${ability.name}」を使いますか？`,
-                card: inst.id,
-                purpose: `ability-${card.id}`,
-                callback: yes => {
-                    if (!yes) return;
-                    this.log(`${card.name}の特性「${ability.name}」`);
-                    ability.use(this, player, pokemon);
-                }
-            }));
-        }
+        // 特性の「手札から出して進化させたとき」（山札などから進化させたときは使えない）
+        if (fromHand) this.triggerAbility(player, pokemon, 'onEvolve');
     }
 
     attachEnergy(player, uid, targetId) {
@@ -604,6 +614,10 @@ export default class Game {
         target.energies.push(inst);
         this.turnState.energyAttached = true;
         this.log(`${player.name}は${this.topCard(target).name}に${this.cardName(inst)}をつけた`);
+        // 特殊エネルギーの「手札からつけたとき」と、ほかのカードの「エネルギーがついたとき」
+        const card = this.cardOf(inst);
+        if (card.onAttach) this.runNext(() => card.onAttach(this, player, target, inst));
+        this.runNext(() => this.hookAll('onAttachEnergy', player, target, inst));
     }
 
     playTrainer(player, uid, targetId) {
@@ -637,6 +651,8 @@ export default class Game {
         const pokemon = this.ownPokemon(player, targetId);
         const card = this.topCard(pokemon);
         this.turnState.abilitiesUsed.push(pokemon.id);
+        this.turnState.abilityNamesUsed.push(card.ability.name);
+        this.turnState.abilityUseCount[pokemon.id] = (this.turnState.abilityUseCount[pokemon.id] ?? 0) + 1;
         this.log(`${card.name}の特性「${card.ability.name}」`);
         card.ability.use(this, player, pokemon);
     }
@@ -658,9 +674,17 @@ export default class Game {
             this.log(`${this.topCard(active).name}はにげた`);
             this.switchActive(player, target);
         };
-        const types = new Set(active.energies.map(inst => this.cardOf(inst).energyType));
-        if (cost === 0 || cost === active.energies.length || types.size <= 1) {
-            finish(active.energies.slice(0, cost));
+        const kinds = new Set(active.energies.map(inst => inst.id));
+        if (cost === 0 || cost >= active.energies.length || kinds.size <= 1) {
+            // 2個ぶんになる特殊エネルギーがあれば、トラッシュする枚数は少なくてすむ
+            const selected = [];
+            let units = 0;
+            for (const inst of active.energies) {
+                if (units >= cost) break;
+                selected.push(inst);
+                units += this.energyUnits(active, [inst]).length;
+            }
+            finish(selected);
             return;
         }
         this.turnState.retreated = true; // 選択の間に、もう一度にげないようにする
@@ -733,12 +757,13 @@ export default class Game {
         const guarded = kind => opposing && !ctx.ignoreEffects && this.hasEffect(target, kind);
         if (guarded('preventAll') || guarded('preventDamage')
             || (guarded('preventDamageFromBasic') && attackerCard.stage === 0)
-            || (guarded('preventDamageFromEx') && isPokemonEx(attackerCard))) {
+            || (guarded('preventDamageFromEx') && isPokemonEx(attackerCard))
+            || (opposing && this.hookAny('preventDamage', ctx, target))) {
             this.log(`${card.name}はワザのダメージを受けない`);
             return 0;
         }
-        // ワザを使うポケモンのどうぐ（ブレイブバングルなど）と効果は、弱点・抵抗力より先に足す
-        let damage = amount + (ctx.attacker?.tool ? (this.cardOf(ctx.attacker.tool).damageBonus?.({ game: this, attacker: ctx.attacker, target }) ?? 0) : 0);
+        // ワザを使うポケモンの側（どうぐ・特性などのフック damageDealt と、ワザの効果）は、弱点・抵抗力より先に足す
+        let damage = amount + (opposing ? this.hookSum('damageDealt', ctx, target) : 0);
         if (isActive && opposing) {
             damage += this.effectsOf(ctx.attacker, 'attackDamageModifier')
                 .filter(effect => !effect.attack || effect.attack === ctx.attack?.name)
@@ -752,6 +777,8 @@ export default class Game {
             damage -= this.effectsOf(target, 'damageReduction').reduce((sum, effect) => sum + effect.amount, 0);
             damage += this.effectsOf(target, 'damageIncrease').reduce((sum, effect) => sum + effect.amount, 0);
         }
+        // 受けるポケモンの側（どうぐ・特性・スタジアムなどのフック damageTaken）は、弱点・抵抗力の後
+        if (opposing) damage += this.hookSum('damageTaken', ctx, target);
         damage = Math.max(0, damage);
         target.damage += damage;
         this.log(`${card.name}に${damage}ダメージ`);
@@ -760,12 +787,15 @@ export default class Game {
         if (damage > 0 && opposing && ctx.attacker && this.ownerOf(ctx.attacker)) {
             this.effectsOf(target, 'counterOnDamaged').forEach(effect => this.putDamage(ctx.attacker, effect.amount));
         }
+        if (damage > 0 && opposing) this.hookAll('onDamaged', ctx, target, damage);
         return damage;
     }
 
-    // ワザの効果を与えられるか（相手のポケモンに「ワザの効果を受けない」がかかっていないか）
+    // ワザの効果を与えられるか（相手のポケモンに「ワザの効果を受けない」がかかっていないか。特性などのフック preventEffects も見る）
     canAffectByAttack(ctx, pokemon) {
-        if (this.ownerOf(pokemon) === ctx.player || ctx.ignoreEffects) return true;
+        if (this.ownerOf(pokemon) === ctx.player) return true;
+        if (this.hookAny('preventEffects', ctx, pokemon)) return false;
+        if (ctx.ignoreEffects) return true;
         return !this.hasEffect(pokemon, 'preventAll');
     }
 
@@ -785,6 +815,10 @@ export default class Game {
     // 特殊状態にする。ねむり・マヒ・こんらんは重ならず、新しいものに置き換わる
     addCondition(pokemon, condition) {
         if (!pokemon) return;
+        if (this.hookAny('conditionImmune', pokemon, condition)) {
+            this.log(`${this.topCard(pokemon).name}は${CONDITION_NAMES[condition]}にならない`);
+            return;
+        }
         if (condition === 'poisoned' || condition === 'burned') pokemon[condition] = true;
         else pokemon.rotation = condition;
         this.log(`${this.topCard(pokemon).name}は${CONDITION_NAMES[condition]}になった`);
@@ -877,6 +911,7 @@ export default class Game {
         player.active = benchPokemon;
         benchPokemon.movedToActiveTurn = this.turn;
         this.log(`${player.name}のバトル場に${this.topCard(benchPokemon).name}が出た`);
+        if (this.phase === 'main' && player.id === this.current) this.triggerAbility(player, benchPokemon, 'onActive');
     }
 
     // optional なら、入れ替えなくてもよい（何も選ばなければ入れ替えない）
@@ -909,7 +944,7 @@ export default class Game {
     // 手札以外（山札など）のカードで進化させる
     evolveFromOutside(player, pokemon, inst) {
         player.hand.push(inst);
-        this.evolveInto(player, pokemon, inst);
+        this.evolveInto(player, pokemon, inst, { fromHand: false });
     }
 
     // ポケモンと、ついているすべてのカードを手札にもどす（バトル場が空いたら、きぜつの確認でベンチから出す）
@@ -1098,6 +1133,104 @@ export default class Game {
         return heads;
     }
 
+    // ===== いるだけで働く効果（特性・ポケモンのどうぐ・特殊エネルギー・スタジアム） =====
+    // カードの定義の hooks（特性は ability.hooks）に、フックの名前で関数を書く。関数は (game, source, ...args) で呼ぶ
+    //   source：{ kind: 'ability' | 'tool' | 'energy' | 'stadium', player（持ち主）, pokemon（特性・どうぐ・エネルギーのついたポケモン。スタジアムは null）, card, inst }
+    // フックの名前と使い方は cards/HOOKS.md にまとめてある
+
+    passiveSources({ abilities = true } = {}) {
+        const sources = [];
+        this.players.forEach(player => this.inPlay(player).forEach(pokemon => {
+            const top = this.topCard(pokemon);
+            if (abilities && top.ability?.hooks && !this.abilitySuppressed(pokemon)) {
+                sources.push({ kind: 'ability', hooks: top.ability.hooks, player, pokemon, card: top, inst: pokemon.cards[pokemon.cards.length - 1] });
+            }
+            if (pokemon.tool) {
+                const card = this.cardOf(pokemon.tool);
+                if (card.hooks && !this.toolSuppressed(pokemon)) sources.push({ kind: 'tool', hooks: card.hooks, player, pokemon, card, inst: pokemon.tool });
+            }
+            pokemon.energies.forEach(inst => {
+                const card = this.cardOf(inst);
+                if (card.hooks) sources.push({ kind: 'energy', hooks: card.hooks, player, pokemon, card, inst });
+            });
+        }));
+        if (this.stadium) {
+            const card = this.cardOf(this.stadium.inst);
+            if (card.hooks) sources.push({ kind: 'stadium', hooks: card.hooks, player: this.players[this.stadium.owner], pokemon: null, card, inst: this.stadium.inst });
+        }
+        return sources;
+    }
+
+    // 数を足し合わせるフック（最大HP・にげるためのエネルギー・ダメージの増減など）
+    hookSum(name, ...args) {
+        return this.passiveSources().reduce((sum, source) => sum + (source.hooks[name]?.(this, source, ...args) ?? 0), 0);
+    }
+
+    // どれか1つでも値を返せば、その値（止める理由の文字列・true など）
+    hookAny(name, ...args) {
+        for (const source of this.passiveSources()) {
+            const result = source.hooks[name]?.(this, source, ...args);
+            if (result) return result;
+        }
+        return null;
+    }
+
+    // 起きたことを知らせるフック（ダメージを受けた・きぜつした・番の終わり など）
+    hookAll(name, ...args) {
+        this.passiveSources().forEach(source => source.hooks[name]?.(this, source, ...args));
+    }
+
+    // 特性がなくなっているか（ポケモンについている効果か、特性以外のカードの効果で）
+    abilitySuppressed(pokemon) {
+        if (this.hasEffect(pokemon, 'abilityLock')) return true;
+        return this.passiveSources({ abilities: false }).some(source => source.hooks.suppressAbility?.(this, source, pokemon));
+    }
+
+    toolSuppressed(pokemon) {
+        if (!this.stadium) return false;
+        const card = this.cardOf(this.stadium.inst);
+        return Boolean(card.hooks?.suppressTool?.(this, { kind: 'stadium', player: this.players[this.stadium.owner], pokemon: null, card, inst: this.stadium.inst }, pokemon));
+    }
+
+    // ワザを使うためのエネルギー（特性・どうぐなどで変わることがある）
+    attackCost(pokemon, attack) {
+        let cost = [...attack.cost];
+        for (const source of this.passiveSources()) {
+            const changed = source.hooks.attackCost?.(this, source, pokemon, attack, cost);
+            if (changed) cost = changed;
+        }
+        return cost;
+    }
+
+    // ポケモンについているエネルギーが出すエネルギー（1個ずつの配列。'any' はどのタイプにもなる）
+    energyUnits(pokemon, energies = pokemon.energies) {
+        return energies.flatMap(inst => {
+            const card = this.cardOf(inst);
+            if (card.basic) return [card.energyType];
+            return card.provides ? card.provides(this, pokemon, inst) : ['colorless'];
+        });
+    }
+
+    // 特性の「〜したとき」を使うか聞く（進化させたとき・ベンチに出したとき・バトル場に出たとき）
+    triggerAbility(player, pokemon, type) {
+        const card = this.topCard(pokemon);
+        const ability = card.ability;
+        if (ability?.type !== type || this.abilitySuppressed(pokemon)) return;
+        if (ability.canUse && !ability.canUse(this, player, pokemon)) return;
+        this.runNext(() => this.promptConfirm({
+            player,
+            title: `特性「${ability.name}」を使いますか？`,
+            card: pokemon.cards[pokemon.cards.length - 1].id,
+            purpose: `ability-${card.id}`,
+            callback: yes => {
+                if (!yes) return;
+                this.log(`${card.name}の特性「${ability.name}」`);
+                this.turnState.abilityNamesUsed.push(ability.name);
+                ability.use(this, player, pokemon);
+            }
+        }));
+    }
+
     // ===== 場の情報 =====
 
     createPokemon(inst, { faceDown = false } = {}) {
@@ -1138,23 +1271,22 @@ export default class Game {
         return this.cardOf(pokemon.cards[pokemon.cards.length - 1]);
     }
 
+    // 最大HP（どうぐ・スタジアム・特性などのフック maxHp で変わる）
     maxHp(pokemon) {
-        const card = this.topCard(pokemon);
-        const bonus = pokemon.tool ? (this.cardOf(pokemon.tool).hpBonus?.(card) ?? 0) : 0;
-        const stadium = this.stadium ? (this.cardOf(this.stadium.inst).hpModifier?.(card) ?? 0) : 0;
-        return Math.max(0, card.hp + bonus + stadium);
+        return Math.max(0, this.topCard(pokemon).hp + this.hookSum('maxHp', pokemon));
     }
 
+    // にげるためのエネルギーの数（フック retreatCost で変わる）
     retreatCost(pokemon) {
-        const reduction = pokemon.tool ? (this.cardOf(pokemon.tool).retreatReduction ?? 0) : 0;
-        return Math.max(0, this.topCard(pokemon).retreat - reduction);
+        return Math.max(0, this.topCard(pokemon).retreat + this.hookSum('retreatCost', pokemon));
     }
 
-    // エネルギーが足りるか。タイプの指定から先に割り当て、残りで無色をまかなう
+    // エネルギーが足りるか。タイプの指定から先に割り当て（同じタイプ → どのタイプにもなるもの）、残りで無色をまかなう
     canPayCost(pokemon, cost) {
-        const pool = pokemon.energies.map(inst => this.cardOf(inst).energyType);
+        const pool = this.energyUnits(pokemon);
         for (const type of cost.filter(type => type !== 'colorless')) {
-            const index = pool.indexOf(type);
+            let index = pool.indexOf(type);
+            if (index === -1) index = pool.indexOf('any');
             if (index === -1) return false;
             pool.splice(index, 1);
         }
@@ -1210,9 +1342,10 @@ export default class Game {
     }
 
     // カードを min〜max 枚選ばせる。callback には選んだカードの配列が渡る
-    promptCards({ player, cards, min, max, title, purpose, callback }) {
+    // ほかの値（cpuAnswer：CPU の答え方 (game, prompt) => 答え、など）は、そのまま選択に残す
+    promptCards({ player, cards, min, max, title, purpose, callback, ...extra }) {
         const list = [...cards];
-        this.setPrompt({ type: 'cards', player, cards: list, min, max, title, purpose, callback: indices => callback(indices.map(index => list[index])) });
+        this.setPrompt({ ...extra, type: 'cards', player, cards: list, min, max, title, purpose, callback: indices => callback(indices.map(index => list[index])) });
     }
 
     // 場のポケモンを選ばせる。callback には選んだポケモンの配列が渡る（amount など、ほかの値はそのまま選択に残す）
@@ -1222,12 +1355,12 @@ export default class Game {
     }
 
     // 文字の選択肢から選ばせる。callback には選んだインデックスの配列が渡る
-    promptChoose({ player, options, min = 1, max = 1, title, purpose, callback }) {
-        this.setPrompt({ type: 'choose', player, options, min, max, title, purpose, callback });
+    promptChoose({ player, options, min = 1, max = 1, title, purpose, callback, ...extra }) {
+        this.setPrompt({ ...extra, type: 'choose', player, options, min, max, title, purpose, callback });
     }
 
-    promptConfirm({ player, title, card = null, purpose, callback }) {
-        this.setPrompt({ type: 'confirm', player, title, card, purpose, callback });
+    promptConfirm({ player, title, card = null, purpose, callback, ...extra }) {
+        this.setPrompt({ ...extra, type: 'confirm', player, title, card, purpose, callback });
     }
 
     setPrompt(prompt) {

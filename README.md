@@ -16,6 +16,7 @@
 - 特殊状態（どく・やけど・ねむり・マヒ・こんらん）と、番の終わりのポケモンチェック
 - サイドを取り切る・相手の場にポケモンがいなくなる・相手が山札を引けなくなる、のどれかで勝ち。ex がきぜつすると、サイドは2枚（メガシンカex は3枚）
 - 進化は名前でつながる（別の版のたねポケモンからも進化できる）
+- ACE SPEC はデッキに1枚まで
 
 ## カードとレギュレーション
 
@@ -25,11 +26,15 @@
 - 使えるマークは `public/js/regulation.js` の `STANDARD_MARKS` で決めています。レギュレーションが変わったら、ここを直します
 - 基本エネルギーはマークがなく、いつでも使えます
 
-**効果が動くカードだけを使えます。** 今は、ポケモン約1,000種類（特性のないもの）と、トレーナーズ19種類・基本エネルギーです。残りは少しずつ足していきます（`node tools/card-coverage.mjs` で数と、まだ読み替えられない文がわかります）。
+**効果が動くカードだけを使えます。** 今は、1,916種類のうち1,865種類（ポケモン1,626・トレーナーズ216・エネルギー23）です（`node tools/card-coverage.mjs` で数が、`node tools/list-unsupported.mjs` でまだ動かないカードがわかります）。
 
-- ワザの効果は、文を決まった形に読み替えて動かします（`public/js/cards/attack-effects.js`。例：「コインを1回投げオモテなら、30ダメージ追加。」）。読み替えられないものは `attack-overrides.js` に書きます
-- 特性は `ability-effects.js`、トレーナーズは `trainer-effects.js` に、名前で書きます。ここにないカードは、デッキ構築に出ません
-- 足りないもの：特性（まだ1つもない）・ほとんどのトレーナーズ・特殊エネルギー・テラスタル（データにどのポケモンかが入っていない）・ACE SPEC の一部（データで ACE SPEC とわかるのは5種類だけ）
+- ワザの効果は、文を決まった形に読み替えて動かします（`public/js/cards/attack-effects.js`。例：「コインを1回投げオモテなら、30ダメージ追加。」）。読み替えられないものは `attack-overrides*.js` に、カードごとに書きます
+- 特性は `abilities/`、トレーナーズは `trainers/` と `trainer-effects.js`、特殊エネルギーは `energy-effects.js` に、名前で書きます。いるだけで働く効果は、本体が場のカードに問い合わせる「フック」で書きます（書き方は `public/js/cards/HOOKS.md`）
+- テラスタル・古代・未来・ACE SPEC の印は TCGdex のデータにないので、Limitless TCG の検索結果から補っています（`tools/data/limitless-tags.json`）
+- まだ動かないもの（51種類）：
+  - TCGdex の文からエネルギーの記号が抜けていて、意味を確かめられないもの（エキサイトパワーなど）
+  - 化石（グッズをたねポケモンとして出す）・ワザを2回続けて使う特性・手札にあるときに使う特性・どうぐに書かれたワザ
+  - 「相手の特性・グッズ・サポートの効果を受けない」・どうぐを2枚つける・サイドのオモテ・ウラを使うもの など
 
 カードのデータを取り直すとき（新しいパックが出たときなど）：
 
@@ -37,6 +42,7 @@
 node tools/fetch-cards.mjs     # TCGdex から取って tools/data/tcgdex-ja/ に保存（保存済みのセットは飛ばす。--refresh で取り直す）
 node tools/build-cards.mjs     # public/js/cards/catalog.js を作り直す
 node tools/card-coverage.mjs   # 動くカードの数
+node tools/list-unsupported.mjs attacks|abilities|trainers   # まだ動かないカードの一覧
 ```
 
 ## デッキ

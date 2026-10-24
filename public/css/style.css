@@ -325,7 +325,13 @@ button { font: inherit; color: inherit; }
     padding: 6px 6px 0 8px;
     min-height: 0;
 }
-.pool-tabs { justify-self: start; }
+.pool-bar { display: flex; gap: 6px; align-items: center; min-width: 0; }
+.pool-tabs { flex: none; }
+.pool-search, .pool-type { max-width: none; height: 32px; padding: 0 8px; font-size: 14px; border-radius: 8px; }
+.pool-search { flex: 1 1 90px; min-width: 70px; }
+.pool-type { flex: 0 0 auto; width: auto; }
+.pool-type[hidden] { display: none; }
+.pool-note { grid-column: 1 / -1; margin: 6px 2px; color: var(--muted, #aab); font-size: 13px; }
 .pool {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(clamp(60px, 13dvh, 96px), 1fr));

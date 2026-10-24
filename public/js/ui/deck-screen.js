@@ -3,7 +3,7 @@
  * 編集はその場で保存する（保存ボタンも、戻るときの確認もない）
  */
 
-import { getCard } from '../card-data.js';
+import { getCard, TYPE_NAMES } from '../card-data.js';
 import { DECK_SIZE } from '../deck-rules.js';
 import { CARD_POOL, addCard, removeCard, canAdd, totalCount, deckProblem, sortedEntries } from '../deck-builder.js';
 import { cardFace } from './card-view.js';
@@ -18,8 +18,17 @@ const KIND_TABS = [
     { kind: 'energy', label: 'エネルギー' }
 ];
 
+// 一度に並べるカードの数（多すぎると、スマホで描き直しが重い）
+const POOL_LIMIT = 200;
+const TYPE_ORDER = ['grass', 'fire', 'water', 'lightning', 'psychic', 'fighting', 'darkness', 'metal', 'dragon', 'colorless'];
+
 function escape(text) {
     return String(text).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+}
+
+// 検索のために、ひらがなをカタカナに、全角・半角をそろえる
+function searchKey(text) {
+    return String(text).normalize('NFKC').toLowerCase().replace(/[ぁ-ゖ]/g, c => String.fromCharCode(c.charCodeAt(0) + 0x60));
 }
 
 export default class DeckScreens {
@@ -29,6 +38,10 @@ export default class DeckScreens {
         this.handlers = handlers;
         this.deck = null;
         this.kind = 'pokemon';
+        this.query = '';
+        this.type = 'all';
+        $('pool-type').innerHTML = ['<option value="all">すべてのタイプ</option>',
+            ...TYPE_ORDER.map(type => `<option value="${type}">${TYPE_NAMES[type]}</option>`)].join('');
         this.bind();
     }
 
@@ -62,6 +75,16 @@ export default class DeckScreens {
             const tab = event.target.closest('[data-kind]');
             if (!tab) return;
             this.kind = tab.dataset.kind;
+            this.renderEditor();
+            $('pool').scrollTop = 0;
+        });
+        $('pool-search').addEventListener('input', () => {
+            this.query = searchKey($('pool-search').value.trim());
+            this.renderEditor();
+            $('pool').scrollTop = 0;
+        });
+        $('pool-type').addEventListener('change', () => {
+            this.type = $('pool-type').value;
             this.renderEditor();
             $('pool').scrollTop = 0;
         });
@@ -131,12 +154,21 @@ export default class DeckScreens {
 
         $('pool-tabs').innerHTML = KIND_TABS.map(tab =>
             `<button type="button" class="segment-item ${tab.kind === this.kind ? 'active' : ''}" data-kind="${tab.kind}">${tab.label}</button>`).join('');
-        $('pool').innerHTML = CARD_POOL
-            .filter(id => getCard(id).kind === this.kind)
-            .map(id => {
-                const count = deck.cards[id] ?? 0;
-                return `<div class="pool-card ${canAdd(deck, id) ? '' : 'maxed'}" data-card="${id}">${cardFace(id)}${count ? `<span class="pool-count">${count}</span>` : ''}</div>`;
-            }).join('');
+        $('pool-type').hidden = this.kind !== 'pokemon';
+        const matches = CARD_POOL.filter(id => {
+            const card = getCard(id);
+            if (card.kind !== this.kind) return false;
+            if (this.kind === 'pokemon' && this.type !== 'all' && card.type !== this.type) return false;
+            return !this.query || searchKey(card.name).includes(this.query);
+        });
+        const shown = matches.slice(0, POOL_LIMIT);
+        const note = matches.length === 0
+            ? '<p class="pool-note">見つかりませんでした</p>'
+            : matches.length > shown.length ? `<p class="pool-note">${matches.length}種類のうち${shown.length}種類を表示しています。名前やタイプでしぼってください</p>` : '';
+        $('pool').innerHTML = shown.map(id => {
+            const count = deck.cards[id] ?? 0;
+            return `<div class="pool-card ${canAdd(deck, id) ? '' : 'maxed'}" data-card="${id}">${cardFace(id)}${count ? `<span class="pool-count">${count}</span>` : ''}</div>`;
+        }).join('') + note;
 
         const entries = sortedEntries(deck);
         $('deck-cards').innerHTML = entries.length

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getCard } from '../public/js/card-data.js';
+import { getCard, resolveCardId } from '../public/js/card-data.js';
 import { startedGame, arrange, answer, makeCard, C } from './helpers.js';
 
 // 特性（そのb）のテスト。カードは catalog.js の id で指定する
@@ -10,32 +10,32 @@ const FIGHTING = 'basic-fighting-energy';
 const DARKNESS = 'basic-darkness-energy';
 const POTIONS = Array(10).fill(C.potion);
 
-const DODEKABASHI = 'M5-092'; // ドデカバシ：スカイドロー
-const N_ZOROARK_EX = 'M2a-242'; // Nのゾロアークex：とりひき
-const DRAKLOAK = 'SV6-080'; // ドロンチ：ていさつしれい
-const MEOWSCARADA = 'SV9-012'; // マスカーニャ：ショータイム
-const PECHARUNT_EX = 'SV6a-092'; // モモワロウex：しはいのくさり
-const MEGA_VENUSAUR_EX = 'M1L-087'; // メガフシギバナex：ソーラートランス
-const FERALIGATR = 'SV5K-015'; // オーダイル：トレントハート
-const DIPPLIN_EX = 'SV7-127'; // カミツオロチex：じゅくせいチャージ
-const ABRA = 'SV6-047'; // ケーシィ
-const KADABRA = 'M1S-037'; // ユンゲラー：サイコドロー
-const ROCKET_ZUBAT = 'SV10-064'; // ロケット団のズバット
-const ROCKET_GOLBAT = 'SV10-065'; // ロケット団のゴルバット：こっそりかみつく
-const INDEEDEE = 'SV8-058'; // イエッサン：せわやきヒール
-const BRAMBLEGHAST = 'SV5M-013'; // アノホラグサ：ざっそうだましい
-const ALTARIA = 'M6-087'; // チルタリス：コットンキャリー
-const CRUSTLE = 'M2a-014'; // イワパレス：しんぴのいしやど
-const ROSELIA = 'SV5K-001'; // ロゼリア：どくのトゲ
-const MEGA_DIANCIE_EX = 'M2a-238'; // メガディアンシーex：ダイヤコート
-const GARGANACL = 'MC-418'; // キョジオーン：ちからのしお
-const SLAKING_EX = 'SV8-126'; // ケッキングex：さぼりたいしつ
-const VELUZA = 'SV7-027'; // ミガルーサ：したごしらえ
-const KARRABLAST = 'SV11B-094'; // カブルモ：しげきしんか
-const SHELMET = 'SV11W-093'; // チョボマキ
-const MUNKIDORI = 'M2a-115'; // モモワロウ：さいごのくさり
-const PIKACHU_EX = 'MC-764'; // ピカチュウex（10まんボルト 120）
-const HAIDAI = 'SV7-125'; // ハイダイ
+const DODEKABASHI = resolveCardId('M5-092'); // ドデカバシ：スカイドロー
+const N_ZOROARK_EX = resolveCardId('M2a-242'); // Nのゾロアークex：とりひき
+const DRAKLOAK = resolveCardId('SV6-080'); // ドロンチ：ていさつしれい
+const MEOWSCARADA = resolveCardId('SV9-012'); // マスカーニャ：ショータイム
+const PECHARUNT_EX = resolveCardId('SV6a-092'); // モモワロウex：しはいのくさり
+const MEGA_VENUSAUR_EX = resolveCardId('M1L-087'); // メガフシギバナex：ソーラートランス
+const FERALIGATR = resolveCardId('SV5K-015'); // オーダイル：トレントハート
+const DIPPLIN_EX = resolveCardId('SV7-127'); // カミツオロチex：じゅくせいチャージ
+const ABRA = resolveCardId('SV6-047'); // ケーシィ
+const KADABRA = resolveCardId('M1S-037'); // ユンゲラー：サイコドロー
+const ROCKET_ZUBAT = resolveCardId('SV10-064'); // ロケット団のズバット
+const ROCKET_GOLBAT = resolveCardId('SV10-065'); // ロケット団のゴルバット：こっそりかみつく
+const INDEEDEE = resolveCardId('SV8-058'); // イエッサン：せわやきヒール
+const BRAMBLEGHAST = resolveCardId('SV5M-013'); // アノホラグサ：ざっそうだましい
+const ALTARIA = resolveCardId('M6-087'); // チルタリス：コットンキャリー
+const CRUSTLE = resolveCardId('M2a-014'); // イワパレス：しんぴのいしやど
+const ROSELIA = resolveCardId('SV5K-001'); // ロゼリア：どくのトゲ
+const MEGA_DIANCIE_EX = resolveCardId('M2a-238'); // メガディアンシーex：ダイヤコート
+const GARGANACL = resolveCardId('MC-418'); // キョジオーン：ちからのしお
+const SLAKING_EX = resolveCardId('SV8-126'); // ケッキングex：さぼりたいしつ
+const VELUZA = resolveCardId('SV7-027'); // ミガルーサ：したごしらえ
+const KARRABLAST = resolveCardId('SV11B-094'); // カブルモ：しげきしんか
+const SHELMET = resolveCardId('SV11W-093'); // チョボマキ
+const MUNKIDORI = resolveCardId('M2a-115'); // モモワロウ：さいごのくさり
+const PIKACHU_EX = resolveCardId('MC-764'); // ピカチュウex（10まんボルト 120）
+const HAIDAI = resolveCardId('SV7-125'); // ハイダイ
 
 // 3ターン目（どちらも最初の番を終えた後）の、手番のプレイヤーの番にする
 function midGame(seed = 1) {

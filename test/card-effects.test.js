@@ -39,7 +39,7 @@ afterEach(() => {
 
 describe('カードのデータ', () => {
     it('スタンダードのカードを、名前と効果で1種類として持つ。前の版のIDは今のIDに読み替える', () => {
-        expect(Object.keys(CARDS).length).toBeGreaterThan(2000);
+        expect(Object.keys(CARDS).length).toBeGreaterThan(1800);
         expect(resolveCardId('charmander')).toBe(C.charmander);
         expect(CARDS[C.charmander].name).toBe('ヒトカゲ');
         expect(resolveCardId(C.charmander)).toBe(C.charmander);

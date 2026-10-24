@@ -1,12 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { CARDS } from '../public/js/card-data.js';
+import { CARDS, resolveCardId } from '../public/js/card-data.js';
 import { startedGame, arrange, answer, makeCard, C } from './helpers.js';
 
 const FIRE = 'basic-fire-energy';
 const WATER = 'basic-water-energy';
 const LIGHTNING = 'basic-lightning-energy';
 const DARKNESS = 'basic-darkness-energy';
-const SPECIAL = 'M3-078'; // グロウ草エネルギー（特殊エネルギー）
+const SPECIAL = resolveCardId('M3-078'); // グロウ草エネルギー（特殊エネルギー）
 const FLOAT_STONE = C['float-stone'];
 const LUMIOSE = C['lumiose-city'];
 

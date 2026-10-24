@@ -1,4 +1,5 @@
 import { describe, it, expect } from 'vitest';
+import { resolveCardId } from '../public/js/card-data.js';
 import { startedGame, arrange, answer, C } from './helpers.js';
 
 const LIGHTNING = 'basic-lightning-energy';
@@ -10,34 +11,34 @@ const POTIONS = Array(8).fill(C.potion);
 const PRIZES = Array(6).fill(C.potion);
 
 // 特性を持つカード（catalog.js の id）
-const RAPIDASH = 'MC-090'; // ギャロップ：いそぎあし
-const QUAQUAVAL = 'SV7a-015'; // ウェーニバル：アップテンポ
-const MEGA_KANGASKHAN = 'M-P-086'; // メガガルーラex：おつかいダッシュ
-const DUSKNOIR = 'SV6a-070'; // ヨノワール：カースドボム
-const MUNKIDORI = 'SV6-107'; // マシマシラ：アドレナブレイン
-const IONO_BELLIBOLT = 'SV9-030'; // ナンジャモのハラバリーex：エレキストリーマー
-const ERIKA_VILEPLUME = 'MC-003'; // エリカのラフレシアex：うるわしのかおり
-const ROCKET_CROBAT = 'SV10-131'; // ロケット団のクロバットex：かみつきまわる
-const ROCKET_GOLBAT = 'SV10-065'; // ロケット団のゴルバット
-const ARCHALUDON = 'SV7a-037'; // ブリジュラスex：ごうきんビルド
-const DURALUDON = 'SV7a-036'; // ジュラルドン
-const LEDIAN = 'SV7-103'; // レディアン：きらぼしもよう
-const LEDYBA = 'SV7-001'; // レディバ
-const IRON_ANT = 'SV8-130'; // アイアントex：いきなりけずる
-const BOUFFALANT_EX = 'SV11W-172'; // バッフロンex：アフロガード
-const BOUFFALANT_A = 'M2a-140'; // バッフロン：カーリーウォール
-const BOUFFALANT_B = 'SV7-081'; // バッフロン：カーリーウォール
-const OKIDOGI = 'SV6-110'; // イイネイヌ：アドレナパワー
-const PIKACHU_EX = 'SV8-136'; // ピカチュウex：がんばりハート
-const TYRANITAR = 'SV9-058'; // バンギラス：いあつのがんこう
-const MEGA_GOLURK = 'M6-109'; // メガゴルーグex：きどうせいげん
-const IRON_BOULDER = 'MC-628'; // テツノコウベ：オートマーシャル
-const FROSLASS = 'SV6-104'; // ユキメノコ：いてつくとばり
-const HYDREIGON_EX = 'SV11W-171'; // サザンドラex：グリードイーター
-const THUNDURUS = 'M6-025'; // ボルトロス：けしんだんけつ
-const LANDORUS = 'M6-040'; // ランドロス
-const TORNADUS = 'M6-059'; // トルネロス
-const ENAMORUS = 'M6-083'; // ラブトロス
+const RAPIDASH = resolveCardId('MC-090'); // ギャロップ：いそぎあし
+const QUAQUAVAL = resolveCardId('SV7a-015'); // ウェーニバル：アップテンポ
+const MEGA_KANGASKHAN = resolveCardId('M-P-086'); // メガガルーラex：おつかいダッシュ
+const DUSKNOIR = resolveCardId('SV6a-070'); // ヨノワール：カースドボム
+const MUNKIDORI = resolveCardId('SV6-107'); // マシマシラ：アドレナブレイン
+const IONO_BELLIBOLT = resolveCardId('SV9-030'); // ナンジャモのハラバリーex：エレキストリーマー
+const ERIKA_VILEPLUME = resolveCardId('MC-003'); // エリカのラフレシアex：うるわしのかおり
+const ROCKET_CROBAT = resolveCardId('SV10-131'); // ロケット団のクロバットex：かみつきまわる
+const ROCKET_GOLBAT = resolveCardId('SV10-065'); // ロケット団のゴルバット
+const ARCHALUDON = resolveCardId('SV7a-037'); // ブリジュラスex：ごうきんビルド
+const DURALUDON = resolveCardId('SV7a-036'); // ジュラルドン
+const LEDIAN = resolveCardId('SV7-103'); // レディアン：きらぼしもよう
+const LEDYBA = resolveCardId('SV7-001'); // レディバ
+const IRON_ANT = resolveCardId('SV8-130'); // アイアントex：いきなりけずる
+const BOUFFALANT_EX = resolveCardId('SV11W-172'); // バッフロンex：アフロガード
+const BOUFFALANT_A = resolveCardId('M2a-140'); // バッフロン：カーリーウォール
+const BOUFFALANT_B = resolveCardId('SV7-081'); // バッフロン：カーリーウォール
+const OKIDOGI = resolveCardId('SV6-110'); // イイネイヌ：アドレナパワー
+const PIKACHU_EX = resolveCardId('SV8-136'); // ピカチュウex：がんばりハート
+const TYRANITAR = resolveCardId('SV9-058'); // バンギラス：いあつのがんこう
+const MEGA_GOLURK = resolveCardId('M6-109'); // メガゴルーグex：きどうせいげん
+const IRON_BOULDER = resolveCardId('MC-628'); // テツノコウベ：オートマーシャル
+const FROSLASS = resolveCardId('SV6-104'); // ユキメノコ：いてつくとばり
+const HYDREIGON_EX = resolveCardId('SV11W-171'); // サザンドラex：グリードイーター
+const THUNDURUS = resolveCardId('M6-025'); // ボルトロス：けしんだんけつ
+const LANDORUS = resolveCardId('M6-040'); // ランドロス
+const TORNADUS = resolveCardId('M6-059'); // トルネロス
+const ENAMORUS = resolveCardId('M6-083'); // ラブトロス
 
 // 3ターン目（どちらも最初の番を終えた後）の、手番のプレイヤーの番にする
 function midGame(seed = 1) {

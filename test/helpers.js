@@ -1,6 +1,7 @@
 import Game from '../public/js/game.js';
 import { runCpuStep } from '../public/js/cpu-player.js';
 import { DECKS, expandDeck } from '../public/js/decks.js';
+import { resolveCardId } from '../public/js/card-data.js';
 
 // テストでは、前の版のカードID（'charmander' など）で書けるように、今のIDへの表を使う（C.charmander → 'MC-083'）
 export { LEGACY_IDS as C } from '../public/js/cards/catalog.js';
@@ -20,8 +21,9 @@ export function startedGame(seed = 1, { cpu = [false, false] } = {}) {
     return game;
 }
 
+// id はどの版の番号でもよい（今のカードのIDに読み替える）
 export function makeCard(game, id) {
-    return { uid: `t${game.nextUid++}`, id };
+    return { uid: `t${game.nextUid++}`, id: resolveCardId(id) };
 }
 
 // プレイヤーの場と手札を並べ直す（テスト用）

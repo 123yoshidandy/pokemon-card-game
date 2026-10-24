@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CARDS } from '../public/js/card-data.js';
+import { CARDS, resolveCardId } from '../public/js/card-data.js';
 import { TRAINER_EFFECTS } from '../public/js/cards/trainers/supporters.js';
 import { runCpuStep } from '../public/js/cpu-player.js';
 import { startedGame, arrange, answer, C } from './helpers.js';
@@ -8,8 +8,8 @@ const LIGHTNING = 'basic-lightning-energy';
 const WATER = 'basic-water-energy';
 const FIRE = 'basic-fire-energy';
 const DARKNESS = 'basic-darkness-energy';
-const SPECIAL = 'M3-078'; // グロウ草エネルギー（特殊エネルギー）
-const ZORUA = 'M1L-041'; // クスネ（悪のたねポケモン）
+const SPECIAL = resolveCardId('M3-078'); // グロウ草エネルギー（特殊エネルギー）
+const ZORUA = resolveCardId('M1L-041'); // クスネ（悪のたねポケモン）
 const FILLER = Array(10).fill(C.potion);
 
 // サポートのカードIDを名前で引く

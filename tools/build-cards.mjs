@@ -57,6 +57,22 @@ const LEGACY = {
     'gravity-mountain': ['グラビティーマウンテン', 'M2a-183']
 };
 
+// TCGdex のデータに進化元が入っていない進化ポケモンのうち、同じ名前の別の版でも補えないもの（進化の系統から書く）
+const KNOWN_EVOLUTIONS = {
+    'グレイシア': 'イーブイ', 'ヒスイ ウインディ': 'ヒスイ ガーディ', 'ワタシラガ': 'モンメン', 'カジリガメ': 'カムカメ', 'ランターン': 'チョンチー',
+    'ヤドキング': 'ヤドン', 'マホイップ': 'マホミル', 'ガラガラ': 'カラカラ', 'サイドン': 'サイホーン', 'ドサイドン': 'サイドン',
+    'マルノーム': 'ゴクリン', 'バイウールー': 'ウールー', 'クエスパトラ': 'マメバッタ', 'フライゴンex': 'ビブラーバ', 'アップリュー': 'カジッチュ',
+    'タルップル': 'カジッチュ', 'トランセル': 'キャタピー', 'バタフリー': 'トランセル', 'サナギラス': 'ヨーギラス', 'バンギラス': 'サナギラス',
+    'ホップのサダイジャ': 'ホップのスナヘビ', 'マタドガス': 'ドガース', 'Nのギギアル': 'Nのギアル', 'Nのギギギアル': 'Nのギギアル',
+    'ヒビキのマグマラシ': 'ヒビキのヒノアラシ', 'ヒビキのバクフーン': 'ヒビキのマグマラシ', 'シロナのミロカロス': 'シロナのヒンバス',
+    'カミツオロチ': 'カミッチュ', 'ペパーのヨクバリス': 'ペパーのホシガリス',
+    // 化石から進化するもの（化石のグッズは、まだ場に出せない）
+    'ズガイドス': '古びたずがいの化石', 'タテトプス': '古びたたての化石', 'リリーラ': '古びたねっこの化石', 'ユレイドル': 'リリーラ'
+};
+
+// 文の中のエネルギーの記号（[R] など）の数。版によって記号が抜けていることがあるので、多い版の文を使う
+const symbolCount = card => (JSON.stringify(card).match(/\[[A-Z]\]/g) ?? []).length;
+
 const sets = readdirSync(DATA_DIR).filter(name => name.endsWith('.json')).map(name => JSON.parse(readFileSync(join(DATA_DIR, name), 'utf8')));
 const releaseOf = new Map(sets.map(set => [set.id, set.releaseDate ?? '']));
 const prints = sets.flatMap(set => set.cards);
@@ -105,10 +121,10 @@ function convert(card) {
     return result;
 }
 
-// 名前と効果が同じなら同じカード（id・マーク・どの版かは比べない）
+// 名前と効果が同じなら同じカード（id・マーク・どの版かは比べない。版によって抜けていることがある、エネルギーの記号と進化元も比べない）
 function signature(card) {
-    const { id, regulation, ...rest } = card;
-    return JSON.stringify(rest, (key, value) => (typeof value === 'string' ? normalizeText(value) : value));
+    const { id, regulation, evolvesFrom, ...rest } = card;
+    return JSON.stringify(rest, (key, value) => (typeof value === 'string' ? normalizeText(value).replace(/\[[A-Z]\]/g, '') : value));
 }
 
 // トレーナーズの文の終わりにつく、ルールの注意書き（効果ではないので消す）
@@ -132,10 +148,12 @@ for (const print of prints) {
 }
 
 const newer = (a, b) => (releaseOf.get(b.print.set.id) ?? '').localeCompare(releaseOf.get(a.print.set.id) ?? '') || a.print.id.localeCompare(b.print.id);
-// 中身は一番新しい版のもの。id は一番古い版の番号（新しいパックで再録されても、id が変わらないように）
+// 中身は、エネルギーの記号が一番多い版（同じなら一番新しい版）のもの。id は一番古い版の番号（新しいパックで再録されても、id が変わらないように）
 const catalog = [...groups.values()].map(entries => {
     entries.sort(newer);
-    const card = { ...entries[0].card };
+    const best = entries.reduce((chosen, entry) => (symbolCount(entry.card) > symbolCount(chosen.card) ? entry : chosen), entries[0]);
+    const card = { ...best.card };
+    if (card.kind === 'pokemon' && !card.evolvesFrom) card.evolvesFrom = entries.find(entry => entry.card.evolvesFrom)?.card.evolvesFrom ?? null;
     if (!(card.kind === 'energy' && card.basic)) card.id = entries[entries.length - 1].print.id;
     const marks = entries.map(entry => entry.card.regulation).filter(Boolean).sort();
     if (card.regulation !== null) card.regulation = marks[marks.length - 1] ?? null;
@@ -143,6 +161,15 @@ const catalog = [...groups.values()].map(entries => {
     if (entries.some(entry => entry.card.aceSpec)) card.aceSpec = true;
     return card;
 });
+
+// 進化元が入っていない進化ポケモンは、同じ名前の別のカード（ワザなどが違う版）か、進化の系統から補う
+const fromByName = new Map(catalog.filter(card => card.kind === 'pokemon' && card.evolvesFrom).map(card => [card.name, card.evolvesFrom]));
+const missingFrom = [];
+catalog.filter(card => card.kind === 'pokemon' && card.stage > 0 && !card.evolvesFrom).forEach(card => {
+    card.evolvesFrom = fromByName.get(card.name) ?? KNOWN_EVOLUTIONS[card.name] ?? null;
+    if (!card.evolvesFrom) missingFrom.push(`${card.name}（${card.id}）`);
+});
+if (missingFrom.length) console.log(`進化元がわからない進化ポケモン：${missingFrom.join('・')}`);
 
 const KIND_ORDER = { pokemon: 0, trainer: 1, energy: 2 };
 catalog.sort((a, b) => KIND_ORDER[a.kind] - KIND_ORDER[b.kind] || a.id.localeCompare(b.id));

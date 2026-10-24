@@ -96,7 +96,7 @@ export const TRAINER_EFFECTS = {
                 if (!hitInActive(game, source, target) || isMega(game.topCard(target))) return;
                 if (!isMega(game.topCard(ctx.attacker)) || damage < 240) return;
                 damageAttacker(game, ctx, 12);
-                game.discardTool(target);
+                game.discardTool(target, source.inst);
             }
         },
         cpuWants: (game, player) => hasInPlay(game, player, card => !isMega(card))
@@ -126,7 +126,7 @@ export const TRAINER_EFFECTS = {
                 if (pokemon !== source.pokemon || !byAttack || !game.hasEffect(pokemon, 'survivalCastFullHp')) return false;
                 pokemon.damage = game.maxHp(pokemon) - 10;
                 game.log(`${game.topCard(pokemon).name}はサバイブギプスで、残りHP10で場に残った`);
-                game.discardTool(pokemon);
+                game.discardTool(pokemon, source.inst);
                 return true;
             }
         },
@@ -262,7 +262,7 @@ export const TRAINER_EFFECTS = {
             onDamaged: (game, source, ctx, target) => {
                 if (!hitInActive(game, source, target)) return;
                 damageAttacker(game, ctx, 12);
-                game.discardTool(target);
+                game.discardTool(target, source.inst);
             }
         },
         cpuWants: () => true

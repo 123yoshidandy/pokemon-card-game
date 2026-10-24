@@ -1236,12 +1236,19 @@ export default class Game {
         this.log(`${owner.name}の手札：${owner.hand.map(inst => this.cardName(inst)).join('・') || 'なし'}`, { to: viewer.id });
     }
 
-    discardTool(pokemon) {
-        if (!pokemon.tool || this.isEffectBlocked(pokemon, 'tool')) return;
+    // ポケモンのどうぐをトラッシュする（inst を渡さなければ1枚目。2枚目がついていれば、1枚目の場所に移る）
+    discardTool(pokemon, inst = pokemon.tool) {
+        if (!inst || this.isEffectBlocked(pokemon, 'tool')) return;
+        if (inst !== pokemon.tool && inst !== pokemon.tool2) return;
         const owner = this.ownerOf(pokemon);
-        const name = this.cardName(pokemon.tool);
-        owner.discard.push(pokemon.tool);
-        pokemon.tool = null;
+        const name = this.cardName(inst);
+        owner.discard.push(inst);
+        if (inst === pokemon.tool) {
+            pokemon.tool = pokemon.tool2 ?? null;
+            pokemon.tool2 = null;
+        } else {
+            pokemon.tool2 = null;
+        }
         this.log(`${this.topCard(pokemon).name}の${name}をトラッシュした`);
     }
 

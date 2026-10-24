@@ -497,7 +497,8 @@ export const ABILITY_EFFECTS = {
         hooks: {
             // このポケモンのワザのダメージを受けたポケモンを、この番の終わりまで覚えておく
             onDamaged: (game, source, ctx, target) => {
-                if (ctx.attacker === source.pokemon) game.addEffect(target, 'greedEaterHit', game.turn, { by: source.pokemon.id });
+                // 効果ではなく、ダメージを与えた記録なので、相手の効果を受けないポケモンにも直接残す（addEffect は守りで止まる）
+                if (ctx.attacker === source.pokemon) target.effects.push({ kind: 'greedEaterHit', untilTurn: game.turn, by: source.pokemon.id });
             },
             prizeModifier: (game, source, pokemon, player, { byAttack }) => {
                 if (player === source.player || !byAttack || game.topCard(pokemon).stage !== 0) return 0;

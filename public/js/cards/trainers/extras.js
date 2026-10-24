@@ -70,7 +70,7 @@ function berry(type) {
         hooks: {
             damageTaken: (game, source, ctx, target) => (target === source.pokemon && fromType(game, ctx) ? -60 : 0),
             afterAttackDamage: (game, source, ctx, target) => {
-                if (target === source.pokemon && fromType(game, ctx) && target.tool === source.inst) game.discardTool(target);
+                if (target === source.pokemon && fromType(game, ctx) && (target.tool === source.inst || target.tool2 === source.inst)) game.discardTool(target, source.inst);
             }
         },
         // 弱点のタイプのきのみをつける（弱点のポケモンからダメージを受けやすいので）
@@ -399,7 +399,7 @@ export const TRAINER_EFFECTS = {
         hooks: {
             extraAttacks: (game, source, pokemon) => (pokemon === source.pokemon ? [FLUORITE_ATTACK] : []),
             onTurnEnd: (game, source, player) => {
-                if (player === source.player && source.pokemon.tool === source.inst) game.discardTool(source.pokemon);
+                if (player === source.player && (source.pokemon.tool === source.inst || source.pokemon.tool2 === source.inst)) game.discardTool(source.pokemon, source.inst);
             }
         },
         cpuWants: (game, player) => game.inPlay(player).some(pokemon => game.topCard(pokemon).tera && pokemon.damage >= 100)

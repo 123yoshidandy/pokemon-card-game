@@ -129,6 +129,7 @@ suppressAbility は特性にも書ける（ほかのポケモンの特性をな�
   - 選択の後に続きがあるときは、callback の中に書く（選択を待つ間、手順は止まる）
   - cpuAnswer：`(game, prompt) => 答え`（cards・pokemon・choose はインデックスの配列、confirm は真偽値）。書かなければ、CPU は最小の答えを返す
 - きぜつ：ダメカンをのせたり、ポケモンを場から動かしたりした後に、きぜつとバトル場の補充を確かめるなら `game.runNext(() => game.checkKnockouts())`（ワザの後と番の終わりには、本体が確かめる）
+- ワザの途中：`game.currentAttack`（使っている途中のワザの ctx。ワザの後のきぜつの確認が終わるまで。prizeModifier などで、ワザを使ったポケモンを知るのに使う）
 - 番の情報：`game.turn` `game.current` `game.turnState`（supporterPlayed・supporterNames・energyAttached・retreated・abilityNamesUsed など） `player.turnsTaken`
   - `player.knockedOutTurn` / `knockedOutNames`：理由を問わず、自分のポケモンがきぜつした番と名前。`knockedOutByAttackTurn` / `knockedOutByAttackNames` はワザのダメージによるものだけ
 

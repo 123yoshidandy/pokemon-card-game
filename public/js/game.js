@@ -735,6 +735,7 @@ export default class Game {
         this.log(`${this.topCard(attacker).name}の「${attack.name}」`);
         this.effectQueue.push(
             () => {
+                this.currentAttack = ctx; // 使っている途中のワザ（フックが、ワザを使ったポケモンを知るため）
                 if (this.hasCondition(attacker, 'confused') && !this.flipCoin()) {
                     ctx.failed = true;
                     attacker.damage += CONFUSION_DAMAGE;
@@ -756,6 +757,7 @@ export default class Game {
                 this.resolvingAttack = true;
                 this.checkKnockouts();
                 this.resolvingAttack = false;
+                this.currentAttack = null;
             }
         );
         this.queueEndOfTurn();

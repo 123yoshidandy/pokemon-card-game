@@ -228,5 +228,128 @@ export const TRAINER_EFFECTS = {
                 && card.type === 'grass' && game.typesOf(target).includes('grass')
         },
         cpuWants: (game, player) => game.inPlay(player).some(pokemon => game.typesOf(pokemon).includes('grass'))
+    },
+
+    // ===== テラスタル・古代・未来の印を使うもの（印は tools/data/limitless-tags.json から補っている）=====
+    '覚醒のドラム': {
+        canPlay: (game, player) => player.deck.length > 0 && countTagged(game, player, 'ancient') > 0,
+        play: (game, player) => game.draw(player, countTagged(game, player, 'ancient')),
+        cpuWants: (game, player) => countTagged(game, player, 'ancient') >= 2
+    },
+    'リブートポッド': {
+        canPlay: (game, player) => countTagged(game, player, 'future') > 0 && basicEnergiesInDiscard(game, player).length > 0,
+        play: (game, player) => attachFromDiscardToEach(game, player, game.inPlay(player).filter(pokemon => game.topCard(pokemon).future)),
+        cpuWants: () => true
+    },
+    'ガラスのラッパ': {
+        canPlay: (game, player) => countTagged(game, player, 'tera') > 0
+            && player.bench.some(pokemon => game.topCard(pokemon).type === 'colorless') && basicEnergiesInDiscard(game, player).length > 0,
+        play: (game, player) => {
+            const benched = player.bench.filter(pokemon => game.topCard(pokemon).type === 'colorless');
+            const pick = targets => attachFromDiscardToEach(game, player, targets);
+            if (benched.length <= 2) {
+                pick(benched);
+                return;
+            }
+            game.promptPokemon({ player, pokemon: benched, min: 1, max: 2, title: 'エネルギーをつけるベンチの無色ポケモンを2匹まで選ぶ', purpose: 'attach-energy-target', callback: pick });
+        },
+        cpuWants: () => true
+    },
+    'テラスタルオーブ': {
+        canPlay: (game, player) => player.deck.length > 0,
+        play: (game, player) => game.searchDeck({
+            player,
+            filter: card => card.kind === 'pokemon' && card.tera,
+            max: 1,
+            title: '手札に加える「テラスタル」のポケモンを選ぶ',
+            purpose: 'search-pokemon',
+            onSelected: found => game.addToHand(player, found, { reveal: true })
+        }),
+        cpuWants: (game, player) => player.deck.some(inst => game.cardOf(inst).tera)
+    },
+    'ブライア': {
+        canPlay: (game, player) => game.opponentOf(player).prizes.length === 2,
+        play: (game, player) => game.addPlayerEffect(player, 'briar', game.turn, {
+            hooks: {
+                // この番、自分の「テラスタル」のポケモンのワザのダメージで、相手のバトルポケモンがきぜつしたなら、サイドを1枚多くとる
+                prizeModifier: (g, source, pokemon, owner, info) => {
+                    const attack = g.currentAttack;
+                    if (!info.byAttack || !attack || attack.player !== source.player || owner === source.player) return 0;
+                    return owner.active === pokemon && g.topCard(attack.attacker).tera ? 1 : 0;
+                }
+            }
+        }),
+        cpuWants: (game, player) => Boolean(player.active) && game.topCard(player.active).tera
+    },
+    'ブーストエナジー 古代': {
+        hooks: {
+            maxHp: (game, source, pokemon) => (pokemon === source.pokemon && game.topCard(pokemon).ancient ? 60 : 0),
+            conditionImmune: (game, source, pokemon) => pokemon === source.pokemon && game.topCard(pokemon).ancient
+        },
+        cpuTarget: (game, player, pokemon) => Boolean(game.topCard(pokemon).ancient),
+        cpuWants: (game, player) => game.inPlay(player).some(pokemon => game.topCard(pokemon).ancient && !pokemon.tool)
+    },
+    'ブーストエナジー 未来': {
+        retreatReduction: 99,
+        hooks: {
+            retreatCost: (game, source, pokemon) => (pokemon === source.pokemon && game.topCard(pokemon).future ? -99 : 0),
+            damageDealt: (game, source, ctx, target) => (ctx.attacker === source.pokemon && game.topCard(ctx.attacker).future
+                && game.ownerOf(target) !== source.player && isActive(game, target) ? 20 : 0)
+        },
+        cpuTarget: (game, player, pokemon) => Boolean(game.topCard(pokemon).future),
+        cpuWants: (game, player) => game.inPlay(player).some(pokemon => game.topCard(pokemon).future && !pokemon.tool)
+    },
+    'きらめく結晶': {
+        hooks: {
+            // 少なくするのは、どのタイプのエネルギーでもよい（払えるようになるものを選ぶ）
+            attackCost: (game, source, pokemon, attack, cost) => {
+                if (pokemon !== source.pokemon || !game.topCard(pokemon).tera || cost.length === 0) return undefined;
+                const options = cost.map((_, index) => cost.filter((__, i) => i !== index));
+                return options.find(reduced => game.canPayCost(pokemon, reduced)) ?? options[cost.lastIndexOf('colorless') >= 0 ? cost.lastIndexOf('colorless') : cost.length - 1];
+            }
+        },
+        cpuTarget: (game, player, pokemon) => Boolean(game.topCard(pokemon).tera),
+        cpuWants: (game, player) => game.inPlay(player).some(pokemon => game.topCard(pokemon).tera && !pokemon.tool)
+    },
+    '夜の鉱山': {
+        hooks: {
+            attackCost: (game, source, pokemon, attack, cost) => (game.topCard(pokemon).tera ? [...cost, 'colorless'] : undefined)
+        },
+        cpuWants: (game, player) => countTagged(game, game.opponentOf(player), 'tera') > countTagged(game, player, 'tera')
     }
 };
+
+// 自分の場の、印（'tera' 'ancient' 'future'）のあるポケモンの数
+function countTagged(game, player, tag) {
+    return game.inPlay(player).filter(pokemon => game.topCard(pokemon)[tag]).length;
+}
+
+function basicEnergiesInDiscard(game, player) {
+    return player.discard.filter(inst => { const card = game.cardOf(inst); return card.kind === 'energy' && card.basic; });
+}
+
+// ポケモン1匹ずつに、トラッシュから基本エネルギーを1枚ずつ選んでつける
+function attachFromDiscardToEach(game, player, targets) {
+    const steps = targets.map(target => () => {
+        const energies = basicEnergiesInDiscard(game, player);
+        if (energies.length === 0 || !game.inPlay(player).includes(target)) return;
+        const attach = inst => {
+            game.removeCard(player.discard, inst);
+            game.attachFromOutside(target, inst);
+        };
+        if (new Set(energies.map(inst => inst.id)).size === 1) {
+            attach(energies[0]);
+            return;
+        }
+        game.promptCards({
+            player,
+            cards: energies,
+            min: 1,
+            max: 1,
+            title: `${game.topCard(target).name}につける基本エネルギーを選ぶ`,
+            purpose: 'energy-retrieval',
+            callback: ([inst]) => attach(inst)
+        });
+    });
+    game.runNext(...steps);
+}

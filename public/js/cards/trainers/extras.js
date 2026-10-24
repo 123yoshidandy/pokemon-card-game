@@ -316,6 +316,54 @@ export const TRAINER_EFFECTS = {
             attackCost: (game, source, pokemon, attack, cost) => (game.topCard(pokemon).tera ? [...cost, 'colorless'] : undefined)
         },
         cpuWants: (game, player) => countTagged(game, game.opponentOf(player), 'tera') > countTagged(game, player, 'tera')
+    },
+
+    // ===== 文の記号を tools/data/text-fixes.json で直したもの =====
+    '危ない廃墟': {
+        hooks: {
+            // おたがいのプレイヤーは、自分の番に、たねポケモン（[D]ポケモンをのぞく）をベンチに出すたび、そのポケモンにダメカンを2個のせる
+            onPokemonBenched: (game, source, player, pokemon) => {
+                if (game.current !== player.id || game.phase !== 'main') return;
+                const card = game.topCard(pokemon);
+                if (card.stage !== 0 || game.typesOf(pokemon).includes('darkness')) return;
+                game.putDamage(pokemon, 20);
+                game.runNext(() => game.checkKnockouts());
+            }
+        },
+        // 自分の場に悪ポケモンが多いなら出す
+        cpuWants: (game, player) => game.inPlay(player).filter(pokemon => game.typesOf(pokemon).includes('darkness')).length >= 2
+    },
+    'ギーマの一手': {
+        // 山札を上から7枚見て、[D] ポケモンを1枚選び、ベンチに出す。残りはウラにして切り、山札の下にもどす（最初の自分の番には使えない）
+        canPlay: (game, player) => player.turnsTaken > 1 && player.deck.length > 0 && player.bench.length < game.benchSize,
+        play: (game, player) => {
+            const looked = player.deck.slice(0, 7);
+            const candidates = looked.filter(inst => { const card = game.cardOf(inst); return card.kind === 'pokemon' && card.stage === 0 && card.type === 'darkness'; });
+            const finish = selected => {
+                selected.forEach(inst => {
+                    game.removeCard(player.deck, inst);
+                    const pokemon = game.createPokemon(inst);
+                    player.bench.push(pokemon);
+                    game.log(`${player.name}は${game.cardName(inst)}をベンチに出した`);
+                    game.hookAll('onPokemonBenched', player, pokemon);
+                });
+                const rest = looked.filter(inst => !selected.includes(inst));
+                rest.forEach(inst => game.removeCard(player.deck, inst));
+                for (let i = rest.length - 1; i > 0; i--) {
+                    const j = Math.floor(game.random() * (i + 1));
+                    [rest[i], rest[j]] = [rest[j], rest[i]];
+                }
+                player.deck.push(...rest);
+                game.log(`${player.name}は残りの${rest.length}枚を切って山札の下にもどした`);
+            };
+            game.log(`${player.name}は山札を上から${looked.length}枚見た`);
+            if (candidates.length === 0) {
+                finish([]);
+                return;
+            }
+            game.promptCards({ player, cards: candidates, min: 0, max: 1, title: 'ベンチに出す悪ポケモンを選ぶ', purpose: 'bench-basic', callback: finish });
+        },
+        cpuWants: (game, player) => player.bench.length < 3 && player.deck.some(inst => { const card = game.cardOf(inst); return card.kind === 'pokemon' && card.type === 'darkness' && card.stage === 0; })
     }
 };
 

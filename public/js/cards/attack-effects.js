@@ -102,7 +102,10 @@ function flipUntilTails(game) {
 }
 
 // 山札から探すカードの条件
-function searchFilter(word) {
+function searchFilter(text) {
+    const word = text.replace(/^、/, '');
+    const resistance = word.match(new RegExp(`^抵抗力が${TYPE_PATTERN}タイプのポケモン$`));
+    if (resistance) return card => card.kind === 'pokemon' && card.resistance === TYPE_WORDS[resistance[1]];
     const quoted = word.match(/^「(.+)」$/);
     if (quoted) {
         const name = quoted[1];
@@ -220,7 +223,8 @@ function condition(phrase) {
         [/^このポケモンと相手のバトルポケモンについているエネルギーの数が同じ$/, ctx => Boolean(ctx.defender) && ctx.attacker.energies.length === ctx.defender.energies.length],
         [new RegExp(`^自分の場に${TYPE_PATTERN}エネルギーが(\\d+)個以上ある$`), (ctx, m) => ctx.game.inPlay(ctx.player)
             .reduce((sum, pk) => sum + energyCount(ctx.game, pk, TYPE_WORDS[m[1]]), 0) >= Number(m[2])],
-        [/^この番、このポケモンが「(.+)」から進化していた$/, (ctx, m) => ctx.game.evolvedThisTurnFrom(ctx.attacker, m[1])]
+        [/^この番、このポケモンが「(.+)」から進化していた$/, (ctx, m) => ctx.game.evolvedThisTurnFrom(ctx.attacker, m[1])],
+        [new RegExp(`^相手のバトルポケモンの抵抗力が${TYPE_PATTERN}タイプ$`), (ctx, m) => Boolean(ctx.defender) && ctx.game.topCard(ctx.defender).resistance === TYPE_WORDS[m[1]]]
     ];
     for (const [re, fn] of table) {
         const m = phrase.match(re);

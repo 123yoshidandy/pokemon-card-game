@@ -163,6 +163,30 @@ describe('本体の仕組みを足して使えるようにしたワザ・特性'
         expect(game.topCard(player.bench[0]).name).toBe(klinklang.name);
     });
 
+    it('記号を直した文：うちおとす（抵抗力が闘タイプなら+50）・エキサイトパワー・テレパス超エネルギー', () => {
+        const boldore = withAttack('ガントル', 'うちおとす');
+        const index = attackIndex(boldore, 'うちおとす');
+        expect(boldore.supported).toBe(true);
+        const { game, me, opp } = midGame();
+        CARDS['test-resist'] = { ...CARDS[BIG], id: 'test-resist', resistance: 'fighting' };
+        arrange(game, me, { active: { id: boldore.id, energies: ['basic-fighting-energy'] } });
+        const target = arrange(game, opp, { active: 'test-resist', deck: Array(5).fill(C.potion) });
+        game.applyCommand(me, { type: 'attack', index });
+        expect(target.active.damage).toBe(boldore.attacks[index].damage + 50 - 30);
+        delete CARDS['test-resist'];
+
+        const seviper = withAbility('エキサイトパワー');
+        expect(seviper.supported).toBe(true);
+        const telepathic = find(card => card.name === 'テレパス超エネルギー');
+        const psychicBasic = find(card => card.kind === 'pokemon' && card.type === 'psychic' && card.stage === 0 && card.supported);
+        const second = midGame(2);
+        const player = arrange(second.game, second.me, { active: psychicBasic.id, bench: [], hand: [telepathic.id], deck: [psychicBasic.id, psychicBasic.id, C.potion] });
+        second.game.applyCommand(second.me, { type: 'attachEnergy', uid: player.hand[0].uid, target: player.active.id });
+        expect(second.game.pendingPrompt.purpose).toBe('bench-basic');
+        second.game.applyCommand(second.me, { type: 'answer', answer: [0, 1] });
+        expect(player.bench).toHaveLength(2);
+    });
+
     it('げんせいらんだ：自分の場の「古代」のポケモンの数×30ダメージ', () => {
         const koraidon = withAttack('コライドン', 'げんせいらんだ');
         const index = attackIndex(koraidon, 'げんせいらんだ');

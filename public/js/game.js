@@ -635,6 +635,7 @@ export default class Game {
         player.bench.push(pokemon);
         this.log(`${player.name}は${this.cardName(inst)}をベンチに出した`);
         this.triggerAbility(player, pokemon, 'onBench');
+        this.hookAll('onPokemonBenched', player, pokemon);
     }
 
     evolve(player, uid, targetId) {
@@ -1170,8 +1171,10 @@ export default class Game {
             title: 'ベンチに出すポケモンを選ぶ',
             purpose,
             onSelected: selected => selected.forEach(inst => {
-                player.bench.push(this.createPokemon(inst));
+                const pokemon = this.createPokemon(inst);
+                player.bench.push(pokemon);
                 this.log(`${player.name}は${this.cardName(inst)}をベンチに出した`);
+                this.hookAll('onPokemonBenched', player, pokemon);
             })
         });
     }
@@ -1460,8 +1463,10 @@ export default class Game {
             return;
         }
         inst.form = 'pokemon';
-        player.bench.push(this.createPokemon(inst));
+        const pokemon = this.createPokemon(inst);
+        player.bench.push(pokemon);
         this.log(`${player.name}は${this.cardName(inst)}をたねポケモンとしてベンチに出した`);
+        this.hookAll('onPokemonBenched', player, pokemon);
     }
 
     // 場を離れたカードは、もとの形にもどす

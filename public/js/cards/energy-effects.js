@@ -100,6 +100,21 @@ export const ENERGY_EFFECTS = {
             conditionImmune: (game, source, pokemon) => pokemon === source.pokemon && holderIs(game, source, 'water')
         }
     },
+    'テレパス超エネルギー': {
+        provides: () => ['psychic'],
+        // 手札から [P] ポケモンにつけたとき、山札から [P] タイプのたねポケモンを2枚まで選び、ベンチに出す
+        onAttach: (game, player, pokemon) => {
+            if (!game.typesOf(pokemon).includes('psychic') || player.bench.length >= game.benchSize) return;
+            game.benchFromDeck(player, card => card.kind === 'pokemon' && card.stage === 0 && card.type === 'psychic', 2, 'bench-basic');
+        }
+    },
+    'ロック闘エネルギー': {
+        provides: () => ['fighting'],
+        hooks: {
+            // つけている [F] ポケモンは、相手のポケモンが使うワザの効果を受けない
+            preventEffects: (game, source, ctx, target) => target === source.pokemon && game.typesOf(target).includes('fighting')
+        }
+    },
     'ロケット団エネルギー': {
         // 「ロケット団のポケモン」にしかつけられない。[P][D] のどちらかのタイプのエネルギー2個ぶん
         // （手札からつけるときだけ確かめる。ほかの効果でロケット団のポケモン以外につけたときのトラッシュは、まだない）

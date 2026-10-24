@@ -138,9 +138,20 @@ const stripReminders = text => TRAINER_REMINDERS.reduce((result, re) => result.r
 
 // トレーナーズと特殊エネルギーは、名前が同じなら同じカード（版によって言い回しや注意書きが少し違うだけ）
 // ポケモンは、名前が同じでもワザや HP が違えば別のカード
+// 記号が抜けている文を、Limitless TCG のページの文で直す（tools/data/text-fixes.json）
+const TEXT_FIXES = JSON.parse(readFileSync(join(ROOT, 'tools', 'data', 'text-fixes.json'), 'utf8')).fixes;
+function applyTextFixes(card) {
+    const fixes = TEXT_FIXES[card.name];
+    if (!fixes) return;
+    if (fixes.text !== undefined && card.text !== undefined) card.text = fixes.text;
+    (card.abilities ?? []).forEach(ability => { if (fixes[`ability:${ability.name}`]) ability.text = fixes[`ability:${ability.name}`]; });
+    (card.attacks ?? []).forEach(attack => { if (fixes[`attack:${attack.name}`]) attack.text = fixes[`attack:${attack.name}`]; });
+}
+
 const groups = new Map();
 for (const print of prints) {
     const card = convert(print);
+    applyTextFixes(card);
     if (card.text !== undefined) card.text = stripReminders(card.text);
     const key = card.kind === 'pokemon' ? signature(card) : card.kind === 'energy' && card.basic ? card.id : `${card.kind}:${card.name}`;
     if (!groups.has(key)) groups.set(key, []);

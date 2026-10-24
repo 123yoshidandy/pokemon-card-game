@@ -9,7 +9,58 @@ function benchFromHand(game, player, inst) {
     game.log(`${player.name}は${game.cardName(inst)}をベンチに出した`);
 }
 
+// 自分の場に、そのタイプの「メガシンカex」がいるか
+const hasMega = (game, player, type) => game.inPlay(player).some(pokemon => game.topCard(pokemon).rule === 'mega' && game.typesOf(pokemon).includes(type));
+
+function isActive(game, pokemon) {
+    const owner = game.ownerOf(pokemon);
+    return Boolean(owner) && owner.active === pokemon;
+}
+
 export const ABILITY_EFFECTS = {
+    'エキサイトパワー': {
+        type: 'passive',
+        hooks: {
+            damageDealt: (game, source, ctx, target) => (ctx.attacker === source.pokemon && hasMega(game, source.player, 'darkness')
+                && game.ownerOf(target) !== source.player && isActive(game, target) ? 120 : 0)
+        }
+    },
+    'エキサイトヒール': {
+        type: 'activated',
+        canUse: (game, player) => hasMega(game, player, 'grass') && game.inPlay(player).some(pokemon => pokemon.damage > 0),
+        use: (game, player) => game.promptPokemon({
+            player,
+            pokemon: game.inPlay(player).filter(pokemon => pokemon.damage > 0),
+            min: 1,
+            max: 1,
+            title: 'HPを60回復するポケモンを選ぶ',
+            purpose: 'potion',
+            callback: ([target]) => game.heal(target, 60)
+        }),
+        cpuWants: (game, player) => game.inPlay(player).some(pokemon => pokemon.damage >= 60)
+    },
+    'エキサイトターボ': {
+        // 自分の番に何回でも使える。自分の手札から「基本[R]エネルギー」を1枚選び、ベンチの[R]ポケモンにつける
+        type: 'activated',
+        unlimited: true,
+        canUse: (game, player) => hasMega(game, player, 'fire')
+            && player.hand.some(inst => game.cardOf(inst).basic && game.cardOf(inst).energyType === 'fire')
+            && player.bench.some(pokemon => game.typesOf(pokemon).includes('fire')),
+        use: (game, player) => {
+            const energy = player.hand.find(inst => game.cardOf(inst).basic && game.cardOf(inst).energyType === 'fire');
+            const targets = player.bench.filter(pokemon => game.typesOf(pokemon).includes('fire'));
+            const attach = target => {
+                game.removeCard(player.hand, energy);
+                game.attachFromOutside(target, energy);
+            };
+            if (targets.length === 1) {
+                attach(targets[0]);
+                return;
+            }
+            game.promptPokemon({ player, pokemon: targets, min: 1, max: 1, title: '基本炎エネルギーをつけるベンチの炎ポケモンを選ぶ', purpose: 'attach-energy-target', callback: ([target]) => attach(target) });
+        },
+        cpuWants: () => true
+    },
     'おいしげる': {
         type: 'passive',
         hooks: {

@@ -99,6 +99,7 @@ CPU がつけ先を選ぶときの目安は `cpuTarget: (game, player, pokemon) 
 | beforeAttack | ctx | なし | ワザの効果の前。ctx を変えてよい（ctx.ignoreEffects を立てる、など） |
 | onEvolved | player, pokemon, { fromHand } | なし | 進化した後 |
 | onSwitchOut | player, pokemon | なし | バトル場からベンチにもどった後 |
+| onPokemonBenched | player, pokemon | なし | ポケモンをベンチに出した後（手札から・game.benchFromDeck・化石。効果でベンチに直接置くときは呼ばれないことがある） |
 | onPokemonToActive | player, pokemon | なし | ベンチからバトル場に出た後（入れ替え・きぜつの後に出す、のどちらも） |
 | extraTypes | pokemon | タイプの配列 | ポケモンのタイプを増やす（弱点・抵抗力の計算に使う。game.typesOf） |
 | weaknessOverride | pokemon | タイプか 'none' | 弱点のタイプを変える・なくす（game.weaknessOf） |

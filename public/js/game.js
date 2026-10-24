@@ -521,7 +521,8 @@ export default class Game {
         const inst = this.findInHand(player, uid);
         const card = inst && this.cardOf(inst);
         if (!card || card.kind !== 'trainer') return 'トレーナーズを選んでください';
-        if (card.trainerType === 'item' && this.hasPlayerEffect(player, 'itemLock')) return 'この番はグッズを使えません';
+        if (card.playAsPokemon && player.bench.length >= BENCH_SIZE) return 'ベンチがいっぱいです';
+        if (card.trainerType === 'item' && !card.playAsPokemon && this.hasPlayerEffect(player, 'itemLock')) return 'この番はグッズを使えません';
         if (card.trainerType === 'supporter' && this.hasPlayerEffect(player, 'supporterLock')) return 'この番はサポートを使えません';
         if (card.trainerType === 'supporter') {
             if (this.turnState.supporterPlayed) return 'サポートはこの番にもう使いました';
@@ -655,6 +656,11 @@ export default class Game {
         const inst = this.findInHand(player, uid);
         const card = this.cardOf(inst);
         this.removeCard(player.hand, inst);
+        // たねポケモンとして場に出せるトレーナーズ（化石）
+        if (card.playAsPokemon) {
+            this.playAsPokemon(player, inst);
+            return;
+        }
         this.log(`${player.name}は${card.name}を使った`);
         switch (card.trainerType) {
             case 'tool': {
@@ -1047,6 +1053,7 @@ export default class Game {
         }
         if (player.active === pokemon) player.active = null;
         else this.removeCard(player.bench, pokemon);
+        this.resetForms(pokemon.cards);
         player.hand.push(...pokemon.cards, ...pokemon.energies, ...(pokemon.tool ? [pokemon.tool] : []));
         this.log(`${player.name}は${this.topCard(pokemon).name}と、ついているカードを手札にもどした`);
     }
@@ -1403,11 +1410,29 @@ export default class Game {
     removeFromPlay(player, pokemon) {
         if (player.active === pokemon) player.active = null;
         else this.removeCard(player.bench, pokemon);
+        this.resetForms(pokemon.cards);
         player.discard.push(...pokemon.cards, ...pokemon.energies, ...(pokemon.tool ? [pokemon.tool] : []));
     }
 
+    // 場では別の形で働くカード（たねポケモンとして出した化石など）は、inst.form の形の定義を返す
     cardOf(inst) {
-        return getCard(inst.id);
+        return getCard(inst.form ? `${inst.id}#${inst.form}` : inst.id);
+    }
+
+    // トレーナーズ（化石など）を、たねポケモンとしてベンチに出す（カードの定義に「<ID>#pokemon」の形がある）
+    playAsPokemon(player, inst) {
+        if (player.bench.length >= BENCH_SIZE) {
+            player.discard.push(inst);
+            return;
+        }
+        inst.form = 'pokemon';
+        player.bench.push(this.createPokemon(inst));
+        this.log(`${player.name}は${this.cardName(inst)}をたねポケモンとしてベンチに出した`);
+    }
+
+    // 場を離れたカードは、もとの形にもどす
+    resetForms(insts) {
+        insts.forEach(inst => { delete inst.form; });
     }
 
     cardName(inst) {

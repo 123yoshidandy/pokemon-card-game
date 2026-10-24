@@ -43,6 +43,8 @@ function playerView(game, player, viewerId) {
 }
 
 const cardView = inst => ({ uid: inst.uid, id: inst.id });
+// 場では別の形で働くカード（たねポケモンとして出した化石など）は、形の印を付けたIDにする
+const formId = inst => (inst.form ? `${inst.id}#${inst.form}` : inst.id);
 
 function pokemonView(game, pokemon, isMine) {
     // 準備中にウラで出したポケモンは、相手からは中身が見えない
@@ -50,8 +52,8 @@ function pokemonView(game, pokemon, isMine) {
     return {
         id: pokemon.id,
         faceDown: pokemon.faceDown,
-        cards: pokemon.cards.map(inst => inst.id),
-        top: pokemon.cards[pokemon.cards.length - 1].id,
+        cards: pokemon.cards.map(formId),
+        top: formId(pokemon.cards[pokemon.cards.length - 1]),
         hp: game.maxHp(pokemon),
         damage: pokemon.damage,
         energies: pokemon.energies.map(inst => inst.id),

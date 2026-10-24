@@ -95,6 +95,47 @@ describe('本体の仕組みを足して使えるようにしたワザ・特性'
         expect(game.topCard(player.active).name).toBe(evolution.name);
     });
 
+    it('化石：手札から使うと、HP60の無色のたねポケモンとしてベンチに出る。進化でき、にげられず、場からトラッシュできる', () => {
+        const skull = find(card => card.name === '古びたずがいの化石');
+        const cranidos = find(card => card.name === 'ズガイドス' && card.supported);
+        const { game, me } = midGame();
+        const player = arrange(game, me, { active: { id: C.pikachu }, bench: [], hand: [skull.id, cranidos.id] });
+        expect(game.applyCommand(me, { type: 'playTrainer', uid: player.hand[0].uid })).toBe(true);
+        const fossilPokemon = player.bench[0];
+        expect(game.topCard(fossilPokemon).kind).toBe('pokemon');
+        expect(game.maxHp(fossilPokemon)).toBe(60);
+        expect(player.discard.some(inst => inst.id === skull.id)).toBe(false);
+
+        // 出した番は進化できないので、次の番にする
+        game.turn += 2;
+        fossilPokemon.enteredTurn = game.turn - 2;
+        expect(game.applyCommand(me, { type: 'evolve', uid: player.hand[0].uid, target: fossilPokemon.id })).toBe(true);
+        expect(game.topCard(fossilPokemon).name).toBe('ズガイドス');
+
+        // 化石のままのものは、にげられず、場からトラッシュするともとのグッズにもどる
+        const second = arrange(game, me, { active: { id: C.pikachu, energies: ['basic-lightning-energy'] }, bench: [C.magnemite], hand: [skull.id] });
+        game.applyCommand(me, { type: 'playTrainer', uid: second.hand[0].uid });
+        const fossilInPlay = second.bench[1];
+        game.switchActive(second, fossilInPlay);
+        expect(game.applyCommand(me, { type: 'retreat', target: second.bench[0].id })).toBe(false);
+        expect(game.applyCommand(me, { type: 'useAbility', target: fossilInPlay.id })).toBe(true);
+        const discarded = second.discard.find(inst => inst.id === skull.id);
+        expect(discarded).toBeTruthy();
+        expect(game.cardOf(discarded).kind).toBe('trainer');
+    });
+
+    it('化石採掘場：山札から「古びた」グッズを2枚まで、たねポケモンとしてベンチに出す', () => {
+        const site = find(card => card.name === '化石採掘場');
+        const fossilA = find(card => card.name === '古びたアゴの化石');
+        const fossilB = find(card => card.name === '古びたヒレの化石');
+        const { game, me } = midGame();
+        const player = arrange(game, me, { active: C.pikachu, bench: [], hand: [site.id], deck: [fossilA.id, fossilB.id, C.potion] });
+        game.applyCommand(me, { type: 'playTrainer', uid: player.hand[0].uid });
+        expect(game.applyCommand(me, { type: 'useStadium' })).toBe(true);
+        game.applyCommand(me, { type: 'answer', answer: [0, 1] });
+        expect(player.bench.map(pokemon => game.topCard(pokemon).name).sort()).toEqual([fossilA.name, fossilB.name].sort());
+    });
+
     it('げんせいらんだ：自分の場の「古代」のポケモンの数×30ダメージ', () => {
         const koraidon = withAttack('コライドン', 'げんせいらんだ');
         const index = attackIndex(koraidon, 'げんせいらんだ');

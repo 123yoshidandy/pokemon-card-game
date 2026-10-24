@@ -33,13 +33,14 @@ import { TRAINER_EFFECTS as ITEMS } from './cards/trainers/items.js';
 import { TRAINER_EFFECTS as TOOLS } from './cards/trainers/tools.js';
 import { TRAINER_EFFECTS as STADIUMS } from './cards/trainers/stadiums.js';
 import { TRAINER_EFFECTS as EXTRAS } from './cards/trainers/extras.js';
+import { TRAINER_EFFECTS as FOSSILS } from './cards/trainers/fossils.js';
 import { ENERGY_EFFECTS } from './cards/energy-effects.js';
 
 // 読み替えられないワザは「カードのID/ワザ名」か「カード名/ワザ名」で引く
 const ATTACK_OVERRIDES = { ...OVERRIDES_BASE, ...OVERRIDES_A, ...OVERRIDES_B };
 
 // 効果は、種類ごとのファイルに分けて書く（同じ名前があれば、後のファイルのものを使う）
-const TRAINER_EFFECTS = { ...TRAINERS_BASE, ...SUPPORTERS, ...ITEMS, ...TOOLS, ...STADIUMS, ...EXTRAS };
+const TRAINER_EFFECTS = { ...TRAINERS_BASE, ...SUPPORTERS, ...ITEMS, ...TOOLS, ...STADIUMS, ...EXTRAS, ...FOSSILS };
 // 特性は「カード名/特性名」か「特性名」で引く（同じ名前・同じ文の特性を持つカードは、特性名だけで書ける）
 const ABILITY_EFFECTS = { ...ABILITIES_BASE, ...ABILITIES_A, ...ABILITIES_B, ...ABILITIES_C, ...ABILITIES_TAGS, ...ABILITIES_MORE };
 
@@ -114,8 +115,34 @@ const build = data => {
 
 export const CARDS = Object.fromEntries(CATALOG.map(data => [data.id, build(data)]));
 
+// 場では別の形で働くカード（たねポケモンとして出した化石など）の、その形の定義（「<ID>#<形>」。デッキ構築には出ない）
+const FORMS = Object.fromEntries(Object.values(CARDS).filter(card => card.asPokemon).map(card => {
+    const form = card.asPokemon;
+    const id = `${card.id}#pokemon`;
+    return [id, {
+        id,
+        kind: 'pokemon',
+        name: card.name,
+        stage: 0,
+        evolvesFrom: null,
+        hp: form.hp,
+        type: form.type,
+        weakness: form.weakness ?? null,
+        resistance: form.resistance ?? null,
+        retreat: form.retreat ?? 0,
+        rule: null,
+        tera: false,
+        regulation: card.regulation,
+        prints: card.prints,
+        formOf: card.id,
+        ability: form.ability ?? null,
+        attacks: form.attacks ?? [],
+        supported: true
+    }];
+}));
+
 export function getCard(id) {
-    const card = CARDS[id];
+    const card = CARDS[id] ?? FORMS[id];
     if (!card) throw new Error(`不明なカード: ${id}`);
     return card;
 }

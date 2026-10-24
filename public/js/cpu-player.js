@@ -225,7 +225,7 @@ function stadiumIsGood(game, player, card) {
 }
 
 function topAttacks(game, pokemon) {
-    return game.topCard(pokemon).attacks;
+    return game.attacksOf(pokemon);
 }
 
 // 進化した後も含めた、そのポケモンのワザの強さの目安

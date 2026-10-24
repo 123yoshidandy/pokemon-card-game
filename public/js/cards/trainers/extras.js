@@ -2,7 +2,37 @@
  * トレーナーズの効果（プレイヤーにかかる効果のフックや、使ったカードの行き先などを使うもの）。書き方は cards/HOOKS.md
  */
 
+import { compileAttackText } from '../attack-effects.js';
+
 const isPokemonEx = card => card.rule === 'ex' || card.rule === 'mega';
+
+// どうぐに書かれたワザ（ワザの形は card-data.js のワザと同じ）
+const CORE_MEMORY_ATTACK = (() => {
+    const text = 'このポケモンについているエネルギーを、すべてトラッシュする。';
+    return { name: 'ジオバスター', cost: ['fighting', 'fighting', 'fighting', 'fighting'], damage: 350, damageText: '350', text, supported: true, ...compileAttackText(text) };
+})();
+
+const DELTA_GIFT_ATTACK = {
+    name: 'デルタギフト',
+    cost: ['colorless'],
+    damage: 0,
+    damageText: '',
+    text: '「メガレックウザキャップ」がついている自分のポケモン全員に、山札から基本エネルギーを1枚ずつつける。そして山札を切る。',
+    supported: true,
+    after: ctx => {
+        const { game, player } = ctx;
+        const holders = game.inPlay(player).filter(pokemon => pokemon.tool && game.cardName(pokemon.tool) === 'メガレックウザキャップ');
+        const steps = holders.map(target => () => game.searchDeck({
+            player,
+            filter: card => card.kind === 'energy' && card.basic,
+            max: 1,
+            title: `${game.topCard(target).name}につける基本エネルギーを選ぶ`,
+            purpose: 'search-energy',
+            onSelected: found => found.forEach(inst => game.attachFromOutside(target, inst))
+        }));
+        game.runNext(...steps);
+    }
+};
 
 // そのポケモンが、持ち主のバトル場にいるか
 function isActive(game, pokemon) {
@@ -316,6 +346,21 @@ export const TRAINER_EFFECTS = {
             attackCost: (game, source, pokemon, attack, cost) => (game.topCard(pokemon).tera ? [...cost, 'colorless'] : undefined)
         },
         cpuWants: (game, player) => countTagged(game, game.opponentOf(player), 'tera') > countTagged(game, player, 'tera')
+    },
+
+    // ===== カードに書かれたワザを使えるようにするどうぐ（ワザは Limitless TCG のカードのページで確かめた）=====
+    'コアメモリ': {
+        hooks: {
+            extraAttacks: (game, source, pokemon) => (pokemon === source.pokemon && game.topCard(pokemon).name === 'メガジガルデex' ? [CORE_MEMORY_ATTACK] : [])
+        },
+        cpuTarget: (game, player, pokemon) => game.topCard(pokemon).name === 'メガジガルデex',
+        cpuWants: (game, player) => game.inPlay(player).some(pokemon => game.topCard(pokemon).name === 'メガジガルデex' && !pokemon.tool)
+    },
+    'メガレックウザキャップ': {
+        hooks: {
+            extraAttacks: (game, source, pokemon) => (pokemon === source.pokemon ? [DELTA_GIFT_ATTACK] : [])
+        },
+        cpuWants: () => true
     },
 
     // ===== 文の記号を tools/data/text-fixes.json で直したもの =====

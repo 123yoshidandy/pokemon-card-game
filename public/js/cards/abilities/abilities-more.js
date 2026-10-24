@@ -89,6 +89,17 @@ export const ABILITY_EFFECTS = {
                 && card.evolvesFrom === 'イーブイ' && (card.rule === 'ex' || card.rule === 'mega')
         }
     },
+    'きおくにもぐる': {
+        // このポケモンがいるかぎり、自分の進化しているポケモン全員は、進化前に持っていたワザを、すべて使える（エネルギーは必要）
+        type: 'passive',
+        hooks: {
+            extraAttacks: (game, source, pokemon) => {
+                if (game.ownerOf(pokemon) !== source.player || pokemon.cards.length < 2) return [];
+                const own = new Set(game.topCard(pokemon).attacks.map(attack => attack.name));
+                return pokemon.cards.slice(0, -1).flatMap(inst => game.cardOf(inst).attacks ?? []).filter(attack => !own.has(attack.name));
+            }
+        }
+    },
     'おまつりおんど': {
         // 場に「お祭り会場」が出ているなら、持っているワザを2回連続で使える（game.attack が見る）
         type: 'passive',

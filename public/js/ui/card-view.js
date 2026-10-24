@@ -113,8 +113,10 @@ export function cardDetail(id, pokemon = null) {
         if (card.ability) {
             parts.push(`<div class="detail-block" data-ability><div class="detail-title"><span class="tag tag-ability">特性</span>${escape(card.ability.name)}</div><p>${escape(card.ability.text)}</p></div>`);
         }
-        card.attacks.forEach((attack, index) => {
-            parts.push(`<div class="detail-block" data-attack="${index}"><div class="detail-title">${costDots(attack.cost)}<span class="attack-name">${escape(attack.name)}</span><span class="attack-damage">${attack.damageText}</span></div>${attack.text ? `<p>${escape(attack.text)}</p>` : ''}</div>`);
+        // カードのワザのあとに、どうぐ・特性などで使えるワザ（場のポケモンの extraAttacks）を続ける
+        [...card.attacks, ...(pokemon?.extraAttacks ?? [])].forEach((attack, index) => {
+            const extra = index >= card.attacks.length ? '<span class="tag tag-ability">ほかのカードのワザ</span>' : '';
+            parts.push(`<div class="detail-block" data-attack="${index}"><div class="detail-title">${costDots(attack.cost)}<span class="attack-name">${escape(attack.name)}</span><span class="attack-damage">${escape(attack.damageText)}</span>${extra}</div>${attack.text ? `<p>${escape(attack.text)}</p>` : ''}</div>`);
         });
         const weak = card.weakness ? `${energyDot(card.weakness)}×2` : 'なし';
         const resist = card.resistance ? `${energyDot(card.resistance)}−30` : 'なし';

@@ -187,6 +187,29 @@ describe('本体の仕組みを足して使えるようにしたワザ・特性'
         expect(player.bench).toHaveLength(2);
     });
 
+    it('コアメモリ：メガジガルデex は、このカードに書かれたワザ「ジオバスター」を使える', () => {
+        const zygarde = find(card => card.name === 'メガジガルデex' && card.supported);
+        const memory = find(card => card.name === 'コアメモリ');
+        const { game, me, opp } = midGame();
+        const player = arrange(game, me, { active: { id: zygarde.id, tool: memory.id, energies: Array(4).fill('basic-fighting-energy') } });
+        const target = arrange(game, opp, { active: BIG, deck: Array(5).fill(C.potion) });
+        const index = game.attacksOf(player.active).findIndex(attack => attack.name === 'ジオバスター');
+        expect(index).toBe(zygarde.attacks.length);
+        expect(game.getLegalActions(me).attacks[index]).toBe(true);
+        game.applyCommand(me, { type: 'attack', index });
+        expect(target.active.damage).toBe(350);
+        expect(player.active.energies).toHaveLength(0);
+    });
+
+    it('きおくにもぐる：自分の進化しているポケモンは、進化前のワザも使える', () => {
+        const relicanth = withAbility('きおくにもぐる');
+        const { game, me } = midGame();
+        const player = arrange(game, me, { active: { id: C.raichu, cards: [C.pikachu, C.raichu] }, bench: [relicanth.id] });
+        const names = game.attacksOf(player.active).map(attack => attack.name);
+        expect(names).toContain('プチボルト');
+        expect(names).toContain('ストロングボルト');
+    });
+
     it('げんせいらんだ：自分の場の「古代」のポケモンの数×30ダメージ', () => {
         const koraidon = withAttack('コライドン', 'げんせいらんだ');
         const index = attackIndex(koraidon, 'げんせいらんだ');

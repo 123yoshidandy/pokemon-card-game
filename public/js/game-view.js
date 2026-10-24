@@ -60,7 +60,10 @@ function pokemonView(game, pokemon, isMine) {
         tool: pokemon.tool?.id ?? null,
         conditions: [pokemon.rotation, pokemon.poisoned && 'poisoned', pokemon.burned && 'burned'].filter(Boolean),
         effects: pokemon.effects.map(effect => effect.kind),
-        retreat: game.retreatCost(pokemon)
+        retreat: game.retreatCost(pokemon),
+        // カードのワザのほかに使えるワザ（どうぐに書かれたワザ・進化前のワザなど。番号はカードのワザの続き）
+        extraAttacks: game.attacksOf(pokemon).slice(game.topCard(pokemon).attacks.length)
+            .map(attack => ({ name: attack.name, cost: attack.cost, damageText: attack.damageText ?? '', text: attack.text ?? '' }))
     };
 }
 

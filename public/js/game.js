@@ -597,7 +597,7 @@ export default class Game {
 
     checkAttack(player, index) {
         const active = player.active;
-        const attack = active && this.topCard(active).attacks[index];
+        const attack = active && this.attacksOf(active)[index];
         if (!attack) return 'ワザを選んでください';
         if (this.turn === 1 && !attack.firstTurnOk && !this.hookAny('allowFirstTurnAttack', player, active, attack)) return '先攻の最初の番はワザを使えません';
         const stopped = ['asleep', 'paralyzed'].find(condition => this.hasCondition(active, condition));
@@ -769,7 +769,7 @@ export default class Game {
 
     attack(player, index) {
         const attacker = player.active;
-        const attack = this.topCard(attacker).attacks[index];
+        const attack = this.attacksOf(attacker)[index];
         this.turnState.attacked = true;
         this.effectQueue.push(...this.attackSteps(player, attacker, attack));
         // 特性で、ワザを2回続けて使えることがある（1回目で相手のバトルポケモンがきぜつしたなら、次のバトルポケモンが出たあと）
@@ -1336,6 +1336,11 @@ export default class Game {
         return this.passiveSources().flatMap(source => source.hooks[name]?.(this, source, ...args) ?? []);
     }
 
+    // ポケモンが使えるワザ（カードのワザのあとに、どうぐ・特性などのフック extraAttacks が足すワザが続く。番号は操作の index）
+    attacksOf(pokemon) {
+        return [...this.topCard(pokemon).attacks, ...this.hookCollect('extraAttacks', pokemon)];
+    }
+
     // ポケモンのタイプ（フック extraTypes で増えることがある）
     typesOf(pokemon) {
         const type = this.topCard(pokemon).type;
@@ -1623,7 +1628,7 @@ export default class Game {
             if (list) actions.hand[inst.uid] = list;
             if (card.ability?.type === 'hand' && !this.checkHandAbility(player, inst.uid)) actions.handAbilities.push(inst.uid);
         });
-        const attacks = player.active ? this.topCard(player.active).attacks : [];
+        const attacks = player.active ? this.attacksOf(player.active) : [];
         actions.attacks = attacks.map((_, index) => !this.checkAttack(player, index));
         actions.retreat = player.bench.map(pokemon => pokemon.id).filter(id => !this.checkRetreat(player, id));
         actions.abilities = targets.filter(id => !this.checkAbility(player, id));

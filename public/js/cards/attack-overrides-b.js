@@ -2019,6 +2019,16 @@ export const ATTACK_OVERRIDES = {
             });
         }
     },
+    'ロケット団のミミッキュ/ほうせきごっこ': (() => {
+        // 相手のバトル場の「テラスタル」のポケモンが持つワザを1つ選び、このワザとして使う
+        const attacksOf = ctx => (ctx.opponent.active && ctx.game.topCard(ctx.opponent.active).tera ? ctx.game.topCard(ctx.opponent.active).attacks : []);
+        return {
+            copiesAttack: true,
+            before: ctx => chooseAttackToCopy(ctx, attacksOf(ctx), 'このワザとして使う、相手のテラスタルのポケモンのワザを選ぶ'),
+            after: copiedAfter,
+            expected: ctx => copiedExpected(ctx, attacksOf(ctx))
+        };
+    })(),
     'Nのゾロアークex/ナイトジョーカー': (() => {
         const attacksOf = ctx => ctx.player.bench.filter(pokemon => nameStarts(ctx.game, pokemon, 'Nの')).flatMap(pokemon => ctx.game.topCard(pokemon).attacks);
         return {

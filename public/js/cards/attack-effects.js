@@ -31,20 +31,26 @@ const isEx = card => card.rule === 'ex' || card.rule === 'mega';
 const counters = pokemon => Math.floor(pokemon.damage / 10);
 const energyCount = (game, pokemon, type) => pokemon.energies.filter(inst => !type || game.cardOf(inst).energyType === type).length;
 
-// 相手のポケモンに、ワザの効果を与えられるか（「ワザの効果を受けない」がかかっていないか）
-const canAffect = (ctx, pokemon) => Boolean(pokemon) && ctx.game.canAffectByAttack(ctx, pokemon);
+// 相手のポケモンに、ワザの効果を与えられるか（「ワザの効果を受けない」と、相手の効果を受けない特性・スタジアムなど）
+//   kind は game.canAffect の effectKind（'counters' 'condition' 'switch' 'energy' 'tool' 'devolve' 'moveCounters' 'other' など）
+//   自分のポケモンなら、いつも true
+const canAffect = (ctx, pokemon, kind = 'effect') => Boolean(pokemon) && ctx.game.canAffectByAttack(ctx, pokemon) && ctx.game.canAffect(pokemon, kind);
+
+// 相手のバトルポケモンとベンチポケモンを入れ替えられるか（入れ替わる2匹のどちらも、効果を受けるか）
+const switchTargets = (ctx, player) => (!player.active || canAffect(ctx, player.active, 'switch') ? player.bench.filter(pk => canAffect(ctx, pk, 'switch')) : []);
 
 // ポケモンについているエネルギーを count 個選んでトラッシュする（選ぶ人は chooser）
 function discardEnergies(ctx, pokemon, count, { type = null, chooser = ctx.player, to = 'discard' } = {}) {
     const { game } = ctx;
-    if (!pokemon) return;
+    if (!pokemon || !canAffect(ctx, pokemon, 'energy')) return;
     const owner = game.ownerOf(pokemon);
     const candidates = pokemon.energies.filter(inst => !type || game.cardOf(inst).energyType === type);
     const n = Math.min(count, candidates.length);
     if (n === 0) return;
     const finish = selected => {
-        selected.forEach(inst => game.moveCard(pokemon.energies, to === 'hand' ? owner.hand : owner.discard, inst));
-        game.log(`${game.topCard(pokemon).name}のエネルギーを${n}個${to === 'hand' ? '手札にもどした' : 'トラッシュした'}`);
+        // はがすのは本体の removeEnergy（相手の効果を受けない・手札にもどせない、を確かめる）
+        const removed = selected.filter(inst => game.removeEnergy(pokemon, inst, to)).length;
+        if (removed) game.log(`${game.topCard(pokemon).name}のエネルギーを${removed}個${to === 'hand' ? '手札にもどした' : 'トラッシュした'}`);
     };
     const kinds = new Set(candidates.map(inst => inst.id));
     if (n === candidates.length || kinds.size === 1) {
@@ -78,7 +84,8 @@ function damageChosen(ctx, list, count, amount, purpose = 'snipe-target') {
 
 function putCountersChosen(ctx, list, count, amount) {
     const { game } = ctx;
-    const targets = list.filter(Boolean);
+    // ダメカンがのらないポケモン（相手の効果を受けない・ベンチにのらない、など）は選べない
+    const targets = list.filter(pk => canAffect(ctx, pk, 'counters'));
     const n = Math.min(count, targets.length);
     if (n === 0) return;
     const put = selected => selected.forEach(target => game.putDamage(target, amount));
@@ -449,13 +456,13 @@ rule(/^相手のバトルポケモンを(.+)にする$/, m => {
     });
 });
 rule(/^このどくでのせるダメカンの数は(\d+)個になる$/, m => after(ctx => {
-    if (ctx.defender && ctx.defender.poisoned) ctx.defender.poisonDamage = Number(m[1]) * 10;
+    if (ctx.defender && ctx.defender.poisoned && canAffect(ctx, ctx.defender, 'condition')) ctx.defender.poisonDamage = Number(m[1]) * 10;
 }));
 rule(/^相手のバトルポケモンについているエネルギーを(\d+)個選び、トラッシュする$/, m => after(ctx => {
     if (canAffect(ctx, ctx.defender)) discardEnergies(ctx, ctx.defender, Number(m[1]));
 }));
 rule(/^相手のバトルポケモンについている特殊エネルギーを(\d+)個選び、トラッシュする$/, m => after(ctx => {
-    if (!canAffect(ctx, ctx.defender)) return;
+    if (!canAffect(ctx, ctx.defender, 'energy')) return;
     const special = ctx.defender.energies.filter(inst => !ctx.game.cardOf(inst).basic);
     if (special.length === 0) return;
     ctx.game.promptCards({
@@ -465,7 +472,7 @@ rule(/^相手のバトルポケモンについている特殊エネルギーを(
         max: Math.min(Number(m[1]), special.length),
         title: 'トラッシュする特殊エネルギーを選ぶ',
         purpose: 'discard-opponent-energy',
-        callback: selected => selected.forEach(inst => ctx.game.moveCard(ctx.defender.energies, ctx.opponent.discard, inst))
+        callback: selected => selected.forEach(inst => ctx.game.removeEnergy(ctx.defender, inst, 'discard'))
     });
 }));
 rule(/^相手の山札を上から(\d+)枚トラッシュする$/, m => after(ctx => ctx.game.millDeck(ctx.opponent, Number(m[1]))));
@@ -493,10 +500,12 @@ rule(/^相手のバトルポケモンに、ダメカンを(\d+)個のせる$/, m
 rule(/^相手のポケモン(\d+)匹に、ダメカンを(\d+)個のせる$/, m => after(ctx => putCountersChosen(ctx, ctx.game.inPlay(ctx.opponent), Number(m[1]), Number(m[2]) * 10)));
 rule(/^相手のバトルポケモンをベンチポケモンと入れ替える$/, () => after(ctx => {
     const { game, opponent } = ctx;
-    if (opponent.bench.length === 0 || !opponent.active) return;
+    if (!opponent.active) return;
+    const targets = switchTargets(ctx, opponent);
+    if (targets.length === 0) return;
     game.promptPokemon({
         player: opponent,
-        pokemon: opponent.bench,
+        pokemon: targets,
         min: 1,
         max: 1,
         title: 'バトル場に出すポケモンを選ぶ',
@@ -506,10 +515,11 @@ rule(/^相手のバトルポケモンをベンチポケモンと入れ替える$
 }));
 rule(/^相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える$/, () => after(ctx => {
     const { game, player, opponent } = ctx;
-    if (opponent.bench.length === 0) return;
+    const targets = switchTargets(ctx, opponent);
+    if (targets.length === 0) return;
     game.promptPokemon({
         player,
-        pokemon: opponent.bench,
+        pokemon: targets,
         min: 1,
         max: 1,
         title: 'バトル場に呼び出す相手のポケモンを選ぶ',
@@ -566,10 +576,11 @@ rule(/^相手のバトルポケモンの残りHPが「(\d+)」になるように
 rule(/^ダメカン(\d+)個を、相手のベンチポケモンに好きなようにのせる$/, m => after(ctx => {
     const { game, player, opponent } = ctx;
     const steps = Array.from({ length: Number(m[1]) }, () => () => {
-        if (opponent.bench.length === 0) return;
+        const targets = opponent.bench.filter(pk => canAffect(ctx, pk, 'counters'));
+        if (targets.length === 0) return;
         game.promptPokemon({
             player,
-            pokemon: opponent.bench,
+            pokemon: targets,
             min: 1,
             max: 1,
             title: 'ダメカンを1個のせるポケモンを選ぶ',
@@ -711,7 +722,7 @@ rule(/^相手のバトルポケモンにダメカンがのっているなら、�
 rule(/^ダメカン(\d+)個を、相手のポケモンに好きなようにのせる$/, m => after(ctx => {
     const { game, player, opponent } = ctx;
     const steps = Array.from({ length: Number(m[1]) }, () => () => {
-        const targets = game.inPlay(opponent);
+        const targets = game.inPlay(opponent).filter(pk => canAffect(ctx, pk, 'counters'));
         if (targets.length === 0) return;
         game.promptPokemon({ player, pokemon: targets, min: 1, max: 1, title: 'ダメカンを1個のせるポケモンを選ぶ', purpose: 'snipe-target', callback: ([target]) => game.putDamage(target, 10) });
     });
@@ -821,7 +832,8 @@ rule(/^自分のトラッシュから(.+?)を(\d+)枚(まで)?選び、(相手�
     if (!filter) return null;
     return after(ctx => {
         const { game, player } = ctx;
-        const candidates = player.discard.filter(inst => filter(game.cardOf(inst)));
+        // トラッシュから動かせないカード（lockedInDiscard）は選べない
+        const candidates = player.discard.filter(inst => filter(game.cardOf(inst)) && !game.isDiscardLocked(inst));
         const n = Math.min(Number(m[2]), candidates.length);
         if (n === 0) return;
         game.promptCards({
@@ -863,16 +875,18 @@ rule(/^(のぞむなら、)?このポケモンと、ついているすべての�
 }));
 rule(/^相手のベンチポケモンを(\d+)匹選び、そのポケモンと、ついているすべてのカードを、山札にもどして切る$/, m => after(ctx => {
     const { game, player, opponent } = ctx;
-    const n = Math.min(Number(m[1]), opponent.bench.length);
+    // 効果を受けないポケモンは選べない（山札にもどす関数は本体にないので、ここで確かめる）
+    const targets = opponent.bench.filter(pk => canAffect(ctx, pk, 'other'));
+    const n = Math.min(Number(m[1]), targets.length);
     if (n === 0) return;
     game.promptPokemon({
         player,
-        pokemon: opponent.bench,
+        pokemon: targets,
         min: n,
         max: n,
         title: '山札にもどす相手のベンチポケモンを選ぶ',
         purpose: 'boss-target',
-        callback: selected => selected.forEach(pk => { if (canAffect(ctx, pk)) shuffleIntoDeck(game, pk); })
+        callback: selected => selected.forEach(pk => shuffleIntoDeck(game, pk))
     });
 }));
 

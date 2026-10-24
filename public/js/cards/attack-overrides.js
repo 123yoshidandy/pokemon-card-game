@@ -156,7 +156,7 @@ export const ATTACK_OVERRIDES = {
         after: ctx => {
             const { game, player, defender } = ctx;
             const sources = player.bench.filter(pokemon => game.topCard(pokemon).ancient && pokemon.damage > 0);
-            if (sources.length === 0 || !defender || !game.canAffectByAttack(ctx, defender)) return;
+            if (sources.length === 0 || !defender || !game.canAffectByAttack(ctx, defender) || !game.canAffect(defender, 'moveCounters')) return;
             game.promptPokemon({
                 player,
                 pokemon: sources,
@@ -165,12 +165,8 @@ export const ATTACK_OVERRIDES = {
                 title: 'ダメカンをのせ替える「古代」のポケモンを選ぶ',
                 purpose: 'move-counters',
                 cpuAnswer: g => [sources.reduce((best, pokemon, index) => (pokemon.damage > sources[best].damage ? index : best), 0)],
-                callback: ([source]) => {
-                    const amount = source.damage;
-                    source.damage = 0;
-                    defender.damage += amount;
-                    game.log(`${game.topCard(source).name}のダメカン${amount / 10}個を${game.topCard(defender).name}にのせ替えた`);
-                }
+                // のせ替えは本体の moveCounters（のせ替えを止める効果・相手の効果を受けない、を確かめる）
+                callback: ([source]) => game.moveCounters(source, defender, source.damage)
             });
         }
     },

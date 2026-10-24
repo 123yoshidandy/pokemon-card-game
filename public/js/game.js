@@ -389,6 +389,7 @@ export default class Game {
     //   { type: 'attachEnergy', uid, target } エネルギーをつける（1ターンに1回）
     //   { type: 'playTrainer', uid, target }  トレーナーズを使う（target はポケモンのどうぐのつけ先）
     //   { type: 'useAbility', target }        場のポケモンの特性を使う
+    //   { type: 'useHandAbility', uid }       手札にあるときに使える特性を使う（「このカードが手札にあるなら、ベンチに出す」など）
     //   { type: 'useStadium' }                スタジアムの効果を使う
     //   { type: 'retreat', target }           にげる（target は入れ替えるベンチポケモン）
     //   { type: 'attack', index }             バトルポケモンのワザを使う（番が終わる）
@@ -409,6 +410,7 @@ export default class Game {
             case 'attachEnergy': accepted = this.run(main() ?? this.checkAttachEnergy(player, command.uid, command.target), () => this.attachEnergy(player, command.uid, command.target)); break;
             case 'playTrainer': accepted = this.run(main() ?? this.checkPlayTrainer(player, command.uid, command.target), () => this.playTrainer(player, command.uid, command.target)); break;
             case 'useAbility': accepted = this.run(main() ?? this.checkAbility(player, command.target), () => this.useAbility(player, command.target)); break;
+            case 'useHandAbility': accepted = this.run(main() ?? this.checkHandAbility(player, command.uid), () => this.useHandAbility(player, command.uid)); break;
             case 'useStadium': accepted = this.run(main() ?? this.checkStadium(player), () => this.useStadium(player)); break;
             case 'retreat': accepted = this.run(main() ?? this.checkRetreat(player, command.target), () => this.retreat(player, command.target)); break;
             case 'attack': accepted = this.run(main() ?? this.checkAttack(player, command.index), () => this.attack(player, command.index)); break;
@@ -554,6 +556,23 @@ export default class Game {
         if (blocked) return typeof blocked === 'string' ? blocked : '今は特性を使えません';
         if (ability.canUse && !ability.canUse(this, player, pokemon)) return `今は${ability.name}を使えません`;
         return null;
+    }
+
+    // 手札にあるときに使える特性（ability.type が 'hand'）
+    checkHandAbility(player, uid) {
+        const inst = this.findInHand(player, uid);
+        const ability = inst && this.cardOf(inst).ability;
+        if (!ability || ability.type !== 'hand') return '手札で使える特性がありません';
+        if (ability.canUse && !ability.canUse(this, player, inst)) return `今は${ability.name}を使えません`;
+        return null;
+    }
+
+    useHandAbility(player, uid) {
+        const inst = this.findInHand(player, uid);
+        const card = this.cardOf(inst);
+        this.turnState.abilityNamesUsed.push(card.ability.name);
+        this.log(`${player.name}は手札の${card.name}の特性「${card.ability.name}」を使った`);
+        card.ability.use(this, player, inst);
     }
 
     checkStadium(player) {
@@ -748,14 +767,30 @@ export default class Game {
     }
 
     attack(player, index) {
-        const opponent = this.opponentOf(player);
         const attacker = player.active;
         const attack = this.topCard(attacker).attacks[index];
-        const ctx = { game: this, player, opponent, attacker, defender: opponent.active, attack, damage: attack.damage, failed: false, dealt: 0 };
         this.turnState.attacked = true;
-        this.log(`${this.topCard(attacker).name}の「${attack.name}」`);
-        this.effectQueue.push(
+        this.effectQueue.push(...this.attackSteps(player, attacker, attack));
+        // 特性で、ワザを2回続けて使えることがある（1回目で相手のバトルポケモンがきぜつしたなら、次のバトルポケモンが出たあと）
+        const ability = this.topCard(attacker).ability;
+        if (ability?.attackTwice && !this.abilitySuppressed(attacker) && ability.attackTwice(this, attacker)) {
+            this.effectQueue.push(() => {
+                if (player.active !== attacker || !this.opponentOf(player).active) return;
+                this.log(`${this.topCard(attacker).name}の特性「${ability.name}」で、もう一度ワザを使う`);
+                this.runNext(...this.attackSteps(player, attacker, attack));
+            });
+        }
+        this.queueEndOfTurn();
+    }
+
+    // ワザを1回使う手順（ワザを受けるポケモンは、使い始めたときのバトルポケモン）
+    attackSteps(player, attacker, attack) {
+        const opponent = this.opponentOf(player);
+        const ctx = { game: this, player, opponent, attacker, defender: null, attack, damage: attack.damage, failed: false, dealt: 0 };
+        return [
             () => {
+                ctx.defender = opponent.active;
+                this.log(`${this.topCard(attacker).name}の「${attack.name}」`);
                 this.currentAttack = ctx; // 使っている途中のワザ（フックが、ワザを使ったポケモンを知るため）
                 if (this.hasCondition(attacker, 'confused') && !this.flipCoin()) {
                     ctx.failed = true;
@@ -784,8 +819,7 @@ export default class Game {
                 this.resolvingAttack = false;
                 this.currentAttack = null;
             }
-        );
-        this.queueEndOfTurn();
+        ];
     }
 
     endTurn() {
@@ -1561,7 +1595,7 @@ export default class Game {
     // そのプレイヤーが今できる操作（画面で光らせる・CPUが選ぶ）
     getLegalActions(playerId) {
         const player = this.players[playerId];
-        const actions = { hand: {}, attacks: [], retreat: [], abilities: [], stadium: false, endTurn: false };
+        const actions = { hand: {}, handAbilities: [], attacks: [], retreat: [], abilities: [], stadium: false, endTurn: false };
         if (this.checkMain(player)) return actions;
         const targets = this.inPlay(player).map(pokemon => pokemon.id);
         player.hand.forEach(inst => {
@@ -1582,6 +1616,7 @@ export default class Game {
                 list = [];
             }
             if (list) actions.hand[inst.uid] = list;
+            if (card.ability?.type === 'hand' && !this.checkHandAbility(player, inst.uid)) actions.handAbilities.push(inst.uid);
         });
         const attacks = player.active ? this.topCard(player.active).attacks : [];
         actions.attacks = attacks.map((_, index) => !this.checkAttack(player, index));

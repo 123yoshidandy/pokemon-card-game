@@ -136,6 +136,33 @@ describe('本体の仕組みを足して使えるようにしたワザ・特性'
         expect(player.bench.map(pokemon => game.topCard(pokemon).name).sort()).toEqual([fossilA.name, fossilB.name].sort());
     });
 
+    it('おまつりおんど：場に「お祭り会場」が出ているなら、ワザを2回続けて使う', () => {
+        // ピカチュウ（プチボルト 30）に、この特性を持たせて確かめる
+        const dance = find(card => card.ability?.name === 'おまつりおんど').ability;
+        CARDS['test-dancer'] = { ...CARDS[C.pikachu], id: 'test-dancer', ability: dance };
+        const festival = find(card => card.name === 'お祭り会場');
+        const { game, me, opp } = midGame();
+        const player = arrange(game, me, { active: { id: 'test-dancer', energies: ['basic-lightning-energy', 'basic-lightning-energy'] }, hand: [festival.id] });
+        const target = arrange(game, opp, { active: BIG, deck: Array(5).fill(C.potion) });
+        game.applyCommand(me, { type: 'playTrainer', uid: player.hand[0].uid });
+        game.applyCommand(me, { type: 'attack', index: 1 });
+        expect(target.active.damage).toBe(60);
+        delete CARDS['test-dancer'];
+    });
+
+    it('きんきゅうかいてん：相手の場に2進化ポケモンがいるなら、手札からベンチに出せる', () => {
+        const klinklang = withAbility('きんきゅうかいてん');
+        const stage2 = find(card => card.kind === 'pokemon' && card.stage === 2 && card.supported);
+        const { game, me, opp } = midGame();
+        const player = arrange(game, me, { active: C.pikachu, bench: [], hand: [klinklang.id] });
+        arrange(game, opp, { active: C.charmander });
+        expect(game.getLegalActions(me).handAbilities).toEqual([]);
+        arrange(game, opp, { active: stage2.id });
+        expect(game.getLegalActions(me).handAbilities).toEqual([player.hand[0].uid]);
+        expect(game.applyCommand(me, { type: 'useHandAbility', uid: player.hand[0].uid })).toBe(true);
+        expect(game.topCard(player.bench[0]).name).toBe(klinklang.name);
+    });
+
     it('げんせいらんだ：自分の場の「古代」のポケモンの数×30ダメージ', () => {
         const koraidon = withAttack('コライドン', 'げんせいらんだ');
         const index = attackIndex(koraidon, 'げんせいらんだ');

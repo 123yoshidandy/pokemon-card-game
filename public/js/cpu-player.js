@@ -60,6 +60,12 @@ function chooseMainAction(game, player) {
         return card.ability.cpuWants ? card.ability.cpuWants(game, player, pokemon) : true;
     });
     if (ability) return { type: 'useAbility', target: ability };
+    // 手札にあるときに使える特性
+    const handAbility = (legal.handAbilities ?? []).find(uid => {
+        const card = cardOf(uid);
+        return card.ability.cpuWants ? card.ability.cpuWants(game, player) : true;
+    });
+    if (handAbility) return { type: 'useHandAbility', uid: handAbility };
 
     // サポート
     const supporter = chooseSupporter(game, player, playable(card => card.trainerType === 'supporter'));

@@ -103,7 +103,9 @@ CPU がつけ先を選ぶときの目安は `cpuTarget: (game, player, pokemon) 
 | extraTypes | pokemon | タイプの配列 | ポケモンのタイプを増やす（弱点・抵抗力の計算に使う。game.typesOf） |
 | weaknessOverride | pokemon | タイプか 'none' | 弱点のタイプを変える・なくす（game.weaknessOf） |
 
-特性の type には 'onToBench'（自分の番に、バトル場からベンチにもどったとき）もある。
+特性の type には 'onToBench'（自分の番に、バトル場からベンチにもどったとき）と、'hand'（手札にあるときに使う。canUse(game, player, inst)・use(game, player, inst)。操作は useHandAbility）もある。
+特性の attackTwice(game, pokemon) が true なら、そのポケモンはワザを2回続けて使う。cannotPlayFromHand が true のポケモンは、手札から出せない。
+場で別の形になるトレーナーズ（化石）は、playAsPokemon と asPokemon に書く（trainers/fossils.js）。
 suppressAbility は特性にも書ける（ほかのポケモンの特性をなくす）。ただし、その特性自身が特性以外の効果でなくなっていれば働かない。
 
 **プレイヤーにかかる効果にもフックを持たせられる**（サポートの「この番、自分のポケモンが使うワザのダメージは+30」「次の相手の番、自分のポケモン全員が受けるダメージは-30」など）：

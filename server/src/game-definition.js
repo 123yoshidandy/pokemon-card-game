@@ -18,6 +18,7 @@ const COMMAND_FIELDS = {
     attachEnergy: ['uid', 'target'],
     playTrainer: ['uid', 'target'],
     useAbility: ['target'],
+    useHandAbility: ['uid'],
     useStadium: [],
     retreat: ['target'],
     attack: ['index'],

@@ -105,6 +105,11 @@ export default class GameScreen {
             return;
         }
         const targets = view.legal?.hand[uid];
+        // 手札にあるときに使える特性（このカードをベンチに出す、など）
+        if (!targets && view.legal?.handAbilities?.includes(uid)) {
+            this.send({ type: 'useHandAbility', uid });
+            return;
+        }
         if (!targets) {
             this.openHandDetail(uid);
             return;

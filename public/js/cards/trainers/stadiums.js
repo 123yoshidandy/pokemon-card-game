@@ -217,9 +217,10 @@ export const TRAINER_EFFECTS = {
         cpuWants: (game, player) => countDiff(game, player, ownedBy('Nの')) >= 0
     },
     'ハッコウシティ': {
-        canUse: (game, player) => player.discard.some(inst => isBasicLightning(game.cardOf(inst))),
+        // トラッシュから動かせないカードはのぞく
+        canUse: (game, player) => player.discard.some(inst => isBasicLightning(game.cardOf(inst)) && !game.isDiscardLocked(inst)),
         use: (game, player) => {
-            const energies = player.discard.filter(inst => isBasicLightning(game.cardOf(inst)));
+            const energies = player.discard.filter(inst => isBasicLightning(game.cardOf(inst)) && !game.isDiscardLocked(inst));
             game.promptCards({
                 player,
                 cards: energies,
@@ -228,8 +229,8 @@ export const TRAINER_EFFECTS = {
                 title: '手札に加える基本雷エネルギーを2枚まで選ぶ',
                 purpose: 'levincia',
                 callback: selected => {
-                    selected.forEach(inst => game.removeCard(player.discard, inst));
-                    game.addToHand(player, selected, { reveal: true });
+                    const moved = selected.filter(inst => game.moveCard(player.discard, player.hand, inst));
+                    if (moved.length) game.log(`${player.name}は${moved.map(inst => game.cardName(inst)).join('と')}を手札に加えた`);
                 }
             });
         },

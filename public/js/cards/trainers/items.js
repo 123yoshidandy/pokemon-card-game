@@ -26,6 +26,22 @@ const names = (game, insts) => insts.map(inst => game.cardName(inst)).join('と'
 const allIndices = (count) => Array.from({ length: count }, (_, index) => index);
 const isSecondPlayersFirstTurn = (game, player) => player.id !== game.firstPlayer && player.turnsTaken === 1;
 
+// 自分が手札から出したグッズの効果を、そのポケモンに与えられるか（相手のグッズの効果を受けないポケモンを外す）
+//   canPlay・cpuWants は効果の出どころが決まる前に呼ばれるので、そのときは手札から出したグッズとして確かめる
+function canAffectByItem(game, player, pokemon, effectKind) {
+    if (game.effectSource) return game.canAffect(pokemon, effectKind);
+    return game.withSource({ player, kind: 'trainer', trainerType: 'item', fromHand: true }, () => game.canAffect(pokemon, effectKind));
+}
+
+// 効果を与えられる相手のポケモン（effectKind：'energy' 'tool' 'counters' など）
+const affectableOpponents = (game, player, effectKind) => game.inPlay(game.opponentOf(player)).filter(pokemon => canAffectByItem(game, player, pokemon, effectKind));
+
+// エネルギーを手札にもどせるか（なぎのきょうちなどで、手札にもどせないポケモンを外す）
+const canReturnToHand = (game, pokemon) => !game.hookAny('blockReturnToHand', pokemon);
+
+// トラッシュから手札・山札にもどせるカード（トラッシュから動かせないカードをのぞく）
+const movableFromDiscard = (game, player, filter) => player.discard.filter(inst => !game.isDiscardLocked(inst) && filter(game.cardOf(inst)));
+
 // 点数の高い順に count 個のインデックス（答えは小さい順）
 function bestIndices(items, score, count) {
     return items
@@ -121,7 +137,7 @@ function searchToHand(game, player, filter, max, title, purpose = 'search-card')
 // トラッシュのカードを選んで山札にもどして切る
 function discardToDeck(game, player, groups) {
     pickGroups(game, player, {
-        from: player.discard,
+        from: movableFromDiscard(game, player, () => true),
         groups,
         purpose: 'discard-to-deck',
         onDone: chosen => {
@@ -134,7 +150,7 @@ function discardToDeck(game, player, groups) {
 
 // トラッシュのカードを選んで、相手に見せて手札に加える
 function discardToHand(game, player, filter, max, title, cpuAnswer) {
-    const candidates = cardsIn(game, player.discard, filter);
+    const candidates = movableFromDiscard(game, player, filter);
     const count = Math.min(max, candidates.length);
     if (count === 0) return;
     game.promptCards({
@@ -145,11 +161,14 @@ function discardToHand(game, player, filter, max, title, cpuAnswer) {
         title,
         purpose: 'discard-to-hand',
         cpuAnswer: cpuAnswer ?? ((g, prompt) => allIndices(prompt.max)),
-        callback: selected => {
-            selected.forEach(inst => game.removeCard(player.discard, inst));
-            game.addToHand(player, selected, { reveal: true });
-        }
+        callback: selected => moveDiscardToHand(game, player, selected)
     });
+}
+
+// トラッシュのカードを、相手に見せて手札に加える（トラッシュから動かせないカードは動かさない）
+function moveDiscardToHand(game, player, insts) {
+    const moved = insts.filter(inst => game.moveCard(player.discard, player.hand, inst));
+    if (moved.length) game.log(`${player.name}は${names(game, moved)}を手札に加えた`);
 }
 
 // 山札の一部（上から・下から）を見て、条件に合うものを選び手札に加え、残りを山札にもどして切る
@@ -235,12 +254,24 @@ const healActive = (amount, extraCondition = () => true) => ({
     cpuWants: (game, player) => Boolean(player.active) && player.active.damage >= 30 && extraCondition(game, player, player.active)
 });
 
+// 呼び出せる相手のベンチポケモン（入れ替わる相手のバトルポケモンが効果を受けないなら、だれも呼び出せない）
+function gustTargets(game, player) {
+    const opponent = game.opponentOf(player);
+    if (opponent.active && !canAffectByItem(game, player, opponent.active, 'switch')) return [];
+    return opponent.bench.filter(pokemon => canAffectByItem(game, player, pokemon, 'switch'));
+}
+
 // 相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える
 function gustOpponent(game, player, then) {
     const opponent = game.opponentOf(player);
+    const targets = gustTargets(game, player);
+    if (targets.length === 0) {
+        then?.();
+        return;
+    }
     game.promptPokemon({
         player,
-        pokemon: opponent.bench,
+        pokemon: targets,
         min: 1,
         max: 1,
         title: 'バトル場に呼び出す相手のポケモンを選ぶ',
@@ -525,9 +556,9 @@ export const TRAINER_EFFECTS = {
         cpuWants: (game, player) => player.deck.length < 15 && cardsIn(game, player.discard, isPokemon).length >= 3
     },
     '夜のタンカ': {
-        canPlay: (game, player) => hasIn(game, player.discard, card => isPokemon(card) || isBasicEnergy(card)),
+        canPlay: (game, player) => movableFromDiscard(game, player, card => isPokemon(card) || isBasicEnergy(card)).length > 0,
         play: (game, player) => {
-            const candidates = cardsIn(game, player.discard, card => isPokemon(card) || isBasicEnergy(card));
+            const candidates = movableFromDiscard(game, player, card => isPokemon(card) || isBasicEnergy(card));
             game.promptCards({
                 player,
                 cards: candidates,
@@ -537,10 +568,7 @@ export const TRAINER_EFFECTS = {
                 purpose: 'night-stretcher',
                 // ポケモンを先に（HP の高いもの）
                 cpuAnswer: (g, prompt) => bestIndices(prompt.cards, inst => (isPokemon(game.cardOf(inst)) ? 1000 + game.cardOf(inst).hp : 0), 1),
-                callback: selected => {
-                    selected.forEach(inst => game.removeCard(player.discard, inst));
-                    game.addToHand(player, selected, { reveal: true });
-                }
+                callback: selected => moveDiscardToHand(game, player, selected)
             });
         },
         cpuWants: (game, player) => hasIn(game, player.discard, isPokemon)
@@ -679,19 +707,33 @@ export const TRAINER_EFFECTS = {
 
     // ===== 入れ替え =====
     'ポケモンキャッチャー': {
-        canPlay: (game, player) => game.opponentOf(player).bench.length > 0,
+        canPlay: (game, player) => gustTargets(game, player).length > 0,
         play: (game, player) => gustOpponent(game, player),
         cpuWants: cpuWantsGust
     },
     'プライムキャッチャー': {
-        canPlay: (game, player) => game.opponentOf(player).bench.length > 0,
+        canPlay: (game, player) => gustTargets(game, player).length > 0,
         play: (game, player) => gustOpponent(game, player, () => game.promptSwitchOwnActive(player, 'switch')),
         cpuWants: cpuWantsGust
     },
     'むしよけスプレー': {
-        canPlay: (game, player) => game.opponentOf(player).bench.length > 0 && Boolean(game.opponentOf(player).active),
+        // 入れ替わる相手のバトルポケモンも、バトル場に出るベンチポケモンも、効果を受けるものだけ
+        canPlay: (game, player) => Boolean(game.opponentOf(player).active) && gustTargets(game, player).length > 0,
         // バトル場に出すポケモンは相手が選ぶ
-        play: (game, player) => game.promptSwitchOwnActive(game.opponentOf(player), 'forced-switch'),
+        play: (game, player) => {
+            const opponent = game.opponentOf(player);
+            const targets = gustTargets(game, player);
+            if (!opponent.active || targets.length === 0) return;
+            game.promptPokemon({
+                player: opponent,
+                pokemon: targets,
+                min: 1,
+                max: 1,
+                title: 'バトル場に出すベンチポケモンを選ぶ',
+                purpose: 'forced-switch',
+                callback: ([target]) => { if (target) game.switchActive(opponent, target); }
+            });
+        },
         cpuWants: (game, player) => {
             const opponent = game.opponentOf(player);
             return Boolean(opponent.active) && opponent.active.energies.length >= 2 && opponent.bench.some(pokemon => pokemon.energies.length === 0);
@@ -819,45 +861,42 @@ export const TRAINER_EFFECTS = {
         cpuWants: (game, player) => game.opponentOf(player).hand.length >= 3
     },
     'クラッシュハンマー': {
-        canPlay: (game, player) => game.inPlay(game.opponentOf(player)).some(pokemon => pokemon.energies.length > 0),
+        canPlay: (game, player) => affectableOpponents(game, player, 'energy').some(pokemon => pokemon.energies.length > 0),
         play: (game, player) => {
             if (!game.flipCoin()) return;
-            pickEnergyOn(game, player, game.inPlay(game.opponentOf(player)), () => true, {
+            pickEnergyOn(game, player, affectableOpponents(game, player, 'energy'), () => true, {
                 title: 'エネルギーをトラッシュする相手のポケモンを選ぶ',
                 purpose: 'crushing-hammer',
                 onPicked: (pokemon, inst) => {
-                    game.moveCard(pokemon.energies, game.ownerOf(pokemon).discard, inst);
-                    game.log(`${game.topCard(pokemon).name}の${game.cardName(inst)}をトラッシュした`);
+                    if (game.removeEnergy(pokemon, inst, 'discard')) game.log(`${game.topCard(pokemon).name}の${game.cardName(inst)}をトラッシュした`);
                 }
             });
         },
-        cpuWants: (game, player) => game.inPlay(game.opponentOf(player)).some(pokemon => pokemon.energies.length > 0)
+        cpuWants: (game, player) => affectableOpponents(game, player, 'energy').some(pokemon => pokemon.energies.length > 0)
     },
     '改造ハンマー': {
-        canPlay: (game, player) => game.inPlay(game.opponentOf(player)).some(pokemon => hasIn(game, pokemon.energies, isSpecialEnergy)),
-        play: (game, player) => pickEnergyOn(game, player, game.inPlay(game.opponentOf(player)), isSpecialEnergy, {
+        canPlay: (game, player) => affectableOpponents(game, player, 'energy').some(pokemon => hasIn(game, pokemon.energies, isSpecialEnergy)),
+        play: (game, player) => pickEnergyOn(game, player, affectableOpponents(game, player, 'energy'), isSpecialEnergy, {
             title: '特殊エネルギーをトラッシュする相手のポケモンを選ぶ',
             purpose: 'enhanced-hammer',
             onPicked: (pokemon, inst) => {
-                game.moveCard(pokemon.energies, game.ownerOf(pokemon).discard, inst);
-                game.log(`${game.topCard(pokemon).name}の${game.cardName(inst)}をトラッシュした`);
+                if (game.removeEnergy(pokemon, inst, 'discard')) game.log(`${game.topCard(pokemon).name}の${game.cardName(inst)}をトラッシュした`);
             }
         }),
-        cpuWants: (game, player) => game.inPlay(game.opponentOf(player)).some(pokemon => hasIn(game, pokemon.energies, isSpecialEnergy))
+        cpuWants: (game, player) => affectableOpponents(game, player, 'energy').some(pokemon => hasIn(game, pokemon.energies, isSpecialEnergy))
     },
     'のんびりじゃらし': {
         canPlay: (game, player) => isSecondPlayersFirstTurn(game, player)
-            && game.inPlay(game.opponentOf(player)).some(pokemon => pokemon.energies.length > 0),
-        play: (game, player) => pickEnergyOn(game, player, game.inPlay(game.opponentOf(player)), () => true, {
+            && affectableOpponents(game, player, 'energy').some(pokemon => pokemon.energies.length > 0 && canReturnToHand(game, pokemon)),
+        play: (game, player) => pickEnergyOn(game, player, affectableOpponents(game, player, 'energy').filter(pokemon => canReturnToHand(game, pokemon)), () => true, {
             title: 'エネルギーを手札にもどす相手のポケモンを選ぶ',
             purpose: 'chill-teaser',
             onPicked: (pokemon, inst) => {
                 const owner = game.ownerOf(pokemon);
-                game.moveCard(pokemon.energies, owner.hand, inst);
-                game.log(`${game.topCard(pokemon).name}の${game.cardName(inst)}を${owner.name}の手札にもどした`);
+                if (game.removeEnergy(pokemon, inst, 'hand')) game.log(`${game.topCard(pokemon).name}の${game.cardName(inst)}を${owner.name}の手札にもどした`);
             }
         }),
-        cpuWants: (game, player) => game.inPlay(game.opponentOf(player)).some(pokemon => pokemon.energies.length > 0)
+        cpuWants: (game, player) => affectableOpponents(game, player, 'energy').some(pokemon => pokemon.energies.length > 0 && canReturnToHand(game, pokemon))
     },
     'ヒートバーナー': {
         canPlay: (game, player) => hasIn(game, player.hand, card => isBasicEnergy(card)) && heatBurnerTargets(game, player).length > 0,
@@ -890,14 +929,15 @@ export const TRAINER_EFFECTS = {
         cpuWants: (game, player) => heatBurnerTargets(game, player).some(target => target.score > 0)
     },
     'メガトンブロアー': {
-        canPlay: (game, player) => Boolean(game.stadium) || game.inPlay(game.opponentOf(player)).some(pokemon => pokemon.tool || hasIn(game, pokemon.energies, isSpecialEnergy)),
+        canPlay: (game, player) => Boolean(game.stadium)
+            || affectableOpponents(game, player, 'tool').some(pokemon => pokemon.tool)
+            || affectableOpponents(game, player, 'energy').some(pokemon => hasIn(game, pokemon.energies, isSpecialEnergy)),
         play: (game, player) => {
             const opponent = game.opponentOf(player);
             game.inPlay(opponent).forEach(pokemon => {
                 game.discardTool(pokemon);
                 cardsIn(game, pokemon.energies, isSpecialEnergy).forEach(inst => {
-                    game.moveCard(pokemon.energies, opponent.discard, inst);
-                    game.log(`${game.topCard(pokemon).name}の${game.cardName(inst)}をトラッシュした`);
+                    if (game.removeEnergy(pokemon, inst, 'discard')) game.log(`${game.topCard(pokemon).name}の${game.cardName(inst)}をトラッシュした`);
                 });
             });
             game.discardStadium();
@@ -909,9 +949,10 @@ export const TRAINER_EFFECTS = {
         }
     },
     'ツールスクラッパー': {
-        canPlay: (game, player) => game.players.some(p => game.inPlay(p).some(pokemon => pokemon.tool)),
+        // どうぐをトラッシュできるポケモン（相手のグッズの効果を受けないポケモンをのぞく）
+        canPlay: (game, player) => game.players.some(p => game.inPlay(p).some(pokemon => pokemon.tool && canAffectByItem(game, player, pokemon, 'tool'))),
         play: (game, player) => {
-            const withTools = game.players.flatMap(p => game.inPlay(p).filter(pokemon => pokemon.tool));
+            const withTools = game.players.flatMap(p => game.inPlay(p).filter(pokemon => pokemon.tool && canAffectByItem(game, player, pokemon, 'tool')));
             game.promptPokemon({
                 player,
                 pokemon: withTools,
@@ -927,7 +968,7 @@ export const TRAINER_EFFECTS = {
                 callback: selected => selected.forEach(pokemon => game.discardTool(pokemon))
             });
         },
-        cpuWants: (game, player) => game.inPlay(game.opponentOf(player)).some(pokemon => pokemon.tool)
+        cpuWants: (game, player) => affectableOpponents(game, player, 'tool').some(pokemon => pokemon.tool)
     },
 
     // ===== 特殊状態・ダメカン =====
@@ -956,7 +997,7 @@ export const TRAINER_EFFECTS = {
     'ロケット団のびっくりボム': {
         play: (game, player) => {
             if (game.flipCoin()) {
-                const targets = game.inPlay(game.opponentOf(player));
+                const targets = affectableOpponents(game, player, 'counters');
                 if (targets.length === 0) return;
                 game.promptPokemon({
                     player,
@@ -1074,21 +1115,22 @@ function devolveTargets(game, player) {
 }
 
 // ヒートバーナーでトラッシュできるもの：相手のポケモンのどうぐ・特殊エネルギーと、場のスタジアム
+//   （相手のグッズの効果を受けないポケモンの、どうぐ・エネルギーはのぞく）
 function heatBurnerTargets(game, player) {
     const opponent = game.opponentOf(player);
     const targets = [];
     game.inPlay(opponent).forEach(pokemon => {
         const name = game.topCard(pokemon).name;
-        if (pokemon.tool) {
+        if (pokemon.tool && canAffectByItem(game, player, pokemon, 'tool')) {
             targets.push({ label: `${name}の${game.cardName(pokemon.tool)}（どうぐ）`, score: 2, discard: () => game.discardTool(pokemon) });
         }
+        if (!canAffectByItem(game, player, pokemon, 'energy')) return;
         cardsIn(game, pokemon.energies, isSpecialEnergy).forEach(inst => {
             targets.push({
                 label: `${name}の${game.cardName(inst)}（特殊エネルギー）`,
                 score: 1,
                 discard: () => {
-                    game.moveCard(pokemon.energies, opponent.discard, inst);
-                    game.log(`${name}の${game.cardName(inst)}をトラッシュした`);
+                    if (game.removeEnergy(pokemon, inst, 'discard')) game.log(`${name}の${game.cardName(inst)}をトラッシュした`);
                 }
             });
         });

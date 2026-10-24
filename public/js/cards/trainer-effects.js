@@ -16,6 +16,23 @@ const isPokemonEx = card => card.rule === 'ex' || card.rule === 'mega';
 
 const canDraw = (game, player) => player.deck.length > 0;
 
+// 自分が手札から出したトレーナーズの効果を、そのポケモンに与えられるか（相手のグッズ・サポートの効果を受けないポケモンを外す）
+//   canPlay・cpuWants は効果の出どころが決まる前に呼ばれるので、そのときは手札から出したものとして確かめる
+function canAffectByTrainer(game, player, pokemon, effectKind, trainerType) {
+    if (game.effectSource) return game.canAffect(pokemon, effectKind);
+    return game.withSource({ player, kind: 'trainer', trainerType, fromHand: true }, () => game.canAffect(pokemon, effectKind));
+}
+
+// 呼び出せる相手のベンチポケモン（入れ替わる相手のバトルポケモンが効果を受けないなら、だれも呼び出せない）
+function gustTargets(game, player, trainerType) {
+    const opponent = game.opponentOf(player);
+    if (opponent.active && !canAffectByTrainer(game, player, opponent.active, 'switch', trainerType)) return [];
+    return opponent.bench.filter(pokemon => canAffectByTrainer(game, player, pokemon, 'switch', trainerType));
+}
+
+// トラッシュから手札・山札にもどせるカード（トラッシュから動かせないカードをのぞく）
+const movableFromDiscard = (game, player, filter) => player.discard.filter(inst => !game.isDiscardLocked(inst) && filter(game.cardOf(inst)));
+
 function searchPokemonToHand(game, player) {
     game.searchDeck({
         player,
@@ -59,12 +76,14 @@ export const TRAINER_EFFECTS = {
         }
     },
     'ボスの指令': {
-        canPlay: (game, player) => game.opponentOf(player).bench.length > 0,
+        canPlay: (game, player) => gustTargets(game, player, 'supporter').length > 0,
         play: (game, player) => {
             const opponent = game.opponentOf(player);
+            const targets = gustTargets(game, player, 'supporter');
+            if (targets.length === 0) return;
             game.promptPokemon({
                 player,
-                pokemon: opponent.bench,
+                pokemon: targets,
                 min: 1,
                 max: 1,
                 title: 'バトル場に呼び出す相手のポケモンを選ぶ',
@@ -147,9 +166,9 @@ export const TRAINER_EFFECTS = {
         })
     },
     'エネルギー回収': {
-        canPlay: (game, player) => player.discard.some(inst => isBasicEnergy(game.cardOf(inst))),
+        canPlay: (game, player) => movableFromDiscard(game, player, isBasicEnergy).length > 0,
         play: (game, player) => {
-            const energies = player.discard.filter(inst => isBasicEnergy(game.cardOf(inst)));
+            const energies = movableFromDiscard(game, player, isBasicEnergy);
             const count = Math.min(2, energies.length);
             game.promptCards({
                 player,

@@ -48,6 +48,23 @@ const canAttackNow = (game, player) => Boolean(player.active)
     && game.topCard(player.active).attacks.some((_, index) => game.checkAttack(player, index) === null);
 const totalHeal = (game, pokemons, amount) => pokemons.reduce((sum, pokemon) => sum + Math.min(amount, pokemon.damage), 0);
 
+// 自分が手札から出したサポートの効果を、そのポケモンに与えられるか（相手のサポートの効果を受けないポケモンを外す）
+//   canPlay・cpuWants は効果の出どころが決まる前に呼ばれるので、そのときは手札から出したサポートとして確かめる
+function canAffectBySupporter(game, player, pokemon, effectKind) {
+    if (game.effectSource) return game.canAffect(pokemon, effectKind);
+    return game.withSource({ player, kind: 'trainer', trainerType: 'supporter', fromHand: true }, () => game.canAffect(pokemon, effectKind));
+}
+
+// 効果を与えられる相手のポケモン（effectKind：'energy' 'tool' など）
+const affectableOpponents = (game, player, effectKind) => game.inPlay(game.opponentOf(player)).filter(pokemon => canAffectBySupporter(game, player, pokemon, effectKind));
+
+// 呼び出せる相手のベンチポケモン（入れ替わる相手のバトルポケモンが効果を受けないなら、だれも呼び出せない）
+function gustTargets(game, player, filter = () => true) {
+    const opponent = game.opponentOf(player);
+    if (opponent.active && !canAffectBySupporter(game, player, opponent.active, 'switch')) return [];
+    return opponent.bench.filter(pokemon => filter(game.topCard(pokemon)) && canAffectBySupporter(game, player, pokemon, 'switch'));
+}
+
 // 前の相手の番に、ワザのダメージで自分のポケモンがきぜつしていたか（filter：きぜつしたポケモンの名前で絞る）
 // ゲームは、ワザのダメージによるきぜつだけを記録している。特性などでのきぜつは数えないので、使えない側に倒れる
 const knockedOutLastTurn = (game, player, filter = () => true) => player.knockedOutByAttackTurn === game.turn - 1
@@ -155,9 +172,9 @@ function searchOneEach(game, player, kinds, onDone = picked => game.addToHand(pl
     step(0);
 }
 
-// トラッシュから条件に合うカードを max 枚まで選び、相手に見せて手札に加える
+// トラッシュから条件に合うカードを max 枚まで選び、相手に見せて手札に加える（トラッシュから動かせないカードはのぞく）
 function discardToHand(game, player, filter, max, title, score) {
-    const candidates = discardOf(game, player, filter);
+    const candidates = discardOf(game, player, filter).filter(inst => !game.isDiscardLocked(inst));
     if (candidates.length === 0) return;
     game.promptCards({
         player,
@@ -168,8 +185,8 @@ function discardToHand(game, player, filter, max, title, score) {
         purpose: 'discard-to-hand',
         cpuAnswer: (g, prompt) => topIndices(prompt.cards, inst => score(g.cardOf(inst)), prompt.max),
         callback: selected => {
-            selected.forEach(inst => game.removeCard(player.discard, inst));
-            game.addToHand(player, selected, { reveal: true });
+            const moved = selected.filter(inst => game.moveCard(player.discard, player.hand, inst));
+            if (moved.length) game.log(`${player.name}は${moved.map(inst => game.cardName(inst)).join('と')}を手札に加えた`);
         }
     });
 }
@@ -274,7 +291,7 @@ function switchOwn(game, player, then = () => {}, candidates = player.bench) {
 // 相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える
 function gustOpponent(game, player, filter = () => true, then = () => {}) {
     const opponent = game.opponentOf(player);
-    const candidates = opponent.bench.filter(pokemon => filter(game.topCard(pokemon)));
+    const candidates = gustTargets(game, player, filter);
     if (candidates.length === 0) return;
     game.promptPokemon({
         player,
@@ -1215,7 +1232,7 @@ export const TRAINER_EFFECTS = {
         cpuWants: (game, player) => !canAttackNow(game, player) && player.bench.length > 0
     },
     'ロケット団のサカキ': {
-        canPlay: (game, player) => game.opponentOf(player).bench.length > 0
+        canPlay: (game, player) => gustTargets(game, player).length > 0
             || (Boolean(player.active) && isRocket(game.topCard(player.active)) && ownPokemon(game, player, isRocket).some(pokemon => pokemon !== player.active)),
         play: (game, player) => {
             const rocketBench = player.active && isRocket(game.topCard(player.active))
@@ -1226,17 +1243,18 @@ export const TRAINER_EFFECTS = {
         cpuWants: (game, player) => game.opponentOf(player).bench.some(pokemon => remainingHp(game, pokemon) <= 60)
     },
     'ルチアのアピール': {
-        canPlay: (game, player) => game.opponentOf(player).bench.some(pokemon => game.topCard(pokemon).stage === 0),
+        canPlay: (game, player) => gustTargets(game, player, isBasicPokemon).length > 0,
         play: (game, player) => gustOpponent(game, player, isBasicPokemon, target => game.addCondition(target, 'confused')),
         cpuWants: (game, player) => game.opponentOf(player).bench.some(pokemon => game.topCard(pokemon).stage === 0 && remainingHp(game, pokemon) <= 70)
     },
 
     // ===== 相手の場 =====
     'サビ組のしたっぱ': {
-        canPlay: (game, player) => knockedOutLastTurn(game, player) && game.inPlay(game.opponentOf(player)).some(pokemon => pokemon.energies.length > 0),
+        canPlay: (game, player) => knockedOutLastTurn(game, player) && affectableOpponents(game, player, 'energy').some(pokemon => pokemon.energies.length > 0),
         play: (game, player) => {
             const opponent = game.opponentOf(player);
-            const targets = game.inPlay(opponent).filter(pokemon => pokemon.energies.length > 0);
+            const targets = affectableOpponents(game, player, 'energy').filter(pokemon => pokemon.energies.length > 0);
+            if (targets.length === 0) return;
             game.promptPokemon({
                 player,
                 pokemon: targets,
@@ -1254,8 +1272,7 @@ export const TRAINER_EFFECTS = {
                     purpose: 'discard-opponent-energy',
                     cpuAnswer: (g, prompt) => topIndices(prompt.cards, inst => (g.cardOf(inst).basic ? 0 : 10), 1),
                     callback: ([inst]) => {
-                        game.moveCard(target.energies, opponent.discard, inst);
-                        game.log(`${game.topCard(target).name}の${game.cardName(inst)}をトラッシュした`);
+                        if (game.removeEnergy(target, inst, 'discard')) game.log(`${game.topCard(target).name}の${game.cardName(inst)}をトラッシュした`);
                     }
                 })
             });
@@ -1263,12 +1280,11 @@ export const TRAINER_EFFECTS = {
         cpuWants: () => true
     },
     '怖いお兄さん': {
-        canPlay: (game, player) => game.inPlay(game.opponentOf(player))
-            .some(pokemon => pokemon.tool || pokemon.energies.some(inst => !game.cardOf(inst).basic)),
+        canPlay: (game, player) => scaryTargets(game, player).length > 0,
         play: (game, player) => {
-            const opponent = game.opponentOf(player);
             const special = pokemon => pokemon.energies.filter(inst => !game.cardOf(inst).basic);
-            const targets = game.inPlay(opponent).filter(pokemon => pokemon.tool || special(pokemon).length > 0);
+            const targets = scaryTargets(game, player);
+            if (targets.length === 0) return;
             game.promptPokemon({
                 player,
                 pokemon: targets,
@@ -1279,10 +1295,9 @@ export const TRAINER_EFFECTS = {
                 cpuAnswer: (g, prompt) => topIndices(prompt.pokemon, pokemon => (pokemon.tool ? 1 : 0) + Math.min(1, special(pokemon).length), 1),
                 callback: ([target]) => {
                     game.discardTool(target);
-                    const energies = special(target);
+                    const energies = canAffectBySupporter(game, player, target, 'energy') ? special(target) : [];
                     const discard = inst => {
-                        game.moveCard(target.energies, opponent.discard, inst);
-                        game.log(`${game.topCard(target).name}の${game.cardName(inst)}をトラッシュした`);
+                        if (game.removeEnergy(target, inst, 'discard')) game.log(`${game.topCard(target).name}の${game.cardName(inst)}をトラッシュした`);
                     };
                     if (energies.length === 0) return;
                     if (energies.length === 1) {
@@ -1319,3 +1334,9 @@ export const TRAINER_EFFECTS = {
             && canAttackNow(game, player)
     }
 };
+
+// 怖いお兄さんで選べる相手のポケモン：効果を受けるポケモンで、どうぐか特殊エネルギーがついているもの
+function scaryTargets(game, player) {
+    return game.inPlay(game.opponentOf(player)).filter(pokemon => (pokemon.tool && canAffectBySupporter(game, player, pokemon, 'tool'))
+        || (pokemon.energies.some(inst => !game.cardOf(inst).basic) && canAffectBySupporter(game, player, pokemon, 'energy')));
+}

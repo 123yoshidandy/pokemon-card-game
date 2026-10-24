@@ -198,6 +198,8 @@ export const TRAINER_EFFECTS = {
                 if (!attackerOwner || attacker.energies.length === 0 || attackerOwner.bench.length === 0) return;
                 game.runNext(() => {
                     if (!game.ownerOf(attacker) || attacker.energies.length === 0 || attackerOwner.bench.length === 0) return;
+                    // ワザを使ったポケモンが、このどうぐの効果を受けないなら、つけ替えない
+                    if (!game.canAffect(attacker, 'energy')) return;
                     game.promptCards({
                         player: source.player,
                         cards: attacker.energies,

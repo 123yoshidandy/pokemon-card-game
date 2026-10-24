@@ -71,7 +71,9 @@ export default class Game {
             mulligans: 0,
             effects: [], // プレイヤーにかかる効果（グッズが使えない、など）{ kind, untilTurn }
             knockedOutByAttackTurn: -1, // ワザのダメージで自分のポケモンがきぜつした番と、その名前
-            knockedOutByAttackNames: []
+            knockedOutByAttackNames: [],
+            knockedOutTurn: -1, // 理由を問わず、自分のポケモンがきぜつした番と、その名前
+            knockedOutNames: []
         }));
         this.phase = 'setup'; // deck（デッキを決める）→ setup → main → end
         this.turn = 0;
@@ -250,8 +252,11 @@ export default class Game {
             const pokemon = this.players[playerId].active;
             if (!pokemon) return;
             const name = this.topCard(pokemon).name;
+            // 特殊状態にならない効果がかかっているなら、受けている特殊状態は回復する
+            ['poisoned', 'burned'].forEach(condition => { if (pokemon[condition] && this.conditionBlocked(pokemon, condition)) pokemon[condition] = false; });
+            if (pokemon.rotation && this.conditionBlocked(pokemon, pokemon.rotation)) pokemon.rotation = null;
             if (pokemon.poisoned) {
-                const poison = pokemon.poisonDamage ?? POISON_DAMAGE;
+                const poison = (pokemon.poisonDamage ?? POISON_DAMAGE) + this.hookSum('poisonDamage', pokemon);
                 pokemon.damage += poison;
                 this.log(`${name}はどくで${poison}ダメージ`);
             }
@@ -294,6 +299,10 @@ export default class Game {
             const card = this.topCard(pokemon);
             this.log(`${player.name}の${card.name}はきぜつした`);
             const info = { byAttack: Boolean(this.resolvingAttack) };
+            // きぜつの理由を問わず、きぜつした番と名前を残す（「前の相手の番に、自分のポケモンがきぜつしていたなら」）
+            if (player.knockedOutTurn !== this.turn) player.knockedOutNames = [];
+            player.knockedOutTurn = this.turn;
+            player.knockedOutNames.push(card.name);
             const prizes = Math.max(0, this.prizeValue(card) + this.hookSum('prizeModifier', pokemon, player, info));
             this.hookAll('onKnockout', pokemon, player, info);
             if (this.resolvingAttack) {
@@ -487,6 +496,10 @@ export default class Game {
         const target = this.ownPokemon(player, targetId);
         if (!target) return 'つけるポケモンを選んでください';
         if (this.hasEffect(target, 'cannotAttachFromHand')) return 'そのポケモンには手札からエネルギーをつけられません';
+        const card = this.cardOf(inst);
+        if (card.canAttachTo && !card.canAttachTo(this, target)) return `${card.name}はそのポケモンにつけられません`;
+        const blocked = this.hookAny('blockAttachEnergy', player, target, card);
+        if (blocked) return typeof blocked === 'string' ? blocked : 'そのポケモンにはエネルギーをつけられません';
         return null;
     }
 
@@ -540,7 +553,8 @@ export default class Game {
         const active = player.active;
         if (!active) return 'バトルポケモンがいません';
         if (this.turnState.retreated) return 'にげるはこの番にもう使いました';
-        if (active.rotation === 'asleep' || active.rotation === 'paralyzed') return `${CONDITION_NAMES[active.rotation]}のポケモンはにげられません`;
+        const stopped = ['asleep', 'paralyzed'].find(condition => this.hasCondition(active, condition));
+        if (stopped) return `${CONDITION_NAMES[stopped]}のポケモンはにげられません`;
         if (this.hasEffect(active, 'cannotRetreat') || this.hookAny('blockRetreat', player, active)) return 'このポケモンはにげられません';
         if (!player.bench.some(pokemon => pokemon.id === targetId)) return '入れ替えるベンチポケモンを選んでください';
         if (this.energyUnits(active).length < this.retreatCost(active)) return 'にげるためのエネルギーが足りません';
@@ -552,7 +566,8 @@ export default class Game {
         const attack = active && this.topCard(active).attacks[index];
         if (!attack) return 'ワザを選んでください';
         if (this.turn === 1 && !attack.firstTurnOk) return '先攻の最初の番はワザを使えません';
-        if (active.rotation === 'asleep' || active.rotation === 'paralyzed') return `${CONDITION_NAMES[active.rotation]}のポケモンはワザを使えません`;
+        const stopped = ['asleep', 'paralyzed'].find(condition => this.hasCondition(active, condition));
+        if (stopped) return `${CONDITION_NAMES[stopped]}のポケモンはワザを使えません`;
         if (active.effects.some(effect => effect.kind === 'cannotAttack' && effect.untilTurn >= this.turn)) return 'このポケモンはこの番ワザを使えません';
         if (active.effects.some(effect => effect.kind === 'cannotUseAttack' && effect.attack === attack.name && effect.untilTurn >= this.turn)) return `この番は「${attack.name}」を使えません`;
         const blocked = this.hookAny('blockAttack', player, active, attack);
@@ -645,8 +660,11 @@ export default class Game {
                 this.turnState.supporterNames.push(card.name);
                 break;
         }
-        // グッズとサポートは、効果を終えてからトラッシュする
-        this.runNext(() => card.play(this, player), () => player.discard.push(inst));
+        // グッズとサポートは、効果を終えてからトラッシュする（afterPlay があれば、使ったカードの行き先はそれが決める）
+        this.runNext(() => card.play(this, player, inst), () => {
+            if (card.afterPlay) card.afterPlay(this, player, inst);
+            else player.discard.push(inst);
+        });
     }
 
     useAbility(player, targetId) {
@@ -710,7 +728,7 @@ export default class Game {
         this.log(`${this.topCard(attacker).name}の「${attack.name}」`);
         this.effectQueue.push(
             () => {
-                if (attacker.rotation === 'confused' && !this.flipCoin()) {
+                if (this.hasCondition(attacker, 'confused') && !this.flipCoin()) {
                     ctx.failed = true;
                     attacker.damage += CONFUSION_DAMAGE;
                     this.log(`こんらんでワザが失敗し、${this.topCard(attacker).name}に${CONFUSION_DAMAGE}ダメージ`);
@@ -790,6 +808,8 @@ export default class Game {
         target.damage += damage;
         this.log(`${card.name}に${damage}ダメージ`);
         if (target === ctx.defender) ctx.dealt = (ctx.dealt ?? 0) + damage;
+        // ダメージの計算が終わった後（0でも呼ぶ。きのみのように、働いた後にトラッシュするカードのため）
+        if (opposing) this.hookAll('afterAttackDamage', ctx, target, damage);
         // ダメージを受けたら、ワザを使ったポケモンにダメカンをのせる効果
         if (damage > 0 && opposing && ctx.attacker && this.ownerOf(ctx.attacker)) {
             this.effectsOf(target, 'counterOnDamaged').forEach(effect => this.putDamage(ctx.attacker, effect.amount));
@@ -813,7 +833,9 @@ export default class Game {
     }
 
     heal(pokemon, amount) {
-        const healed = Math.min(amount, pokemon.damage);
+        // スタジアムなどで、回復するHPが2倍になることがある（フック doubleHeal）
+        const total = this.hookAny('doubleHeal', pokemon) ? amount * 2 : amount;
+        const healed = Math.min(total, pokemon.damage);
         pokemon.damage -= healed;
         if (healed > 0) pokemon.healedTurn = this.turn;
         this.log(`${this.topCard(pokemon).name}のHPを${healed}回復した`);
@@ -839,13 +861,19 @@ export default class Game {
         pokemon.effects = [];
     }
 
+    // 特殊状態にならない効果（フック conditionImmune）がかかっているか
+    conditionBlocked(pokemon, condition) {
+        return Boolean(this.hookAny('conditionImmune', pokemon, condition));
+    }
+
+    // 特殊状態を受けているか（特殊状態にならない効果がかかっていれば、受けていないものとして扱う）
     hasCondition(pokemon, condition) {
-        if (condition === 'poisoned' || condition === 'burned') return Boolean(pokemon[condition]);
-        return pokemon.rotation === condition;
+        const has = condition === 'poisoned' || condition === 'burned' ? Boolean(pokemon[condition]) : pokemon.rotation === condition;
+        return has && !this.conditionBlocked(pokemon, condition);
     }
 
     hasAnyCondition(pokemon) {
-        return Boolean(pokemon.rotation || pokemon.poisoned || pokemon.burned);
+        return ['asleep', 'paralyzed', 'confused', 'poisoned', 'burned'].some(condition => this.hasCondition(pokemon, condition));
     }
 
     // ワザの効果を残す（untilTurn のターンの終わりまで）。extra には、どのワザか・いくつかなどを入れる
@@ -862,9 +890,9 @@ export default class Game {
         return this.effectsOf(pokemon, kind).length > 0;
     }
 
-    // プレイヤーにかかる効果（次の相手の番、グッズを使えない、など）
-    addPlayerEffect(player, kind, untilTurn) {
-        player.effects.push({ kind, untilTurn });
+    // プレイヤーにかかる効果（次の相手の番、グッズを使えない、など）。extra.hooks があれば、効果の間フックとして働く
+    addPlayerEffect(player, kind, untilTurn, extra = {}) {
+        player.effects.push({ kind, untilTurn, ...extra });
         if (kind === 'itemLock') this.log(`次の番、${player.name}はグッズを使えない`);
         if (kind === 'supporterLock') this.log(`次の番、${player.name}はサポートを使えない`);
     }
@@ -1165,6 +1193,10 @@ export default class Game {
             const card = this.cardOf(this.stadium.inst);
             if (card.hooks) sources.push({ kind: 'stadium', hooks: card.hooks, player: this.players[this.stadium.owner], pokemon: null, card, inst: this.stadium.inst });
         }
+        // プレイヤーにかかる効果（サポートの「この番」「次の相手の番」など）にも、フックを持たせられる
+        this.players.forEach(player => player.effects.forEach(effect => {
+            if (effect.hooks && effect.untilTurn >= this.turn) sources.push({ kind: 'effect', hooks: effect.hooks, player, pokemon: null, card: null, inst: null, effect });
+        }));
         return sources;
     }
 
@@ -1291,8 +1323,11 @@ export default class Game {
     // エネルギーが足りるか。タイプの指定から先に割り当て（同じタイプ → どのタイプにもなるもの）、残りで無色をまかなう
     canPayCost(pokemon, cost) {
         const pool = this.energyUnits(pokemon);
+        // 'psychic|darkness' のように、どれか1つのタイプになるエネルギーもある
+        const fits = (unit, type) => unit.includes('|') && unit.split('|').includes(type);
         for (const type of cost.filter(type => type !== 'colorless')) {
             let index = pool.indexOf(type);
+            if (index === -1) index = pool.findIndex(unit => fits(unit, type));
             if (index === -1) index = pool.indexOf('any');
             if (index === -1) return false;
             pool.splice(index, 1);
@@ -1400,7 +1435,8 @@ export default class Game {
             const card = this.cardOf(inst);
             let list = null;
             if (card.kind === 'energy') {
-                if (!this.checkAttachEnergy(player, inst.uid, targets[0])) list = targets;
+                list = targets.filter(target => !this.checkAttachEnergy(player, inst.uid, target));
+                if (list.length === 0) list = null;
             } else if (card.kind === 'pokemon' && card.stage === 0) {
                 if (!this.checkPlayBasic(player, inst.uid)) list = [];
             } else if (card.kind === 'pokemon') {

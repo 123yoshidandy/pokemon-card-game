@@ -28,10 +28,11 @@ import { TRAINER_EFFECTS as SUPPORTERS } from './cards/trainers/supporters.js';
 import { TRAINER_EFFECTS as ITEMS } from './cards/trainers/items.js';
 import { TRAINER_EFFECTS as TOOLS } from './cards/trainers/tools.js';
 import { TRAINER_EFFECTS as STADIUMS } from './cards/trainers/stadiums.js';
+import { TRAINER_EFFECTS as EXTRAS } from './cards/trainers/extras.js';
 import { ENERGY_EFFECTS } from './cards/energy-effects.js';
 
 // 効果は、種類ごとのファイルに分けて書く（同じ名前があれば、後のファイルのものを使う）
-const TRAINER_EFFECTS = { ...TRAINERS_BASE, ...SUPPORTERS, ...ITEMS, ...TOOLS, ...STADIUMS };
+const TRAINER_EFFECTS = { ...TRAINERS_BASE, ...SUPPORTERS, ...ITEMS, ...TOOLS, ...STADIUMS, ...EXTRAS };
 // 特性は「カード名/特性名」か「特性名」で引く（同じ名前・同じ文の特性を持つカードは、特性名だけで書ける）
 const ABILITY_EFFECTS = { ...ABILITIES_BASE, ...ABILITIES_A, ...ABILITIES_B, ...ABILITIES_C };
 

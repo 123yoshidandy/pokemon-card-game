@@ -84,6 +84,19 @@ export const ENERGY_EFFECTS = {
                 if (ctx.attacker && game.ownerOf(ctx.attacker)) game.putDamage(ctx.attacker, 20);
             }
         }
+    },
+    'バブル水エネルギー': {
+        provides: () => ['water'],
+        hooks: {
+            // つけている [W] ポケモンは、特殊状態にならず、受けている特殊状態は回復する
+            conditionImmune: (game, source, pokemon) => pokemon === source.pokemon && holderIs(game, source, 'water')
+        }
+    },
+    'ロケット団エネルギー': {
+        // 「ロケット団のポケモン」にしかつけられない。[P][D] のどちらかのタイプのエネルギー2個ぶん
+        // （手札からつけるときだけ確かめる。ほかの効果でロケット団のポケモン以外につけたときのトラッシュは、まだない）
+        canAttachTo: (game, pokemon) => game.topCard(pokemon).name.startsWith('ロケット団の'),
+        provides: () => ['psychic|darkness', 'psychic|darkness']
     }
 };
 

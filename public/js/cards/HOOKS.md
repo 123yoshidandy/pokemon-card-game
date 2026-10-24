@@ -22,7 +22,8 @@
     canUse: (game, player) => true,         // スタジアムの「自分の番に1回使える」効果
     use: (game, player) => { ... },
     cpuWants: (game, player) => true,       // CPU が今使いたいか。書かなければ CPU は使わない
-    cpuWantsUse: (game, player) => true     // スタジアムの canUse / use を、CPU が今使いたいか。書かなければ CPU は使わない
+    cpuWantsUse: (game, player) => true,    // スタジアムの canUse / use を、CPU が今使いたいか。書かなければ CPU は使わない
+    afterPlay: (game, player, inst) => { player.hand.push(inst); }  // 使ったグッズ・サポートの行き先（書かなければトラッシュ）
 }
 ```
 
@@ -72,7 +73,8 @@ CPU がつけ先を選ぶときの目安は `cpuTarget: (game, player, pokemon) 
 | damageTaken | ctx, target | 足す数（減らすならマイナス） | ワザのダメージ。受ける側（弱点・抵抗力の後）。target を確かめる |
 | preventDamage | ctx, target | true | 相手のワザのダメージを受けない |
 | preventEffects | ctx, target | true | 相手のワザの効果（特殊状態・エネルギーのトラッシュなど）を受けない |
-| onDamaged | ctx, target, damage | なし | 相手のワザのダメージを受けた後 |
+| onDamaged | ctx, target, damage | なし | 相手のワザのダメージを受けた後（ダメージが1以上のとき） |
+| afterAttackDamage | ctx, target, damage | なし | 相手のワザのダメージの計算が終わった後（0でも呼ぶ。状態を変えてよい。きのみのトラッシュなど） |
 | conditionImmune | pokemon, condition | true | 特殊状態にならない（condition：'poisoned' 'burned' 'asleep' 'paralyzed' 'confused'） |
 | preventKnockout | pokemon, player, { byAttack } | true（pokemon.damage を直してから） | きぜつせずに残る |
 | prizeModifier | pokemon, player, { byAttack } | 足す数 | きぜつしたとき、相手がとるサイドの枚数 |
@@ -87,7 +89,10 @@ CPU がつけ先を選ぶときの目安は `cpuTarget: (game, player, pokemon) 
 | onAttachEnergy | player, pokemon, inst | なし | 手札からエネルギーをつけた後 |
 | onTurnEnd | player（番を終える人） | なし | 番の終わり（ポケモンチェックの前） |
 
-フックの中で選択（prompt）を出してよいのは onDamaged・onKnockout・onAttachEnergy・onTurnEnd だけ。
+**プレイヤーにかかる効果にもフックを持たせられる**（サポートの「この番、自分のポケモンが使うワザのダメージは+30」「次の相手の番、自分のポケモン全員が受けるダメージは-30」など）：
+`game.addPlayerEffect(player, 'kind', untilTurn, { hooks: { damageDealt: ... } })`。効果の間（untilTurn の番の終わりまで）、source.kind が 'effect'・source.player がその人として呼ばれる。
+
+フックの中で選択（prompt）を出してよいのは onDamaged・afterAttackDamage・onKnockout・onAttachEnergy・onTurnEnd だけ。
 そのほかは何度も呼ばれる（画面の更新のたびにも呼ばれる）ので、状態を変えないこと。
 
 ## ゲームの道具（game のメソッド）
@@ -106,7 +111,9 @@ CPU がつけ先を選ぶときの目安は `cpuTarget: (game, player, pokemon) 
 - 選択：`promptCards({ player, cards, min, max, title, purpose, callback(insts), cpuAnswer })` `promptPokemon({ ..., pokemon, callback(pokemons) })` `promptChoose({ player, options, min, max, title, purpose, callback(indices) })` `promptConfirm({ player, title, purpose, callback(yes) })`
   - 選択の後に続きがあるときは、callback の中に書く（選択を待つ間、手順は止まる）
   - cpuAnswer：`(game, prompt) => 答え`（cards・pokemon・choose はインデックスの配列、confirm は真偽値）。書かなければ、CPU は最小の答えを返す
-- 番の情報：`game.turn` `game.current` `game.turnState`（supporterPlayed・energyAttached・retreated・abilityNamesUsed など） `player.turnsTaken` `player.knockedOutByAttackTurn`
+- きぜつ：ダメカンをのせたり、ポケモンを場から動かしたりした後に、きぜつとバトル場の補充を確かめるなら `game.runNext(() => game.checkKnockouts())`（ワザの後と番の終わりには、本体が確かめる）
+- 番の情報：`game.turn` `game.current` `game.turnState`（supporterPlayed・supporterNames・energyAttached・retreated・abilityNamesUsed など） `player.turnsTaken`
+  - `player.knockedOutTurn` / `knockedOutNames`：理由を問わず、自分のポケモンがきぜつした番と名前。`knockedOutByAttackTurn` / `knockedOutByAttackNames` はワザのダメージによるものだけ
 
 カードの判定：`card.kind`（'pokemon' 'trainer' 'energy'）・`card.stage`（0=たね）・`card.rule`（'ex' 'mega' か null）・`card.type`・`card.trainerType`・`card.basic`（基本エネルギー）・`card.energyType`・`card.aceSpec`
 

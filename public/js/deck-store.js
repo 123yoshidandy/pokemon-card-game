@@ -4,7 +4,7 @@
  */
 
 import { DECKS } from './decks.js';
-import { CARDS } from './card-data.js';
+import { CARDS, resolveCardId } from './card-data.js';
 
 const STORAGE_KEY = 'pokemon-card-game:decks';
 export const MAX_NAME_LENGTH = 16;
@@ -74,10 +74,14 @@ function isDeckLike(deck) {
     return deck && typeof deck.id === 'string' && typeof deck.name === 'string' && deck.cards && typeof deck.cards === 'object';
 }
 
-// 知らないカード（カードを外したときなど）や、おかしな枚数は捨てる
+// 前の版のカードIDは今のIDに読み替える。知らないカード（カードを外したときなど）や、おかしな枚数は捨てる
 function clean(deck) {
-    const cards = Object.fromEntries(Object.entries(deck.cards)
-        .filter(([id, count]) => Object.hasOwn(CARDS, id) && Number.isInteger(count) && count > 0));
+    const cards = {};
+    Object.entries(deck.cards).forEach(([savedId, count]) => {
+        const id = resolveCardId(savedId);
+        if (!Object.hasOwn(CARDS, id) || !Number.isInteger(count) || count <= 0) return;
+        cards[id] = (cards[id] ?? 0) + count;
+    });
     const name = String(deck.name).trim().slice(0, MAX_NAME_LENGTH) || 'デッキ';
     return { id: deck.id, name, cards };
 }

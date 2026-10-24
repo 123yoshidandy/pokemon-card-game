@@ -3,6 +3,7 @@
  */
 
 import { DECKS, expandDeck } from './decks.js';
+import { resolveCardId } from './card-data.js';
 import { createDeckStore } from './deck-store.js';
 import { deckProblem, mainEnergyType } from './deck-builder.js';
 import LocalGameController from './game-controller.js';
@@ -127,7 +128,7 @@ function showTitle() {
     screen.stop();
     renderDeckSelect();
     $('title-art').innerHTML = ['mega-charizard-y-ex', 'guy', 'miraidon-ex']
-        .map((id, index) => `<div class="fan fan-${index}">${cardFace(id)}</div>`).join('');
+        .map((id, index) => `<div class="fan fan-${index}">${cardFace(resolveCardId(id))}</div>`).join('');
     setScene('title');
 }
 

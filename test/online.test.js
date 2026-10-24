@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { createTestServer } from '../server/netplay/testing.js';
 import game from '../server/src/game-definition.js';
 import { DECKS, expandDeck } from '../public/js/decks.js';
+import { C } from './helpers.js';
 
 const DECK_A = expandDeck(DECKS[0]);
 const DECK_B = expandDeck(DECKS[1]);
@@ -56,7 +57,7 @@ describe('オンライン対戦', () => {
         const { a } = await startRoom();
         await command(a, { type: 'deck', cards: DECK_A.slice(1) });
         expect(a.last('error').message).toContain('60枚');
-        const tooMany = [...DECK_A.slice(0, 55), ...Array(5).fill('potion')];
+        const tooMany = [...DECK_A.slice(0, 55), ...Array(5).fill(C.potion)];
         await command(a, { type: 'deck', cards: tooMany });
         expect(a.last('error').message).toContain('4枚まで');
         expect(viewOf(a).decksSubmitted).toEqual([false, false]);

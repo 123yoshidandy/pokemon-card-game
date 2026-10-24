@@ -8,13 +8,25 @@ import { DECK_SIZE, MAX_COPIES, validateDeck } from './deck-rules.js';
 import { expandDeck } from './decks.js';
 import { isStandardLegal } from './regulation.js';
 
-// デッキ構築で使えるカード（スタンダードで使えるものだけ。定義の順に、ポケモン → トレーナーズ → エネルギー）
+// デッキ構築で使えるカード（スタンダードで使えて、効果が動くものだけ）
+// ポケモン（タイプ → 進化の段階 → 名前）→ トレーナーズ（種類 → 名前）→ エネルギー の順
 const KIND_ORDER = { pokemon: 0, trainer: 1, energy: 2 };
+const TYPE_ORDER = ['grass', 'fire', 'water', 'lightning', 'psychic', 'fighting', 'darkness', 'metal', 'dragon', 'colorless'];
+const TRAINER_ORDER = ['supporter', 'item', 'tool', 'stadium'];
+const orderKey = card => {
+    if (card.kind === 'pokemon') return [TYPE_ORDER.indexOf(card.type), card.stage];
+    if (card.kind === 'trainer') return [TRAINER_ORDER.indexOf(card.trainerType), 0];
+    return [card.basic ? TYPE_ORDER.indexOf(card.energyType) : 99, 0];
+};
 export const CARD_POOL = Object.values(CARDS)
-    .filter(isStandardLegal)
-    .map((card, index) => ({ card, index }))
-    .sort((a, b) => KIND_ORDER[a.card.kind] - KIND_ORDER[b.card.kind] || a.index - b.index)
-    .map(({ card }) => card.id);
+    .filter(card => isStandardLegal(card) && card.supported)
+    .sort((a, b) => {
+        const [a1, a2] = orderKey(a);
+        const [b1, b2] = orderKey(b);
+        return KIND_ORDER[a.kind] - KIND_ORDER[b.kind] || a1 - b1 || a2 - b2 || a.name.localeCompare(b.name, 'ja') || a.id.localeCompare(b.id);
+    })
+    .map(card => card.id);
+const POOL_INDEX = new Map(CARD_POOL.map((id, index) => [id, index]));
 
 export const totalCount = deck => Object.values(deck.cards).reduce((sum, count) => sum + count, 0);
 
@@ -68,5 +80,5 @@ export function mainEnergyType(deck) {
 export function sortedEntries(deck) {
     return Object.entries(deck.cards)
         .filter(([id]) => CARDS[id])
-        .sort((a, b) => CARD_POOL.indexOf(a[0]) - CARD_POOL.indexOf(b[0]));
+        .sort((a, b) => (POOL_INDEX.get(a[0]) ?? Infinity) - (POOL_INDEX.get(b[0]) ?? Infinity));
 }

@@ -2,6 +2,9 @@ import Game from '../public/js/game.js';
 import { runCpuStep } from '../public/js/cpu-player.js';
 import { DECKS, expandDeck } from '../public/js/decks.js';
 
+// テストでは、前の版のカードID（'charmander' など）で書けるように、今のIDへの表を使う（C.charmander → 'MC-083'）
+export { LEGACY_IDS as C } from '../public/js/cards/catalog.js';
+
 export const PLAYERS = [{ name: 'A' }, { name: 'B' }];
 
 export function deckOptions(seed = 1, deckIds = ['charizard', 'miraidon']) {

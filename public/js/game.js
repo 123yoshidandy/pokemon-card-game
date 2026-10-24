@@ -9,7 +9,7 @@
  */
 
 import { createRandom, shuffle } from './random.js';
-import { getCard, isBasicEnergy, isBasicPokemon, TYPE_NAMES } from './card-data.js';
+import { getCard, isBasicEnergy, isBasicPokemon, isPokemonEx, baseOfStage1, TYPE_NAMES } from './card-data.js';
 import { validateDeck } from './deck-rules.js';
 
 export const PRIZE_COUNT = 6;
@@ -65,7 +65,10 @@ export default class Game {
             active: null,
             bench: [],
             turnsTaken: 0,
-            mulligans: 0
+            mulligans: 0,
+            effects: [], // プレイヤーにかかる効果（グッズが使えない、など）{ kind, untilTurn }
+            knockedOutByAttackTurn: -1, // ワザのダメージで自分のポケモンがきぜつした番と、その名前
+            knockedOutByAttackNames: []
         }));
         this.phase = 'setup'; // deck（デッキを決める）→ setup → main → end
         this.turn = 0;
@@ -244,8 +247,9 @@ export default class Game {
             if (!pokemon) return;
             const name = this.topCard(pokemon).name;
             if (pokemon.poisoned) {
-                pokemon.damage += POISON_DAMAGE;
-                this.log(`${name}はどくで${POISON_DAMAGE}ダメージ`);
+                const poison = pokemon.poisonDamage ?? POISON_DAMAGE;
+                pokemon.damage += poison;
+                this.log(`${name}はどくで${poison}ダメージ`);
             }
             if (pokemon.burned) {
                 pokemon.damage += BURN_DAMAGE;
@@ -264,9 +268,12 @@ export default class Game {
                 this.log(`${name}のマヒが治った`);
             }
         });
-        this.players.forEach(player => this.inPlay(player).forEach(pokemon => {
-            pokemon.effects = pokemon.effects.filter(effect => effect.untilTurn > this.turn);
-        }));
+        this.players.forEach(player => {
+            player.effects = player.effects.filter(effect => effect.untilTurn > this.turn);
+            this.inPlay(player).forEach(pokemon => {
+                pokemon.effects = pokemon.effects.filter(effect => effect.untilTurn > this.turn);
+            });
+        });
     }
 
     // HP がなくなったポケモンをきぜつさせ、サイドを取り、勝敗とバトル場の補充を確かめる
@@ -276,11 +283,14 @@ export default class Game {
         this.players.forEach(player => this.inPlay(player).forEach(pokemon => {
             if (pokemon.damage >= this.maxHp(pokemon)) knocked.push({ player, pokemon });
         }));
-        if (knocked.length === 0) return;
-
         knocked.forEach(({ player, pokemon }) => {
             const card = this.topCard(pokemon);
             this.log(`${player.name}の${card.name}はきぜつした`);
+            if (this.resolvingAttack) {
+                if (player.knockedOutByAttackTurn !== this.turn) player.knockedOutByAttackNames = [];
+                player.knockedOutByAttackTurn = this.turn;
+                player.knockedOutByAttackNames.push(card.name);
+            }
             this.removeFromPlay(player, pokemon);
             const taker = this.opponentOf(player);
             const count = Math.min(this.prizeValue(card), taker.prizes.length);
@@ -290,6 +300,7 @@ export default class Game {
             this.log(`サイドから${taken.map(inst => this.cardName(inst)).join('と')}を手札に加えた`, { to: taker.id });
         });
 
+        // きぜつがなくても、効果でポケモンが場からいなくなることがある（手札にもどす、など）
         if (this.checkWinner()) return;
 
         // バトル場が空いたら、ベンチから出す（手番でないプレイヤーから）
@@ -330,6 +341,7 @@ export default class Game {
             callback: ([pokemon]) => {
                 this.removeCard(player.bench, pokemon);
                 player.active = pokemon;
+                pokemon.movedToActiveTurn = this.turn;
                 this.log(`${player.name}は${this.topCard(pokemon).name}をバトル場に出した`);
             }
         });
@@ -445,7 +457,7 @@ export default class Game {
         if (!card || card.kind !== 'pokemon' || card.stage === 0) return '進化ポケモンを選んでください';
         const target = this.ownPokemon(player, targetId);
         if (!target) return '進化させるポケモンを選んでください';
-        if (this.topCard(target).id !== card.evolvesFrom) return `${card.name}は${this.topCard(target).name}から進化しません`;
+        if (this.topCard(target).name !== card.evolvesFrom) return `${card.name}は${this.topCard(target).name}から進化しません`;
         return this.checkCanEvolveNow(player, target);
     }
 
@@ -460,7 +472,9 @@ export default class Game {
         const inst = this.findInHand(player, uid);
         if (!inst || this.cardOf(inst).kind !== 'energy') return 'エネルギーを選んでください';
         if (this.turnState.energyAttached) return 'エネルギーはこの番にもうつけました';
-        if (!this.ownPokemon(player, targetId)) return 'つけるポケモンを選んでください';
+        const target = this.ownPokemon(player, targetId);
+        if (!target) return 'つけるポケモンを選んでください';
+        if (this.hasEffect(target, 'cannotAttachFromHand')) return 'そのポケモンには手札からエネルギーをつけられません';
         return null;
     }
 
@@ -468,6 +482,8 @@ export default class Game {
         const inst = this.findInHand(player, uid);
         const card = inst && this.cardOf(inst);
         if (!card || card.kind !== 'trainer') return 'トレーナーズを選んでください';
+        if (card.trainerType === 'item' && this.hasPlayerEffect(player, 'itemLock')) return 'この番はグッズを使えません';
+        if (card.trainerType === 'supporter' && this.hasPlayerEffect(player, 'supporterLock')) return 'この番はサポートを使えません';
         if (card.trainerType === 'supporter') {
             if (this.turnState.supporterPlayed) return 'サポートはこの番にもう使いました';
             if (this.turn === 1 && !card.firstTurnOk) return '先攻の最初の番はサポートを使えません';
@@ -507,16 +523,17 @@ export default class Game {
         if (!active) return 'バトルポケモンがいません';
         if (this.turnState.retreated) return 'にげるはこの番にもう使いました';
         if (active.rotation === 'asleep' || active.rotation === 'paralyzed') return `${CONDITION_NAMES[active.rotation]}のポケモンはにげられません`;
+        if (this.hasEffect(active, 'cannotRetreat')) return 'このポケモンはにげられません';
         if (!player.bench.some(pokemon => pokemon.id === targetId)) return '入れ替えるベンチポケモンを選んでください';
         if (active.energies.length < this.retreatCost(active)) return 'にげるためのエネルギーが足りません';
         return null;
     }
 
     checkAttack(player, index) {
-        if (this.turn === 1) return '先攻の最初の番はワザを使えません';
         const active = player.active;
         const attack = active && this.topCard(active).attacks[index];
         if (!attack) return 'ワザを選んでください';
+        if (this.turn === 1 && !attack.firstTurnOk) return '先攻の最初の番はワザを使えません';
         if (active.rotation === 'asleep' || active.rotation === 'paralyzed') return `${CONDITION_NAMES[active.rotation]}のポケモンはワザを使えません`;
         if (active.effects.some(effect => effect.kind === 'cannotAttack' && effect.untilTurn >= this.turn)) return 'このポケモンはこの番ワザを使えません';
         if (active.effects.some(effect => effect.kind === 'cannotUseAttack' && effect.attack === attack.name && effect.untilTurn >= this.turn)) return `この番は「${attack.name}」を使えません`;
@@ -560,7 +577,7 @@ export default class Game {
         this.removeCard(player.hand, inst);
         pokemon.cards.push(inst);
         pokemon.enteredTurn = this.turn;
-        pokemon.evolvedFrom = { id: beforeCard.id, turn: this.turn };
+        pokemon.evolvedFrom = { name: beforeCard.name, turn: this.turn };
         this.clearConditions(pokemon);
         const card = this.cardOf(inst);
         this.log(`${player.name}は${before}を${card.name}に進化させた`);
@@ -662,20 +679,31 @@ export default class Game {
         const opponent = this.opponentOf(player);
         const attacker = player.active;
         const attack = this.topCard(attacker).attacks[index];
-        const ctx = { game: this, player, opponent, attacker, defender: opponent.active, attack, damage: attack.damage, failed: false };
+        const ctx = { game: this, player, opponent, attacker, defender: opponent.active, attack, damage: attack.damage, failed: false, dealt: 0 };
         this.turnState.attacked = true;
         this.log(`${this.topCard(attacker).name}の「${attack.name}」`);
         this.effectQueue.push(
             () => {
-                if (attacker.rotation !== 'confused' || this.flipCoin()) return;
-                ctx.failed = true;
-                attacker.damage += CONFUSION_DAMAGE;
-                this.log(`こんらんでワザが失敗し、${this.topCard(attacker).name}に${CONFUSION_DAMAGE}ダメージ`);
+                if (attacker.rotation === 'confused' && !this.flipCoin()) {
+                    ctx.failed = true;
+                    attacker.damage += CONFUSION_DAMAGE;
+                    this.log(`こんらんでワザが失敗し、${this.topCard(attacker).name}に${CONFUSION_DAMAGE}ダメージ`);
+                    return;
+                }
+                // 前の相手の番のワザの効果で、コインのウラならワザが失敗する
+                if (this.hasEffect(attacker, 'attackCoinFlip') && !this.flipCoin()) {
+                    ctx.failed = true;
+                    this.log('ワザは失敗した');
+                }
             },
             () => { if (!ctx.failed) attack.before?.(ctx); },
             () => { if (!ctx.failed && ctx.damage > 0 && ctx.defender) this.dealAttackDamage(ctx, ctx.defender, ctx.damage); },
             () => { if (!ctx.failed) attack.after?.(ctx); },
-            () => this.checkKnockouts()
+            () => {
+                this.resolvingAttack = true;
+                this.checkKnockouts();
+                this.resolvingAttack = false;
+            }
         );
         this.queueEndOfTurn();
     }
@@ -687,25 +715,58 @@ export default class Game {
 
     // ===== 効果の道具（カードの効果から使う） =====
 
-    // ワザのダメージ。バトルポケモンには弱点・抵抗力を計算する。テラスタルのポケモンはベンチでダメージを受けない
+    // ワザのダメージ。与えたダメージを返す
+    //   ワザを使うポケモンの側（どうぐ・効果）→ 弱点・抵抗力 → 受けるポケモンにかかっている効果、の順に計算する
+    //   弱点・抵抗力はバトルポケモンにだけ計算する。テラスタルのポケモンはベンチでダメージを受けない
+    //   ctx.ignoreWeakness・ignoreResistance・ignoreEffects で、それぞれ計算しない
     dealAttackDamage(ctx, target, amount) {
         const card = this.topCard(target);
         const owner = this.ownerOf(target);
+        if (!owner) return 0;
         const isActive = owner.active === target;
+        const attackerCard = this.topCard(ctx.attacker);
+        const opposing = owner !== ctx.player;
         if (!isActive && card.tera) {
             this.log(`${card.name}はテラスタルのため、ダメージを受けない`);
-            return;
+            return 0;
         }
-        // ワザを使うポケモンのどうぐ（ブレイブバングルなど）は、弱点・抵抗力より先に足す
+        const guarded = kind => opposing && !ctx.ignoreEffects && this.hasEffect(target, kind);
+        if (guarded('preventAll') || guarded('preventDamage')
+            || (guarded('preventDamageFromBasic') && attackerCard.stage === 0)
+            || (guarded('preventDamageFromEx') && isPokemonEx(attackerCard))) {
+            this.log(`${card.name}はワザのダメージを受けない`);
+            return 0;
+        }
+        // ワザを使うポケモンのどうぐ（ブレイブバングルなど）と効果は、弱点・抵抗力より先に足す
         let damage = amount + (ctx.attacker?.tool ? (this.cardOf(ctx.attacker.tool).damageBonus?.({ game: this, attacker: ctx.attacker, target }) ?? 0) : 0);
+        if (isActive && opposing) {
+            damage += this.effectsOf(ctx.attacker, 'attackDamageModifier')
+                .filter(effect => !effect.attack || effect.attack === ctx.attack?.name)
+                .reduce((sum, effect) => sum + effect.amount, 0);
+        }
         if (isActive) {
-            const attackerType = this.topCard(ctx.attacker).type;
-            if (card.weakness === attackerType) damage *= WEAKNESS_MULTIPLIER;
-            if (card.resistance === attackerType) damage -= RESISTANCE_REDUCTION;
+            if (card.weakness === attackerCard.type && !ctx.ignoreWeakness) damage *= WEAKNESS_MULTIPLIER;
+            if (card.resistance === attackerCard.type && !ctx.ignoreResistance) damage -= RESISTANCE_REDUCTION;
+        }
+        if (isActive && opposing && !ctx.ignoreEffects) {
+            damage -= this.effectsOf(target, 'damageReduction').reduce((sum, effect) => sum + effect.amount, 0);
+            damage += this.effectsOf(target, 'damageIncrease').reduce((sum, effect) => sum + effect.amount, 0);
         }
         damage = Math.max(0, damage);
         target.damage += damage;
         this.log(`${card.name}に${damage}ダメージ`);
+        if (target === ctx.defender) ctx.dealt = (ctx.dealt ?? 0) + damage;
+        // ダメージを受けたら、ワザを使ったポケモンにダメカンをのせる効果
+        if (damage > 0 && opposing && ctx.attacker && this.ownerOf(ctx.attacker)) {
+            this.effectsOf(target, 'counterOnDamaged').forEach(effect => this.putDamage(ctx.attacker, effect.amount));
+        }
+        return damage;
+    }
+
+    // ワザの効果を与えられるか（相手のポケモンに「ワザの効果を受けない」がかかっていないか）
+    canAffectByAttack(ctx, pokemon) {
+        if (this.ownerOf(pokemon) === ctx.player || ctx.ignoreEffects) return true;
+        return !this.hasEffect(pokemon, 'preventAll');
     }
 
     // 弱点・抵抗力を計算しないダメージ（自分へのダメージなど）
@@ -717,6 +778,7 @@ export default class Game {
     heal(pokemon, amount) {
         const healed = Math.min(amount, pokemon.damage);
         pokemon.damage -= healed;
+        if (healed > 0) pokemon.healedTurn = this.turn;
         this.log(`${this.topCard(pokemon).name}のHPを${healed}回復した`);
     }
 
@@ -731,18 +793,48 @@ export default class Game {
     clearConditions(pokemon) {
         pokemon.rotation = null;
         pokemon.poisoned = false;
+        pokemon.poisonDamage = null;
         pokemon.burned = false;
         pokemon.effects = [];
     }
 
-    // ワザの効果を残す（untilTurn のターンの終わりまで）。extra には、どのワザかなどを入れる
+    hasCondition(pokemon, condition) {
+        if (condition === 'poisoned' || condition === 'burned') return Boolean(pokemon[condition]);
+        return pokemon.rotation === condition;
+    }
+
+    hasAnyCondition(pokemon) {
+        return Boolean(pokemon.rotation || pokemon.poisoned || pokemon.burned);
+    }
+
+    // ワザの効果を残す（untilTurn のターンの終わりまで）。extra には、どのワザか・いくつかなどを入れる
     addEffect(pokemon, kind, untilTurn, extra = {}) {
+        if (!pokemon) return;
         pokemon.effects.push({ kind, untilTurn, ...extra });
     }
 
-    // この番に、指定したカードから進化したか
-    evolvedThisTurnFrom(pokemon, cardId) {
-        return pokemon.evolvedFrom?.turn === this.turn && pokemon.evolvedFrom.id === cardId;
+    effectsOf(pokemon, kind) {
+        return pokemon ? pokemon.effects.filter(effect => effect.kind === kind && effect.untilTurn >= this.turn) : [];
+    }
+
+    hasEffect(pokemon, kind) {
+        return this.effectsOf(pokemon, kind).length > 0;
+    }
+
+    // プレイヤーにかかる効果（次の相手の番、グッズを使えない、など）
+    addPlayerEffect(player, kind, untilTurn) {
+        player.effects.push({ kind, untilTurn });
+        if (kind === 'itemLock') this.log(`次の番、${player.name}はグッズを使えない`);
+        if (kind === 'supporterLock') this.log(`次の番、${player.name}はサポートを使えない`);
+    }
+
+    hasPlayerEffect(player, kind) {
+        return player.effects.some(effect => effect.kind === kind && effect.untilTurn >= this.turn);
+    }
+
+    // この番に、指定した名前のポケモンから進化したか
+    evolvedThisTurnFrom(pokemon, name) {
+        return pokemon.evolvedFrom?.turn === this.turn && pokemon.evolvedFrom.name === name;
     }
 
     // 基本エネルギーを1個つけ替える（タイプが混ざっていても、最初の1個）
@@ -783,20 +875,91 @@ export default class Game {
             player.bench.push(old);
         }
         player.active = benchPokemon;
+        benchPokemon.movedToActiveTurn = this.turn;
         this.log(`${player.name}のバトル場に${this.topCard(benchPokemon).name}が出た`);
     }
 
-    promptSwitchOwnActive(player, purpose) {
+    // optional なら、入れ替えなくてもよい（何も選ばなければ入れ替えない）
+    promptSwitchOwnActive(player, purpose, { optional = false } = {}) {
         if (player.bench.length === 0) return;
         this.promptPokemon({
             player,
             pokemon: player.bench,
-            min: 1,
+            min: optional ? 0 : 1,
             max: 1,
-            title: 'バトル場に出すベンチポケモンを選ぶ',
+            title: optional ? '入れ替えるベンチポケモンを選ぶ（入れ替えないなら選ばない）' : 'バトル場に出すベンチポケモンを選ぶ',
             purpose,
-            callback: ([target]) => this.switchActive(player, target)
+            callback: ([target]) => { if (target) this.switchActive(player, target); }
         });
+    }
+
+    // エネルギーを1個つけ替える
+    moveEnergy(source, target, inst) {
+        if (!inst || !source.energies.includes(inst)) return;
+        this.moveCard(source.energies, target.energies, inst);
+        this.log(`${this.cardName(inst)}を${this.topCard(source).name}から${this.topCard(target).name}につけ替えた`);
+    }
+
+    // 手札以外（山札・トラッシュ）からエネルギーをつける
+    attachFromOutside(pokemon, inst) {
+        pokemon.energies.push(inst);
+        this.log(`${this.topCard(pokemon).name}に${this.cardName(inst)}をつけた`);
+    }
+
+    // 手札以外（山札など）のカードで進化させる
+    evolveFromOutside(player, pokemon, inst) {
+        player.hand.push(inst);
+        this.evolveInto(player, pokemon, inst);
+    }
+
+    // ポケモンと、ついているすべてのカードを手札にもどす（バトル場が空いたら、きぜつの確認でベンチから出す）
+    returnToHand(player, pokemon) {
+        if (!this.inPlay(player).includes(pokemon)) return;
+        if (player.active === pokemon) player.active = null;
+        else this.removeCard(player.bench, pokemon);
+        player.hand.push(...pokemon.cards, ...pokemon.energies, ...(pokemon.tool ? [pokemon.tool] : []));
+        this.log(`${player.name}は${this.topCard(pokemon).name}と、ついているカードを手札にもどした`);
+    }
+
+    // 山札を上から count 枚トラッシュする
+    millDeck(player, count) {
+        const milled = player.deck.splice(0, count);
+        player.discard.push(...milled);
+        if (milled.length) this.log(`${player.name}は山札を上から${milled.length}枚トラッシュした（${milled.map(inst => this.cardName(inst)).join('・')}）`);
+    }
+
+    // 手札からオモテを見ないで選ぶ（乱数はシード付きなので、記録から再現できる）
+    discardRandomFromHand(player, count) {
+        const discarded = [];
+        for (let i = 0; i < count && player.hand.length > 0; i++) {
+            const inst = player.hand[Math.floor(this.random() * player.hand.length)];
+            this.moveCard(player.hand, player.discard, inst);
+            discarded.push(inst);
+        }
+        if (discarded.length) this.log(`${player.name}の手札の${discarded.map(inst => this.cardName(inst)).join('と')}がトラッシュされた`);
+    }
+
+    // 手札を相手に見せる（見せた相手にだけログを出す）
+    revealHand(owner, viewer) {
+        this.log(`${owner.name}の手札を見た`);
+        this.log(`${owner.name}の手札：${owner.hand.map(inst => this.cardName(inst)).join('・') || 'なし'}`, { to: viewer.id });
+    }
+
+    discardTool(pokemon) {
+        if (!pokemon.tool) return;
+        const owner = this.ownerOf(pokemon);
+        const name = this.cardName(pokemon.tool);
+        owner.discard.push(pokemon.tool);
+        pokemon.tool = null;
+        this.log(`${this.topCard(pokemon).name}の${name}をトラッシュした`);
+    }
+
+    discardStadium() {
+        if (!this.stadium) return;
+        const { inst, owner } = this.stadium;
+        this.players[owner].discard.push(inst);
+        this.stadium = null;
+        this.log(`${this.cardName(inst)}をトラッシュした`);
     }
 
     // 山札から条件に合うカードを max 枚まで選ぶ。選んだら onSelected（山札から取り除いた後）、最後に山札を切る
@@ -881,9 +1044,11 @@ export default class Game {
         player.hand.forEach(inst => {
             const card = this.cardOf(inst);
             if (card.kind !== 'pokemon' || card.stage !== 2) return;
-            const stage1 = getCard(card.evolvesFrom);
+            const base = baseOfStage1(card.evolvesFrom);
+            if (!base) return;
             this.inPlay(player).forEach(pokemon => {
-                if (this.topCard(pokemon).id !== stage1.evolvesFrom) return;
+                const top = this.topCard(pokemon);
+                if (top.stage !== 0 || top.name !== base) return;
                 if (this.checkCanEvolveNow(player, pokemon)) return;
                 pairs.push({ inst, pokemon });
             });
@@ -944,10 +1109,13 @@ export default class Game {
             damage: 0,
             rotation: null,
             poisoned: false,
+            poisonDamage: null, // どくで受けるダメージ（null なら10）
             burned: false,
             effects: [],
             enteredTurn: this.turn,
-            evolvedFrom: null, // { id, turn }：最後に進化したときの進化元と、その番
+            movedToActiveTurn: -1, // ベンチからバトル場に出た番
+            healedTurn: -1, // HP を回復した番
+            evolvedFrom: null, // { name, turn }：最後に進化したときの進化元の名前と、その番
             faceDown
         };
     }
@@ -1047,10 +1215,10 @@ export default class Game {
         this.setPrompt({ type: 'cards', player, cards: list, min, max, title, purpose, callback: indices => callback(indices.map(index => list[index])) });
     }
 
-    // 場のポケモンを選ばせる。callback には選んだポケモンの配列が渡る
-    promptPokemon({ player, pokemon, min, max, title, purpose, callback }) {
+    // 場のポケモンを選ばせる。callback には選んだポケモンの配列が渡る（amount など、ほかの値はそのまま選択に残す）
+    promptPokemon({ player, pokemon, min, max, title, purpose, callback, ...extra }) {
         const list = [...pokemon];
-        this.setPrompt({ type: 'pokemon', player, pokemon: list, min, max, title, purpose, callback: indices => callback(indices.map(index => list[index])) });
+        this.setPrompt({ ...extra, type: 'pokemon', player, pokemon: list, min, max, title, purpose, callback: indices => callback(indices.map(index => list[index])) });
     }
 
     // 文字の選択肢から選ばせる。callback には選んだインデックスの配列が渡る

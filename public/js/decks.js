@@ -1,9 +1,17 @@
 /**
  * 構築済みデッキ（60枚。スタンダードのカードだけ）
+ * 読みやすいように、カードは前の版の名前（'charmander' など）で書き、読み込むときに今のIDに読み替える
  */
 
+import { resolveCardId } from './card-data.js';
+
+const deck = data => ({
+    ...data,
+    cards: Object.fromEntries(Object.entries(data.cards).map(([id, count]) => [resolveCardId(id), count]))
+});
+
 export const DECKS = [
-    {
+    deck({
         id: 'charizard',
         name: 'メガリザードンYex',
         type: 'fire',
@@ -27,8 +35,8 @@ export const DECKS = [
             'float-stone': 2,
             'basic-fire-energy': 17
         }
-    },
-    {
+    }),
+    deck({
         id: 'miraidon',
         name: 'ミライドンex',
         type: 'lightning',
@@ -53,16 +61,16 @@ export const DECKS = [
             'brave-bangle': 2,
             'basic-lightning-energy': 15
         }
-    }
+    })
 ];
 
 export const DECK_SIZE = 60;
 
 export function getDeck(id) {
-    return DECKS.find(deck => deck.id === id) ?? null;
+    return DECKS.find(item => item.id === id) ?? null;
 }
 
 // デッキのカードIDの配列（{ id: 枚数 } を展開したもの）
-export function expandDeck(deck) {
-    return Object.entries(deck.cards).flatMap(([id, count]) => Array(count).fill(id));
+export function expandDeck(item) {
+    return Object.entries(item.cards).flatMap(([id, count]) => Array(count).fill(id));
 }

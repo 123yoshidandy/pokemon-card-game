@@ -3,7 +3,7 @@
  * 人間と同じ操作（command）を返すだけ。乱数は使わない（使うと記録から再現できなくなる）
  */
 
-import { isBasicEnergy, hasRule, isPokemonEx } from './card-data.js';
+import { isBasicEnergy, hasRule, isPokemonEx, baseOfStage1 } from './card-data.js';
 import { DECKS, expandDeck } from './decks.js';
 
 // 今、操作すべきプレイヤー（選択待ちならその人、なければ手番の人）
@@ -48,7 +48,7 @@ function chooseMainAction(game, player) {
     const instOf = uid => player.hand.find(inst => inst.uid === uid);
     const cardOf = uid => game.cardOf(instOf(uid));
     const playable = filter => Object.keys(legal.hand).filter(uid => filter(cardOf(uid), legal.hand[uid]));
-    const pick = id => playable(card => card.id === id)[0];
+    const pick = name => playable(card => card.name === name)[0];
     const opponent = game.opponentOf(player);
     const active = player.active;
 
@@ -70,21 +70,21 @@ function chooseMainAction(game, player) {
     }
 
     // ポケモンを出す・探す
-    const candy = pick('rare-candy');
+    const candy = pick('ふしぎなアメ');
     if (candy) return { type: 'playTrainer', uid: candy };
-    const poffin = pick('buddy-buddy-poffin');
+    const poffin = pick('なかよしポフィン');
     if (poffin && player.deck.some(inst => { const card = game.cardOf(inst); return card.kind === 'pokemon' && card.stage === 0 && card.hp <= 70; })) {
         return { type: 'playTrainer', uid: poffin };
     }
-    const ultra = pick('ultra-ball');
+    const ultra = pick('ハイパーボール');
     if (ultra && (wantsEvolution(game, player) || needsBench(game, player))) return { type: 'playTrainer', uid: ultra };
-    const pokeBall = pick('poke-ball');
+    const pokeBall = pick('モンスターボール');
     if (pokeBall && player.deck.some(inst => game.cardOf(inst).kind === 'pokemon')) return { type: 'playTrainer', uid: pokeBall };
 
     // エネルギーを手札に用意する
     const hasEnergyInHand = player.hand.some(inst => game.cardOf(inst).kind === 'energy');
     if (!game.turnState.energyAttached && !hasEnergyInHand) {
-        const search = pick('energy-search') ?? pick('energy-retrieval');
+        const search = pick('エネルギー転送') ?? pick('エネルギー回収');
         if (search) return { type: 'playTrainer', uid: search };
     }
 
@@ -96,7 +96,7 @@ function chooseMainAction(game, player) {
     }
 
     // ベンチのエネルギーを、ワザが使えないバトルポケモンへ寄せる
-    const energySwitch = pick('energy-switch');
+    const energySwitch = pick('エネルギーつけかえ');
     if (energySwitch && active && bestAttack(game, player, active, opponent) === null
         && player.bench.some(pokemon => pokemon.energies.length > 0)) {
         return { type: 'playTrainer', uid: energySwitch };
@@ -113,14 +113,14 @@ function chooseMainAction(game, player) {
     if (stadium) return { type: 'playTrainer', uid: stadium };
 
     // 回復
-    const potion = pick('potion');
+    const potion = pick('きずぐすり');
     if (potion && game.inPlay(player).some(pokemon => pokemon.damage >= 30)) return { type: 'playTrainer', uid: potion };
 
     // バトルポケモンがワザを使えず、ベンチに使えるポケモンがいれば入れ替える
     if (active && bestAttack(game, player, active, opponent) === null) {
         const benchAttacker = player.bench.find(pokemon => bestAttack(game, player, pokemon, opponent) !== null);
         if (benchAttacker) {
-            const switchCard = pick('switch');
+            const switchCard = pick('ポケモンいれかえ');
             if (switchCard) return { type: 'playTrainer', uid: switchCard };
             if (legal.retreat.includes(benchAttacker.id)) return { type: 'retreat', target: benchAttacker.id };
         }
@@ -135,20 +135,20 @@ function chooseMainAction(game, player) {
 }
 
 function chooseSupporter(game, player, uids) {
-    const byId = id => uids.find(uid => game.cardOf(player.hand.find(inst => inst.uid === uid)).id === id);
+    const byId = name => uids.find(uid => game.cardOf(player.hand.find(inst => inst.uid === uid)).name === name);
     const opponent = game.opponentOf(player);
-    const boss = byId('bosss-orders');
+    const boss = byId('ボスの指令');
     if (boss && player.active) {
         const damage = maxDamage(game, player, player.active, opponent);
         const activeKo = opponent.active && damage >= remainingHp(game, opponent.active);
         if (!activeKo && opponent.bench.some(pokemon => damage >= remainingHp(game, pokemon))) return boss;
     }
     const handSize = player.hand.length - 1;
-    if (handSize <= 3 && byId('zeiyu')) return byId('zeiyu');
-    if (handSize <= 3 && byId('lillies-determination')) return byId('lillies-determination');
-    if (handSize <= 5 && byId('guy')) return byId('guy');
-    if (handSize <= 5 && byId('mc-hype')) return byId('mc-hype');
-    if (handSize <= 2 && byId('judge')) return byId('judge');
+    if (handSize <= 3 && byId('ゼイユ')) return byId('ゼイユ');
+    if (handSize <= 3 && byId('リーリエの決心')) return byId('リーリエの決心');
+    if (handSize <= 5 && byId('ガイ')) return byId('ガイ');
+    if (handSize <= 5 && byId('MCの盛り上げ')) return byId('MCの盛り上げ');
+    if (handSize <= 2 && byId('ジャッジマン')) return byId('ジャッジマン');
     return null;
 }
 
@@ -167,10 +167,10 @@ function wantsEvolution(game, player) {
 
 function canEvolveSoon(game, player, card) {
     if (card.kind !== 'pokemon' || card.stage === 0) return false;
-    const inPlayIds = new Set(game.inPlay(player).map(pokemon => game.topCard(pokemon).id));
-    if (inPlayIds.has(card.evolvesFrom)) return true;
-    const hasCandy = player.hand.some(inst => inst.id === 'rare-candy');
-    return card.stage === 2 && hasCandy && inPlayIds.has(game.cardOf({ id: card.evolvesFrom }).evolvesFrom);
+    const inPlayNames = new Set(game.inPlay(player).map(pokemon => game.topCard(pokemon).name));
+    if (inPlayNames.has(card.evolvesFrom)) return true;
+    const hasCandy = player.hand.some(inst => game.cardName(inst) === 'ふしぎなアメ');
+    return card.stage === 2 && hasCandy && inPlayNames.has(baseOfStage1(card.evolvesFrom));
 }
 
 // エネルギーのつけ先：バトルポケモンがまだワザを使えなければバトル場、それ以外はワザの強いポケモン
@@ -252,8 +252,6 @@ function answerPrompt(game, prompt) {
         const card = game.cardOf(inst);
         return card.kind === 'pokemon' ? card.hp : 0;
     };
-    const inPlayIds = new Set(game.inPlay(player).map(pokemon => game.topCard(pokemon).id));
-
     switch (prompt.purpose) {
         case 'first-player':
             return [1]; // 後攻は最初の番からワザを使える
@@ -285,9 +283,22 @@ function answerPrompt(game, prompt) {
         case 'boss-target':
             return indices(prompt.pokemon, pokemon => -remainingHp(game, pokemon), 1);
         case 'snipe-target':
-            // 倒せるポケモンのうち、取れるサイドが一番多いもの。倒せなければバトルポケモン
-            return indices(prompt.pokemon, pokemon => (remainingHp(game, pokemon) <= 280 ? 1000 + game.prizeValue(game.topCard(pokemon)) * 100 : 0)
-                + (pokemon === opponent.active ? 10 : 0), 1);
+            // ダメージがわかれば、倒せるもののうち、取れるサイドが一番多いもの。わからなければ残りHPの少ないもの
+            return indices(prompt.pokemon, pokemon => {
+                const hp = remainingHp(game, pokemon);
+                const prizes = game.prizeValue(game.topCard(pokemon));
+                if (prompt.amount && hp <= prompt.amount) return 1000 + prizes * 100 - hp / 10;
+                return -hp + prizes * 15;
+            }, prompt.max);
+        case 'search-card':
+        case 'search-evolution':
+        case 'attach-energy-target':
+            return Array.from({ length: prompt.max }, (_, index) => index);
+        case 'discard-opponent-energy':
+        case 'discard-opponent-hand':
+            return Array.from({ length: prompt.max }, (_, index) => index);
+        case 'self-damage-target':
+            return indices(prompt.pokemon, pokemon => remainingHp(game, pokemon), prompt.min);
         case 'potion':
             return indices(prompt.pokemon, pokemon => pokemon.damage, 1);
         case 'energy-switch-source':
@@ -307,7 +318,7 @@ function discardValue(game, player, inst) {
     if (isBasicEnergy(card)) return 30 - sameCount * 5;
     if (card.kind === 'pokemon') return 60 + card.stage * 10 + (isPokemonEx(card) ? 20 : 0);
     if (card.trainerType === 'stadium') return 10;
-    if (card.id === 'potion') return 15;
+    if (card.name === 'きずぐすり') return 15;
     return 40 - sameCount * 5;
 }
 

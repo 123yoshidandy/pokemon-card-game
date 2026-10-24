@@ -325,8 +325,10 @@ function useAsThisAttack(ctx, attack) {
     if (attack.before) game.runNext(() => { if (!ctx.failed) attack.before(ctx); });
 }
 
-function chooseAttackToCopy(ctx, attacks, title) {
+function chooseAttackToCopy(ctx, candidates, title) {
     const { game, player } = ctx;
+    // ほかのワザをこのワザとして使うワザ（ナイトジョーカーなど）は選ばない（選ぶと、選び続けて終わらなくなる）
+    const attacks = candidates.filter(attack => !attack.copiesAttack);
     if (attacks.length === 0) {
         ctx.damage = 0;
         return;

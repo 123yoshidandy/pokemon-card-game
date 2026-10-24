@@ -48,8 +48,10 @@ describe('カードのデータ', () => {
     });
 
     it('まだ効果が動かないカードはデッキに入れられない', () => {
-        const unsupported = Object.values(CARDS).find(card => card.kind === 'pokemon' && !card.supported);
-        const cards = [...expandDeck(DECKS[0]).slice(0, 59), unsupported.id];
+        // 今はすべてのカードが動くので、動かないカードをテストのために作る
+        CARDS['test-unsupported'] = { ...CARDS[C.pikachu], id: 'test-unsupported', name: '動かないカード', supported: false };
+        testIds.push('test-unsupported');
+        const cards = [...expandDeck(DECKS[0]).slice(0, 59), 'test-unsupported'];
         expect(validateDeck(cards)).toContain('まだ使えない');
     });
 

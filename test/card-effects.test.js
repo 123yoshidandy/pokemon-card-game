@@ -131,6 +131,29 @@ describe('ワザの効果（文の読み替え）', () => {
         expect(target.bench[0].damage).toBe(0);
     });
 
+    it('のぞむなら、40ダメージ追加。その場合、このポケモンにも30ダメージ（2つの文で1つの効果）', () => {
+        const id = testPokemon('のぞむなら、40ダメージ追加。その場合、このポケモンにも30ダメージ。', { damage: 20 });
+        const { game, me, opp } = midGame();
+        const player = arrange(game, me, { active: { id, energies: [LIGHTNING] } });
+        const target = arrange(game, opp, { active: { id: C.charmander }, deck: Array(5).fill(C.potion) });
+        game.applyCommand(me, { type: 'attack', index: 0 });
+        expect(game.pendingPrompt.purpose).toBe('optional-bonus');
+        answer(game, true);
+        expect(target.active.damage).toBe(60);
+        expect(player.active.damage).toBe(30);
+    });
+
+    it('次の相手の番、このポケモンの弱点は、すべてなくなる', () => {
+        const id = testPokemon('次の相手の番、このポケモンの弱点は、すべてなくなる。');
+        const { game, me, opp } = midGame();
+        CARDS[id].weakness = 'lightning';
+        const player = arrange(game, me, { active: { id, energies: [LIGHTNING] }, deck: Array(5).fill(C.potion) });
+        arrange(game, opp, { active: { id: C.pikachu, energies: [LIGHTNING, LIGHTNING] }, deck: Array(5).fill(C.potion) });
+        game.applyCommand(me, { type: 'attack', index: 0 });
+        game.applyCommand(opp, { type: 'attack', index: 1 }); // プチボルト 30（弱点なら60）
+        expect(player.active.damage).toBe(30);
+    });
+
     it('読み替えられない文があるワザは null', () => {
         expect(compileAttackText('このポケモンは宇宙を旅する。')).toBeNull();
         expect(compileAttackText('自分の山札を2枚引く。そして宇宙を旅する。')).toBeNull();

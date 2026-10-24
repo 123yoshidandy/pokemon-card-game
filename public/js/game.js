@@ -770,7 +770,7 @@ export default class Game {
                 .reduce((sum, effect) => sum + effect.amount, 0);
         }
         if (isActive) {
-            if (card.weakness === attackerCard.type && !ctx.ignoreWeakness) damage *= WEAKNESS_MULTIPLIER;
+            if (card.weakness === attackerCard.type && !ctx.ignoreWeakness && !this.hasEffect(target, 'noWeakness')) damage *= WEAKNESS_MULTIPLIER;
             if (card.resistance === attackerCard.type && !ctx.ignoreResistance) damage -= RESISTANCE_REDUCTION;
         }
         if (isActive && opposing && !ctx.ignoreEffects) {
@@ -780,6 +780,11 @@ export default class Game {
         // 受けるポケモンの側（どうぐ・特性・スタジアムなどのフック damageTaken）は、弱点・抵抗力の後
         if (opposing) damage += this.hookSum('damageTaken', ctx, target);
         damage = Math.max(0, damage);
+        // 「N」以下のワザのダメージを受けない
+        if (opposing && !ctx.ignoreEffects && this.effectsOf(target, 'preventDamageUpTo').some(effect => damage <= effect.amount)) {
+            this.log(`${card.name}は${damage}ダメージを受けない`);
+            return 0;
+        }
         target.damage += damage;
         this.log(`${card.name}に${damage}ダメージ`);
         if (target === ctx.defender) ctx.dealt = (ctx.dealt ?? 0) + damage;

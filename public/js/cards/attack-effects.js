@@ -158,7 +158,15 @@ function counter(phrase) {
         [/^自分の場のポケモンの数$/, ctx => ctx.game.inPlay(ctx.player).length],
         [/^相手の場のポケモンの数$/, ctx => ctx.game.inPlay(ctx.opponent).length],
         [/^相手のバトルポケモンのにげるためのエネルギーの数$/, ctx => (ctx.defender ? ctx.game.retreatCost(ctx.defender) : 0)],
-        [/^自分のポケモン全員についている「ポケモンのどうぐ」の数$/, ctx => ctx.game.inPlay(ctx.player).filter(pk => pk.tool).length]
+        [/^自分のポケモン全員についている「ポケモンのどうぐ」の数$/, ctx => ctx.game.inPlay(ctx.player).filter(pk => pk.tool).length],
+        [/^相手のトラッシュにある基本エネルギーの枚数$/, ctx => ctx.opponent.discard.filter(inst => { const card = ctx.game.cardOf(inst); return card.kind === 'energy' && card.basic; }).length],
+        [/^相手のバトルポケモンが受けている特殊状態の数$/, ctx => (ctx.defender
+            ? ['asleep', 'paralyzed', 'confused', 'poisoned', 'burned'].filter(condition => ctx.game.hasCondition(ctx.defender, condition)).length : 0)],
+        [/^おたがいのバトルポケモンについているエネルギーの数$/, ctx => ctx.attacker.energies.length + (ctx.defender?.energies.length ?? 0)],
+        [/^相手の場の「ポケモンex・V」の数$/, ctx => ctx.game.inPlay(ctx.opponent).filter(pk => isEx(ctx.game.topCard(pk))).length],
+        [/^自分の場の([12])進化ポケモンの数$/, (ctx, m) => ctx.game.inPlay(ctx.player).filter(pk => ctx.game.topCard(pk).stage === Number(m[1])).length],
+        [/^自分のベンチの([12])進化ポケモンの数$/, (ctx, m) => ctx.player.bench.filter(pk => ctx.game.topCard(pk).stage === Number(m[1])).length],
+        [/^自分の場の、ワザ「(.+)」を持つポケモンの数$/, (ctx, m) => ctx.game.inPlay(ctx.player).filter(pk => ctx.game.topCard(pk).attacks.some(attack => attack.name === m[1])).length]
     ];
     for (const [re, fn] of table) {
         const m = phrase.match(re);
@@ -201,7 +209,18 @@ function condition(phrase) {
         [/^自分のベンチに「(.+)」がいる$/, (ctx, m) => ctx.player.bench.some(pk => ctx.game.topCard(pk).name === m[1])],
         [/^自分の場に「(.+)」がいる$/, (ctx, m) => ctx.game.inPlay(ctx.player).some(pk => ctx.game.topCard(pk).name === m[1])],
         [/^この番に、このポケモンのHPを回復していた$/, ctx => ctx.attacker.healedTurn === ctx.game.turn],
-        [/^この番、手札からサポートを出して使っていた$/, ctx => ctx.game.turnState.supporterPlayed]
+        [/^この番、手札からサポートを出して使っていた$/, ctx => ctx.game.turnState.supporterPlayed],
+        [/^自分の手札が(\d+)枚$/, (ctx, m) => ctx.player.hand.length === Number(m[1])],
+        [/^相手の手札が(\d+)枚以下$/, (ctx, m) => ctx.opponent.hand.length <= Number(m[1])],
+        [/^このポケモンが(どく|やけど|マヒ|ねむり|こんらん)$/, (ctx, m) => ctx.game.hasCondition(ctx.attacker, CONDITIONS[m[1]])],
+        [/^相手のバトルポケモンが([12])進化ポケモン$/, (ctx, m) => Boolean(ctx.defender) && ctx.game.topCard(ctx.defender).stage === Number(m[1])],
+        [/^自分のサイドの残り枚数が(\d+)枚$/, (ctx, m) => ctx.player.prizes.length === Number(m[1])],
+        [/^場に自分のスタジアムが出ている$/, ctx => Boolean(ctx.game.stadium) && ctx.game.stadium.owner === ctx.player.id],
+        [/^このポケモンの残りHPが「(\d+)」以下$/, (ctx, m) => ctx.game.maxHp(ctx.attacker) - ctx.attacker.damage <= Number(m[1])],
+        [/^このポケモンと相手のバトルポケモンについているエネルギーの数が同じ$/, ctx => Boolean(ctx.defender) && ctx.attacker.energies.length === ctx.defender.energies.length],
+        [new RegExp(`^自分の場に${TYPE_PATTERN}エネルギーが(\\d+)個以上ある$`), (ctx, m) => ctx.game.inPlay(ctx.player)
+            .reduce((sum, pk) => sum + energyCount(ctx.game, pk, TYPE_WORDS[m[1]]), 0) >= Number(m[2])],
+        [/^この番、このポケモンが「(.+)」から進化していた$/, (ctx, m) => ctx.game.evolvedThisTurnFrom(ctx.attacker, m[1])]
     ];
     for (const [re, fn] of table) {
         const m = phrase.match(re);
@@ -658,7 +677,209 @@ rule(/^自分のトラッシュから(.+?)を(\d+)枚(まで)?選び、(この�
 rule(/^場に出ているスタジアムをトラッシュする$/, () => after(ctx => ctx.game.discardStadium()));
 rule(/^そのスタジアムをトラッシュする$/, () => after(ctx => ctx.game.discardStadium()));
 
+// --- 使える番の制限 ---
+rule(/^このワザは、先行プレイヤーの最初の番でも使える$/, () => ({ phase: 'flag', flag: 'firstTurnOk' }));
+rule(/^このワザは、後攻プレイヤーの最初の番には使えない$/, () => ({ phase: 'flag', flag: 'canUse', value: game => game.turn !== 2 }));
+rule(/^このワザは、後攻プレイヤーの最初の番にだけ使える$/, () => ({ phase: 'flag', flag: 'canUse', value: game => game.turn === 2 }));
+
+// --- 失敗の条件（〜でないなら・〜いないなら）---
+rule(/^(.+)でないなら、このワザは失敗$/, m => {
+    const test = condition(m[1]);
+    if (!test) return null;
+    return before(ctx => { if (!test(ctx)) { ctx.failed = true; ctx.game.log('ワザは失敗した'); } }, (ctx, damage) => (test(ctx) ? damage : 0));
+});
+rule(/^(.+)がいないなら、このワザは失敗$/, m => {
+    const test = condition(`${m[1]}がいる`);
+    if (!test) return null;
+    return before(ctx => { if (!test(ctx)) { ctx.failed = true; ctx.game.log('ワザは失敗した'); } }, (ctx, damage) => (test(ctx) ? damage : 0));
+});
+
+// --- ダメージ ---
+rule(/^このポケモンに(\d+)ダメージ$/, m => after(ctx => ctx.game.putDamage(ctx.attacker, Number(m[1]))));
+rule(/^相手のベンチポケモン全員に、それぞれ(\d+)ダメージ$/, m => after(ctx => ctx.opponent.bench.forEach(pk => ctx.game.dealAttackDamage(ctx, pk, Number(m[1])))));
+rule(/^相手のベンチポケモン(\d+)匹にも、それぞれ(\d+)ダメージ$/, m => after(ctx => damageChosen(ctx, ctx.opponent.bench, Number(m[1]), Number(m[2]))));
+rule(/^相手の「ポケモンex(・V)?」全員に、それぞれ(\d+)ダメージ$/, m => after(ctx =>
+    ctx.game.inPlay(ctx.opponent).filter(pk => isEx(ctx.game.topCard(pk))).forEach(pk => ctx.game.dealAttackDamage(ctx, pk, Number(m[2])))));
+rule(/^相手のバトルポケモンにダメカンがのっているなら、このワザのダメージは「(\d+)」になる$/, m => {
+    const value = (ctx, damage) => (ctx.defender?.damage > 0 ? Number(m[1]) : damage);
+    return before(ctx => { ctx.damage = value(ctx, ctx.damage); }, value);
+});
+rule(/^ダメカン(\d+)個を、相手のポケモンに好きなようにのせる$/, m => after(ctx => {
+    const { game, player, opponent } = ctx;
+    const steps = Array.from({ length: Number(m[1]) }, () => () => {
+        const targets = game.inPlay(opponent);
+        if (targets.length === 0) return;
+        game.promptPokemon({ player, pokemon: targets, min: 1, max: 1, title: 'ダメカンを1個のせるポケモンを選ぶ', purpose: 'snipe-target', callback: ([target]) => game.putDamage(target, 10) });
+    });
+    game.runNext(...steps);
+}));
+rule(/^相手のバトルポケモンをきぜつさせる$/, () => after(ctx => {
+    const { game, defender } = ctx;
+    if (!canAffect(ctx, defender)) return;
+    const rest = game.maxHp(defender) - defender.damage;
+    if (rest > 0) game.putDamage(defender, rest);
+}));
+rule(/^このポケモンについているエネルギーを(\d+)個トラッシュし、(.+)$/, m => {
+    const inner = compileSentence(m[2]);
+    if (!inner || inner.phase !== 'after') return null;
+    return after(ctx => {
+        discardEnergies(ctx, ctx.attacker, Number(m[1]));
+        ctx.game.runNext(() => inner.run(ctx));
+    });
+});
+rule(/^このポケモンについているエネルギーをすべてトラッシュし、(.+)$/, m => {
+    const inner = compileSentence(m[1]);
+    if (!inner || inner.phase !== 'after') return null;
+    return after(ctx => {
+        discardEnergies(ctx, ctx.attacker, Infinity);
+        ctx.game.runNext(() => inner.run(ctx));
+    });
+});
+rule(/^のぞむなら、(\d+)ダメージ追加し、このポケモンにも(\d+)ダメージ$/, m => {
+    const bonus = Number(m[1]);
+    const recoil = Number(m[2]);
+    return before(ctx => {
+        const { game, player, attacker } = ctx;
+        game.promptConfirm({
+            player,
+            title: `${bonus}ダメージ追加しますか？（このポケモンにも${recoil}ダメージ）`,
+            purpose: 'optional-bonus',
+            cpuAnswer: g => g.maxHp(attacker) - attacker.damage > recoil,
+            callback: yes => {
+                if (!yes) return;
+                ctx.damage += bonus;
+                game.putDamage(attacker, recoil);
+            }
+        });
+    }, (ctx, damage) => damage + bonus);
+});
+
+// --- 残る効果 ---
+rule(/^次の相手の番、このポケモンの弱点は、すべてなくなる$/, () => after(ctx => ctx.game.addEffect(ctx.attacker, 'noWeakness', ctx.game.turn + 1)));
+rule(/^次の相手の番、このポケモンは「(\d+)」以下のワザのダメージを受けない$/, m => after(ctx =>
+    ctx.game.addEffect(ctx.attacker, 'preventDamageUpTo', ctx.game.turn + 1, { amount: Number(m[1]) })));
+rule(/^次の自分の番、このポケモンはにげられない$/, () => after(ctx => ctx.game.addEffect(ctx.attacker, 'cannotRetreat', ctx.game.turn + 2)));
+rule(/^相手のバトルポケモンが持つワザを1つ選び、次の相手の番、このワザを受けたポケモンは、そのワザが使えない$/, () => after(ctx => {
+    const { game, player, defender } = ctx;
+    if (!canAffect(ctx, defender)) return;
+    const attacks = game.topCard(defender).attacks;
+    if (attacks.length === 0) return;
+    game.promptChoose({
+        player,
+        options: attacks.map(attack => attack.name),
+        title: '次の番に使えなくするワザを選ぶ',
+        purpose: 'disable-attack',
+        cpuAnswer: () => [attacks.reduce((best, attack, index) => (attack.damage > attacks[best].damage ? index : best), 0)],
+        callback: ([index]) => game.addEffect(defender, 'cannotUseAttack', game.turn + 1, { attack: attacks[index].name })
+    });
+}));
+
+// --- 山札・手札・トラッシュ ---
+rule(/^ウラが出るまでコインを投げ、オモテの数ぶん、相手の山札を上からトラッシュする$/, () => after(ctx => ctx.game.millDeck(ctx.opponent, flipUntilTails(ctx.game))));
+rule(/^コインを(\d+)回投げ、オモテの数ぶん、相手の山札を上からトラッシュする$/, m => after(ctx => ctx.game.millDeck(ctx.opponent, flipCoins(ctx.game, Number(m[1])))));
+rule(/^相手は相手自身の手札を(\d+)枚選び、山札にもどして切る$/, m => after(ctx => {
+    const { game, opponent } = ctx;
+    const n = Math.min(Number(m[1]), opponent.hand.length);
+    if (n === 0) return;
+    game.promptCards({
+        player: opponent,
+        cards: opponent.hand,
+        min: n,
+        max: n,
+        title: `山札にもどす手札を${n}枚選ぶ`,
+        purpose: 'discard-hand',
+        callback: selected => {
+            selected.forEach(inst => game.moveCard(opponent.hand, opponent.deck, inst));
+            game.shuffleDeck(opponent);
+            game.log(`${opponent.name}は手札を${n}枚山札にもどして切った`);
+        }
+    });
+}));
+rule(/^自分の手札を(\d+)枚トラッシュする$/, m => after(ctx => {
+    const { game, player } = ctx;
+    const n = Math.min(Number(m[1]), player.hand.length);
+    if (n === 0) return;
+    game.promptCards({
+        player,
+        cards: player.hand,
+        min: n,
+        max: n,
+        title: `トラッシュする手札を${n}枚選ぶ`,
+        purpose: 'ultra-ball-discard',
+        callback: selected => {
+            selected.forEach(inst => game.moveCard(player.hand, player.discard, inst));
+            game.log(`${player.name}は${selected.map(inst => game.cardName(inst)).join('と')}をトラッシュした`);
+        }
+    });
+}));
+rule(/^自分のトラッシュから(.+?)を(\d+)枚(まで)?選び、(相手に見せて、)?手札に加える$/, m => {
+    const filter = searchFilter(m[1]);
+    if (!filter) return null;
+    return after(ctx => {
+        const { game, player } = ctx;
+        const candidates = player.discard.filter(inst => filter(game.cardOf(inst)));
+        const n = Math.min(Number(m[2]), candidates.length);
+        if (n === 0) return;
+        game.promptCards({
+            player,
+            cards: candidates,
+            min: m[3] ? 0 : n,
+            max: n,
+            title: `トラッシュから手札に加える${m[1]}を選ぶ`,
+            purpose: 'search-card',
+            callback: selected => {
+                selected.forEach(inst => game.moveCard(player.discard, player.hand, inst));
+                if (selected.length) game.log(`${player.name}は${selected.map(inst => game.cardName(inst)).join('と')}をトラッシュから手札に加えた`);
+            }
+        });
+    });
+});
+rule(/^自分の山札を上から(\d+)枚見て、もとにもどす$/, m => after(ctx => {
+    const cards = ctx.player.deck.slice(0, Number(m[1]));
+    ctx.game.log(`${ctx.player.name}は山札を上から${cards.length}枚見た`);
+    ctx.game.log(`山札の上：${cards.map(inst => ctx.game.cardName(inst)).join('・')}`, { to: ctx.player.id });
+}));
+// ポケモンと、ついているすべてのカードを、持ち主の山札にもどして切る
+function shuffleIntoDeck(game, pokemon) {
+    const owner = game.ownerOf(pokemon);
+    if (!owner) return;
+    if (owner.active === pokemon) owner.active = null;
+    else game.removeCard(owner.bench, pokemon);
+    owner.deck.push(...pokemon.cards, ...pokemon.energies, ...(pokemon.tool ? [pokemon.tool] : []));
+    game.shuffleDeck(owner);
+    game.log(`${owner.name}の${game.topCard(pokemon).name}と、ついているカードを山札にもどして切った`);
+}
+rule(/^(のぞむなら、)?このポケモンと、ついているすべてのカードを、(自分の)?山札にもどして切る$/, m => after(ctx => {
+    const { game, player, attacker } = ctx;
+    if (!m[1]) {
+        shuffleIntoDeck(game, attacker);
+        return;
+    }
+    game.promptConfirm({ player, title: 'このポケモンを山札にもどしますか？', purpose: 'optional-return', cpuAnswer: () => false, callback: yes => { if (yes) shuffleIntoDeck(game, attacker); } });
+}));
+rule(/^相手のベンチポケモンを(\d+)匹選び、そのポケモンと、ついているすべてのカードを、山札にもどして切る$/, m => after(ctx => {
+    const { game, player, opponent } = ctx;
+    const n = Math.min(Number(m[1]), opponent.bench.length);
+    if (n === 0) return;
+    game.promptPokemon({
+        player,
+        pokemon: opponent.bench,
+        min: n,
+        max: n,
+        title: '山札にもどす相手のベンチポケモンを選ぶ',
+        purpose: 'boss-target',
+        callback: selected => selected.forEach(pk => { if (canAffect(ctx, pk)) shuffleIntoDeck(game, pk); })
+    });
+}));
+
 // ===== 読み替え =====
+
+// 2つの文で1つの効果になるものは、区切る前に1つの文にまとめる
+const JOINS = [
+    [/のぞむなら、(\d+)ダメージ追加。その場合、このポケモンにも(\d+)ダメージ/g, 'のぞむなら、$1ダメージ追加し、このポケモンにも$2ダメージ'],
+    [/相手のバトルポケモンが持つワザを1つ選ぶ。次の相手の番、このワザを受けたポケモンは、選ばれたワザが使えない/g,
+        '相手のバトルポケモンが持つワザを1つ選び、次の相手の番、このワザを受けたポケモンは、そのワザが使えない']
+];
 
 // 文を区切る（[ ] の中の「。」では区切らない）
 function splitSentences(text) {
@@ -689,11 +910,16 @@ function compileSentence(sentence) {
     return null;
 }
 
-// ワザの効果の文 → { before, after, expected }。読み替えられなければ null
-export function compileAttackText(text) {
+function prepare(text) {
     let normalized = normalizeText(text);
     REMINDERS.forEach(re => { normalized = normalized.replace(re, ''); });
-    const sentences = splitSentences(normalized);
+    JOINS.forEach(([re, joined]) => { normalized = normalized.replace(re, joined); });
+    return normalized;
+}
+
+// ワザの効果の文 → { before, after, expected, firstTurnOk, canUse }。読み替えられなければ null
+export function compileAttackText(text) {
+    const sentences = splitSentences(prepare(text));
     const steps = [];
     for (const sentence of sentences) {
         const step = compileSentence(sentence);
@@ -703,7 +929,7 @@ export function compileAttackText(text) {
     const phase = name => steps.filter(step => step.phase === name);
     const runAll = list => list.length === 0 ? undefined : ctx => ctx.game.runNext(...list.map(step => () => { if (!ctx.failed) step.run(ctx); }));
     const estimators = steps.filter(step => step.expected);
-    const flags = Object.fromEntries(phase('flag').map(step => [step.flag, true]));
+    const flags = Object.fromEntries(phase('flag').map(step => [step.flag, step.value ?? true]));
     return {
         ...flags,
         before: runAll(phase('before')),
@@ -714,7 +940,5 @@ export function compileAttackText(text) {
 
 // 読み替えられない文（数えるときに使う）
 export function unsupportedSentences(text) {
-    let normalized = normalizeText(text);
-    REMINDERS.forEach(re => { normalized = normalized.replace(re, ''); });
-    return splitSentences(normalized).filter(sentence => !compileSentence(sentence));
+    return splitSentences(prepare(text)).filter(sentence => !compileSentence(sentence));
 }

@@ -6,7 +6,7 @@
 import { getCard, TYPE_NAMES } from '../card-data.js';
 import { DECK_SIZE } from '../deck-rules.js';
 import { CARD_POOL, addCard, removeCard, canAdd, totalCount, deckProblem, sortedEntries } from '../deck-builder.js';
-import { cardFace } from './card-view.js';
+import { cardFace, energyDot } from './card-view.js';
 import { bindPress } from './press.js';
 import { showDetail, showConfirm } from './sheets.js';
 
@@ -21,6 +21,26 @@ const KIND_TABS = [
 // 一度に並べるカードの数（多すぎると、スマホで描き直しが重い）
 const POOL_LIMIT = 200;
 const TYPE_ORDER = ['grass', 'fire', 'water', 'lightning', 'psychic', 'fighting', 'darkness', 'metal', 'dragon', 'colorless'];
+
+// 種類ごとの小さなタブ（しぼりこみ）。test はカードが入るか
+const SUB_TABS = {
+    pokemon: [
+        { id: 'all', label: 'すべて', test: () => true },
+        ...TYPE_ORDER.map(type => ({ id: type, label: TYPE_NAMES[type], icon: type, test: card => card.type === type }))
+    ],
+    trainer: [
+        { id: 'all', label: 'すべて', test: () => true },
+        { id: 'supporter', label: 'サポート', test: card => card.trainerType === 'supporter' },
+        { id: 'item', label: 'グッズ', test: card => card.trainerType === 'item' },
+        { id: 'tool', label: 'どうぐ', test: card => card.trainerType === 'tool' },
+        { id: 'stadium', label: 'スタジアム', test: card => card.trainerType === 'stadium' }
+    ],
+    energy: [
+        { id: 'all', label: 'すべて', test: () => true },
+        { id: 'basic', label: '基本エネルギー', test: card => Boolean(card.basic) },
+        { id: 'special', label: '特殊エネルギー', test: card => !card.basic }
+    ]
+};
 
 function escape(text) {
     return String(text).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
@@ -39,9 +59,7 @@ export default class DeckScreens {
         this.deck = null;
         this.kind = 'pokemon';
         this.query = '';
-        this.type = 'all';
-        $('pool-type').innerHTML = ['<option value="all">全タイプ</option>',
-            ...TYPE_ORDER.map(type => `<option value="${type}">${TYPE_NAMES[type]}</option>`)].join('');
+        this.sub = 'all'; // 種類の中の小さなタブ（SUB_TABS の id）
         this.bind();
     }
 
@@ -75,16 +93,20 @@ export default class DeckScreens {
             const tab = event.target.closest('[data-kind]');
             if (!tab) return;
             this.kind = tab.dataset.kind;
+            this.sub = 'all';
+            this.renderEditor();
+            $('pool').scrollTop = 0;
+            $('pool-subtabs').scrollLeft = 0;
+        });
+        $('pool-subtabs').addEventListener('click', event => {
+            const tab = event.target.closest('[data-sub]');
+            if (!tab) return;
+            this.sub = tab.dataset.sub;
             this.renderEditor();
             $('pool').scrollTop = 0;
         });
         $('pool-search').addEventListener('input', () => {
             this.query = searchKey($('pool-search').value.trim());
-            this.renderEditor();
-            $('pool').scrollTop = 0;
-        });
-        $('pool-type').addEventListener('change', () => {
-            this.type = $('pool-type').value;
             this.renderEditor();
             $('pool').scrollTop = 0;
         });
@@ -154,17 +176,18 @@ export default class DeckScreens {
 
         $('pool-tabs').innerHTML = KIND_TABS.map(tab =>
             `<button type="button" class="segment-item ${tab.kind === this.kind ? 'active' : ''}" data-kind="${tab.kind}">${tab.label}</button>`).join('');
-        $('pool-type').hidden = this.kind !== 'pokemon';
+        const subTabs = SUB_TABS[this.kind];
+        const sub = subTabs.find(tab => tab.id === this.sub) ?? subTabs[0];
+        $('pool-subtabs').innerHTML = subTabs.map(tab => `<button type="button" class="subtab ${tab.id === sub.id ? 'active' : ''}" data-sub="${tab.id}" role="tab" aria-selected="${tab.id === sub.id}">${tab.icon ? energyDot(tab.icon) : ''}${tab.label}</button>`).join('');
         const matches = CARD_POOL.filter(id => {
             const card = getCard(id);
-            if (card.kind !== this.kind) return false;
-            if (this.kind === 'pokemon' && this.type !== 'all' && card.type !== this.type) return false;
+            if (card.kind !== this.kind || !sub.test(card)) return false;
             return !this.query || searchKey(card.name).includes(this.query);
         });
         const shown = matches.slice(0, POOL_LIMIT);
         const note = matches.length === 0
             ? '<p class="pool-note">見つかりませんでした</p>'
-            : matches.length > shown.length ? `<p class="pool-note">${matches.length}種類のうち${shown.length}種類を表示しています。名前やタイプでしぼってください</p>` : '';
+            : matches.length > shown.length ? `<p class="pool-note">${matches.length}種類のうち${shown.length}種類を表示しています。名前や種類でしぼってください</p>` : '';
         $('pool').innerHTML = shown.map(id => {
             const count = deck.cards[id] ?? 0;
             return `<div class="pool-card ${canAdd(deck, id) ? '' : 'maxed'}" data-card="${id}">${cardFace(id)}${count ? `<span class="pool-count">${count}</span>` : ''}</div>`;
@@ -172,10 +195,10 @@ export default class DeckScreens {
 
         const entries = sortedEntries(deck);
         // 同じ名前の別の版を見分けられるように、ポケモンは HP と版の番号も出す
-        const sub = card => (card.kind === 'pokemon' ? `HP${card.hp} ${card.prints?.[0] ?? ''}` : '');
+        const subText = card => (card.kind === 'pokemon' ? `HP${card.hp} ${card.prints?.[0] ?? ''}` : '');
         $('deck-cards').innerHTML = entries.length
             ? entries.map(([id, count]) => `<li class="deck-card-row">
-                <span class="deck-card-name" data-row="${id}">${escape(getCard(id).name)}<span class="deck-card-sub">${escape(sub(getCard(id)))}</span></span>
+                <span class="deck-card-name" data-row="${id}">${escape(getCard(id).name)}<span class="deck-card-sub">${escape(subText(getCard(id)))}</span></span>
                 <button type="button" class="step-btn" data-minus="${id}" aria-label="減らす">−</button>
                 <span class="deck-card-count">${count}</span>
                 <button type="button" class="step-btn" data-plus="${id}" aria-label="増やす" ${canAdd(deck, id) ? '' : 'disabled'}>＋</button>

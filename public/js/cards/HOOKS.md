@@ -132,7 +132,8 @@ suppressAbility は特性にも書ける（ほかのポケモンの特性をな�
 - 番の情報：`game.turn` `game.current` `game.turnState`（supporterPlayed・supporterNames・energyAttached・retreated・abilityNamesUsed など） `player.turnsTaken`
   - `player.knockedOutTurn` / `knockedOutNames`：理由を問わず、自分のポケモンがきぜつした番と名前。`knockedOutByAttackTurn` / `knockedOutByAttackNames` はワザのダメージによるものだけ
 
-カードの判定：`card.kind`（'pokemon' 'trainer' 'energy'）・`card.stage`（0=たね）・`card.rule`（'ex' 'mega' か null）・`card.type`・`card.trainerType`・`card.basic`（基本エネルギー）・`card.energyType`・`card.aceSpec`
+カードの判定：`card.kind`（'pokemon' 'trainer' 'energy'）・`card.stage`（0=たね）・`card.rule`（'ex' 'mega' か null）・`card.type`・`card.trainerType`・`card.basic`（基本エネルギー）・`card.energyType`・`card.aceSpec`・`card.tera`（テラスタル）・`card.ancient`（古代）・`card.future`（未来）
+（テラスタル・古代・未来・ACE SPEC の印は、tools/data/limitless-tags.json から補っている）
 
 ## 守ること
 

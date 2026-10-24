@@ -89,7 +89,7 @@ function buildPokemon(data) {
         && (!abilityData || Boolean(abilityEffect))
         && attacks.every(attack => attack.supported && !attack.cost.includes('unknown'));
     const { abilities, ...rest } = data;
-    return { ...rest, tera: false, ability, attacks, supported };
+    return { ...rest, tera: Boolean(data.tera), ability, attacks, supported };
 }
 
 function buildTrainer(data) {

@@ -174,6 +174,26 @@ if (missingFrom.length) console.log(`進化元がわからない進化ポケモ�
 const KIND_ORDER = { pokemon: 0, trainer: 1, energy: 2 };
 catalog.sort((a, b) => KIND_ORDER[a.kind] - KIND_ORDER[b.kind] || a.id.localeCompare(b.id));
 
+// TCGdex にない印（テラスタル・古代・未来・ACE SPEC）を、Limitless TCG の検索結果から補う
+const tags = JSON.parse(readFileSync(join(ROOT, 'tools', 'data', 'limitless-tags.json'), 'utf8'));
+const toPrintId = text => {
+    const [set, number] = text.split(' ');
+    return `${set === 'SVP' ? 'SV-P' : set}-${number.padStart(3, '0')}`;
+};
+const tagged = name => new Set(tags[name].map(toPrintId));
+const [teraPrints, ancientPrints, futurePrints] = ['tera', 'ancient', 'future'].map(tagged);
+const aceSpecNames = new Set(tags.aceSpecNames);
+const tagCounts = { tera: 0, ancient: 0, future: 0, aceSpec: 0 };
+catalog.forEach(card => {
+    const prints = card.prints ?? [];
+    if (card.kind === 'pokemon' && prints.some(print => teraPrints.has(print))) { card.tera = true; tagCounts.tera++; }
+    if (prints.some(print => ancientPrints.has(print))) { card.ancient = true; tagCounts.ancient++; }
+    if (prints.some(print => futurePrints.has(print))) { card.future = true; tagCounts.future++; }
+    if (card.kind !== 'pokemon' && aceSpecNames.has(card.name)) card.aceSpec = true;
+    if (card.aceSpec) tagCounts.aceSpec++;
+});
+console.log(`印：テラスタル ${tagCounts.tera}・古代 ${tagCounts.ancient}・未来 ${tagCounts.future}・ACE SPEC ${tagCounts.aceSpec}`);
+
 const legacyIds = {};
 for (const [oldId, [name, printId]] of Object.entries(LEGACY)) {
     const found = (printId && catalog.find(card => card.prints?.includes(printId))) || catalog.find(card => card.name === name);

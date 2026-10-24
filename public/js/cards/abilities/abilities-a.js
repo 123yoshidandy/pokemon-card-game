@@ -366,7 +366,7 @@ function switchSelfIn(game, player, pokemon) {
 function devolveOne(game, owner, target) {
     const removed = target.cards.pop();
     owner.hand.push(removed);
-    game.clearConditions(target);
+    game.clearConditionsOnStageChange(target);
     target.enteredTurn = game.turn;
     target.evolvedFrom = null;
     game.log(`${game.cardName(removed)}をはがして${owner.name}の手札にもどし、${game.topCard(target).name}に退化させた`);

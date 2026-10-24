@@ -990,7 +990,7 @@ export const ATTACK_OVERRIDES = {
             if (!canAffect(ctx, defender) || defender.cards.length < 2 || game.topCard(defender).stage === 0) return;
             const top = defender.cards.pop();
             opponent.hand.push(top);
-            game.clearConditions(defender);
+            game.clearConditionsOnStageChange(defender);
             defender.evolvedFrom = null;
             game.log(`${game.cardName(top)}をはがして${game.topCard(defender).name}に退化させ、相手の手札にもどした`);
         }

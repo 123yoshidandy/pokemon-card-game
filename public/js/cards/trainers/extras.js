@@ -363,6 +363,17 @@ export const TRAINER_EFFECTS = {
         cpuWants: () => true
     },
 
+    'めまいの谷': {
+        hooks: {
+            // おたがいのこんらんのポケモンは、進化・退化してもこんらんが回復しない（game.clearConditionsOnStageChange が見る）
+            keepConfusionOnStageChange: () => true
+        },
+        cpuWants: (game, player) => {
+            const active = game.opponentOf(player).active;
+            return Boolean(active) && game.hasCondition(active, 'confused');
+        }
+    },
+
     // ===== 文の記号を tools/data/text-fixes.json で直したもの =====
     '危ない廃墟': {
         hooks: {

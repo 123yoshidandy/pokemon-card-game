@@ -126,7 +126,7 @@ function devolve(game, pokemon, to) {
     const owner = game.ownerOf(pokemon);
     if (!owner || pokemon.cards.length < 2) return;
     const inst = pokemon.cards.pop();
-    game.clearConditions(pokemon);
+    game.clearConditionsOnStageChange(pokemon);
     pokemon.evolvedFrom = null;
     (to === 'hand' ? owner.hand : owner.deck).push(inst);
     game.log(`${game.cardName(inst)}をはがして、${game.topCard(pokemon).name}に退化させた`);

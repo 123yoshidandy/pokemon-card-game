@@ -1014,7 +1014,7 @@ export const TRAINER_EFFECTS = {
                     const removed = target.cards.splice(target.cards.length - count, count);
                     player.hand.push(...removed);
                     // 退化したポケモンは、特殊状態と効果がなくなり、その番に進化できない
-                    game.clearConditions(target);
+                    game.clearConditionsOnStageChange(target);
                     target.enteredTurn = game.turn;
                     target.evolvedFrom = null;
                     game.log(`${player.name}は${names(game, removed)}をはがして手札にもどし、${game.topCard(target).name}に退化させた`);

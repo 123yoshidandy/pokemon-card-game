@@ -651,7 +651,7 @@ export default class Game {
         pokemon.cards.push(inst);
         pokemon.enteredTurn = this.turn;
         pokemon.evolvedFrom = { name: beforeCard.name, turn: this.turn };
-        this.clearConditions(pokemon);
+        this.clearConditionsOnStageChange(pokemon);
         const card = this.cardOf(inst);
         this.log(`${player.name}は${before}を${card.name}に進化させた`);
         // 特性の「手札から出して進化させたとき」（山札などから進化させたときは使えない）
@@ -945,6 +945,17 @@ export default class Game {
         pokemon.confusionDamage = null;
         pokemon.burned = false;
         pokemon.effects = [];
+    }
+
+    // 進化・退化したときに特殊状態と効果を消す（スタジアムなどで、こんらんが回復しないことがある：フック keepConfusionOnStageChange）
+    clearConditionsOnStageChange(pokemon) {
+        const keep = pokemon.rotation === 'confused' && this.hookAny('keepConfusionOnStageChange', pokemon);
+        const confusionDamage = pokemon.confusionDamage;
+        this.clearConditions(pokemon);
+        if (keep) {
+            pokemon.rotation = 'confused';
+            pokemon.confusionDamage = confusionDamage;
+        }
     }
 
     // カードの効果で勝つ（「この対戦は自分の勝ちになる」）

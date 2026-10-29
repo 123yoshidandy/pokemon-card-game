@@ -3,12 +3,13 @@
  * 編集はその場で保存する（保存ボタンも、戻るときの確認もない）
  */
 
-import { getCard, TYPE_NAMES } from '../card-data.js';
+import { getCard } from '../card-data.js';
 import { DECK_SIZE } from '../deck-rules.js';
 import { CARD_POOL, addCard, removeCard, canAdd, totalCount, deckProblem, sortedEntries } from '../deck-builder.js';
+import { FILTER_GROUPS, QUICK_GROUP, matchesFilters, filterCount, toggleFilter } from '../card-filter.js';
 import { cardFace, energyDot } from './card-view.js';
 import { bindPress } from './press.js';
-import { showDetail, showConfirm } from './sheets.js';
+import { showDetail, showConfirm, closeOnBackdrop } from './sheets.js';
 
 const $ = id => document.getElementById(id);
 
@@ -20,27 +21,6 @@ const KIND_TABS = [
 
 // 一度に並べるカードの数（多すぎると、スマホで描き直しが重い）
 const POOL_LIMIT = 200;
-const TYPE_ORDER = ['grass', 'fire', 'water', 'lightning', 'psychic', 'fighting', 'darkness', 'metal', 'dragon', 'colorless'];
-
-// 種類ごとの小さなタブ（しぼりこみ）。test はカードが入るか
-const SUB_TABS = {
-    pokemon: [
-        { id: 'all', label: 'すべて', test: () => true },
-        ...TYPE_ORDER.map(type => ({ id: type, label: TYPE_NAMES[type], icon: type, test: card => card.type === type }))
-    ],
-    trainer: [
-        { id: 'all', label: 'すべて', test: () => true },
-        { id: 'supporter', label: 'サポート', test: card => card.trainerType === 'supporter' },
-        { id: 'item', label: 'グッズ', test: card => card.trainerType === 'item' },
-        { id: 'tool', label: 'どうぐ', test: card => card.trainerType === 'tool' },
-        { id: 'stadium', label: 'スタジアム', test: card => card.trainerType === 'stadium' }
-    ],
-    energy: [
-        { id: 'all', label: 'すべて', test: () => true },
-        { id: 'basic', label: '基本エネルギー', test: card => Boolean(card.basic) },
-        { id: 'special', label: '特殊エネルギー', test: card => !card.basic }
-    ]
-};
 
 function escape(text) {
     return String(text).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
@@ -59,7 +39,8 @@ export default class DeckScreens {
         this.deck = null;
         this.kind = 'pokemon';
         this.query = '';
-        this.sub = 'all'; // 種類の中の小さなタブ（SUB_TABS の id）
+        // 詳しい条件（種類ごとに覚えておく）。上の小さなタブも、この中の QUICK_GROUP の項目を切り替える
+        this.filters = { pokemon: {}, trainer: {}, energy: {} };
         this.bind();
     }
 
@@ -93,7 +74,6 @@ export default class DeckScreens {
             const tab = event.target.closest('[data-kind]');
             if (!tab) return;
             this.kind = tab.dataset.kind;
-            this.sub = 'all';
             this.renderEditor();
             $('pool').scrollTop = 0;
             $('pool-subtabs').scrollLeft = 0;
@@ -101,12 +81,26 @@ export default class DeckScreens {
         $('pool-subtabs').addEventListener('click', event => {
             const tab = event.target.closest('[data-sub]');
             if (!tab) return;
-            this.sub = tab.dataset.sub;
+            // 「すべて」はその項目の条件を外す。ほかは、その1つだけを選ぶ
+            const groupId = QUICK_GROUP[this.kind];
+            this.filters[this.kind] = { ...this.filters[this.kind], [groupId]: tab.dataset.sub === 'all' ? [] : [tab.dataset.sub] };
             this.renderEditor();
             $('pool').scrollTop = 0;
         });
         $('pool-search').addEventListener('input', () => {
             this.query = searchKey($('pool-search').value.trim());
+            this.renderEditor();
+            $('pool').scrollTop = 0;
+        });
+        $('pool-filter-open').addEventListener('click', () => this.openFilter());
+        closeOnBackdrop($('pool-filter'));
+        $('pool-filter').addEventListener('click', event => {
+            const option = event.target.closest('[data-group]');
+            if (option) this.filters[this.kind] = toggleFilter(this.filters[this.kind], option.dataset.group, option.dataset.option);
+            else if (event.target.closest('[data-clear]')) this.filters[this.kind] = {};
+            else if (event.target.closest('[data-close]')) return $('pool-filter').close();
+            else return;
+            this.renderFilter();
             this.renderEditor();
             $('pool').scrollTop = 0;
         });
@@ -166,6 +160,44 @@ export default class DeckScreens {
         this.renderEditor();
     }
 
+    // ===== 詳しい条件 =====
+
+    openFilter() {
+        this.renderFilter();
+        $('pool-filter').showModal();
+    }
+
+    renderFilter() {
+        const filters = this.filters[this.kind];
+        const kindLabel = KIND_TABS.find(tab => tab.kind === this.kind).label;
+        const groups = FILTER_GROUPS[this.kind].map(group => `<section class="filter-group">
+            <h3>${group.label}</h3>
+            <div class="filter-options">${group.options.map(option => {
+                const on = filters[group.id]?.includes(option.id) ?? false;
+                return `<button type="button" class="subtab ${on ? 'active' : ''}" data-group="${group.id}" data-option="${option.id}" aria-pressed="${on}">${option.icon ? energyDot(option.icon) : ''}${option.label}</button>`;
+            }).join('')}</div>
+        </section>`).join('');
+        $('pool-filter').innerHTML = `<div class="sheet-body">
+                <h2>${kindLabel}の詳しい条件<span class="filter-hits">${this.matches().length}種類</span></h2>
+                <p class="filter-hint">同じ項目の中は、どれかに合うカード。項目どうしは、すべてに合うカードを出します。</p>
+                ${groups}
+            </div>
+            <div class="sheet-actions">
+                <button type="button" class="btn btn-secondary" data-clear ${filterCount(this.kind, filters) ? '' : 'disabled'}>条件をクリア</button>
+                <button type="button" class="btn btn-primary" data-close>閉じる</button>
+            </div>`;
+    }
+
+    // 今の種類・名前・詳しい条件に合うカード
+    matches() {
+        const filters = this.filters[this.kind];
+        return CARD_POOL.filter(id => {
+            const card = getCard(id);
+            if (card.kind !== this.kind || !matchesFilters(card, filters)) return false;
+            return !this.query || searchKey(card.name).includes(this.query);
+        });
+    }
+
     renderEditor() {
         const deck = this.deck;
         const total = totalCount(deck);
@@ -176,17 +208,23 @@ export default class DeckScreens {
 
         $('pool-tabs').innerHTML = KIND_TABS.map(tab =>
             `<button type="button" class="segment-item ${tab.kind === this.kind ? 'active' : ''}" data-kind="${tab.kind}">${tab.label}</button>`).join('');
-        const subTabs = SUB_TABS[this.kind];
-        const sub = subTabs.find(tab => tab.id === this.sub) ?? subTabs[0];
-        $('pool-subtabs').innerHTML = subTabs.map(tab => `<button type="button" class="subtab ${tab.id === sub.id ? 'active' : ''}" data-sub="${tab.id}" role="tab" aria-selected="${tab.id === sub.id}">${tab.icon ? energyDot(tab.icon) : ''}${tab.label}</button>`).join('');
-        const matches = CARD_POOL.filter(id => {
-            const card = getCard(id);
-            if (card.kind !== this.kind || !sub.test(card)) return false;
-            return !this.query || searchKey(card.name).includes(this.query);
-        });
+        // 小さなタブ：「すべて」と、QUICK_GROUP の項目の選択肢（詳しい条件で複数選んだときは、そのすべてが光る）
+        const filters = this.filters[this.kind];
+        const quick = FILTER_GROUPS[this.kind].find(group => group.id === QUICK_GROUP[this.kind]);
+        const chosen = filters[quick.id] ?? [];
+        const subTabs = [{ id: 'all', label: 'すべて' }, ...quick.options];
+        $('pool-subtabs').innerHTML = subTabs.map(tab => {
+            const on = tab.id === 'all' ? chosen.length === 0 : chosen.includes(tab.id);
+            return `<button type="button" class="subtab ${on ? 'active' : ''}" data-sub="${tab.id}" role="tab" aria-selected="${on}">${tab.icon ? energyDot(tab.icon) : ''}${tab.label}</button>`;
+        }).join('');
+        // ボタンの数は、小さなタブで見えている項目を除いた条件の数
+        const active = filterCount(this.kind, filters) - chosen.length;
+        $('pool-filter-open').textContent = active ? `しぼりこみ ${active}` : 'しぼりこみ';
+        $('pool-filter-open').classList.toggle('active', active > 0);
+        const matches = this.matches();
         const shown = matches.slice(0, POOL_LIMIT);
         const note = matches.length === 0
-            ? '<p class="pool-note">見つかりませんでした</p>'
+            ? `<p class="pool-note">見つかりませんでした${active ? '（「しぼりこみ」の条件もお確かめください）' : ''}</p>`
             : matches.length > shown.length ? `<p class="pool-note">${matches.length}種類のうち${shown.length}種類を表示しています。名前や種類でしぼってください</p>` : '';
         $('pool').innerHTML = shown.map(id => {
             const count = deck.cards[id] ?? 0;

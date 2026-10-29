@@ -95,6 +95,7 @@
                 <div class="pool-bar">
                     <div id="pool-tabs" class="segment pool-tabs"></div>
                     <input id="pool-search" class="text-input pool-search" type="search" placeholder="さがす" autocomplete="off" aria-label="名前でさがす">
+                    <button id="pool-filter-open" type="button" class="filter-btn" aria-haspopup="dialog">しぼりこみ</button>
                 </div>
                 <div id="pool-subtabs" class="pool-subtabs" role="tablist" aria-label="しぼりこみ"></div>
                 <div id="pool" class="pool"></div>
@@ -150,6 +151,9 @@
 
     <!-- 確認（デッキの削除） -->
     <dialog id="confirm" class="sheet"></dialog>
+
+    <!-- デッキ構築の詳しい条件 -->
+    <dialog id="pool-filter" class="sheet pool-filter"></dialog>
 
     <!-- 決着 -->
     <dialog id="result" class="sheet result"></dialog>

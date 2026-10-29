@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { FILTER_GROUPS, matchesFilters, filterCount, toggleFilter } from '../public/js/card-filter.js';
+import { FILTER_GROUPS, matchesFilters, filterCount, setFilter, filterLabel } from '../public/js/card-filter.js';
 import { CARD_POOL } from '../public/js/deck-builder.js';
 import { getCard } from '../public/js/card-data.js';
 
@@ -60,12 +60,25 @@ describe('デッキ構築の詳しい条件', () => {
         expect(pick('pokemon', { hp: hp.options.map(option => option.id) }).length).toBe(pick('pokemon', {}).length);
     });
 
-    it('選択肢の切り替えと、選んでいる数', () => {
-        let filters = toggleFilter({}, 'stage', '0');
-        filters = toggleFilter(filters, 'rule', 'ex');
+    it('プルダウンで選ぶ：1つの項目に1つだけ。空を選ぶと条件が外れる', () => {
+        let filters = setFilter({}, 'stage', '0');
+        filters = setFilter(filters, 'rule', 'ex');
+        filters = setFilter(filters, 'stage', '1');
+        expect(filters.stage).toEqual(['1']);
         expect(filterCount('pokemon', filters)).toBe(2);
-        filters = toggleFilter(filters, 'stage', '0');
+        filters = setFilter(filters, 'stage', '');
         expect(filters.stage).toEqual([]);
         expect(filterCount('pokemon', filters)).toBe(1);
+    });
+
+    it('プルダウンの文字：選ぶ前は項目の名前、選んだあとは値（HP・にげる・マークは項目名つき）', () => {
+        const group = id => FILTER_GROUPS.pokemon.find(item => item.id === id);
+        expect(filterLabel(group('type'), {})).toBe('タイプ');
+        expect(filterLabel(group('type'), { type: ['fire'] })).toBe('炎');
+        expect(filterLabel(group('hp'), { hp: ['70-100'] })).toBe('HP 70〜100');
+        expect(filterLabel(group('retreat'), { retreat: ['1'] })).toBe('にげる 1');
+        expect(filterLabel(group('mark'), {})).toBe('マーク');
+        expect(filterLabel(group('mark'), { mark: ['J'] })).toBe('マーク J');
+        expect(filterLabel(FILTER_GROUPS.trainer.find(item => item.id === 'trainerType'), { trainerType: ['supporter'] })).toBe('サポート');
     });
 });

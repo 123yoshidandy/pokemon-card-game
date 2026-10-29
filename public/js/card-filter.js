@@ -1,7 +1,8 @@
 /**
  * デッキ構築の「詳しい条件」（公式のカード検索の絞り込みにならう）
  * 同じ項目の中は、どれかに合えばよい（または）。項目どうしは、すべてに合うものだけ（かつ）
- * filters は { 項目の id: [選んだ選択肢の id, ...] }。空の項目は条件にしない
+ * filters は { 項目の id: [選んだ選択肢の id, ...] }。空の項目は条件にしない（画面のプルダウンでは、1つの項目に1つだけ選ぶ）
+ * 項目の short はプルダウンに出す短い名前、prefix は選んだ値の前に項目名を付けるか（「HP 70〜100」「にげる 1」）
  */
 
 import { TYPE_NAMES } from './card-data.js';
@@ -21,6 +22,8 @@ const MARKS = ['H', 'I', 'J'];
 const markGroup = (withNone = false) => ({
     id: 'mark',
     label: 'レギュレーションマーク',
+    short: 'マーク',
+    prefix: true,
     options: [
         ...MARKS.map(mark => ({ id: mark, label: mark, test: card => card.regulation === mark })),
         ...(withNone ? [{ id: 'none', label: 'なし', test: card => !card.regulation }] : [])
@@ -69,6 +72,7 @@ export const FILTER_GROUPS = {
         {
             id: 'ability',
             label: '特性',
+            prefix: true,
             options: [
                 { id: 'yes', label: 'あり', test: card => Boolean(card.ability) },
                 { id: 'no', label: 'なし', test: card => !card.ability }
@@ -77,13 +81,15 @@ export const FILTER_GROUPS = {
         {
             id: 'hp',
             label: 'HP',
+            prefix: true,
             options: [hpRange(30, 60), hpRange(70, 100), hpRange(110, 150), hpRange(160, 200), hpRange(210, 250), hpRange(260, 300), hpRange(310)]
         },
-        { id: 'weakness', label: '弱点', options: typeOptions('weakness', TYPES.filter(type => type !== 'dragon' && type !== 'colorless')) },
-        { id: 'resistance', label: '抵抗力', options: typeOptions('resistance', TYPES.filter(type => type !== 'dragon' && type !== 'colorless')) },
+        { id: 'weakness', label: '弱点', prefix: true, options: typeOptions('weakness', TYPES.filter(type => type !== 'dragon' && type !== 'colorless')) },
+        { id: 'resistance', label: '抵抗力', prefix: true, options: typeOptions('resistance', TYPES.filter(type => type !== 'dragon' && type !== 'colorless')) },
         {
             id: 'retreat',
             label: 'にげる',
+            prefix: true,
             options: [0, 1, 2, 3, 4].map(n => ({ id: String(n), label: n === 4 ? '4以上' : String(n), test: card => (n === 4 ? card.retreat >= 4 : card.retreat === n) }))
         },
         markGroup()
@@ -92,6 +98,7 @@ export const FILTER_GROUPS = {
         {
             id: 'trainerType',
             label: 'トレーナーズの種類',
+            short: '種類',
             options: [
                 { id: 'supporter', label: 'サポート', test: card => card.trainerType === 'supporter' },
                 { id: 'item', label: 'グッズ', test: card => card.trainerType === 'item' },
@@ -107,6 +114,7 @@ export const FILTER_GROUPS = {
         {
             id: 'energyKind',
             label: 'エネルギーの種類',
+            short: '種類',
             options: [
                 { id: 'basic', label: '基本エネルギー', test: card => Boolean(card.basic) },
                 { id: 'special', label: '特殊エネルギー', test: card => !card.basic }
@@ -117,9 +125,6 @@ export const FILTER_GROUPS = {
     ]
 };
 
-// 画面の上の小さなタブで切り替える項目（タブは、この項目の選択肢を1つだけ選ぶ近道）
-export const QUICK_GROUP = { pokemon: 'type', trainer: 'trainerType', energy: 'energyKind' };
-
 export function matchesFilters(card, filters) {
     for (const group of FILTER_GROUPS[card.kind] ?? []) {
         const chosen = filters[group.id];
@@ -129,14 +134,20 @@ export function matchesFilters(card, filters) {
     return true;
 }
 
-// 選んでいる条件の数（ボタンに出す）
+// 選んでいる条件の数
 export function filterCount(kind, filters) {
     return (FILTER_GROUPS[kind] ?? []).reduce((sum, group) => sum + (filters[group.id]?.length ?? 0), 0);
 }
 
-// 選択肢を1つ切り替えた、新しい filters を返す
-export function toggleFilter(filters, groupId, optionId) {
-    const chosen = filters[groupId] ?? [];
-    const next = chosen.includes(optionId) ? chosen.filter(id => id !== optionId) : [...chosen, optionId];
-    return { ...filters, [groupId]: next };
+// 項目の選択肢を1つだけ選んだ（optionId が空なら、その項目の条件を外した）、新しい filters を返す
+export function setFilter(filters, groupId, optionId) {
+    return { ...filters, [groupId]: optionId ? [optionId] : [] };
+}
+
+// プルダウンに出す文字（選んでいなければ項目の名前、選んでいれば選んだ値）
+export function filterLabel(group, filters) {
+    const option = group.options.find(item => filters[group.id]?.includes(item.id));
+    const name = group.short ?? group.label;
+    if (!option) return name;
+    return group.prefix ? `${name} ${option.label}` : option.label;
 }

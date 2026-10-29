@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { addCard, removeCard, canAdd, totalCount, deckProblem, mainEnergyType, sortedEntries, CARD_POOL } from '../public/js/deck-builder.js';
 import { createDeckStore } from '../public/js/deck-store.js';
 import { DECKS } from '../public/js/decks.js';
+import { getCard } from '../public/js/card-data.js';
 import { C } from './helpers.js';
 
 const empty = () => ({ id: 'd', name: 'テスト', cards: {} });
@@ -83,5 +84,24 @@ describe('デッキの保存', () => {
         expect(store.custom()).toEqual([]);
         expect(() => store.create()).not.toThrow();
         expect(createDeckStore(null).all()).toHaveLength(DECKS.length);
+    });
+});
+
+describe('カード一覧の並び', () => {
+    const pokemon = CARD_POOL.map(getCard).filter(card => card.kind === 'pokemon');
+    const positions = names => pokemon.flatMap((card, index) => (names.includes(card.name) ? [index] : []));
+
+    it('進化ラインごとに続けて並び、ラインの中はたね → 1進化 → 2進化', () => {
+        const line = positions(['ヒトカゲ', 'リザード', 'メガリザードンXex', 'メガリザードンYex']);
+        expect(line.length).toBeGreaterThan(3);
+        expect(line.at(-1) - line[0]).toBe(line.length - 1);
+        const stages = line.map(index => pokemon[index].stage);
+        expect(stages).toEqual([...stages].sort((a, b) => a - b));
+    });
+
+    it('進化でタイプが変わっても、たねポケモンのラインにまとめる。たねの ex も同じライン', () => {
+        const line = positions(['イーブイ', 'イーブイex', 'シャワーズex', 'サンダースex', 'ブースターex', 'エーフィex', 'ブラッキーex', 'リーフィア', 'リーフィアex', 'グレイシア', 'グレイシアex', 'ニンフィア', 'ニンフィアex']);
+        expect(line.at(-1) - line[0]).toBe(line.length - 1);
+        expect(pokemon[line[0]].name).toBe('イーブイ');
     });
 });

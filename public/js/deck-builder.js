@@ -9,21 +9,53 @@ import { expandDeck } from './decks.js';
 import { isStandardLegal } from './regulation.js';
 
 // デッキ構築で使えるカード（スタンダードで使えて、効果が動くものだけ）
-// ポケモン（タイプ → 進化の段階 → 名前）→ トレーナーズ（種類 → 名前）→ エネルギー の順
+// ポケモン（進化ラインごと）→ トレーナーズ（種類 → 名前）→ エネルギー の順
 const KIND_ORDER = { pokemon: 0, trainer: 1, energy: 2 };
 const TYPE_ORDER = ['grass', 'fire', 'water', 'lightning', 'psychic', 'fighting', 'darkness', 'metal', 'dragon', 'colorless'];
 const TRAINER_ORDER = ['supporter', 'item', 'tool', 'stadium'];
+const legalCards = Object.values(CARDS).filter(card => isStandardLegal(card) && card.supported);
+
+// 進化ライン：進化元をたどった先（いちばん元のたねポケモン、または化石）の名前
+// 同じ名前でも版によって進化元が違うことがある（ナッシー ← タマタマ／アローラナッシー）ので、いちばん多いものを使う
+const FROM_VOTES = new Map();
+for (const card of Object.values(CARDS)) {
+    if (card.kind !== 'pokemon' || !card.evolvesFrom) continue;
+    const votes = FROM_VOTES.get(card.name) ?? new Map();
+    votes.set(card.evolvesFrom, (votes.get(card.evolvesFrom) ?? 0) + 1);
+    FROM_VOTES.set(card.name, votes);
+}
+const EVOLVES_FROM = new Map([...FROM_VOTES].map(([name, votes]) => [name, [...votes].sort((a, b) => b[1] - a[1])[0][0]]));
+// たねの ex（イーブイex）は、ex のつかない同じ名前のラインに入れる
+function lineRoot(name) {
+    const seen = new Set([name]);
+    while (EVOLVES_FROM.has(name) && !seen.has(EVOLVES_FROM.get(name))) {
+        name = EVOLVES_FROM.get(name);
+        seen.add(name);
+    }
+    return name.replace(/ex$/, '');
+}
+// ラインの並び順は、そのラインでいちばん進化の段階が低いカードのタイプ（イーブイのように、進化でタイプが変わっても1か所にまとめる）
+const LINE_TYPE = new Map();
+for (const card of legalCards.filter(item => item.kind === 'pokemon').sort((a, b) => a.stage - b.stage)) {
+    const root = lineRoot(card.name);
+    if (!LINE_TYPE.has(root)) LINE_TYPE.set(root, TYPE_ORDER.indexOf(card.type));
+}
+
+// [大きな並び, ライン（ポケモンだけ）, ライン内の並び]
 const orderKey = card => {
-    if (card.kind === 'pokemon') return [TYPE_ORDER.indexOf(card.type), card.stage];
-    if (card.kind === 'trainer') return [TRAINER_ORDER.indexOf(card.trainerType), 0];
-    return [card.basic ? TYPE_ORDER.indexOf(card.energyType) : 99, 0];
+    if (card.kind === 'pokemon') {
+        const root = lineRoot(card.name);
+        return [LINE_TYPE.get(root), root, card.stage];
+    }
+    if (card.kind === 'trainer') return [TRAINER_ORDER.indexOf(card.trainerType), '', 0];
+    return [card.basic ? TYPE_ORDER.indexOf(card.energyType) : 99, '', 0];
 };
-export const CARD_POOL = Object.values(CARDS)
-    .filter(card => isStandardLegal(card) && card.supported)
+export const CARD_POOL = legalCards
     .sort((a, b) => {
-        const [a1, a2] = orderKey(a);
-        const [b1, b2] = orderKey(b);
-        return KIND_ORDER[a.kind] - KIND_ORDER[b.kind] || a1 - b1 || a2 - b2 || a.name.localeCompare(b.name, 'ja') || a.id.localeCompare(b.id);
+        const [a1, a2, a3] = orderKey(a);
+        const [b1, b2, b3] = orderKey(b);
+        return KIND_ORDER[a.kind] - KIND_ORDER[b.kind] || a1 - b1 || a2.localeCompare(b2, 'ja') || a3 - b3
+            || a.name.localeCompare(b.name, 'ja') || a.id.localeCompare(b.id);
     })
     .map(card => card.id);
 const POOL_INDEX = new Map(CARD_POOL.map((id, index) => [id, index]));

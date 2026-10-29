@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { addCard, removeCard, canAdd, totalCount, deckProblem, mainEnergyType, sortedEntries, CARD_POOL } from '../public/js/deck-builder.js';
 import { createDeckStore } from '../public/js/deck-store.js';
 import { DECKS } from '../public/js/decks.js';
-import { getCard } from '../public/js/card-data.js';
+import { getCard, CARDS, resolveCardId } from '../public/js/card-data.js';
 import { C } from './helpers.js';
 
 const empty = () => ({ id: 'd', name: 'テスト', cards: {} });
@@ -103,5 +103,32 @@ describe('カード一覧の並び', () => {
         const line = positions(['イーブイ', 'イーブイex', 'シャワーズex', 'サンダースex', 'ブースターex', 'エーフィex', 'ブラッキーex', 'リーフィア', 'リーフィアex', 'グレイシア', 'グレイシアex', 'ニンフィア', 'ニンフィアex']);
         expect(line.at(-1) - line[0]).toBe(line.length - 1);
         expect(pokemon[line[0]].name).toBe('イーブイ');
+    });
+});
+
+describe('進化元', () => {
+    // TCGdex にないパックにしか、進化元のカードがないもの
+    const NO_DATA = ['マリィのギモー', 'ダイゴのメタング'];
+    const all = Object.values(CARDS).filter(card => card.kind === 'pokemon');
+    const stagesOf = name => new Set(all.filter(card => card.name === name).map(card => card.stage));
+
+    it('進化元は、進化の段階がちょうど1つ下のポケモン（化石は除く）', () => {
+        const wrong = all
+            .filter(card => card.evolvesFrom && !/化石/.test(card.evolvesFrom) && !NO_DATA.includes(card.evolvesFrom))
+            .filter(card => !stagesOf(card.evolvesFrom).has(card.stage - 1))
+            .map(card => `${card.name}（${card.id}）← ${card.evolvesFrom}`);
+        expect(wrong).toEqual([]);
+    });
+
+    it('同じ名前のポケモンは、どの版でも進化元が同じ', () => {
+        const fromOf = new Map();
+        for (const card of all.filter(item => item.evolvesFrom)) fromOf.set(card.name, new Set([...(fromOf.get(card.name) ?? []), card.evolvesFrom]));
+        expect([...fromOf].filter(([, froms]) => froms.size > 1).map(([name, froms]) => `${name}：${[...froms].join('／')}`)).toEqual([]);
+    });
+
+    it('TCGdex の誤りを直したもの：ナッシーはタマタマから、メガリザードンXex はリザードから進化する', () => {
+        expect(getCard(resolveCardId('M1L-005')).evolvesFrom).toBe('タマタマ');
+        expect(all.filter(card => card.name === 'メガリザードンXex').every(card => card.evolvesFrom === 'リザード')).toBe(true);
+        expect(all.find(card => card.name === 'アローラ ゴローン').evolvesFrom).toBe('アローラ イシツブテ');
     });
 });

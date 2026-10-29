@@ -148,10 +148,30 @@ function applyTextFixes(card) {
     (card.attacks ?? []).forEach(attack => { if (fixes[`attack:${attack.name}`]) attack.text = fixes[`attack:${attack.name}`]; });
 }
 
+// TCGdex の進化元の誤りを直す（版の番号 → 正しい進化元。Limitless TCG のページと進化の系統で確かめたもの）
+const EVOLUTION_FIXES = {
+    'M1L-005': 'タマタマ', 'M1L-066': 'タマタマ', // アローラナッシー と書かれている
+    'M1L-009': 'コノハナ', // ダーテングGX
+    'M2-003': 'クサイハナ', // ラフレシアGX
+    'M2-013': 'リザード', 'M2-094': 'リザード', 'M2-110': 'リザード', 'M2-116': 'リザード', // メガリザードンYex
+    'M2-020': 'カルボウ', // グレンアルマex
+    'M2-038': 'モンメン', // エルフーンex
+    'M3-049': 'ゴースト' // メガゲンガーex
+};
+// 空白や全角・半角の違いだけなら、実在するポケモンの名前に合わせる（アローライシツブテ → アローラ イシツブテ）
+const looseName = name => name.normalize('NFKC').replace(/\s+/g, '');
+const POKEMON_NAMES = new Map(prints.filter(print => print.category === 'Pokemon').map(print => [looseName(print.name), print.name]));
+function fixEvolution(card) {
+    if (card.kind !== 'pokemon' || !card.evolvesFrom) return;
+    if (EVOLUTION_FIXES[card.id]) card.evolvesFrom = EVOLUTION_FIXES[card.id];
+    else if (!/化石/.test(card.evolvesFrom)) card.evolvesFrom = POKEMON_NAMES.get(looseName(card.evolvesFrom)) ?? card.evolvesFrom;
+}
+
 const groups = new Map();
 for (const print of prints) {
     const card = convert(print);
     applyTextFixes(card);
+    fixEvolution(card);
     if (card.text !== undefined) card.text = stripReminders(card.text);
     const key = card.kind === 'pokemon' ? signature(card) : card.kind === 'energy' && card.basic ? card.id : `${card.kind}:${card.name}`;
     if (!groups.has(key)) groups.set(key, []);
@@ -181,6 +201,18 @@ catalog.filter(card => card.kind === 'pokemon' && card.stage > 0 && !card.evolve
     if (!card.evolvesFrom) missingFrom.push(`${card.name}（${card.id}）`);
 });
 if (missingFrom.length) console.log(`進化元がわからない進化ポケモン：${missingFrom.join('・')}`);
+
+// 進化元の確かめ：その名前のポケモンがいて、進化の段階がちょうど1つ下か（新しいパックで TCGdex の誤りが入っても気づけるように）
+const stagesOf = new Map();
+for (const card of catalog.filter(item => item.kind === 'pokemon')) stagesOf.set(card.name, new Set([...(stagesOf.get(card.name) ?? []), card.stage]));
+const allNames = new Set(prints.filter(print => print.category === 'Pokemon').map(print => print.name));
+const badFrom = catalog.filter(card => card.kind === 'pokemon' && card.evolvesFrom && !/化石/.test(card.evolvesFrom)).flatMap(card => {
+    if (!allNames.has(card.evolvesFrom)) return [`${card.name}（${card.id}）← ${card.evolvesFrom}：その名前のポケモンがいない`];
+    const stages = stagesOf.get(card.evolvesFrom);
+    if (stages && !stages.has(card.stage - 1)) return [`${card.name}（${card.id}）← ${card.evolvesFrom}：進化の段階が合わない`];
+    return [];
+});
+if (badFrom.length) console.log(`進化元を確かめたいポケモン：\n  ${badFrom.join('\n  ')}`);
 
 const KIND_ORDER = { pokemon: 0, trainer: 1, energy: 2 };
 catalog.sort((a, b) => KIND_ORDER[a.kind] - KIND_ORDER[b.kind] || a.id.localeCompare(b.id));

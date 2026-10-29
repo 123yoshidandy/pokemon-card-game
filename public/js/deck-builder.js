@@ -16,15 +16,10 @@ const TRAINER_ORDER = ['supporter', 'item', 'tool', 'stadium'];
 const legalCards = Object.values(CARDS).filter(card => isStandardLegal(card) && card.supported);
 
 // 進化ライン：進化元をたどった先（いちばん元のたねポケモン、または化石）の名前
-// 同じ名前でも版によって進化元が違うことがある（ナッシー ← タマタマ／アローラナッシー）ので、いちばん多いものを使う
-const FROM_VOTES = new Map();
+const EVOLVES_FROM = new Map();
 for (const card of Object.values(CARDS)) {
-    if (card.kind !== 'pokemon' || !card.evolvesFrom) continue;
-    const votes = FROM_VOTES.get(card.name) ?? new Map();
-    votes.set(card.evolvesFrom, (votes.get(card.evolvesFrom) ?? 0) + 1);
-    FROM_VOTES.set(card.name, votes);
+    if (card.kind === 'pokemon' && card.evolvesFrom && !EVOLVES_FROM.has(card.name)) EVOLVES_FROM.set(card.name, card.evolvesFrom);
 }
-const EVOLVES_FROM = new Map([...FROM_VOTES].map(([name, votes]) => [name, [...votes].sort((a, b) => b[1] - a[1])[0][0]]));
 // たねの ex（イーブイex）は、ex のつかない同じ名前のラインに入れる
 function lineRoot(name) {
     const seen = new Set([name]);

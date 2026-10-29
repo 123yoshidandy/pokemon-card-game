@@ -6,10 +6,10 @@
 import { getCard } from '../card-data.js';
 import { DECK_SIZE } from '../deck-rules.js';
 import { CARD_POOL, addCard, removeCard, canAdd, totalCount, deckProblem, sortedEntries } from '../deck-builder.js';
-import { FILTER_GROUPS, QUICK_GROUP, matchesFilters, filterCount, toggleFilter } from '../card-filter.js';
+import { FILTER_GROUPS, matchesFilters, filterCount, setFilter, filterLabel } from '../card-filter.js';
 import { cardFace, energyDot } from './card-view.js';
 import { bindPress } from './press.js';
-import { showDetail, showConfirm, closeOnBackdrop } from './sheets.js';
+import { showDetail, showConfirm } from './sheets.js';
 
 const $ = id => document.getElementById(id);
 
@@ -39,7 +39,7 @@ export default class DeckScreens {
         this.deck = null;
         this.kind = 'pokemon';
         this.query = '';
-        // 詳しい条件（種類ごとに覚えておく）。上の小さなタブも、この中の QUICK_GROUP の項目を切り替える
+        // しぼりこみの条件（種類ごとに覚えておく）
         this.filters = { pokemon: {}, trainer: {}, energy: {} };
         this.bind();
     }
@@ -74,33 +74,29 @@ export default class DeckScreens {
             const tab = event.target.closest('[data-kind]');
             if (!tab) return;
             this.kind = tab.dataset.kind;
+            this.renderFilters();
             this.renderEditor();
             $('pool').scrollTop = 0;
-            $('pool-subtabs').scrollLeft = 0;
+            $('pool-filters').scrollLeft = 0;
         });
-        $('pool-subtabs').addEventListener('click', event => {
-            const tab = event.target.closest('[data-sub]');
-            if (!tab) return;
-            // 「すべて」はその項目の条件を外す。ほかは、その1つだけを選ぶ
-            const groupId = QUICK_GROUP[this.kind];
-            this.filters[this.kind] = { ...this.filters[this.kind], [groupId]: tab.dataset.sub === 'all' ? [] : [tab.dataset.sub] };
+        // 項目ごとのプルダウン（先頭の「すべて」は、その項目の条件を外す）
+        $('pool-filters').addEventListener('change', event => {
+            const select = event.target.closest('select[data-group]');
+            if (!select) return;
+            this.filters[this.kind] = setFilter(this.filters[this.kind], select.dataset.group, select.value);
+            this.renderFilters();
+            this.renderEditor();
+            $('pool').scrollTop = 0;
+        });
+        $('pool-filters').addEventListener('click', event => {
+            if (!event.target.closest('[data-clear]')) return;
+            this.filters[this.kind] = {};
+            this.renderFilters();
             this.renderEditor();
             $('pool').scrollTop = 0;
         });
         $('pool-search').addEventListener('input', () => {
             this.query = searchKey($('pool-search').value.trim());
-            this.renderEditor();
-            $('pool').scrollTop = 0;
-        });
-        $('pool-filter-open').addEventListener('click', () => this.openFilter());
-        closeOnBackdrop($('pool-filter'));
-        $('pool-filter').addEventListener('click', event => {
-            const option = event.target.closest('[data-group]');
-            if (option) this.filters[this.kind] = toggleFilter(this.filters[this.kind], option.dataset.group, option.dataset.option);
-            else if (event.target.closest('[data-clear]')) this.filters[this.kind] = {};
-            else if (event.target.closest('[data-close]')) return $('pool-filter').close();
-            else return;
-            this.renderFilter();
             this.renderEditor();
             $('pool').scrollTop = 0;
         });
@@ -150,6 +146,7 @@ export default class DeckScreens {
         if (!this.deck) return this.showList();
         $('deck-name').value = this.deck.name;
         this.handlers.show('editor');
+        this.renderFilters();
         this.renderEditor();
         $('pool').scrollTop = 0;
     }
@@ -160,35 +157,27 @@ export default class DeckScreens {
         this.renderEditor();
     }
 
-    // ===== 詳しい条件 =====
+    // ===== しぼりこみ =====
 
-    openFilter() {
-        this.renderFilter();
-        $('pool-filter').showModal();
-    }
-
-    renderFilter() {
+    // 項目ごとのプルダウンを並べる。見えるのは自分で描いたボタンで、その上に透明な select を重ね、
+    // タップすると端末の選択画面が開く。カードを足すたびには描き直さない（横のスクロールが戻らないように）
+    renderFilters() {
         const filters = this.filters[this.kind];
-        const kindLabel = KIND_TABS.find(tab => tab.kind === this.kind).label;
-        const groups = FILTER_GROUPS[this.kind].map(group => `<section class="filter-group">
-            <h3>${group.label}</h3>
-            <div class="filter-options">${group.options.map(option => {
-                const on = filters[group.id]?.includes(option.id) ?? false;
-                return `<button type="button" class="subtab ${on ? 'active' : ''}" data-group="${group.id}" data-option="${option.id}" aria-pressed="${on}">${option.icon ? energyDot(option.icon) : ''}${option.label}</button>`;
-            }).join('')}</div>
-        </section>`).join('');
-        $('pool-filter').innerHTML = `<div class="sheet-body">
-                <h2>${kindLabel}の詳しい条件<span class="filter-hits">${this.matches().length}種類</span></h2>
-                <p class="filter-hint">同じ項目の中は、どれかに合うカード。項目どうしは、すべてに合うカードを出します。</p>
-                ${groups}
-            </div>
-            <div class="sheet-actions">
-                <button type="button" class="btn btn-secondary" data-clear ${filterCount(this.kind, filters) ? '' : 'disabled'}>条件をクリア</button>
-                <button type="button" class="btn btn-primary" data-close>閉じる</button>
-            </div>`;
+        const selects = FILTER_GROUPS[this.kind].map(group => {
+            const chosen = group.options.find(option => filters[group.id]?.includes(option.id));
+            const name = group.short ?? group.label;
+            const options = [`<option value="">${name}：すべて</option>`, ...group.options.map(option =>
+                `<option value="${option.id}" ${option === chosen ? 'selected' : ''}>${option.label}</option>`)].join('');
+            return `<label class="filter-select ${chosen ? 'active' : ''}">
+                ${chosen?.icon ? energyDot(chosen.icon) : ''}<span>${filterLabel(group, filters)}</span><span class="filter-caret" aria-hidden="true">▾</span>
+                <select data-group="${group.id}" aria-label="${group.label}">${options}</select>
+            </label>`;
+        }).join('');
+        const clear = filterCount(this.kind, filters) ? '<button type="button" class="filter-clear" data-clear>クリア</button>' : '';
+        $('pool-filters').innerHTML = clear + selects;
     }
 
-    // 今の種類・名前・詳しい条件に合うカード
+    // 今の種類・名前・しぼりこみの条件に合うカード
     matches() {
         const filters = this.filters[this.kind];
         return CARD_POOL.filter(id => {
@@ -208,23 +197,11 @@ export default class DeckScreens {
 
         $('pool-tabs').innerHTML = KIND_TABS.map(tab =>
             `<button type="button" class="segment-item ${tab.kind === this.kind ? 'active' : ''}" data-kind="${tab.kind}">${tab.label}</button>`).join('');
-        // 小さなタブ：「すべて」と、QUICK_GROUP の項目の選択肢（詳しい条件で複数選んだときは、そのすべてが光る）
-        const filters = this.filters[this.kind];
-        const quick = FILTER_GROUPS[this.kind].find(group => group.id === QUICK_GROUP[this.kind]);
-        const chosen = filters[quick.id] ?? [];
-        const subTabs = [{ id: 'all', label: 'すべて' }, ...quick.options];
-        $('pool-subtabs').innerHTML = subTabs.map(tab => {
-            const on = tab.id === 'all' ? chosen.length === 0 : chosen.includes(tab.id);
-            return `<button type="button" class="subtab ${on ? 'active' : ''}" data-sub="${tab.id}" role="tab" aria-selected="${on}">${tab.icon ? energyDot(tab.icon) : ''}${tab.label}</button>`;
-        }).join('');
-        // ボタンの数は、小さなタブで見えている項目を除いた条件の数
-        const active = filterCount(this.kind, filters) - chosen.length;
-        $('pool-filter-open').textContent = active ? `しぼりこみ ${active}` : 'しぼりこみ';
-        $('pool-filter-open').classList.toggle('active', active > 0);
+        const active = filterCount(this.kind, this.filters[this.kind]);
         const matches = this.matches();
         const shown = matches.slice(0, POOL_LIMIT);
         const note = matches.length === 0
-            ? `<p class="pool-note">見つかりませんでした${active ? '（「しぼりこみ」の条件もお確かめください）' : ''}</p>`
+            ? `<p class="pool-note">見つかりませんでした${active ? '（しぼりこみの条件もお確かめください）' : ''}</p>`
             : matches.length > shown.length ? `<p class="pool-note">${matches.length}種類のうち${shown.length}種類を表示しています。名前や種類でしぼってください</p>` : '';
         $('pool').innerHTML = shown.map(id => {
             const count = deck.cards[id] ?? 0;

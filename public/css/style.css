@@ -322,7 +322,7 @@ button { font: inherit; color: inherit; }
     display: grid;
     grid-template-rows: auto auto minmax(0, 1fr);
     gap: 6px;
-    padding: 6px 6px 0 8px;
+    padding: 6px 8px 0;
     min-height: 0;
     min-width: 0;
     overflow: hidden; /* 右のデッキの欄に重ならないように */
@@ -343,6 +343,14 @@ button { font: inherit; color: inherit; }
     min-width: 0;
 }
 .pool-filters::-webkit-scrollbar { display: none; }
+/* 続きがある側の端を薄くする（どちらの側かは JS がクラスで知らせる） */
+.pool-filters { --fade-l: 0px; --fade-r: 0px; }
+.pool-filters.more-left { --fade-l: 28px; }
+.pool-filters.more-right { --fade-r: 28px; }
+.pool-filters.more-left, .pool-filters.more-right {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 var(--fade-l), #000 calc(100% - var(--fade-r)), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 var(--fade-l), #000 calc(100% - var(--fade-r)), transparent);
+}
 /* 見えるのはこのボタン。上に透明な select を重ねて、タップで端末の選択画面を開く */
 .filter-select {
     position: relative;

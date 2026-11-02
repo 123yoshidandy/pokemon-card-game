@@ -78,7 +78,10 @@ export default class DeckScreens {
             this.renderEditor();
             $('pool').scrollTop = 0;
             $('pool-filters').scrollLeft = 0;
+            this.updateFilterFade();
         });
+        $('pool-filters').addEventListener('scroll', () => this.updateFilterFade(), { passive: true });
+        window.addEventListener('resize', () => this.updateFilterFade());
         // 項目ごとのプルダウン（先頭の「すべて」は、その項目の条件を外す）
         $('pool-filters').addEventListener('change', event => {
             const select = event.target.closest('select[data-group]');
@@ -175,6 +178,14 @@ export default class DeckScreens {
         }).join('');
         const clear = filterCount(this.kind, filters) ? '<button type="button" class="filter-clear" data-clear>クリア</button>' : '';
         $('pool-filters').innerHTML = clear + selects;
+        this.updateFilterFade();
+    }
+
+    // 横に続きがある側の端を薄くして、スクロールできることを伝える（途中で切れたボタンに見えないように）
+    updateFilterFade() {
+        const row = $('pool-filters');
+        row.classList.toggle('more-left', row.scrollLeft > 1);
+        row.classList.toggle('more-right', row.scrollLeft + row.clientWidth < row.scrollWidth - 1);
     }
 
     // 今の種類・名前・しぼりこみの条件に合うカード

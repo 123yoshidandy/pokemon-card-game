@@ -349,8 +349,16 @@ export default class DeckScreens {
         const entries = sortedEntries(deck);
         // 同じ名前で中身の違うカードは、一覧と同じく特性かワザの名前を添えて見分ける
         const sub = card => (hintText(card) ? `<span class="deck-card-sub">${escape(hintText(card))}</span>` : '');
+        // 種類の切れ目に、その種類の枚数の見出しを入れる
+        const kindTotals = {};
+        entries.forEach(([id, count]) => { kindTotals[getCard(id).kind] = (kindTotals[getCard(id).kind] ?? 0) + count; });
+        const heading = (id, index) => {
+            const kind = getCard(id).kind;
+            if (index > 0 && getCard(entries[index - 1][0]).kind === kind) return '';
+            return `<li class="deck-kind">${KIND_TABS.find(tab => tab.kind === kind).label}<span>${kindTotals[kind]}</span></li>`;
+        };
         $('deck-cards').innerHTML = entries.length
-            ? entries.map(([id, count]) => `<li class="deck-card-row">
+            ? entries.map(([id, count], index) => `${heading(id, index)}<li class="deck-card-row">
                 <span class="deck-card-name" data-row="${id}">${escape(getCard(id).name)}${sub(getCard(id))}</span>
                 <button type="button" class="step-btn" data-minus="${id}" aria-label="減らす">−</button>
                 <span class="deck-card-count">${count}</span>

@@ -263,7 +263,7 @@ export default class GameScreen {
         const view = this.controller.getView();
         if (!view) return;
         this.view = view;
-        this.animator.capture(); // 描き直す前の場の位置（きぜつの演出に使う）
+        this.animator.capture(view); // 描き直す前の場の位置（きぜつの演出に使う）
         const me = view.players[view.viewerId];
         const opp = view.players[1 - view.viewerId];
         const prompt = this.myPrompt();

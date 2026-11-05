@@ -28,7 +28,10 @@ export default class Animator {
     }
 
     // 描き直す前に呼ぶ
-    capture() {
+    // view：これから描くビュー。まだ見せていないきぜつがあるときだけ写す（位置を測るとレイアウトの計算が走るため）
+    capture(view) {
+        const fresh = this.lastSeq !== null && (view?.events ?? []).some(event => event.seq > this.lastSeq && event.type === 'knockout');
+        if (!fresh) return;
         this.tiles = new Map([...document.querySelectorAll('#game-screen .slot [data-pokemon]')]
             .map(element => [element.dataset.pokemon, { rect: element.getBoundingClientRect(), html: element.outerHTML }]));
     }

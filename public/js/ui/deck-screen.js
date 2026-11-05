@@ -312,10 +312,11 @@ export default class DeckScreens {
         pool.querySelector('.pool-more')?.remove();
         this.poolObserver.disconnect();
         const next = this.poolIds.slice(this.poolShown, this.poolShown + POOL_CHUNK);
+        const start = this.poolShown;
         this.poolShown += next.length;
         pool.insertAdjacentHTML('beforeend', next.map(id =>
             `<div class="pool-card" data-card="${id}">${cardFace(id)}</div>`).join(''));
-        this.updatePoolMarks();
+        this.updatePoolMarks([...pool.querySelectorAll('.pool-card')].slice(start));
         if (this.poolShown < this.poolIds.length) {
             pool.insertAdjacentHTML('beforeend', '<div class="pool-more" aria-hidden="true"></div>');
             this.poolObserver.observe(pool.querySelector('.pool-more'));
@@ -323,10 +324,11 @@ export default class DeckScreens {
     }
 
     // 一覧の、デッキに入っている枚数と、もう足せないカードの印
-    updatePoolMarks() {
+    // elements を渡すと、そのカードだけに付ける（書き足した分だけ）
+    updatePoolMarks(elements = $('pool').querySelectorAll('.pool-card')) {
         const deck = this.deck;
         const full = totalCount(deck) >= DECK_SIZE;
-        for (const element of $('pool').querySelectorAll('.pool-card')) {
+        for (const element of elements) {
             const id = element.dataset.card;
             const count = deck.cards[id] ?? 0;
             const maxed = !canAdd(deck, id);

@@ -140,7 +140,7 @@ export default class Game {
         this.promptChoose({
             player: winner,
             options: ['先攻', '後攻'],
-            title: '先攻・後攻を選ぶ',
+            title: 'コイントスに勝った。先攻・後攻を選ぶ（先攻は最初の番にワザとサポートを使えない）',
             purpose: 'first-player',
             callback: ([index]) => {
                 this.firstPlayer = index === 0 ? winner.id : 1 - winner.id;
@@ -370,7 +370,7 @@ export default class Game {
             max: 1,
             // きぜつで空いたなら、理由を添える（なぜ選ぶのかがわかるように）
             title: player.knockedOutTurn === this.turn && player.knockedOutNames?.length
-                ? `${player.knockedOutNames.at(-1)}がきぜつ：次にバトル場に出すポケモンを選ぶ`
+                ? `${player.knockedOutNames.at(-1)}がきぜつした。次にバトル場に出すポケモンを選ぶ`
                 : 'バトル場に出すポケモンを選ぶ',
             purpose: 'promote',
             callback: ([pokemon]) => {

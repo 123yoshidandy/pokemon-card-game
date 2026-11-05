@@ -67,6 +67,12 @@ function retreatText(printed, actual) {
     return actual === undefined || actual === printed ? dots(printed) : `<s>${dots(printed)}</s> → ${dots(actual)}`;
 }
 
+// カードの文。エネルギーの記号（[F] など）を、エネルギーの小さな印に置き換える
+const ENERGY_CODES = { G: 'grass', R: 'fire', W: 'water', L: 'lightning', P: 'psychic', F: 'fighting', D: 'darkness', M: 'metal', N: 'dragon', C: 'colorless' };
+function cardText(text) {
+    return escape(text).replace(/\[([GRWLPFDMNC])\]/g, (_, code) => energyDot(ENERGY_CODES[code]));
+}
+
 // 特殊エネルギーが出すタイプ（どのタイプにもなる・わからないものは空）
 function specialEnergyTypes(card) {
     try {
@@ -163,16 +169,16 @@ export function cardDetail(id, pokemon = null) {
         if (card.rule) parts.push(`<div class="detail-rule">${RULE_TEXTS[card.rule]}</div>`);
         if (card.tera) parts.push('<div class="detail-rule">テラスタル：このポケモンがベンチにいるかぎり、ワザのダメージを受けない。</div>');
         if (card.ability) {
-            parts.push(`<div class="detail-block" data-ability><div class="detail-title"><span class="tag tag-ability">特性</span>${escape(card.ability.name)}</div><p>${escape(card.ability.text)}</p></div>`);
+            parts.push(`<div class="detail-block" data-ability><div class="detail-title"><span class="tag tag-ability">特性</span>${escape(card.ability.name)}</div><p>${cardText(card.ability.text)}</p></div>`);
         }
         // カードのワザのあとに、どうぐ・特性などで使えるワザ（場のポケモンの extraAttacks）を続ける
         [...card.attacks, ...(pokemon?.extraAttacks ?? [])].forEach((attack, index) => {
             const extra = index >= card.attacks.length ? '<span class="tag tag-ability">ほかのカードのワザ</span>' : '';
-            parts.push(`<div class="detail-block" data-attack="${index}"><div class="detail-title">${costDots(attack.cost)}<span class="attack-name">${escape(attack.name)}</span><span class="attack-damage">${escape(attack.damageText)}</span>${extra}</div>${attack.text ? `<p>${escape(attack.text)}</p>` : ''}</div>`);
+            parts.push(`<div class="detail-block" data-attack="${index}"><div class="detail-title">${costDots(attack.cost)}<span class="attack-name">${escape(attack.name)}</span><span class="attack-damage">${escape(attack.damageText)}</span>${extra}</div>${attack.text ? `<p>${cardText(attack.text)}</p>` : ''}</div>`);
         });
         if (pokemon) {
             const extras = [];
-            [pokemon.tool, pokemon.tool2].filter(Boolean).forEach(tool => extras.push(`どうぐ：${escape(getCard(tool).name)}（${escape(getCard(tool).text)}）`));
+            [pokemon.tool, pokemon.tool2].filter(Boolean).forEach(tool => extras.push(`どうぐ：${escape(getCard(tool).name)}（${cardText(getCard(tool).text)}）`));
             if (pokemon.cards.length > 1) extras.push(`進化元：${pokemon.cards.slice(0, -1).map(c => escape(getCard(c).name)).join(' → ')}`);
             if (extras.length) parts.push(`<div class="detail-extra">${extras.map(e => `<div>${e}</div>`).join('')}</div>`);
         }
@@ -180,7 +186,7 @@ export function cardDetail(id, pokemon = null) {
     }
     if (card.kind === 'trainer') {
         return `<div class="detail-head trainer-${card.trainerType}"><svg class="emblem" viewBox="0 0 24 24" fill="currentColor">${TRAINER_ICONS[card.trainerType]}</svg><div><div class="detail-name">${escape(card.name)}${regulationMark(card)}</div><div class="detail-sub">${[TRAINER_TYPE_NAMES[card.trainerType], card.aceSpec ? 'ACE SPEC' : null, printLabel(card)].filter(Boolean).join(' ・ ')}</div></div></div>
-            <div class="detail-block"><p>${escape(card.text)}</p></div>
+            <div class="detail-block"><p>${cardText(card.text)}</p></div>
             ${card.trainerType === 'supporter' ? '<div class="detail-rule">サポートは、自分の番に1枚しか使えない。</div>' : ''}
             ${card.trainerType === 'stadium' ? '<div class="detail-rule">スタジアムは、自分の番に1枚しか出せない。</div>' : ''}`;
     }

@@ -1361,3 +1361,6 @@ dialog button:focus { outline: none; }
     line-height: 20px;
     text-align: center;
 }
+
+/* カードの文の中のエネルギーの印（[F] などを置き換えたもの） */
+.detail p .energy { width: 1.15em; height: 1.15em; vertical-align: -0.2em; margin: 0 1px; }

@@ -136,13 +136,16 @@ export default class DeckScreens {
             this.renderEditor();
             $('pool').scrollTop = 0;
         });
-        $('pool-filters').addEventListener('click', event => {
+        // しぼりこみの「クリア」と、見つからないときの「しぼりこみを外す」
+        const clearFilters = event => {
             if (!event.target.closest('[data-clear]')) return;
             this.filters[this.kind] = {};
             this.renderFilters();
             this.renderEditor();
             $('pool').scrollTop = 0;
-        });
+        };
+        $('pool-filters').addEventListener('click', clearFilters);
+        $('pool').addEventListener('click', clearFilters);
         $('pool-search').addEventListener('input', () => {
             this.query = searchKey($('pool-search').value.trim());
             this.renderEditor();
@@ -291,7 +294,7 @@ export default class DeckScreens {
         const active = filterCount(this.kind, this.filters[this.kind]);
         $('pool').innerHTML = this.poolIds.length
             ? ''
-            : `<p class="pool-note">見つかりませんでした${active ? '（しぼりこみの条件もお確かめください）' : ''}</p>`;
+            : `<p class="pool-note">見つかりませんでした${active ? `<button type="button" class="filter-clear pool-note-clear" data-clear>しぼりこみを外す</button>` : ''}</p>`;
         this.appendPool();
     }
 

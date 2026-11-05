@@ -1,7 +1,7 @@
 /**
  * カードの定義
  * スタンダードレギュレーション（regulation.js）の実在カードを、名前と効果で1種類として持つ
- * データは cards/catalog.js（tools/build-cards.mjs が TCGdex のデータから作る）。id は一番新しい版の番号（例：M6-010）
+ * データは cards/catalog.js（tools/build-cards.mjs が TCGdex のデータから作る）。id は一番古い版の番号（ほかの版の番号は prints に持ち、resolveCardId で読み替える）
  *
  * ポケモン：{ kind: 'pokemon', stage(0=たね,1,2), evolvesFrom(進化元の名前), hp, type, weakness, resistance, retreat,
  *            rule('ex' ならきぜつでサイド2枚、'mega' はメガシンカexで3枚), tera(ベンチでワザのダメージを受けない), ability, attacks }

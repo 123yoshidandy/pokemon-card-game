@@ -1,6 +1,6 @@
 /**
  * カードの描き方（手札・選択・説明・場のポケモンで共通）
- * 絵は仮のもの：タイプの色とタイプの記号だけで描く
+ * ポケモンの絵は、モチーフの動物・ものの自作の図柄（motifs.js）。トレーナーズとエネルギーは、種類とタイプの記号で描く
  */
 
 import { getCard, TYPE_NAMES, TRAINER_TYPE_NAMES, RULE_TEXTS } from '../card-data.js';

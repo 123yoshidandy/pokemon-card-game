@@ -58,7 +58,7 @@ const POOL_INDEX = new Map(CARD_POOL.map((id, index) => [id, index]));
 export const totalCount = deck => Object.values(deck.cards).reduce((sum, count) => sum + count, 0);
 
 // 同じ名前のカード（違うIDでも名前が同じなら合わせて数える）の枚数
-function sameNameCount(deck, card) {
+export function sameNameCount(deck, card) {
     return Object.entries(deck.cards)
         .filter(([id]) => CARDS[id]?.name === card.name)
         .reduce((sum, [, count]) => sum + count, 0);

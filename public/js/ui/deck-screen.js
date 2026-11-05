@@ -4,8 +4,8 @@
  */
 
 import { getCard } from '../card-data.js';
-import { DECK_SIZE } from '../deck-rules.js';
-import { CARD_POOL, addCard, removeCard, canAdd, totalCount, deckProblem, sortedEntries, deckToText, deckFromText } from '../deck-builder.js';
+import { DECK_SIZE, MAX_COPIES } from '../deck-rules.js';
+import { CARD_POOL, addCard, removeCard, canAdd, totalCount, deckProblem, sortedEntries, deckToText, deckFromText, sameNameCount } from '../deck-builder.js';
 import { FILTER_GROUPS, matchesFilters, filterCount, setFilter, filterLabel } from '../card-filter.js';
 import { cardFace, energyDot } from './card-view.js';
 import { bindPress } from './press.js';
@@ -317,10 +317,14 @@ export default class DeckScreens {
     // 一覧の、デッキに入っている枚数と、もう足せないカードの印
     updatePoolMarks() {
         const deck = this.deck;
+        const full = totalCount(deck) >= DECK_SIZE;
         for (const element of $('pool').querySelectorAll('.pool-card')) {
             const id = element.dataset.card;
             const count = deck.cards[id] ?? 0;
-            element.classList.toggle('maxed', !canAdd(deck, id));
+            const maxed = !canAdd(deck, id);
+            element.classList.toggle('maxed', maxed);
+            // 同じ名前で4枚に達して足せないときは、理由を出す（60枚に達したときは、上の枚数でわかる）
+            element.classList.toggle('name-full', maxed && !full && sameNameCount(deck, getCard(id)) >= MAX_COPIES);
             let badge = element.querySelector('.pool-count');
             if (count && !badge) {
                 badge = document.createElement('span');

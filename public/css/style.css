@@ -410,6 +410,22 @@ button { font: inherit; color: inherit; }
 .pool::-webkit-scrollbar { display: none; }
 .pool-card { position: relative; cursor: pointer; }
 .pool-card.maxed .card { opacity: 0.45; }
+.pool-card.name-full::after {
+    content: "同じ名前で4枚";
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 42%;
+    padding: 1px 2px;
+    border-radius: 4px;
+    background: rgba(10, 16, 30, 0.8);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    pointer-events: none;
+}
 /* デッキ構築の一覧では、長い名前も2行まで出す（同じ名前の別の版や、長い名前を見分けるため） */
 .pool-card .card-head { font-size: max(7.5px, 13cqw); }
 .pool-card .card-hp { font-size: max(8.5px, 15cqw); }

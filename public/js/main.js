@@ -13,6 +13,7 @@ import NetplayClient from './netplay/netplay-client.mjs';
 import GameScreen from './ui/game-screen.js';
 import DeckScreens from './ui/deck-screen.js';
 import { cardFace } from './ui/card-view.js';
+import { unlockSound, toggleSound, isSoundOn } from './sound.js';
 import { closeOnBackdrop, showDeckPicker, showConfirm } from './ui/sheets.js';
 
 const $ = id => document.getElementById(id);
@@ -346,6 +347,17 @@ $('go-home').addEventListener('click', () => {
 });
 ['open-rules', 'open-rules-game'].forEach(id => $(id).addEventListener('click', () => $('rules').showModal()));
 closeOnBackdrop($('rules'));
+// 効果音：ブラウザの制限で、画面に触れたときに使えるようにする。ボタンで ON/OFF（保存する）
+document.addEventListener('pointerdown', unlockSound, { passive: true });
+const renderSoundToggle = () => {
+    $('sound-toggle').classList.toggle('off', !isSoundOn());
+    $('sound-toggle').setAttribute('aria-pressed', String(isSoundOn()));
+};
+$('sound-toggle').addEventListener('click', () => {
+    toggleSound();
+    renderSoundToggle();
+});
+renderSoundToggle();
 document.addEventListener('contextmenu', event => {
     if (!event.target.closest('input, textarea')) event.preventDefault();
 });

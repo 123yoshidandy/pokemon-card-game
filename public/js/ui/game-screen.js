@@ -8,6 +8,8 @@ import { cardFace, pokemonTile } from './card-view.js';
 import { bindPress } from './press.js';
 import { showPrompt, showDetail, showPile, showResult, showConfirm, showLog, closeOnBackdrop } from './sheets.js';
 import { BENCH_SIZE } from '../game.js';
+import Animator from './animator.js';
+import { playEffect } from '../sound.js';
 
 const $ = id => document.getElementById(id);
 
@@ -23,6 +25,7 @@ export default class GameScreen {
         this.shownPromptId = null;
         this.resultShown = false;
         this.errorTimer = null;
+        this.animator = new Animator($('fx'));
         this.bind();
     }
 
@@ -34,6 +37,8 @@ export default class GameScreen {
         this.resultShown = false;
         this.resultPeeking = false;
         this.lastDamages = null;
+        this.lastTurnKey = null;
+        this.animator.reset();
         this.closeDialogs();
         this.render();
     }
@@ -222,6 +227,7 @@ export default class GameScreen {
         const view = this.controller.getView();
         if (!view) return;
         this.view = view;
+        this.animator.capture(); // 描き直す前の場の位置（きぜつの演出に使う）
         const me = view.players[view.viewerId];
         const opp = view.players[1 - view.viewerId];
         const prompt = this.myPrompt();
@@ -234,6 +240,11 @@ export default class GameScreen {
         $('my-side').classList.toggle('on-turn', playing && view.current === view.viewerId);
         $('opp-side').classList.toggle('on-turn', playing && view.current !== view.viewerId);
         this.showDamageChanges(view);
+        this.animator.play(view);
+        // 自分の番が来たら、控えめに知らせる
+        const turnKey = playing && view.current === view.viewerId ? view.turn : null;
+        if (turnKey !== null && this.lastTurnKey !== null && turnKey !== this.lastTurnKey) playEffect('turn');
+        if (playing) this.lastTurnKey = turnKey ?? this.lastTurnKey ?? 0;
         $('opp-info').innerHTML = this.infoHtml(opp);
         $('my-info').innerHTML = this.infoHtml(me);
         $('stadium').innerHTML = view.stadium ? `<span class="stadium-chip ${view.legal?.stadium ? 'playable' : ''}">${getCard(view.stadium.id).name}</span>` : '';
@@ -298,6 +309,7 @@ export default class GameScreen {
             this.resultShown = true;
             const won = view.winner === view.viewerId;
             this.handlers.onEnd?.(view);
+            if (view.winner !== 'draw') playEffect(won ? 'win' : 'lose');
             showResult($('result'), {
                 title: view.winner === 'draw' ? '引き分け' : won ? '勝ち' : '負け',
                 message: this.endMessage(view, won),

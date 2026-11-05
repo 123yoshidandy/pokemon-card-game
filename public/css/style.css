@@ -1140,3 +1140,61 @@ dialog button:focus { outline: none; }
     70% { opacity: 1; transform: translate(-50%, -6px) scale(1); }
     100% { opacity: 0; transform: translate(-50%, -18px) scale(1); }
 }
+
+/* ===== 演出（ui/animator.js） ===== */
+.fx-layer { position: fixed; inset: 0; z-index: 5; pointer-events: none; overflow: hidden; }
+.fx { position: fixed; pointer-events: none; }
+/* 使ったトレーナーズを、中央に一瞬大きく見せる */
+.fx-reveal {
+    width: clamp(70px, 22dvh, 110px);
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.55));
+    animation: fx-reveal 0.95s ease-out forwards;
+}
+@keyframes fx-reveal {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.6) rotate(-6deg); }
+    18% { opacity: 1; transform: translate(-50%, -50%) scale(1.05) rotate(0); }
+    30% { transform: translate(-50%, -50%) scale(1); }
+    78% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -62%) scale(0.96); }
+}
+/* ワザ：踏み込む・揺れる（.slot に付ける） */
+.fx-lunge-up { animation: fx-lunge-up 0.42s ease-in-out; }
+.fx-lunge-down { animation: fx-lunge-down 0.42s ease-in-out; }
+@keyframes fx-lunge-up { 40% { transform: translateY(-14%) scale(1.04); } }
+@keyframes fx-lunge-down { 40% { transform: translateY(14%) scale(1.04); } }
+.fx-hit { animation: fx-hit 0.4s ease-out; }
+@keyframes fx-hit {
+    15% { transform: translateX(-6px) rotate(-2deg); filter: brightness(1.6); }
+    35% { transform: translateX(5px) rotate(1.5deg); }
+    55% { transform: translateX(-3px); }
+    75% { transform: translateX(2px); }
+}
+/* きぜつ：元の場所で灰色になって沈む */
+.fx-knockout { animation: fx-knockout 0.8s ease-in forwards; }
+.fx-knockout > * { width: 100%; height: 100%; }
+@keyframes fx-knockout {
+    0% { opacity: 1; filter: grayscale(0); }
+    30% { opacity: 1; filter: grayscale(1) brightness(0.8); transform: none; }
+    100% { opacity: 0; filter: grayscale(1) brightness(0.6); transform: translateY(18%) scale(0.85); }
+}
+/* 場に出す・進化：ふわっと現れる */
+.fx-pop { animation: fx-pop 0.45s cubic-bezier(0.2, 1.4, 0.4, 1); }
+@keyframes fx-pop {
+    0% { transform: scale(0.7); opacity: 0.3; }
+    60% { transform: scale(1.06); opacity: 1; }
+}
+/* エネルギー：印が飛ぶ（位置は JS が transform で動かす） */
+.fx-energy { left: 0; top: 0; margin: -9px 0 0 -9px; }
+.fx-energy .energy, .fx-energy-dot { display: block; width: 18px; height: 18px; border-radius: 50%; box-shadow: 0 0 8px rgba(255, 255, 255, 0.7); }
+.fx-energy-dot { background: #ddd; }
+@media (prefers-reduced-motion: reduce) {
+    .fx-lunge-up, .fx-lunge-down, .fx-hit, .fx-pop { animation: none; }
+}
+
+/* 効果音の ON/OFF（オフのときは薄くし、斜線を重ねる） */
+.sound-toggle svg { width: 22px; height: 22px; }
+.sound-toggle .sound-slash { display: none; }
+.sound-toggle.off { opacity: 0.55; }
+.sound-toggle.off .sound-slash { display: inline; }
+.sound-toggle.off .sound-wave { display: none; }

@@ -16,6 +16,7 @@ export const PRIZE_COUNT = 6;
 export const BENCH_SIZE = 5;
 export const OPENING_HAND = 7;
 const CONFUSION_DAMAGE = 30;
+const EVENT_LIMIT = 40; // 演出のために残す出来事の数
 const POISON_DAMAGE = 10;
 const BURN_DAMAGE = 20;
 const WEAKNESS_MULTIPLIER = 2;
@@ -86,6 +87,8 @@ export default class Game {
         this.promptCount = 0;
         this.commands = [];
         this.logs = [];
+        this.events = []; // 演出のための出来事（{ seq, type, ... }。最近の EVENT_LIMIT 件）
+        this.eventSeq = 0;
         this.winner = null; // プレイヤーのID、引き分けは 'draw'
         this.endReason = null;
         this.trainerInPlay = null; // 効果を使っている途中のトレーナーズ（{ player, inst }）
@@ -315,6 +318,7 @@ export default class Game {
                 player.knockedOutByAttackTurn = this.turn;
                 player.knockedOutByAttackNames.push(card.name);
             }
+            this.event('knockout', { player: player.id, pokemon: pokemon.id });
             this.removeFromPlay(player, pokemon);
             const taker = this.opponentOf(player);
             const count = Math.min(prizes, taker.prizes.length);
@@ -657,6 +661,7 @@ export default class Game {
         const pokemon = this.createPokemon(inst);
         player.bench.push(pokemon);
         this.log(`${player.name}は${this.cardName(inst)}をベンチに出した`);
+        this.event('bench', { player: player.id, pokemon: pokemon.id });
         this.triggerAbility(player, pokemon, 'onBench');
         this.hookAll('onPokemonBenched', player, pokemon);
     }
@@ -677,6 +682,7 @@ export default class Game {
         this.clearConditionsOnStageChange(pokemon);
         const card = this.cardOf(inst);
         this.log(`${player.name}は${before}を${card.name}に進化させた`);
+        this.event('evolve', { player: player.id, pokemon: pokemon.id });
         // 特性の「手札から出して進化させたとき」（山札などから進化させたときは使えない）
         if (fromHand) this.triggerAbility(player, pokemon, 'onEvolve');
         this.hookAll('onEvolved', player, pokemon, { fromHand });
@@ -689,6 +695,7 @@ export default class Game {
         target.energies.push(inst);
         this.turnState.energyAttached = true;
         this.log(`${player.name}は${this.topCard(target).name}に${this.cardName(inst)}をつけた`);
+        this.event('energy', { player: player.id, pokemon: target.id, energyType: this.cardOf(inst).energyType ?? null });
         // 特殊エネルギーの「手札からつけたとき」と、ほかのカードの「エネルギーがついたとき」
         const card = this.cardOf(inst);
         if (card.onAttach) this.runNext(() => this.withSource({ player, kind: 'energy', card, pokemon: target }, () => card.onAttach(this, player, target, inst)));
@@ -705,6 +712,7 @@ export default class Game {
             return;
         }
         this.log(`${player.name}は${card.name}を使った`);
+        this.event('trainer', { player: player.id, card: card.id });
         switch (card.trainerType) {
             case 'tool': {
                 const target = this.ownPokemon(player, targetId);
@@ -820,6 +828,7 @@ export default class Game {
             () => {
                 ctx.defender = opponent.active;
                 this.log(`${this.topCard(attacker).name}の「${attack.name}」`);
+                this.event('attack', { player: player.id, attacker: attacker.id, defender: ctx.defender?.id ?? null });
                 this.currentAttack = ctx; // 使っている途中のワザ（フックが、ワザを使ったポケモンを知るため）
                 if (this.hasCondition(attacker, 'confused') && !this.flipCoin()) {
                     ctx.failed = true;
@@ -1750,6 +1759,12 @@ export default class Game {
     // to を付けたログは、そのプレイヤーにだけ見せる
     log(text, { to = null } = {}) {
         this.logs.push({ text, to });
+    }
+
+    // 演出のための出来事を残す（記録から再現しても同じになる）
+    event(type, data) {
+        this.events.push({ seq: ++this.eventSeq, type, ...data });
+        if (this.events.length > EVENT_LIMIT) this.events.shift();
     }
 
     // ===== 手順と選択 =====

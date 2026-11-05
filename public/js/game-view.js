@@ -22,6 +22,7 @@ export function createGameView(game, viewerId) {
         players: game.players.map(player => playerView(game, player, viewerId)),
         prompt: prompt ? promptView(game, prompt, viewerId) : null,
         legal: viewerId === null ? null : game.getLegalActions(viewerId),
+        events: game.events, // 演出のための出来事（どれも公開の情報）
         log: game.logs.filter(entry => entry.to === null || entry.to === viewerId).slice(-LOG_LIMIT).map(entry => entry.text)
     };
 }

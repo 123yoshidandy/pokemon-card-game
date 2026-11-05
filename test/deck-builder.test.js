@@ -75,6 +75,19 @@ describe('デッキの保存', () => {
         expect(store.all().filter(deck => deck.builtIn)).toHaveLength(DECKS.length);
     });
 
+    it('同じデッキを2回コピーすると、名前に番号がつく（16文字に収まる）', () => {
+        const store = createDeckStore(memoryStorage());
+        store.create(DECKS[0]);
+        const second = store.create(DECKS[0]);
+        expect(second.name.endsWith('のコピー2')).toBe(true);
+        expect(second.name.length).toBeLessThanOrEqual(16);
+        const long = { name: 'とてもながいなまえのデッキです', cards: {} };
+        expect(store.create(long).name).toHaveLength(16);
+        const longSecond = store.create(long);
+        expect(longSecond.name.endsWith('のコピー2')).toBe(true);
+        expect(longSecond.name).toHaveLength(16);
+    });
+
     it('壊れた保存値・知らないカード・保存できない環境でも動く。前の版のカードIDは今のIDに読み替える', () => {
         expect(createDeckStore(memoryStorage({ 'pokemon-card-game:decks': '{壊れ' })).custom()).toEqual([]);
         const saved = JSON.stringify([{ id: 'x', name: 'x', cards: { pikachu: 2, 'no-such-card': 3, potion: -1 } }]);

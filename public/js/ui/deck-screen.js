@@ -69,10 +69,21 @@ export default class DeckScreens {
             const edit = event.target.closest('[data-edit]');
             const copy = event.target.closest('[data-copy]');
             if (edit) this.openEditor(edit.dataset.edit);
-            if (copy) this.openEditor(this.store.create(this.store.find(copy.dataset.copy)).id);
+            if (copy) {
+                const deck = this.store.create(this.store.find(copy.dataset.copy));
+                this.openEditor(deck.id);
+                this.untouched = JSON.stringify(deck); // 何も変えずに戻ったら、コピーは残さない
+            }
         });
 
-        $('editor-back').addEventListener('click', () => this.showList());
+        $('editor-back').addEventListener('click', () => {
+            // 空のデッキと、変えずに戻ったコピーは残さない（見るだけでデッキが増えないように）
+            if (totalCount(this.deck) === 0 || JSON.stringify(this.deck) === this.untouched) {
+                this.store.remove(this.deck.id);
+                this.handlers.onDeleted(this.deck.id);
+            }
+            this.showList();
+        });
         $('deck-name').addEventListener('input', () => {
             this.deck = this.store.save({ ...this.deck, name: $('deck-name').value });
         });
@@ -164,6 +175,7 @@ export default class DeckScreens {
 
     openEditor(deckId) {
         this.deck = this.store.find(deckId);
+        this.untouched = null;
         if (!this.deck) return this.showList();
         $('deck-name').value = this.deck.name;
         this.handlers.show('editor');

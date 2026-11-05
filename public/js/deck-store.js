@@ -41,7 +41,7 @@ export function createDeckStore(storage = browserStorage()) {
         create(base = null) {
             const deck = {
                 id: `custom-${Date.now().toString(36)}-${Math.floor(Math.random() * 1e6).toString(36)}`,
-                name: base ? `${base.name}のコピー`.slice(0, MAX_NAME_LENGTH) : nextName(),
+                name: base ? copyName(base.name) : nextName(),
                 cards: base ? { ...base.cards } : {}
             };
             decks = [deck, ...decks];
@@ -65,6 +65,15 @@ export function createDeckStore(storage = browserStorage()) {
     function nextName() {
         for (let n = 1; ; n++) {
             const name = `デッキ${n}`;
+            if (!decks.some(deck => deck.name === name)) return name;
+        }
+    }
+
+    // 「〇〇のコピー」。もうあれば「〇〇のコピー2」…（長すぎるときは、元の名前のほうを詰める）
+    function copyName(baseName) {
+        for (let n = 1; ; n++) {
+            const suffix = `のコピー${n === 1 ? '' : n}`;
+            const name = baseName.slice(0, MAX_NAME_LENGTH - suffix.length) + suffix;
             if (!decks.some(deck => deck.name === name)) return name;
         }
     }

@@ -280,6 +280,7 @@ export default class GameScreen {
         if (view.phase === 'end' && !this.resultShown) {
             this.resultShown = true;
             const won = view.winner === view.viewerId;
+            this.handlers.onEnd?.(view);
             showResult($('result'), {
                 title: view.winner === 'draw' ? '引き分け' : won ? '勝ち' : '負け',
                 message: this.endMessage(view, won),

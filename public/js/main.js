@@ -5,6 +5,7 @@
 import { DECKS, expandDeck } from './decks.js';
 import { resolveCardId } from './card-data.js';
 import { createDeckStore } from './deck-store.js';
+import { createDeckStats, statsText } from './deck-stats.js';
 import { deckProblem, mainEnergyType } from './deck-builder.js';
 import LocalGameController from './game-controller.js';
 import OnlineGameController, { loadOnlineSession } from './online-controller.js';
@@ -21,6 +22,7 @@ const MAX_PLAYERS = 2;
 
 const settings = loadSettings();
 const deckStore = createDeckStore();
+const deckStats = createDeckStats();
 let scene = 'title';
 let deckReturnScene = 'title'; // デッキ構築から戻る先（開始画面かロビー）
 let online = null;      // オンライン対戦のコントローラー（部屋に入っている間）
@@ -37,7 +39,12 @@ const screen = new GameScreen({
             { label: 'ホーム', onClick: () => showTitle() },
             { label: '再戦', primary: true, onClick: () => startCpuGame() }
         ]),
-    resultNote: () => (isOnlineGame() && !online.isHost() ? 'ホストが「もう一度」を押すと再戦します' : '')
+    resultNote: () => (isOnlineGame() && !online.isHost() ? 'ホストが「もう一度」を押すと再戦します' : ''),
+    // 決着したら、使ったデッキの戦績を記録する
+    onEnd: view => {
+        if (view.viewerId === null || view.viewerId === undefined) return;
+        deckStats.record(selectedDeck().id, view.winner === 'draw' ? 'draw' : view.winner === view.viewerId ? 'win' : 'loss');
+    }
 });
 
 // ===== 設定 =====
@@ -77,6 +84,7 @@ const deckScreens = new DeckScreens(deckStore, {
         saveSettings();
     },
     toast: message => toast(message),
+    statsOf: deckId => statsText(deckStats.get(deckId)),
     // デッキ編集の「CPU と試す」：そのデッキを選んで、CPU 戦を始める
     onTry: deckId => {
         settings.deckId = deckId;

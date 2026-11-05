@@ -281,8 +281,8 @@ button { font: inherit; color: inherit; }
     padding-right: var(--safe-r);
 }
 #decks-screen .topbar .btn, #editor-screen .topbar .btn { padding: 3px 12px; font-size: 13px; border-radius: 8px; box-shadow: 0 2px 0 var(--accent-dark); }
-.topbar .btn-secondary.btn-small { box-shadow: 0 2px 0 var(--blue-dark); }
-.topbar .btn-small:disabled { box-shadow: 0 2px 0 #2c3447; }
+#decks-screen .topbar .btn-secondary, #editor-screen .topbar .btn-secondary { box-shadow: 0 2px 0 var(--blue-dark); }
+#decks-screen .topbar .btn:disabled, #editor-screen .topbar .btn:disabled { box-shadow: 0 2px 0 #2c3447; }
 .deck-list {
     list-style: none;
     margin: 0;
@@ -305,6 +305,7 @@ button { font: inherit; color: inherit; }
     flex: none;
 }
 .deck-row-name { flex: 1; font-weight: 700; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.deck-row-stats { font-size: 12px; color: var(--ink-dim); font-variant-numeric: tabular-nums; }
 .deck-row-count, .deck-count { font-weight: 800; font-variant-numeric: tabular-nums; }
 .incomplete { color: #ff9a8f; }
 

@@ -55,7 +55,7 @@ function cardText(id) {
 }
 
 export default class DeckScreens {
-    // store：createDeckStore() / handlers：show(scene) / onDeleted(deckId) / onBack() / onTry(deckId) / toast(message)
+    // store：createDeckStore() / handlers：show(scene) / onDeleted(deckId) / onBack() / onTry(deckId) / toast(message) / statsOf(deckId)
     constructor(store, handlers) {
         this.store = store;
         this.handlers = handlers;
@@ -201,6 +201,7 @@ export default class DeckScreens {
             return `<li class="deck-row">
                 <span class="deck-row-name">${escape(deck.name)}</span>
                 ${deck.builtIn ? '<span class="badge">構築済み</span>' : ''}
+                <span class="deck-row-stats">${escape(this.handlers.statsOf?.(deck.id) ?? '')}</span>
                 <span class="deck-row-count ${problem ? 'incomplete' : ''}">${total}/${DECK_SIZE}</span>
                 ${button}
             </li>`;

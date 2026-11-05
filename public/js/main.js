@@ -44,9 +44,24 @@ const screen = new GameScreen({
     // 決着したら、使ったデッキの戦績を記録する
     onEnd: view => {
         if (view.viewerId === null || view.viewerId === undefined) return;
+        // 同じ対戦は1回だけ数える（オンラインで決着のあとに読み直したとき、決着がもう一度届くため）
+        const key = isOnlineGame() ? `online:${online?.lobby?.roomCode}:${matchId}` : `cpu:${screen.controller?.options?.seed}`;
+        if (alreadyCounted(key)) return;
         deckStats.record(selectedDeck().id, view.winner === 'draw' ? 'draw' : view.winner === view.viewerId ? 'win' : 'loss');
     }
 });
+
+// 戦績を数えた対戦の印（タブを閉じるまで覚えておく）
+function alreadyCounted(key) {
+    try {
+        const counted = JSON.parse(sessionStorage.getItem('pokemon-card-game:counted') ?? '[]');
+        if (counted.includes(key)) return true;
+        sessionStorage.setItem('pokemon-card-game:counted', JSON.stringify([...counted, key].slice(-50)));
+    } catch {
+        // 覚えられない環境では、そのまま数える
+    }
+    return false;
+}
 
 // ===== 設定 =====
 

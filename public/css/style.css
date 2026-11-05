@@ -1198,3 +1198,35 @@ dialog button:focus { outline: none; }
 .sound-toggle.off { opacity: 0.55; }
 .sound-toggle.off .sound-slash { display: inline; }
 .sound-toggle.off .sound-wave { display: none; }
+/* コイン：回って、オモテかウラで止まる */
+.fx-coin {
+    width: 52px;
+    height: 52px;
+    margin: -26px 0 0 -26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 35% 30%, #fff3c4, #e9b93a 60%, #a97a12);
+    color: #5a3c00;
+    font-size: 12px;
+    font-weight: 900;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    animation: fx-coin 1.4s ease-out forwards;
+}
+.fx-coin.tails { background: radial-gradient(circle at 35% 30%, #f1f1f1, #a9b0bd 60%, #5d6472); color: #2a2f38; }
+.fx-coin span { animation: fx-coin-face 1.4s steps(1) forwards; }
+@keyframes fx-coin {
+    0% { opacity: 0; transform: translateY(30px) rotateX(0); }
+    10% { opacity: 1; }
+    40% { transform: translateY(-40px) rotateX(1080deg); }
+    60% { transform: translateY(0) rotateX(1800deg); }
+    68% { transform: translateY(-6px) rotateX(1800deg); }
+    76% { transform: translateY(0) rotateX(1800deg); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(0) rotateX(1800deg); }
+}
+@keyframes fx-coin-face { 0% { opacity: 0; } 60% { opacity: 1; } }
+/* サイドを取った側の情報の欄を光らせる */
+.fx-glow { animation: fx-glow 0.9s ease-out; }
+@keyframes fx-glow { 30% { box-shadow: 0 0 0 2px var(--gold), 0 0 16px rgba(245, 197, 66, 0.7); } }

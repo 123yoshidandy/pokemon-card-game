@@ -41,19 +41,27 @@ export default class Animator {
         const fresh = events.filter(event => event.seq > this.lastSeq);
         this.lastSeq = latest;
         const tiles = this.tiles;
-        fresh.forEach((event, index) => setTimeout(() => this.playOne(event, view, tiles), index * STAGGER_MS));
+        // コインを何枚も投げたときは、横に並べる
+        let coins = 0;
+        fresh.forEach((event, index) => {
+            const slot = event.type === 'coin' ? coins++ : 0;
+            setTimeout(() => this.playOne(event, view, tiles, slot), index * STAGGER_MS);
+        });
     }
 
-    playOne(event, view, tiles) {
-        const mine = event.player === view.viewerId;
-        playEffect(event.type, { mine });
+    playOne(event, view, tiles, slot = 0) {
+        const mine = event.player === undefined || event.player === view.viewerId;
+        playEffect(event.type === 'coin' ? (event.heads ? 'coinHeads' : 'coinTails') : event.type, { mine });
         if (reducedMotion()) return;
         switch (event.type) {
             case 'trainer': return this.reveal(event.card);
             case 'attack': return this.attack(event, mine);
             case 'knockout': return this.knockout(tiles.get(event.pokemon));
             case 'bench':
-            case 'evolve': return this.pulse(event.pokemon, 'fx-pop');
+            case 'evolve':
+            case 'switch': return this.pulse(event.pokemon, 'fx-pop');
+            case 'coin': return this.coin(event.heads, slot);
+            case 'prize': return this.glow(mine ? '#my-info' : '#opp-info');
             case 'energy': return this.energy(event, mine);
             default: return null;
         }
@@ -66,6 +74,25 @@ export default class Animator {
         const element = this.add('fx-reveal', cardFace(cardId));
         element.style.left = `${field.left + field.width / 2}px`;
         element.style.top = `${field.top + field.height / 2}px`;
+    }
+
+    // コイン：盤面の中央で回り、オモテかウラで止まる（何枚もなら横に並べる）
+    coin(heads, slot) {
+        const field = document.querySelector('#game-screen .field')?.getBoundingClientRect();
+        if (!field) return;
+        const element = this.add(`fx-coin ${heads ? 'heads' : 'tails'}`, `<span>${heads ? 'オモテ' : 'ウラ'}</span>`);
+        element.style.left = `${field.left + field.width / 2 + (slot % 5) * 64}px`;
+        element.style.top = `${field.top + field.height / 2}px`;
+    }
+
+    // サイドを取った側の情報の欄を光らせる
+    glow(selector) {
+        const element = document.querySelector(selector);
+        if (!element) return;
+        element.classList.remove('fx-glow');
+        void element.offsetWidth;
+        element.classList.add('fx-glow');
+        element.addEventListener('animationend', () => element.classList.remove('fx-glow'), { once: true });
     }
 
     // ワザ：使ったポケモンが相手のほうへ踏み込み、少し遅れて受けたポケモンが揺れる

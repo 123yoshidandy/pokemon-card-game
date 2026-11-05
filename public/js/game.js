@@ -328,6 +328,7 @@ export default class Game {
             taker.prizesTakenLog = { turn: this.turn, count: (taker.prizesTakenLog?.turn === this.turn ? taker.prizesTakenLog.count : 0) + count };
             taker.hand.push(...taken);
             this.log(`${taker.name}はサイドを${count}枚取った（残り${taker.prizes.length}枚）`);
+            if (count > 0) this.event('prize', { player: taker.id, count });
             this.log(`サイドから${taken.map(inst => this.cardName(inst)).join('と')}を手札に加えた`, { to: taker.id });
         });
 
@@ -377,6 +378,7 @@ export default class Game {
                 player.active = pokemon;
                 pokemon.movedToActiveTurn = this.turn;
                 this.log(`${player.name}は${this.topCard(pokemon).name}をバトル場に出した`);
+                this.event('switch', { player: player.id, pokemon: pokemon.id });
                 if (this.phase === 'main' && player.id === this.current) this.triggerAbility(player, pokemon, 'onActive');
                 this.hookAll('onPokemonToActive', player, pokemon);
             }
@@ -1181,6 +1183,7 @@ export default class Game {
         player.active = benchPokemon;
         benchPokemon.movedToActiveTurn = this.turn;
         this.log(`${player.name}のバトル場に${this.topCard(benchPokemon).name}が出た`);
+        this.event('switch', { player: player.id, pokemon: benchPokemon.id });
         if (this.phase === 'main' && player.id === this.current) {
             this.triggerAbility(player, benchPokemon, 'onActive');
             if (old) this.triggerAbility(player, old, 'onToBench');
@@ -1430,6 +1433,7 @@ export default class Game {
         this.coinFlips = (this.coinFlips ?? 0) + 1; // 投げた回数（コインを投げなおす効果のため）
         const heads = this.random() < 0.5;
         this.log(`コイン：${heads ? 'オモテ' : 'ウラ'}`);
+        this.event('coin', { heads });
         return heads;
     }
 

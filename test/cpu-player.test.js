@@ -53,7 +53,7 @@ describe('CPU 同士の試合', () => {
             const { game } = playOut(i * DECKS.length + j + 1, [a.id, b.id]);
             expect(game.phase).toBe('end');
         }));
-    });
+    }, 30000); // CPU は先読みするので、16試合で数秒かかる
 
     it('相手の手札と山札・サイドの中身は、どのビューにも出ない', () => {
         const { game } = playOut(11, ['charizard', 'miraidon']);

@@ -262,12 +262,15 @@ function bestFinish(state, me, { attach = true } = {}) {
             if (!inst || state.cardOf(inst).kind !== 'energy' || seen.has(inst.id)) continue;
             seen.add(inst.id);
             const command = { type: 'attachEnergy', uid, target: player.active.id };
-            const value = trial(state, me, [command], { attach: false });
+            // 局面の点数はエネルギー1個で +40 されるので、それを差し引く（ワザがよくなるときだけ、ここでバトルポケモンにつける。育て先は chooseEnergyAttach が選ぶ）
+            const value = trial(state, me, [command], { attach: false }) - ENERGY_VALUE;
             if (value > best.value) best = { value, command };
         }
     }
     return best;
 }
+
+const ENERGY_VALUE = 40; // 局面の点数で、場のエネルギー1個の値打ち
 
 // 局面の点数（me から見て。大きいほどよい）
 function evaluate(sim, me) {
@@ -289,7 +292,7 @@ function evaluate(sim, me) {
                 if (isActive) score += conditionValue(sim, pokemon);
             } else {
                 score -= 220 * prizes * hurt * (isActive ? 1 : 0.8);
-                score += 40 * pokemon.energies.length + 50 * (pokemon.cards.length - 1) + 40 + (pokemon.tool ? 15 : 0);
+                score += ENERGY_VALUE * pokemon.energies.length + 50 * (pokemon.cards.length - 1) + 40 + (pokemon.tool ? 15 : 0);
                 if (isActive) score -= conditionValue(sim, pokemon);
             }
         });
@@ -672,12 +675,20 @@ function energyScore(game, player, pokemon, inst) {
 }
 
 // そのポケモン（と、その進化先）のワザ：{ cost, damage, stage }
+// ワザの見積もりのダメージ。ほかのポケモンのワザをまねるワザ（ナイトジョーカーなど）は、自分の場のほかのポケモンのワザのいちばん大きいもの
+function goalDamage(game, player, pokemon, attack, defender) {
+    if (!attack.copiesAttack) return estimateRaw(game, player, pokemon, attack, defender);
+    const copied = game.inPlay(player).filter(other => other !== pokemon) // バトル場のポケモンも、にげたあとでまねられる
+        .flatMap(other => game.topCard(other).attacks.filter(item => !item.copiesAttack).map(item => estimateRaw(game, player, other, item, defender)));
+    return Math.max(0, ...copied);
+}
+
 function attackGoals(game, player, pokemon) {
     const top = game.topCard(pokemon);
     const opponent = game.opponentOf(player);
     const goals = game.attacksOf(pokemon).map(attack => ({
         cost: game.attackCost(pokemon, attack),
-        damage: estimateRaw(game, player, pokemon, attack, opponent.active),
+        damage: goalDamage(game, player, pokemon, attack, opponent.active),
         stage: top.stage
     }));
     const owned = ownedCards(game, player);
@@ -685,7 +696,7 @@ function attackGoals(game, player, pokemon) {
     const after = owned.filter(card => card.kind === 'pokemon' && next.some(stage1 => card.evolvesFrom === stage1.name));
     [...next, ...after].forEach(card => card.attacks.forEach(attack => goals.push({
         cost: attack.cost,
-        damage: estimateRaw(game, player, pokemon, attack, opponent.active),
+        damage: goalDamage(game, player, pokemon, attack, opponent.active),
         stage: card.stage
     })));
     return goals;
@@ -702,6 +713,23 @@ function ownedCards(game, player) {
         cards.push(game.cardOf(inst));
     });
     return cards;
+}
+
+// デッキのエネルギーで、そのポケモンのどれかのワザを払えるか（準備でバトル場に出すポケモンを選ぶため）
+function canPayWithDeck(game, player, card) {
+    const types = new Set();
+    for (const owned of ownedCards(game, player)) {
+        if (owned.kind !== 'energy') continue;
+        if (owned.basic) types.add(owned.energyType);
+        else {
+            try {
+                (owned.provides?.() ?? []).forEach(entry => String(entry).split('|').forEach(type => types.add(type)));
+            } catch {
+                types.add('any');
+            }
+        }
+    }
+    return (card.attacks ?? []).some(attack => attack.cost.every(type => type === 'colorless' || types.has(type) || types.has('any')));
 }
 
 // 足りないエネルギーの数（extra：つけるつもりのエネルギー）
@@ -863,13 +891,15 @@ function answerPrompt(game, prompt) {
         case 'first-player':
             return [1]; // 後攻は最初の番からワザを使える
         case 'setup-active':
-            // ルールを持たない、にげやすく HP の高いポケモンを前に出す
+            // ルールを持たない、にげやすく HP の高いポケモンを前に出す。ワザをデッキのエネルギーで払えないポケモン（ベンチにいてこそ役に立つもの）は後ろに
             return indices(prompt.cards, inst => {
                 const card = game.cardOf(inst);
-                return card.hp - card.retreat * 20 - (hasRule(card) ? 1000 : 0);
+                return card.hp - card.retreat * 20 - (hasRule(card) ? 1000 : 0) - (canPayWithDeck(game, player, card) ? 0 : 500);
             }, 1);
         case 'setup-bench':
         case 'bench-basic':
+            // 進化先がデッキにあるポケモンを先に、とられるサイドの多い ex は後に（needValue と同じ考え）
+            return indices(prompt.cards, inst => needValue(game, player, game.cardOf(inst)) - (hasRule(game.cardOf(inst)) ? 30 : 0), prompt.max);
         case 'energy-retrieval':
             return indices(prompt.cards, cardScore, prompt.max);
         case 'search-energy':
@@ -905,6 +935,10 @@ function answerPrompt(game, prompt) {
             if (fromDeck) return indices(prompt.cards, inst => needValue(game, player, game.cardOf(inst)), prompt.max);
             return Array.from({ length: prompt.max }, (_, index) => index);
         case 'attach-energy-target':
+            // つけるエネルギーで、ワザに足りないエネルギーがいちばん減る（育てたい）ポケモンを選ぶ
+            if (prompt.type === 'pokemon' && prompt.energy) {
+                return indices(prompt.pokemon, pokemon => energyScore(game, player, pokemon, prompt.energy) * 10 + potential(game, player, pokemon) / 100, prompt.max);
+            }
             return Array.from({ length: prompt.max }, (_, index) => index);
         case 'discard-opponent-energy':
         case 'discard-opponent-hand':

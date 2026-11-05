@@ -1374,6 +1374,7 @@ export default class Game {
                 max: 1,
                 title: `${this.cardName(inst)}をつけるポケモンを選ぶ`,
                 purpose,
+                energy: inst, // CPU がつけ先を選ぶため
                 callback: ([target]) => attach(target)
             });
         });

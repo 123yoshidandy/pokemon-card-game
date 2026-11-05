@@ -1250,11 +1250,13 @@ dialog button:focus { outline: none; }
 .card-art:has(.card-moves) .emblem,
 .mon-art:has(.card-moves) .emblem {
     position: absolute;
-    inset: 0;
-    margin: auto;
-    width: 74%;
-    height: 74%;
-    opacity: 0.22;
+    top: 4%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 56%;
+    height: 50%;
+    opacity: 0.75;
 }
 .card-moves {
     position: relative;
@@ -1262,8 +1264,9 @@ dialog button:focus { outline: none; }
     max-height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 2cqw;
+    height: 100%;
     padding: 2.5cqw 3cqw;
     color: #fff;
     font-size: max(6.5px, 10cqw);

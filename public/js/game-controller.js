@@ -5,12 +5,13 @@
 
 import Game from './game.js';
 import { createGameView } from './game-view.js';
-import { runCpuStep, actingPlayerId } from './cpu-player.js';
+import { runCpuStep, actingPlayerId, minimalAnswer } from './cpu-player.js';
 import { createSeed } from './random.js';
 
 const CPU_STEP_DELAY_MS = 650; // CPU の手は1手ずつ間を置いて見せる
 const CPU_SETUP_DELAY_MS = 250;
 const HUMAN = 0;
+const STALL_LIMIT = 3; // CPU の手が進まないことがこの回数続いたら、最小の答えか「番を終える」で抜ける
 
 export default class LocalGameController {
     // decks: [自分のデッキ, CPU のデッキ]（カードIDの配列） / listeners: onUpdate() / onError(message)
@@ -44,10 +45,35 @@ export default class LocalGameController {
         if (playerId === null || !this.game.players[playerId].isCPU) return;
         const delay = this.game.phase === 'setup' ? CPU_SETUP_DELAY_MS : CPU_STEP_DELAY_MS;
         this.cpuTimer = setTimeout(() => {
-            runCpuStep(this.game);
-            this.listeners.onUpdate?.();
-            this.scheduleCpu();
+            // どこで例外が出ても、必ず次の手を予約する（対戦が止まらないように）
+            try {
+                this.stepCpu();
+            } catch (error) {
+                console.error(error);
+            } finally {
+                try {
+                    this.listeners.onUpdate?.();
+                } finally {
+                    this.scheduleCpu();
+                }
+            }
         }, delay);
+    }
+
+    stepCpu() {
+        const before = this.game.commands.length;
+        try {
+            runCpuStep(this.game);
+        } catch (error) {
+            console.error(error);
+        }
+        this.stalls = this.game.commands.length === before ? (this.stalls ?? 0) + 1 : 0;
+        if (this.stalls < STALL_LIMIT) return;
+        this.stalls = 0;
+        const playerId = actingPlayerId(this.game);
+        if (playerId === null) return;
+        const prompt = this.game.pendingPrompt;
+        this.game.applyCommand(playerId, prompt ? { type: 'answer', answer: minimalAnswer(prompt) } : { type: 'endTurn' });
     }
 
     stop() {

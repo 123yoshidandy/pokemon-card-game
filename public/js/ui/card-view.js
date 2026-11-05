@@ -61,6 +61,12 @@ function movesHtml(card) {
     return rows.length ? `<div class="card-moves">${rows.join('')}</div>` : '';
 }
 
+// にげるコスト。場のポケモンで、効果で変わっているなら「元 → 今」と並べる
+function retreatText(printed, actual) {
+    const dots = n => (n ? costDots(Array(n).fill('colorless')) : 'なし');
+    return actual === undefined || actual === printed ? dots(printed) : `<s>${dots(printed)}</s> → ${dots(actual)}`;
+}
+
 // 特殊エネルギーが出すタイプ（どのタイプにもなる・わからないものは空）
 function specialEnergyTypes(card) {
     try {
@@ -147,7 +153,7 @@ export function cardDetail(id, pokemon = null) {
         // 弱点・抵抗力・にげると、ついているエネルギー・特殊状態は、ワザより先に出す（説明が長くても、にげるコストなどが隠れないように）
         const weak = card.weakness ? `${energyDot(card.weakness)}×2` : 'なし';
         const resist = card.resistance ? `${energyDot(card.resistance)}−30` : 'なし';
-        parts.push(`<div class="detail-stats"><span>弱点 ${weak}</span><span>抵抗力 ${resist}</span><span>にげる ${card.retreat ? costDots(Array(card.retreat).fill('colorless')) : 'なし'}</span></div>`);
+        parts.push(`<div class="detail-stats"><span>弱点 ${weak}</span><span>抵抗力 ${resist}</span><span>にげる ${retreatText(card.retreat, pokemon?.retreat)}</span></div>`);
         if (pokemon) {
             const state = [];
             if (pokemon.energies.length) state.push(`エネルギー ${pokemon.energies.map(e => energyDot(getCard(e).energyType)).join('')}`);

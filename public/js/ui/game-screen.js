@@ -92,7 +92,7 @@ export default class GameScreen {
             onLongPress: element => (element.dataset.uid ? this.openHandDetail(element.dataset.uid) : this.openPokemonDetail(element.dataset.pokemon))
         });
         $('end-turn').addEventListener('click', () => this.confirmEndTurn());
-        $('log').addEventListener('click', () => this.view && showLog($('pile'), this.view.log));
+        $('open-log').addEventListener('click', () => this.view && showLog($('pile'), this.view.log));
         // 中央のボタン：選択にもどる・（つけ先などを選ぶのを）やめる・結果を見る
         $('prompt-done').addEventListener('click', () => {
             const action = $('prompt-done').dataset.action;

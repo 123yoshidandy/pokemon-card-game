@@ -13,7 +13,7 @@
     --sheet: #1c2a48;
     --bar-h: 34px;
     --dock-h: clamp(78px, 22dvh, 128px);
-    --panel-w: clamp(150px, 23vw, 250px);
+    --panel-w: clamp(104px, 15vw, 170px);
     --safe-l: env(safe-area-inset-left, 0px);
     --safe-r: env(safe-area-inset-right, 0px);
     --safe-b: env(safe-area-inset-bottom, 0px);
@@ -664,9 +664,11 @@ button { font: inherit; color: inherit; }
 
 /* ===== 右の列 ===== */
 
+/* 右の列は、相手の情報（上）と自分の情報（下）だけ。ログは上の帯のボタンから開く */
 .panel {
-    display: grid;
-    grid-template-rows: auto minmax(0, 1fr) auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     gap: 4px;
     padding: 4px 6px 4px 0;
     min-height: 0;
@@ -677,7 +679,7 @@ button { font: inherit; color: inherit; }
     padding: 3px 6px;
 }
 .info-name { font-size: 12px; font-weight: 700; color: var(--ink-dim); }
-.info-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1.5fr; gap: 3px; }
+.info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 4px; }
 .info-item {
     display: flex;
     flex-direction: column;
@@ -695,6 +697,7 @@ button { font: inherit; color: inherit; }
     cursor: pointer;
 }
 
+.panel .log { display: none; }
 .log {
     margin: 0;
     padding: 4px 6px;

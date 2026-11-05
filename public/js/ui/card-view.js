@@ -6,6 +6,10 @@
 import { getCard, TYPE_NAMES, TRAINER_TYPE_NAMES, RULE_TEXTS } from '../card-data.js';
 import { CONDITION_NAMES } from '../game.js';
 import { MOTIF_ICONS, POKEMON_MOTIFS } from './motifs.js';
+import { TRAINER_ICONS_BY_MOTIF, TRAINER_MOTIFS } from './trainer-motifs.js';
+
+// トレーナーズの絵：役割ごとの図柄（trainer-motifs.js）。割り当てがなければ、種類の記号
+const trainerArt = card => TRAINER_ICONS_BY_MOTIF[TRAINER_MOTIFS[card.name]] ?? TRAINER_ICONS[card.trainerType];
 
 // タイプの記号（24×24）
 const EMBLEMS = {
@@ -127,7 +131,7 @@ export function cardFace(id) {
     if (card.kind === 'trainer') {
         return `<div class="card card-trainer trainer-${card.trainerType}" data-card="${id}">
             <div class="card-head"><span class="card-stage">${card.trainerType === 'tool' ? 'どうぐ' : TRAINER_TYPE_NAMES[card.trainerType]}</span></div>
-            <div class="card-art"><svg class="emblem" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${TRAINER_ICONS[card.trainerType]}</svg></div>
+            <div class="card-art"><svg class="emblem" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${trainerArt(card)}</svg></div>
             <div class="card-name">${escape(card.name)}</div>
         </div>`;
     }
@@ -218,7 +222,7 @@ export function cardDetail(id, pokemon = null) {
         return parts.join('');
     }
     if (card.kind === 'trainer') {
-        return `<div class="detail-head trainer-${card.trainerType}"><svg class="emblem" viewBox="0 0 24 24" fill="currentColor">${TRAINER_ICONS[card.trainerType]}</svg><div><div class="detail-name">${escape(card.name)}${regulationMark(card)}</div><div class="detail-sub">${[TRAINER_TYPE_NAMES[card.trainerType], card.aceSpec ? 'ACE SPEC' : null, printLabel(card)].filter(Boolean).join(' ・ ')}</div></div></div>
+        return `<div class="detail-head trainer-${card.trainerType}"><svg class="emblem" viewBox="0 0 24 24" fill="currentColor">${trainerArt(card)}</svg><div><div class="detail-name">${escape(card.name)}${regulationMark(card)}</div><div class="detail-sub">${[TRAINER_TYPE_NAMES[card.trainerType], card.aceSpec ? 'ACE SPEC' : null, printLabel(card)].filter(Boolean).join(' ・ ')}</div></div></div>
             <div class="detail-block"><p>${cardText(card.text)}</p></div>
             ${card.trainerType === 'supporter' ? '<div class="detail-rule">サポートは、自分の番に1枚しか使えない。</div>' : ''}
             ${card.trainerType === 'stadium' ? '<div class="detail-rule">スタジアムは、自分の番に1枚しか出せない。</div>' : ''}`;

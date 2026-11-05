@@ -5,6 +5,7 @@
 
 import { getCard, TYPE_NAMES, TRAINER_TYPE_NAMES, RULE_TEXTS } from '../card-data.js';
 import { CONDITION_NAMES } from '../game.js';
+import { MOTIF_ICONS, POKEMON_MOTIFS } from './motifs.js';
 
 // タイプの記号（24×24）
 const EMBLEMS = {
@@ -33,6 +34,13 @@ export function emblemSvg(type, className = 'emblem') {
     return `<svg class="${className}" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">${EMBLEMS[type] ?? EMBLEMS.colorless}</svg>`;
 }
 
+// ポケモンの絵：モチーフの動物・ものの図柄（motifs.js）。対応がなければタイプの記号
+export function pokemonArt(card, className = 'emblem') {
+    const icon = MOTIF_ICONS[POKEMON_MOTIFS[card.name]];
+    if (!icon) return emblemSvg(card.type, className);
+    return `<svg class="${className} motif" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">${icon}</svg>`;
+}
+
 export function energyDot(type) {
     return `<span class="energy type-${type}" title="${TYPE_NAMES[type]}">${emblemSvg(type)}</span>`;
 }
@@ -45,13 +53,21 @@ function escape(text) {
     return String(text).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 }
 
+// カードの面に出す特性とワザ（ワザは必要なエネルギーの色の丸・名前・ダメージ）。タイプの記号は後ろに薄く残す
+function movesHtml(card) {
+    const rows = [];
+    if (card.ability) rows.push(`<div class="move move-ability"><span class="move-name">${escape(card.ability.name)}</span></div>`);
+    card.attacks.forEach(attack => rows.push(`<div class="move"><span class="move-cost">${attack.cost.map(type => `<i class="move-dot type-${type}"></i>`).join('')}</span><span class="move-name">${escape(attack.name)}</span>${attack.damageText ? `<span class="move-dmg">${escape(attack.damageText)}</span>` : ''}</div>`));
+    return rows.length ? `<div class="card-moves">${rows.join('')}</div>` : '';
+}
+
 // カード1枚の表（手札・選択・タイトルの絵）
 export function cardFace(id) {
     const card = getCard(id);
     if (card.kind === 'pokemon') {
         return `<div class="card card-pokemon type-${card.type}" data-card="${id}">
             <div class="card-head"><span class="card-stage">${STAGE_NAMES[card.stage]}</span><span class="card-hp">${card.hp}</span></div>
-            <div class="card-art">${emblemSvg(card.type)}</div>
+            <div class="card-art">${pokemonArt(card)}${movesHtml(card)}</div>
             <div class="card-name">${escape(card.name)}</div>
         </div>`;
     }
@@ -82,9 +98,8 @@ export function pokemonTile(pokemon, { active = false } = {}) {
     const conditions = pokemon.conditions.map(condition => `<span class="cond cond-${condition}">${CONDITION_NAMES[condition]}</span>`).join('');
     const energies = pokemon.energies.map(id => energyDot(getCard(id).energyType)).join('');
     return `<div class="mon type-${card.type} ${active ? 'mon-active' : ''} ${pokemon.faceDown ? 'mon-facedown' : ''}" data-pokemon="${pokemon.id}">
-        <div class="mon-name">${escape(card.name)}</div>
-        <div class="mon-art">${emblemSvg(card.type)}</div>
-        <div class="mon-hp ${hpClass}"><span class="mon-hp-bar" style="width:${ratio * 100}%"></span><span class="mon-hp-text">${remaining}/${pokemon.hp}</span></div>
+        <div class="mon-head"><span class="mon-name">${escape(card.name)}</span><span class="mon-hp-num ${hpClass}">${remaining}</span></div>
+        <div class="mon-art">${pokemonArt(card)}${movesHtml(card)}</div>
         <div class="mon-energies">${energies}</div>
         ${pokemon.tool ? `<span class="mon-tool" title="${escape([pokemon.tool, pokemon.tool2].filter(Boolean).map(tool => getCard(tool).name).join('・'))}"><svg viewBox="0 0 24 24" fill="currentColor">${TRAINER_ICONS.tool}</svg></span>` : ''}
         ${conditions ? `<div class="mon-conds">${conditions}</div>` : ''}
@@ -107,7 +122,7 @@ export function cardDetail(id, pokemon = null) {
     if (card.kind === 'pokemon') {
         const parts = [];
         const sub = [STAGE_NAMES[card.stage], card.evolvesFrom ? `${escape(card.evolvesFrom)}から進化` : null, printLabel(card)].filter(Boolean).join(' ・ ');
-        parts.push(`<div class="detail-head type-${card.type}">${emblemSvg(card.type)}<div><div class="detail-name">${escape(card.name)}${regulationMark(card)}</div><div class="detail-sub">${sub}</div></div><div class="detail-hp">HP<b>${pokemon ? `${Math.max(0, pokemon.hp - pokemon.damage)}/${pokemon.hp}` : card.hp}</b></div></div>`);
+        parts.push(`<div class="detail-head type-${card.type}">${pokemonArt(card)}<div><div class="detail-name">${escape(card.name)}${regulationMark(card)}</div><div class="detail-sub">${sub}</div></div><div class="detail-hp">HP<b>${pokemon ? `${Math.max(0, pokemon.hp - pokemon.damage)}/${pokemon.hp}` : card.hp}</b></div></div>`);
         // 弱点・抵抗力・にげると、ついているエネルギー・特殊状態は、ワザより先に出す（説明が長くても、にげるコストなどが隠れないように）
         const weak = card.weakness ? `${energyDot(card.weakness)}×2` : 'なし';
         const resist = card.resistance ? `${energyDot(card.resistance)}−30` : 'なし';

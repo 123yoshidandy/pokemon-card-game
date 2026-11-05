@@ -2,6 +2,7 @@
  * ダイアログ：選択（カード・選択肢・はい／いいえ）、カードの説明、カードの一覧、決着
  */
 
+import { getCard } from '../card-data.js';
 import { cardFace, cardDetail } from './card-view.js';
 import { bindPress } from './press.js';
 
@@ -87,19 +88,19 @@ export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
 // actions：{ attacks: [使えるか...], retreat, ability, play } と、それぞれの処理 onAttack(index)・onRetreat()・onAbility()・onPlay()
 export function showDetail(dialog, { cardId, pokemon = null, actions = {}, playLabel = '使う', onAttack, onRetreat, onAbility, onPlay }) {
     dialog.dataset.closable = 'true';
+    // ワザ・特性のボタンは、説明をスクロールしなくても押せるよう、下のボタンの列にワザの名前で並べる
+    const card = getCard(cardId);
+    const attacks = card.kind === 'pokemon' ? [...card.attacks, ...(pokemon?.extraAttacks ?? [])] : [];
+    const attackButtons = attacks.map((attack, index) => (actions.attacks?.[index]
+        ? `<button type="button" class="btn btn-primary" data-use-attack="${index}">${escapeHtml(attack.name)}</button>` : '')).join('');
+    const abilityButton = actions.ability ? `<button type="button" class="btn btn-primary" data-use-ability>${escapeHtml(card.ability?.name ?? '特性')}</button>` : '';
     dialog.innerHTML = `<div class="sheet-body detail">${cardDetail(cardId, pokemon)}</div>
-        <div class="sheet-actions">
+        <div class="sheet-actions detail-actions">
+            ${abilityButton}${attackButtons}
             ${actions.retreat ? '<button type="button" class="btn btn-secondary" data-retreat>にげる</button>' : ''}
             ${actions.play ? `<button type="button" class="btn btn-primary" data-play>${playLabel}</button>` : ''}
             <button type="button" class="btn btn-secondary" data-close>閉じる</button>
         </div>`;
-    // ワザと特性のボタンは、それぞれの説明の中に置く
-    dialog.querySelectorAll('[data-attack]').forEach(block => {
-        const index = Number(block.dataset.attack);
-        if (actions.attacks?.[index]) block.insertAdjacentHTML('beforeend', `<button type="button" class="btn btn-primary btn-small" data-use-attack="${index}">ワザを使う</button>`);
-    });
-    if (actions.ability) dialog.querySelector('[data-ability]')?.insertAdjacentHTML('beforeend', '<button type="button" class="btn btn-primary btn-small" data-use-ability>特性を使う</button>');
-
     dialog.onclick = event => {
         const target = event.target.closest('button');
         if (!target) return;
@@ -175,18 +176,19 @@ export function showConfirm(dialog, { title, yesLabel, onYes }) {
 }
 
 // ===== デッキを選ぶ =====
-// decks：[{ id, name, problem }]（problem があるデッキは選べない）
-export function showDeckPicker(dialog, { decks, currentId, onPick, onBuild }) {
+// decks：[{ id, name, problem }]（problem があるデッキは選べない）。any を渡すと、先頭に「おまかせ」などの選択肢を出す（選ぶと onPick('')）
+export function showDeckPicker(dialog, { decks, currentId, onPick, onBuild, title = 'デッキ', any = null }) {
     dialog.dataset.closable = 'true';
-    dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">デッキ</h2>
-        <div class="deck-picks">${decks.map(deck => `<button type="button" class="deck-pick ${deck.id === currentId ? 'active' : ''}" data-pick="${deck.id}" ${deck.problem ? 'disabled' : ''}>
+    dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">${title}</h2>
+        <div class="deck-picks">${any ? `<button type="button" class="deck-pick ${currentId ? '' : 'active'}" data-pick-any><span class="deck-pick-name">${any}</span></button>` : ''}${decks.map(deck => `<button type="button" class="deck-pick ${deck.id === currentId ? 'active' : ''}" data-pick="${deck.id}" ${deck.problem ? 'disabled' : ''}>
             <span class="deck-pick-name">${escapeHtml(deck.name)}</span>${deck.problem ? `<span class="deck-pick-note">${escapeHtml(deck.problem)}</span>` : ''}</button>`).join('')}</div></div>
         <div class="sheet-actions"><button type="button" class="btn btn-tertiary" data-build>デッキ構築</button><button type="button" class="btn btn-secondary" data-close>閉じる</button></div>`;
     dialog.onclick = event => {
         const target = event.target.closest('button');
         if (!target || target.disabled) return;
         dialog.close();
-        if (target.dataset.pick) onPick(target.dataset.pick);
+        if (target.dataset.pickAny !== undefined) onPick('');
+        else if (target.dataset.pick) onPick(target.dataset.pick);
         else if (target.dataset.build !== undefined) onBuild();
     };
     open(dialog);

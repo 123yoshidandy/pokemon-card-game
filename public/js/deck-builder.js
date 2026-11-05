@@ -55,6 +55,11 @@ export const CARD_POOL = legalCards
     .map(card => card.id);
 const POOL_INDEX = new Map(CARD_POOL.map((id, index) => [id, index]));
 
+// カードの並び順（デッキ構築の一覧と同じ。手札もこの順に並べる）。一覧にないカードは種類の最後
+export function cardOrder(id) {
+    return POOL_INDEX.get(id) ?? (KIND_ORDER[CARDS[id]?.kind] ?? 3) * 100000 + 99999;
+}
+
 export const totalCount = deck => Object.values(deck.cards).reduce((sum, count) => sum + count, 0);
 
 // 同じ名前のカード（違うIDでも名前が同じなら合わせて数える）の枚数

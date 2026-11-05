@@ -26,9 +26,15 @@
         <div class="title-wrap">
             <h1 class="title-logo">Pokémon Card Game</h1>
             <div id="title-art" class="title-art" aria-hidden="true"></div>
-            <div class="setting">
-                <span class="setting-label">デッキ</span>
-                <button type="button" class="deck-picker-btn" data-open-deck-picker></button>
+            <div class="settings-row">
+                <div class="setting">
+                    <span class="setting-label">デッキ</span>
+                    <button type="button" class="deck-picker-btn" data-open-deck-picker></button>
+                </div>
+                <div class="setting">
+                    <span class="setting-label">相手</span>
+                    <button type="button" class="deck-picker-btn" data-open-cpu-deck-picker></button>
+                </div>
             </div>
             <div class="title-buttons">
                 <button id="start-cpu" class="btn btn-primary">CPU と対戦</button>
@@ -113,6 +119,7 @@
         <header class="topbar">
             <button id="go-home" class="icon-btn" aria-label="ホーム"><svg><use href="#icon-home"/></svg></button>
             <div id="turn-info" class="turn-info"></div>
+            <button id="open-log" class="icon-btn" aria-label="ログ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 6.5h12M8 12h12M8 17.5h12M4 6.5h.01M4 12h.01M4 17.5h.01"/></svg></button>
             <button id="sound-toggle" class="icon-btn sound-toggle" aria-label="効果音" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="sound-wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/><path class="sound-slash" d="M3.5 3.5l17 17"/></svg></button>
             <button id="open-rules-game" class="icon-btn" aria-label="遊び方"><svg><use href="#icon-help"/></svg></button>
         </header>

@@ -9,6 +9,7 @@ import { bindPress } from './press.js';
 import { showPrompt, showDetail, showPile, showResult, showConfirm, showLog, closeOnBackdrop } from './sheets.js';
 import { BENCH_SIZE } from '../game.js';
 import Animator from './animator.js';
+import { cardOrder } from '../deck-builder.js';
 import { playEffect } from '../sound.js';
 
 const $ = id => document.getElementById(id);
@@ -91,7 +92,7 @@ export default class GameScreen {
             onLongPress: element => (element.dataset.uid ? this.openHandDetail(element.dataset.uid) : this.openPokemonDetail(element.dataset.pokemon))
         });
         $('end-turn').addEventListener('click', () => this.confirmEndTurn());
-        $('log').addEventListener('click', () => this.view && showLog($('pile'), this.view.log));
+        $('open-log').addEventListener('click', () => this.view && showLog($('pile'), this.view.log));
         // 中央のボタン：選択にもどる・（つけ先などを選ぶのを）やめる・結果を見る
         $('prompt-done').addEventListener('click', () => {
             const action = $('prompt-done').dataset.action;
@@ -256,7 +257,8 @@ export default class GameScreen {
             if (!groups.has(inst.id)) groups.set(inst.id, []);
             groups.get(inst.id).push(inst.uid);
         }
-        $('hand').innerHTML = [...groups].map(([id, uids]) => {
+        // 種類の順（ポケモン → トレーナーズ → エネルギー。デッキ構築の一覧と同じ順）に並べる
+        $('hand').innerHTML = [...groups].sort((a, b) => cardOrder(a[0]) - cardOrder(b[0])).map(([id, uids]) => {
             const uid = uids.find(item => item === this.mode?.uid) ?? uids.find(item => view.legal?.hand[item]) ?? uids[0];
             const playable = view.legal?.hand[uid] && !prompt;
             const selected = this.mode?.uid === uid;

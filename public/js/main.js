@@ -51,11 +51,12 @@ const screen = new GameScreen({
 // ===== 設定 =====
 
 function loadSettings() {
-    const fallback = { deckId: DECKS[0].id, name: '' };
+    const fallback = { deckId: DECKS[0].id, cpuDeckId: '', name: '' };
     try {
         const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? '{}');
         return {
             deckId: typeof saved.deckId === 'string' ? saved.deckId : fallback.deckId,
+            cpuDeckId: typeof saved.cpuDeckId === 'string' ? saved.cpuDeckId : '', // CPU のデッキ（空ならおまかせ）
             name: typeof saved.name === 'string' ? saved.name : ''
         };
     } catch {
@@ -77,11 +78,17 @@ function selectedDeck() {
     return deck && !deckProblem(deck) ? deck : DECKS[0];
 }
 
+// CPU のデッキ（おまかせ・消した・遊べないデッキなら null）
+function selectedCpuDeck() {
+    const deck = settings.cpuDeckId ? deckStore.find(settings.cpuDeckId) : null;
+    return deck && !deckProblem(deck) ? deck : null;
+}
+
 const deckScreens = new DeckScreens(deckStore, {
     show: next => setScene(next),
     onDeleted: deckId => {
-        if (settings.deckId !== deckId) return;
-        settings.deckId = DECKS[0].id;
+        if (settings.cpuDeckId === deckId) settings.cpuDeckId = '';
+        if (settings.deckId === deckId) settings.deckId = DECKS[0].id;
         saveSettings();
     },
     toast: message => toast(message),
@@ -107,9 +114,29 @@ function openDecks() {
     deckScreens.showList();
 }
 
+function deckChoices() {
+    return [...deckStore.custom(), ...deckStore.all().filter(deck => deck.builtIn)].map(deck => ({ id: deck.id, name: deck.name, problem: deckProblem(deck) }));
+}
+
+// CPU のデッキを選ぶ（おまかせ：自分のデッキとタイプの違う構築済みデッキからランダム）
+function openCpuDeckPicker() {
+    showDeckPicker($('deck-picker'), {
+        title: '相手のデッキ',
+        any: 'おまかせ',
+        decks: deckChoices(),
+        currentId: selectedCpuDeck()?.id ?? '',
+        onPick: deckId => {
+            settings.cpuDeckId = deckId;
+            saveSettings();
+            renderDeckSelect();
+        },
+        onBuild: openDecks
+    });
+}
+
 function openDeckPicker() {
     showDeckPicker($('deck-picker'), {
-        decks: [...deckStore.custom(), ...deckStore.all().filter(deck => deck.builtIn)].map(deck => ({ id: deck.id, name: deck.name, problem: deckProblem(deck) })),
+        decks: deckChoices(),
         currentId: selectedDeck().id,
         onPick: deckId => {
             settings.deckId = deckId;
@@ -138,6 +165,7 @@ function toast(message) {
 function renderDeckSelect() {
     const name = selectedDeck().name;
     document.querySelectorAll('[data-open-deck-picker]').forEach(button => { button.textContent = name; });
+    document.querySelectorAll('[data-open-cpu-deck-picker]').forEach(button => { button.textContent = selectedCpuDeck()?.name ?? 'おまかせ'; });
 }
 
 function showTitle() {
@@ -151,10 +179,10 @@ function showTitle() {
 // ===== CPU 対戦 =====
 
 function startCpuGame() {
-    // CPU は、自分のデッキとタイプの違う構築済みデッキから、ランダムに選ぶ
+    // CPU は、選んだデッキ。おまかせなら、自分のデッキとタイプの違う構築済みデッキから、ランダムに選ぶ
     const mine = selectedDeck();
     const others = DECKS.filter(deck => deck.type !== mainEnergyType(mine));
-    const cpu = others.length ? others[Math.floor(Math.random() * others.length)] : DECKS[0];
+    const cpu = selectedCpuDeck() ?? (others.length ? others[Math.floor(Math.random() * others.length)] : DECKS[0]);
     screen.stop();
     const controller = new LocalGameController(
         { name: 'あなた', decks: [expandDeck(mine), expandDeck(cpu)] },
@@ -320,6 +348,7 @@ function clearInviteUrl() {
 
 document.addEventListener('click', event => {
     if (event.target.closest('[data-open-deck-picker]')) openDeckPicker();
+    if (event.target.closest('[data-open-cpu-deck-picker]')) openCpuDeckPicker();
     const removeCpu = event.target.closest('[data-remove-cpu]');
     if (removeCpu) online?.removeCpu(Number(removeCpu.dataset.removeCpu));
 });

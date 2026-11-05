@@ -108,6 +108,16 @@ export function cardDetail(id, pokemon = null) {
         const parts = [];
         const sub = [STAGE_NAMES[card.stage], card.evolvesFrom ? `${escape(card.evolvesFrom)}から進化` : null, printLabel(card)].filter(Boolean).join(' ・ ');
         parts.push(`<div class="detail-head type-${card.type}">${emblemSvg(card.type)}<div><div class="detail-name">${escape(card.name)}${regulationMark(card)}</div><div class="detail-sub">${sub}</div></div><div class="detail-hp">HP<b>${pokemon ? `${Math.max(0, pokemon.hp - pokemon.damage)}/${pokemon.hp}` : card.hp}</b></div></div>`);
+        // 弱点・抵抗力・にげると、ついているエネルギー・特殊状態は、ワザより先に出す（説明が長くても、にげるコストなどが隠れないように）
+        const weak = card.weakness ? `${energyDot(card.weakness)}×2` : 'なし';
+        const resist = card.resistance ? `${energyDot(card.resistance)}−30` : 'なし';
+        parts.push(`<div class="detail-stats"><span>弱点 ${weak}</span><span>抵抗力 ${resist}</span><span>にげる ${card.retreat ? costDots(Array(card.retreat).fill('colorless')) : 'なし'}</span></div>`);
+        if (pokemon) {
+            const state = [];
+            if (pokemon.energies.length) state.push(`エネルギー ${pokemon.energies.map(e => energyDot(getCard(e).energyType)).join('')}`);
+            if (pokemon.conditions.length) state.push(`特殊状態：${pokemon.conditions.map(c => CONDITION_NAMES[c]).join('・')}`);
+            if (state.length) parts.push(`<div class="detail-extra">${state.map(e => `<div>${e}</div>`).join('')}</div>`);
+        }
         if (card.rule) parts.push(`<div class="detail-rule">${RULE_TEXTS[card.rule]}</div>`);
         if (card.tera) parts.push('<div class="detail-rule">テラスタル：このポケモンがベンチにいるかぎり、ワザのダメージを受けない。</div>');
         if (card.ability) {
@@ -118,14 +128,9 @@ export function cardDetail(id, pokemon = null) {
             const extra = index >= card.attacks.length ? '<span class="tag tag-ability">ほかのカードのワザ</span>' : '';
             parts.push(`<div class="detail-block" data-attack="${index}"><div class="detail-title">${costDots(attack.cost)}<span class="attack-name">${escape(attack.name)}</span><span class="attack-damage">${escape(attack.damageText)}</span>${extra}</div>${attack.text ? `<p>${escape(attack.text)}</p>` : ''}</div>`);
         });
-        const weak = card.weakness ? `${energyDot(card.weakness)}×2` : 'なし';
-        const resist = card.resistance ? `${energyDot(card.resistance)}−30` : 'なし';
-        parts.push(`<div class="detail-stats"><span>弱点 ${weak}</span><span>抵抗力 ${resist}</span><span>にげる ${card.retreat ? costDots(Array(card.retreat).fill('colorless')) : 'なし'}</span></div>`);
         if (pokemon) {
             const extras = [];
-            if (pokemon.energies.length) extras.push(`エネルギー ${pokemon.energies.map(e => energyDot(getCard(e).energyType)).join('')}`);
             [pokemon.tool, pokemon.tool2].filter(Boolean).forEach(tool => extras.push(`どうぐ：${escape(getCard(tool).name)}（${escape(getCard(tool).text)}）`));
-            if (pokemon.conditions.length) extras.push(`特殊状態：${pokemon.conditions.map(c => CONDITION_NAMES[c]).join('・')}`);
             if (pokemon.cards.length > 1) extras.push(`進化元：${pokemon.cards.slice(0, -1).map(c => escape(getCard(c).name)).join(' → ')}`);
             if (extras.length) parts.push(`<div class="detail-extra">${extras.map(e => `<div>${e}</div>`).join('')}</div>`);
         }

@@ -1070,3 +1070,28 @@ dialog button:focus { outline: none; }
 /* デッキの取り込み */
 .import-text { display: block; width: 100%; max-width: none; min-height: 120px; padding: 8px 10px; font-size: 16px; line-height: 1.4; resize: vertical; box-sizing: border-box; }
 .import-error { margin: 6px 0 0; color: #ff9a8f; font-size: 13px; }
+
+/* ダメージの増減（ポケモンの上に短く浮かべる） */
+.damage-float {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    z-index: 3;
+    padding: 0 7px;
+    border-radius: 8px;
+    background: rgba(10, 16, 30, 0.82);
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.4;
+    color: #ff7a6e;
+    white-space: nowrap;
+    pointer-events: none;
+    animation: damage-float 1.4s ease-out forwards;
+}
+.damage-float.heal { color: #7ee08a; }
+@keyframes damage-float {
+    0% { opacity: 0; transform: translate(-50%, 8px) scale(0.8); }
+    15% { opacity: 1; transform: translate(-50%, 0) scale(1.1); }
+    70% { opacity: 1; transform: translate(-50%, -6px) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -18px) scale(1); }
+}

@@ -32,6 +32,7 @@ export default class GameScreen {
         this.promptPeeking = false;
         this.shownPromptId = null;
         this.resultShown = false;
+        this.lastDamages = null;
         this.closeDialogs();
         this.render();
     }
@@ -222,6 +223,7 @@ export default class GameScreen {
         const playing = view.phase !== 'setup' && view.phase !== 'deck' && !view.winner;
         $('my-side').classList.toggle('on-turn', playing && view.current === view.viewerId);
         $('opp-side').classList.toggle('on-turn', playing && view.current !== view.viewerId);
+        this.showDamageChanges(view);
         $('opp-info').innerHTML = this.infoHtml(opp);
         $('my-info').innerHTML = this.infoHtml(me);
         $('stadium').innerHTML = view.stadium ? `<span class="stadium-chip ${view.legal?.stadium ? 'playable' : ''}">${getCard(view.stadium.id).name}</span>` : '';
@@ -327,6 +329,25 @@ export default class GameScreen {
             return pokemon ? tile(pokemon, false) : '<div class="slot slot-bench slot-empty"></div>';
         }).join('');
         return `${active}<div class="bench ${slots > BENCH_SIZE ? 'bench-wide' : ''}" style="--bench-slots:${slots}">${bench}</div>`;
+    }
+
+    // ダメージが増えた・減ったポケモンの上に、数字を短く浮かべる（相手の番に何が起きたかを見えるように）
+    showDamageChanges(view) {
+        const damages = new Map();
+        for (const player of view.players) {
+            for (const pokemon of [player.active, ...player.bench]) if (pokemon) damages.set(pokemon.id, pokemon.damage);
+        }
+        for (const [id, damage] of damages) {
+            const diff = damage - (this.lastDamages?.get(id) ?? damage);
+            const slot = diff && document.querySelector(`#game-screen [data-pokemon="${id}"]`)?.closest('.slot');
+            if (!slot) continue;
+            const float = document.createElement('span');
+            float.className = `damage-float ${diff > 0 ? 'hurt' : 'heal'}`;
+            float.textContent = `${diff > 0 ? '−' : '+'}${Math.abs(diff)}`;
+            float.addEventListener('animationend', () => float.remove());
+            slot.append(float);
+        }
+        this.lastDamages = damages;
     }
 
     infoHtml(player) {

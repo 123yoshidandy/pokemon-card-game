@@ -59,13 +59,19 @@ export default class GameScreen {
     }
 
     send(command) {
-        if (this.controller?.awaitingResponse) return; // オンラインで返事を待っている間は、二重に送らない
+        // オンラインで返事を待っている間は、二重に送らない（降参だけは待たずに送る。ほかは知らせる）
+        if (this.controller?.awaitingResponse && command.type !== 'concede') {
+            this.showError('少し待ってください');
+            return;
+        }
         this.mode = null;
         this.controller?.send(command);
         this.render();
     }
 
     showError(message) {
+        // 答えが断られたら、同じ選択をもう一度出せるようにする
+        this.answeredPromptId = null;
         $('status').textContent = message;
         $('status').classList.add('status-error');
         clearTimeout(this.errorTimer);
@@ -99,6 +105,11 @@ export default class GameScreen {
         $('end-turn').addEventListener('click', () => this.confirmEndTurn());
         // Esc や Android の「戻る」で選択・決着のダイアログが閉じたら、「盤面を見る」と同じ扱いにする（中央の帯から戻せるように）
         $('prompt').addEventListener('close', () => {
+            // プログラムから閉じたとき（答えた・選択がなくなった）は、何もしない
+            if (this.closingPrompt) {
+                this.closingPrompt = false;
+                return;
+            }
             const prompt = this.myPrompt();
             if (this.shownPromptId === null || prompt?.id !== this.shownPromptId) return; // 答えた・盤面を見るで閉じたとき
             this.promptPeeking = true;
@@ -335,13 +346,19 @@ export default class GameScreen {
         promptDone.disabled = midAction === 'pick' && (pickedIds.size < prompt.min || pickedIds.size > prompt.max);
         document.querySelectorAll('#game-screen .slot').forEach(slot => slot.classList.toggle('picked', pickedIds.has(slot.querySelector('[data-pokemon]')?.dataset.pokemon)));
         if (prompt && prompt.type !== 'pokemon') {
-            if (!this.promptPeeking && this.shownPromptId !== prompt.id) {
+            // 答えた選択と、オンラインで返事を待つあいだは、出し直さない（古い選択が残って、次の選択に答えが使われないように）
+            if (!this.promptPeeking && this.shownPromptId !== prompt.id && prompt.id !== this.answeredPromptId && !this.controller?.awaitingResponse) {
                 this.shownPromptId = prompt.id;
                 showPrompt($('prompt'), prompt, {
                     onAnswer: answer => {
+                        this.closingPrompt = true;
                         $('prompt').close();
                         this.shownPromptId = null;
-                        if (!this.controller?.awaitingResponse) this.controller.send({ type: 'answer', answer });
+                        // 開いている選択が、今の選択と同じときだけ答える
+                        if (this.myPrompt()?.id === prompt.id && !this.controller?.awaitingResponse) {
+                            this.answeredPromptId = prompt.id;
+                            if (this.controller.send({ type: 'answer', answer }) === false) this.answeredPromptId = null;
+                        }
                         this.render();
                     },
                     onPeek: () => {
@@ -354,7 +371,10 @@ export default class GameScreen {
             }
         } else {
             this.promptPeeking = false;
-            if ($('prompt').open) $('prompt').close();
+            if ($('prompt').open) {
+                this.closingPrompt = true;
+                $('prompt').close();
+            }
             this.shownPromptId = null;
         }
 
@@ -450,7 +470,9 @@ export default class GameScreen {
     }
 
     infoHtml(player) {
-        return `<div class="info-name">${escapeHtml(player.name)}</div>
+        // オンラインで接続が切れているプレイヤーは、名前の横に「切断中」
+        const offline = this.disconnected?.has(player.id) ? '<span class="info-offline">切断中</span>' : '';
+        return `<div class="info-name">${escapeHtml(player.name)}${offline}</div>
             <div class="info-row">
                 ${player.faceUpPrizes?.length
                     ? `<button type="button" class="info-item info-button" data-prizes><span class="info-label">サイド</span><b class="has-faceup">${player.prizeCount}</b></button>`

@@ -1396,3 +1396,6 @@ dialog button:focus { outline: none; }
 
 /* デッキの欄の最後の、試し引きのボタン */
 .deck-tools { padding: 8px 0 2px; text-align: center; }
+
+/* オンラインで接続が切れているプレイヤー */
+.info-offline { margin-left: 6px; padding: 0 5px; border-radius: 6px; background: #8a3b32; color: #fff; font-size: 10px; font-weight: 700; }

@@ -44,8 +44,11 @@ const screen = new GameScreen({
             { label: '再戦', primary: true, onClick: () => startCpuGame() }
         ]),
     // オンラインでホストでなければ再戦の案内、そうでなければ使ったデッキの通算の戦績
-    resultNote: () => (isOnlineGame() && !online.isHost() ? 'ホストが「もう一度」を押すと再戦します'
-        : `${escapeHtml(selectedDeck().name)} ${statsText(deckStats.get(selectedDeck().id))}`),
+    // 使ったデッキの通算の戦績。オンラインでホストでなければ、再戦の案内も添える
+    resultNote: () => [
+        isOnlineGame() && !online.isHost() ? 'ホストが「もう一度」を押すと再戦します' : '',
+        `${escapeHtml(selectedDeck().name)} ${statsText(deckStats.get(selectedDeck().id))}`
+    ].filter(Boolean).join('<br>'),
     // 決着したら、使ったデッキの戦績を記録する
     onEnd: view => {
         if (view.viewerId === null || view.viewerId === undefined) return;
@@ -330,6 +333,8 @@ async function joinInvitedRoom(name) {
 
 function onLobby(lobby) {
     // 対戦中（playing）と対戦後（ended）は対戦画面。新しい対戦なら画面を作り直す
+    // 接続が切れている人（CPU を除く）を、対戦画面の情報の欄に出す
+    screen.disconnected = new Set(lobby.players.filter(player => !player.connected && !player.isCPU).map(player => player.seat));
     if (lobby.status !== 'lobby') {
         if (!isOnlineGame() || lobby.matchId !== matchId) {
             matchId = lobby.matchId;
@@ -341,6 +346,8 @@ function onLobby(lobby) {
         }
         return;
     }
+    // 対戦の画面からロビーへ戻ったとき（だれかが「部屋に戻る」を押した）は知らせる
+    if (isOnlineGame() && scene === 'game') toast('部屋に戻りました');
     if (isOnlineGame()) screen.stop();
     renderLobby(lobby);
     setScene('lobby');

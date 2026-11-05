@@ -363,7 +363,10 @@ export default class Game {
             pokemon: player.bench,
             min: 1,
             max: 1,
-            title: 'バトル場に出すポケモンを選ぶ',
+            // きぜつで空いたなら、理由を添える（なぜ選ぶのかがわかるように）
+            title: player.knockedOutTurn === this.turn && player.knockedOutNames?.length
+                ? `${player.knockedOutNames.at(-1)}がきぜつ：次にバトル場に出すポケモンを選ぶ`
+                : 'バトル場に出すポケモンを選ぶ',
             purpose: 'promote',
             callback: ([pokemon]) => {
                 this.removeCard(player.bench, pokemon);

@@ -55,6 +55,12 @@ describe('CPU 同士の試合', () => {
         }));
     }, 30000); // CPU は先読みするので、16試合で数秒かかる
 
+    it('同じシードなら、CPU 同士の試合はいつも同じ手で進む（端末の速さで変わらない）', () => {
+        const first = playOut(7, ['n-zoroark', 'bakegakure']).game.commands;
+        const second = playOut(7, ['n-zoroark', 'bakegakure']).game.commands;
+        expect(second).toEqual(first);
+    }, 30000);
+
     it('相手の手札と山札・サイドの中身は、どのビューにも出ない', () => {
         const { game } = playOut(11, ['charizard', 'miraidon']);
         for (const viewer of [0, 1]) {

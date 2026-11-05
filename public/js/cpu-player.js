@@ -16,7 +16,9 @@ import { DECKS, expandDeck } from './decks.js';
 import { createRandom, shuffle } from './random.js';
 
 const SIM_BUDGET = 160; // 1手を決めるあいだに試す操作の数
-const TIME_BUDGET = 30; // 1手を決める時間の上限（ミリ秒）。超えたら先読みをやめ、見積もりで決める
+// 1手を決める時間の安全弁（ミリ秒）。ふだんは SIM_BUDGET（試す数）で打ち切るので、端末の速さで手が変わらない。
+// ひどく遅い端末で固まらないよう、ここを超えたときだけ先読みをやめる
+const TIME_BUDGET = 500;
 const IMPROVE = 60; // 先読みで、この点数より大きくよくなるなら、その操作をする
 const WIN = 1e6;
 const PRIZE = 1000;

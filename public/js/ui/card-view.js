@@ -73,6 +73,13 @@ function cardText(text) {
     return escape(text).replace(/\[([GRWLPFDMNC])\]/g, (_, code) => energyDot(ENERGY_CODES[code]));
 }
 
+// 場についたエネルギーの丸。特殊エネルギーは、出すタイプの色に縁取りを付けて見分ける
+function attachedEnergyDot(card) {
+    if (card.basic) return energyDot(card.energyType);
+    const types = specialEnergyTypes(card);
+    return energyDot(types.length === 1 ? types[0] : 'colorless').replace('class="energy ', 'class="energy energy-special ').replace(/title="[^"]*"/, `title="${escape(card.name)}"`);
+}
+
 // 特殊エネルギーが出すタイプ（どのタイプにもなる・わからないものは空）
 function specialEnergyTypes(card) {
     try {
@@ -129,7 +136,7 @@ export function pokemonTile(pokemon, { active = false } = {}) {
     const ratio = remaining / pokemon.hp;
     const hpClass = ratio <= 0.25 ? 'hp-low' : ratio <= 0.5 ? 'hp-mid' : '';
     const conditions = pokemon.conditions.map(condition => `<span class="cond cond-${condition}">${CONDITION_NAMES[condition]}</span>`).join('');
-    const energies = pokemon.energies.map(id => energyDot(getCard(id).energyType)).join('');
+    const energies = pokemon.energies.map(id => attachedEnergyDot(getCard(id))).join('');
     return `<div class="mon type-${card.type} ${active ? 'mon-active' : ''} ${pokemon.faceDown ? 'mon-facedown' : ''}" data-pokemon="${pokemon.id}">
         <div class="mon-head"><span class="mon-name">${escape(card.name)}</span><span class="mon-hp-num ${hpClass}">${remaining}</span></div>
         <div class="mon-art">${pokemonArt(card)}${movesHtml(card)}</div>
@@ -162,7 +169,7 @@ export function cardDetail(id, pokemon = null) {
         parts.push(`<div class="detail-stats"><span>弱点 ${weak}</span><span>抵抗力 ${resist}</span><span>にげる ${retreatText(card.retreat, pokemon?.retreat)}</span></div>`);
         if (pokemon) {
             const state = [];
-            if (pokemon.energies.length) state.push(`エネルギー ${pokemon.energies.map(e => energyDot(getCard(e).energyType)).join('')}`);
+            if (pokemon.energies.length) state.push(`エネルギー ${pokemon.energies.map(e => attachedEnergyDot(getCard(e))).join('')}`);
             if (pokemon.conditions.length) state.push(`特殊状態：${pokemon.conditions.map(c => CONDITION_NAMES[c]).join('・')}`);
             if (state.length) parts.push(`<div class="detail-extra">${state.map(e => `<div>${e}</div>`).join('')}</div>`);
         }
@@ -189,6 +196,14 @@ export function cardDetail(id, pokemon = null) {
             <div class="detail-block"><p>${cardText(card.text)}</p></div>
             ${card.trainerType === 'supporter' ? '<div class="detail-rule">サポートは、自分の番に1枚しか使えない。</div>' : ''}
             ${card.trainerType === 'stadium' ? '<div class="detail-rule">スタジアムは、自分の番に1枚しか出せない。</div>' : ''}`;
+    }
+    if (!card.basic) {
+        // 特殊エネルギー：カードの文をそのまま出す（色と図柄は、カードの面と同じく出すタイプで）
+        const types = specialEnergyTypes(card);
+        const main = types.length === 1 ? types[0] : 'colorless';
+        const sub = ['特殊エネルギー', card.aceSpec ? 'ACE SPEC' : null, printLabel(card)].filter(Boolean).join(' ・ ');
+        return `<div class="detail-head type-${main}">${emblemSvg(main)}<div><div class="detail-name">${escape(card.name)}${regulationMark(card)}</div><div class="detail-sub">${sub}</div></div></div>
+        <div class="detail-block"><p>${cardText(card.text ?? '')}</p></div>`;
     }
     return `<div class="detail-head type-${card.energyType}">${emblemSvg(card.energyType)}<div><div class="detail-name">${escape(card.name)}</div><div class="detail-sub">基本エネルギー</div></div></div>
         <div class="detail-block"><p>${TYPE_NAMES[card.energyType]}エネルギー1個ぶんとして働く。</p></div>`;

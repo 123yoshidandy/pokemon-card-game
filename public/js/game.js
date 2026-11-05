@@ -234,7 +234,7 @@ export default class Game {
         this.turnState = newTurnState();
         const player = this.players[playerId];
         player.turnsTaken++;
-        this.log(`— ${this.turn}ターン目：${player.name}の番 —`);
+        this.log(`— ${this.turn}ターン目 ・ ${player.name}の番 —`);
         if (player.deck.length === 0) {
             this.endGame(this.opponentOf(player).id, 'deckout', `${player.name}は山札を引けなかった`);
             return;

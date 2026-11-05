@@ -193,7 +193,7 @@ export function cardDetail(id, pokemon = null) {
             const state = [];
             if (pokemon.energies.length) state.push(`エネルギー ${pokemon.energies.map(e => attachedEnergyDot(getCard(e))).join('')}`);
             effectTexts(pokemon).forEach(text => state.push(`かかっている効果 ${text}`));
-            if (pokemon.conditions.length) state.push(`特殊状態：${pokemon.conditions.map(c => CONDITION_NAMES[c]).join('・')}`);
+            if (pokemon.conditions.length) state.push(`特殊状態 ${pokemon.conditions.map(c => CONDITION_NAMES[c]).join('・')}`);
             if (state.length) parts.push(`<div class="detail-extra">${state.map(e => `<div>${e}</div>`).join('')}</div>`);
         }
         if (card.rule) parts.push(`<div class="detail-rule">${RULE_TEXTS[card.rule]}</div>`);
@@ -208,8 +208,8 @@ export function cardDetail(id, pokemon = null) {
         });
         if (pokemon) {
             const extras = [];
-            [pokemon.tool, pokemon.tool2].filter(Boolean).forEach(tool => extras.push(`どうぐ：${escape(getCard(tool).name)}（${cardText(getCard(tool).text)}）`));
-            if (pokemon.cards.length > 1) extras.push(`進化元：${pokemon.cards.slice(0, -1).map(c => escape(getCard(c).name)).join(' → ')}`);
+            [pokemon.tool, pokemon.tool2].filter(Boolean).forEach(tool => extras.push(`どうぐ ${escape(getCard(tool).name)}（${cardText(getCard(tool).text)}）`));
+            if (pokemon.cards.length > 1) extras.push(`進化元 ${pokemon.cards.slice(0, -1).map(c => escape(getCard(c).name)).join(' → ')}`);
             if (extras.length) parts.push(`<div class="detail-extra">${extras.map(e => `<div>${e}</div>`).join('')}</div>`);
         }
         return parts.join('');

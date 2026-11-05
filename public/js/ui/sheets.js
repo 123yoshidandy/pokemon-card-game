@@ -159,10 +159,21 @@ export function showImport(dialog, { onSubmit }) {
 }
 
 // ===== ログの一覧（盤面の横の欄は狭いので、広げて読む） =====
+// 同じ行が続いたら「（×2）」のようにまとめる
+function groupLines(lines) {
+    const grouped = [];
+    for (const text of lines) {
+        const last = grouped.at(-1);
+        if (last && last.text === text && !text.startsWith('—')) last.count++;
+        else grouped.push({ text, count: 1 });
+    }
+    return grouped;
+}
+
 export function showLog(dialog, lines) {
     dialog.dataset.closable = 'true';
     dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">ログ</h2>
-        <ol class="log log-full">${lines.map(text => `<li class="${text.startsWith('—') ? 'log-turn' : ''}">${escapeHtml(text)}</li>`).join('')}</ol></div>
+        <ol class="log log-full">${groupLines(lines).map(({ text, count }) => `<li class="${text.startsWith('—') ? 'log-turn' : ''}">${escapeHtml(text)}${count > 1 ? `（×${count}）` : ''}</li>`).join('')}</ol></div>
         <div class="sheet-actions"><button type="button" class="btn btn-secondary" data-close>閉じる</button></div>`;
     dialog.onclick = event => {
         if (event.target.closest('[data-close]')) dialog.close();

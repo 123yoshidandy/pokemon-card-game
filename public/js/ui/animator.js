@@ -14,11 +14,14 @@ export default class Animator {
     constructor(layer) {
         this.layer = layer;
         this.lastSeq = null;
+        this.timers = new Set(); // 演出の予約（新しい対戦を始めたら消す）
         this.tiles = new Map(); // 描き直す前の場のポケモン（id → { rect, html }）。きぜつして消えたポケモンの位置に演出を出すため
     }
 
     // 新しい対戦を始めたとき
     reset() {
+        this.timers.forEach(timer => clearTimeout(timer));
+        this.timers.clear();
         this.lastSeq = null;
         this.tiles.clear();
         this.layer.replaceChildren();
@@ -45,7 +48,7 @@ export default class Animator {
         let coins = 0;
         fresh.forEach((event, index) => {
             const slot = event.type === 'coin' ? coins++ : 0;
-            setTimeout(() => this.playOne(event, view, tiles, slot), index * STAGGER_MS);
+            this.later(() => this.playOne(event, view, tiles, slot), index * STAGGER_MS);
         });
     }
 
@@ -98,7 +101,7 @@ export default class Animator {
     // ワザ：使ったポケモンが相手のほうへ踏み込み、少し遅れて受けたポケモンが揺れる
     attack(event, mine) {
         this.pulse(event.attacker, mine ? 'fx-lunge-up' : 'fx-lunge-down');
-        if (event.defender) setTimeout(() => this.pulse(event.defender, 'fx-hit'), 220);
+        if (event.defender) this.later(() => this.pulse(event.defender, 'fx-hit'), 220);
     }
 
     // きぜつ：描き直す前のポケモンの複製を、元の場所で灰色にして沈ませる
@@ -124,6 +127,15 @@ export default class Animator {
             { transform: `translate(${(start.x + end.x) / 2}px, ${Math.min(start.y, end.y) - lift}px) scale(1.3)`, opacity: 1, offset: 0.5 },
             { transform: `translate(${end.x}px, ${end.y}px) scale(1)`, opacity: 1 }
         ], { duration: 520, easing: 'ease-in-out' }).finished.then(() => element.remove(), () => element.remove());
+    }
+
+    // 時間をおいて行う演出（reset で消せるように覚えておく）
+    later(fn, ms) {
+        const timer = setTimeout(() => {
+            this.timers.delete(timer);
+            fn();
+        }, ms);
+        this.timers.add(timer);
     }
 
     // 場のポケモンの要素に、動きのクラスを一度だけ付ける

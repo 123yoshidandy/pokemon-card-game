@@ -96,6 +96,19 @@ export default class GameScreen {
             onLongPress: element => (element.dataset.uid ? this.openHandDetail(element.dataset.uid) : this.openPokemonDetail(element.dataset.pokemon))
         });
         $('end-turn').addEventListener('click', () => this.confirmEndTurn());
+        // Esc や Android の「戻る」で選択・決着のダイアログが閉じたら、「盤面を見る」と同じ扱いにする（中央の帯から戻せるように）
+        $('prompt').addEventListener('close', () => {
+            const prompt = this.myPrompt();
+            if (this.shownPromptId === null || prompt?.id !== this.shownPromptId) return; // 答えた・盤面を見るで閉じたとき
+            this.promptPeeking = true;
+            this.shownPromptId = null;
+            this.render();
+        });
+        $('result').addEventListener('close', () => {
+            if (this.view?.phase !== 'end' || !this.controller) return;
+            this.resultPeeking = true;
+            this.render();
+        });
         $('open-log').addEventListener('click', () => this.view && showLog($('pile'), this.view.log));
         // 中央のボタン：選択にもどる・（つけ先などを選ぶのを）やめる・結果を見る
         $('prompt-done').addEventListener('click', () => {

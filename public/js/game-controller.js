@@ -30,7 +30,19 @@ export default class LocalGameController {
     }
 
     send(command) {
-        if (!this.game.applyCommand(HUMAN, command)) {
+        let accepted;
+        try {
+            accepted = this.game.applyCommand(HUMAN, command);
+        } catch (error) {
+            // カードの処理の例外で止まらないように、記録から作り直して、その操作の前に戻す
+            console.error(error);
+            this.game = Game.replay(this.players, this.options, this.game.commands);
+            this.listeners.onError?.('その操作はできませんでした');
+            this.listeners.onUpdate?.();
+            this.scheduleCpu();
+            return false;
+        }
+        if (!accepted) {
             this.listeners.onError?.(this.game.lastError);
             return false;
         }

@@ -138,6 +138,7 @@ button { font: inherit; color: inherit; }
     gap: 10px;
 }
 .setting-label { color: var(--ink-dim); font-size: 14px; }
+.settings-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px; }
 .segment {
     display: flex;
     background: rgba(0, 0, 0, 0.25);

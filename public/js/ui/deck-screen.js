@@ -22,6 +22,18 @@ const KIND_TABS = [
 // 一覧は、この数ずつ書き足す（一度に全部を並べると、スマホで重い）
 const POOL_CHUNK = 120;
 
+// 同じ名前で中身の違うカード（アゴジムシが3種類など）は、一覧で特性か最初のワザの名前を重ねて見分ける
+const nameCounts = new Map();
+for (const id of CARD_POOL) nameCounts.set(getCard(id).name, (nameCounts.get(getCard(id).name) ?? 0) + 1);
+function hintText(card) {
+    if (card.kind !== 'pokemon' || nameCounts.get(card.name) < 2) return '';
+    return (card.ability ? `特性 ${card.ability.name}` : card.attacks[0]?.name) ?? '';
+}
+function poolHint(card) {
+    const hint = hintText(card);
+    return hint ? `<span class="pool-hint">${escape(hint)}</span>` : '';
+}
+
 function escape(text) {
     return String(text).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 }
@@ -232,7 +244,7 @@ export default class DeckScreens {
         const next = this.poolIds.slice(this.poolShown, this.poolShown + POOL_CHUNK);
         this.poolShown += next.length;
         pool.insertAdjacentHTML('beforeend', next.map(id =>
-            `<div class="pool-card" data-card="${id}">${cardFace(id)}</div>`).join(''));
+            `<div class="pool-card" data-card="${id}">${cardFace(id)}${poolHint(getCard(id))}</div>`).join(''));
         this.updatePoolMarks();
         if (this.poolShown < this.poolIds.length) {
             pool.insertAdjacentHTML('beforeend', '<div class="pool-more" aria-hidden="true"></div>');
@@ -268,11 +280,11 @@ export default class DeckScreens {
         $('deck-problem').textContent = problem && total === DECK_SIZE ? problem : '';
 
         const entries = sortedEntries(deck);
-        // 同じ名前の別の版を見分けられるように、ポケモンは HP と版の番号も出す
-        const subText = card => (card.kind === 'pokemon' ? `HP${card.hp} ${card.prints?.[0] ?? ''}` : '');
+        // 同じ名前で中身の違うカードは、一覧と同じく特性かワザの名前を添えて見分ける
+        const sub = card => (hintText(card) ? `<span class="deck-card-sub">${escape(hintText(card))}</span>` : '');
         $('deck-cards').innerHTML = entries.length
             ? entries.map(([id, count]) => `<li class="deck-card-row">
-                <span class="deck-card-name" data-row="${id}">${escape(getCard(id).name)}<span class="deck-card-sub">${escape(subText(getCard(id)))}</span></span>
+                <span class="deck-card-name" data-row="${id}">${escape(getCard(id).name)}${sub(getCard(id))}</span>
                 <button type="button" class="step-btn" data-minus="${id}" aria-label="減らす">−</button>
                 <span class="deck-card-count">${count}</span>
                 <button type="button" class="step-btn" data-plus="${id}" aria-label="増やす" ${canAdd(deck, id) ? '' : 'disabled'}>＋</button>

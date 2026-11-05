@@ -9,7 +9,7 @@ import { CARD_POOL, addCard, removeCard, canAdd, totalCount, deckProblem, sorted
 import { FILTER_GROUPS, matchesFilters, filterCount, setFilter, filterLabel } from '../card-filter.js';
 import { cardFace, energyDot } from './card-view.js';
 import { bindPress } from './press.js';
-import { showDetail, showConfirm, showImport } from './sheets.js';
+import { showDetail, showConfirm, showImport, showPile } from './sheets.js';
 
 const $ = id => document.getElementById(id);
 
@@ -77,7 +77,13 @@ export default class DeckScreens {
         $('deck-list').addEventListener('click', event => {
             const edit = event.target.closest('[data-edit]');
             const copy = event.target.closest('[data-copy]');
+            const view = event.target.closest('[data-view]');
             if (edit) this.openEditor(edit.dataset.edit);
+            // 構築済みデッキは、名前をタップすると中身を見られる（コピーしなくても）
+            if (view) {
+                const deck = this.store.find(view.dataset.view);
+                showPile($('pile'), escape(deck.name), sortedEntries(deck).map(([id, count]) => ({ id, count })), cardId => showDetail($('detail'), { cardId }));
+            }
             if (copy) {
                 const deck = this.store.create(this.store.find(copy.dataset.copy));
                 this.openEditor(deck.id);
@@ -204,7 +210,7 @@ export default class DeckScreens {
                 ? `<button type="button" class="btn btn-secondary btn-small" data-copy="${deck.id}">コピーして編集</button>`
                 : `<button type="button" class="btn btn-primary btn-small" data-edit="${deck.id}">編集</button>`;
             return `<li class="deck-row">
-                <span class="deck-row-name">${escape(deck.name)}</span>
+                <span class="deck-row-name" ${deck.builtIn ? `data-view="${deck.id}"` : ''}>${escape(deck.name)}${deck.builtIn ? '<span class="deck-row-view">中身</span>' : ''}</span>
                 ${deck.builtIn ? '<span class="badge">構築済み</span>' : ''}
                 <span class="deck-row-stats">${escape(this.handlers.statsOf?.(deck.id) ?? '')}</span>
                 <span class="deck-row-count ${problem ? 'incomplete' : ''}">${total}/${DECK_SIZE}</span>

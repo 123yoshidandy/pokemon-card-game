@@ -3,6 +3,7 @@
  */
 
 import { getCard } from '../card-data.js';
+import { cardOrder } from '../deck-builder.js';
 import { cardFace, cardDetail } from './card-view.js';
 import { bindPress } from './press.js';
 
@@ -24,6 +25,13 @@ function open(dialog) {
 // ===== 選択 =====
 
 // prompt はビューの prompt。onAnswer(answer) / onPeek()（盤面を見るために一時的に閉じる） / onDetail(cardId)
+// 山札から探すときは、カードを種類の順（デッキ構築の一覧と同じ）に並べて見せる。答えの番号は元の順のまま
+function pickOrder(prompt) {
+    const indices = prompt.cards.map((_, index) => index);
+    if (!String(prompt.purpose ?? '').startsWith('search')) return indices;
+    return indices.sort((a, b) => cardOrder(prompt.cards[a].id) - cardOrder(prompt.cards[b].id) || a - b);
+}
+
 export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
     dialog.dataset.closable = 'false';
     dialog.dataset.promptId = prompt.id;
@@ -40,7 +48,7 @@ export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
     } else {
         const count = prompt.min === prompt.max ? `${prompt.max}枚` : `${prompt.min ? `${prompt.min}〜` : ''}${prompt.max}枚まで`;
         dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">${prompt.title}<span class="prompt-count">${count}</span></h2>
-            <div class="prompt-cards">${prompt.cards.map((card, index) => `<button type="button" class="pick" data-index="${index}">${cardFace(card.id)}</button>`).join('')}</div></div>
+            <div class="prompt-cards">${pickOrder(prompt).map(index => `<button type="button" class="pick" data-index="${index}">${cardFace(prompt.cards[index].id)}</button>`).join('')}</div></div>
             <div class="sheet-actions">${peek}<button type="button" class="btn btn-primary" data-submit>決定</button></div>`;
     }
 
@@ -114,10 +122,12 @@ export function showDetail(dialog, { cardId, pokemon = null, actions = {}, playL
 }
 
 // ===== カードの一覧（トラッシュ） =====
+// cards：[{ id, count? }]（count があれば、カードに枚数の印を重ねる）
 export function showPile(dialog, title, cards, onDetail) {
+    const total = cards.reduce((sum, card) => sum + (card.count ?? 1), 0);
     dialog.dataset.closable = 'true';
-    dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">${title}<span class="prompt-count">${cards.length}枚</span></h2>
-        <div class="prompt-cards">${cards.length ? cards.map(card => `<button type="button" class="pick" data-card="${card.id}">${cardFace(card.id)}</button>`).join('') : '<p class="empty">カードはありません</p>'}</div></div>
+    dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">${title}<span class="prompt-count">${total}枚</span></h2>
+        <div class="prompt-cards">${cards.length ? cards.map(card => `<button type="button" class="pick" data-card="${card.id}">${cardFace(card.id)}${card.count > 1 ? `<span class="pool-count">${card.count}</span>` : ''}</button>`).join('') : '<p class="empty">カードはありません</p>'}</div></div>
         <div class="sheet-actions"><button type="button" class="btn btn-secondary" data-close>閉じる</button></div>`;
     dialog.onclick = event => {
         const pick = event.target.closest('.pick');

@@ -1333,3 +1333,8 @@ dialog button:focus { outline: none; }
 .special-types { position: absolute; bottom: 6%; left: 0; right: 0; display: flex; justify-content: center; gap: 3cqw; }
 .special-types .move-dot { width: max(7px, 12cqw); height: max(7px, 12cqw); }
 .card-special.any-type { background: linear-gradient(135deg, #e5533d, #f2c230, #4caf50, #3d8bd9, #9b59b6); }
+
+/* 構築済みデッキの名前のタップで中身を見る（その手がかりの小さな文字） */
+.deck-row-name[data-view] { cursor: pointer; }
+.deck-row-view { margin-left: 8px; font-size: 11px; font-weight: 700; color: var(--ink-dim); text-decoration: underline; text-underline-offset: 2px; }
+.pick { position: relative; }

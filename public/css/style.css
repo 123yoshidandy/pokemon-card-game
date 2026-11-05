@@ -1059,3 +1059,7 @@ dialog button:focus { outline: none; }
     .rotate-hint svg { width: 56px; height: 56px; opacity: 0.85; }
     .rotate-hint p { margin: 0; font-size: 15px; }
 }
+
+/* ログの一覧（ログの欄をタップしたとき） */
+.log { cursor: pointer; }
+.log-full { overflow: visible; font-size: 13px; cursor: default; background: none; }

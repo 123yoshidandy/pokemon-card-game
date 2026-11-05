@@ -6,7 +6,7 @@
 import { getCard } from '../card-data.js';
 import { cardFace, pokemonTile } from './card-view.js';
 import { bindPress } from './press.js';
-import { showPrompt, showDetail, showPile, showResult, showConfirm, closeOnBackdrop } from './sheets.js';
+import { showPrompt, showDetail, showPile, showResult, showConfirm, showLog, closeOnBackdrop } from './sheets.js';
 import { BENCH_SIZE } from '../game.js';
 
 const $ = id => document.getElementById(id);
@@ -84,6 +84,7 @@ export default class GameScreen {
             onLongPress: element => (element.dataset.uid ? this.openHandDetail(element.dataset.uid) : this.openPokemonDetail(element.dataset.pokemon))
         });
         $('end-turn').addEventListener('click', () => this.confirmEndTurn());
+        $('log').addEventListener('click', () => this.view && showLog($('pile'), this.view.log));
         $('prompt-done').addEventListener('click', () => {
             this.promptPeeking = false;
             this.shownPromptId = null;

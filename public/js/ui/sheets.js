@@ -126,6 +126,20 @@ export function showPile(dialog, title, cards, onDetail) {
     open(dialog);
 }
 
+// ===== ログの一覧（盤面の横の欄は狭いので、広げて読む） =====
+export function showLog(dialog, lines) {
+    dialog.dataset.closable = 'true';
+    dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">ログ</h2>
+        <ol class="log log-full">${lines.map(text => `<li class="${text.startsWith('—') ? 'log-turn' : ''}">${text}</li>`).join('')}</ol></div>
+        <div class="sheet-actions"><button type="button" class="btn btn-secondary" data-close>閉じる</button></div>`;
+    dialog.onclick = event => {
+        if (event.target.closest('[data-close]')) dialog.close();
+    };
+    open(dialog);
+    const body = dialog.querySelector('.sheet-body');
+    body.scrollTop = body.scrollHeight; // 最新のログから見せる
+}
+
 // ===== 確認（失うものが大きい操作だけに使う） =====
 export function showConfirm(dialog, { title, yesLabel, onYes }) {
     dialog.dataset.closable = 'true';

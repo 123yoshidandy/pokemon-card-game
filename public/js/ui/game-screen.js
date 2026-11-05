@@ -6,7 +6,7 @@
 import { getCard } from '../card-data.js';
 import { cardFace, pokemonTile } from './card-view.js';
 import { bindPress } from './press.js';
-import { showPrompt, showDetail, showPile, showResult, closeOnBackdrop } from './sheets.js';
+import { showPrompt, showDetail, showPile, showResult, showConfirm, closeOnBackdrop } from './sheets.js';
 import { BENCH_SIZE } from '../game.js';
 
 const $ = id => document.getElementById(id);
@@ -61,6 +61,21 @@ export default class GameScreen {
 
     // ===== 入力 =====
 
+    // ワザが使えるのに、またはエネルギーをつけられるのに番を終えようとしたときだけ、確かめる（押しまちがいで番を失わないように）
+    confirmEndTurn() {
+        const view = this.view;
+        const legal = view?.legal;
+        const me = view?.players[view.viewerId];
+        const canAttack = legal?.attacks?.some(Boolean);
+        const canAttach = (me?.hand ?? []).some(inst => legal?.hand[inst.uid] && getCard(inst.id).kind === 'energy');
+        if (!canAttack && !canAttach) return this.send({ type: 'endTurn' });
+        showConfirm($('confirm'), {
+            title: canAttack ? 'ワザを使わずに番を終えますか？' : 'エネルギーをつけずに番を終えますか？',
+            yesLabel: '番を終える',
+            onYes: () => this.send({ type: 'endTurn' })
+        });
+    }
+
     bind() {
         ['detail', 'pile'].forEach(id => closeOnBackdrop($(id)));
         const screen = $('game-screen');
@@ -68,7 +83,7 @@ export default class GameScreen {
             onTap: element => (element.dataset.uid ? this.tapHand(element.dataset.uid) : this.tapPokemon(element.dataset.pokemon)),
             onLongPress: element => (element.dataset.uid ? this.openHandDetail(element.dataset.uid) : this.openPokemonDetail(element.dataset.pokemon))
         });
-        $('end-turn').addEventListener('click', () => this.send({ type: 'endTurn' }));
+        $('end-turn').addEventListener('click', () => this.confirmEndTurn());
         $('prompt-done').addEventListener('click', () => {
             this.promptPeeking = false;
             this.shownPromptId = null;

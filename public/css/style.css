@@ -1014,3 +1014,23 @@ dialog button:focus { outline: none; }
 @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; }
 }
+
+/* ===== 縦向きの案内（スマホを縦にしたときだけ） ===== */
+.rotate-hint { display: none; }
+@media (orientation: portrait) and (pointer: coarse) {
+    .rotate-hint {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        background: linear-gradient(160deg, var(--bg-1), var(--bg-2));
+        color: var(--ink);
+        font-weight: 700;
+    }
+    .rotate-hint svg { width: 56px; height: 56px; opacity: 0.85; }
+    .rotate-hint p { margin: 0; font-size: 15px; }
+}

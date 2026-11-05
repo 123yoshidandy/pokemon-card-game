@@ -935,7 +935,8 @@ export const TRAINER_EFFECTS = {
         play: (game, player) => {
             const opponent = game.opponentOf(player);
             game.inPlay(opponent).forEach(pokemon => {
-                game.discardTool(pokemon);
+                // どうぐが2枚（マルチアダプタ）なら、2枚ともトラッシュする
+                [pokemon.tool2, pokemon.tool].filter(Boolean).forEach(inst => game.discardTool(pokemon, inst));
                 cardsIn(game, pokemon.energies, isSpecialEnergy).forEach(inst => {
                     if (game.removeEnergy(pokemon, inst, 'discard')) game.log(`${game.topCard(pokemon).name}の${game.cardName(inst)}をトラッシュした`);
                 });

@@ -64,4 +64,16 @@ describe('ルールの不具合の直し', () => {
         answer(game, game.pendingPrompt.cards.map(inst => inst.uid).slice(0, game.pendingPrompt.max));
         expect(opp.bench.length).toBe(5);
     });
+
+    it('メガトンブロアーは、どうぐが2枚ついたポケモンの、2枚ともトラッシュする', () => {
+        const game = midGame();
+        const me = game.players[game.current];
+        const opp = game.opponentOf(me);
+        arrange(game, opp.id, { active: { id: C.pikachu, tool: idOf('ふうせん') }, bench: [C.pikachu] });
+        opp.active.tool2 = makeCard(game, idOf('ヒーローマント'));
+        arrange(game, me.id, { active: { id: C.pikachu }, bench: [], hand: [idOf('メガトンブロアー')] });
+        expect(game.applyCommand(me.id, { type: 'playTrainer', uid: me.hand[0].uid })).toBe(true);
+        expect([opp.active.tool, opp.active.tool2]).toEqual([null, null]);
+        expect(opp.discard.map(inst => CARDS[inst.id].name)).toEqual(expect.arrayContaining(['ふうせん', 'ヒーローマント']));
+    });
 });

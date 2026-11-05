@@ -391,6 +391,7 @@ button { font: inherit; color: inherit; }
     font-weight: 700;
     cursor: pointer;
 }
+.pool-more { grid-column: 1 / -1; height: 1px; }
 .pool-note { grid-column: 1 / -1; margin: 6px 2px; color: var(--muted, #aab); font-size: 13px; }
 .pool {
     display: grid;

@@ -19,8 +19,8 @@ const KIND_TABS = [
     { kind: 'energy', label: 'エネルギー' }
 ];
 
-// 一度に並べるカードの数（多すぎると、スマホで描き直しが重い）
-const POOL_LIMIT = 200;
+// 一覧は、この数ずつ書き足す（一度に全部を並べると、スマホで重い）
+const POOL_CHUNK = 120;
 
 function escape(text) {
     return String(text).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
@@ -41,6 +41,12 @@ export default class DeckScreens {
         this.query = '';
         // しぼりこみの条件（種類ごとに覚えておく）
         this.filters = { pokemon: {}, trainer: {}, energy: {} };
+        this.poolIds = [];
+        this.poolShown = 0;
+        // 一覧の終わりが近づいたら、続きを書き足す
+        this.poolObserver = new IntersectionObserver(entries => {
+            if (entries.some(entry => entry.isIntersecting)) this.appendPool();
+        }, { root: $('pool'), rootMargin: '0px 0px 400px 0px' });
         this.bind();
     }
 
@@ -157,7 +163,9 @@ export default class DeckScreens {
     change(next) {
         if (next === this.deck) return; // 足せない・減らせないときは何もしない
         this.deck = this.store.save(next);
-        this.renderEditor();
+        // 一覧は描き直さず、枚数の印だけを変える（スクロールの位置を保ち、長い一覧でも重くしない）
+        this.renderDeck();
+        this.updatePoolMarks();
     }
 
     // ===== しぼりこみ =====
@@ -199,25 +207,65 @@ export default class DeckScreens {
     }
 
     renderEditor() {
+        this.renderPool();
+        this.renderDeck();
+    }
+
+    // 左のカード一覧（種類・名前・しぼりこみが変わったとき）
+    renderPool() {
+        $('pool-tabs').innerHTML = KIND_TABS.map(tab =>
+            `<button type="button" class="segment-item ${tab.kind === this.kind ? 'active' : ''}" data-kind="${tab.kind}">${tab.label}</button>`).join('');
+        this.poolIds = this.matches();
+        this.poolShown = 0;
+        const active = filterCount(this.kind, this.filters[this.kind]);
+        $('pool').innerHTML = this.poolIds.length
+            ? ''
+            : `<p class="pool-note">見つかりませんでした${active ? '（しぼりこみの条件もお確かめください）' : ''}</p>`;
+        this.appendPool();
+    }
+
+    // 一覧の続きを書き足す。まだ残りがあれば、末尾に目印を置いて見張る
+    appendPool() {
+        const pool = $('pool');
+        pool.querySelector('.pool-more')?.remove();
+        this.poolObserver.disconnect();
+        const next = this.poolIds.slice(this.poolShown, this.poolShown + POOL_CHUNK);
+        this.poolShown += next.length;
+        pool.insertAdjacentHTML('beforeend', next.map(id =>
+            `<div class="pool-card" data-card="${id}">${cardFace(id)}</div>`).join(''));
+        this.updatePoolMarks();
+        if (this.poolShown < this.poolIds.length) {
+            pool.insertAdjacentHTML('beforeend', '<div class="pool-more" aria-hidden="true"></div>');
+            this.poolObserver.observe(pool.querySelector('.pool-more'));
+        }
+    }
+
+    // 一覧の、デッキに入っている枚数と、もう足せないカードの印
+    updatePoolMarks() {
+        const deck = this.deck;
+        for (const element of $('pool').querySelectorAll('.pool-card')) {
+            const id = element.dataset.card;
+            const count = deck.cards[id] ?? 0;
+            element.classList.toggle('maxed', !canAdd(deck, id));
+            let badge = element.querySelector('.pool-count');
+            if (count && !badge) {
+                badge = document.createElement('span');
+                badge.className = 'pool-count';
+                element.append(badge);
+            }
+            if (badge && !count) badge.remove();
+            else if (badge) badge.textContent = count;
+        }
+    }
+
+    // 上の枚数と、右のデッキの欄
+    renderDeck() {
         const deck = this.deck;
         const total = totalCount(deck);
         const problem = deckProblem(deck);
         $('deck-count').textContent = `${total}/${DECK_SIZE}`;
         $('deck-count').classList.toggle('incomplete', Boolean(problem));
         $('deck-problem').textContent = problem && total === DECK_SIZE ? problem : '';
-
-        $('pool-tabs').innerHTML = KIND_TABS.map(tab =>
-            `<button type="button" class="segment-item ${tab.kind === this.kind ? 'active' : ''}" data-kind="${tab.kind}">${tab.label}</button>`).join('');
-        const active = filterCount(this.kind, this.filters[this.kind]);
-        const matches = this.matches();
-        const shown = matches.slice(0, POOL_LIMIT);
-        const note = matches.length === 0
-            ? `<p class="pool-note">見つかりませんでした${active ? '（しぼりこみの条件もお確かめください）' : ''}</p>`
-            : matches.length > shown.length ? `<p class="pool-note">${matches.length}種類のうち${shown.length}種類を表示しています。名前や種類でしぼってください</p>` : '';
-        $('pool').innerHTML = shown.map(id => {
-            const count = deck.cards[id] ?? 0;
-            return `<div class="pool-card ${canAdd(deck, id) ? '' : 'maxed'}" data-card="${id}">${cardFace(id)}${count ? `<span class="pool-count">${count}</span>` : ''}</div>`;
-        }).join('') + note;
 
         const entries = sortedEntries(deck);
         // 同じ名前の別の版を見分けられるように、ポケモンは HP と版の番号も出す

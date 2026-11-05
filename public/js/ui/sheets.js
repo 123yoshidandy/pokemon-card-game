@@ -191,7 +191,7 @@ export function showDeckPicker(dialog, { decks, currentId, onPick, onBuild, titl
     dialog.dataset.closable = 'true';
     dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">${title}</h2>
         <div class="deck-picks">${any ? `<button type="button" class="deck-pick ${currentId ? '' : 'active'}" data-pick-any><span class="deck-pick-name">${any}</span></button>` : ''}${decks.map(deck => `<button type="button" class="deck-pick ${deck.id === currentId ? 'active' : ''}" data-pick="${deck.id}" ${deck.problem ? 'disabled' : ''}>
-            <span class="deck-pick-name">${escapeHtml(deck.name)}</span>${deck.problem ? `<span class="deck-pick-note">${escapeHtml(deck.problem)}</span>` : ''}</button>`).join('')}</div></div>
+            <span class="deck-pick-name">${escapeHtml(deck.name)}${deck.note ? `<span class="deck-pick-summary">${escapeHtml(deck.note)}</span>` : ''}</span>${deck.problem ? `<span class="deck-pick-note">${escapeHtml(deck.problem)}</span>` : ''}</button>`).join('')}</div></div>
         <div class="sheet-actions"><button type="button" class="btn btn-tertiary" data-build>デッキ構築</button><button type="button" class="btn btn-secondary" data-close>閉じる</button></div>`;
     dialog.onclick = event => {
         const target = event.target.closest('button');

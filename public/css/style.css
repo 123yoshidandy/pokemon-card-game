@@ -1366,3 +1366,6 @@ dialog button:focus { outline: none; }
 .detail p .energy { width: 1.15em; height: 1.15em; vertical-align: -0.2em; margin: 0 1px; }
 
 .result-score { font-size: 13px; color: var(--ink-dim); font-variant-numeric: tabular-nums; }
+
+/* デッキの選択：構築済みデッキの戦い方と難しさ */
+.deck-pick-summary { display: block; margin-top: 1px; font-size: 11px; font-weight: 500; color: var(--ink-dim); }

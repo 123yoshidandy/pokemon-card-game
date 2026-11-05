@@ -15,6 +15,8 @@ export const DECKS = [
         id: 'dragapult',
         name: 'ドラパルトex',
         type: 'psychic',
+        summary: '進化して、相手のベンチにもダメカンをばらまく',
+        level: 2,
         cards: {
             'SV6-079': 4, // ドラメシヤ
             'SV6-080': 4, // ドロンチ
@@ -48,6 +50,8 @@ export const DECKS = [
         id: 'mega-lucario',
         name: 'メガルカリオex',
         type: 'fighting',
+        summary: '闘エネルギーとグッズで、大きなダメージを出す',
+        level: 1,
         cards: {
             'M-P-022': 3, // リオル
             'M1L-092': 3, // メガルカリオex
@@ -76,6 +80,8 @@ export const DECKS = [
         id: 'bakegakure',
         name: 'ばけがくれ',
         type: 'psychic',
+        summary: 'トラッシュに特性ポケモンをためて、ダダリンで攻める',
+        level: 3,
         cards: {
             'M5-005': 4, // チャデス
             'M5-006': 2, // ヤバソチャ
@@ -105,6 +111,8 @@ export const DECKS = [
         id: 'n-zoroark',
         name: 'Nのゾロアークex',
         type: 'darkness',
+        summary: 'ベンチの「Nの」ポケモンのワザを、ゾロアークexで使う',
+        level: 3,
         cards: {
             'SV-P-200': 4, // Nのゾロア
             'SV9-061': 4, // Nのゾロアークex

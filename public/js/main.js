@@ -132,7 +132,13 @@ function openDecks() {
 }
 
 function deckChoices() {
-    return [...deckStore.custom(), ...deckStore.all().filter(deck => deck.builtIn)].map(deck => ({ id: deck.id, name: deck.name, problem: deckProblem(deck) }));
+    return [...deckStore.custom(), ...deckStore.all().filter(deck => deck.builtIn)].map(deck => ({
+        id: deck.id,
+        name: deck.name,
+        problem: deckProblem(deck),
+        // 構築済みデッキは、戦い方の1行と難しさ（★1〜3）
+        note: deck.summary ? `${'★'.repeat(deck.level)}${'☆'.repeat(3 - deck.level)} ${deck.summary}` : ''
+    }));
 }
 
 // CPU のデッキを選ぶ（おまかせ：自分のデッキとタイプの違う構築済みデッキからランダム）

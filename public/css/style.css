@@ -290,7 +290,7 @@ button { font: inherit; color: inherit; }
     padding-left: var(--safe-l);
     padding-right: var(--safe-r);
 }
-#decks-screen .topbar .btn, #editor-screen .topbar .btn { padding: 3px 12px; font-size: 13px; border-radius: 8px; box-shadow: 0 2px 0 var(--accent-dark); }
+#decks-screen .topbar .btn, #editor-screen .topbar .btn { min-height: 32px; padding: 3px 12px; font-size: 13px; border-radius: 8px; box-shadow: 0 2px 0 var(--accent-dark); }
 #decks-screen .topbar .btn-secondary, #editor-screen .topbar .btn-secondary { box-shadow: 0 2px 0 var(--blue-dark); }
 #decks-screen .topbar .btn:disabled, #editor-screen .topbar .btn:disabled { box-shadow: 0 2px 0 #2c3447; }
 .deck-list {
@@ -371,7 +371,7 @@ button { font: inherit; color: inherit; }
     display: inline-flex;
     align-items: center;
     gap: 3px;
-    height: 28px;
+    height: 32px;
     padding: 0 8px 0 10px;
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -394,7 +394,7 @@ button { font: inherit; color: inherit; }
 }
 .filter-clear {
     flex: none;
-    height: 28px;
+    height: 32px;
     padding: 0 10px;
     border: 1px solid var(--gold);
     border-radius: 8px;
@@ -662,6 +662,8 @@ button { font: inherit; color: inherit; }
 }
 .status-error { color: #ff8a80; }
 .midline-actions { justify-self: end; }
+/* 中央の帯（高さ26px）に収まるボタン。場に重ならないように */
+.midline-actions .btn { padding: 2px 14px; font-size: 13px; line-height: 20px; border-radius: 8px; box-shadow: 0 2px 0 var(--blue-dark); }
 
 /* ===== 右の列 ===== */
 

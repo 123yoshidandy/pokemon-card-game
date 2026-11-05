@@ -40,7 +40,9 @@ const screen = new GameScreen({
             { label: 'ホーム', onClick: () => showTitle() },
             { label: '再戦', primary: true, onClick: () => startCpuGame() }
         ]),
-    resultNote: () => (isOnlineGame() && !online.isHost() ? 'ホストが「もう一度」を押すと再戦します' : ''),
+    // オンラインでホストでなければ再戦の案内、そうでなければ使ったデッキの通算の戦績
+    resultNote: () => (isOnlineGame() && !online.isHost() ? 'ホストが「もう一度」を押すと再戦します'
+        : `${escapeHtml(selectedDeck().name)} ${statsText(deckStats.get(selectedDeck().id))}`),
     // 決着したら、使ったデッキの戦績を記録する
     onEnd: view => {
         if (view.viewerId === null || view.viewerId === undefined) return;

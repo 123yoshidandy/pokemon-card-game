@@ -354,7 +354,10 @@ export default class GameScreen {
             if (view.winner !== 'draw') playEffect(won ? 'win' : 'lose');
             showResult($('result'), {
                 title: view.winner === 'draw' ? '引き分け' : won ? '勝ち' : '負け',
-                message: this.endMessage(view, won),
+                // 取ったサイドの数とターン数を添える（例「サイド 6-2 ・ 16ターン」）
+                message: this.endMessage(view, won) + (view.turn > 0
+                    ? `<br><span class="result-score">サイド ${6 - view.players[view.viewerId].prizeCount}-${6 - view.players[1 - view.viewerId].prizeCount} ・ ${view.turn}ターン</span>`
+                    : ''), // 準備の途中で決着したときは、サイドがまだないので出さない
                 note: this.handlers.resultNote?.(view) ?? '',
                 buttons: this.handlers.resultButtons(view),
                 onPeek: () => {

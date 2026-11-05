@@ -1364,3 +1364,5 @@ dialog button:focus { outline: none; }
 
 /* カードの文の中のエネルギーの印（[F] などを置き換えたもの） */
 .detail p .energy { width: 1.15em; height: 1.15em; vertical-align: -0.2em; margin: 0 1px; }
+
+.result-score { font-size: 13px; color: var(--ink-dim); font-variant-numeric: tabular-nums; }

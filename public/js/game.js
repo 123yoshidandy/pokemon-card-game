@@ -433,7 +433,17 @@ export default class Game {
         if (error) return this.reject(error);
         action();
         this.processEffects();
+        // どうぐやスタジアムがなくなって最大HPやベンチの上限が下がったときは、番の終わりを待たずに、きぜつ・ベンチの超過を確かめる
+        if (this.phase === 'main' && !this.pendingPrompt && this.effectQueue.length === 0 && this.needsStateCheck()) {
+            this.checkKnockouts();
+            this.processEffects();
+        }
         return true;
+    }
+
+    needsStateCheck() {
+        return this.players.some(player => player.bench.length > this.benchLimit(player)
+            || this.inPlay(player).some(pokemon => pokemon.damage >= this.maxHp(pokemon)));
     }
 
     reject(message) {
@@ -1267,7 +1277,8 @@ export default class Game {
         const candidates = player.deck.filter(inst => filter(this.cardOf(inst)));
         if (candidates.length === 0 || max <= 0) {
             this.log(`${player.name}は山札を見たが、選べるカードはなかった`);
-            this.shuffleDeck(player);
+            // 0枚でも onSelected は呼ぶ（2回つなぐ検索で、1回めに取り出したカードを置く処理が、ここで止まらないように）
+            this.runNext(() => onSelected([]), () => this.shuffleDeck(player));
             return;
         }
         this.promptCards({

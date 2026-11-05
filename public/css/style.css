@@ -1373,3 +1373,6 @@ dialog button:focus { outline: none; }
 /* 決着の画面の「盤面を見る」「ログ」は、左に並べる */
 .sheet-actions .btn-quiet:has(+ .btn-quiet) { margin-right: 0; }
 .result-log { margin-right: auto; }
+
+/* 説明の下の、今は使えない理由 */
+.detail-note { margin: 8px 0 0; font-size: 12px; color: var(--ink-dim); }

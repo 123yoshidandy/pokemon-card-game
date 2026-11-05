@@ -94,7 +94,8 @@ export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
 
 // ===== カードの説明 =====
 // actions：{ attacks: [使えるか...], retreat, ability, play } と、それぞれの処理 onAttack(index)・onRetreat()・onAbility()・onPlay()
-export function showDetail(dialog, { cardId, pokemon = null, actions = {}, playLabel = '使う', onAttack, onRetreat, onAbility, onPlay }) {
+// note：今は使えない理由など、説明の下に薄く出す1行
+export function showDetail(dialog, { cardId, pokemon = null, actions = {}, playLabel = '使う', note = '', onAttack, onRetreat, onAbility, onPlay }) {
     dialog.dataset.closable = 'true';
     // ワザ・特性のボタンは、説明をスクロールしなくても押せるよう、下のボタンの列にワザの名前で並べる
     const card = getCard(cardId);
@@ -102,7 +103,7 @@ export function showDetail(dialog, { cardId, pokemon = null, actions = {}, playL
     const attackButtons = attacks.map((attack, index) => (actions.attacks?.[index]
         ? `<button type="button" class="btn btn-primary" data-use-attack="${index}">${escapeHtml(attack.name)}</button>` : '')).join('');
     const abilityButton = actions.ability ? `<button type="button" class="btn btn-primary" data-use-ability>${escapeHtml(card.ability?.name ?? '特性')}</button>` : '';
-    dialog.innerHTML = `<div class="sheet-body detail">${cardDetail(cardId, pokemon)}</div>
+    dialog.innerHTML = `<div class="sheet-body detail">${cardDetail(cardId, pokemon)}${note ? `<p class="detail-note">${escapeHtml(note)}</p>` : ''}</div>
         <div class="sheet-actions detail-actions">
             ${abilityButton}${attackButtons}
             ${actions.retreat ? '<button type="button" class="btn btn-secondary" data-retreat>にげる</button>' : ''}

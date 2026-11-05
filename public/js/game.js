@@ -1857,7 +1857,8 @@ export default class Game {
     // そのプレイヤーが今できる操作（画面で光らせる・CPUが選ぶ）
     getLegalActions(playerId) {
         const player = this.players[playerId];
-        const actions = { hand: {}, handAbilities: [], attacks: [], retreat: [], abilities: [], stadium: false, endTurn: false };
+        // reasons：使えない手札・ワザの理由（本体が断るときの文。説明を開いたときに出す）
+        const actions = { hand: {}, handAbilities: [], attacks: [], retreat: [], abilities: [], stadium: false, endTurn: false, reasons: { hand: {}, attacks: [] } };
         if (this.checkMain(player)) return actions;
         const targets = this.inPlay(player).map(pokemon => pokemon.id);
         player.hand.forEach(inst => {
@@ -1878,10 +1879,21 @@ export default class Game {
                 list = [];
             }
             if (list) actions.hand[inst.uid] = list;
+            else {
+                const first = targets[0];
+                actions.reasons.hand[inst.uid] = card.kind === 'energy' ? this.checkAttachEnergy(player, inst.uid, first)
+                    : card.kind === 'pokemon' && card.stage === 0 ? this.checkPlayBasic(player, inst.uid)
+                        : card.kind === 'pokemon' ? (this.inPlay(player).some(pokemon => this.topCard(pokemon).name === card.evolvesFrom)
+                            ? targets.map(target => this.checkEvolve(player, inst.uid, target)).find(Boolean) ?? null
+                            : `場に${card.evolvesFrom}がいない`)
+                            : card.trainerType === 'tool' ? this.checkPlayTrainer(player, inst.uid, first)
+                                : this.checkPlayTrainer(player, inst.uid);
+            }
             if (card.ability?.type === 'hand' && !this.checkHandAbility(player, inst.uid)) actions.handAbilities.push(inst.uid);
         });
         const attacks = player.active ? this.attacksOf(player.active) : [];
-        actions.attacks = attacks.map((_, index) => !this.checkAttack(player, index));
+        actions.reasons.attacks = attacks.map((_, index) => this.checkAttack(player, index) ?? null);
+        actions.attacks = actions.reasons.attacks.map(reason => !reason);
         actions.retreat = player.bench.map(pokemon => pokemon.id).filter(id => !this.checkRetreat(player, id));
         actions.abilities = targets.filter(id => !this.checkAbility(player, id));
         actions.stadium = !this.checkStadium(player);

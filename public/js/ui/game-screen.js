@@ -220,7 +220,9 @@ export default class GameScreen {
         const inst = this.handCard(uid);
         if (!inst) return;
         const playable = Boolean(this.view.legal?.hand[uid]) && !this.myPrompt();
-        showDetail($('detail'), { cardId: inst.id, actions: { play: playable }, onPlay: () => this.tapHand(uid) });
+        // 自分の番に使えないなら、その理由を添える
+        const note = !playable && !this.myPrompt() ? this.view.legal?.reasons?.hand[uid] ?? '' : '';
+        showDetail($('detail'), { cardId: inst.id, actions: { play: playable }, note, onPlay: () => this.tapHand(uid) });
     }
 
     openCardDetail(cardId) {
@@ -235,9 +237,12 @@ export default class GameScreen {
         const mine = owner.id === view.viewerId;
         const legal = mine && !this.myPrompt() ? view.legal : null;
         const isActive = owner.active?.id === id;
+        // 自分のバトルポケモンで、使えないワザがあれば、その理由を添える（同じ理由はまとめる）
+        const note = isActive && legal ? [...new Set((legal.reasons?.attacks ?? []).filter(Boolean))].join('・') : '';
         showDetail($('detail'), {
             cardId: pokemon.top,
             pokemon,
+            note,
             actions: {
                 attacks: isActive ? legal?.attacks : null,
                 retreat: isActive && legal?.retreat.length > 0,

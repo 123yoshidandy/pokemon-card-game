@@ -208,7 +208,7 @@ export default class DeckScreens {
             const problem = deckProblem(deck);
             const button = deck.builtIn
                 ? `<button type="button" class="btn btn-secondary btn-small" data-copy="${deck.id}">コピーして編集</button>`
-                : `<button type="button" class="btn btn-primary btn-small" data-edit="${deck.id}">編集</button>`;
+                : `<button type="button" class="btn btn-secondary btn-small" data-copy="${deck.id}">コピー</button><button type="button" class="btn btn-primary btn-small" data-edit="${deck.id}">編集</button>`; // 自作のデッキも複製できる
             return `<li class="deck-row">
                 <span class="deck-row-name" ${deck.builtIn ? `data-view="${deck.id}"` : ''}>${escape(deck.name)}${deck.builtIn ? '<span class="deck-row-view">中身</span>' : ''}</span>
                 ${deck.builtIn ? '<span class="badge">構築済み</span>' : ''}

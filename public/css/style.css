@@ -696,6 +696,7 @@ button { font: inherit; color: inherit; }
 }
 .hand::-webkit-scrollbar { display: none; }
 .hand-card {
+    position: relative;
     flex: none;
     height: 100%;
     aspect-ratio: 63 / 88;
@@ -704,6 +705,23 @@ button { font: inherit; color: inherit; }
 }
 .hand-card.selected { transform: translateY(-6px); }
 .hand-card.selected > .card { box-shadow: 0 0 0 3px #fff, 0 0 12px rgba(255, 255, 255, 0.6); animation: none; }
+/* 同じカードが何枚あるか（重ねて1枚で出している） */
+.hand-count {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    min-width: 20px;
+    height: 18px;
+    padding: 0 4px;
+    border-radius: 999px;
+    background: rgba(10, 16, 30, 0.88);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 18px;
+    text-align: center;
+    pointer-events: none;
+}
 .dock-actions { flex: none; }
 .dock-actions .btn { padding: 10px 14px; font-size: 14px; }
 

@@ -226,10 +226,18 @@ export default class GameScreen {
         $('stadium').innerHTML = view.stadium ? `<span class="stadium-chip ${view.legal?.stadium ? 'playable' : ''}">${getCard(view.stadium.id).name}</span>` : '';
         $('status').classList.remove('status-error');
         $('status').textContent = this.statusText(view, prompt);
-        $('hand').innerHTML = (me.hand ?? []).map(inst => {
-            const playable = view.legal?.hand[inst.uid] && !prompt;
-            const selected = this.mode?.uid === inst.uid;
-            return `<div class="hand-card ${playable ? 'playable' : ''} ${selected ? 'selected' : ''}" data-uid="${inst.uid}">${cardFace(inst.id)}</div>`;
+        // 同じカードは1枚に重ねて、枚数を出す（手札が多くても横に流れすぎないように）。タップすると、そのうちの1枚を使う
+        const groups = new Map();
+        for (const inst of me.hand ?? []) {
+            if (!groups.has(inst.id)) groups.set(inst.id, []);
+            groups.get(inst.id).push(inst.uid);
+        }
+        $('hand').innerHTML = [...groups].map(([id, uids]) => {
+            const uid = uids.find(item => item === this.mode?.uid) ?? uids.find(item => view.legal?.hand[item]) ?? uids[0];
+            const playable = view.legal?.hand[uid] && !prompt;
+            const selected = this.mode?.uid === uid;
+            const count = uids.length > 1 ? `<span class="hand-count">×${uids.length}</span>` : '';
+            return `<div class="hand-card ${playable ? 'playable' : ''} ${selected ? 'selected' : ''}" data-uid="${uid}">${cardFace(id)}${count}</div>`;
         }).join('');
         $('end-turn').disabled = !view.legal?.endTurn || Boolean(prompt);
         const log = $('log');

@@ -76,7 +76,8 @@ function safely(fn) {
 
 export function chooseCpuCommand(game, playerId) {
     if (game.phase === 'deck') {
-        return game.decks[playerId] ? null : { type: 'deck', cards: expandDeck(DECKS[playerId % DECKS.length]) };
+        // オンラインで足した CPU のデッキは、対戦のシードと席で選ぶ（対戦ごとに変わる。ゲームの乱数は使わない：記録からの再現がずれるため）
+        return game.decks[playerId] ? null : { type: 'deck', cards: expandDeck(DECKS[((game.seed ?? 0) + playerId) % DECKS.length]) };
     }
     budget = SIM_BUDGET;
     deadline = now() + TIME_BUDGET;

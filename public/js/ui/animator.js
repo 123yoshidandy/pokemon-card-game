@@ -70,12 +70,13 @@ export default class Animator {
         }
     }
 
-    // 使ったトレーナーズを、盤面の中央に一瞬大きく見せる
+    // 使ったトレーナーズを、盤面に一瞬大きく見せる
     reveal(cardId) {
         const field = document.querySelector('#game-screen .field')?.getBoundingClientRect();
         if (!field) return;
         const element = this.add('fx-reveal', cardFace(cardId));
-        element.style.left = `${field.left + field.width / 2}px`;
+        // 中央の帯の文（相手の番は、いま何をしたか）と重ならないよう、右寄りに出す
+        element.style.left = `${field.left + field.width * 0.8}px`;
         element.style.top = `${field.top + field.height / 2}px`;
     }
 

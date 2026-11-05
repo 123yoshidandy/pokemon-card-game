@@ -8,7 +8,9 @@ import { createGameView } from './game-view.js';
 import { runCpuStep, actingPlayerId, minimalAnswer } from './cpu-player.js';
 import { createSeed } from './random.js';
 
-const CPU_STEP_DELAY_MS = 650; // CPU の手は1手ずつ間を置いて見せる
+const CPU_STEP_DELAY_MS = 650; // CPU の手は1手ずつ間を置いて見せる（場が変わった手のあと）
+const CPU_QUICK_DELAY_MS = 300; // 山札を探す・選ぶなど、見た目が変わらない手のあと
+const VISUAL_EVENTS = new Set(['bench', 'evolve', 'energy', 'trainer', 'attack', 'knockout', 'switch', 'coin', 'prize']);
 const CPU_SETUP_DELAY_MS = 250;
 const HUMAN = 0;
 const STALL_LIMIT = 3; // CPU の手が進まないことがこの回数続いたら、最小の答えか「番を終える」で抜ける
@@ -55,7 +57,7 @@ export default class LocalGameController {
         clearTimeout(this.cpuTimer);
         const playerId = actingPlayerId(this.game);
         if (playerId === null || !this.game.players[playerId].isCPU) return;
-        const delay = this.game.phase === 'setup' ? CPU_SETUP_DELAY_MS : CPU_STEP_DELAY_MS;
+        const delay = this.game.phase === 'setup' ? CPU_SETUP_DELAY_MS : this.lastStepVisual === false ? CPU_QUICK_DELAY_MS : CPU_STEP_DELAY_MS;
         this.cpuTimer = setTimeout(() => {
             // どこで例外が出ても、必ず次の手を予約する（対戦が止まらないように）
             try {
@@ -74,12 +76,14 @@ export default class LocalGameController {
 
     stepCpu() {
         const before = this.game.commands.length;
+        const seq = this.game.eventSeq;
         try {
             runCpuStep(this.game);
         } catch (error) {
             console.error(error);
         }
         this.stalls = this.game.commands.length === before ? (this.stalls ?? 0) + 1 : 0;
+        this.lastStepVisual = this.game.events.some(event => event.seq > seq && VISUAL_EVENTS.has(event.type));
         if (this.stalls < STALL_LIMIT) return;
         this.stalls = 0;
         const playerId = actingPlayerId(this.game);

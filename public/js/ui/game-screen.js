@@ -383,6 +383,11 @@ export default class GameScreen {
         if (prompt?.type === 'pokemon') return prompt.title;
         if (this.mode?.kind === 'retreat') return 'にげる先のポケモンを選ぶ';
         if (this.mode) return 'つけるポケモンを選ぶ';
+        // 相手の番は、いま何をしたかを、ログの最新の1行で見せる
+        if (view.phase === 'main' && view.current !== view.viewerId) {
+            const last = [...view.log].reverse().find(text => !text.startsWith('—'));
+            if (last) return last;
+        }
         if (view.prompt?.waiting) return `${view.players[view.prompt.player].name}が選んでいます`;
         return '';
     }

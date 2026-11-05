@@ -76,6 +76,12 @@ const deckScreens = new DeckScreens(deckStore, {
         settings.deckId = DECKS[0].id;
         saveSettings();
     },
+    // デッキ編集の「CPU と試す」：そのデッキを選んで、CPU 戦を始める
+    onTry: deckId => {
+        settings.deckId = deckId;
+        saveSettings();
+        startCpuGame();
+    },
     onBack: () => {
         if (deckReturnScene === 'lobby' && online?.lobby?.status === 'lobby') {
             renderLobby(online.lobby);
@@ -135,9 +141,10 @@ function showTitle() {
 // ===== CPU 対戦 =====
 
 function startCpuGame() {
-    // CPU は、自分のデッキとタイプの違う構築済みデッキを使う
+    // CPU は、自分のデッキとタイプの違う構築済みデッキから、ランダムに選ぶ
     const mine = selectedDeck();
-    const cpu = DECKS.find(deck => deck.type !== mainEnergyType(mine)) ?? DECKS[0];
+    const others = DECKS.filter(deck => deck.type !== mainEnergyType(mine));
+    const cpu = others.length ? others[Math.floor(Math.random() * others.length)] : DECKS[0];
     screen.stop();
     const controller = new LocalGameController(
         { name: 'あなた', decks: [expandDeck(mine), expandDeck(cpu)] },

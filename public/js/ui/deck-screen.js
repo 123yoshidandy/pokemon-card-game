@@ -55,7 +55,7 @@ function cardText(id) {
 }
 
 export default class DeckScreens {
-    // store：createDeckStore() / handlers：show(scene) / onDeleted(deckId) / onBack()
+    // store：createDeckStore() / handlers：show(scene) / onDeleted(deckId) / onBack() / onTry(deckId)
     constructor(store, handlers) {
         this.store = store;
         this.handlers = handlers;
@@ -87,6 +87,9 @@ export default class DeckScreens {
             }
         });
 
+        $('deck-try').addEventListener('click', () => {
+            if (!deckProblem(this.deck)) this.handlers.onTry(this.deck.id);
+        });
         $('editor-back').addEventListener('click', () => {
             // 空のデッキと、変えずに戻ったコピーは残さない（見るだけでデッキが増えないように）
             if (totalCount(this.deck) === 0 || JSON.stringify(this.deck) === this.untouched) {
@@ -301,6 +304,7 @@ export default class DeckScreens {
         $('deck-count').textContent = `${total}/${DECK_SIZE}`;
         $('deck-count').classList.toggle('incomplete', Boolean(problem));
         $('deck-problem').textContent = problem && total === DECK_SIZE ? problem : '';
+        $('deck-try').disabled = Boolean(problem);
 
         const entries = sortedEntries(deck);
         // 同じ名前で中身の違うカードは、一覧と同じく特性かワザの名前を添えて見分ける

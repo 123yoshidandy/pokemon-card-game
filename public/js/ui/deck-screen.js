@@ -218,6 +218,12 @@ export default class DeckScreens {
         this.deck = this.store.find(deckId);
         this.untouched = null;
         if (!this.deck) return this.showList();
+        // 別のデッキを開いたときは、種類・検索・しぼりこみを初めの状態にもどす
+        this.kind = 'pokemon';
+        this.query = '';
+        this.filters = { pokemon: {}, trainer: {}, energy: {} };
+        $('pool-search').value = '';
+        $('pool-filters').scrollLeft = 0;
         $('deck-name').value = this.deck.name;
         this.handlers.show('editor');
         this.renderFilters();

@@ -108,7 +108,7 @@ function openDecks() {
 
 function openDeckPicker() {
     showDeckPicker($('deck-picker'), {
-        decks: deckStore.all().map(deck => ({ id: deck.id, name: deck.name, problem: deckProblem(deck) })),
+        decks: [...deckStore.custom(), ...deckStore.all().filter(deck => deck.builtIn)].map(deck => ({ id: deck.id, name: deck.name, problem: deckProblem(deck) })),
         currentId: selectedDeck().id,
         onPick: deckId => {
             settings.deckId = deckId;

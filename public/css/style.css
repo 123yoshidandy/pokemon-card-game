@@ -493,7 +493,8 @@ button { font: inherit; color: inherit; }
 .toast {
     position: fixed;
     left: 50%;
-    bottom: calc(16px + var(--safe-b));
+    top: calc(8px + env(safe-area-inset-top, 0px));
+    pointer-events: none; /* 下のボタンを押せなくしない */
     transform: translateX(-50%);
     z-index: 10;
     max-width: calc(100vw - 32px);
@@ -981,6 +982,9 @@ dialog button:focus { outline: none; }
 .pick.selected .card { box-shadow: 0 0 0 3px var(--gold), 0 0 12px rgba(245, 197, 66, 0.7); transform: translateY(-3px); }
 .choose-options { display: flex; flex-wrap: wrap; gap: 10px; padding: 6px 0; }
 .empty { color: var(--ink-dim); }
+.prompt-cards .empty { grid-column: 1 / -1; }
+/* 目立たせない操作（「盤面を見る」など）。左に寄せる */
+.btn-quiet { background: transparent; color: var(--ink-dim); box-shadow: none; text-decoration: underline; text-underline-offset: 3px; margin-right: auto; padding-left: 4px; padding-right: 4px; }
 
 .detail-head {
     display: flex;

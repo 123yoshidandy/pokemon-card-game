@@ -27,7 +27,7 @@ export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
     dialog.dataset.closable = 'false';
     dialog.dataset.promptId = prompt.id;
     const selected = new Set();
-    const peek = '<button type="button" class="btn btn-secondary" data-peek>盤面を見る</button>';
+    const peek = '<button type="button" class="btn btn-quiet" data-peek>盤面を見る</button>';
 
     if (prompt.type === 'confirm') {
         dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">${prompt.title}</h2>${prompt.card ? `<div class="detail">${cardDetail(prompt.card)}</div>` : ''}</div>

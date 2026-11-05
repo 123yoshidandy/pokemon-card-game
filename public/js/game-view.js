@@ -64,7 +64,7 @@ function pokemonView(game, pokemon, isMine) {
         tool: pokemon.tool?.id ?? null,
         tool2: pokemon.tool2?.id ?? null,
         conditions: [pokemon.rotation, pokemon.poisoned && 'poisoned', pokemon.burned && 'burned'].filter(Boolean),
-        effects: pokemon.effects.map(effect => effect.kind),
+        effects: pokemon.effects.filter(effect => effect.untilTurn === undefined || effect.untilTurn >= game.turn).map(effect => effect.kind), // 期限の切れたものは外す
         retreat: game.retreatCost(pokemon),
         // カードのワザのほかに使えるワザ（どうぐに書かれたワザ・進化前のワザなど。番号はカードのワザの続き）
         extraAttacks: game.attacksOf(pokemon).slice(game.topCard(pokemon).attacks.length)

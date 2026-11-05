@@ -73,6 +73,27 @@ function cardText(text) {
     return escape(text).replace(/\[([GRWLPFDMNC])\]/g, (_, code) => energyDot(ENERGY_CODES[code]));
 }
 
+// ポケモンにかかっている効果の、画面に出す文（期限は効果ごとに違うので書かない。内部だけの効果は出さない）
+const EFFECT_TEXTS = {
+    preventDamage: 'ワザのダメージを受けない',
+    preventAll: 'ワザのダメージや効果を受けない',
+    preventDamageUpTo: '一定以下のワザのダメージを受けない',
+    preventDamageFromEx: 'ポケモンexからワザのダメージを受けない',
+    preventDamageFromBasic: 'たねポケモンからワザのダメージを受けない',
+    preventDamageFromAncient: '古代のポケモンからワザのダメージを受けない',
+    damageReduction: '受けるワザのダメージが減る',
+    damageIncrease: '受けるワザのダメージが増える',
+    attackDamageModifier: '使うワザのダメージが変わる',
+    cannotAttack: 'ワザを使えない',
+    cannotUseAttack: '決まったワザを使えない',
+    cannotRetreat: 'にげられない',
+    noWeakness: '弱点がない',
+    cannotAttachFromHand: '手札からエネルギーをつけられない',
+    attackCoinFlip: 'ワザの前にコインを投げ、ウラなら失敗する',
+    counterOnDamaged: 'ワザのダメージを受けると、相手にダメカンをのせる'
+};
+const effectTexts = pokemon => [...new Set((pokemon.effects ?? []).map(kind => EFFECT_TEXTS[kind]).filter(Boolean))];
+
 // 場についたエネルギーの丸。特殊エネルギーは、出すタイプの色に縁取りを付けて見分ける
 function attachedEnergyDot(card) {
     if (card.basic) return energyDot(card.energyType);
@@ -141,6 +162,7 @@ export function pokemonTile(pokemon, { active = false } = {}) {
         <div class="mon-head"><span class="mon-name">${escape(card.name)}</span><span class="mon-hp-num ${hpClass}">${remaining}</span></div>
         <div class="mon-art">${pokemonArt(card)}${movesHtml(card)}</div>
         <div class="mon-energies">${energies}</div>
+        ${effectTexts(pokemon).length ? `<span class="mon-effect" title="${escape(effectTexts(pokemon).join('・'))}">!</span>` : ''}
         ${[pokemon.tool, pokemon.tool2].filter(Boolean).map((tool, index) => `<span class="mon-tool ${index ? 'mon-tool-2' : ''}" title="${escape(getCard(tool).name)}"><svg viewBox="0 0 24 24" fill="currentColor">${TRAINER_ICONS.tool}</svg></span>`).join('')}
         ${conditions ? `<div class="mon-conds">${conditions}</div>` : ''}
     </div>`;
@@ -170,6 +192,7 @@ export function cardDetail(id, pokemon = null) {
         if (pokemon) {
             const state = [];
             if (pokemon.energies.length) state.push(`エネルギー ${pokemon.energies.map(e => attachedEnergyDot(getCard(e))).join('')}`);
+            effectTexts(pokemon).forEach(text => state.push(`かかっている効果 ${text}`));
             if (pokemon.conditions.length) state.push(`特殊状態：${pokemon.conditions.map(c => CONDITION_NAMES[c]).join('・')}`);
             if (state.length) parts.push(`<div class="detail-extra">${state.map(e => `<div>${e}</div>`).join('')}</div>`);
         }

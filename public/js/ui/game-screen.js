@@ -218,6 +218,9 @@ export default class GameScreen {
         $('turn-info').textContent = view.phase === 'setup' || view.phase === 'deck' ? '準備' : `${view.turn}ターン目 ・ ${view.current === view.viewerId ? 'あなたの番' : `${opp.name}の番`}`;
         $('opp-side').innerHTML = this.sideHtml(opp, highlight);
         $('my-side').innerHTML = this.sideHtml(me, highlight, view.current === view.viewerId && !prompt ? view.legal : null);
+        const playing = view.phase !== 'setup' && view.phase !== 'deck' && !view.winner;
+        $('my-side').classList.toggle('on-turn', playing && view.current === view.viewerId);
+        $('opp-side').classList.toggle('on-turn', playing && view.current !== view.viewerId);
         $('opp-info').innerHTML = this.infoHtml(opp);
         $('my-info').innerHTML = this.infoHtml(me);
         $('stadium').innerHTML = view.stadium ? `<span class="stadium-chip ${view.legal?.stadium ? 'playable' : ''}">${getCard(view.stadium.id).name}</span>` : '';

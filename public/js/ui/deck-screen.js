@@ -22,16 +22,12 @@ const KIND_TABS = [
 // 一覧は、この数ずつ書き足す（一度に全部を並べると、スマホで重い）
 const POOL_CHUNK = 120;
 
-// 同じ名前で中身の違うカード（アゴジムシが3種類など）は、一覧で特性か最初のワザの名前を重ねて見分ける
+// 同じ名前で中身の違うカード（アゴジムシが3種類など）は、右の欄で特性か最初のワザの名前を添えて見分ける
 const nameCounts = new Map();
 for (const id of CARD_POOL) nameCounts.set(getCard(id).name, (nameCounts.get(getCard(id).name) ?? 0) + 1);
 function hintText(card) {
     if (card.kind !== 'pokemon' || nameCounts.get(card.name) < 2) return '';
     return (card.ability ? `特性 ${card.ability.name}` : card.attacks[0]?.name) ?? '';
-}
-function poolHint(card) {
-    const hint = hintText(card);
-    return hint ? `<span class="pool-hint">${escape(hint)}</span>` : '';
 }
 
 function escape(text) {
@@ -312,7 +308,7 @@ export default class DeckScreens {
         const next = this.poolIds.slice(this.poolShown, this.poolShown + POOL_CHUNK);
         this.poolShown += next.length;
         pool.insertAdjacentHTML('beforeend', next.map(id =>
-            `<div class="pool-card" data-card="${id}">${cardFace(id)}${poolHint(getCard(id))}</div>`).join(''));
+            `<div class="pool-card" data-card="${id}">${cardFace(id)}</div>`).join(''));
         this.updatePoolMarks();
         if (this.poolShown < this.poolIds.length) {
             pool.insertAdjacentHTML('beforeend', '<div class="pool-more" aria-hidden="true"></div>');

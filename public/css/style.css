@@ -1230,3 +1230,58 @@ dialog button:focus { outline: none; }
 /* サイドを取った側の情報の欄を光らせる */
 .fx-glow { animation: fx-glow 0.9s ease-out; }
 @keyframes fx-glow { 30% { box-shadow: 0 0 0 2px var(--gold), 0 0 16px rgba(245, 197, 66, 0.7); } }
+
+/* ===== カードの面の特性とワザ（card-view.js の movesHtml） ===== */
+.card-art, .mon-art { position: relative; overflow: hidden; }
+/* 特性かワザがあるときは、タイプの記号を後ろに薄く敷く */
+.card-art:has(.card-moves) .emblem,
+.mon-art:has(.card-moves) .emblem {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 74%;
+    height: 74%;
+    opacity: 0.22;
+}
+.card-moves {
+    position: relative;
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2cqw;
+    padding: 2.5cqw 3cqw;
+    color: #fff;
+    font-size: max(6.5px, 10cqw);
+    line-height: 1.2;
+    overflow: hidden;
+}
+.move {
+    display: flex;
+    align-items: center;
+    gap: 2cqw;
+    min-width: 0;
+    padding: 1.2cqw 2.5cqw;
+    border-radius: 3cqw;
+    background: rgba(10, 16, 30, 0.42);
+}
+.move-cost { display: flex; gap: 1px; flex: none; }
+.move-dot {
+    width: max(5px, 7.5cqw);
+    height: max(5px, 7.5cqw);
+    border-radius: 50%;
+    background: var(--type-color);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.85);
+}
+/* 名前は2行まで折り返す（絵の部分には縦の余裕がある） */
+.move-name { flex: 1; min-width: 0; font-weight: 800; overflow: hidden; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.move-dmg { flex: none; font-weight: 900; }
+.move-tag {
+    flex: none;
+    padding: 0 2cqw;
+    border-radius: 2cqw;
+    background: #c0392b;
+    font-size: 0.85em;
+    font-weight: 800;
+}

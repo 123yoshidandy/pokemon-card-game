@@ -45,13 +45,21 @@ function escape(text) {
     return String(text).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 }
 
+// カードの面に出す特性とワザ（ワザは必要なエネルギーの色の丸・名前・ダメージ）。タイプの記号は後ろに薄く残す
+function movesHtml(card) {
+    const rows = [];
+    if (card.ability) rows.push(`<div class="move move-ability"><span class="move-tag">特性</span><span class="move-name">${escape(card.ability.name)}</span></div>`);
+    card.attacks.forEach(attack => rows.push(`<div class="move"><span class="move-cost">${attack.cost.map(type => `<i class="move-dot type-${type}"></i>`).join('')}</span><span class="move-name">${escape(attack.name)}</span>${attack.damageText ? `<span class="move-dmg">${escape(attack.damageText)}</span>` : ''}</div>`));
+    return rows.length ? `<div class="card-moves">${rows.join('')}</div>` : '';
+}
+
 // カード1枚の表（手札・選択・タイトルの絵）
 export function cardFace(id) {
     const card = getCard(id);
     if (card.kind === 'pokemon') {
         return `<div class="card card-pokemon type-${card.type}" data-card="${id}">
             <div class="card-head"><span class="card-stage">${STAGE_NAMES[card.stage]}</span><span class="card-hp">${card.hp}</span></div>
-            <div class="card-art">${emblemSvg(card.type)}</div>
+            <div class="card-art">${emblemSvg(card.type)}${movesHtml(card)}</div>
             <div class="card-name">${escape(card.name)}</div>
         </div>`;
     }
@@ -83,7 +91,7 @@ export function pokemonTile(pokemon, { active = false } = {}) {
     const energies = pokemon.energies.map(id => energyDot(getCard(id).energyType)).join('');
     return `<div class="mon type-${card.type} ${active ? 'mon-active' : ''} ${pokemon.faceDown ? 'mon-facedown' : ''}" data-pokemon="${pokemon.id}">
         <div class="mon-name">${escape(card.name)}</div>
-        <div class="mon-art">${emblemSvg(card.type)}</div>
+        <div class="mon-art">${emblemSvg(card.type)}${movesHtml(card)}</div>
         <div class="mon-hp ${hpClass}"><span class="mon-hp-bar" style="width:${ratio * 100}%"></span><span class="mon-hp-text">${remaining}/${pokemon.hp}</span></div>
         <div class="mon-energies">${energies}</div>
         ${pokemon.tool ? `<span class="mon-tool" title="${escape([pokemon.tool, pokemon.tool2].filter(Boolean).map(tool => getCard(tool).name).join('・'))}"><svg viewBox="0 0 24 24" fill="currentColor">${TRAINER_ICONS.tool}</svg></span>` : ''}

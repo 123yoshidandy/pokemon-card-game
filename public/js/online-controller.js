@@ -96,8 +96,8 @@ export default class OnlineGameController {
 
     getView() {
         if (!this.view) return null;
-        // 返事を待つ間は、二重に操作しないよう、できる操作をなくす
-        return this.awaitingResponse ? { ...this.view, legal: null } : this.view;
+        // 返事を待つ間も、見た目は前のビューのまま（手札の光などがちらつかないように）。二重の操作は画面の側で止める（awaitingResponse）
+        return this.view;
     }
 
     send(command) {

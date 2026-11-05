@@ -59,6 +59,7 @@ export default class GameScreen {
     }
 
     send(command) {
+        if (this.controller?.awaitingResponse) return; // オンラインで返事を待っている間は、二重に送らない
         this.mode = null;
         this.controller?.send(command);
         this.render();
@@ -200,7 +201,7 @@ export default class GameScreen {
                 this.render();
                 return;
             }
-            this.controller.send({ type: 'answer', answer: [index] });
+            if (!this.controller?.awaitingResponse) this.controller.send({ type: 'answer', answer: [index] });
             this.render();
             return;
         }
@@ -330,7 +331,7 @@ export default class GameScreen {
                     onAnswer: answer => {
                         $('prompt').close();
                         this.shownPromptId = null;
-                        this.controller.send({ type: 'answer', answer });
+                        if (!this.controller?.awaitingResponse) this.controller.send({ type: 'answer', answer });
                         this.render();
                     },
                     onPeek: () => {

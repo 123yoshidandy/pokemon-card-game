@@ -100,10 +100,9 @@ function chooseMainAction(game, player) {
         if (search) return { type: 'playTrainer', uid: search };
     }
 
-    // エネルギーをつける
-    const energy = playable(card => card.kind === 'energy')[0];
-    if (energy) {
-        const target = chooseEnergyTarget(game, player);
+    // エネルギーをつける（つけ先は、そのエネルギーをつけられるポケモンから選ぶ。合わなければ次のエネルギーを試す）
+    for (const energy of playable(card => card.kind === 'energy')) {
+        const target = chooseEnergyTarget(game, player, legal.hand[energy]);
         if (target) return { type: 'attachEnergy', uid: energy, target: target.id };
     }
 
@@ -198,8 +197,8 @@ function canEvolveSoon(game, player, card) {
 }
 
 // エネルギーのつけ先：バトルポケモンがまだワザを使えなければバトル場、それ以外はワザの強いポケモン
-function chooseEnergyTarget(game, player) {
-    const needs = pokemon => topAttacks(game, pokemon).some(attack => !game.canPayCost(pokemon, attack.cost));
+function chooseEnergyTarget(game, player, allowed = null) {
+    const needs = pokemon => (!allowed || allowed.includes(pokemon.id)) && topAttacks(game, pokemon).some(attack => !game.canPayCost(pokemon, attack.cost));
     if (player.active && needs(player.active)) return player.active;
     const candidates = player.bench.filter(needs).sort((a, b) => potential(game, b) - potential(game, a));
     return candidates[0] ?? null;
@@ -310,7 +309,7 @@ function answerPrompt(game, prompt) {
             }, 1);
         }
         case 'ultra-ball-discard':
-            return indices(prompt.cards, inst => -discardValue(game, player, inst), 2);
+            return indices(prompt.cards, inst => -discardValue(game, player, inst), prompt.min); // ハイパーボールは2枚、1枚を選ぶワザもある
         case 'promote':
         case 'switch':
         case 'forced-switch':

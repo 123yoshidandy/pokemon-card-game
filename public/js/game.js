@@ -88,6 +88,7 @@ export default class Game {
         this.logs = [];
         this.winner = null; // プレイヤーのID、引き分けは 'draw'
         this.endReason = null;
+        this.trainerInPlay = null; // 効果を使っている途中のトレーナーズ（{ player, inst }）
         this.lastError = null;
         this.nextUid = 1;
     }
@@ -376,6 +377,10 @@ export default class Game {
     }
 
     endGame(winner, reason, message) {
+        if (this.trainerInPlay) {
+            this.trainerInPlay.player.discard.push(this.trainerInPlay.inst);
+            this.trainerInPlay = null;
+        }
         this.phase = 'end';
         this.winner = winner;
         this.endReason = reason;
@@ -719,7 +724,10 @@ export default class Game {
                 break;
         }
         // グッズとサポートは、効果を終えてからトラッシュする（afterPlay があれば、使ったカードの行き先はそれが決める）
+        // 効果の途中で決着したときにカードが消えないよう、使っている途中のカードを覚えておく（endGame がトラッシュに置く）
+        this.trainerInPlay = { player, inst };
         this.withSource({ player, kind: 'trainer', card, trainerType: card.trainerType, fromHand: true }, () => this.runNext(() => card.play(this, player, inst), () => {
+            this.trainerInPlay = null;
             if (card.afterPlay) card.afterPlay(this, player, inst);
             else player.discard.push(inst);
         }));

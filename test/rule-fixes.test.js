@@ -76,4 +76,14 @@ describe('ルールの不具合の直し', () => {
         expect([opp.active.tool, opp.active.tool2]).toEqual([null, null]);
         expect(opp.discard.map(inst => CARDS[inst.id].name)).toEqual(expect.arrayContaining(['ふうせん', 'ヒーローマント']));
     });
+
+    it('トレーナーズの効果の途中で決着しても、そのカードはトラッシュに置かれる（消えない）', () => {
+        const game = midGame();
+        const me = game.players[game.current];
+        const inst = makeCard(game, idOf('ハイパーボール'));
+        game.trainerInPlay = { player: me, inst };
+        game.endGame(me.id, 'effect', 'テスト');
+        expect(me.discard).toContain(inst);
+        expect(game.trainerInPlay).toBeNull();
+    });
 });

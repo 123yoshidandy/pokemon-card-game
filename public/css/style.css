@@ -1299,3 +1299,21 @@ dialog button:focus { outline: none; }
 /* 説明の下のボタンの列（ワザ・特性・にげる・閉じる）。多いときは折り返す */
 .detail-actions { flex-wrap: wrap; gap: 6px 8px; }
 .detail-actions .btn { padding: 8px 14px; font-size: 14px; }
+
+/* 特殊エネルギー：左上の「特殊」の印、2タイプの丸、どのタイプにもなるものは虹色 */
+.card-special { position: relative; }
+.special-mark {
+    position: absolute;
+    top: 4%;
+    left: 6%;
+    z-index: 1;
+    padding: 0 4cqw;
+    border-radius: 3cqw;
+    background: rgba(10, 16, 30, 0.6);
+    color: #fff;
+    font-size: max(6.5px, 9.5cqw);
+    font-weight: 800;
+}
+.special-types { position: absolute; bottom: 6%; left: 0; right: 0; display: flex; justify-content: center; gap: 3cqw; }
+.special-types .move-dot { width: max(7px, 12cqw); height: max(7px, 12cqw); }
+.card-special.any-type { background: linear-gradient(135deg, #e5533d, #f2c230, #4caf50, #3d8bd9, #9b59b6); }

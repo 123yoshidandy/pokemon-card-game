@@ -61,6 +61,16 @@ function movesHtml(card) {
     return rows.length ? `<div class="card-moves">${rows.join('')}</div>` : '';
 }
 
+// 特殊エネルギーが出すタイプ（どのタイプにもなる・わからないものは空）
+function specialEnergyTypes(card) {
+    try {
+        const types = [...new Set((card.provides?.() ?? []).flatMap(entry => String(entry).split('|')))];
+        return types.every(type => TYPE_NAMES[type] && type !== 'colorless') ? types : types.length === 1 && types[0] === 'colorless' ? ['colorless'] : [];
+    } catch {
+        return [];
+    }
+}
+
 // カード1枚の表（手札・選択・タイトルの絵）
 export function cardFace(id) {
     const card = getCard(id);
@@ -77,6 +87,17 @@ export function cardFace(id) {
             <div class="card-art"><svg class="emblem" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${TRAINER_ICONS[card.trainerType]}</svg></div>
             <div class="card-name">${escape(card.name)}</div>
         </div>`;
+    }
+    if (!card.basic) {
+        // 特殊エネルギー：出すタイプの色と図柄。2タイプなら丸を並べ、どのタイプにもなるもの（レガシー・プリズムなど）は虹色
+        const types = specialEnergyTypes(card);
+        const main = types.length === 1 ? types[0] : 'colorless';
+        const dots = types.length > 1 ? `<span class="special-types">${types.map(type => `<i class="move-dot type-${type}"></i>`).join('')}</span>` : '';
+        return `<div class="card card-energy card-special type-${main} ${types.length === 0 ? 'any-type' : ''}" data-card="${id}">
+        <span class="special-mark">特殊</span>
+        <div class="card-art">${emblemSvg(main)}${dots}</div>
+        <div class="card-name">${escape(card.name.replace('エネルギー', ''))}</div>
+    </div>`;
     }
     return `<div class="card card-energy type-${card.energyType}" data-card="${id}">
         <div class="card-art">${emblemSvg(card.energyType)}</div>

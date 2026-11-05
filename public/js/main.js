@@ -28,6 +28,7 @@ let scene = 'title';
 let deckReturnScene = 'title'; // デッキ構築から戻る先（開始画面かロビー）
 let online = null;      // オンライン対戦のコントローラー（部屋に入っている間）
 let matchId = null;     // 表示している対戦
+let tryingDeckId = null; // デッキ編集の「CPU と試す」で試しているデッキ
 let toastTimer = null;
 
 const screen = new GameScreen({
@@ -37,7 +38,8 @@ const screen = new GameScreen({
             ...(online.isHost() ? [{ label: 'もう一度', primary: true, onClick: () => online.startGame() }] : [])
         ]
         : [
-            { label: 'ホーム', onClick: () => showTitle() },
+            // デッキ編集の「CPU と試す」から始めたなら、編集にすぐ戻れるように
+            ...(tryingDeckId ? [{ label: 'デッキ編集', onClick: () => { screen.stop(); deckScreens.openEditor(tryingDeckId); } }] : [{ label: 'ホーム', onClick: () => showTitle() }]),
             { label: '再戦', primary: true, onClick: () => startCpuGame() }
         ]),
     // オンラインでホストでなければ再戦の案内、そうでなければ使ったデッキの通算の戦績
@@ -115,6 +117,7 @@ const deckScreens = new DeckScreens(deckStore, {
         settings.deckId = deckId;
         saveSettings();
         startCpuGame();
+        tryingDeckId = deckId;
     },
     onBack: () => {
         if (deckReturnScene === 'lobby' && online?.lobby?.status === 'lobby') {
@@ -375,7 +378,10 @@ document.addEventListener('click', event => {
     const removeCpu = event.target.closest('[data-remove-cpu]');
     if (removeCpu) online?.removeCpu(Number(removeCpu.dataset.removeCpu));
 });
-$('start-cpu').addEventListener('click', startCpuGame);
+$('start-cpu').addEventListener('click', () => {
+    tryingDeckId = null;
+    startCpuGame();
+});
 $('open-online').addEventListener('click', () => showOnlineMenu());
 $('open-decks').addEventListener('click', openDecks);
 ['deck-picker', 'confirm'].forEach(id => closeOnBackdrop($(id)));

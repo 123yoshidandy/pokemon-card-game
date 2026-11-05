@@ -710,6 +710,10 @@ button { font: inherit; color: inherit; }
     transition: transform 0.12s;
 }
 .hand-card.selected { transform: translateY(-6px); }
+/* 手札のカードは小さいので、文字に下限をつけ、長い名前は2行まで折り返す */
+.hand-card .card-name { font-size: max(8px, 13.5cqw); white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.hand-card .card-head { font-size: max(7px, 13cqw); }
+.hand-card .card-hp { font-size: max(7.5px, 15cqw); }
 .hand-card.selected > .card { box-shadow: 0 0 0 3px #fff, 0 0 12px rgba(255, 255, 255, 0.6); animation: none; }
 /* 同じカードが何枚あるか（重ねて1枚で出している） */
 .hand-count {
@@ -832,7 +836,7 @@ button { font: inherit; color: inherit; }
 .mon-back { padding: 0; border: 0; background: none; }
 .mon-back .card { height: 100%; }
 .mon-name {
-    font-size: 13cqw;
+    font-size: max(8.5px, 13cqw);
     font-weight: 800;
     line-height: 1.1;
     white-space: nowrap;
@@ -852,7 +856,7 @@ button { font: inherit; color: inherit; }
 .mon-art .emblem { width: 56%; height: 56%; }
 .mon-hp {
     position: relative;
-    height: 15cqw;
+    height: max(11px, 15cqw);
     border-radius: 999px;
     background: rgba(0, 0, 0, 0.18);
     overflow: hidden;
@@ -864,9 +868,9 @@ button { font: inherit; color: inherit; }
     position: relative;
     display: block;
     text-align: center;
-    font-size: 11.5cqw;
+    font-size: max(8.5px, 11.5cqw);
     font-weight: 800;
-    line-height: 15cqw;
+    line-height: max(11px, 15cqw);
     color: #fff;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
 }

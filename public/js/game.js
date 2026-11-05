@@ -398,6 +398,7 @@ export default class Game {
     //   { type: 'attack', index }             バトルポケモンのワザを使う（番が終わる）
     //   { type: 'endTurn' }                   番を終える
     //   { type: 'answer', answer }            選択に答える（cards・pokemon・choose はインデックスの配列、confirm は真偽値）
+    //   { type: 'concede' }                   降参する（相手の勝ちで決着する）
     //   { type: 'proxy' }                     部屋を出たプレイヤーを、以後CPUが代わりに操作する（オンライン対戦のサーバーだけが送る）
     applyCommand(playerId, command) {
         this.lastError = null;
@@ -419,6 +420,7 @@ export default class Game {
             case 'attack': accepted = this.run(main() ?? this.checkAttack(player, command.index), () => this.attack(player, command.index)); break;
             case 'endTurn': accepted = this.run(main(), () => this.endTurn()); break;
             case 'answer': accepted = this.run(this.checkAnswer(player, command.answer), () => this.resolvePrompt(command.answer)); break;
+            case 'concede': accepted = this.run(this.phase === 'end' ? 'もう決着しています' : null, () => this.endGame(this.opponentOf(player).id, 'concede', `${player.name}は降参した`)); break;
             case 'proxy': accepted = this.run(player.isCPU || this.phase === 'end' ? 'できません' : null, () => this.startProxy(player)); break;
             default: this.reject('不明な操作です');
         }

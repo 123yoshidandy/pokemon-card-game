@@ -298,6 +298,7 @@ export default class GameScreen {
             case 'prizes': return won ? 'サイドをすべて取った' : `${opp.name}がサイドをすべて取った`;
             case 'nopokemon': return won ? `${opp.name}の場のポケモンがいなくなった` : '場のポケモンがいなくなった';
             case 'deckout': return won ? `${opp.name}の山札がなくなった` : '山札がなくなった';
+            case 'concede': return won ? `${opp.name}が降参した` : '降参した';
             case 'effect': return won ? 'カードの効果で勝った' : `${opp.name}がカードの効果で勝った`;
             default: return '両者が同時に勝利条件を満たした';
         }

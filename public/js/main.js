@@ -13,7 +13,7 @@ import NetplayClient from './netplay/netplay-client.mjs';
 import GameScreen from './ui/game-screen.js';
 import DeckScreens from './ui/deck-screen.js';
 import { cardFace } from './ui/card-view.js';
-import { closeOnBackdrop, showDeckPicker } from './ui/sheets.js';
+import { closeOnBackdrop, showDeckPicker, showConfirm } from './ui/sheets.js';
 
 const $ = id => document.getElementById(id);
 const STORAGE_KEY = 'pokemon-card-game:settings';
@@ -338,7 +338,12 @@ $('share-invite').addEventListener('click', shareInvite);
 $('add-cpu').addEventListener('click', () => online?.addCpu());
 $('start-online').addEventListener('click', () => online?.startGame());
 $('leave-room').addEventListener('click', leaveOnline);
-$('go-home').addEventListener('click', () => (isOnlineGame() ? leaveOnline() : showTitle()));
+// 対戦の途中なら、降参するかを確かめる（降参すると決着のダイアログが出て、そこからホームや部屋に戻る）
+$('go-home').addEventListener('click', () => {
+    const view = screen.view;
+    if (!view || view.phase === 'end' || view.viewerId === null || view.viewerId === undefined) return isOnlineGame() ? leaveOnline() : showTitle();
+    showConfirm($('confirm'), { title: '降参しますか？', yesLabel: '降参する', onYes: () => screen.send({ type: 'concede' }) });
+});
 ['open-rules', 'open-rules-game'].forEach(id => $(id).addEventListener('click', () => $('rules').showModal()));
 closeOnBackdrop($('rules'));
 document.addEventListener('contextmenu', event => {

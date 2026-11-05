@@ -513,3 +513,20 @@ describe('操作の記録', () => {
         expect(snapshot(replayed)).toBe(snapshot(game));
     });
 });
+
+describe('降参', () => {
+    it('番でないプレイヤーも降参でき、相手の勝ちで決着する。決着のあとは受け付けない。記録から再現できる', () => {
+        const players = PLAYERS.map(player => ({ ...player, isCPU: true }));
+        const options = deckOptions(3);
+        const game = new Game(players, options);
+        game.setup();
+        const loser = 1 - game.current;
+        expect(game.applyCommand(loser, { type: 'concede' })).toBe(true);
+        expect(game.phase).toBe('end');
+        expect(game.winner).toBe(1 - loser);
+        expect(game.endReason).toBe('concede');
+        expect(game.applyCommand(1 - loser, { type: 'concede' })).toBe(false);
+        const replayed = Game.replay(players, options, game.commands);
+        expect([replayed.winner, replayed.endReason]).toEqual([game.winner, 'concede']);
+    });
+});

@@ -23,6 +23,7 @@ const COMMAND_FIELDS = {
     retreat: ['target'],
     attack: ['index'],
     endTurn: [],
+    concede: [],
     answer: ['answer']
 };
 

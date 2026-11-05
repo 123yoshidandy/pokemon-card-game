@@ -456,6 +456,8 @@ export const TRAINER_EFFECTS = {
                 max: 1,
                 title: '場に出すトラッシュのたねポケモンを選ぶ',
                 purpose: 'search-pokemon',
+                // CPU は、HP のいちばん高いたねポケモンを選ぶ
+                cpuAnswer: g => [fromDiscard.map((card, index) => ({ index, hp: g.cardOf(card).hp })).sort((a, b) => b.hp - a.hp)[0].index],
                 callback: ([chosen]) => {
                     const targets = game.inPlay(player).filter(pokemon => pokemon.cards.length === 1 && isBasicCard(game.topCard(pokemon)));
                     game.promptPokemon({
@@ -465,6 +467,8 @@ export const TRAINER_EFFECTS = {
                         max: 1,
                         title: '入れ替える場のたねポケモンを選ぶ',
                         purpose: 'switch',
+                        // CPU は、いちばん傷んだポケモンと入れ替える（ダメカンは引きつぐが、HP の高いポケモンになれば持ちこたえる）
+                        cpuAnswer: g => [targets.map((pokemon, index) => ({ index, hurt: pokemon.damage / Math.max(1, g.maxHp(pokemon)) })).sort((a, b) => b.hurt - a.hurt)[0].index],
                         callback: ([target]) => {
                             const old = target.cards[0];
                             game.removeCard(player.discard, chosen);
@@ -478,7 +482,12 @@ export const TRAINER_EFFECTS = {
                 }
             });
         },
-        cpuWants: () => false
+        // 場のたねポケモンが半分以上傷み、トラッシュに、入れ替えればもっと持ちこたえるたねポケモンがいるときに使う
+        cpuWants: (game, player) => {
+            const best = Math.max(0, ...player.discard.map(inst => game.cardOf(inst)).filter(isBasicCard).map(card => card.hp));
+            return game.inPlay(player).some(pokemon => pokemon.cards.length === 1 && isBasicCard(game.topCard(pokemon))
+                && pokemon.damage * 2 >= game.maxHp(pokemon) && best - pokemon.damage >= game.maxHp(pokemon) - pokemon.damage + 30);
+        }
     },
     'ロケット団のおじゃまロボ': {
         // ウラの相手のサイド1枚と、相手の手札からオモテを見ないで1枚選び、オモテを見る。のぞむなら入れ替えさせる（そのサイドはオモテのまま）

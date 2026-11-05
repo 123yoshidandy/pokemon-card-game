@@ -6,7 +6,7 @@
 import { getCard } from '../card-data.js';
 import { cardFace, pokemonTile } from './card-view.js';
 import { bindPress } from './press.js';
-import { showPrompt, showDetail, showPile, showResult, showConfirm, showLog, closeOnBackdrop } from './sheets.js';
+import { showPrompt, showDetail, showPile, showResult, showConfirm, showLog, closeOnBackdrop, escapeHtml } from './sheets.js';
 import { BENCH_SIZE } from '../game.js';
 import Animator from './animator.js';
 import { cardOrder } from '../deck-builder.js';
@@ -144,7 +144,7 @@ export default class GameScreen {
         ['opp-info', 'my-info'].forEach(id => $(id).addEventListener('click', event => {
             if (!event.target.closest('[data-discard]')) return;
             const player = this.view.players[id === 'my-info' ? this.view.viewerId : 1 - this.view.viewerId];
-            showPile($('pile'), `${player.name}のトラッシュ`, player.discard, cardId => this.openCardDetail(cardId));
+            showPile($('pile'), `${escapeHtml(player.name)}のトラッシュ`, player.discard, cardId => this.openCardDetail(cardId));
         }));
         // 選択の外をタップしたら、つけ先の選択をやめる
         screen.addEventListener('click', event => {
@@ -303,7 +303,7 @@ export default class GameScreen {
         }).join('');
         $('end-turn').disabled = !view.legal?.endTurn || Boolean(prompt);
         const log = $('log');
-        log.innerHTML = view.log.slice(-40).map(text => `<li class="${text.startsWith('—') ? 'log-turn' : ''}">${text}</li>`).join('');
+        log.innerHTML = view.log.slice(-40).map(text => `<li class="${text.startsWith('—') ? 'log-turn' : ''}">${escapeHtml(text)}</li>`).join('');
         log.scrollTop = log.scrollHeight;
 
         // 選択のダイアログ（場のポケモンを選ぶときは盤面を光らせ、ダイアログは出さない）
@@ -366,7 +366,7 @@ export default class GameScreen {
     }
 
     endMessage(view, won) {
-        const opp = view.players[1 - view.viewerId];
+        const opp = { name: escapeHtml(view.players[1 - view.viewerId].name) };
         switch (view.endReason) {
             case 'prizes': return won ? 'サイドをすべて取った' : `${opp.name}がサイドをすべて取った`;
             case 'nopokemon': return won ? `${opp.name}の場のポケモンがいなくなった` : '場のポケモンがいなくなった';
@@ -425,7 +425,7 @@ export default class GameScreen {
     }
 
     infoHtml(player) {
-        return `<div class="info-name">${player.name}</div>
+        return `<div class="info-name">${escapeHtml(player.name)}</div>
             <div class="info-row">
                 <span class="info-item"><span class="info-label">サイド</span><b>${player.prizeCount}</b></span>
                 <span class="info-item"><span class="info-label">山札</span><b>${player.deckCount}</b></span>

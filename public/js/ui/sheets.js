@@ -14,7 +14,7 @@ export function closeOnBackdrop(dialog) {
     });
 }
 
-function escapeHtml(text) {
+export function escapeHtml(text) {
     return String(text).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 }
 
@@ -39,15 +39,15 @@ export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
     const peek = '<button type="button" class="btn btn-quiet" data-peek>盤面を見る</button>';
 
     if (prompt.type === 'confirm') {
-        dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">${prompt.title}</h2>${prompt.card ? `<div class="detail">${cardDetail(prompt.card)}</div>` : ''}</div>
+        dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">${escapeHtml(prompt.title)}</h2>${prompt.card ? `<div class="detail">${cardDetail(prompt.card)}</div>` : ''}</div>
             <div class="sheet-actions">${peek}<button type="button" class="btn btn-secondary" data-answer="no">いいえ</button><button type="button" class="btn btn-primary" data-answer="yes">はい</button></div>`;
     } else if (prompt.type === 'choose') {
-        dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">${prompt.title}</h2>
-            <div class="choose-options">${prompt.options.map((option, index) => `<button type="button" class="btn btn-primary" data-option="${index}">${option}</button>`).join('')}</div></div>
+        dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">${escapeHtml(prompt.title)}</h2>
+            <div class="choose-options">${prompt.options.map((option, index) => `<button type="button" class="btn btn-primary" data-option="${index}">${escapeHtml(option)}</button>`).join('')}</div></div>
             <div class="sheet-actions">${peek}</div>`;
     } else {
         const count = prompt.min === prompt.max ? `${prompt.max}枚` : `${prompt.min ? `${prompt.min}〜` : ''}${prompt.max}枚まで`;
-        dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">${prompt.title}<span class="prompt-count">${count}</span></h2>
+        dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">${escapeHtml(prompt.title)}<span class="prompt-count">${count}</span></h2>
             <div class="prompt-cards">${pickOrder(prompt).map(index => `<button type="button" class="pick" data-index="${index}">${cardFace(prompt.cards[index].id)}</button>`).join('')}</div></div>
             <div class="sheet-actions">${peek}<button type="button" class="btn btn-primary" data-submit>決定</button></div>`;
     }
@@ -161,7 +161,7 @@ export function showImport(dialog, { onSubmit }) {
 export function showLog(dialog, lines) {
     dialog.dataset.closable = 'true';
     dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">ログ</h2>
-        <ol class="log log-full">${lines.map(text => `<li class="${text.startsWith('—') ? 'log-turn' : ''}">${text}</li>`).join('')}</ol></div>
+        <ol class="log log-full">${lines.map(text => `<li class="${text.startsWith('—') ? 'log-turn' : ''}">${escapeHtml(text)}</li>`).join('')}</ol></div>
         <div class="sheet-actions"><button type="button" class="btn btn-secondary" data-close>閉じる</button></div>`;
     dialog.onclick = event => {
         if (event.target.closest('[data-close]')) dialog.close();

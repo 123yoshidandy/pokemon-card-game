@@ -141,7 +141,7 @@ export function pokemonTile(pokemon, { active = false } = {}) {
         <div class="mon-head"><span class="mon-name">${escape(card.name)}</span><span class="mon-hp-num ${hpClass}">${remaining}</span></div>
         <div class="mon-art">${pokemonArt(card)}${movesHtml(card)}</div>
         <div class="mon-energies">${energies}</div>
-        ${pokemon.tool ? `<span class="mon-tool" title="${escape([pokemon.tool, pokemon.tool2].filter(Boolean).map(tool => getCard(tool).name).join('・'))}"><svg viewBox="0 0 24 24" fill="currentColor">${TRAINER_ICONS.tool}</svg></span>` : ''}
+        ${[pokemon.tool, pokemon.tool2].filter(Boolean).map((tool, index) => `<span class="mon-tool ${index ? 'mon-tool-2' : ''}" title="${escape(getCard(tool).name)}"><svg viewBox="0 0 24 24" fill="currentColor">${TRAINER_ICONS.tool}</svg></span>`).join('')}
         ${conditions ? `<div class="mon-conds">${conditions}</div>` : ''}
     </div>`;
 }

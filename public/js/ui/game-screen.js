@@ -143,8 +143,13 @@ export default class GameScreen {
             });
         });
         ['opp-info', 'my-info'].forEach(id => $(id).addEventListener('click', event => {
-            if (!event.target.closest('[data-discard]')) return;
             const player = this.view.players[id === 'my-info' ? this.view.viewerId : 1 - this.view.viewerId];
+            // オモテになったサイド（効果でオモテにしたもの。おたがいに見える）
+            if (event.target.closest('[data-prizes]')) {
+                showPile($('pile'), `${escapeHtml(player.name)}のオモテのサイド`, player.faceUpPrizes.map(cardId => ({ id: cardId })), cardId => this.openCardDetail(cardId));
+                return;
+            }
+            if (!event.target.closest('[data-discard]')) return;
             // 同じカードは枚数つきでまとめ、種類の順（デッキ構築の一覧と同じ）に並べる
             const counts = new Map();
             player.discard.forEach(inst => counts.set(inst.id, (counts.get(inst.id) ?? 0) + 1));
@@ -294,7 +299,8 @@ export default class GameScreen {
         if (playing) this.lastTurnKey = turnKey ?? this.lastTurnKey ?? 0;
         $('opp-info').innerHTML = this.infoHtml(opp);
         $('my-info').innerHTML = this.infoHtml(me);
-        $('stadium').innerHTML = view.stadium ? `<span class="stadium-chip ${view.legal?.stadium ? 'playable' : ''}">${getCard(view.stadium.id).name}</span>` : '';
+        // スタジアムは、どちらが出したかを名前の前に小さく添える
+        $('stadium').innerHTML = view.stadium ? `<span class="stadium-chip ${view.legal?.stadium ? 'playable' : ''}"><small>${view.stadium.owner === view.viewerId ? 'あなた' : '相手'}</small>${getCard(view.stadium.id).name}</span>` : '';
         $('status').classList.remove('status-error');
         $('status').textContent = this.statusText(view, prompt);
         // 同じカードは1枚に重ねて、枚数を出す（手札が多くても横に流れすぎないように）。タップすると、そのうちの1枚を使う
@@ -446,7 +452,9 @@ export default class GameScreen {
     infoHtml(player) {
         return `<div class="info-name">${escapeHtml(player.name)}</div>
             <div class="info-row">
-                <span class="info-item"><span class="info-label">サイド</span><b>${player.prizeCount}</b></span>
+                ${player.faceUpPrizes?.length
+                    ? `<button type="button" class="info-item info-button" data-prizes><span class="info-label">サイド</span><b class="has-faceup">${player.prizeCount}</b></button>`
+                    : `<span class="info-item"><span class="info-label">サイド</span><b>${player.prizeCount}</b></span>`}
                 <span class="info-item"><span class="info-label">山札</span><b class="${player.deckCount <= 5 ? 'deck-low' : ''}">${player.deckCount}</b></span>
                 <span class="info-item"><span class="info-label">手札</span><b>${player.handCount}</b></span>
                 <button type="button" class="info-item info-button" data-discard><span class="info-label">トラッシュ</span><b>${player.discard.length}</b></button>

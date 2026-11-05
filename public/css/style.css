@@ -1382,3 +1382,11 @@ dialog button:focus { outline: none; }
 
 /* 山札が残り少ない（5枚以下。引けなくなると負け） */
 .info-item b.deck-low { color: #ff6b5e; }
+
+/* どうぐが2枚なら、印を2つ並べる */
+.mon-tool.mon-tool-2 { top: calc(18% + 20cqw); }
+/* スタジアムを出した側 */
+.stadium-chip small { margin-right: 4px; font-size: 10px; font-weight: 700; opacity: 0.8; }
+/* オモテになったサイドがあるとき（タップで見る） */
+.info-item b.has-faceup { position: relative; }
+.info-item b.has-faceup::after { content: ""; position: absolute; top: 2px; right: -6px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }

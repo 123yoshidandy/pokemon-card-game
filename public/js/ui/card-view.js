@@ -48,7 +48,7 @@ function escape(text) {
 // カードの面に出す特性とワザ（ワザは必要なエネルギーの色の丸・名前・ダメージ）。タイプの記号は後ろに薄く残す
 function movesHtml(card) {
     const rows = [];
-    if (card.ability) rows.push(`<div class="move move-ability"><span class="move-tag">特性</span><span class="move-name">${escape(card.ability.name)}</span></div>`);
+    if (card.ability) rows.push(`<div class="move move-ability"><span class="move-name">${escape(card.ability.name)}</span></div>`);
     card.attacks.forEach(attack => rows.push(`<div class="move"><span class="move-cost">${attack.cost.map(type => `<i class="move-dot type-${type}"></i>`).join('')}</span><span class="move-name">${escape(attack.name)}</span>${attack.damageText ? `<span class="move-dmg">${escape(attack.damageText)}</span>` : ''}</div>`));
     return rows.length ? `<div class="card-moves">${rows.join('')}</div>` : '';
 }

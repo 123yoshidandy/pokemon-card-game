@@ -749,6 +749,9 @@ button { font: inherit; color: inherit; }
 .hand-card .card-name { font-size: max(8px, 13.5cqw); white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .hand-card .card-head { font-size: max(7px, 13cqw); }
 .hand-card .card-hp { font-size: max(7.5px, 15cqw); }
+/* 手札のポケモンでは、進化の段階（たね・1進化など）は出さない（HP は右にそろえて残す） */
+.hand-card .card-pokemon .card-stage { display: none; }
+.hand-card .card-pokemon .card-head { justify-content: flex-end; }
 .hand-card.selected > .card { box-shadow: 0 0 0 3px #fff, 0 0 12px rgba(255, 255, 255, 0.6); animation: none; }
 /* 同じカードが何枚あるか（重ねて1枚で出している） */
 .hand-count {
@@ -1284,14 +1287,8 @@ dialog button:focus { outline: none; }
 /* 名前は2行まで折り返す（絵の部分には縦の余裕がある） */
 .move-name { flex: 1; min-width: 0; font-weight: 800; overflow: hidden; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .move-dmg { flex: none; font-weight: 900; }
-.move-tag {
-    flex: none;
-    padding: 0 2cqw;
-    border-radius: 2cqw;
-    background: #c0392b;
-    font-size: 0.85em;
-    font-weight: 800;
-}
+/* 特性の行は、「特性」の文字を出さず、赤みの背景でワザと見分ける */
+.move-ability { background: rgba(192, 57, 43, 0.82); }
 
 /* 説明の下のボタンの列（ワザ・特性・にげる・閉じる）。多いときは折り返す */
 .detail-actions { flex-wrap: wrap; gap: 6px 8px; }

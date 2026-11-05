@@ -162,6 +162,11 @@ button { font: inherit; color: inherit; }
     top: 8px;
     right: calc(8px + var(--safe-r));
 }
+.back-corner {
+    position: fixed;
+    top: 8px;
+    left: calc(8px + var(--safe-l));
+}
 
 /* ===== オンラインの入口・ロビー ===== */
 
@@ -192,10 +197,13 @@ button { font: inherit; color: inherit; }
     user-select: text;
     -webkit-user-select: text;
 }
+.text-input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 2px rgba(245, 197, 66, 0.25); }
 .online-join { display: flex; gap: 10px; align-items: center; }
 .code-input { width: 130px; letter-spacing: 0.15em; text-align: center; }
 #online-screen.invited .online-create,
 #online-screen.invited .code-input { display: none; }
+/* 招待で開いたときは「参加する」が主な操作 */
+#online-screen.invited #join-room { background: var(--accent); box-shadow: 0 4px 0 var(--accent-dark); }
 .lobby-code { color: var(--gold); letter-spacing: 0.12em; }
 .lobby-players {
     list-style: none;

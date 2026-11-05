@@ -145,7 +145,11 @@ export default class GameScreen {
         ['opp-info', 'my-info'].forEach(id => $(id).addEventListener('click', event => {
             if (!event.target.closest('[data-discard]')) return;
             const player = this.view.players[id === 'my-info' ? this.view.viewerId : 1 - this.view.viewerId];
-            showPile($('pile'), `${escapeHtml(player.name)}のトラッシュ`, player.discard, cardId => this.openCardDetail(cardId));
+            // 同じカードは枚数つきでまとめ、種類の順（デッキ構築の一覧と同じ）に並べる
+            const counts = new Map();
+            player.discard.forEach(inst => counts.set(inst.id, (counts.get(inst.id) ?? 0) + 1));
+            const cards = [...counts].sort((a, b) => cardOrder(a[0]) - cardOrder(b[0])).map(([id, count]) => ({ id, count }));
+            showPile($('pile'), `${escapeHtml(player.name)}のトラッシュ`, cards, cardId => this.openCardDetail(cardId));
         }));
         // 選択の外をタップしたら、つけ先の選択をやめる
         screen.addEventListener('click', event => {
@@ -443,7 +447,7 @@ export default class GameScreen {
         return `<div class="info-name">${escapeHtml(player.name)}</div>
             <div class="info-row">
                 <span class="info-item"><span class="info-label">サイド</span><b>${player.prizeCount}</b></span>
-                <span class="info-item"><span class="info-label">山札</span><b>${player.deckCount}</b></span>
+                <span class="info-item"><span class="info-label">山札</span><b class="${player.deckCount <= 5 ? 'deck-low' : ''}">${player.deckCount}</b></span>
                 <span class="info-item"><span class="info-label">手札</span><b>${player.handCount}</b></span>
                 <button type="button" class="info-item info-button" data-discard><span class="info-label">トラッシュ</span><b>${player.discard.length}</b></button>
             </div>`;

@@ -1379,3 +1379,6 @@ dialog button:focus { outline: none; }
 
 /* 場についた特殊エネルギーの丸（縁取りで基本エネルギーと見分ける） */
 .energy.energy-special { box-shadow: 0 0 0 1.5px #ffd54a; }
+
+/* 山札が残り少ない（5枚以下。引けなくなると負け） */
+.info-item b.deck-low { color: #ff6b5e; }

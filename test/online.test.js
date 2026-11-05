@@ -1,11 +1,12 @@
 import { describe, it, expect } from 'vitest';
 import { createTestServer } from '../server/netplay/testing.js';
 import game from '../server/src/game-definition.js';
-import { DECKS, expandDeck } from '../public/js/decks.js';
+import { expandDeck } from '../public/js/decks.js';
+import { TEST_DECKS } from './test-decks.js';
 import { C } from './helpers.js';
 
-const DECK_A = expandDeck(DECKS[0]);
-const DECK_B = expandDeck(DECKS[1]);
+const DECK_A = expandDeck(TEST_DECKS[0]);
+const DECK_B = expandDeck(TEST_DECKS[1]);
 
 const matchIdOf = client => client.last('lobby').matchId;
 const viewOf = client => client.last('state').view;

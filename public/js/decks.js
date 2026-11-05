@@ -5,13 +5,13 @@
 
 import { resolveCardId } from './card-data.js';
 
-const deck = data => ({
+export const defineDeck = data => ({
     ...data,
     cards: Object.fromEntries(Object.entries(data.cards).map(([id, count]) => [resolveCardId(id), count]))
 });
 
 export const DECKS = [
-    deck({
+    defineDeck({
         id: 'charizard',
         name: 'メガリザードンYex',
         type: 'fire',
@@ -36,7 +36,7 @@ export const DECKS = [
             'basic-fire-energy': 17
         }
     }),
-    deck({
+    defineDeck({
         id: 'miraidon',
         name: 'ミライドンex',
         type: 'lightning',

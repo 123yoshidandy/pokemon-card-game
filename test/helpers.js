@@ -1,6 +1,7 @@
 import Game from '../public/js/game.js';
 import { runCpuStep } from '../public/js/cpu-player.js';
 import { DECKS, expandDeck } from '../public/js/decks.js';
+import { TEST_DECKS } from './test-decks.js';
 import { resolveCardId } from '../public/js/card-data.js';
 
 // テストでは、前の版のカードID（'charmander' など）で書けるように、今のIDへの表を使う（C.charmander → 'MC-083'）
@@ -9,7 +10,7 @@ export { LEGACY_IDS as C } from '../public/js/cards/catalog.js';
 export const PLAYERS = [{ name: 'A' }, { name: 'B' }];
 
 export function deckOptions(seed = 1, deckIds = ['charizard', 'miraidon']) {
-    return { seed, decks: deckIds.map(id => expandDeck(DECKS.find(deck => deck.id === id))) };
+    return { seed, decks: deckIds.map(id => expandDeck([...TEST_DECKS, ...DECKS].find(deck => deck.id === id))) };
 }
 
 // 準備（先攻の決定・バトル場・ベンチ）を CPU に任せ、最初の番が始まったところで返す

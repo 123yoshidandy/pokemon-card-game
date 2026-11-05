@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { addCard, removeCard, canAdd, totalCount, deckProblem, mainEnergyType, sortedEntries, CARD_POOL } from '../public/js/deck-builder.js';
 import { createDeckStore } from '../public/js/deck-store.js';
 import { DECKS } from '../public/js/decks.js';
+import { TEST_DECKS } from './test-decks.js';
 import { getCard, CARDS, resolveCardId } from '../public/js/card-data.js';
 import { C } from './helpers.js';
 
@@ -43,7 +44,7 @@ describe('デッキの編集', () => {
     });
 
     it('一番多い基本エネルギーのタイプと、並べる順', () => {
-        expect(mainEnergyType(DECKS[0])).toBe('fire');
+        expect(mainEnergyType(TEST_DECKS[0])).toBe('fire');
         expect(mainEnergyType(empty())).toBeNull();
         const entries = sortedEntries({ cards: { 'basic-fire-energy': 2, [C.potion]: 1, [C.charmander]: 3 } });
         expect(entries.map(([id]) => id)).toEqual([C.charmander, C.potion, 'basic-fire-energy']);
@@ -67,18 +68,18 @@ describe('デッキの保存', () => {
 
     it('構築済みデッキをコピーできる。コピーを変えても元は変わらない', () => {
         const store = createDeckStore(memoryStorage());
-        const copy = store.create(DECKS[0]);
-        expect(copy.name).toBe(`${DECKS[0].name}のコピー`);
+        const copy = store.create(TEST_DECKS[0]);
+        expect(copy.name).toBe(`${TEST_DECKS[0].name}のコピー`);
         store.save(removeCard(copy, C.charmander));
-        expect(DECKS[0].cards[C.charmander]).toBe(4);
+        expect(TEST_DECKS[0].cards[C.charmander]).toBe(4);
         expect(store.find(copy.id).cards[C.charmander]).toBe(3);
         expect(store.all().filter(deck => deck.builtIn)).toHaveLength(DECKS.length);
     });
 
     it('同じデッキを2回コピーすると、名前に番号がつく（16文字に収まる）', () => {
         const store = createDeckStore(memoryStorage());
-        store.create(DECKS[0]);
-        const second = store.create(DECKS[0]);
+        store.create(TEST_DECKS[0]);
+        const second = store.create(TEST_DECKS[0]);
         expect(second.name.endsWith('のコピー2')).toBe(true);
         expect(second.name.length).toBeLessThanOrEqual(16);
         const long = { name: 'とてもながいなまえのデッキです', cards: {} };

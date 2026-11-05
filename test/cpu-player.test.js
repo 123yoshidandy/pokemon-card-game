@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import Game from '../public/js/game.js';
 import { runCpuStep } from '../public/js/cpu-player.js';
 import { createGameView } from '../public/js/game-view.js';
-import { DECKS } from '../public/js/decks.js';
+import { TEST_DECKS } from './test-decks.js';
 import { CARDS } from '../public/js/card-data.js';
 import { deckOptions, PLAYERS } from './helpers.js';
 
@@ -40,7 +40,7 @@ describe('CPU 同士の試合', () => {
             });
         }
         // デッキに入っているトレーナーズが、すべて一度は使われている
-        const trainers = new Set(DECKS.flatMap(deck => Object.keys(deck.cards))
+        const trainers = new Set(TEST_DECKS.flatMap(deck => Object.keys(deck.cards))
             .map(id => CARDS[id])
             .filter(card => card.kind === 'trainer')
             .map(card => card.name));

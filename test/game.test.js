@@ -4,6 +4,7 @@ import { CARDS } from '../public/js/card-data.js';
 import { validateDeck } from '../public/js/deck-rules.js';
 import { isStandardLegal, STANDARD_MARKS } from '../public/js/regulation.js';
 import { DECKS, expandDeck } from '../public/js/decks.js';
+import { TEST_DECKS } from './test-decks.js';
 import { startedGame, arrange, snapshot, answer, makeCard, deckOptions, PLAYERS, C } from './helpers.js';
 
 // 3ターン目（どちらも最初の番を終えた後）の、手番のプレイヤーの番にする
@@ -84,7 +85,7 @@ describe('レギュレーション', () => {
 
     it('スタンダードで使えないカードの入ったデッキは断る。構築済みデッキはどちらも使える', () => {
         CARDS['old-card'] = { ...CARDS[C.potion], id: 'old-card', name: '古いカード', regulation: 'G' };
-        const cards = [...expandDeck(DECKS[0]).slice(0, 59), 'old-card'];
+        const cards = [...expandDeck(TEST_DECKS[0]).slice(0, 59), 'old-card'];
         expect(validateDeck(cards)).toContain('スタンダードで使えない');
         delete CARDS['old-card'];
         DECKS.forEach(deck => expect(validateDeck(expandDeck(deck))).toBeNull());

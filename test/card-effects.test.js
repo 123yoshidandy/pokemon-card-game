@@ -3,7 +3,8 @@ import { CARDS, resolveCardId } from '../public/js/card-data.js';
 import { compileAttackText } from '../public/js/cards/attack-effects.js';
 import { validateDeck } from '../public/js/deck-rules.js';
 import { CARD_POOL } from '../public/js/deck-builder.js';
-import { DECKS, expandDeck } from '../public/js/decks.js';
+import { expandDeck } from '../public/js/decks.js';
+import { TEST_DECKS } from './test-decks.js';
 import { startedGame, arrange, answer, C } from './helpers.js';
 
 const LIGHTNING = 'basic-lightning-energy';
@@ -51,7 +52,7 @@ describe('カードのデータ', () => {
         // 今はすべてのカードが動くので、動かないカードをテストのために作る
         CARDS['test-unsupported'] = { ...CARDS[C.pikachu], id: 'test-unsupported', name: '動かないカード', supported: false };
         testIds.push('test-unsupported');
-        const cards = [...expandDeck(DECKS[0]).slice(0, 59), 'test-unsupported'];
+        const cards = [...expandDeck(TEST_DECKS[0]).slice(0, 59), 'test-unsupported'];
         expect(validateDeck(cards)).toContain('まだ使えない');
     });
 
@@ -59,7 +60,7 @@ describe('カードのデータ', () => {
         CARDS['test-ace-a'] = { ...CARDS[C.potion], id: 'test-ace-a', name: 'エースA', aceSpec: true };
         CARDS['test-ace-b'] = { ...CARDS[C.potion], id: 'test-ace-b', name: 'エースB', aceSpec: true };
         testIds.push('test-ace-a', 'test-ace-b');
-        const base = expandDeck(DECKS[0]).slice(0, 58);
+        const base = expandDeck(TEST_DECKS[0]).slice(0, 58);
         expect(validateDeck([...base, 'test-ace-a', C.potion])).toBeNull();
         expect(validateDeck([...base, 'test-ace-a', 'test-ace-b'])).toContain('ACE SPEC');
     });

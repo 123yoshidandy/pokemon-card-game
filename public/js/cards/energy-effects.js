@@ -104,7 +104,7 @@ export const ENERGY_EFFECTS = {
         provides: () => ['psychic'],
         // 手札から [P] ポケモンにつけたとき、山札から [P] タイプのたねポケモンを2枚まで選び、ベンチに出す
         onAttach: (game, player, pokemon) => {
-            if (!game.typesOf(pokemon).includes('psychic') || player.bench.length >= game.benchSize) return;
+            if (!game.typesOf(pokemon).includes('psychic') || player.bench.length >= game.benchLimit(player)) return;
             game.benchFromDeck(player, card => card.kind === 'pokemon' && card.stage === 0 && card.type === 'psychic', 2, 'bench-basic');
         }
     },

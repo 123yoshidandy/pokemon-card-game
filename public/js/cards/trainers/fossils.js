@@ -17,7 +17,7 @@ function fossil({ name = null, text = '', hooks = {} } = {}) {
     const rule = '自分の番に、場に出ているこのカードをトラッシュできる（特性として使う）。このカードは、特殊状態にならず、にげられない。';
     return {
         playAsPokemon: true,
-        canPlay: (game, player) => player.bench.length < game.benchSize,
+        canPlay: (game, player) => player.bench.length < game.benchLimit(player),
         // その化石から進化するポケモンが手札にあるか、ベンチがいないなら出す
         cpuWants: (game, player, card) => player.bench.length === 0 || player.hand.some(inst => game.cardOf(inst).evolvesFrom && game.cardOf(inst).evolvesFrom.startsWith('古びた')),
         asPokemon: {
@@ -77,12 +77,12 @@ export const TRAINER_EFFECTS = {
 
     '化石採掘場': {
         // おたがいのプレイヤーは、自分の番ごとに1回、山札から名前に「古びた」とつくグッズを2枚まで選び、ベンチに出してよい
-        canUse: (game, player) => player.bench.length < game.benchSize
+        canUse: (game, player) => player.bench.length < game.benchLimit(player)
             && player.deck.some(inst => { const card = game.cardOf(inst); return card.name.startsWith('古びた') && card.playAsPokemon; }),
         use: (game, player) => game.searchDeck({
             player,
             filter: card => card.kind === 'trainer' && card.name.startsWith('古びた') && Boolean(card.playAsPokemon),
-            max: Math.min(2, game.benchSize - player.bench.length),
+            max: Math.min(2, game.benchLimit(player) - player.bench.length),
             title: 'ベンチに出す「古びた」グッズを2枚まで選ぶ',
             purpose: 'bench-basic',
             onSelected: found => found.forEach(inst => game.playAsPokemon(player, inst))

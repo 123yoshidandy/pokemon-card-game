@@ -114,7 +114,7 @@ export const TRAINER_EFFECTS = {
         }
     },
     'なかよしポフィン': {
-        canPlay: (game, player) => player.bench.length < game.benchSize,
+        canPlay: (game, player) => player.bench.length < game.benchLimit(player),
         play: (game, player) => game.benchFromDeck(player, card => isBasicPokemon(card) && card.hp <= 70, 2, 'bench-basic')
     },
     'モンスターボール': {
@@ -243,7 +243,7 @@ export const TRAINER_EFFECTS = {
 
     // ===== スタジアム =====
     'ミアレシティ': {
-        canUse: (game, player) => player.bench.length < game.benchSize && player.deck.length > 0,
+        canUse: (game, player) => player.bench.length < game.benchLimit(player) && player.deck.length > 0,
         use: (game, player) => {
             game.benchFromDeck(player, isBasicPokemon, 1, 'bench-basic');
             game.endTurnByEffect(player);

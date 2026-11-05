@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { startedGame, arrange, answer, C } from './helpers.js';
+import { startedGame, arrange, answer, makeCard, C } from './helpers.js';
 import { CARDS } from '../public/js/card-data.js';
 
 const idOf = name => Object.values(CARDS).find(card => card.name === name).id;
@@ -47,5 +47,21 @@ describe('ルールの不具合の直し', () => {
         expect(opp.active).toBeNull();
         expect(game.pendingPrompt?.purpose).toBe('promote');
         expect(me.prizes.length).toBe(prizes - 1);
+    });
+
+    it('相手のベンチに出す効果は、相手のベンチの上限で数える（ゼロの大空洞で自分だけ8匹のときの、おはやし笛）', () => {
+        const game = midGame();
+        const me = game.players[game.current];
+        const opp = game.opponentOf(me);
+        const tera = Object.values(CARDS).find(card => card.kind === 'pokemon' && card.tera && card.stage === 0);
+        const basic = Object.values(CARDS).find(card => card.kind === 'pokemon' && card.stage === 0 && !card.ability && !card.rule && card.hp >= 60).id;
+        arrange(game, me.id, { active: tera.id, bench: [], hand: [idOf('おはやし笛')] });
+        arrange(game, opp.id, { active: basic, bench: [basic, basic, basic, basic], deck: [basic, basic, basic, basic, basic, basic] });
+        game.stadium = { inst: makeCard(game, idOf('ゼロの大空洞')), owner: me.id };
+        expect([game.benchLimit(me), game.benchLimit(opp)]).toEqual([8, 5]);
+        game.applyCommand(me.id, { type: 'playTrainer', uid: me.hand[0].uid });
+        expect(game.pendingPrompt.max).toBe(1);
+        answer(game, game.pendingPrompt.cards.map(inst => inst.uid).slice(0, game.pendingPrompt.max));
+        expect(opp.bench.length).toBe(5);
     });
 });

@@ -534,7 +534,7 @@ export const ABILITY_EFFECTS = {
     },
     'ふえるまゆ': {
         type: 'onEvolve',
-        canUse: (game, player) => player.bench.length < game.benchSize,
+        canUse: (game, player) => player.bench.length < game.benchLimit(player),
         use: (game, player) => game.benchFromDeck(player, card => card.kind === 'pokemon' && ['カラサリス', 'マユルド'].includes(card.name), 1, 'search-pokemon')
     },
     'フォトンコード': {
@@ -777,7 +777,7 @@ export const ABILITY_EFFECTS = {
     },
     'やさしいヒレ': {
         type: 'activated',
-        canUse: (game, player, pokemon) => player.active === pokemon && player.bench.length < game.benchSize
+        canUse: (game, player, pokemon) => player.active === pokemon && player.bench.length < game.benchLimit(player)
             && hasIn(game, player.discard, card => card.kind === 'pokemon' && card.stage === 0 && card.hp <= 70),
         use: (game, player) => {
             const candidates = cardsIn(game, player.discard, card => card.kind === 'pokemon' && card.stage === 0 && card.hp <= 70);

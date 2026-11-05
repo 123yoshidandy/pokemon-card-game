@@ -543,7 +543,7 @@ export const ATTACK_OVERRIDES = {
             const top = player.deck.slice(0, 9);
             game.log(`${player.name}は山札を上から${top.length}枚見た`);
             game.log(`山札の上：${names(game, top)}`, { to: player.id });
-            const room = game.benchSize - player.bench.length;
+            const room = game.benchLimit(player) - player.bench.length;
             const candidates = top.filter(inst => isBasicPokemon(game.cardOf(inst)));
             const finish = selected => {
                 selected.forEach(inst => {
@@ -805,7 +805,7 @@ export const ATTACK_OVERRIDES = {
         }
     },
     'ロトム/ロトコール': {
-        after: ctx => ctx.game.benchFromDeck(ctx.player, card => isBasicPokemon(card) && card.name.includes('ロトム'), ctx.game.benchSize, 'bench-basic')
+        after: ctx => ctx.game.benchFromDeck(ctx.player, card => isBasicPokemon(card) && card.name.includes('ロトム'), ctx.game.benchLimit(ctx.player), 'bench-basic')
     },
     'セキタンザン/タールキャノン': {
         before: ctx => {
@@ -919,7 +919,7 @@ export const ATTACK_OVERRIDES = {
     'ホウオウ/さいきのほのお': {
         after: ctx => {
             const { game, player } = ctx;
-            const room = game.benchSize - player.bench.length;
+            const room = game.benchLimit(player) - player.bench.length;
             const candidates = player.discard.filter(inst => isBasicPokemon(game.cardOf(inst)));
             const n = Math.min(3, room, candidates.length);
             if (n <= 0) return;
@@ -1204,7 +1204,7 @@ export const ATTACK_OVERRIDES = {
             if (top.length === 0) return;
             game.log(`${opponent.name}の山札を上から${top.length}枚オモテにした（${names(game, top)}）`);
             const candidates = top.filter(inst => isBasicPokemon(game.cardOf(inst)));
-            const room = game.benchSize - opponent.bench.length;
+            const room = game.benchLimit(opponent) - opponent.bench.length;
             const finish = selected => {
                 selected.forEach(inst => {
                     game.removeCard(opponent.deck, inst);
@@ -1446,7 +1446,7 @@ export const ATTACK_OVERRIDES = {
         }
     },
     'リーリエのキュワワー/はなまねき': {
-        after: ctx => ctx.game.benchFromDeck(ctx.player, card => isBasicPokemon(card) && card.name.startsWith('リーリエの'), ctx.game.benchSize, 'bench-basic')
+        after: ctx => ctx.game.benchFromDeck(ctx.player, card => isBasicPokemon(card) && card.name.startsWith('リーリエの'), ctx.game.benchLimit(ctx.player), 'bench-basic')
     },
     'ハッサムex/クロスブレイカー': discardOwnEnergyTimes({ per: 120, max: 2, filter: (game, pokemon, inst) => providesType(game, pokemon, inst, 'metal') }),
     'ロケット団のニャース/ねこばば': { after: ctx => returnRandomFromHand(ctx.game, ctx.opponent, 1) },

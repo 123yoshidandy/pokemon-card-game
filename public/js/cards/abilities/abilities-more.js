@@ -174,14 +174,14 @@ export const ABILITY_EFFECTS = {
     'エキサイトダイブ': {
         // 自分の番に、このカードが手札にあり、自分の場に [C] タイプの「メガシンカex」がいるなら、1回使える。このカードをベンチに出す
         type: 'hand',
-        canUse: (game, player) => player.bench.length < game.benchSize
+        canUse: (game, player) => player.bench.length < game.benchLimit(player)
             && game.inPlay(player).some(pokemon => game.topCard(pokemon).rule === 'mega' && game.typesOf(pokemon).includes('colorless')),
         use: (game, player, inst) => benchFromHand(game, player, inst)
     },
     'きんきゅうかいてん': {
         // 自分の番に、このカードが手札にあり、相手の場に2進化ポケモンがいるなら、1回使える。このカードをベンチに出す
         type: 'hand',
-        canUse: (game, player) => player.bench.length < game.benchSize
+        canUse: (game, player) => player.bench.length < game.benchLimit(player)
             && game.inPlay(game.opponentOf(player)).some(pokemon => game.topCard(pokemon).stage === 2),
         use: (game, player, inst) => benchFromHand(game, player, inst)
     },

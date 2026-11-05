@@ -580,7 +580,7 @@ export const TRAINER_EFFECTS = {
     },
     'ギーマの一手': {
         // 山札を上から7枚見て、[D] ポケモンを1枚選び、ベンチに出す。残りはウラにして切り、山札の下にもどす（最初の自分の番には使えない）
-        canPlay: (game, player) => player.turnsTaken > 1 && player.deck.length > 0 && player.bench.length < game.benchSize,
+        canPlay: (game, player) => player.turnsTaken > 1 && player.deck.length > 0 && player.bench.length < game.benchLimit(player),
         play: (game, player) => {
             const looked = player.deck.slice(0, 7);
             const candidates = looked.filter(inst => { const card = game.cardOf(inst); return card.kind === 'pokemon' && card.stage === 0 && card.type === 'darkness'; });

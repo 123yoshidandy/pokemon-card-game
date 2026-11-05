@@ -249,7 +249,7 @@ function lookTopAndTake(game, player, count, filter, max, title) {
 // 相手の手札のたねポケモンを、相手のベンチに出す
 function benchFromOpponentHand(game, player, filter, { min, max, title, purpose }) {
     const opponent = game.opponentOf(player);
-    const room = game.benchSize - opponent.bench.length;
+    const room = game.benchLimit(opponent) - opponent.bench.length;
     const candidates = cardsIn(game, opponent.hand, card => isBasicPokemon(card) && filter(card));
     const count = Math.min(max, room, candidates.length);
     if (count <= 0) return;
@@ -684,7 +684,7 @@ export const ABILITY_EFFECTS = {
     },
     'からぬけ': {
         type: 'onEvolve',
-        canUse: (game, player) => player.deck.length > 0 && player.bench.length < game.benchSize,
+        canUse: (game, player) => player.deck.length > 0 && player.bench.length < game.benchLimit(player),
         use: (game, player) => game.benchFromDeck(player, card => isBasicPokemon(card) && card.name === 'ヌケニン', 1, 'bench-basic')
     },
     'きんきゅうしんか': {
@@ -972,7 +972,7 @@ export const ABILITY_EFFECTS = {
     },
     'えものをねらう': {
         type: 'activated',
-        canUse: (game, player) => game.opponentOf(player).hand.length > 0 && game.opponentOf(player).bench.length < game.benchSize,
+        canUse: (game, player) => game.opponentOf(player).hand.length > 0 && game.opponentOf(player).bench.length < game.benchLimit(game.opponentOf(player)),
         use: (game, player) => {
             const opponent = game.opponentOf(player);
             game.revealHand(opponent, player);
@@ -986,13 +986,13 @@ export const ABILITY_EFFECTS = {
     },
     'おさそいウインク': {
         type: 'onEvolve',
-        canUse: (game, player) => game.opponentOf(player).hand.length > 0 && game.opponentOf(player).bench.length < game.benchSize,
+        canUse: (game, player) => game.opponentOf(player).hand.length > 0 && game.opponentOf(player).bench.length < game.benchLimit(game.opponentOf(player)),
         use: (game, player) => {
             const opponent = game.opponentOf(player);
             game.revealHand(opponent, player);
             benchFromOpponentHand(game, player, () => true, {
                 min: 0,
-                max: game.benchSize,
+                max: game.benchLimit(opponent),
                 title: '相手のベンチに出すたねポケモンを選ぶ（好きなだけ）',
                 purpose: 'inviting-wink'
             });

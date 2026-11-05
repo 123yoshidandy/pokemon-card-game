@@ -601,12 +601,12 @@ export const TRAINER_EFFECTS = {
 
     // ===== ベンチに出す =====
     'プレシャスキャリー': {
-        canPlay: (game, player) => player.bench.length < game.benchSize && player.deck.length > 0,
-        play: (game, player) => game.benchFromDeck(player, isBasicPokemon, game.benchSize, 'bench-basic'),
+        canPlay: (game, player) => player.bench.length < game.benchLimit(player) && player.deck.length > 0,
+        play: (game, player) => game.benchFromDeck(player, isBasicPokemon, game.benchLimit(player), 'bench-basic'),
         cpuWants: (game, player) => player.bench.length < 3 && hasIn(game, player.deck, isBasicPokemon)
     },
     'ホップのバッグ': {
-        canPlay: (game, player) => player.bench.length < game.benchSize && player.deck.length > 0,
+        canPlay: (game, player) => player.bench.length < game.benchLimit(player) && player.deck.length > 0,
         play: (game, player) => game.benchFromDeck(player, card => isBasicPokemon(card) && card.name.startsWith('ホップの'), 2, 'bench-basic'),
         cpuWants: (game, player) => player.bench.length < 4 && hasIn(game, player.deck, card => isBasicPokemon(card) && card.name.startsWith('ホップの'))
     },
@@ -617,7 +617,7 @@ export const TRAINER_EFFECTS = {
             const top = opponent.deck.slice(0, 5);
             game.log(`${opponent.name}の山札の上から${top.length}枚：${top.map(inst => game.cardName(inst)).join('・')}`);
             const candidates = cardsIn(game, top, isBasicPokemon);
-            const max = Math.min(candidates.length, game.benchSize - opponent.bench.length);
+            const max = Math.min(candidates.length, game.benchLimit(opponent) - opponent.bench.length);
             if (max <= 0) {
                 game.shuffleDeck(opponent);
                 return;

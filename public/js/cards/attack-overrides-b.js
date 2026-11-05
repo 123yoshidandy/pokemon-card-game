@@ -180,7 +180,7 @@ function benchFromTop(game, player, count, filter = () => true) {
     const top = player.deck.slice(0, count);
     game.log(`${player.name}は山札を上から${top.length}枚見た`);
     const candidates = top.filter(inst => { const card = game.cardOf(inst); return card.kind === 'pokemon' && card.stage === 0 && filter(card); });
-    const max = Math.min(game.benchSize - player.bench.length, candidates.length);
+    const max = Math.min(game.benchLimit(player) - player.bench.length, candidates.length);
     const finish = selected => {
         selected.forEach(inst => {
             game.removeCard(player.deck, inst);
@@ -199,7 +199,7 @@ function benchFromTop(game, player, count, filter = () => true) {
 // トラッシュのたねポケモンを max 枚までベンチに出す
 function benchFromDiscard(game, player, filter, max) {
     const candidates = player.discard.filter(inst => { const card = game.cardOf(inst); return card.kind === 'pokemon' && card.stage === 0 && filter(card); });
-    const n = Math.min(max, candidates.length, game.benchSize - player.bench.length);
+    const n = Math.min(max, candidates.length, game.benchLimit(player) - player.bench.length);
     if (n <= 0) return;
     game.promptCards({
         player,
@@ -964,7 +964,7 @@ export const ATTACK_OVERRIDES = {
             const { game, player, opponent } = ctx;
             game.revealHand(opponent, player);
             const basics = opponent.hand.filter(inst => { const card = game.cardOf(inst); return card.kind === 'pokemon' && card.stage === 0; });
-            const n = Math.min(2, basics.length, game.benchSize - opponent.bench.length);
+            const n = Math.min(2, basics.length, game.benchLimit(opponent) - opponent.bench.length);
             if (n <= 0) return;
             game.promptCards({
                 player,
@@ -1021,7 +1021,7 @@ export const ATTACK_OVERRIDES = {
     'ルージュラ/おさそいキッス': {
         after: ctx => {
             const { game, player, attacker } = ctx;
-            if (player.bench.length >= game.benchSize) return;
+            if (player.bench.length >= game.benchLimit(player)) return;
             game.searchDeck({
                 player,
                 filter: card => card.kind === 'pokemon' && card.stage === 0,

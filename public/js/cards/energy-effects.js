@@ -117,7 +117,7 @@ export const ENERGY_EFFECTS = {
     },
     'ロケット団エネルギー': {
         // 「ロケット団のポケモン」にしかつけられない。[P][D] のどちらかのタイプのエネルギー2個ぶん
-        // （手札からつけるときだけ確かめる。ほかの効果でロケット団のポケモン以外につけたときのトラッシュは、まだない）
+        // ほかの効果でロケット団のポケモン以外についたときは、game.enforceStateChecks がトラッシュする
         canAttachTo: (game, pokemon) => game.topCard(pokemon).name.startsWith('ロケット団の'),
         provides: () => ['psychic|darkness', 'psychic|darkness']
     },

@@ -86,4 +86,27 @@ describe('ルールの不具合の直し', () => {
         expect(me.discard).toContain(inst);
         expect(game.trainerInPlay).toBeNull();
     });
+
+    it('ロケット団エネルギーが、ロケット団のポケモン以外についていたら、トラッシュする', () => {
+        const game = midGame();
+        const me = game.players[game.current];
+        const rocket = idOf('ロケット団エネルギー');
+        arrange(game, me.id, { active: { id: C.pikachu, energies: [rocket, 'basic-lightning-energy'] }, bench: [C.pikachu], hand: [] });
+        expect(game.applyCommand(me.id, { type: 'endTurn' })).toBe(true);
+        const names = me.active.energies.map(inst => CARDS[inst.id].name);
+        expect(names).not.toContain('ロケット団エネルギー');
+        expect(me.discard.map(inst => inst.id)).toContain(rocket);
+    });
+
+    it('逆境ほけんは、効果で変わった弱点で判定する', () => {
+        const game = midGame();
+        const me = game.players[game.current];
+        const opp = game.opponentOf(me);
+        arrange(game, opp.id, { active: { id: C.pikachu, tool: idOf('逆境ほけん') }, bench: [C.pikachu], hand: [] });
+        arrange(game, me.id, { active: { id: C.pikachu }, bench: [], hand: [] });
+        game.weaknessOf = pokemon => (pokemon === opp.active ? game.topCard(me.active).type : null);
+        const hand = opp.hand.length;
+        game.hookAll('onDamaged', { damage: 10 }, opp.active);
+        expect(opp.hand.length).toBe(hand + 3);
+    });
 });

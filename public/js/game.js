@@ -457,7 +457,13 @@ export default class Game {
 
     needsStateCheck() {
         return this.players.some(player => player.bench.length > this.benchLimit(player)
-            || this.inPlay(player).some(pokemon => pokemon.damage >= this.maxHp(pokemon)));
+            || this.inPlay(player).some(pokemon => pokemon.damage >= this.maxHp(pokemon)
+                || pokemon.energies.some(inst => this.misplacedEnergy(pokemon, inst))));
+    }
+
+    misplacedEnergy(pokemon, inst) {
+        const card = this.cardOf(inst);
+        return Boolean(card.canAttachTo) && !card.canAttachTo(this, pokemon);
     }
 
     reject(message) {
@@ -1510,6 +1516,12 @@ export default class Game {
 
     // 場の決まりを確かめなおす（ベンチが多すぎる・2枚目のどうぐをつけられなくなった）。きぜつの確認のたびに呼ぶ
     enforceStateChecks() {
+        // つけられないポケモンについているエネルギー（ロケット団のポケモン以外のロケット団エネルギーなど）は、トラッシュする
+        this.players.forEach(player => this.inPlay(player).forEach(pokemon => {
+            for (const inst of pokemon.energies.filter(inst => this.misplacedEnergy(pokemon, inst))) {
+                if (this.removeEnergy(pokemon, inst, 'discard')) this.log(`${this.topCard(pokemon).name}の${this.cardName(inst)}をトラッシュした`);
+            }
+        }));
         this.players.forEach(player => this.inPlay(player).forEach(pokemon => {
             if (pokemon.tool2 && !this.canHoldSecondTool(pokemon)) {
                 const name = this.cardName(pokemon.tool2);

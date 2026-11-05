@@ -59,8 +59,9 @@ export const TRAINER_EFFECTS = {
             onDamaged: (game, source, ctx, target) => {
                 if (!hitInActive(game, source, target)) return;
                 const opponentActive = game.opponentOf(source.player).active;
-                const weakness = game.topCard(target).weakness;
-                if (weakness && opponentActive && game.topCard(opponentActive).type === weakness) game.draw(source.player, 3);
+                // 弱点・タイプは、効果で変わったものを使う（フェアリーゾーンなど）
+                const weakness = game.weaknessOf(target);
+                if (weakness && opponentActive && game.typesOf(opponentActive).includes(weakness)) game.draw(source.player, 3);
             }
         },
         cpuWants: () => true

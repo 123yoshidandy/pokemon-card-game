@@ -7,7 +7,7 @@ import { resolveCardId } from './card-data.js';
 import { createDeckStore } from './deck-store.js';
 import { createDeckStats, statsText } from './deck-stats.js';
 import { deckProblem, mainEnergyType } from './deck-builder.js';
-import LocalGameController from './game-controller.js';
+import LocalGameController, { loadSavedCpuGame } from './game-controller.js';
 import OnlineGameController, { loadOnlineSession } from './online-controller.js';
 import NetplayClient from './netplay/netplay-client.mjs';
 import GameScreen from './ui/game-screen.js';
@@ -199,12 +199,32 @@ function renderDeckSelect() {
 function showTitle() {
     screen.stop();
     renderDeckSelect();
+    // 途中の CPU 戦があれば「続きから」を出す（「CPU と対戦」は新しく始める）
+    $('resume-cpu').hidden = !loadSavedCpuGame();
+    $('start-cpu').classList.toggle('btn-primary', $('resume-cpu').hidden);
+    $('start-cpu').classList.toggle('btn-secondary', !$('resume-cpu').hidden);
     $('title-art').innerHTML = ['SV6-120', 'M1L-092', 'SV9-061'] // ドラパルトex・メガルカリオex・Nのゾロアークex
         .map((id, index) => `<div class="fan fan-${index}">${cardFace(resolveCardId(id))}</div>`).join('');
     setScene('title');
 }
 
 // ===== CPU 対戦 =====
+
+// 保存した途中の CPU 戦を、記録から作り直して続ける（作り直せなければ、新しく始める）
+function resumeCpuGame() {
+    const saved = loadSavedCpuGame();
+    screen.stop();
+    let controller;
+    try {
+        controller = new LocalGameController(saved, { onUpdate: () => screen.render(), onError: message => screen.showError(message) });
+    } catch (error) {
+        console.error(error);
+        toast('続きを読み込めませんでした');
+        return startCpuGame();
+    }
+    setScene('game');
+    screen.start(controller);
+}
 
 function startCpuGame() {
     // CPU は、選んだデッキ。おまかせなら、自分のデッキとタイプの違う構築済みデッキから、ランダムに選ぶ
@@ -388,6 +408,10 @@ document.addEventListener('click', event => {
     if (event.target.closest('[data-open-cpu-deck-picker]')) openCpuDeckPicker();
     const removeCpu = event.target.closest('[data-remove-cpu]');
     if (removeCpu) online?.removeCpu(Number(removeCpu.dataset.removeCpu));
+});
+$('resume-cpu').addEventListener('click', () => {
+    tryingDeckId = null;
+    resumeCpuGame();
 });
 $('start-cpu').addEventListener('click', () => {
     tryingDeckId = null;

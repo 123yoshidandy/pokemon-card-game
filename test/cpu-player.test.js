@@ -3,6 +3,7 @@ import Game from '../public/js/game.js';
 import { runCpuStep } from '../public/js/cpu-player.js';
 import { createGameView } from '../public/js/game-view.js';
 import { TEST_DECKS } from './test-decks.js';
+import { DECKS } from '../public/js/decks.js';
 import { CARDS } from '../public/js/card-data.js';
 import { deckOptions, PLAYERS } from './helpers.js';
 
@@ -45,6 +46,13 @@ describe('CPU 同士の試合', () => {
             .filter(card => card.kind === 'trainer')
             .map(card => card.name));
         expect([...trainers].filter(name => !played.has(name))).toEqual([]);
+    });
+
+    it('構築済みデッキのどの組み合わせでも、止まらずに決着する', () => {
+        DECKS.forEach((a, i) => DECKS.forEach((b, j) => {
+            const { game } = playOut(i * DECKS.length + j + 1, [a.id, b.id]);
+            expect(game.phase).toBe('end');
+        }));
     });
 
     it('相手の手札と山札・サイドの中身は、どのビューにも出ない', () => {

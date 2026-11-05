@@ -142,7 +142,7 @@ function renderDeckSelect() {
 function showTitle() {
     screen.stop();
     renderDeckSelect();
-    $('title-art').innerHTML = ['mega-charizard-y-ex', 'guy', 'miraidon-ex']
+    $('title-art').innerHTML = ['SV6-120', 'M1L-092', 'SV9-061'] // ドラパルトex・メガルカリオex・Nのゾロアークex
         .map((id, index) => `<div class="fan fan-${index}">${cardFace(resolveCardId(id))}</div>`).join('');
     setScene('title');
 }

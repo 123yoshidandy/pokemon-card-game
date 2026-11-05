@@ -135,7 +135,7 @@ export function deckFromText(text) {
     for (const raw of String(text).split(/\r?\n/)) {
         const line = raw.normalize('NFKC').trim();
         if (!line) continue;
-        const match = line.match(/^(\d+)\s*[x×]?\s+(.+?)(?:\s+([A-Za-z0-9]+-[A-Za-z0-9]+))?$/);
+        const match = line.match(/^(\d+)\s*[x×]?\s+(.+?)(?:\s+([A-Za-z0-9]+(?:-[A-Za-z0-9]+)+))?$/);
         const id = match && Number(match[1]) > 0 ? findCardId(match[2], match[3]) : null;
         if (!id) {
             unknown.push(raw.trim());

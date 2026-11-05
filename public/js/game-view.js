@@ -4,7 +4,7 @@
  * 画面はビューだけを見て描く（ローカル対戦でもオンライン対戦でも同じ）
  */
 
-const LOG_LIMIT = 80;
+const LOG_LIMIT = 400; // ログの一覧で、長い試合でも序盤から読めるように
 
 export function createGameView(game, viewerId) {
     const prompt = game.pendingPrompt;

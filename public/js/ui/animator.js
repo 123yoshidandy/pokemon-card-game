@@ -105,6 +105,8 @@ export default class Animator {
     knockout(tile) {
         if (!tile) return;
         const element = this.add('fx-knockout', tile.html);
+        // きぜつしたので、残りHP は 0 で見せる（写したのはダメージが入る前の姿）
+        element.querySelectorAll('.mon-hp-num').forEach(hp => { hp.textContent = '0'; hp.classList.add('hp-low'); });
         Object.assign(element.style, { left: `${tile.rect.left}px`, top: `${tile.rect.top}px`, width: `${tile.rect.width}px`, height: `${tile.rect.height}px` });
     }
 

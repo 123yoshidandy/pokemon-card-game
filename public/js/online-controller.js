@@ -6,6 +6,7 @@
  */
 
 import NetplayClient from './netplay/netplay-client.mjs';
+import { DECKS, expandDeck } from './decks.js';
 
 const STORAGE_KEY = 'pokemon-card-game.online'; // 再接続に使う部屋番号とトークン
 const CPU_STEP_DELAY_MS = 650;                   // CPU の手は CPU 対戦と同じ間隔で順に見せる
@@ -57,6 +58,12 @@ export default class OnlineGameController {
         this.net.on('error', ({ message }) => {
             this.clearAwaiting();
             listeners.onError?.(message);
+            // デッキを断られたら、構築済みデッキで送り直す（同じデッキで断られ続けないように）
+            if (this.view?.phase === 'deck' && !this.view.decksSubmitted?.[this.view.viewerId]) {
+                this.deckSentFor = null;
+                this.deckRejected = (this.deckRejected ?? 0) + 1;
+                this.sendDeckIfNeeded();
+            }
             listeners.onUpdate?.();
         });
         this.net.on('connection', (connected) => listeners.onConnectionChange?.(connected));
@@ -121,7 +128,12 @@ export default class OnlineGameController {
         const view = this.view;
         const matchId = this.net.lobby?.matchId;
         if (view?.phase !== 'deck' || view.decksSubmitted[view.viewerId] || this.deckSentFor === matchId) return;
-        this.deckSentFor = matchId;
-        this.send({ type: 'deck', cards: this.getDeck() });
+        if (this.deckMatch !== matchId) {
+            this.deckMatch = matchId;
+            this.deckRejected = 0;
+        }
+        const cards = this.deckRejected >= 1 ? expandDeck(DECKS[0]) : this.getDeck();
+        // 送れたときだけ「送った」と覚える（接続が切れていたら、つながり直したときに送る）
+        if (this.send({ type: 'deck', cards })) this.deckSentFor = matchId;
     }
 }

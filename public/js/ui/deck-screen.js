@@ -153,7 +153,13 @@ export default class DeckScreens {
         });
         bindPress($('pool'), '[data-card]', {
             onTap: element => this.change(addCard(this.deck, element.dataset.card)),
-            onLongPress: element => showDetail($('detail'), { cardId: element.dataset.card })
+            // 長押しの説明から、そのままデッキに入れられる
+            onLongPress: element => showDetail($('detail'), {
+                cardId: element.dataset.card,
+                actions: { play: canAdd(this.deck, element.dataset.card) },
+                playLabel: 'デッキに入れる',
+                onPlay: () => this.change(addCard(this.deck, element.dataset.card))
+            })
         });
         bindPress($('deck-cards'), '[data-row]', {
             onTap: element => showDetail($('detail'), { cardId: element.dataset.row }),

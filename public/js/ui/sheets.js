@@ -85,12 +85,12 @@ export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
 
 // ===== カードの説明 =====
 // actions：{ attacks: [使えるか...], retreat, ability, play } と、それぞれの処理 onAttack(index)・onRetreat()・onAbility()・onPlay()
-export function showDetail(dialog, { cardId, pokemon = null, actions = {}, onAttack, onRetreat, onAbility, onPlay }) {
+export function showDetail(dialog, { cardId, pokemon = null, actions = {}, playLabel = '使う', onAttack, onRetreat, onAbility, onPlay }) {
     dialog.dataset.closable = 'true';
     dialog.innerHTML = `<div class="sheet-body detail">${cardDetail(cardId, pokemon)}</div>
         <div class="sheet-actions">
             ${actions.retreat ? '<button type="button" class="btn btn-secondary" data-retreat>にげる</button>' : ''}
-            ${actions.play ? '<button type="button" class="btn btn-primary" data-play>使う</button>' : ''}
+            ${actions.play ? `<button type="button" class="btn btn-primary" data-play>${playLabel}</button>` : ''}
             <button type="button" class="btn btn-secondary" data-close>閉じる</button>
         </div>`;
     // ワザと特性のボタンは、それぞれの説明の中に置く

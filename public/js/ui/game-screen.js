@@ -32,6 +32,7 @@ export default class GameScreen {
         this.promptPeeking = false;
         this.shownPromptId = null;
         this.resultShown = false;
+        this.resultPeeking = false;
         this.lastDamages = null;
         this.closeDialogs();
         this.render();
@@ -86,7 +87,16 @@ export default class GameScreen {
         });
         $('end-turn').addEventListener('click', () => this.confirmEndTurn());
         $('log').addEventListener('click', () => this.view && showLog($('pile'), this.view.log));
+        // 中央のボタン：選択にもどる・（つけ先などを選ぶのを）やめる・結果を見る
         $('prompt-done').addEventListener('click', () => {
+            const action = $('prompt-done').dataset.action;
+            if (action === 'result') {
+                this.resultPeeking = false;
+                $('result').showModal();
+                this.render();
+                return;
+            }
+            if (action === 'cancel') this.mode = null;
             this.promptPeeking = false;
             this.shownPromptId = null;
             this.render();
@@ -249,8 +259,12 @@ export default class GameScreen {
 
         // 選択のダイアログ（場のポケモンを選ぶときは盤面を光らせ、ダイアログは出さない）
         const promptDone = $('prompt-done');
-        promptDone.hidden = !(prompt && prompt.type !== 'pokemon' && this.promptPeeking);
-        promptDone.textContent = '選択にもどる';
+        const midAction = prompt && prompt.type !== 'pokemon' && this.promptPeeking ? 'prompt'
+            : this.mode ? 'cancel'
+            : view.phase === 'end' && this.resultPeeking ? 'result' : '';
+        promptDone.hidden = !midAction;
+        promptDone.dataset.action = midAction;
+        promptDone.textContent = { prompt: '選択にもどる', cancel: 'やめる', result: '結果を見る' }[midAction] ?? '';
         if (prompt && prompt.type !== 'pokemon') {
             if (!this.promptPeeking && this.shownPromptId !== prompt.id) {
                 this.shownPromptId = prompt.id;
@@ -277,6 +291,7 @@ export default class GameScreen {
 
         if (view.phase !== 'end' && this.resultShown) {
             this.resultShown = false;
+            this.resultPeeking = false;
             if ($('result').open) $('result').close();
         }
         if (view.phase === 'end' && !this.resultShown) {
@@ -287,7 +302,11 @@ export default class GameScreen {
                 title: view.winner === 'draw' ? '引き分け' : won ? '勝ち' : '負け',
                 message: this.endMessage(view, won),
                 note: this.handlers.resultNote?.(view) ?? '',
-                buttons: this.handlers.resultButtons(view)
+                buttons: this.handlers.resultButtons(view),
+                onPeek: () => {
+                    this.resultPeeking = true;
+                    this.render();
+                }
             });
         }
     }

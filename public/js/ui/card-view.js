@@ -90,9 +90,8 @@ export function pokemonTile(pokemon, { active = false } = {}) {
     const conditions = pokemon.conditions.map(condition => `<span class="cond cond-${condition}">${CONDITION_NAMES[condition]}</span>`).join('');
     const energies = pokemon.energies.map(id => energyDot(getCard(id).energyType)).join('');
     return `<div class="mon type-${card.type} ${active ? 'mon-active' : ''} ${pokemon.faceDown ? 'mon-facedown' : ''}" data-pokemon="${pokemon.id}">
-        <div class="mon-name">${escape(card.name)}</div>
+        <div class="mon-head"><span class="mon-name">${escape(card.name)}</span><span class="mon-hp-num ${hpClass}">${remaining}</span></div>
         <div class="mon-art">${emblemSvg(card.type)}${movesHtml(card)}</div>
-        <div class="mon-hp ${hpClass}"><span class="mon-hp-bar" style="width:${ratio * 100}%"></span><span class="mon-hp-text">${remaining}/${pokemon.hp}</span></div>
         <div class="mon-energies">${energies}</div>
         ${pokemon.tool ? `<span class="mon-tool" title="${escape([pokemon.tool, pokemon.tool2].filter(Boolean).map(tool => getCard(tool).name).join('・'))}"><svg viewBox="0 0 24 24" fill="currentColor">${TRAINER_ICONS.tool}</svg></span>` : ''}
         ${conditions ? `<div class="mon-conds">${conditions}</div>` : ''}

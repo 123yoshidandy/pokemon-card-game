@@ -2,6 +2,7 @@
  * ダイアログ：選択（カード・選択肢・はい／いいえ）、カードの説明、カードの一覧、決着
  */
 
+import { getCard } from '../card-data.js';
 import { cardFace, cardDetail } from './card-view.js';
 import { bindPress } from './press.js';
 
@@ -87,19 +88,19 @@ export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
 // actions：{ attacks: [使えるか...], retreat, ability, play } と、それぞれの処理 onAttack(index)・onRetreat()・onAbility()・onPlay()
 export function showDetail(dialog, { cardId, pokemon = null, actions = {}, playLabel = '使う', onAttack, onRetreat, onAbility, onPlay }) {
     dialog.dataset.closable = 'true';
+    // ワザ・特性のボタンは、説明をスクロールしなくても押せるよう、下のボタンの列にワザの名前で並べる
+    const card = getCard(cardId);
+    const attacks = card.kind === 'pokemon' ? [...card.attacks, ...(pokemon?.extraAttacks ?? [])] : [];
+    const attackButtons = attacks.map((attack, index) => (actions.attacks?.[index]
+        ? `<button type="button" class="btn btn-primary" data-use-attack="${index}">${escapeHtml(attack.name)}</button>` : '')).join('');
+    const abilityButton = actions.ability ? `<button type="button" class="btn btn-primary" data-use-ability>${escapeHtml(card.ability?.name ?? '特性')}</button>` : '';
     dialog.innerHTML = `<div class="sheet-body detail">${cardDetail(cardId, pokemon)}</div>
-        <div class="sheet-actions">
+        <div class="sheet-actions detail-actions">
+            ${abilityButton}${attackButtons}
             ${actions.retreat ? '<button type="button" class="btn btn-secondary" data-retreat>にげる</button>' : ''}
             ${actions.play ? `<button type="button" class="btn btn-primary" data-play>${playLabel}</button>` : ''}
             <button type="button" class="btn btn-secondary" data-close>閉じる</button>
         </div>`;
-    // ワザと特性のボタンは、それぞれの説明の中に置く
-    dialog.querySelectorAll('[data-attack]').forEach(block => {
-        const index = Number(block.dataset.attack);
-        if (actions.attacks?.[index]) block.insertAdjacentHTML('beforeend', `<button type="button" class="btn btn-primary btn-small" data-use-attack="${index}">ワザを使う</button>`);
-    });
-    if (actions.ability) dialog.querySelector('[data-ability]')?.insertAdjacentHTML('beforeend', '<button type="button" class="btn btn-primary btn-small" data-use-ability>特性を使う</button>');
-
     dialog.onclick = event => {
         const target = event.target.closest('button');
         if (!target) return;

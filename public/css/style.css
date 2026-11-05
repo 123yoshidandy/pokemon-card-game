@@ -871,6 +871,12 @@ button { font: inherit; color: inherit; }
 }
 .mon-back { padding: 0; border: 0; background: none; }
 .mon-back .card { height: 100%; }
+/* 名前と、右上の残りHP（最大は長押しの説明で見る） */
+.mon-head { display: flex; align-items: baseline; gap: 2cqw; min-width: 0; }
+.mon-head .mon-name { flex: 1; min-width: 0; }
+.mon-hp-num { flex: none; font-size: max(9.5px, 15cqw); font-weight: 900; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.mon-hp-num.hp-mid { color: #d97706; }
+.mon-hp-num.hp-low { color: #dc2626; }
 .mon-name {
     font-size: max(8.5px, 13cqw);
     font-weight: 800;
@@ -1286,3 +1292,7 @@ dialog button:focus { outline: none; }
     font-size: 0.85em;
     font-weight: 800;
 }
+
+/* 説明の下のボタンの列（ワザ・特性・にげる・閉じる）。多いときは折り返す */
+.detail-actions { flex-wrap: wrap; gap: 6px 8px; }
+.detail-actions .btn { padding: 8px 14px; font-size: 14px; }

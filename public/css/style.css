@@ -315,7 +315,7 @@ button { font: inherit; color: inherit; }
 
 .editor {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) clamp(170px, 30vw, 280px);
+    grid-template-columns: minmax(0, 1fr) clamp(180px, 30vw, 280px);
     min-height: 0;
 }
 .pool-wrap {
@@ -462,8 +462,8 @@ button { font: inherit; color: inherit; }
 .deck-card-row {
     display: flex;
     align-items: center;
-    gap: 4px;
-    padding: 2px 0;
+    gap: 5px;
+    padding: 3px 0;
     font-size: 13px;
 }
 /* 名前は切らずに折り返す（「アイアントex」と「アイアント」が同じに見えないように） */
@@ -472,8 +472,8 @@ button { font: inherit; color: inherit; }
 .deck-empty { padding: 8px 2px; font-size: 12px; line-height: 1.6; color: var(--ink-dim); }
 .deck-card-count { width: 22px; text-align: center; font-weight: 800; font-variant-numeric: tabular-nums; }
 .step-btn {
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     flex: none;
     border: 0;
     border-radius: 8px;

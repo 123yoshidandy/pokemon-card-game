@@ -398,7 +398,7 @@ button { font: inherit; color: inherit; }
 .pool-note { grid-column: 1 / -1; margin: 6px 2px; color: var(--muted, #aab); font-size: 13px; }
 .pool {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(clamp(60px, 13dvh, 96px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(clamp(64px, 13dvh, 96px), 1fr));
     align-content: start;
     gap: 6px;
     overflow-y: auto;
@@ -410,8 +410,10 @@ button { font: inherit; color: inherit; }
 .pool-card { position: relative; cursor: pointer; }
 .pool-card.maxed .card { opacity: 0.45; }
 /* デッキ構築の一覧では、長い名前も2行まで出す（同じ名前の別の版や、長い名前を見分けるため） */
+.pool-card .card-head { font-size: max(7.5px, 13cqw); }
+.pool-card .card-hp { font-size: max(8.5px, 15cqw); }
 .pool-card .card-name {
-    font-size: 11.5cqw;
+    font-size: max(8px, 11.5cqw);
     white-space: normal;
     display: -webkit-box;
     -webkit-line-clamp: 2;

@@ -466,10 +466,12 @@ button { font: inherit; color: inherit; }
     text-overflow: ellipsis;
     pointer-events: none;
 }
+/* 枚数の印は、絵の左上の空いている所に（ワザの行に重ならないように） */
 .pool-count {
     position: absolute;
-    bottom: 22%;
-    right: 8%;
+    top: 18%;
+    left: 8%;
+    z-index: 2;
     min-width: 22px;
     height: 22px;
     padding: 0 5px;

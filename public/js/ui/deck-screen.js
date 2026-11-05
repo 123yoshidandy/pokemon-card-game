@@ -43,6 +43,17 @@ function searchKey(text) {
     return String(text).normalize('NFKC').toLowerCase().replace(/[ぁ-ゖ]/g, c => String.fromCharCode(c.charCodeAt(0) + 0x60));
 }
 
+// 検索に使うカードの文（ワザ・特性・トレーナーズ・特殊エネルギー）。一度作ったら覚えておく
+const TEXT_CACHE = new Map();
+function cardText(id) {
+    if (!TEXT_CACHE.has(id)) {
+        const card = getCard(id);
+        const parts = [card.text, card.ability?.name, card.ability?.text, ...(card.attacks ?? []).flatMap(attack => [attack.name, attack.text])];
+        TEXT_CACHE.set(id, searchKey(parts.filter(Boolean).join(' ')));
+    }
+    return TEXT_CACHE.get(id);
+}
+
 export default class DeckScreens {
     // store：createDeckStore() / handlers：show(scene) / onDeleted(deckId) / onBack()
     constructor(store, handlers) {
@@ -220,14 +231,14 @@ export default class DeckScreens {
         row.classList.toggle('more-right', row.scrollLeft + row.clientWidth < row.scrollWidth - 1);
     }
 
-    // 今の種類・名前・しぼりこみの条件に合うカード
+    // 今の種類・しぼりこみ・検索の言葉に合うカード。言葉は名前とカードの文に当て、名前に合うものを先に並べる
     matches() {
         const filters = this.filters[this.kind];
-        return CARD_POOL.filter(id => {
-            const card = getCard(id);
-            if (card.kind !== this.kind || !matchesFilters(card, filters)) return false;
-            return !this.query || searchKey(card.name).includes(this.query);
-        });
+        const ids = CARD_POOL.filter(id => getCard(id).kind === this.kind && matchesFilters(getCard(id), filters));
+        if (!this.query) return ids;
+        const byName = ids.filter(id => searchKey(getCard(id).name).includes(this.query));
+        const named = new Set(byName);
+        return [...byName, ...ids.filter(id => !named.has(id) && cardText(id).includes(this.query))];
     }
 
     renderEditor() {

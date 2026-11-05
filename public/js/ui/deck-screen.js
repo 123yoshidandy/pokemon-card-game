@@ -5,7 +5,7 @@
 
 import { getCard } from '../card-data.js';
 import { DECK_SIZE, MAX_COPIES } from '../deck-rules.js';
-import { CARD_POOL, addCard, removeCard, canAdd, totalCount, deckProblem, sortedEntries, deckToText, deckFromText, sameNameCount } from '../deck-builder.js';
+import { CARD_POOL, addCard, removeCard, canAdd, totalCount, deckProblem, sortedEntries, deckToText, deckFromText, sameNameCount, cardOrder } from '../deck-builder.js';
 import { FILTER_GROUPS, matchesFilters, filterCount, setFilter, filterLabel } from '../card-filter.js';
 import { cardFace, energyDot } from './card-view.js';
 import { bindPress } from './press.js';
@@ -168,11 +168,24 @@ export default class DeckScreens {
             onLongPress: element => showDetail($('detail'), { cardId: element.dataset.row })
         });
         $('deck-cards').addEventListener('click', event => {
+            if (event.target.closest('[data-sample]')) return this.sampleHand();
             const minus = event.target.closest('[data-minus]');
             const plus = event.target.closest('[data-plus]');
             if (minus) this.change(removeCard(this.deck, minus.dataset.minus));
             if (plus) this.change(addCard(this.deck, plus.dataset.plus));
         });
+    }
+
+    // 試し引き：デッキを混ぜて7枚を引き、たねポケモンの枚数を添えて見せる（最初の手札の事故を確かめる）
+    sampleHand() {
+        const cards = Object.entries(this.deck.cards).flatMap(([id, count]) => Array(count).fill(id));
+        for (let i = cards.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [cards[i], cards[j]] = [cards[j], cards[i]];
+        }
+        const hand = cards.slice(0, 7).sort((a, b) => cardOrder(a) - cardOrder(b));
+        const basics = hand.filter(id => getCard(id).kind === 'pokemon' && getCard(id).stage === 0).length;
+        showPile($('pile'), `試し引き（たねポケモン ${basics}枚）`, hand.map(id => ({ id })), cardId => showDetail($('detail'), { cardId }));
     }
 
     // ===== 書き出し・取り込み =====
@@ -375,5 +388,7 @@ export default class DeckScreens {
                 <button type="button" class="step-btn" data-plus="${id}" aria-label="増やす" ${canAdd(deck, id) ? '' : 'disabled'}>＋</button>
             </li>`).join('')
             : '<li class="deck-empty">左のカードをタップすると、デッキに入ります。長押しで説明が出ます。</li>';
+        // 7枚以上あれば、最初の手札を試せる
+        if (total >= 7) $('deck-cards').insertAdjacentHTML('beforeend', '<li class="deck-tools"><button type="button" class="btn btn-secondary btn-small" data-sample>試し引き</button></li>');
     }
 }

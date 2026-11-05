@@ -1393,3 +1393,6 @@ dialog button:focus { outline: none; }
 
 /* ポケモンにかかっている効果の印（説明に文が出る） */
 .mon-effect { position: absolute; left: 6%; bottom: 22%; z-index: 2; width: max(13px, 16cqw); height: max(13px, 16cqw); border-radius: 50%; background: #2f6fd6; color: #fff; font-size: max(9px, 11cqw); font-weight: 900; line-height: max(13px, 16cqw); text-align: center; box-shadow: 0 0 0 1.5px #fff; }
+
+/* デッキの欄の最後の、試し引きのボタン */
+.deck-tools { padding: 8px 0 2px; text-align: center; }

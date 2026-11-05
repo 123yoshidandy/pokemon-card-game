@@ -207,14 +207,18 @@ export function showDeckPicker(dialog, { decks, currentId, onPick, onBuild, titl
 // ===== 決着 =====
 // buttons：[{ label, primary, onClick }]
 // onPeek を渡すと「盤面を見る」を出す（最後の盤面を見返す）
-export function showResult(dialog, { title, message, note = '', buttons, onPeek = null }) {
+export function showResult(dialog, { title, message, note = '', buttons, onPeek = null, onLog = null }) {
     dialog.dataset.closable = 'false';
     dialog.innerHTML = `<div class="sheet-body result-body"><h2 class="result-title">${title}</h2><p>${message}</p>${note ? `<p class="note">${note}</p>` : ''}</div>
-        <div class="sheet-actions">${onPeek ? '<button type="button" class="btn btn-quiet" data-peek>盤面を見る</button>' : ''}${buttons.map((button, index) => `<button type="button" class="btn ${button.primary ? 'btn-primary' : 'btn-secondary'}" data-index="${index}">${button.label}</button>`).join('')}</div>`;
+        <div class="sheet-actions">${onPeek ? '<button type="button" class="btn btn-quiet" data-peek>盤面を見る</button>' : ''}${onLog ? '<button type="button" class="btn btn-quiet result-log" data-log>ログ</button>' : ''}${buttons.map((button, index) => `<button type="button" class="btn ${button.primary ? 'btn-primary' : 'btn-secondary'}" data-index="${index}">${button.label}</button>`).join('')}</div>`;
     dialog.onclick = event => {
         if (event.target.closest('[data-peek]')) {
             dialog.close();
             onPeek();
+            return;
+        }
+        if (event.target.closest('[data-log]')) {
+            onLog(); // 決着のダイアログは閉じずに、上にログを重ねる
             return;
         }
         const target = event.target.closest('[data-index]');

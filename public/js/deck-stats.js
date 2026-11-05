@@ -23,6 +23,17 @@ export function createDeckStats(storage = browserStorage()) {
         // まだ1度も遊んでいなければ null
         get: deckId => stats[deckId] ?? null,
 
+        // デッキを削除したときに、その戦績も消す
+        remove(deckId) {
+            if (!stats[deckId]) return;
+            stats = Object.fromEntries(Object.entries(stats).filter(([id]) => id !== deckId));
+            try {
+                storage?.setItem(STORAGE_KEY, JSON.stringify(stats));
+            } catch {
+                // 保存できない環境でも遊べるようにする
+            }
+        },
+
         // result：'win' / 'loss' / 'draw'
         record(deckId, result) {
             const current = { win: 0, loss: 0, draw: 0, ...stats[deckId] };

@@ -269,7 +269,7 @@ export default class GameScreen {
         const prompt = this.myPrompt();
         const highlight = new Set(prompt?.type === 'pokemon' ? prompt.pokemon : this.mode?.targets ?? []);
 
-        $('turn-info').textContent = view.phase === 'end' ? `${view.turn}ターン目 ・ ${view.winner === 'draw' ? '引き分け' : view.winner === view.viewerId ? 'あなたの勝ち' : `${opp.name}の勝ち`}`
+        $('turn-info').textContent = view.phase === 'end' ? `${view.turn > 0 ? `${view.turn}ターン目` : '準備'} ・ ${view.winner === 'draw' ? '引き分け' : view.winner === view.viewerId ? 'あなたの勝ち' : `${opp.name}の勝ち`}`
             : view.phase === 'setup' || view.phase === 'deck' ? '準備' : `${view.turn}ターン目 ・ ${view.current === view.viewerId ? 'あなたの番' : `${opp.name}の番`}`;
         $('opp-side').innerHTML = this.sideHtml(opp, highlight);
         $('my-side').innerHTML = this.sideHtml(me, highlight, view.current === view.viewerId && !prompt ? view.legal : null);
@@ -363,7 +363,8 @@ export default class GameScreen {
                 onPeek: () => {
                     this.resultPeeking = true;
                     this.render();
-                }
+                },
+                onLog: () => showLog($('pile'), view.log)
             });
         }
     }

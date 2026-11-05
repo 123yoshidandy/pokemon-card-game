@@ -29,6 +29,7 @@ let deckReturnScene = 'title'; // デッキ構築から戻る先（開始画面�
 let online = null;      // オンライン対戦のコントローラー（部屋に入っている間）
 let matchId = null;     // 表示している対戦
 let tryingDeckId = null; // デッキ編集の「CPU と試す」で試しているデッキ
+let wasDisconnected = false; // オンラインで接続が切れていたか（つながり直したときに知らせる）
 let toastTimer = null;
 
 const screen = new GameScreen({
@@ -106,6 +107,7 @@ function selectedCpuDeck() {
 const deckScreens = new DeckScreens(deckStore, {
     show: next => setScene(next),
     onDeleted: deckId => {
+        deckStats.remove(deckId);
         if (settings.cpuDeckId === deckId) settings.cpuDeckId = '';
         if (settings.deckId === deckId) settings.deckId = DECKS[0].id;
         saveSettings();
@@ -232,7 +234,16 @@ function connectOnline() {
         onUpdate: () => { if (isOnlineGame()) screen.render(); },
         onLobby: lobby => onLobby(lobby),
         onError: message => (scene === 'game' ? screen.showError(message) : toast(message)),
-        onConnectionChange: connected => { if (!connected) toast('サーバーとの接続が切れました。つなぎ直しています…'); }
+        // 切れたときと、つながり直したときに知らせる
+        onConnectionChange: connected => {
+            if (!connected) {
+                wasDisconnected = true;
+                toast('サーバーとの接続が切れました。つなぎ直しています…');
+            } else if (wasDisconnected) {
+                wasDisconnected = false;
+                toast('つながりました');
+            }
+        }
     });
     return online;
 }

@@ -1369,3 +1369,7 @@ dialog button:focus { outline: none; }
 
 /* デッキの選択：構築済みデッキの戦い方と難しさ */
 .deck-pick-summary { display: block; margin-top: 1px; font-size: 11px; font-weight: 500; color: var(--ink-dim); }
+
+/* 決着の画面の「盤面を見る」「ログ」は、左に並べる */
+.sheet-actions .btn-quiet:has(+ .btn-quiet) { margin-right: 0; }
+.result-log { margin-right: auto; }

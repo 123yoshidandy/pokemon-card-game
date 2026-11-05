@@ -3,7 +3,7 @@
  * デッキは { id, name, cards: { カードID: 枚数 } } の形（構築済みデッキと同じ）
  */
 
-import { CARDS, isBasicEnergy } from './card-data.js';
+import { CARDS, isBasicEnergy, resolveCardId } from './card-data.js';
 import { DECK_SIZE, MAX_COPIES, validateDeck } from './deck-rules.js';
 import { expandDeck } from './decks.js';
 import { isStandardLegal } from './regulation.js';
@@ -108,4 +108,40 @@ export function sortedEntries(deck) {
     return Object.entries(deck.cards)
         .filter(([id]) => CARDS[id])
         .sort((a, b) => (POOL_INDEX.get(a[0]) ?? Infinity) - (POOL_INDEX.get(b[0]) ?? Infinity));
+}
+
+// ===== 文字での書き出し・取り込み（ほかの端末へ移したり、人に渡したりする） =====
+// 1行に1種類：「枚数 名前 版の番号」（例：4 ヒトカゲ MC-083）。基本エネルギーは版の番号なし
+
+export function deckToText(deck) {
+    return sortedEntries(deck).map(([id, count]) => [count, CARDS[id].name, CARDS[id].prints?.[0]].filter(Boolean).join(' ')).join('\n');
+}
+
+const nameKey = name => name.normalize('NFKC').replace(/\s+/g, '');
+
+// 版の番号があればそれで、なければ名前で探す（同じ名前が何種類もあれば、一覧で先に並ぶもの）
+function findCardId(name, print) {
+    if (print && Object.hasOwn(CARDS, resolveCardId(print))) return resolveCardId(print);
+    const key = nameKey(name);
+    return CARD_POOL.find(id => nameKey(CARDS[id].name) === key)
+        ?? Object.keys(CARDS).find(id => nameKey(CARDS[id].name) === key)
+        ?? null;
+}
+
+// 読めた分を cards に、読めなかった行を unknown に入れて返す
+export function deckFromText(text) {
+    const cards = {};
+    const unknown = [];
+    for (const raw of String(text).split(/\r?\n/)) {
+        const line = raw.normalize('NFKC').trim();
+        if (!line) continue;
+        const match = line.match(/^(\d+)\s*[x×]?\s+(.+?)(?:\s+([A-Za-z0-9]+-[A-Za-z0-9]+))?$/);
+        const id = match && Number(match[1]) > 0 ? findCardId(match[2], match[3]) : null;
+        if (!id) {
+            unknown.push(raw.trim());
+            continue;
+        }
+        cards[id] = (cards[id] ?? 0) + Number(match[1]);
+    }
+    return { cards, unknown };
 }

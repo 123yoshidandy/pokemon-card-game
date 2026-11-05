@@ -281,6 +281,8 @@ button { font: inherit; color: inherit; }
     padding-right: var(--safe-r);
 }
 #decks-screen .topbar .btn, #editor-screen .topbar .btn { padding: 3px 12px; font-size: 13px; border-radius: 8px; box-shadow: 0 2px 0 var(--accent-dark); }
+.topbar .btn-secondary.btn-small { box-shadow: 0 2px 0 var(--blue-dark); }
+.topbar .btn-small:disabled { box-shadow: 0 2px 0 #2c3447; }
 .deck-list {
     list-style: none;
     margin: 0;
@@ -1063,3 +1065,7 @@ dialog button:focus { outline: none; }
 /* ログの一覧（ログの欄をタップしたとき） */
 .log { cursor: pointer; }
 .log-full { overflow: visible; font-size: 13px; cursor: default; background: none; }
+
+/* デッキの取り込み */
+.import-text { display: block; width: 100%; max-width: none; min-height: 120px; padding: 8px 10px; font-size: 16px; line-height: 1.4; resize: vertical; box-sizing: border-box; }
+.import-error { margin: 6px 0 0; color: #ff9a8f; font-size: 13px; }

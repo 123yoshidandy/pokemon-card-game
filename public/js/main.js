@@ -76,6 +76,7 @@ const deckScreens = new DeckScreens(deckStore, {
         settings.deckId = DECKS[0].id;
         saveSettings();
     },
+    toast: message => toast(message),
     // デッキ編集の「CPU と試す」：そのデッキを選んで、CPU 戦を始める
     onTry: deckId => {
         settings.deckId = deckId;

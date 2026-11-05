@@ -126,6 +126,26 @@ export function showPile(dialog, title, cards, onDetail) {
     open(dialog);
 }
 
+// ===== デッキの取り込み（「枚数 名前 版の番号」の文を貼り付ける） =====
+// onSubmit(text) は、うまく作れたら null、作れなければ知らせる文を返す
+export function showImport(dialog, { onSubmit }) {
+    dialog.dataset.closable = 'true';
+    dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">デッキを貼り付けて作る</h2>
+        <textarea class="text-input import-text" rows="8" placeholder="4 ヒトカゲ MC-083&#10;17 基本炎エネルギー" aria-label="デッキの文"></textarea>
+        <p class="import-error" hidden></p></div>
+        <div class="sheet-actions"><button type="button" class="btn btn-secondary" data-close>やめる</button><button type="button" class="btn btn-primary" data-submit>作る</button></div>`;
+    const error = dialog.querySelector('.import-error');
+    dialog.onclick = event => {
+        if (event.target.closest('[data-close]')) dialog.close();
+        if (!event.target.closest('[data-submit]')) return;
+        const message = onSubmit(dialog.querySelector('.import-text').value);
+        error.hidden = !message;
+        error.textContent = message ?? '';
+        if (!message) dialog.close();
+    };
+    open(dialog);
+}
+
 // ===== ログの一覧（盤面の横の欄は狭いので、広げて読む） =====
 export function showLog(dialog, lines) {
     dialog.dataset.closable = 'true';

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { addCard, removeCard, canAdd, totalCount, deckProblem, mainEnergyType, sortedEntries, CARD_POOL } from '../public/js/deck-builder.js';
+import { addCard, removeCard, canAdd, totalCount, deckProblem, mainEnergyType, sortedEntries, CARD_POOL, deckToText, deckFromText } from '../public/js/deck-builder.js';
 import { createDeckStore } from '../public/js/deck-store.js';
 import { DECKS } from '../public/js/decks.js';
 import { TEST_DECKS } from './test-decks.js';
@@ -144,5 +144,28 @@ describe('進化元', () => {
         expect(getCard(resolveCardId('M1L-005')).evolvesFrom).toBe('タマタマ');
         expect(all.filter(card => card.name === 'メガリザードンXex').every(card => card.evolvesFrom === 'リザード')).toBe(true);
         expect(all.find(card => card.name === 'アローラ ゴローン').evolvesFrom).toBe('アローラ イシツブテ');
+    });
+});
+
+describe('デッキの書き出しと取り込み', () => {
+    it('書き出して取り込むと、同じ中身に戻る', () => {
+        for (const deck of [...TEST_DECKS, ...DECKS]) {
+            const { cards, unknown } = deckFromText(deckToText(deck));
+            expect(unknown).toEqual([]);
+            expect(cards).toEqual(deck.cards);
+        }
+    });
+
+    it('1行に「枚数 名前 版の番号」。基本エネルギーは版の番号なし', () => {
+        const lines = deckToText(TEST_DECKS[0]).split('\n');
+        expect(lines).toContain(`4 ヒトカゲ ${getCard(C.charmander).prints[0]}`);
+        expect(lines).toContain('17 基本炎エネルギー');
+    });
+
+    it('版の番号がなくても名前で読める。全角の数字・空白入りの名前・「×」も読む。読めない行は返す', () => {
+        const { cards, unknown } = deckFromText('４ ヒトカゲ\n2× リザード\n\n1 アローラ ゴローン\n3 そんなカードはない\nメモ');
+        const byName = Object.entries(cards).map(([id, count]) => [getCard(id).name, count]);
+        expect(byName).toEqual([['ヒトカゲ', 4], ['リザード', 2], ['アローラ ゴローン', 1]]);
+        expect(unknown).toEqual(['3 そんなカードはない', 'メモ']);
     });
 });

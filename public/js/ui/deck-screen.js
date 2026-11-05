@@ -5,11 +5,11 @@
 
 import { getCard } from '../card-data.js';
 import { DECK_SIZE } from '../deck-rules.js';
-import { CARD_POOL, addCard, removeCard, canAdd, totalCount, deckProblem, sortedEntries } from '../deck-builder.js';
+import { CARD_POOL, addCard, removeCard, canAdd, totalCount, deckProblem, sortedEntries, deckToText, deckFromText } from '../deck-builder.js';
 import { FILTER_GROUPS, matchesFilters, filterCount, setFilter, filterLabel } from '../card-filter.js';
 import { cardFace, energyDot } from './card-view.js';
 import { bindPress } from './press.js';
-import { showDetail, showConfirm } from './sheets.js';
+import { showDetail, showConfirm, showImport } from './sheets.js';
 
 const $ = id => document.getElementById(id);
 
@@ -55,7 +55,7 @@ function cardText(id) {
 }
 
 export default class DeckScreens {
-    // store：createDeckStore() / handlers：show(scene) / onDeleted(deckId) / onBack() / onTry(deckId)
+    // store：createDeckStore() / handlers：show(scene) / onDeleted(deckId) / onBack() / onTry(deckId) / toast(message)
     constructor(store, handlers) {
         this.store = store;
         this.handlers = handlers;
@@ -76,6 +76,8 @@ export default class DeckScreens {
     bind() {
         $('decks-back').addEventListener('click', () => this.handlers.onBack());
         $('new-deck').addEventListener('click', () => this.openEditor(this.store.create().id));
+        $('import-deck').addEventListener('click', () => showImport($('confirm'), { onSubmit: text => this.importDeck(text) }));
+        $('deck-export').addEventListener('click', () => this.exportDeck());
         $('deck-list').addEventListener('click', event => {
             const edit = event.target.closest('[data-edit]');
             const copy = event.target.closest('[data-copy]');
@@ -160,6 +162,30 @@ export default class DeckScreens {
             if (minus) this.change(removeCard(this.deck, minus.dataset.minus));
             if (plus) this.change(addCard(this.deck, plus.dataset.plus));
         });
+    }
+
+    // ===== 書き出し・取り込み =====
+
+    // 「枚数 名前 版の番号」の文をクリップボードへ
+    async exportDeck() {
+        try {
+            await navigator.clipboard.writeText(`${this.deck.name}\n${deckToText(this.deck)}`);
+            this.handlers.toast('デッキをコピーしました');
+        } catch {
+            this.handlers.toast('コピーできませんでした');
+        }
+    }
+
+    // 貼り付けた文からデッキを作って開く（1行めがカードでなければ、デッキの名前にする）
+    importDeck(text) {
+        const lines = String(text).split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+        const { cards, unknown } = deckFromText(lines.join('\n'));
+        if (!Object.keys(cards).length) return 'カードを読めませんでした。「4 ヒトカゲ MC-083」のように1行に1種類で書いてください';
+        const named = unknown[0] === lines[0] ? unknown.shift() : null;
+        const deck = this.store.save({ ...this.store.create(), cards, ...(named ? { name: named } : {}) });
+        this.openEditor(deck.id);
+        if (unknown.length) this.handlers.toast(`読めなかった行が${unknown.length}行あります（${unknown[0]} など）`);
+        return null;
     }
 
     // ===== 一覧 =====

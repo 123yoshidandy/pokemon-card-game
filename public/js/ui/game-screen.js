@@ -15,6 +15,9 @@ import { playEffect } from '../sound.js';
 const $ = id => document.getElementById(id);
 
 
+// 場のポケモンを選ぶ選択のうち、タップ1回では決まらないもの（2匹以上・選ばなくてもよい）
+const multiPick = prompt => prompt.type === 'pokemon' && (prompt.max > 1 || prompt.min === 0);
+
 export default class GameScreen {
     // handlers：resultButtons(view) → [{ label, primary, onClick }]（決着のダイアログのボタン）、resultNote(view)
     constructor(handlers) {
@@ -22,6 +25,7 @@ export default class GameScreen {
         this.controller = null;
         this.view = null;
         this.mode = null; // 手札のカードのつけ先・にげる先を選んでいる間 { kind, uid?, targets }
+        this.picked = { promptId: null, ids: new Set() }; // 場のポケモンを何匹か選ぶ選択で、選んだもの
         this.promptPeeking = false;
         this.shownPromptId = null;
         this.resultShown = false;
@@ -96,6 +100,14 @@ export default class GameScreen {
         // 中央のボタン：選択にもどる・（つけ先などを選ぶのを）やめる・結果を見る
         $('prompt-done').addEventListener('click', () => {
             const action = $('prompt-done').dataset.action;
+            if (action === 'pick') {
+                const prompt = this.myPrompt();
+                const ids = this.picked.promptId === prompt?.id ? this.picked.ids : new Set();
+                const answer = prompt.pokemon.map((pokemonId, index) => (ids.has(pokemonId) ? index : -1)).filter(index => index >= 0);
+                this.picked = { promptId: null, ids: new Set() };
+                this.send({ type: 'answer', answer });
+                return;
+            }
             if (action === 'result') {
                 this.resultPeeking = false;
                 $('result').showModal();
@@ -165,7 +177,17 @@ export default class GameScreen {
         const prompt = this.myPrompt();
         if (prompt?.type === 'pokemon') {
             const index = prompt.pokemon.indexOf(id);
-            if (index !== -1) this.controller.send({ type: 'answer', answer: [index] });
+            if (index === -1) return;
+            // 2匹以上選ぶ・選ばなくてもよい選択は、タップで選ぶ・外すを切り替え、中央の「決定」で答える
+            if (multiPick(prompt)) {
+                if (this.picked.promptId !== prompt.id) this.picked = { promptId: prompt.id, ids: new Set() };
+                const ids = this.picked.ids;
+                if (ids.has(id)) ids.delete(id);
+                else if (ids.size < prompt.max) ids.add(id);
+                this.render();
+                return;
+            }
+            this.controller.send({ type: 'answer', answer: [index] });
             this.render();
             return;
         }
@@ -273,12 +295,16 @@ export default class GameScreen {
 
         // 選択のダイアログ（場のポケモンを選ぶときは盤面を光らせ、ダイアログは出さない）
         const promptDone = $('prompt-done');
-        const midAction = prompt && prompt.type !== 'pokemon' && this.promptPeeking ? 'prompt'
+        const pickedIds = prompt && multiPick(prompt) && this.picked.promptId === prompt.id ? this.picked.ids : new Set();
+        const midAction = prompt && multiPick(prompt) ? 'pick'
+            : prompt && prompt.type !== 'pokemon' && this.promptPeeking ? 'prompt'
             : this.mode ? 'cancel'
             : view.phase === 'end' && this.resultPeeking ? 'result' : '';
         promptDone.hidden = !midAction;
         promptDone.dataset.action = midAction;
-        promptDone.textContent = { prompt: '選択にもどる', cancel: 'やめる', result: '結果を見る' }[midAction] ?? '';
+        promptDone.textContent = { prompt: '選択にもどる', cancel: 'やめる', result: '結果を見る', pick: `決定（${pickedIds.size}/${prompt?.max}）` }[midAction] ?? '';
+        promptDone.disabled = midAction === 'pick' && (pickedIds.size < prompt.min || pickedIds.size > prompt.max);
+        document.querySelectorAll('#game-screen .slot').forEach(slot => slot.classList.toggle('picked', pickedIds.has(slot.querySelector('[data-pokemon]')?.dataset.pokemon)));
         if (prompt && prompt.type !== 'pokemon') {
             if (!this.promptPeeking && this.shownPromptId !== prompt.id) {
                 this.shownPromptId = prompt.id;

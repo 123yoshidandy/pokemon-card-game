@@ -1342,3 +1342,22 @@ dialog button:focus { outline: none; }
 .deck-row-name[data-view] { cursor: pointer; }
 .deck-row-view { margin-left: 8px; font-size: 11px; font-weight: 700; color: var(--ink-dim); text-decoration: underline; text-underline-offset: 2px; }
 .pick { position: relative; }
+
+/* 場のポケモンを何匹か選ぶ選択で、選んだもの */
+.slot.picked > .mon { box-shadow: 0 0 0 3px #fff, 0 0 14px rgba(255, 255, 255, 0.8); }
+.slot.picked::after {
+    content: "✓";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--bg-1);
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 20px;
+    text-align: center;
+}

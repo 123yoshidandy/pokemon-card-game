@@ -57,7 +57,7 @@ function escape(text) {
 function movesHtml(card) {
     const rows = [];
     if (card.ability) rows.push(`<div class="move move-ability"><span class="move-name">${escape(card.ability.name)}</span></div>`);
-    card.attacks.forEach(attack => rows.push(`<div class="move"><span class="move-cost">${attack.cost.map(type => `<i class="move-dot type-${type}"></i>`).join('')}</span><span class="move-name">${escape(attack.name)}</span>${attack.damageText ? `<span class="move-dmg">${escape(attack.damageText)}</span>` : ''}</div>`));
+    card.attacks.forEach(attack => rows.push(`<div class="move"><span class="move-cost">${attack.cost.map(type => `<i class="move-dot type-${type}"></i>`).join('')}</span><span class="move-name">${escape(attack.name)}</span>${attack.damageText ? `<span class="move-dmg">${damageLabel(attack.damageText)}</span>` : ''}</div>`));
     return rows.length ? `<div class="card-moves">${rows.join('')}</div>` : '';
 }
 
@@ -66,6 +66,9 @@ function retreatText(printed, actual) {
     const dots = n => (n ? costDots(Array(n).fill('colorless')) : 'なし');
     return actual === undefined || actual === printed ? dots(printed) : `<s>${dots(printed)}</s> → ${dots(actual)}`;
 }
+
+// ワザのダメージの表示（「240-」の半角ハイフンは、抵抗力と同じ「−」にそろえる）
+const damageLabel = text => escape(String(text ?? '').replace(/-$/, '−'));
 
 // カードの文。エネルギーの記号（[F] など）を、エネルギーの小さな印に置き換える
 const ENERGY_CODES = { G: 'grass', R: 'fire', W: 'water', L: 'lightning', P: 'psychic', F: 'fighting', D: 'darkness', M: 'metal', N: 'dragon', C: 'colorless' };
@@ -204,7 +207,7 @@ export function cardDetail(id, pokemon = null) {
         // カードのワザのあとに、どうぐ・特性などで使えるワザ（場のポケモンの extraAttacks）を続ける
         [...card.attacks, ...(pokemon?.extraAttacks ?? [])].forEach((attack, index) => {
             const extra = index >= card.attacks.length ? '<span class="tag tag-ability">ほかのカードのワザ</span>' : '';
-            parts.push(`<div class="detail-block" data-attack="${index}"><div class="detail-title">${costDots(attack.cost)}<span class="attack-name">${escape(attack.name)}</span><span class="attack-damage">${escape(attack.damageText)}</span>${extra}</div>${attack.text ? `<p>${cardText(attack.text)}</p>` : ''}</div>`);
+            parts.push(`<div class="detail-block" data-attack="${index}"><div class="detail-title">${costDots(attack.cost)}<span class="attack-name">${escape(attack.name)}</span><span class="attack-damage">${damageLabel(attack.damageText)}</span>${extra}</div>${attack.text ? `<p>${cardText(attack.text)}</p>` : ''}</div>`);
         });
         if (pokemon) {
             const extras = [];

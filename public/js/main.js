@@ -447,6 +447,8 @@ $('go-home').addEventListener('click', () => {
 });
 ['open-rules', 'open-rules-game'].forEach(id => $(id).addEventListener('click', () => $('rules').showModal()));
 closeOnBackdrop($('rules'));
+$('open-games').addEventListener('click', () => $('games').showModal());
+closeOnBackdrop($('games'));
 // 効果音：ブラウザの制限で、画面に触れたときに使えるようにする。ボタンで ON/OFF（保存する）
 document.addEventListener('pointerdown', unlockSound, { passive: true });
 const renderSoundToggle = () => {

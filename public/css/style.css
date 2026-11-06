@@ -1115,6 +1115,12 @@ dialog button:focus { outline: none; }
 .result-title { font-size: 30px !important; color: var(--gold); }
 .result .sheet-actions { justify-content: center; }
 .rules { width: min(640px, calc(100vw - 24px)); }
+.games { width: min(600px, calc(100vw - 24px)); }
+.sheet-body .game-links { list-style: none; padding: 0; margin: 8px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 8px; }
+.game-links a { display: grid; gap: 2px; padding: 8px 10px; border-radius: 10px; background: rgba(255, 255, 255, 0.06); color: var(--ink); text-decoration: none; }
+.game-links a:hover, .game-links a:focus-visible { background: rgba(255, 255, 255, 0.12); }
+.game-links b { font-size: 15px; }
+.game-links span { font-size: 12px; color: var(--ink-dim); }
 
 /* ===== 低い横画面 ===== */
 

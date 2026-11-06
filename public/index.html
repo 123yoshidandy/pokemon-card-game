@@ -117,13 +117,13 @@
 
     <!-- 対戦画面 -->
     <main id="game-screen" class="screen" hidden>
-        <header class="topbar">
+        <!-- メニューは左端の縦の列（画面の縦の幅を盤面に使うため） -->
+        <nav class="side-menu" aria-label="メニュー">
             <button id="go-home" class="icon-btn" aria-label="ホーム"><svg><use href="#icon-home"/></svg></button>
-            <div id="turn-info" class="turn-info"></div>
             <button id="open-log" class="icon-btn" aria-label="ログ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 6.5h12M8 12h12M8 17.5h12M4 6.5h.01M4 12h.01M4 17.5h.01"/></svg></button>
             <button id="sound-toggle" class="icon-btn sound-toggle" aria-label="効果音" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="sound-wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/><path class="sound-slash" d="M3.5 3.5l17 17"/></svg></button>
             <button id="open-rules-game" class="icon-btn" aria-label="遊び方"><svg><use href="#icon-help"/></svg></button>
-        </header>
+        </nav>
         <div id="fx" class="fx-layer" aria-hidden="true"></div>
         <div class="table">
             <section class="field">

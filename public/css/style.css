@@ -541,11 +541,26 @@ button { font: inherit; color: inherit; }
 
 #game-screen {
     display: grid;
-    grid-template-rows: var(--bar-h) minmax(0, 1fr) var(--dock-h);
+    grid-template-columns: var(--menu-w) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) var(--dock-h);
     padding-left: var(--safe-l);
     padding-right: var(--safe-r);
     touch-action: none;
 }
+
+/* 対戦画面のメニュー：左端の縦の列 */
+#game-screen { --menu-w: 40px; }
+.side-menu {
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 0;
+    border-right: 1px solid var(--line);
+}
+.side-menu .icon-btn { width: 30px; height: 30px; }
+#game-screen .table, #game-screen .dock { grid-column: 2; }
 
 .topbar {
     display: flex;

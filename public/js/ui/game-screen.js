@@ -13,6 +13,7 @@ import { cardOrder } from '../deck-builder.js';
 import { playEffect } from '../sound.js';
 
 const $ = id => document.getElementById(id);
+const PRIZE_SLOTS = 6;
 
 
 // 場のポケモンを選ぶ選択のうち、タップ1回では決まらないもの（2匹以上・選ばなくてもよい）
@@ -153,8 +154,8 @@ export default class GameScreen {
                 onPlay: () => this.send({ type: 'useStadium' })
             });
         });
-        ['opp-info', 'my-info'].forEach(id => $(id).addEventListener('click', event => {
-            const player = this.view.players[id === 'my-info' ? this.view.viewerId : 1 - this.view.viewerId];
+        ['opp-info', 'my-info', 'opp-prizes', 'my-prizes'].forEach(id => $(id).addEventListener('click', event => {
+            const player = this.view.players[id.startsWith('my-') ? this.view.viewerId : 1 - this.view.viewerId];
             // オモテになったサイド（効果でオモテにしたもの。おたがいに見える）
             if (event.target.closest('[data-prizes]')) {
                 showPile($('pile'), `${escapeHtml(player.name)}のオモテのサイド`, player.faceUpPrizes.map(cardId => ({ id: cardId })), cardId => this.openCardDetail(cardId));
@@ -308,6 +309,8 @@ export default class GameScreen {
         if (playing) this.lastTurnKey = turnKey ?? this.lastTurnKey ?? 0;
         $('opp-info').innerHTML = this.infoHtml(opp);
         $('my-info').innerHTML = this.infoHtml(me);
+        $('opp-prizes').innerHTML = this.prizesHtml(opp);
+        $('my-prizes').innerHTML = this.prizesHtml(me);
         // スタジアムは、どちらが出したかを名前の前に小さく添える
         $('stadium').innerHTML = view.stadium ? `<span class="stadium-chip ${view.legal?.stadium ? 'playable' : ''}"><small>${view.stadium.owner === view.viewerId ? 'あなた' : '相手'}</small>${getCard(view.stadium.id).name}</span>` : '';
         $('status').classList.remove('status-error');
@@ -470,7 +473,7 @@ export default class GameScreen {
     infoHtml(player) {
         // オンラインで接続が切れているプレイヤーは、名前の横に「切断中」
         const offline = this.disconnected?.has(player.id) ? '<span class="info-offline">切断中</span>' : '';
-        // サイド・山札・トラッシュは、小さなカードの山で描く（サイドと山札は裏、トラッシュはいちばん上のカード）
+        // 山札・トラッシュは、小さなカードの山で描く（山札は裏、トラッシュはいちばん上のカード）
         const pile = (label, card, count, { attr = '', countClass = '' } = {}) => {
             const tag = attr ? 'button' : 'div';
             return `<${tag} ${attr ? 'type="button"' : ''} class="pile ${attr ? 'pile-button' : ''}" ${attr}>
@@ -478,12 +481,23 @@ export default class GameScreen {
                 <span class="pile-count ${countClass}">${count}</span><span class="pile-label">${label}</span></${tag}>`;
         };
         const top = player.discard.at(-1);
-        return `<div class="info-name">${escapeHtml(player.name)}${offline}<span class="info-hand">手札 ${player.handCount}</span></div>
+        return `<div class="info-name"><span class="info-player">${escapeHtml(player.name)}</span>${offline}<span class="info-hand">手札 ${player.handCount}</span></div>
             <div class="piles">
-                ${pile('サイド', cardBack(), player.prizeCount, { attr: player.faceUpPrizes?.length ? 'data-prizes' : '', countClass: player.faceUpPrizes?.length ? 'has-faceup' : '' })}
                 ${pile('山札', cardBack(), player.deckCount, { countClass: player.deckCount <= 5 ? 'deck-low' : '' })}
                 ${pile('トラッシュ', top ? cardFace(top.id) : '', player.discard.length, { attr: 'data-discard' })}
             </div>`;
+    }
+
+    // サイド：左の列に、6枚の置き場を2列×3段で並べ、残っている分だけ裏のカードを置く
+    // 効果でオモテになったサイドがあれば、押すとその中身を見られる（金色の点で知らせる）
+    prizesHtml(player) {
+        const faceUp = player.faceUpPrizes?.length > 0;
+        const cards = Array.from({ length: Math.max(PRIZE_SLOTS, player.prizeCount) }, (_, index) => (index < player.prizeCount
+            ? `<span class="prize-card">${cardBack()}</span>`
+            : '<span class="prize-card prize-taken"></span>')).join('');
+        const tag = faceUp ? 'button' : 'div';
+        return `<${tag} ${faceUp ? 'type="button" data-prizes' : ''} class="prize-grid ${faceUp ? 'has-faceup' : ''}">${cards}</${tag}>
+            <span class="prize-label">サイド <b>${player.prizeCount}</b></span>`;
     }
 
     // ===== ビューから引く =====

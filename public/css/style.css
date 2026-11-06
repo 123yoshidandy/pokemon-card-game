@@ -16,7 +16,8 @@
     --app-h: 100dvh;
     --bar-h: 34px;
     --dock-h: clamp(78px, calc(var(--app-h) * 0.22), 128px);
-    --panel-w: clamp(132px, calc(var(--app-w) * 0.21), 200px);
+    /* 右の欄（山札・トラッシュ）の幅。左の列（メニュー＋サイド）も同じ幅にして、盤面を画面の中央に置く */
+    --panel-w: clamp(104px, calc(var(--app-w) * 0.15), 160px);
     --safe-l: env(safe-area-inset-left, 0px);
     --safe-r: env(safe-area-inset-right, 0px);
     --safe-b: env(safe-area-inset-bottom, 0px);
@@ -556,7 +557,7 @@ button { font: inherit; color: inherit; }
 }
 
 /* 対戦画面のメニュー：左端の縦の列 */
-#game-screen { --menu-w: 40px; }
+#game-screen { --menu-w: 40px; --prize-w: calc(var(--panel-w) - var(--menu-w)); }
 .side-menu {
     grid-row: 1 / -1;
     display: flex;
@@ -585,9 +586,50 @@ button { font: inherit; color: inherit; }
 
 .table {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) var(--panel-w);
+    grid-template-columns: var(--prize-w) minmax(0, 1fr) var(--panel-w);
     min-height: 0;
 }
+
+/* ===== 左の列（サイド） ===== */
+
+/* 盤面と同じく、相手（上）と自分（下）に分ける */
+.prizes {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) 26px minmax(0, 1fr);
+    padding: 3px 0 3px 4px;
+    min-height: 0;
+}
+.prize-box {
+    container-type: size;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-height: 0;
+    border-radius: 8px;
+}
+#opp-prizes { grid-row: 1; }
+#my-prizes { grid-row: 3; }
+/* 2列×3段。置き場の幅と高さの両方に収まる大きさにする（14px はラベルの分） */
+.prize-grid {
+    --prize-card-w: min(calc((100cqw - 3px) / 2), calc((100cqh - 14px - 6px) / 3 * 0.833));
+    display: grid;
+    grid-template-columns: repeat(2, var(--prize-card-w));
+    gap: 3px;
+    padding: 0;
+    border: 0;
+    background: none;
+    position: relative;
+}
+button.prize-grid { cursor: pointer; }
+.prize-card { width: var(--prize-card-w); aspect-ratio: 5 / 6; border-radius: 4px; }
+.prize-card .card { width: 100%; height: 100%; border-radius: 4px; }
+.prize-taken { border: 1px dashed var(--line); }
+.prize-label { font-size: 10px; line-height: 12px; color: var(--ink-dim); white-space: nowrap; }
+.prize-label b { color: var(--ink); font-size: 11px; }
+/* 効果でオモテになったサイドがある（押すと中身を見られる） */
+.prize-grid.has-faceup::after { content: ""; position: absolute; top: -3px; right: -3px; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
 
 .field {
     display: grid;
@@ -1286,7 +1328,7 @@ dialog button:focus { outline: none; }
     100% { opacity: 0; transform: translateY(0) rotateX(1800deg); }
 }
 @keyframes fx-coin-face { 0% { opacity: 0; } 60% { opacity: 1; } }
-/* サイドを取った側の情報の欄を光らせる */
+/* サイドを取った側のサイドの置き場を光らせる */
 .fx-glow { animation: fx-glow 0.9s ease-out; }
 @keyframes fx-glow { 30% { box-shadow: 0 0 0 2px var(--gold), 0 0 16px rgba(245, 197, 66, 0.7); } }
 
@@ -1426,10 +1468,11 @@ dialog button:focus { outline: none; }
 /* オンラインで接続が切れているプレイヤー */
 .info-offline { margin-left: 6px; padding: 0 5px; border-radius: 6px; background: #8a3b32; color: #fff; font-size: 10px; font-weight: 700; }
 
-/* ===== 右の欄の、サイド・山札・トラッシュの山 ===== */
+/* ===== 右の欄の、山札・トラッシュの山 ===== */
 .info-hand { margin-left: auto; padding-left: 6px; font-size: 11px; font-weight: 700; color: var(--ink-dim); }
 .info-name { display: flex; align-items: baseline; }
-.piles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin-top: 3px; }
+.info-player { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.piles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; margin-top: 3px; }
 .pile { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 0; border: 0; background: none; color: var(--ink); min-width: 0; }
 .pile-button { cursor: pointer; }
 .pile-card { position: relative; width: 100%; aspect-ratio: 5 / 6; border-radius: 6px; }

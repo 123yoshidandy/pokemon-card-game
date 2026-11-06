@@ -77,7 +77,7 @@ export default class Animator {
             case 'evolve':
             case 'switch': return this.pulse(event.pokemon, 'fx-pop');
             case 'coin': return this.coin(event.heads, slot);
-            case 'prize': return this.glow(mine ? '#my-info' : '#opp-info');
+            case 'prize': return this.glow(mine ? '#my-prizes' : '#opp-prizes');
             case 'energy': return this.energy(event, mine);
             default: return null;
         }

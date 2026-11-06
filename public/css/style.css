@@ -15,9 +15,9 @@
     --app-w: 100vw;
     --app-h: 100dvh;
     --bar-h: 34px;
-    --dock-h: clamp(78px, calc(var(--app-h) * 0.22), 128px);
+    --dock-h: clamp(78px, calc(var(--app-h) * 0.22), 170px);
     /* 右の欄（山札・トラッシュ）の幅。左の列（メニュー＋サイド）も同じ幅にして、盤面を画面の中央に置く */
-    --panel-w: clamp(104px, calc(var(--app-w) * 0.15), 160px);
+    --panel-w: clamp(104px, calc(var(--app-w) * 0.15), 240px);
     --safe-l: env(safe-area-inset-left, 0px);
     --safe-r: env(safe-area-inset-right, 0px);
     --safe-b: env(safe-area-inset-bottom, 0px);
@@ -571,7 +571,8 @@ button { font: inherit; color: inherit; }
 }
 
 /* 対戦画面のメニュー：左端の縦の列 */
-#game-screen { --menu-w: 40px; --rail-w: calc(var(--panel-w) - var(--menu-w)); }
+/* 両側の列は、山札とトラッシュが重ならずに並ぶ幅（84px）を下限にする */
+#game-screen { --menu-w: 40px; --rail-w: max(84px, calc(var(--panel-w) - var(--menu-w))); }
 .side-menu {
     grid-row: 1 / -1;
     display: flex;
@@ -684,16 +685,18 @@ button.prize-grid { cursor: pointer; }
     aspect-ratio: 5 / 6; /* 少し横長（画面の縦の幅を節約する） */
     flex: none;
 }
+/* 場の高さいっぱいまで大きくする。上限は広い画面でも間延びしない大きさ（cq の単位は、使う所（.slot）から見た .side で決まる） */
+.side { --active-w: min(calc((100cqh - 6px) * 0.833), 300px); }
 .slot-active {
-    width: min(calc((100cqh - 6px) * 0.833), 160px);
+    width: var(--active-w);
 }
 .slot-bench {
-    width: min(calc((100cqh - 6px) * 0.7), calc((100cqw - min(calc((100cqh - 6px) * 0.833), 160px) - 40px) / 5), 130px);
+    width: min(calc((100cqh - 6px) * 0.7), calc((100cqw - var(--active-w) - 40px) / 5), 240px);
 }
 /* ベンチが5匹より多いとき（ゼロの大空洞など）は、並ぶ数に合わせて小さくする */
 .bench-wide { gap: 3px; }
 .bench-wide .slot-bench {
-    width: min(calc((100cqh - 6px) * 0.7), calc((100cqw - min(calc((100cqh - 6px) * 0.833), 160px) - 40px) / var(--bench-slots)), 130px);
+    width: min(calc((100cqh - 6px) * 0.7), calc((100cqw - var(--active-w) - 40px) / var(--bench-slots)), 240px);
 }
 .slot-empty { border: 1.5px dashed var(--line); }
 
@@ -832,9 +835,14 @@ button.prize-grid { cursor: pointer; }
 .hand-card .card-name { font-size: max(8px, 13.5cqw); white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .hand-card .card-head { font-size: max(7px, 13cqw); }
 .hand-card .card-hp { font-size: max(7.5px, 15cqw); }
-/* 手札のポケモンでは、進化の段階（たね・1進化など）は出さない（HP は右にそろえて残す） */
+/* 手札のポケモンは、場のポケモンと同じく、上の行に名前（左）と HP（右）を並べる。進化の段階（たね・1進化など）は出さない */
+.hand-card .card-pokemon { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto minmax(0, 1fr); column-gap: 3%; }
+.hand-card .card-pokemon .card-name { grid-area: 1 / 1; text-align: left; align-self: start; }
+.hand-card .card-pokemon .card-head { grid-area: 1 / 2; }
+.hand-card .card-pokemon .card-art { grid-area: 2 / 1 / 3 / -1; }
 .hand-card .card-pokemon .card-stage { display: none; }
-.hand-card .card-pokemon .card-head { justify-content: flex-end; }
+/* 手札のトレーナーズでは、種類（グッズ・サポートなど）は出さない（絵の色で分かる） */
+.hand-card .card-trainer .card-head { display: none; }
 .hand-card.selected > .card { box-shadow: 0 0 0 3px #fff, 0 0 12px rgba(255, 255, 255, 0.6); animation: none; }
 /* 同じカードが何枚あるか（重ねて1枚で出している） */
 .hand-count {
@@ -1086,6 +1094,10 @@ dialog.sheet {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 dialog.sheet:not([open]) { display: none; }
+/* カードを選ぶ画面は、カードを多く並べ、下のボタン（盤面を見る・山札をすべて見る・決定）も収まるよう広くする */
+dialog#prompt.sheet { width: min(800px, calc(var(--app-w) - 24px)); }
+/* それでも収まらないときは、ボタンを次の行へ回す（画面の外へ押し出さない） */
+.sheet-actions { flex-wrap: wrap; }
 dialog::backdrop { background: rgba(5, 10, 20, 0.6); }
 dialog button:focus { outline: none; }
 .sheet-body {
@@ -1482,11 +1494,9 @@ dialog button:focus { outline: none; }
 /* オンラインで接続が切れているプレイヤー */
 .info-offline { margin-left: 6px; padding: 0 5px; border-radius: 6px; background: #8a3b32; color: #fff; font-size: 10px; font-weight: 700; }
 
-/* ===== 右の欄の、山札・トラッシュの山 ===== */
-.info-hand { margin-left: auto; padding-left: 6px; font-size: 11px; font-weight: 700; color: var(--ink-dim); white-space: nowrap; }
-/* 列が細くて1行に収まらないときは、手札の数を次の行へ回す（名前を切らない） */
+/* ===== 両側の列の、手札の数と山札・トラッシュの山 ===== */
+.info-hand { font-size: 11px; font-weight: 700; color: var(--ink-dim); white-space: nowrap; }
 .info-name { display: flex; flex-wrap: wrap; align-items: baseline; }
-.info-player { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .piles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; margin-top: 3px; }
 .pile { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 0; border: 0; background: none; color: var(--ink); min-width: 0; }
 .pile-button { cursor: pointer; }

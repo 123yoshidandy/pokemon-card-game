@@ -481,7 +481,8 @@ export default class GameScreen {
                 <span class="pile-count ${countClass}">${count}</span><span class="pile-label">${label}</span></${tag}>`;
         };
         const top = player.discard.at(-1);
-        return `<div class="info-name"><span class="info-player">${escapeHtml(player.name)}</span>${offline}<span class="info-hand">手札 ${player.handCount}</span></div>
+        // 1対1なので、名前（あなた・CPU など）は出さない。上下の位置で、どちらの山かは分かる
+        return `<div class="info-name"><span class="info-hand">手札 ${player.handCount}</span>${offline}</div>
             <div class="piles">
                 ${pile('deck', '山札', cardBack(), player.deckCount, { countClass: player.deckCount <= 5 ? 'deck-low' : '' })}
                 ${pile('discard', 'トラッシュ', top ? cardFace(top.id) : '', player.discard.length, { attr: 'data-discard' })}

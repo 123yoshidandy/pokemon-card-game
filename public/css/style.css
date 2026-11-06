@@ -40,6 +40,9 @@ html, body {
     height: 100%;
 }
 
+/* ダブルタップで拡大しない（2本指の拡大は main.js で止める） */
+html { touch-action: manipulation; }
+
 body {
     height: var(--app-h);
     overflow: hidden;
@@ -348,6 +351,8 @@ button { font: inherit; color: inherit; }
 .pool-tabs .segment-item { padding: 5px 10px; font-size: 13px; }
 .pool-search { max-width: none; height: 30px; padding: 0 8px; font-size: 13px; border-radius: 8px; }
 .pool-search { flex: 1 1 80px; min-width: 64px; }
+/* iOS は 16px 未満の入力欄にフォーカスすると拡大するので、タッチの端末では 16px にする */
+@media (pointer: coarse) { .text-input { font-size: 16px; } }
 /* しぼりこみ：項目ごとのプルダウン（タイプ・進化・HP など）。入りきらなければ横にスクロール */
 .pool-filters {
     display: flex;

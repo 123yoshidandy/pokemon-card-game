@@ -1,6 +1,7 @@
 /**
  * デッキ構築の画面：デッキの一覧と、デッキの編集
- * 編集はその場で保存する（保存ボタンも、戻るときの確認もない）
+ * 自作のデッキは、編集をその場で保存する（保存ボタンも、戻るときの確認もない）
+ * 構築済みデッキは全員の共有デッキで、戻るとき（か「CPU と試す」のとき）に、変えていればサーバーに保存する
  */
 
 import { getCard } from '../card-data.js';
@@ -10,6 +11,7 @@ import { FILTER_GROUPS, matchesFilters, filterCount, setFilter, filterLabel } fr
 import { cardFace, energyDot } from './card-view.js';
 import { bindPress } from './press.js';
 import { showDetail, showConfirm, showImport, showPile } from './sheets.js';
+import { fetchSharedDecks, saveSharedDeck, resetSharedDeck } from '../shared-decks.js';
 
 const $ = id => document.getElementById(id);
 
@@ -92,9 +94,13 @@ export default class DeckScreens {
         });
 
         $('deck-try').addEventListener('click', () => {
-            if (!deckProblem(this.deck)) this.handlers.onTry(this.deck.id);
+            if (deckProblem(this.deck)) return;
+            const deckId = this.deck.id;
+            if (this.shared) this.leaveShared(() => this.handlers.onTry(deckId));
+            else this.handlers.onTry(deckId);
         });
         $('editor-back').addEventListener('click', () => {
+            if (this.shared) return this.leaveShared(() => this.showList());
             // 空のデッキと、変えずに戻ったコピーは残さない（見るだけでデッキが増えないように）
             if (totalCount(this.deck) === 0 || JSON.stringify(this.deck) === this.untouched) {
                 this.store.remove(this.deck.id);
@@ -103,7 +109,16 @@ export default class DeckScreens {
             this.showList();
         });
         $('deck-name').addEventListener('input', () => {
-            this.deck = this.store.save({ ...this.deck, name: $('deck-name').value });
+            const next = { ...this.deck, name: $('deck-name').value };
+            this.deck = this.shared ? next : this.store.save(next);
+        });
+        $('deck-reset').addEventListener('click', () => {
+            const deck = this.deck;
+            showConfirm($('confirm'), {
+                title: `「${escape(deck.name)}」を初期の内容に戻しますか？（共有デッキなので、全員のデッキが戻ります）`,
+                yesLabel: '戻す',
+                onYes: () => this.sendShared(() => resetSharedDeck(deck.id), '初期の内容に戻しました', () => this.showList())
+            });
         });
         $('deck-delete').addEventListener('click', () => {
             const deck = this.deck;
@@ -216,15 +231,21 @@ export default class DeckScreens {
 
     showList() {
         this.deck = null;
+        this.shared = false;
+        this.renderList();
+        this.handlers.show('decks');
+        // 共有デッキは、ほかの人が変えているかもしれないので、取り直して描き直す
+        fetchSharedDecks().then(() => { if (!this.deck) this.renderList(); }, () => {});
+    }
+
+    renderList() {
         const row = deck => {
             const total = totalCount(deck);
             const problem = deckProblem(deck);
-            const button = deck.builtIn
-                ? `<button type="button" class="btn btn-secondary btn-small" data-copy="${deck.id}">コピーして編集</button>`
-                : `<button type="button" class="btn btn-secondary btn-small" data-copy="${deck.id}">コピー</button><button type="button" class="btn btn-primary btn-small" data-edit="${deck.id}">編集</button>`; // 自作のデッキも複製できる
+            const button = `<button type="button" class="btn btn-secondary btn-small" data-copy="${deck.id}">コピー</button><button type="button" class="btn btn-primary btn-small" data-edit="${deck.id}">編集</button>`;
             return `<li class="deck-row">
                 <span class="deck-row-name" ${deck.builtIn ? `data-view="${deck.id}"` : ''}>${escape(deck.name)}${deck.builtIn ? '<span class="deck-row-view">中身</span>' : ''}</span>
-                ${deck.builtIn ? '<span class="badge">構築済み</span>' : ''}
+                ${deck.builtIn ? `<span class="badge">共有</span>${deck.edited ? '<span class="badge badge-muted">変更あり</span>' : ''}` : ''}
                 <span class="deck-row-stats">${escape(this.handlers.statsOf?.(deck.id) ?? '')}</span>
                 <span class="deck-row-count ${problem ? 'incomplete' : ''}">${total}/${DECK_SIZE}</span>
                 ${button}
@@ -233,15 +254,18 @@ export default class DeckScreens {
         const custom = this.store.custom();
         const builtIn = this.store.all().filter(deck => deck.builtIn);
         $('deck-list').innerHTML = `${custom.map(row).join('')}${builtIn.map(row).join('')}`;
-        this.handlers.show('decks');
     }
 
     // ===== 編集 =====
 
     openEditor(deckId) {
-        this.deck = this.store.find(deckId);
-        this.untouched = null;
-        if (!this.deck) return this.showList();
+        const found = this.store.find(deckId);
+        if (!found) return this.showList();
+        this.shared = this.store.all().some(deck => deck.builtIn && deck.id === deckId);
+        this.deck = this.shared ? { id: found.id, name: found.name, cards: { ...found.cards } } : found;
+        this.untouched = this.shared ? JSON.stringify(this.deck) : null;
+        $('deck-delete').hidden = this.shared;
+        $('deck-reset').hidden = !(this.shared && found.edited);
         // 別のデッキを開いたときは、種類・検索・しぼりこみを初めの状態にもどす
         this.kind = 'pokemon';
         this.query = '';
@@ -257,10 +281,37 @@ export default class DeckScreens {
 
     change(next) {
         if (next === this.deck) return; // 足せない・減らせないときは何もしない
-        this.deck = this.store.save(next);
+        this.deck = this.shared ? next : this.store.save(next);
         // 一覧は描き直さず、枚数の印だけを変える（スクロールの位置を保ち、長い一覧でも重くしない）
         this.renderDeck();
         this.updatePoolMarks();
+    }
+
+    // ===== 共有デッキ =====
+
+    // 編集画面を出るとき：変えていればサーバーに保存してから then を呼ぶ（保存できなければ画面に残る）
+    leaveShared(then) {
+        if (JSON.stringify(this.deck) === this.untouched) return then();
+        const problem = deckProblem(this.deck);
+        if (problem) {
+            return showConfirm($('confirm'), {
+                title: `共有デッキは、遊べるデッキでないと保存できません（${escape(problem)}）。変えた内容を捨てますか？`,
+                yesLabel: '捨てる',
+                onYes: then
+            });
+        }
+        this.sendShared(() => saveSharedDeck(this.deck), '共有デッキを保存しました', then);
+    }
+
+    // サーバーへの保存・初期に戻すを送る。送っている間は、ボタンを押しても何もしない
+    sendShared(request, done, then) {
+        if (this.sending) return;
+        this.sending = true;
+        request().then(() => {
+            this.handlers.toast(done);
+            then();
+        }, error => this.handlers.toast(`サーバーに送れませんでした（${error.message}）`))
+            .finally(() => { this.sending = false; });
     }
 
     // ===== しぼりこみ =====

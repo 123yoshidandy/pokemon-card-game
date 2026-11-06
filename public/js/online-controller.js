@@ -11,7 +11,7 @@ import { DECKS, expandDeck } from './decks.js';
 const STORAGE_KEY = 'pokemon-card-game.online'; // 再接続に使う部屋番号とトークン
 const CPU_STEP_DELAY_MS = 650;                   // CPU の手は CPU 対戦と同じ間隔で順に見せる
 const RESPONSE_TIMEOUT_MS = 5000;                // 操作の返事がこれだけ来なければ、入り直して今の状態を受け取り直す
-const DEPLOYED_SERVER_URL = 'wss://9flzja5gdi.execute-api.ap-northeast-1.amazonaws.com/prod'; // スタック pokemon-card-game-online の WebSocketUrl
+export const DEPLOYED_SERVER_URL = 'wss://9flzja5gdi.execute-api.ap-northeast-1.amazonaws.com/prod'; // スタック pokemon-card-game-online の WebSocketUrl
 
 export function loadOnlineSession() {
     try {

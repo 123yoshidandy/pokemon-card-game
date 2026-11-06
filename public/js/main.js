@@ -15,12 +15,15 @@ import DeckScreens from './ui/deck-screen.js';
 import { cardFace } from './ui/card-view.js';
 import { unlockSound, toggleSound, isSoundOn } from './sound.js';
 import { closeOnBackdrop, showDeckPicker, showConfirm } from './ui/sheets.js';
+import { loadCachedSharedDecks, fetchSharedDecks } from './shared-decks.js';
 
 const $ = id => document.getElementById(id);
 const STORAGE_KEY = 'pokemon-card-game:settings';
 const SCENES = ['title', 'online', 'lobby', 'game', 'decks', 'editor'];
 const MAX_PLAYERS = 2;
 
+// 共有デッキ（構築済みデッキを誰かが変えた内容）は、前に受け取ったものを先に使い、起動したらサーバーから取り直す
+loadCachedSharedDecks();
 const settings = loadSettings();
 const deckStore = createDeckStore();
 const deckStats = createDeckStats();
@@ -468,6 +471,7 @@ document.addEventListener('contextmenu', event => {
 
 async function boot() {
     showTitle();
+    fetchSharedDecks().then(() => { if (scene === 'title') renderDeckSelect(); }, () => {});
     // 招待のURL（?room=部屋番号）で開いたら、その部屋に参加する
     const roomCode = NetplayClient.inviteRoomCode();
     if (roomCode) {

@@ -318,7 +318,6 @@ button { font: inherit; color: inherit; }
     flex: none;
 }
 .deck-row-name { flex: 1; font-weight: 700; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.deck-row-stats { font-size: 12px; color: var(--ink-dim); font-variant-numeric: tabular-nums; }
 .deck-row-count, .deck-count { font-weight: 800; font-variant-numeric: tabular-nums; }
 .incomplete { color: #ff9a8f; }
 

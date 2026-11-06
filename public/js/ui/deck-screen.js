@@ -53,7 +53,7 @@ function cardText(id) {
 }
 
 export default class DeckScreens {
-    // store：createDeckStore() / handlers：show(scene) / onDeleted(deckId) / onBack() / onTry(deckId) / toast(message) / statsOf(deckId)
+    // store：createDeckStore() / handlers：show(scene) / onDeleted(deckId) / onBack() / onTry(deckId) / toast(message)
     constructor(store, handlers) {
         this.store = store;
         this.handlers = handlers;
@@ -246,7 +246,6 @@ export default class DeckScreens {
             return `<li class="deck-row">
                 <span class="deck-row-name" ${deck.builtIn ? `data-view="${deck.id}"` : ''}>${escape(deck.name)}${deck.builtIn ? '<span class="deck-row-view">中身</span>' : ''}</span>
                 ${deck.builtIn ? `<span class="badge">共有</span>${deck.edited ? '<span class="badge badge-muted">変更あり</span>' : ''}` : ''}
-                <span class="deck-row-stats">${escape(this.handlers.statsOf?.(deck.id) ?? '')}</span>
                 <span class="deck-row-count ${problem ? 'incomplete' : ''}">${total}/${DECK_SIZE}</span>
                 ${button}
             </li>`;

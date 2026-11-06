@@ -1,7 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { addCard, removeCard, canAdd, totalCount, deckProblem, mainEnergyType, sortedEntries, CARD_POOL, deckToText, deckFromText } from '../public/js/deck-builder.js';
 import { createDeckStore } from '../public/js/deck-store.js';
-import { createDeckStats, statsText } from '../public/js/deck-stats.js';
 import { DECKS } from '../public/js/decks.js';
 import { TEST_DECKS } from './test-decks.js';
 import { getCard, CARDS, resolveCardId } from '../public/js/card-data.js';
@@ -168,25 +167,5 @@ describe('デッキの書き出しと取り込み', () => {
         const byName = Object.entries(cards).map(([id, count]) => [getCard(id).name, count]);
         expect(byName).toEqual([['ヒトカゲ', 4], ['リザード', 2], ['アローラ ゴローン', 1]]);
         expect(unknown).toEqual(['3 そんなカードはない', 'メモ']);
-    });
-});
-
-describe('デッキの戦績', () => {
-    it('勝ち・負け・引き分けを数えて保存し、読み直しても残る', () => {
-        const storage = memoryStorage();
-        const stats = createDeckStats(storage);
-        expect(stats.get('a')).toBeNull();
-        expect(statsText(stats.get('a'))).toBe('');
-        stats.record('a', 'win');
-        stats.record('a', 'win');
-        stats.record('a', 'loss');
-        expect(statsText(stats.get('a'))).toBe('2勝1敗');
-        stats.record('a', 'draw');
-        expect(statsText(createDeckStats(storage).get('a'))).toBe('2勝1敗1分');
-    });
-
-    it('壊れた保存は捨てる', () => {
-        expect(createDeckStats(memoryStorage({ 'pokemon-card-game:stats': '{壊れ' })).get('a')).toBeNull();
-        expect(createDeckStats(memoryStorage({ 'pokemon-card-game:stats': '[1]' })).get('0')).toBeNull();
     });
 });

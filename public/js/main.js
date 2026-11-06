@@ -5,7 +5,6 @@
 import { DECKS, expandDeck } from './decks.js';
 import { resolveCardId } from './card-data.js';
 import { createDeckStore } from './deck-store.js';
-import { createDeckStats, statsText } from './deck-stats.js';
 import { deckProblem, mainEnergyType } from './deck-builder.js';
 import LocalGameController, { loadSavedCpuGame } from './game-controller.js';
 import OnlineGameController, { loadOnlineSession } from './online-controller.js';
@@ -26,7 +25,12 @@ const MAX_PLAYERS = 2;
 loadCachedSharedDecks();
 const settings = loadSettings();
 const deckStore = createDeckStore();
-const deckStats = createDeckStats();
+// 戦績は記録しなくなったので、前に保存した分を消す
+try {
+    localStorage.removeItem('pokemon-card-game:stats');
+} catch {
+    // 保存できない環境では何もしない
+}
 let scene = 'title';
 let deckReturnScene = 'title'; // デッキ構築から戻る先（開始画面かロビー）
 let online = null;      // オンライン対戦のコントローラー（部屋に入っている間）
@@ -46,33 +50,9 @@ const screen = new GameScreen({
             ...(tryingDeckId ? [{ label: 'デッキ編集', onClick: () => { screen.stop(); deckScreens.openEditor(tryingDeckId); } }] : [{ label: 'ホーム', onClick: () => showTitle() }]),
             { label: '再戦', primary: true, onClick: () => startCpuGame() }
         ]),
-    // オンラインでホストでなければ再戦の案内、そうでなければ使ったデッキの通算の戦績
-    // 使ったデッキの通算の戦績。オンラインでホストでなければ、再戦の案内も添える
-    resultNote: () => [
-        isOnlineGame() && !online.isHost() ? 'ホストが「もう一度」を押すと再戦します' : '',
-        `${escapeHtml(selectedDeck().name)} ${statsText(deckStats.get(selectedDeck().id))}`
-    ].filter(Boolean).join('<br>'),
-    // 決着したら、使ったデッキの戦績を記録する
-    onEnd: view => {
-        if (view.viewerId === null || view.viewerId === undefined) return;
-        // 同じ対戦は1回だけ数える（オンラインで決着のあとに読み直したとき、決着がもう一度届くため）
-        const key = isOnlineGame() ? `online:${online?.lobby?.roomCode}:${matchId}` : `cpu:${screen.controller?.options?.seed}`;
-        if (alreadyCounted(key)) return;
-        deckStats.record(selectedDeck().id, view.winner === 'draw' ? 'draw' : view.winner === view.viewerId ? 'win' : 'loss');
-    }
+    // オンラインでホストでなければ、再戦の案内
+    resultNote: () => (isOnlineGame() && !online.isHost() ? 'ホストが「もう一度」を押すと再戦します' : '')
 });
-
-// 戦績を数えた対戦の印（タブを閉じるまで覚えておく）
-function alreadyCounted(key) {
-    try {
-        const counted = JSON.parse(sessionStorage.getItem('pokemon-card-game:counted') ?? '[]');
-        if (counted.includes(key)) return true;
-        sessionStorage.setItem('pokemon-card-game:counted', JSON.stringify([...counted, key].slice(-50)));
-    } catch {
-        // 覚えられない環境では、そのまま数える
-    }
-    return false;
-}
 
 // ===== 設定 =====
 
@@ -113,13 +93,11 @@ function selectedCpuDeck() {
 const deckScreens = new DeckScreens(deckStore, {
     show: next => setScene(next),
     onDeleted: deckId => {
-        deckStats.remove(deckId);
         if (settings.cpuDeckId === deckId) settings.cpuDeckId = '';
         if (settings.deckId === deckId) settings.deckId = DECKS[0].id;
         saveSettings();
     },
     toast: message => toast(message),
-    statsOf: deckId => statsText(deckStats.get(deckId)),
     // デッキ編集の「CPU と試す」：そのデッキを選んで、CPU 戦を始める
     onTry: deckId => {
         settings.deckId = deckId;

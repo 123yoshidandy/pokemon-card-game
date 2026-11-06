@@ -1290,6 +1290,9 @@ dialog button:focus { outline: none; }
     60% { transform: scale(1.06); opacity: 1; }
 }
 /* エネルギー：印が飛ぶ（位置は JS が transform で動かす） */
+/* 飛ぶカード（引く・サイドを取る・トラッシュへ送る・ベンチに出す）。位置は animator.js が transform で動かす */
+.fx-fly { left: 0; top: 0; filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5)); will-change: transform; }
+.fx-fly > * { width: 100%; height: 100%; }
 .fx-energy { left: 0; top: 0; margin: -9px 0 0 -9px; }
 .fx-energy .energy, .fx-energy-dot { display: block; width: 18px; height: 18px; border-radius: 50%; box-shadow: 0 0 8px rgba(255, 255, 255, 0.7); }
 .fx-energy-dot { background: #ddd; }

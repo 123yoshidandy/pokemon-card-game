@@ -474,17 +474,17 @@ export default class GameScreen {
         // オンラインで接続が切れているプレイヤーは、名前の横に「切断中」
         const offline = this.disconnected?.has(player.id) ? '<span class="info-offline">切断中</span>' : '';
         // 山札・トラッシュは、小さなカードの山で描く（山札は裏、トラッシュはいちばん上のカード）
-        const pile = (label, card, count, { attr = '', countClass = '' } = {}) => {
+        const pile = (kind, label, card, count, { attr = '', countClass = '' } = {}) => {
             const tag = attr ? 'button' : 'div';
-            return `<${tag} ${attr ? 'type="button"' : ''} class="pile ${attr ? 'pile-button' : ''}" ${attr}>
+            return `<${tag} ${attr ? 'type="button"' : ''} class="pile pile-${kind} ${attr ? 'pile-button' : ''}" ${attr}>
                 <span class="pile-card ${count ? '' : 'pile-empty'}">${count ? card : ''}</span>
                 <span class="pile-count ${countClass}">${count}</span><span class="pile-label">${label}</span></${tag}>`;
         };
         const top = player.discard.at(-1);
         return `<div class="info-name"><span class="info-player">${escapeHtml(player.name)}</span>${offline}<span class="info-hand">手札 ${player.handCount}</span></div>
             <div class="piles">
-                ${pile('山札', cardBack(), player.deckCount, { countClass: player.deckCount <= 5 ? 'deck-low' : '' })}
-                ${pile('トラッシュ', top ? cardFace(top.id) : '', player.discard.length, { attr: 'data-discard' })}
+                ${pile('deck', '山札', cardBack(), player.deckCount, { countClass: player.deckCount <= 5 ? 'deck-low' : '' })}
+                ${pile('discard', 'トラッシュ', top ? cardFace(top.id) : '', player.discard.length, { attr: 'data-discard' })}
             </div>`;
     }
 

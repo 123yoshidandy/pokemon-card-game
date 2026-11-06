@@ -21,7 +21,7 @@ describe('演出のための出来事（events）', () => {
             lastSeq = seq;
             expect(game.events.length).toBeLessThanOrEqual(40);
         }
-        expect([...seen]).toEqual(expect.arrayContaining(['attack', 'trainer', 'energy', 'knockout', 'bench']));
+        expect([...seen]).toEqual(expect.arrayContaining(['attack', 'trainer', 'energy', 'knockout', 'bench', 'draw', 'prize']));
         const replayed = Game.replay(CPU_PLAYERS, options, game.commands);
         expect(replayed.events).toEqual(game.events);
         expect(createGameView(game, 0).events).toEqual(game.events);

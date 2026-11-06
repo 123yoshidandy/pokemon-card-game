@@ -3,10 +3,18 @@
  * 描き直しで場の要素が作り直されても困らないように、演出は描き直したあとの要素か、#fx の上の複製で行う
  */
 
-import { cardFace, energyDot } from './card-view.js';
+import { cardFace, cardBack, energyDot } from './card-view.js';
+import { getCard } from '../card-data.js';
 import { playEffect } from '../sound.js';
 
 const STAGGER_MS = 160; // 同時に届いた出来事を、少しずつずらして見せる
+const MAX_FLY_W = 110; // 飛ぶカードの幅の上限
+
+const sideOf = mine => (mine ? '#my' : '#opp');
+// 手札へ飛ぶカードの行き先：自分は手札の最後のカード（なければ手札の欄）、相手は情報の欄の手札の枚数
+const handTarget = mine => (mine ? document.querySelector('#hand .hand-card:last-child') ?? document.querySelector('#hand') : document.querySelector('#opp-info .info-hand'));
+// 要素の中心に、要素の中心を合わせる transform
+const centerAt = rect => `translate(${rect.left + rect.width / 2}px, ${rect.top + rect.height / 2}px) translate(-50%, -50%)`;
 
 const reducedMotion = () => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
@@ -70,27 +78,83 @@ export default class Animator {
         playEffect(event.type === 'coin' ? (event.heads ? 'coinHeads' : 'coinTails') : event.type, { mine });
         if (reducedMotion()) return;
         switch (event.type) {
-            case 'trainer': return this.reveal(event.card);
+            case 'trainer': return this.reveal(event.card, mine);
             case 'attack': return this.attack(event, mine);
             case 'knockout': return this.knockout(tiles.get(event.pokemon));
             case 'bench':
-            case 'evolve':
+            case 'evolve': return this.arrive(event.pokemon, mine);
             case 'switch': return this.pulse(event.pokemon, 'fx-pop');
             case 'coin': return this.coin(event.heads, slot);
-            case 'prize': return this.glow(mine ? '#my-prizes' : '#opp-prizes');
+            case 'prize': return this.takePrizes(event.count, mine);
+            case 'draw': return this.drawCards(event.count, mine);
             case 'energy': return this.energy(event, mine);
             default: return null;
         }
     }
 
-    // 使ったトレーナーズを、盤面に一瞬大きく見せる
-    reveal(cardId) {
+    // 使ったトレーナーズを、盤面に一瞬大きく見せてから、トラッシュ（スタジアムは場）へ送る。どうぐはポケモンにつくので送らない
+    reveal(cardId, mine) {
         const field = localRect(document.querySelector('#game-screen .field'));
         if (!field) return;
         const element = this.add('fx-reveal', cardFace(cardId));
         // 中央の帯の文（相手の番は、いま何をしたか）と重ならないよう、右寄りに出す
         element.style.left = `${field.left + field.width * 0.8}px`;
         element.style.top = `${field.top + field.height / 2}px`;
+        const type = getCard(cardId)?.trainerType;
+        const to = type === 'stadium' ? '#stadium' : type === 'item' || type === 'supporter' ? `${sideOf(mine)}-info .pile-discard .pile-card` : null;
+        if (to) this.fly(element, to, cardFace(cardId), { delay: 700, duration: 380 });
+    }
+
+    // 山札から引く：裏のカードが、山札から手札へ1枚ずつ飛ぶ
+    drawCards(count, mine) {
+        for (let i = 0; i < Math.min(count, 7); i++) {
+            this.fly(`${sideOf(mine)}-info .pile-deck .pile-card`, handTarget(mine), cardBack(), { delay: i * 90, fadeOut: !mine });
+        }
+    }
+
+    // サイドを取る：置き場を光らせ、取った枚数の裏のカードを手札へ飛ばす
+    takePrizes(count, mine) {
+        this.glow(`${sideOf(mine)}-prizes`);
+        for (let i = 0; i < Math.min(count, 3); i++) {
+            this.fly(`${sideOf(mine)}-prizes .prize-taken`, handTarget(mine), cardBack(), { delay: 150 + i * 120, fadeOut: !mine });
+        }
+    }
+
+    // ベンチに出す・進化：手札の側から、そのポケモンが場所まで飛んできて弾む（飛んでいるあいだ、場の本物は隠す）
+    arrive(pokemonId, mine) {
+        const slot = this.pokemonElement(pokemonId)?.closest('.slot');
+        const from = localRect(document.querySelector(mine ? '#hand' : '#opp-info .info-hand'));
+        const to = localRect(slot);
+        if (!slot || !from || !to) return this.pulse(pokemonId, 'fx-pop');
+        const element = this.add('fx-fly', slot.innerHTML);
+        Object.assign(element.style, { width: `${to.width}px`, height: `${to.height}px` });
+        slot.style.visibility = 'hidden';
+        const show = () => {
+            slot.style.visibility = '';
+            this.pulse(pokemonId, 'fx-pop');
+        };
+        element.animate([
+            { transform: `${centerAt(from)} scale(0.35)`, opacity: 0.6 },
+            { transform: `${centerAt(to)} scale(1)`, opacity: 1 }
+        ], { duration: 360, easing: 'cubic-bezier(0.3, 0, 0.2, 1)' }).finished.then(() => { element.remove(); show(); }, () => { element.remove(); show(); });
+    }
+
+    // カードの移動：from の要素から to の要素へ、カード（html）が飛ぶ。大きさは from の幅から to の幅へ変える（どちらも MAX_FLY_W まで）
+    // from・to は要素か、セレクター（飛ばす時に探す。描き直しで要素が作り直されても困らないように）
+    fly(from, to, html, { delay = 0, duration = 440, fadeOut = false } = {}) {
+        this.later(() => {
+            const a = localRect(typeof from === 'string' ? document.querySelector(from) : from);
+            const b = localRect(typeof to === 'string' ? document.querySelector(to) : to);
+            if (!a || !b) return;
+            const startW = Math.min(a.width, MAX_FLY_W);
+            const endW = Math.min(b.width, MAX_FLY_W);
+            const element = this.add('fx-fly', html);
+            element.style.width = `${startW}px`;
+            element.animate([
+                { transform: `${centerAt(a)} scale(1)`, opacity: 0.95 },
+                { transform: `${centerAt(b)} scale(${endW / startW})`, opacity: fadeOut ? 0 : 1 }
+            ], { duration, easing: 'cubic-bezier(0.4, 0, 0.2, 1)' }).finished.then(() => element.remove(), () => element.remove());
+        }, delay);
     }
 
     // コイン：盤面の中央で回り、オモテかウラで止まる（何枚もなら横に並べる）

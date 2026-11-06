@@ -1444,6 +1444,7 @@ export default class Game {
         if (!silent && drawn.length > 0) {
             this.log(`${player.name}はカードを${drawn.length}枚引いた`);
             this.log(`${drawn.map(inst => this.cardName(inst)).join('・')}を引いた`, { to: player.id });
+            this.event('draw', { player: player.id, count: drawn.length });
         }
         return drawn.length;
     }

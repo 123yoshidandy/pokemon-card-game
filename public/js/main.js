@@ -441,6 +441,32 @@ $('sound-toggle').addEventListener('click', () => {
     renderSoundToggle();
 });
 renderSoundToggle();
+// 縦向きのスマホは、画面を回して描くだけだと、キーボードが縦に出る。できる端末（Android）では、端末の向きを横に固定する
+// ホーム画面のアプリならそのまま固定できる。ブラウザでは全画面のときだけ固定できるので、全画面にしてから固定する
+// 自分で全画面を抜けたら、もう試さない（触るたびに全画面に戻らないように）。iOS は固定できないので、回して描くだけ
+let landscapeGivenUp = false;
+let enteredFullscreen = false;
+async function lockLandscape() {
+    if (landscapeGivenUp || !window.screen.orientation?.lock || !matchMedia('(orientation: portrait) and (pointer: coarse)').matches) return;
+    try {
+        await window.screen.orientation.lock('landscape');
+        return;
+    } catch {
+        // 全画面でないと固定できない
+    }
+    if (!document.documentElement.requestFullscreen || document.fullscreenElement) return;
+    try {
+        await document.documentElement.requestFullscreen({ navigationUI: 'hide' });
+        enteredFullscreen = true;
+        await window.screen.orientation.lock('landscape');
+    } catch {
+        landscapeGivenUp = true; // 固定できない端末
+    }
+}
+document.addEventListener('pointerup', lockLandscape);
+document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement && enteredFullscreen) landscapeGivenUp = true;
+});
 // 画面を拡大させない（ふつうは style.css の touch-action で止まる。古い iOS は2本指の操作を止める）
 // touchmove は止めない（passive でない touchmove があると、スクロールの始まりが遅れるため）
 document.addEventListener('gesturestart', event => event.preventDefault());

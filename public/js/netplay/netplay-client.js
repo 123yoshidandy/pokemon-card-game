@@ -1,4 +1,4 @@
-// netplay-kit 1.6.0（ba24517）からコピーしたファイル。ここでは直さず、netplay-kit で直してから同期する
+// netplay-kit 1.8.0（0eaab02）からコピーしたファイル。ここでは直さず、netplay-kit で直してから同期する
 /**
  * オンライン対戦のサーバーとの通信（画面側、ゲームに共通の部分）
  * 接続・再接続・参加情報の保存・ping・時計のずれの補正・送信・招待URL・イベント通知を行う。画面の描画はしない
@@ -10,7 +10,8 @@
  *   net.on('lobby', (lobby) => ...);       // 部屋の状態（対戦中も、参加者が変わるたびに届く）
  *   net.on('state', (state) => ...);       // 自分のビュー（CPU の手は cpuStepDelayMs ごとに順に届く）
  *   net.on('relay', (message) => ...);     // ゲーム独自のメッセージは type 名で受け取る
- *   await net.createRoom('あお');
+ *   await net.createRoom('あお');                       // { public: true } で公開の部屋にする
+ *   const rooms = await net.listRooms();               // 入れる公開の部屋の一覧
  *   net.send('solved', { round: 1 });
  */
 
@@ -19,12 +20,14 @@
     const DEFAULT_RECONNECT_DELAY_MS = 2000;
     const LEAVE_TIMEOUT_MS = 1500;                   // 退出の返事を待つ時間（届かなくても片付ける）
     const JOIN_TIMEOUT_MS = 10000;                   // enterRoom が参加の返事を待つ時間
+    const LIST_TIMEOUT_MS = 10000;                   // listRooms が一覧の返事を待つ時間
     const DEFAULT_SYNC_IDLE_MS = 10000;              // 部屋にいて lobby・state がこの間届かなければ、版を添えた ping で取りこぼしを確かめる
 
     class NetplayClient {
         // serverUrl: 接続先（NetplayClient.resolveServerUrl で決めるとよい）
         // storageKey: 参加情報を保存する localStorage のキー（ゲームごとに変える）
         // cpuStepDelayMs: cpu: true の state を、この間隔で順に届ける（0 ならすぐ届ける）
+        //   手ごとに変えるなら (next, previous) => ms を渡す（next はこれから見せる state、previous は直前に見せた state か null）
         // syncIdleMs: 部屋にいて lobby・state がこの間届かなければ、取りこぼしがないかサーバーに確かめる（0 なら確かめない）
         constructor({ serverUrl, storageKey, pingIntervalMs = DEFAULT_PING_INTERVAL_MS, syncIdleMs = DEFAULT_SYNC_IDLE_MS,
             reconnectDelayMs = DEFAULT_RECONNECT_DELAY_MS, cpuStepDelayMs = 0, roomParam = 'room', keepParams = ['server'] } = {}) {
@@ -48,6 +51,8 @@
             this.stateQueue = [];
             this.stateTimer = null;
             this.lastStateAt = 0;
+            this.lastState = null;             // 直前に見せた state（cpuStepDelayMs が関数のときに渡す）
+            this.nextDelay = null;             // 次の CPU の手を待たせる時間（関数は1手に1回だけ呼ぶ）
             this.pingTimer = null;
             this.syncTimer = null;
             this.reconnectTimer = null;
@@ -202,10 +207,31 @@
 
         // ===== 部屋の操作 =====
 
-        async createRoom(name) {
+        // { public: true } で公開の部屋にする（listRooms の一覧に載り、部屋番号を知らない人も入れる）
+        async createRoom(name, { public: isPublic = false } = {}) {
             await this.ensureConnected();
             this.pendingName = name;
-            return this.request({ action: 'create', name });
+            return this.request({ action: 'create', name, ...(isPublic ? { public: true } : {}) });
+        }
+
+        // 入れる公開の部屋の一覧を取る。[{ roomCode, hostName, players, maxPlayers, settings, createdAt }] で resolve する
+        // 入るときは、roomCode を enterRoom・joinRoom に渡す
+        async listRooms({ timeoutMs = LIST_TIMEOUT_MS } = {}) {
+            await this.ensureConnected();
+            return new Promise((resolve, reject) => {
+                const listError = (message, code) => Object.assign(new Error(message), { code });
+                const done = (error, rooms) => {
+                    offs.forEach(off => off());
+                    clearTimeout(timer);
+                    if (error) reject(error); else resolve(rooms);
+                };
+                const offs = [
+                    this.on('rooms', message => done(null, message.rooms ?? [])),
+                    this.on('connection', open => { if (!open) done(listError('サーバーとの接続が切れました', 'disconnected')); })
+                ];
+                const timer = setTimeout(() => done(listError('サーバーから返事がありません', 'timeout')), timeoutMs);
+                if (!this.request({ action: 'listRooms' })) done(listError('サーバーに接続できませんでした', 'not_connected'));
+            });
         }
 
         // 同じ部屋に入ったことがあれば、その席に戻る
@@ -417,7 +443,7 @@
         playStates() {
             if (this.stateTimer || this.stateQueue.length === 0) return;
             const next = this.stateQueue[0];
-            const wait = next.cpu ? this.lastStateAt + this.cpuStepDelayMs - Date.now() : 0;
+            const wait = next.cpu ? this.lastStateAt + this.stepDelay(next) - Date.now() : 0;
             if (wait > 0) {
                 this.stateTimer = setTimeout(() => {
                     this.stateTimer = null;
@@ -432,15 +458,27 @@
                 this.emit('message', next);
             } else {
                 this.lastStateAt = Date.now();
+                this.lastState = next;
                 this.emit('state', next);
             }
             this.playStates();
+        }
+
+        // 関数なら、同じ手には同じ値を使う（待つあいだにタイマーで求め直しても、乱数の値が変わらないように）
+        stepDelay(next) {
+            if (typeof this.cpuStepDelayMs !== 'function') return this.cpuStepDelayMs;
+            if (this.nextDelay?.message !== next) {
+                this.nextDelay = { message: next, ms: Number(this.cpuStepDelayMs(next, this.lastState)) || 0 };
+            }
+            return this.nextDelay.ms;
         }
 
         clearStates() {
             clearTimeout(this.stateTimer);
             this.stateTimer = null;
             this.stateQueue = [];
+            this.lastState = null;
+            this.nextDelay = null;
         }
 
         // ===== 招待URL =====

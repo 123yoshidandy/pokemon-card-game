@@ -5,5 +5,15 @@
 
 import { startDevServer } from './netplay/dev-server.js';
 import game from './src/game-definition.js';
+import { createSharedDecks, parseSharedDeckMessage, MemorySharedDeckStore } from './src/shared-decks.js';
 
-startDevServer(game);
+const { service } = startDevServer(game);
+
+// 共有デッキの操作は、部屋の処理に渡す前に答える（src/handler.js と同じ）
+const sharedDecks = createSharedDecks(new MemorySharedDeckStore());
+const handleRoomMessage = service.handleRaw.bind(service);
+service.handleRaw = async (connectionId, raw) => {
+    const message = parseSharedDeckMessage(raw);
+    if (!message) return handleRoomMessage(connectionId, raw);
+    await service.send(connectionId, await sharedDecks(message));
+};

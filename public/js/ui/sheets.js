@@ -25,14 +25,21 @@ function open(dialog) {
 // ===== 選択 =====
 
 // prompt はビューの prompt。onAnswer(answer) / onPeek()（盤面を見るために一時的に閉じる） / onDetail(cardId)
-// 山札から探すときは、カードを種類の順（デッキ構築の一覧と同じ）に並べて見せる。答えの番号は元の順のまま
-function pickOrder(prompt) {
-    const indices = prompt.cards.map((_, index) => index);
-    if (!String(prompt.purpose ?? '').startsWith('search')) return indices;
-    return indices.sort((a, b) => cardOrder(prompt.cards[a].id) - cardOrder(prompt.cards[b].id) || a - b);
+// 選ぶカードを、種類の順（デッキ構築の一覧と同じ）に並べ、同じカードは1つにまとめる。答えの番号は元の順のまま
+function pickGroups(prompt) {
+    const indices = prompt.cards.map((_, index) => index)
+        .sort((a, b) => cardOrder(prompt.cards[a].id) - cardOrder(prompt.cards[b].id) || a - b);
+    const groups = [];
+    for (const index of indices) {
+        const last = groups.at(-1);
+        if (last && prompt.cards[last[0]].id === prompt.cards[index].id) last.push(index);
+        else groups.push([index]);
+    }
+    return groups;
 }
 
 export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
+    const groups = prompt.cards ? pickGroups(prompt) : [];
     dialog.dataset.closable = 'false';
     dialog.dataset.promptId = prompt.id;
     const selected = new Set();
@@ -48,13 +55,18 @@ export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
     } else {
         const count = prompt.min === prompt.max ? `${prompt.max}枚` : `${prompt.min ? `${prompt.min}〜` : ''}${prompt.max}枚まで`;
         dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">${escapeHtml(prompt.title)}<span class="prompt-count">${count}</span></h2>
-            <div class="prompt-cards">${pickOrder(prompt).map(index => `<button type="button" class="pick" data-index="${index}">${cardFace(prompt.cards[index].id)}</button>`).join('')}</div></div>
+            <div class="prompt-cards">${groups.map((group, g) => `<button type="button" class="pick" data-group="${g}">${cardFace(prompt.cards[group[0]].id)}${group.length > 1 ? `<span class="pool-count pick-total">×${group.length}</span><span class="pick-picked"></span>` : ''}</button>`).join('')}</div></div>
             <div class="sheet-actions">${peek}<button type="button" class="btn btn-primary" data-submit>決定</button></div>`;
     }
 
     const submit = dialog.querySelector('[data-submit]');
     const refresh = () => {
-        dialog.querySelectorAll('.pick').forEach(button => button.classList.toggle('selected', selected.has(Number(button.dataset.index))));
+        dialog.querySelectorAll('.pick').forEach(button => {
+            const picked = groups[Number(button.dataset.group)].filter(index => selected.has(index)).length;
+            button.classList.toggle('selected', picked > 0);
+            const badge = button.querySelector('.pick-picked');
+            if (badge) badge.textContent = picked ? `${picked}枚` : '';
+        });
         if (submit) submit.disabled = selected.size < prompt.min || selected.size > prompt.max;
     };
     refresh();
@@ -77,16 +89,22 @@ export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
     const grid = dialog.querySelector('.prompt-cards');
     if (grid) {
         bindPress(grid, '.pick', {
+            // タップするたびに、まとめたカードから1枚ずつ選ぶ。全部選んだら（またはもう選べないなら）外す
             onTap: button => {
-                const index = Number(button.dataset.index);
-                if (selected.has(index)) selected.delete(index);
-                else {
-                    if (prompt.max === 1) selected.clear();
-                    if (selected.size < prompt.max) selected.add(index);
+                const group = groups[Number(button.dataset.group)];
+                const next = group.find(index => !selected.has(index));
+                if (prompt.max === 1) {
+                    const had = group.some(index => selected.has(index));
+                    selected.clear();
+                    if (!had) selected.add(group[0]);
+                } else if (next !== undefined && selected.size < prompt.max) {
+                    selected.add(next);
+                } else {
+                    group.forEach(index => selected.delete(index));
                 }
                 refresh();
             },
-            onLongPress: button => onDetail(prompt.cards[Number(button.dataset.index)].id)
+            onLongPress: button => onDetail(prompt.cards[groups[Number(button.dataset.group)][0]].id)
         });
     }
     open(dialog);

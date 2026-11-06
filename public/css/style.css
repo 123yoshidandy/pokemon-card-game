@@ -1424,3 +1424,7 @@ dialog button:focus { outline: none; }
 .pile-count.deck-low { color: #ff6b5e; }
 .pile-label { font-size: 9px; color: var(--ink-dim); white-space: nowrap; }
 .pile-count.has-faceup::after { content: ""; position: absolute; top: -2px; right: -3px; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+
+/* 選択のダイアログで、まとめたカードの選んだ枚数 */
+.pick-total { top: auto; bottom: 30%; left: auto; right: 6%; }
+.pick-picked:not(:empty) { position: absolute; top: 6%; left: 6%; z-index: 2; padding: 0 5px; border-radius: 999px; background: var(--gold); color: var(--bg-1); font-size: 12px; font-weight: 900; line-height: 18px; }

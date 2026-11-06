@@ -5,5 +5,6 @@ stack_name = "pokemon-card-game-online"
 region = "ap-northeast-1"
 capabilities = "CAPABILITY_IAM"
 resolve_s3 = true
+s3_prefix = "pokemon-card-game-online"
 confirm_changeset = true
 parameter_overrides = "AppName=pokemon-card-game ThrottlingRateLimit=10 ThrottlingBurstLimit=20"

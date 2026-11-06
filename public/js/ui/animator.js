@@ -10,6 +10,16 @@ const STAGGER_MS = 160; // 同時に届いた出来事を、少しずつずら�
 
 const reducedMotion = () => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
+// 縦向きのスマホでは、body ごと時計回りに90度回して描く（style.css）。
+// #fx は body の中にあるので、画面の上の位置を、回す前の body の中の位置に直して使う
+const rotated = () => window.matchMedia?.('(orientation: portrait) and (pointer: coarse)').matches;
+function localRect(element) {
+    if (!element) return null;
+    const rect = element.getBoundingClientRect();
+    if (!rotated()) return rect;
+    return { left: rect.top, top: window.innerWidth - rect.right, width: rect.height, height: rect.width };
+}
+
 export default class Animator {
     constructor(layer) {
         this.layer = layer;
@@ -33,7 +43,7 @@ export default class Animator {
         const fresh = this.lastSeq !== null && (view?.events ?? []).some(event => event.seq > this.lastSeq && event.type === 'knockout');
         if (!fresh) return;
         this.tiles = new Map([...document.querySelectorAll('#game-screen .slot [data-pokemon]')]
-            .map(element => [element.dataset.pokemon, { rect: element.getBoundingClientRect(), html: element.outerHTML }]));
+            .map(element => [element.dataset.pokemon, { rect: localRect(element), html: element.outerHTML }]));
     }
 
     // 描き直したあとに呼ぶ。開いた直後（途中から見始めたとき）は、それまでの出来事を再生しない
@@ -75,7 +85,7 @@ export default class Animator {
 
     // 使ったトレーナーズを、盤面に一瞬大きく見せる
     reveal(cardId) {
-        const field = document.querySelector('#game-screen .field')?.getBoundingClientRect();
+        const field = localRect(document.querySelector('#game-screen .field'));
         if (!field) return;
         const element = this.add('fx-reveal', cardFace(cardId));
         // 中央の帯の文（相手の番は、いま何をしたか）と重ならないよう、右寄りに出す
@@ -85,7 +95,7 @@ export default class Animator {
 
     // コイン：盤面の中央で回り、オモテかウラで止まる（何枚もなら横に並べる）
     coin(heads, slot) {
-        const field = document.querySelector('#game-screen .field')?.getBoundingClientRect();
+        const field = localRect(document.querySelector('#game-screen .field'));
         if (!field) return;
         const element = this.add(`fx-coin ${heads ? 'heads' : 'tails'}`, `<span>${heads ? 'オモテ' : 'ウラ'}</span>`);
         element.style.left = `${field.left + field.width / 2 + (slot % 5) * 64}px`;
@@ -119,8 +129,8 @@ export default class Animator {
 
     // エネルギー：手札の側（相手なら相手の情報の欄）から、つけたポケモンへ印が飛ぶ
     energy(event, mine) {
-        const target = this.pokemonElement(event.pokemon)?.getBoundingClientRect();
-        const from = document.querySelector(mine ? '#hand' : '#opp-info')?.getBoundingClientRect();
+        const target = localRect(this.pokemonElement(event.pokemon));
+        const from = localRect(document.querySelector(mine ? '#hand' : '#opp-info'));
         if (!target || !from) return;
         const element = this.add('fx-energy', event.energyType ? energyDot(event.energyType) : '<span class="fx-energy-dot"></span>');
         const start = { x: from.left + from.width / 2, y: from.top + from.height / 2 };

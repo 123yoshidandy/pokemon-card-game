@@ -11,9 +11,12 @@
     --blue: #3a6fd8;
     --blue-dark: #284f9e;
     --sheet: #1c2a48;
+    /* 画面の縦横（縦向きのスマホでは、横向きに回して描くので入れ替える） */
+    --app-w: 100vw;
+    --app-h: 100dvh;
     --bar-h: 34px;
-    --dock-h: clamp(78px, 22dvh, 128px);
-    --panel-w: clamp(132px, 21vw, 200px);
+    --dock-h: clamp(78px, calc(var(--app-h) * 0.22), 128px);
+    --panel-w: clamp(132px, calc(var(--app-w) * 0.21), 200px);
     --safe-l: env(safe-area-inset-left, 0px);
     --safe-r: env(safe-area-inset-right, 0px);
     --safe-b: env(safe-area-inset-bottom, 0px);
@@ -38,7 +41,7 @@ html, body {
 }
 
 body {
-    height: 100dvh;
+    height: var(--app-h);
     overflow: hidden;
     background:
         radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 1.5px) 0 0 / 18px 18px,
@@ -59,7 +62,7 @@ button { font: inherit; color: inherit; }
 [hidden] { display: none !important; }
 
 .screen {
-    height: 100dvh;
+    height: var(--app-h);
     touch-action: manipulation;
 }
 
@@ -107,11 +110,11 @@ button { font: inherit; color: inherit; }
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(8px, 2.5dvh, 18px);
+    gap: clamp(8px, calc(var(--app-h) * 0.025), 18px);
 }
 .title-logo {
     margin: 0;
-    font-size: clamp(26px, 8dvh, 52px);
+    font-size: clamp(26px, calc(var(--app-h) * 0.08), 52px);
     font-weight: 800;
     letter-spacing: 0.02em;
     color: var(--gold);
@@ -119,9 +122,9 @@ button { font: inherit; color: inherit; }
 }
 .title-art {
     position: relative;
-    width: clamp(160px, 46dvh, 300px);
-    height: clamp(96px, 30dvh, 200px);
-    margin-bottom: clamp(4px, 3dvh, 18px); /* 回したカードの端が、下のボタンに重ならないように */
+    width: clamp(160px, calc(var(--app-h) * 0.46), 300px);
+    height: clamp(96px, calc(var(--app-h) * 0.3), 200px);
+    margin-bottom: clamp(4px, calc(var(--app-h) * 0.03), 18px); /* 回したカードの端が、下のボタンに重ならないように */
 }
 .fan {
     position: absolute;
@@ -182,7 +185,7 @@ button { font: inherit; color: inherit; }
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(8px, 2.5dvh, 14px);
+    gap: clamp(8px, calc(var(--app-h) * 0.025), 14px);
     width: min(440px, 100%);
 }
 .panel-title { margin: 0; font-size: 20px; font-weight: 800; }
@@ -328,7 +331,7 @@ button { font: inherit; color: inherit; }
 
 .editor {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) clamp(180px, 30vw, 280px);
+    grid-template-columns: minmax(0, 1fr) clamp(180px, calc(var(--app-w) * 0.3), 280px);
     min-height: 0;
 }
 .pool-wrap {
@@ -409,7 +412,7 @@ button { font: inherit; color: inherit; }
 .pool-note-clear { margin-left: 8px; vertical-align: middle; }
 .pool {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(clamp(64px, 13dvh, 96px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(clamp(64px, calc(var(--app-h) * 0.13), 96px), 1fr));
     align-content: start;
     gap: 6px;
     overflow-y: auto;
@@ -528,7 +531,7 @@ button { font: inherit; color: inherit; }
     pointer-events: none; /* 下のボタンを押せなくしない */
     transform: translateX(-50%);
     z-index: 10;
-    max-width: calc(100vw - 32px);
+    max-width: calc(var(--app-w) - 32px);
     padding: 8px 16px;
     border-radius: 10px;
     background: rgba(10, 16, 30, 0.92);
@@ -1019,8 +1022,8 @@ dialog.sheet {
     border-radius: 16px;
     background: var(--sheet);
     color: var(--ink);
-    width: min(560px, calc(100vw - 24px));
-    max-height: calc(100dvh - 20px);
+    width: min(560px, calc(var(--app-w) - 24px));
+    max-height: calc(var(--app-h) - 20px);
     display: flex;
     flex-direction: column;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
@@ -1114,8 +1117,8 @@ dialog button:focus { outline: none; }
 .result-body { text-align: center; padding-top: 20px; }
 .result-title { font-size: 30px !important; color: var(--gold); }
 .result .sheet-actions { justify-content: center; }
-.rules { width: min(640px, calc(100vw - 24px)); }
-.games { width: min(600px, calc(100vw - 24px)); }
+.rules { width: min(640px, calc(var(--app-w) - 24px)); }
+.games { width: min(600px, calc(var(--app-w) - 24px)); }
 .sheet-body .game-links { list-style: none; padding: 0; margin: 8px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 8px; }
 .game-links a { display: grid; gap: 2px; padding: 8px 10px; border-radius: 10px; background: rgba(255, 255, 255, 0.06); color: var(--ink); text-decoration: none; }
 .game-links a:hover, .game-links a:focus-visible { background: rgba(255, 255, 255, 0.12); }
@@ -1124,7 +1127,7 @@ dialog button:focus { outline: none; }
 
 /* ===== 低い横画面 ===== */
 
-@media (max-height: 420px) {
+@media (max-height: 420px), (orientation: portrait) and (pointer: coarse) and (max-width: 420px) {
     :root { --bar-h: 30px; }
     .btn { padding: 8px 18px; font-size: 14px; }
     .sheet-body { padding: 10px 14px 6px; }
@@ -1136,24 +1139,28 @@ dialog button:focus { outline: none; }
     * { animation: none !important; transition: none !important; }
 }
 
-/* ===== 縦向きの案内（スマホを縦にしたときだけ） ===== */
-.rotate-hint { display: none; }
+/* ===== 縦向きのスマホ：横向きに回して描く ===== */
+/* 画面は横向きで作っているので、body ごと時計回りに90度回す（縦横の変数も入れ替える） */
+/* ダイアログは最前面の層に出て body の回転を受けないので、別に回す */
 @media (orientation: portrait) and (pointer: coarse) {
-    .rotate-hint {
-        position: fixed;
-        inset: 0;
-        z-index: 100;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 14px;
-        background: linear-gradient(160deg, var(--bg-1), var(--bg-2));
-        color: var(--ink);
-        font-weight: 700;
+    :root {
+        --app-w: 100dvh;
+        --app-h: 100vw;
+        /* 回したあとの左・右・下は、端末の上・下・左 */
+        --safe-l: env(safe-area-inset-top, 0px);
+        --safe-r: env(safe-area-inset-bottom, 0px);
+        --safe-b: env(safe-area-inset-left, 0px);
     }
-    .rotate-hint svg { width: 56px; height: 56px; opacity: 0.85; }
-    .rotate-hint p { margin: 0; font-size: 15px; }
+    body {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: var(--app-w);
+        height: var(--app-h);
+        transform-origin: top left;
+        transform: translateX(100vw) rotate(90deg);
+    }
+    dialog.sheet { transform: rotate(90deg); }
 }
 
 /* ログの一覧（ログの欄をタップしたとき） */
@@ -1194,7 +1201,7 @@ dialog button:focus { outline: none; }
 .fx { position: fixed; pointer-events: none; }
 /* 使ったトレーナーズを、中央に一瞬大きく見せる */
 .fx-reveal {
-    width: clamp(70px, 22dvh, 110px);
+    width: clamp(70px, calc(var(--app-h) * 0.22), 110px);
     transform: translate(-50%, -50%);
     filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.55));
     animation: fx-reveal 0.95s ease-out forwards;

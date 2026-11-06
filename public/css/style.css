@@ -41,8 +41,12 @@ html, body {
     height: 100%;
 }
 
-/* ダブルタップで拡大しない（2本指の拡大は main.js で止める） */
-html { touch-action: manipulation; }
+/* 拡大させない（ピンチ・ダブルタップ）。スクロールする要素も、片方の向きに絞らない：
+   縦向きのスマホでは画面を90度回して描くので、向きを絞ると、指の動きと一覧の軸が合わずにスクロールできない */
+html { touch-action: pan-x pan-y; }
+/* 一覧の端まで来ても、スワイプを画面全体に渡さない（iOS で、しばらく一覧がスクロールしなくなるのを防ぐ） */
+html, body { overscroll-behavior: none; }
+.pool, .pool-filters, .deck-cards, .log, .hand, .sheet-body, .deck-list, .prompt-cards { overscroll-behavior: contain; }
 
 body {
     height: var(--app-h);
@@ -305,7 +309,7 @@ button { font: inherit; color: inherit; }
     margin: 0;
     padding: 8px 12px calc(8px + var(--safe-b));
     overflow-y: auto;
-    touch-action: pan-y;
+    touch-action: pan-x pan-y;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -359,7 +363,7 @@ button { font: inherit; color: inherit; }
     display: flex;
     gap: 4px;
     overflow-x: auto;
-    touch-action: pan-x;
+    touch-action: pan-x pan-y;
     scrollbar-width: none;
     min-width: 0;
 }
@@ -421,7 +425,7 @@ button { font: inherit; color: inherit; }
     align-content: start;
     gap: 6px;
     overflow-y: auto;
-    touch-action: pan-y;
+    touch-action: pan-x pan-y;
     padding: 2px 2px calc(8px + var(--safe-b));
     scrollbar-width: none;
 }
@@ -497,7 +501,7 @@ button { font: inherit; color: inherit; }
     margin: 0;
     padding: 6px 8px calc(8px + var(--safe-b));
     overflow-y: auto;
-    touch-action: pan-y;
+    touch-action: pan-x pan-y;
     border-left: 1px solid var(--line);
     background: rgba(0, 0, 0, 0.15);
 }
@@ -777,7 +781,7 @@ button.prize-grid { cursor: pointer; }
     color: var(--ink-dim);
     background: rgba(0, 0, 0, 0.18);
     border-radius: 8px;
-    touch-action: pan-y;
+    touch-action: pan-x pan-y;
     scrollbar-width: none;
 }
 .log::-webkit-scrollbar { display: none; }
@@ -803,7 +807,7 @@ button.prize-grid { cursor: pointer; }
     align-items: center;
     overflow-x: auto;
     overflow-y: hidden;
-    touch-action: pan-x;
+    touch-action: pan-x pan-y;
     scrollbar-width: none;
     padding: 3px 2px;
 }
@@ -1080,7 +1084,7 @@ dialog button:focus { outline: none; }
 .sheet-body {
     padding: 14px 16px 8px;
     overflow-y: auto;
-    touch-action: pan-y;
+    touch-action: pan-x pan-y;
     min-height: 0;
 }
 .sheet-actions {

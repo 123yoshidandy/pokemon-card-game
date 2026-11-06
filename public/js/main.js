@@ -441,9 +441,9 @@ $('sound-toggle').addEventListener('click', () => {
     renderSoundToggle();
 });
 renderSoundToggle();
-// 画面を拡大させない（iOS は viewport の user-scalable を無視するので、2本指の操作を止める）
+// 画面を拡大させない（ふつうは style.css の touch-action で止まる。古い iOS は2本指の操作を止める）
+// touchmove は止めない（passive でない touchmove があると、スクロールの始まりが遅れるため）
 document.addEventListener('gesturestart', event => event.preventDefault());
-document.addEventListener('touchmove', event => { if (event.touches.length > 1) event.preventDefault(); }, { passive: false });
 document.addEventListener('contextmenu', event => {
     if (!event.target.closest('input, textarea')) event.preventDefault();
 });

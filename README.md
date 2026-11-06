@@ -4,6 +4,8 @@
 
 **遊ぶ:** https://123yoshidandy.github.io/pokemon-card-game/
 
+スマホでは、ブラウザのメニューから「ホーム画面に追加」すると、アプリのように全画面で開けます。一度開いたあとは、オフラインでも CPU と対戦できます。
+
 ## ルール
 
 公式の基本ルールに沿っています。
@@ -106,3 +108,4 @@ npm run deploy:server                      # AWS にデプロイ（スタック 
 | `public/js/game-controller.js` | CPU 対戦のコントローラー（`getView()` と `send()`） |
 | `public/js/ui/` | 画面（盤面・手札・ダイアログ・カードの描き方） |
 | `public/js/main.js` | 起動と画面の切り替え |
+| `public/sw.js`・`public/manifest.webmanifest` | ホーム画面に追加したときの設定と、オフラインで開くためのキャッシュ（自分のファイルはネットワークを先に使う） |

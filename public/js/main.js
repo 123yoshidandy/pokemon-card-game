@@ -488,5 +488,13 @@ async function boot() {
 
 boot();
 
+// ホーム画面に置いて、オフラインでも開けるようにする（PWA）
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then(() => navigator.serviceWorker.ready).then(registration => {
+        const urls = [location.href, ...performance.getEntriesByType('resource').map(entry => entry.name)];
+        registration.active?.postMessage({ type: 'cache-urls', urls });
+    }).catch(() => {});
+}
+
 // 確認用：画面の外からゲームを触れるようにする
 window.__app = { get scene() { return scene; }, get online() { return online; }, screen, startCpuGame };

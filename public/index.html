@@ -138,9 +138,9 @@
         </nav>
         <div id="fx" class="fx-layer" aria-hidden="true"></div>
         <div class="table">
-            <!-- サイドは左の列（相手は上、自分は下） -->
-            <aside class="prizes">
-                <div id="opp-prizes" class="prize-box"></div>
+            <!-- 対面なので左右を反転する：サイドはそれぞれの左手側（自分は左下、相手は右上）、山札・トラッシュは右手側 -->
+            <aside class="rail rail-left">
+                <div id="opp-info" class="info"></div>
                 <div id="my-prizes" class="prize-box"></div>
             </aside>
             <section class="field">
@@ -152,8 +152,8 @@
                 </div>
                 <div id="my-side" class="side side-me"></div>
             </section>
-            <aside class="panel">
-                <div id="opp-info" class="info"></div>
+            <aside class="rail panel">
+                <div id="opp-prizes" class="prize-box"></div>
                 <ol id="log" class="log"></ol>
                 <div id="my-info" class="info"></div>
             </aside>

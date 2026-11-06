@@ -571,7 +571,7 @@ button { font: inherit; color: inherit; }
 }
 
 /* 対戦画面のメニュー：左端の縦の列 */
-#game-screen { --menu-w: 40px; --prize-w: calc(var(--panel-w) - var(--menu-w)); }
+#game-screen { --menu-w: 40px; --rail-w: calc(var(--panel-w) - var(--menu-w)); }
 .side-menu {
     grid-row: 1 / -1;
     display: flex;
@@ -600,19 +600,23 @@ button { font: inherit; color: inherit; }
 
 .table {
     display: grid;
-    grid-template-columns: var(--prize-w) minmax(0, 1fr) var(--panel-w);
+    /* 両側の列は同じ幅（自分と相手のサイドが同じ大きさに見えるように） */
+    grid-template-columns: var(--rail-w) minmax(0, 1fr) var(--rail-w);
     min-height: 0;
 }
 
-/* ===== 左の列（サイド） ===== */
+/* ===== 両側の列 ===== */
 
-/* 盤面と同じく、相手（上）と自分（下）に分ける */
-.prizes {
+/* 盤面と同じく、相手（上）と自分（下）に分ける。対面なので左右は反転する
+   左の列：相手の情報（上）と自分のサイド（下）／右の列：相手のサイド（上）と自分の情報（下） */
+.rail {
     display: grid;
     grid-template-rows: minmax(0, 1fr) 26px minmax(0, 1fr);
-    padding: 3px 0 3px 4px;
     min-height: 0;
 }
+.rail-left { padding: 3px 0 3px 4px; }
+#opp-info { grid-row: 1; align-self: start; }
+#my-info { grid-row: 3; align-self: end; }
 .prize-box {
     container-type: size;
     display: flex;
@@ -747,15 +751,8 @@ button.prize-grid { cursor: pointer; }
 
 /* ===== 右の列 ===== */
 
-/* 右の列は、相手の情報（上）と自分の情報（下）だけ。ログは上の帯のボタンから開く */
-.panel {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 4px;
-    padding: 4px 6px 4px 0;
-    min-height: 0;
-}
+/* 右の列のログは出さない（メニューのボタンから開く） */
+.panel { padding: 4px 6px 4px 0; }
 .info {
     background: var(--panel);
     border-radius: 8px;
@@ -1486,8 +1483,9 @@ dialog button:focus { outline: none; }
 .info-offline { margin-left: 6px; padding: 0 5px; border-radius: 6px; background: #8a3b32; color: #fff; font-size: 10px; font-weight: 700; }
 
 /* ===== 右の欄の、山札・トラッシュの山 ===== */
-.info-hand { margin-left: auto; padding-left: 6px; font-size: 11px; font-weight: 700; color: var(--ink-dim); }
-.info-name { display: flex; align-items: baseline; }
+.info-hand { margin-left: auto; padding-left: 6px; font-size: 11px; font-weight: 700; color: var(--ink-dim); white-space: nowrap; }
+/* 列が細くて1行に収まらないときは、手札の数を次の行へ回す（名前を切らない） */
+.info-name { display: flex; flex-wrap: wrap; align-items: baseline; }
 .info-player { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .piles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; margin-top: 3px; }
 .pile { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 0; border: 0; background: none; color: var(--ink); min-width: 0; }

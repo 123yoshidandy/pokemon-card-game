@@ -227,6 +227,8 @@ describe('読み替えられないワザ（そのb）', () => {
         arrange(game, me, { active: { id: 'SV7-060', energies: [FIRE, FIRE] }, deck: POTIONS });
         const other = arrange(game, opp, { active: BIG, deck: POTIONS });
         expect(attack(game, me, 'SV7-060', 'じんけいをくむ')).toBe(true);
+        // 山札にタイレーツがいなくても、山札を見るための選択が出る（0枚まで）
+        if (game.pendingPrompt?.max === 0) choose(game, []);
         game.applyCommand(opp, { type: 'endTurn' });
         expect(attack(game, me, 'SV7-060', 'いっせいこうげき')).toBe(true);
         expect(other.active.damage).toBe(120);

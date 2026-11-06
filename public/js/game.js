@@ -1304,10 +1304,21 @@ export default class Game {
     // 山札から条件に合うカードを max 枚まで選ぶ。選んだら onSelected（山札から取り除いた後）、最後に山札を切る
     searchDeck({ player, filter, max, title, purpose, onSelected }) {
         const candidates = player.deck.filter(inst => filter(this.cardOf(inst)));
+        // 山札の中身は、探す本人には見える（選択の画面で「山札をすべて見る」に使う）
+        const deck = [...player.deck];
         if (candidates.length === 0 || max <= 0) {
             this.log(`${player.name}は山札を見たが、選べるカードはなかった`);
-            // 0枚でも onSelected は呼ぶ（2回つなぐ検索で、1回めに取り出したカードを置く処理が、ここで止まらないように）
-            this.runNext(() => onSelected([]), () => this.shuffleDeck(player));
+            // 選べなくても、山札を確かめられるように選択を出す。0枚でも onSelected は呼ぶ（2回つなぐ検索で、1回めに取り出したカードを置く処理が、ここで止まらないように）
+            this.promptCards({
+                player,
+                cards: [],
+                min: 0,
+                max: 0,
+                title: `${title}（選べるカードはない）`,
+                purpose,
+                deck,
+                callback: () => this.runNext(() => onSelected([]), () => this.shuffleDeck(player))
+            });
             return;
         }
         this.promptCards({
@@ -1317,6 +1328,7 @@ export default class Game {
             max: Math.min(max, candidates.length),
             title,
             purpose,
+            deck,
             callback: selected => {
                 selected.forEach(inst => this.removeCard(player.deck, inst));
                 this.runNext(() => onSelected(selected), () => this.shuffleDeck(player));

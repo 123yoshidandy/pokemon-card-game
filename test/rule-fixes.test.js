@@ -32,7 +32,8 @@ describe('ルールの不具合の直し', () => {
         const before = countCards(game, me);
         game.applyCommand(me.id, { type: 'attack', index: 0 });
         if (game.pendingPrompt?.purpose === 'search-energy') answer(game, game.pendingPrompt.cards.map(inst => inst.uid));
-        while (game.pendingPrompt && game.pendingPrompt.player.id === me.id) answer(game, game.pendingPrompt.type === 'confirm' ? true : [0]);
+        // 選べるカードがないサーチも、山札を見るための選択が出る（0枚まで。[] で閉じる）
+        while (game.pendingPrompt && game.pendingPrompt.player.id === me.id) answer(game, game.pendingPrompt.type === 'confirm' ? true : game.pendingPrompt.max === 0 ? [] : [0]);
         expect(countCards(game, me)).toBe(before);
     });
 

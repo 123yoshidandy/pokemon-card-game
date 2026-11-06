@@ -76,7 +76,8 @@ function promptView(game, prompt, viewerId) {
     if (prompt.player.id !== viewerId) return { id: prompt.id, player: prompt.player.id, waiting: true };
     const base = { id: prompt.id, player: prompt.player.id, type: prompt.type, title: prompt.title, purpose: prompt.purpose, min: prompt.min, max: prompt.max };
     switch (prompt.type) {
-        case 'cards': return { ...base, cards: prompt.cards.map(cardView) };
+        // deck：山札から探すときの、山札の中身（本人にだけ見える）
+        case 'cards': return { ...base, cards: prompt.cards.map(cardView), ...(prompt.deck ? { deck: prompt.deck.map(inst => inst.id) } : {}) };
         case 'pokemon': return { ...base, pokemon: prompt.pokemon.map(pokemon => pokemon.id) };
         case 'choose': return { ...base, options: [...prompt.options] };
         default: return { ...base, card: prompt.card };

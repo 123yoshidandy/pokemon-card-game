@@ -40,6 +40,24 @@ function pickGroups(prompt) {
 
 export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
     const groups = prompt.cards ? pickGroups(prompt) : [];
+    // 山札から探すときは、山札をすべて見ることもできる（選べないカードは薄く並べる）。選べるカードがなければ、初めから山札をすべて見せる
+    let showAll = Boolean(prompt.deck) && !prompt.cards?.length;
+    const pickButton = (g, total) => `<button type="button" class="pick" data-group="${g}">${cardFace(prompt.cards[groups[g][0]].id)}${total > 1 ? `<span class="pool-count pick-total">×${total}</span>` : ''}<span class="pick-picked"></span></button>`;
+    const renderPicks = () => {
+        const grid = dialog.querySelector('.prompt-cards');
+        if (!showAll) {
+            grid.innerHTML = groups.length ? groups.map((group, g) => pickButton(g, group.length)).join('') : '<p class="empty">選べるカードはありません</p>';
+        } else {
+            const counts = new Map();
+            prompt.deck.forEach(id => counts.set(id, (counts.get(id) ?? 0) + 1));
+            const groupOf = new Map(groups.map((group, g) => [prompt.cards[group[0]].id, g]));
+            grid.innerHTML = [...counts].sort((a, b) => cardOrder(a[0]) - cardOrder(b[0])).map(([id, count]) => (groupOf.has(id)
+                ? pickButton(groupOf.get(id), groups[groupOf.get(id)].length)
+                : `<div class="pick pick-locked" data-card="${id}">${cardFace(id)}${count > 1 ? `<span class="pool-count pick-total">×${count}</span>` : ''}</div>`)).join('') || '<p class="empty">山札はありません</p>';
+        }
+        const toggle = dialog.querySelector('[data-toggle-deck]');
+        if (toggle) toggle.textContent = showAll ? '選べるカードだけ' : `山札をすべて見る（${prompt.deck.length}枚）`;
+    };
     dialog.dataset.closable = 'false';
     dialog.dataset.promptId = prompt.id;
     const selected = new Set();
@@ -55,13 +73,14 @@ export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
     } else {
         const count = prompt.min === prompt.max ? `${prompt.max}枚` : `${prompt.min ? `${prompt.min}〜` : ''}${prompt.max}枚まで`;
         dialog.innerHTML = `<div class="sheet-body"><h2 class="prompt-title">${escapeHtml(prompt.title)}<span class="prompt-count">${count}</span></h2>
-            <div class="prompt-cards">${groups.map((group, g) => `<button type="button" class="pick" data-group="${g}">${cardFace(prompt.cards[group[0]].id)}${group.length > 1 ? `<span class="pool-count pick-total">×${group.length}</span><span class="pick-picked"></span>` : ''}</button>`).join('')}</div></div>
-            <div class="sheet-actions">${peek}<button type="button" class="btn btn-primary" data-submit>決定</button></div>`;
+            <div class="prompt-cards"></div></div>
+            <div class="sheet-actions">${peek}${prompt.deck && prompt.cards.length ? '<button type="button" class="btn btn-quiet" data-toggle-deck></button>' : ''}<button type="button" class="btn btn-primary" data-submit>${prompt.max === 0 ? '閉じる' : '決定'}</button></div>`;
+        renderPicks();
     }
 
     const submit = dialog.querySelector('[data-submit]');
     const refresh = () => {
-        dialog.querySelectorAll('.pick').forEach(button => {
+        dialog.querySelectorAll('.pick[data-group]').forEach(button => {
             const picked = groups[Number(button.dataset.group)].filter(index => selected.has(index)).length;
             button.classList.toggle('selected', picked > 0);
             const badge = button.querySelector('.pick-picked');
@@ -74,6 +93,12 @@ export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
     dialog.onclick = event => {
         const target = event.target.closest('button');
         if (!target) return;
+        if (target.dataset.toggleDeck !== undefined) {
+            showAll = !showAll;
+            renderPicks();
+            refresh();
+            return;
+        }
         if (target.dataset.peek !== undefined) {
             dialog.close();
             onPeek();
@@ -91,6 +116,7 @@ export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
         bindPress(grid, '.pick', {
             // タップするたびに、まとめたカードから1枚ずつ選ぶ。全部選んだら（またはもう選べないなら）外す
             onTap: button => {
+                if (button.dataset.group === undefined) return; // 選べないカード（山札をすべて見るときの）
                 const group = groups[Number(button.dataset.group)];
                 const next = group.find(index => !selected.has(index));
                 if (prompt.max === 1) {
@@ -104,7 +130,7 @@ export function showPrompt(dialog, prompt, { onAnswer, onPeek, onDetail }) {
                 }
                 refresh();
             },
-            onLongPress: button => onDetail(prompt.cards[groups[Number(button.dataset.group)][0]].id)
+            onLongPress: button => onDetail(button.dataset.card ?? prompt.cards[groups[Number(button.dataset.group)][0]].id)
         });
     }
     open(dialog);

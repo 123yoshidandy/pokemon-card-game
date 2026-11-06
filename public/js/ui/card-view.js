@@ -152,9 +152,15 @@ export function cardFace(id) {
     </div>`;
 }
 
-// カードの裏：自作の幾何学模様（金色のひし形と星）
+// カードの裏：上が赤、下が白、真ん中に黒い帯とボタンのボール
 export function cardBack(extraClass = '') {
-    return `<div class="card card-back ${extraClass}"><svg class="card-back-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 21 12 12 22 3 12z" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M12 7.2l1.4 3.1 3.4.4-2.5 2.3.7 3.3L12 14.6l-3 1.7.7-3.3-2.5-2.3 3.4-.4z" fill="currentColor"/></svg></div>`;
+    return `<div class="card card-back ${extraClass}"><svg class="card-back-mark" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="9.6" fill="#1d1d1d"/>
+        <path d="M3.6 11a8.4 8.4 0 0 1 16.8 0z" fill="#e2483d"/>
+        <path d="M3.6 13a8.4 8.4 0 0 0 16.8 0z" fill="#f3f1ea"/>
+        <ellipse cx="8.2" cy="6.8" rx="2.2" ry="1.2" transform="rotate(-30 8.2 6.8)" fill="#fff" opacity=".35"/>
+        <circle cx="12" cy="12" r="3.4" fill="#1d1d1d"/><circle cx="12" cy="12" r="2.1" fill="#f3f1ea"/>
+    </svg></div>`;
 }
 
 // 場のポケモン（view の pokemon）

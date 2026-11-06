@@ -513,6 +513,16 @@ document.addEventListener('pointerup', lockLandscape);
 document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement && enteredFullscreen) landscapeGivenUp = true;
 });
+// 横向きの iPhone は、ノッチのない側にも同じ幅の余白（safe-area-inset）を返す。端末の向きからノッチのある側を調べ、
+// style.css でその側だけ余白を取る（ノッチのない側が空いて、盤面が左に寄って見えないように）
+// 角度 90 は端末の上（ノッチ）が左、270（iOS の window.orientation では -90）は右
+function updateNotchSide() {
+    const angle = window.screen.orientation?.angle ?? window.orientation;
+    document.documentElement.dataset.notch = angle === 90 ? 'left' : angle === 270 || angle === -90 ? 'right' : '';
+}
+updateNotchSide();
+window.screen.orientation?.addEventListener?.('change', updateNotchSide);
+window.addEventListener('orientationchange', updateNotchSide);
 // 画面を拡大させない（ふつうは style.css の touch-action で止まる。古い iOS は2本指の操作を止める）
 // touchmove は止めない（passive でない touchmove があると、スクロールの始まりが遅れるため）
 document.addEventListener('gesturestart', event => event.preventDefault());

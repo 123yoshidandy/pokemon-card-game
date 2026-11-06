@@ -4,7 +4,7 @@
  */
 
 import { getCard } from '../card-data.js';
-import { cardFace, pokemonTile } from './card-view.js';
+import { cardFace, cardBack, pokemonTile } from './card-view.js';
 import { bindPress } from './press.js';
 import { showPrompt, showDetail, showPile, showResult, showConfirm, showLog, closeOnBackdrop, escapeHtml } from './sheets.js';
 import { BENCH_SIZE } from '../game.js';
@@ -470,14 +470,19 @@ export default class GameScreen {
     infoHtml(player) {
         // オンラインで接続が切れているプレイヤーは、名前の横に「切断中」
         const offline = this.disconnected?.has(player.id) ? '<span class="info-offline">切断中</span>' : '';
-        return `<div class="info-name">${escapeHtml(player.name)}${offline}</div>
-            <div class="info-row">
-                ${player.faceUpPrizes?.length
-                    ? `<button type="button" class="info-item info-button" data-prizes><span class="info-label">サイド</span><b class="has-faceup">${player.prizeCount}</b></button>`
-                    : `<span class="info-item"><span class="info-label">サイド</span><b>${player.prizeCount}</b></span>`}
-                <span class="info-item"><span class="info-label">山札</span><b class="${player.deckCount <= 5 ? 'deck-low' : ''}">${player.deckCount}</b></span>
-                <span class="info-item"><span class="info-label">手札</span><b>${player.handCount}</b></span>
-                <button type="button" class="info-item info-button" data-discard><span class="info-label">トラッシュ</span><b>${player.discard.length}</b></button>
+        // サイド・山札・トラッシュは、小さなカードの山で描く（サイドと山札は裏、トラッシュはいちばん上のカード）
+        const pile = (label, card, count, { attr = '', countClass = '' } = {}) => {
+            const tag = attr ? 'button' : 'div';
+            return `<${tag} ${attr ? 'type="button"' : ''} class="pile ${attr ? 'pile-button' : ''}" ${attr}>
+                <span class="pile-card ${count ? '' : 'pile-empty'}">${count ? card : ''}</span>
+                <span class="pile-count ${countClass}">${count}</span><span class="pile-label">${label}</span></${tag}>`;
+        };
+        const top = player.discard.at(-1);
+        return `<div class="info-name">${escapeHtml(player.name)}${offline}<span class="info-hand">手札 ${player.handCount}</span></div>
+            <div class="piles">
+                ${pile('サイド', cardBack(), player.prizeCount, { attr: player.faceUpPrizes?.length ? 'data-prizes' : '', countClass: player.faceUpPrizes?.length ? 'has-faceup' : '' })}
+                ${pile('山札', cardBack(), player.deckCount, { countClass: player.deckCount <= 5 ? 'deck-low' : '' })}
+                ${pile('トラッシュ', top ? cardFace(top.id) : '', player.discard.length, { attr: 'data-discard' })}
             </div>`;
     }
 

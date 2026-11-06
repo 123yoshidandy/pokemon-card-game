@@ -152,8 +152,9 @@ export function cardFace(id) {
     </div>`;
 }
 
+// カードの裏：自作の幾何学模様（金色のひし形と星）
 export function cardBack(extraClass = '') {
-    return `<div class="card card-back ${extraClass}"><div class="card-back-mark"></div></div>`;
+    return `<div class="card card-back ${extraClass}"><svg class="card-back-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 21 12 12 22 3 12z" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M12 7.2l1.4 3.1 3.4.4-2.5 2.3.7 3.3L12 14.6l-3 1.7.7-3.3-2.5-2.3 3.4-.4z" fill="currentColor"/></svg></div>`;
 }
 
 // 場のポケモン（view の pokemon）

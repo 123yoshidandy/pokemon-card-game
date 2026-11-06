@@ -74,7 +74,10 @@ export default class OnlineGameController {
 
     // ===== 部屋の操作 =====
 
-    createRoom(name) { return this.net.createRoom(name); }
+    // isPublic なら公開の部屋（一覧に載り、部屋番号を知らない人も入れる）
+    createRoom(name, { isPublic = false } = {}) { return this.net.createRoom(name, { public: isPublic }); }
+    // 入れる公開の部屋の一覧（部屋に入っていなくても取れる）
+    listRooms() { return this.net.listRooms(); }
     enterRoom(code, name) { return this.net.enterRoom(code, name); }
     joinFromInvite(name) { return this.net.joinFromInvite(name); }
     resume() { return this.net.resume(); }

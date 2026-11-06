@@ -279,9 +279,47 @@ async function createRoom() {
     const name = readName();
     if (!name) return;
     try {
-        await connectOnline().createRoom(name);
+        await connectOnline().createRoom(name, { isPublic: $('room-public').checked });
     } catch (error) {
         toast(error.message);
+    }
+}
+
+// 公開の部屋の一覧（開いたときと「更新」を押したときだけ取る。続けて取り続けない）
+async function showRooms() {
+    const list = $('room-list');
+    if (!$('rooms').open) $('rooms').showModal();
+    list.innerHTML = '<li class="room-note">さがしています…</li>';
+    $('refresh-rooms').disabled = true;
+    try {
+        const rooms = await connectOnline().listRooms();
+        list.innerHTML = rooms.length
+            ? rooms.map(room => `<li class="room-row">
+                <span class="room-host">${escapeHtml(room.hostName)}</span>
+                <span class="room-count">${room.players}/${room.maxPlayers}人</span>
+                <span class="room-code">部屋 ${escapeHtml(room.roomCode)}</span>
+                <button type="button" class="btn btn-primary btn-small" data-enter-room="${escapeHtml(room.roomCode)}">入る</button>
+            </li>`).join('')
+            : '<li class="room-note">いま入れる公開の部屋はありません。「部屋を作る」で「公開する」にすると、ここに載ります</li>';
+    } catch (error) {
+        list.innerHTML = `<li class="room-note">${escapeHtml(error.message)}</li>`;
+    } finally {
+        $('refresh-rooms').disabled = false;
+    }
+}
+
+async function enterListedRoom(code) {
+    const name = readName();
+    $('rooms').close();
+    if (!name) {
+        $('online-name').focus();
+        return;
+    }
+    try {
+        await connectOnline().enterRoom(code, name);
+    } catch (error) {
+        // 満員になった・なくなったなど、サーバーに断られたときの知らせは onError が出す
+        if (!error.fromServer) toast(error.message);
     }
 }
 
@@ -337,6 +375,7 @@ function onLobby(lobby) {
 function renderLobby(lobby) {
     const isHost = online.isHost();
     $('lobby-code').textContent = lobby.roomCode;
+    $('lobby-public').hidden = !lobby.public;
     $('lobby-players').innerHTML = lobby.players.map(player => {
         const badges = [
             player.seat === lobby.hostSeat ? '<span class="badge">ホスト</span>' : '',
@@ -410,6 +449,13 @@ $('open-decks').addEventListener('click', openDecks);
 ['deck-picker', 'confirm'].forEach(id => closeOnBackdrop($(id)));
 $('create-room').addEventListener('click', createRoom);
 $('join-room').addEventListener('click', joinRoom);
+$('open-rooms').addEventListener('click', showRooms);
+$('refresh-rooms').addEventListener('click', showRooms);
+$('room-list').addEventListener('click', event => {
+    const button = event.target.closest('[data-enter-room]');
+    if (button) enterListedRoom(button.dataset.enterRoom);
+});
+closeOnBackdrop($('rooms'));
 $('online-name').addEventListener('keydown', event => { if (event.key === 'Enter' && isInviteShown()) joinRoom(); });
 $('room-code').addEventListener('keydown', event => { if (event.key === 'Enter') joinRoom(); });
 $('online-back').addEventListener('click', () => {

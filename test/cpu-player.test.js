@@ -48,12 +48,14 @@ describe('CPU 同士の試合', () => {
         expect([...trainers].filter(name => !played.has(name))).toEqual([]);
     });
 
-    it('構築済みデッキのどの組み合わせでも、止まらずに決着する', () => {
-        DECKS.forEach((a, i) => DECKS.forEach((b, j) => {
-            const { game } = playOut(i * DECKS.length + j + 1, [a.id, b.id]);
+    // 総当たりは重い（10デッキで100試合）ので、どのデッキも、1つ隣のデッキと先の席で、3つ隣のデッキとあとの席で1回ずつ戦う
+    it('構築済みデッキは、どれも止まらずに決着する（先の席でもあとの席でも）', () => {
+        DECKS.forEach((a, i) => [1, 3].forEach((step, k) => {
+            const b = DECKS[(i + step) % DECKS.length];
+            const { game } = playOut(i * 2 + k + 1, k === 0 ? [a.id, b.id] : [b.id, a.id]);
             expect(game.phase).toBe('end');
         }));
-    }, 30000); // CPU は先読みするので、16試合で数秒かかる
+    }, 30000); // CPU は先読みするので、20試合で10秒ほどかかる
 
     it('同じシードなら、CPU 同士の試合はいつも同じ手で進む（端末の速さで変わらない）', () => {
         const first = playOut(7, ['n-zoroark', 'bakegakure']).game.commands;

@@ -21,7 +21,7 @@ const STORAGE_KEY = 'pokemon-card-game:settings';
 const SCENES = ['title', 'online', 'lobby', 'game', 'decks', 'editor'];
 const MAX_PLAYERS = 2;
 
-// 共有デッキ（構築済みデッキを誰かが変えた内容）は、前に受け取ったものを先に使い、起動したらサーバーから取り直す
+// 共有デッキ（構築済みデッキを変えた内容と、作った共有デッキ）は、前に受け取ったものを先に使い、起動したらサーバーから取り直す
 loadCachedSharedDecks();
 const settings = loadSettings();
 const deckStore = createDeckStore();
@@ -78,7 +78,7 @@ function saveSettings() {
     }
 }
 
-// 選んだデッキ（消した・まだ60枚にならないデッキなら、構築済みの最初のデッキ）
+// 選んだデッキ（消した・まだ60枚にならないデッキなら、共有デッキの最初のデッキ）
 function selectedDeck() {
     const deck = deckStore.find(settings.deckId);
     return deck && !deckProblem(deck) ? deck : DECKS[0];
@@ -95,6 +95,12 @@ const deckScreens = new DeckScreens(deckStore, {
     onDeleted: deckId => {
         if (settings.cpuDeckId === deckId) settings.cpuDeckId = '';
         if (settings.deckId === deckId) settings.deckId = DECKS[0].id;
+        saveSettings();
+    },
+    // 作ったデッキを共有デッキにしたら、選んでいたデッキを共有デッキに付け替える
+    onShared: (deckId, sharedId) => {
+        if (settings.cpuDeckId === deckId) settings.cpuDeckId = sharedId;
+        if (settings.deckId === deckId) settings.deckId = sharedId;
         saveSettings();
     },
     toast: message => toast(message),
@@ -121,7 +127,7 @@ function openDecks() {
 }
 
 function deckChoices() {
-    return [...deckStore.custom(), ...deckStore.all().filter(deck => deck.builtIn)].map(deck => ({
+    return [...deckStore.custom(), ...deckStore.all().filter(deck => deck.shared)].map(deck => ({
         id: deck.id,
         name: deck.name,
         problem: deckProblem(deck),
@@ -130,7 +136,7 @@ function deckChoices() {
     }));
 }
 
-// CPU のデッキを選ぶ（おまかせ：自分のデッキとタイプの違う構築済みデッキからランダム）
+// CPU のデッキを選ぶ（おまかせ：自分のデッキとタイプの違う共有デッキからランダム）
 function openCpuDeckPicker() {
     showDeckPicker($('deck-picker'), {
         title: '相手のデッキ',
@@ -211,9 +217,9 @@ function resumeCpuGame() {
 }
 
 function startCpuGame() {
-    // CPU は、選んだデッキ。おまかせなら、自分のデッキとタイプの違う構築済みデッキから、ランダムに選ぶ
+    // CPU は、選んだデッキ。おまかせなら、自分のデッキとタイプの違う共有デッキから、ランダムに選ぶ
     const mine = selectedDeck();
-    const others = DECKS.filter(deck => deck.type !== mainEnergyType(mine));
+    const others = DECKS.filter(deck => (deck.type ?? mainEnergyType(deck)) !== mainEnergyType(mine));
     const cpu = selectedCpuDeck() ?? (others.length ? others[Math.floor(Math.random() * others.length)] : DECKS[0]);
     screen.stop();
     const controller = new LocalGameController(

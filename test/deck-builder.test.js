@@ -73,7 +73,7 @@ describe('デッキの保存', () => {
         store.save(removeCard(copy, C.charmander));
         expect(TEST_DECKS[0].cards[C.charmander]).toBe(4);
         expect(store.find(copy.id).cards[C.charmander]).toBe(3);
-        expect(store.all().filter(deck => deck.builtIn)).toHaveLength(DECKS.length);
+        expect(store.all().filter(deck => deck.shared)).toHaveLength(DECKS.length);
     });
 
     it('同じデッキを2回コピーすると、名前に番号がつく（16文字に収まる）', () => {

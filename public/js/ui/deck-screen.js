@@ -1,7 +1,8 @@
 /**
  * デッキ構築の画面：デッキの一覧と、デッキの編集
  * 自作のデッキは、編集をその場で保存する（保存ボタンも、戻るときの確認もない）
- * 構築済みデッキは全員の共有デッキで、戻るとき（か「CPU と試す」のとき）に、変えていればサーバーに保存する
+ * 共有デッキ（構築済みデッキと、誰かが「共有する」で作ったデッキ。扱いは同じ）は、戻るとき（か「CPU と試す」のとき）に、
+ * 変えていればサーバーに保存する。初期に戻す・削除も、全員のデッキに効く
  */
 
 import { getCard } from '../card-data.js';
@@ -11,7 +12,7 @@ import { FILTER_GROUPS, matchesFilters, filterCount, setFilter, filterLabel } fr
 import { cardFace, energyDot } from './card-view.js';
 import { bindPress } from './press.js';
 import { showDetail, showConfirm, showImport, showPile } from './sheets.js';
-import { fetchSharedDecks, saveSharedDeck, resetSharedDeck } from '../shared-decks.js';
+import { fetchSharedDecks, createSharedDeck, saveSharedDeck, resetSharedDeck, deleteSharedDeck } from '../shared-decks.js';
 
 const $ = id => document.getElementById(id);
 
@@ -53,7 +54,7 @@ function cardText(id) {
 }
 
 export default class DeckScreens {
-    // store：createDeckStore() / handlers：show(scene) / onDeleted(deckId) / onBack() / onTry(deckId) / toast(message)
+    // store：createDeckStore() / handlers：show(scene) / onDeleted(deckId) / onShared(deckId, sharedId) / onBack() / onTry(deckId) / toast(message)
     constructor(store, handlers) {
         this.store = store;
         this.handlers = handlers;
@@ -120,15 +121,34 @@ export default class DeckScreens {
                 onYes: () => this.sendShared(() => resetSharedDeck(deck.id), '初期の内容に戻しました', () => this.showList())
             });
         });
+        // 作ったデッキを共有デッキにする（手元のデッキは共有デッキに移り、残さない）
+        $('deck-share').addEventListener('click', () => {
+            const deck = this.deck;
+            if (deckProblem(deck)) return;
+            showConfirm($('confirm'), {
+                title: `「${escape(deck.name)}」を共有デッキにしますか？（全員が使え、編集・削除できるようになります）`,
+                yesLabel: '共有する',
+                onYes: () => this.sendShared(() => createSharedDeck(deck), '共有デッキにしました', reply => {
+                    this.store.remove(deck.id);
+                    this.handlers.onShared(deck.id, reply.created);
+                    this.showList();
+                })
+            });
+        });
         $('deck-delete').addEventListener('click', () => {
             const deck = this.deck;
+            const shared = this.shared;
             showConfirm($('confirm'), {
-                title: `「${escape(deck.name)}」を削除しますか？`,
+                title: shared ? `「${escape(deck.name)}」を削除しますか？（共有デッキなので、全員のデッキから消えます）` : `「${escape(deck.name)}」を削除しますか？`,
                 yesLabel: '削除',
                 onYes: () => {
+                    const done = () => {
+                        this.handlers.onDeleted(deck.id);
+                        this.showList();
+                    };
+                    if (shared) return this.sendShared(() => deleteSharedDeck(deck.id), '削除しました', done);
                     this.store.remove(deck.id);
-                    this.handlers.onDeleted(deck.id);
-                    this.showList();
+                    done();
                 }
             });
         });
@@ -244,15 +264,15 @@ export default class DeckScreens {
             const problem = deckProblem(deck);
             const button = `<button type="button" class="btn btn-secondary btn-small" data-copy="${deck.id}">コピー</button><button type="button" class="btn btn-primary btn-small" data-edit="${deck.id}">編集</button>`;
             return `<li class="deck-row">
-                <span class="deck-row-name" ${deck.builtIn ? `data-view="${deck.id}"` : ''}>${escape(deck.name)}${deck.builtIn ? '<span class="deck-row-view">中身</span>' : ''}</span>
-                ${deck.builtIn ? '<span class="badge">共有</span>' : ''}
+                <span class="deck-row-name" ${deck.shared ? `data-view="${deck.id}"` : ''}>${escape(deck.name)}${deck.shared ? '<span class="deck-row-view">中身</span>' : ''}</span>
+                ${deck.shared ? '<span class="badge">共有</span>' : ''}
                 <span class="deck-row-count ${problem ? 'incomplete' : ''}">${total}/${DECK_SIZE}</span>
                 ${button}
             </li>`;
         };
         const custom = this.store.custom();
-        const builtIn = this.store.all().filter(deck => deck.builtIn);
-        $('deck-list').innerHTML = `${custom.map(row).join('')}${builtIn.map(row).join('')}`;
+        const shared = this.store.all().filter(deck => deck.shared);
+        $('deck-list').innerHTML = `${custom.map(row).join('')}${shared.map(row).join('')}`;
     }
 
     // ===== 編集 =====
@@ -260,11 +280,13 @@ export default class DeckScreens {
     openEditor(deckId) {
         const found = this.store.find(deckId);
         if (!found) return this.showList();
-        this.shared = this.store.all().some(deck => deck.builtIn && deck.id === deckId);
+        this.shared = this.store.all().some(deck => deck.shared && deck.id === deckId);
         this.deck = this.shared ? { id: found.id, name: found.name, cards: { ...found.cards } } : found;
         this.untouched = this.shared ? JSON.stringify(this.deck) : null;
-        $('deck-delete').hidden = this.shared;
+        // 共有デッキは、最後の1つだけは消せない（サーバーも断る）
+        $('deck-delete').hidden = this.shared && this.store.all().filter(deck => deck.shared).length <= 1;
         $('deck-reset').hidden = !(this.shared && found.edited);
+        $('deck-share').hidden = this.shared;
         // 別のデッキを開いたときは、種類・検索・しぼりこみを初めの状態にもどす
         this.kind = 'pokemon';
         this.query = '';
@@ -299,17 +321,22 @@ export default class DeckScreens {
                 onYes: then
             });
         }
-        this.sendShared(() => saveSharedDeck(this.deck), '共有デッキを保存しました', then);
+        // 保存できなければ（つながらない、ほかの人が削除した、など）、捨てて出られるようにする
+        this.sendShared(() => saveSharedDeck(this.deck), '共有デッキを保存しました', then, error => showConfirm($('confirm'), {
+            title: `共有デッキを保存できませんでした（${escape(error.message)}）。変えた内容を捨てますか？`,
+            yesLabel: '捨てる',
+            onYes: then
+        }));
     }
 
-    // サーバーへの保存・初期に戻すを送る。送っている間は、ボタンを押しても何もしない
-    sendShared(request, done, then) {
+    // サーバーへの作成・保存・初期に戻す・削除を送り、返事を then に渡す。送っている間は、ボタンを押しても何もしない
+    sendShared(request, done, then, onError = error => this.handlers.toast(`サーバーに送れませんでした（${error.message}）`)) {
         if (this.sending) return;
         this.sending = true;
-        request().then(() => {
+        request().then(reply => {
             this.handlers.toast(done);
-            then();
-        }, error => this.handlers.toast(`サーバーに送れませんでした（${error.message}）`))
+            then(reply);
+        }, onError)
             .finally(() => { this.sending = false; });
     }
 
@@ -418,6 +445,7 @@ export default class DeckScreens {
         $('deck-count').classList.toggle('incomplete', Boolean(problem));
         $('deck-problem').textContent = problem && total === DECK_SIZE ? problem : '';
         $('deck-try').disabled = Boolean(problem);
+        $('deck-share').disabled = Boolean(problem);
 
         const entries = sortedEntries(deck);
         // 同じ名前で中身の違うカードは、一覧と同じく特性かワザの名前を添えて見分ける

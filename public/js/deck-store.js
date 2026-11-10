@@ -34,7 +34,8 @@ export function createDeckStore(storage = browserStorage()) {
     return {
         // 作ったデッキ（新しい順）
         custom: () => decks,
-        all: () => [...DECKS.map(deck => ({ ...deck, builtIn: true })), ...decks],
+        // 共有デッキ（DECKS。shared-decks.js がサーバーの内容で並べ直す）と、作ったデッキ
+        all: () => [...DECKS.map(deck => ({ ...deck, shared: true })), ...decks],
         find: id => DECKS.find(deck => deck.id === id) ?? decks.find(deck => deck.id === id) ?? null,
 
         // 新しく作る（base を渡すと、その中身をコピーする）

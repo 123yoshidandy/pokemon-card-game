@@ -57,7 +57,7 @@ describe('プレイヤーにかかる効果・使ったカードの行き先な�
         const player = arrange(game, me, { hand: [stamp, C.potion], deck: Array(20).fill(FIRE) });
         const opponent = arrange(game, opp, { hand: [C.potion, C.potion, C.potion], deck: Array(20).fill(FIRE) });
         expect(game.applyCommand(me, { type: 'playTrainer', uid: player.hand[0].uid })).toBe(false);
-        player.knockedOutTurn = game.turn - 1;
+        player.knockedOutOnOpponentTurn = game.turn - 1;
         expect(game.applyCommand(me, { type: 'playTrainer', uid: player.hand[0].uid })).toBe(true);
         expect(player.hand).toHaveLength(5);
         expect(opponent.hand).toHaveLength(2);
@@ -75,6 +75,45 @@ describe('プレイヤーにかかる効果・使ったカードの行き先な�
         expect(game.applyCommand(opp, { type: 'endTurn' })).toBe(true);
         expect(game.getLegalActions(me).hand[player.hand[0].uid]).toEqual([]);
         expect(game.applyCommand(me, { type: 'playTrainer', uid: player.hand[0].uid })).toBe(true);
+    });
+
+    it('アンフェアスタンプ：前の相手の番に相手のワザで自分のポケモンがきぜつしていれば、この番に自分のカースドボムで自分のポケモンがきぜつしたあとでも使える（#29）', () => {
+        const stamp = idOf('アンフェアスタンプ');
+        const dusknoir = resolveCardId('SV6a-070'); // ヨノワール：カースドボム
+        const okidogi = resolveCardId('SV6-110'); // イイネイヌ：グッドパンチ 70
+        const { game, me: opp, opp: me } = midGame();
+        const other = arrange(game, opp, { active: { id: okidogi, energies: [FIGHTING, FIGHTING] }, bench: [C.pikachu], prizes: Array(6).fill(C.potion), hand: [], deck: Array(20).fill(FIRE) });
+        const player = arrange(game, me, { active: { id: C.pikachu, damage: 50 }, bench: [C.raichu, dusknoir], prizes: Array(6).fill(C.potion), hand: [stamp], deck: Array(20).fill(FIRE) });
+        // 1. 相手の番：相手のワザで、自分のピカチュウがきぜつする
+        expect(game.applyCommand(opp, { type: 'attack', index: 0 })).toBe(true);
+        answer(game, [player.bench[0]]); // ライチュウをバトル場に出す
+        expect(game.current).toBe(me);
+        // 2. 自分の番：自分のカースドボムで、自分のヨノワールがきぜつする
+        expect(game.applyCommand(me, { type: 'useAbility', target: player.bench[0].id })).toBe(true);
+        answer(game, [other.bench[0]]);
+        expect(player.bench).toHaveLength(0);
+        // 3. 同じ番に、アンフェアスタンプを使える
+        const uid = player.hand.find(inst => inst.id === stamp).uid;
+        expect(game.getLegalActions(me).hand[uid]).toEqual([]);
+        expect(game.applyCommand(me, { type: 'playTrainer', uid })).toBe(true);
+    });
+
+    it('おれいまいり：この番に自分のカースドボムで相手にサイドをとられても、前の相手の番にとられた枚数で数える（#29 と同じ記録の上書き）', () => {
+        const dusknoir = resolveCardId('SV6a-070');
+        const okidogi = resolveCardId('SV6-110'); // イイネイヌ：グッドパンチ 70
+        const revenge = resolveCardId('M2a-098'); // イイネイヌ：おれいまいり 80+
+        const archaludon = resolveCardId('SV7a-037'); // ブリジュラスex（HP300、闘の弱点・抵抗力なし）
+        const { game, me: opp, opp: me } = midGame();
+        const other = arrange(game, opp, { active: { id: okidogi, energies: [FIGHTING, FIGHTING] }, bench: [C.pikachu], prizes: Array(6).fill(C.potion), hand: [], deck: Array(20).fill(FIRE) });
+        const player = arrange(game, me, { active: { id: C.pikachu, damage: 50 }, bench: [{ id: revenge, energies: [FIGHTING, FIGHTING, FIGHTING] }, dusknoir], prizes: Array(6).fill(C.potion), hand: [], deck: Array(20).fill(FIRE) });
+        game.applyCommand(opp, { type: 'attack', index: 0 }); // 相手はサイドを1枚とる
+        answer(game, [player.bench[0]]);
+        const target = arrange(game, opp, { active: archaludon }).active;
+        game.applyCommand(me, { type: 'useAbility', target: player.bench[0].id }); // ヨノワールがきぜつし、相手はこの番にサイドを1枚とる
+        answer(game, [other.bench[0]]);
+        expect(other.prizes).toHaveLength(4);
+        expect(game.applyCommand(me, { type: 'attack', index: 1 })).toBe(true);
+        expect(target.damage).toBe(80 + 60);
     });
 
     it('アンフェアスタンプ：自分の番に、自分のカースドボムで自分のポケモンがきぜつしても、次の自分の番には使えない（前の相手の番ではないので）。理由を出す（#29）', () => {

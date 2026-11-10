@@ -738,15 +738,9 @@ export const ABILITY_EFFECTS = {
     'さかてにとる': {
         type: 'activated',
         oncePerTurnByName: true,
-        // 前の相手の番に、自分のポケモンがきぜつしていた（ワザでのきぜつは本体が、それ以外はこの特性が記録する）
-        canUse: (game, player) => player.deck.length > 0
-            && (player.knockedOutByAttackTurn === game.turn - 1 || player.knockedOutOnOpponentTurn === game.turn - 1),
-        use: (game, player) => game.draw(player, 3),
-        hooks: {
-            onKnockout: (game, source, pokemon, player) => {
-                if (player === source.player && game.current !== player.id) player.knockedOutOnOpponentTurn = game.turn;
-            }
-        }
+        // 前の相手の番に、自分のポケモンがきぜつしていた（理由を問わない。本体が記録する）
+        canUse: (game, player) => player.deck.length > 0 && player.knockedOutOnOpponentTurn === game.turn - 1,
+        use: (game, player) => game.draw(player, 3)
     },
     'ていさつしれい': {
         type: 'activated',

@@ -117,8 +117,8 @@ export const TRAINER_EFFECTS = {
     },
     'アンフェアスタンプ': {
         // 「前の相手の番に、自分のポケモンがきぜつしていなければ使えない」（きぜつの理由は問わない）
-        // 自分の番に自分のカースドボムなどできぜつしたのは数えない（前の相手の番ではないので）
-        canPlay: (game, player) => player.knockedOutTurn === game.turn - 1,
+        // 自分の番に自分のカースドボムなどできぜつしたのは数えない（前の相手の番ではないので）。この番にきぜつしても、前の相手の番の記録は残る
+        canPlay: (game, player) => player.knockedOutOnOpponentTurn === game.turn - 1,
         cannotPlayReason: '前の相手の番に、自分のポケモンがきぜつしていないので使えません',
         play: (game, player) => refreshHands(game, player, 5, 2),
         cpuWants: (game, player) => game.opponentOf(player).hand.length >= 4

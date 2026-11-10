@@ -136,7 +136,9 @@ suppressAbility は特性にも書ける（ほかのポケモンの特性をな�
 - きぜつ：ダメカンをのせたり、ポケモンを場から動かしたりした後に、きぜつとバトル場の補充を確かめるなら `game.runNext(() => game.checkKnockouts())`（ワザの後と番の終わりには、本体が確かめる）
 - ワザの途中：`game.currentAttack`（使っている途中のワザの ctx。ワザの後のきぜつの確認が終わるまで。prizeModifier などで、ワザを使ったポケモンを知るのに使う）
 - 番の情報：`game.turn` `game.current` `game.turnState`（supporterPlayed・supporterNames・energyAttached・retreated・abilityNamesUsed など） `player.turnsTaken`
-  - `player.knockedOutTurn` / `knockedOutNames`：理由を問わず、自分のポケモンがきぜつした番と名前。`knockedOutByAttackTurn` / `knockedOutByAttackNames` はワザのダメージによるものだけ
+  - `player.knockedOutTurn` / `knockedOutNames`：理由を問わず、自分のポケモンが最後にきぜつした番と名前（自分の番のきぜつでも書き換わる）
+  - 「前の相手の番に、自分のポケモンがきぜつしていた」には、相手の番のきぜつだけを残す `player.knockedOutOnOpponentTurn`（理由を問わない）と `knockedOutByAttackTurn` / `knockedOutByAttackNames`（ワザのダメージによるものだけ）を使う。自分の番に自分のポケモンがきぜつしても書き換わらない
+  - `player.prizesTakenLog`：`{ turn, count }`。自分の番にとったサイドの枚数（相手の番にとったものは数えない）
 
 カードの判定：`card.kind`（'pokemon' 'trainer' 'energy'）・`card.stage`（0=たね）・`card.rule`（'ex' 'mega' か null）・`card.type`・`card.trainerType`・`card.basic`（基本エネルギー）・`card.energyType`・`card.aceSpec`・`card.tera`（テラスタル）・`card.ancient`（古代）・`card.future`（未来）
 （テラスタル・古代・未来・ACE SPEC の印は、tools/data/limitless-tags.json から補っている）

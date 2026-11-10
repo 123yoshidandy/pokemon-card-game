@@ -71,8 +71,9 @@ export default class Game {
             turnsTaken: 0,
             mulligans: 0,
             effects: [], // プレイヤーにかかる効果（グッズが使えない、など）{ kind, untilTurn }
-            knockedOutByAttackTurn: -1, // ワザのダメージで自分のポケモンがきぜつした番と、その名前
+            knockedOutByAttackTurn: -1, // 相手の番に、ワザのダメージで自分のポケモンがきぜつした番と、その名前
             knockedOutByAttackNames: [],
+            knockedOutOnOpponentTurn: -1, // 相手の番に、理由を問わず自分のポケモンがきぜつした番
             knockedOutTurn: -1, // 理由を問わず、自分のポケモンがきぜつした番と、その名前
             knockedOutNames: []
         }));
@@ -307,25 +308,34 @@ export default class Game {
             const card = this.topCard(pokemon);
             this.log(`${player.name}の${card.name}はきぜつした`);
             const info = { byAttack: Boolean(this.resolvingAttack) };
-            // きぜつの理由を問わず、きぜつした番と名前を残す（「前の相手の番に、自分のポケモンがきぜつしていたなら」）
+            // きぜつの理由を問わず、きぜつした番と名前を残す（バトル場に出すポケモンを選ぶときの題に使う）
             if (player.knockedOutTurn !== this.turn) player.knockedOutNames = [];
             player.knockedOutTurn = this.turn;
             player.knockedOutNames.push(card.name);
+            // 「前の相手の番に、自分のポケモンがきぜつしていた」に使う記録は、相手の番のきぜつだけを残す
+            // 自分の番のきぜつ（自分のカースドボムなど）で上書きすると、同じ番のうちに前の相手の番の記録が消える（#29）
+            // 番の終わりのポケモンチェックは、番が切り替わる前なので、その番のきぜつとして数える
+            if (player.id !== this.current) {
+                player.knockedOutOnOpponentTurn = this.turn;
+                if (this.resolvingAttack) {
+                    if (player.knockedOutByAttackTurn !== this.turn) player.knockedOutByAttackNames = [];
+                    player.knockedOutByAttackTurn = this.turn;
+                    player.knockedOutByAttackNames.push(card.name);
+                }
+            }
             const prizes = Math.max(0, this.prizeValue(card) + this.hookSum('prizeModifier', pokemon, player, info));
             this.hookAll('onKnockout', pokemon, player, info);
-            if (this.resolvingAttack) {
-                if (player.knockedOutByAttackTurn !== this.turn) player.knockedOutByAttackNames = [];
-                player.knockedOutByAttackTurn = this.turn;
-                player.knockedOutByAttackNames.push(card.name);
-            }
             this.event('knockout', { player: player.id, pokemon: pokemon.id });
             this.removeFromPlay(player, pokemon);
             const taker = this.opponentOf(player);
             const count = Math.min(prizes, taker.prizes.length);
             const taken = taker.prizes.splice(0, count);
             taken.forEach(inst => { delete inst.faceUp; }); // 手札に加えたら、オモテのサイドではなくなる
-            // その番にとったサイドの枚数（「前の相手の番に、相手がとったサイドの枚数」に使う）
-            taker.prizesTakenLog = { turn: this.turn, count: (taker.prizesTakenLog?.turn === this.turn ? taker.prizesTakenLog.count : 0) + count };
+            // 自分の番にとったサイドの枚数（「前の相手の番に、相手がとったサイドの枚数」に使う）
+            // 相手の番にとったもの（相手のカースドボムなど）は数えない。上書きすると、前の番の記録が消える（#29）
+            if (taker.id === this.current) {
+                taker.prizesTakenLog = { turn: this.turn, count: (taker.prizesTakenLog?.turn === this.turn ? taker.prizesTakenLog.count : 0) + count };
+            }
             taker.hand.push(...taken);
             this.log(`${taker.name}はサイドを${count}枚取った（残り${taker.prizes.length}枚）`);
             if (count > 0) this.event('prize', { player: taker.id, count });

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { CARDS } from '../public/js/card-data.js';
-import { startedGame, arrange, C } from './helpers.js';
+import { CARDS, resolveCardId } from '../public/js/card-data.js';
+import { startedGame, arrange, answer, C } from './helpers.js';
 
 const FIRE = 'basic-fire-energy';
 const FIGHTING = 'basic-fighting-energy';
@@ -61,6 +61,37 @@ describe('プレイヤーにかかる効果・使ったカードの行き先な�
         expect(game.applyCommand(me, { type: 'playTrainer', uid: player.hand[0].uid })).toBe(true);
         expect(player.hand).toHaveLength(5);
         expect(opponent.hand).toHaveLength(2);
+    });
+
+    it('アンフェアスタンプ：前の相手の番に、相手のカースドボムで自分のポケモンがきぜつしていれば使える（#29）', () => {
+        const stamp = idOf('アンフェアスタンプ');
+        const dusknoir = resolveCardId('SV6a-070'); // ヨノワール：カースドボム
+        const { game, me: opp, opp: me } = midGame();
+        const other = arrange(game, opp, { active: C.pikachu, bench: [dusknoir], prizes: Array(6).fill(C.potion), hand: [], deck: Array(20).fill(FIRE) });
+        const player = arrange(game, me, { active: C.pikachu, bench: [C.raichu], prizes: Array(6).fill(C.potion), hand: [stamp], deck: Array(20).fill(FIRE) });
+        expect(game.applyCommand(opp, { type: 'useAbility', target: other.bench[0].id })).toBe(true);
+        answer(game, [player.active]); // ピカチュウにダメカン13個で、きぜつ
+        answer(game, [player.bench[0]]); // ライチュウをバトル場に出す
+        expect(game.applyCommand(opp, { type: 'endTurn' })).toBe(true);
+        expect(game.getLegalActions(me).hand[player.hand[0].uid]).toEqual([]);
+        expect(game.applyCommand(me, { type: 'playTrainer', uid: player.hand[0].uid })).toBe(true);
+    });
+
+    it('アンフェアスタンプ：自分の番に、自分のカースドボムで自分のポケモンがきぜつしても、次の自分の番には使えない（前の相手の番ではないので）。理由を出す（#29）', () => {
+        const stamp = idOf('アンフェアスタンプ');
+        const dusknoir = resolveCardId('SV6a-070');
+        const { game, me, opp } = midGame();
+        const player = arrange(game, me, { active: C.pikachu, bench: [dusknoir], prizes: Array(6).fill(C.potion), hand: [stamp], deck: Array(20).fill(FIRE) });
+        const other = arrange(game, opp, { active: C.raichu, bench: [C.pikachu], prizes: Array(6).fill(C.potion), hand: [], deck: Array(20).fill(FIRE) });
+        game.applyCommand(me, { type: 'useAbility', target: player.bench[0].id });
+        answer(game, [other.bench[0]]);
+        expect(player.bench).toHaveLength(0); // ヨノワールはきぜつした
+        expect(game.applyCommand(me, { type: 'playTrainer', uid: player.hand[0].uid })).toBe(false); // この番も使えない
+        game.applyCommand(me, { type: 'endTurn' });
+        game.applyCommand(opp, { type: 'endTurn' });
+        const uid = player.hand.find(inst => inst.id === stamp).uid;
+        expect(game.applyCommand(me, { type: 'playTrainer', uid })).toBe(false);
+        expect(game.getLegalActions(me).reasons.hand[uid]).toBe('前の相手の番に、自分のポケモンがきぜつしていないので使えません');
     });
 
     it('ネリネ：4枚引き、番の終わりに手札が5枚以上なら、手札をすべてトラッシュする', () => {

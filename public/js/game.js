@@ -576,7 +576,7 @@ export default class Game {
         }
         const blocked = this.hookAny('blockTrainer', player, card);
         if (blocked) return typeof blocked === 'string' ? blocked : `今は${card.name}を使えません`;
-        if (!card.canPlay(this, player)) return `今は${card.name}を使えません`;
+        if (!card.canPlay(this, player)) return card.cannotPlayReason ?? `今は${card.name}を使えません`;
         return null;
     }
 

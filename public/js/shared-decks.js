@@ -22,7 +22,7 @@ export function applySharedDecks(decks) {
         const base = DEFAULTS.get(deck.id);
         deck.name = shared?.name ?? base.name;
         deck.cards = shared ? Object.fromEntries(Object.entries(shared.cards).map(([id, count]) => [resolveCardId(id), count])) : { ...base.cards };
-        deck.edited = Boolean(shared);
+        deck.edited = Boolean(shared); // 「初期に戻す」を出すか
     }
 }
 

@@ -245,7 +245,7 @@ export default class DeckScreens {
             const button = `<button type="button" class="btn btn-secondary btn-small" data-copy="${deck.id}">コピー</button><button type="button" class="btn btn-primary btn-small" data-edit="${deck.id}">編集</button>`;
             return `<li class="deck-row">
                 <span class="deck-row-name" ${deck.builtIn ? `data-view="${deck.id}"` : ''}>${escape(deck.name)}${deck.builtIn ? '<span class="deck-row-view">中身</span>' : ''}</span>
-                ${deck.builtIn ? `<span class="badge">共有</span>${deck.edited ? '<span class="badge badge-muted">変更あり</span>' : ''}` : ''}
+                ${deck.builtIn ? '<span class="badge">共有</span>' : ''}
                 <span class="deck-row-count ${problem ? 'incomplete' : ''}">${total}/${DECK_SIZE}</span>
                 ${button}
             </li>`;
